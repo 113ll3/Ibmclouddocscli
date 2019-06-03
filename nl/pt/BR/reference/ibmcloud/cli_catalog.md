@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # Procurando e gerenciando ofertas de catálogo
 {: #ibmcloud_catalog}
@@ -57,7 +58,6 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 <strong>Exemplos</strong>:
 
 Procure o serviço `Automation test`:
-
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -65,8 +65,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
-Obter uma entrada no catálogo
-
+Obter uma entrada no catálogo:
 ```
 ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
@@ -257,6 +256,7 @@ Mostre ofertas de serviço no escopo global:
 ```
 ibmcloud catalog service-marketplace --global
 ```
+{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
@@ -298,6 +298,7 @@ Visualize detalhes do modelo `mobileBackendStarter`:
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
+{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
@@ -329,20 +330,23 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 
 <strong>Exemplos</strong>:
 
-Crie um aplicativo cf `my-app` baseado no modelo `javaHelloWorld`:
+Crie um app `cf` denominado `my-app` com base em um modelo `javaHelloWorld`:
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
+{: codeblock}
 
-Crie um aplicativo `my-ruby-app` baseado no modelo `rubyHelloWorld` com uma descrição:
+Crie um app `my-ruby-app` com base no modelo `rubyHelloWorld` com uma descrição:
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
+{: codeblock}
 
-Crie um aplicativo `my-python-app` baseado no modelo `pythonHelloWorld` sem início automático:
+Crie um app `my-python-app` com base no modelo `pythonHelloWorld` sem início automático:
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
+{: codeblock}
 
 ## Locais do catálogo ibmcloud
 {: #ibmcloud_catalog_locations}
@@ -383,6 +387,7 @@ Mostrar detalhes do tempo de execução "nodejsHelloWorld":
 ```
 catalog runtime nodejsHelloWorld
 ```
+{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
@@ -405,3 +410,4 @@ Listar todos os tempos de execução juntamente com suas descrições:
 ```
 ibmcloud catalog runtimes -d
 ```
+{: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-21"
 
 keywords: cli, docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
 
@@ -34,7 +34,7 @@ Con il contenitore Docker di {{site.data.keyword.dev_cli_notm}}, ottieni la CLI 
 ## Prima di iniziare
 {: #idt-docker-prereq}
 
-Hai bisogno di un [account {{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno") e devi installare l'ultima versione stabile di Docker prima di completare la seguente procedura.
+Hai bisogno di un [account {{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno") e devi installare l'ultima versione stabile di Docker prima di completare la seguente procedura. 
 
 ## Passo 1. Estrai l'immagine Docker dall'hub Docker.
 {: #step1-pull-docker-image}
@@ -69,4 +69,4 @@ Il plugin CLI {{site.data.keyword.dev_cli_notm}} utilizza due contenitori per fa
 
 Il secondo contenitore è il contenitore di esecuzione, che simula fedelmente l'ambiente di runtime effettivo della tua applicazione quando viene distribuita nel cloud. Questo contenitore è di un formato adeguato per essere distribuito per l'utilizzo, ad esempio, in {{site.data.keyword.cloud_notm}}. Di conseguenza, viene definito un punto di ingresso che avvia la tua applicazione. Quando selezioni di eseguire la tua applicazione tramite il plugin CLI {{site.data.keyword.dev_cli_notm}}, utilizza questo contenitore. Il `Dockerfile` per questo contenitore è definito dal parametro [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters).
 
-Sei ora pronto a utilizzare {{site.data.keyword.dev_cli_notm}} per gestire le risorse {{site.data.keyword.cloud_notm}} e per sviluppare e distribuire le tue applicazioni.
+Sei ora pronto a utilizzare {{site.data.keyword.dev_cli_notm}} per gestire le risorse {{site.data.keyword.cloud_notm}} e per sviluppare e distribuire le tue applicazioni. 

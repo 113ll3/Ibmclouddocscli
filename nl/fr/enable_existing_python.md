@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -40,9 +40,9 @@ Voir la sortie exemple suivante :
 > ibmcloud dev enable
 The enable feature is currently in Beta.
 Please provide your experience and feedback at: https://ibm-cloud-tech.slack.com/messages/developer-tools/
-Only server-side applications are supported by the enable feature
+Only server-side apps are supported by the enable feature
 
-? Python - Flask application discovered. Do you want to proceed with this
+? Python - Flask app discovered. Do you want to proceed with this
 language choice? [y/n]> y
 
 
@@ -105,6 +105,7 @@ LICENSE
 The application, <appname>, has been successfully saved
 into the current directory.
 ```
+{: screen}
 
 ## Génération et déploiement d'une application Python optimisée pour le cloud
 {: #build-deploy-python}
@@ -130,7 +131,7 @@ ImportError: No module named <projectname>.wsgi
 ```
 {: screen}
 
-Le nom de fichier `<projectname>.wsgi` correspond au nom du projet en cours d'activation. 
+Le nom de fichier `<projectname>.wsgi` correspond au nom du projet en cours d'activation.
 
 Si votre application n'est pas générée ou déployée après exécution d'`ibmcloud dev enable`, vous pouvez modifier les fichiers générés pour terminer l'activation de cloud.
 

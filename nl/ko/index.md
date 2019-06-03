@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -58,7 +58,7 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 * Windows&trade; 10 Pro의 경우 관리자로 다음 명령을 실행하십시오.
   ```
-Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
 
@@ -108,6 +108,6 @@ ibmcloud target -o <value> -s <value>
 ## 다음 단계
 {: #next-steps}
 
-* 이제 첫 번째 애플리케이션을 개발하고 배치할 준비가 되었습니다. 자세한 정보는 [CLI를 사용하여 앱 작성 및 배치](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli)를 참조하십시오.
+* 이제 첫 번째 앱을 개발하고 배치할 준비가 되었습니다. 자세한 정보는 [CLI를 사용하여 앱 작성 및 배치](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli)를 참조하십시오.
 
 * 새 {{site.data.keyword.cloud_notm}} CLI 릴리스에 대한 알림을 받을 수 있습니다. [{{site.data.keyword.cloud_notm}} CLI 릴리스 저장소](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 구독하십시오.

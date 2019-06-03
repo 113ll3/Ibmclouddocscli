@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-05-21"
 
 keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
@@ -23,7 +23,7 @@ Puoi utilizzare l'SDK `BMSCore` per effettuare richieste di rete a qualsiasi ris
 ## Android
 {: #request-android}
 
-1. Assicurati di avere [importato l'SDK client e di averlo inizializzato](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android) nella tua applicazione Android.
+1. Assicurati di avere [importato l'SDK client e di averlo inizializzato](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android) nella tua applicazione Android. 
 
 2. Effettua una richiesta di rete.
 
@@ -55,7 +55,7 @@ Per degli esempi di utilizzo completi, vedi il `BMSCore` GitHub [README ](https:
 ## iOS
 {: #request-ios}
 
-1. Assicurati di aver [importato e inizializzato l'SDK Client](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) nella tua applicazione iOS.
+1. Assicurati di aver [importato e inizializzato l'SDK Client](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) nella tua applicazione iOS. 
 
 2. Crea una richiesta di rete.
 
@@ -95,7 +95,7 @@ Per degli esempi di utilizzo completi, vedi il `BMSCore` GitHub [README ](https:
 	```
 	{: codeblock}
 
-La classe `Request` rappresenta un metodo semplice per effettuare una richiesta HTTP e ottenere la risposta al completamento della richiesta. Se vuoi più flessibilità e controllo rispetto a quello ottenuto con `Request`, puoi utilizzare la classe `BMSURLSession`. Alcune funzioni della classe `BMSURLSession` comprendono il monitoraggio dell'avanzamento dei caricamenti e la messa in pausa o l'annullamento delle richieste. Per ottenere le risposte, puoi scegliere i gestori o i delegati di completamento.
+La classe `Request` rappresenta un metodo semplice per effettuare una richiesta HTTP e ottenere la risposta al completamento della richiesta. Se vuoi più flessibilità e controllo rispetto a quello ottenuto con `Request`, puoi utilizzare la classe `BMSURLSession`. Alcune funzioni della classe `BMSURLSession` comprendono il monitoraggio dell'avanzamento dei caricamenti e la messa in pausa o l'annullamento delle richieste. Per ottenere le risposte, puoi scegliere i gestori o i delegati di completamento. 
 
 La classe `BMSURLSession` è disponibile solo per iOS.
 
@@ -104,7 +104,7 @@ Per degli esempi di utilizzo completi, vedi il `BMSCore` GitHub [README ](https:
 ## Cordova
 {: #request-cordova}
 
-1. Assicurati di aver [importato e inizializzato l'SDK Client](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) nella tua applicazione Cordova.
+1. Assicurati di aver [importato e inizializzato l'SDK Client](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) nella tua applicazione Cordova. 
 
 2. Crea una richiesta di rete.
 

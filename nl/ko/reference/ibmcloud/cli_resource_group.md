@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-21"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -844,9 +844,9 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
 다음 속성을 검색할 수 있습니다.
 
 <dl>
-  <dt>이름</dt>
+  <dt>name</dt>
   <dd>리소스의 사용자 정의 이름입니다.</dd>
-  <dt>지역(region)</dt>
+  <dt>region</dt>
   <dd>리소스가 프로비저닝된 지리적 위치입니다. 예: us-south, us-east, au-syd, eu-gb, eu-de 및 jp-tok.</dd>
   <dt>service_name</dt>
   <dd>'ibmcloud catalog service-marketplace' 출력의 이름 열에 표시되는 서비스의 이름입니다.</dd>
@@ -872,49 +872,49 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
 
 <strong>예제</strong>:
 
-이름이 지정된 텍스트로 시작하는 Cloud Foundry 애플리케이션 검색:
+이름이 지정된 텍스트로 시작하는 Cloud Foundry 앱 검색:
 ```
-ibmcloud resource search 'name:my* AND type:cf-application'
+ibmcloud resource search "name:my* AND type:cf-application"
 ```
 
 지정된 서비스 이름의 Cloud Foundry 서비스 인스턴스 검색:
 ```
-ibmcloud resource search 'service_name:messagehub AND type:cf-service-instance'
+ibmcloud resource search "service_name:messagehub AND type:cf-service-instance"
 ```
 
 지정된 ID의 조직에서 Cloud Foundry 서비스 바인딩 검색:
 ```
-ibmcloud resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
+ibmcloud resource search "organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding"
 ```
 
 지정된 두 지역 중 하나에 있으며 지정된 이름을 가진 Cloud Foundry 영역 검색:
 ```
-ibmcloud resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
+ibmcloud resource search "name:dev AND type:cf-space AND region:(us-south OR eu-gb)"
 ```
 
 지정된 ID를 가진 Cloud Foundry 영역에서 이름에 단어 dev가 포함된 리소스 검색:
 ```
-ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
+ibmcloud resource search "name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7"
 ```
 
 지정된 위치(즉, 미국 남부 지역)에서 리소스 제어기의 리소스 검색:
 ```
-ibmcloud resource search 'region:us-south AND family:resource_controller'
+ibmcloud resource search "region:us-south AND family:resource_controller"
 ```
 
 지정된 ID를 가진 리소스 그룹에서 리소스 또는 별명 검색:
 ```
-ibmcloud resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
+ibmcloud resource search "(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)"
 ```
 
 이름이 기본값인 리소스 그룹 검색:
 ```
-ibmcloud resource search 'name:default AND type:resource-group'
+ibmcloud resource search "name:default AND type:resource-group"
 ```
 
 지정된 서비스 이름에 대한 리소스 바인딩 검색:
 ```
-ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-binding'
+ibmcloud resource search "service_name:cloud-object-storage AND type:resource-binding"
 ```
 
 지정된 클라우드 리소스 이름(CRN)의 리소스 검색:
@@ -930,13 +930,13 @@ ibmcloud resource search "tags:\"mykey:myvalue\""
 
 지정된 ID를 사용하여 클래식 인프라 가상 게스트 리소스 검색(-p classic-infrastructure만 해당됨):
 ```
-ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
+ibmcloud resource search "id:12345678 _objectType:SoftLayer_Virtual_Guest"
 ```
 {: codeblock}
 
 지정된 태그 이름을 사용하여 클래식 인프라 하드웨어 리소스 검색(-p classic-infrastructure만 해당됨):
 ```
-ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hardware'
+ibmcloud resource search "tagReferences.tag.name:name _objectType:SoftLayer_Hardware"
 ```
 {: codeblock}
 
@@ -968,7 +968,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
 
 하나 이상의 태그를 리소스에 연결합니다.
 ```
-ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
 ```
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
@@ -976,6 +976,8 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 <dl>
   <dt>--tag-names(필수)</dt>
   <dd>쉼표로 구분된 태그 이름 목록</dd>
+  <dt>--resource-name</dt>
+  <dd>태그를 연결해야 하는 리소스의 이름입니다. 이 옵션은 클래식 인프라 리소스와 함께 사용될 수 없습니다.</dd>
   <dt>--resource-id</dt>
   <dd>태그를 연결해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다. 'ibmcloud resource search' 명령을 사용하여 리소스 ID 또는 CRN을 얻을 수 있습니다.</dd>
   <dt>--resource-type</dt>
@@ -1002,6 +1004,13 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   ```
   {: codeblock}
 
+* `MyTag` 태그를 `MyResource` 리소스 이름에 연결하려면 다음을 수행하십시오.
+  ```
+  ibmcloud resource tag-attach --tag-name MyTag --resource-name  'MyResource'
+  ```
+  {: codeblock}
+  
+  
 * `MyTag` 태그를 `MyVM`이라는 클래식 인프라 가상 게스트에 연결하려면 먼저 태그 지정하려는 가상 게스트의 ID를 찾으십시오.
   ```
   ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
@@ -1021,7 +1030,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 
 하나 이상의 태그를 리소스에서 분리합니다.
 ```
-ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1030,6 +1039,8 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 <dl>
   <dt>--tag-names(필수)</dt>
   <dd>쉼표로 구분된 태그 이름 목록</dd>
+  <dt>--resource-name</dt>
+  <dd>태그를 연결해야 하는 리소스의 이름입니다. 이 옵션은 클래식 인프라 리소스와 함께 사용될 수 없습니다.</dd>
   <dt>--resource-id</dt>
   <dd>태그를 분리해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다. 'ibmcloud resource search' 명령을 사용하여 리소스 ID 또는 CRN을 얻을 수 있습니다.</dd>
   <dt>--resource-type</dt>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
@@ -17,7 +17,7 @@ subcollection: cloud-cli
 # Trabalhando com o serviço Load Balancer
 {: #sl-load-balancer-service}
 
-O serviço {{site.data.keyword.cloud}} Load Balancer ajuda a melhorar a disponibilidade dos aplicativos críticos para os negócios, distribuindo o tráfego entre as múltiplas instâncias do servidor de aplicativos e encaminhando-o somente para as instâncias funcionais.
+O serviço {{site.data.keyword.cloud}} Load Balancer ajuda a melhorar a disponibilidade de seus aplicativos críticos aos negócios, distribuindo o tráfego entre várias instâncias do servidor de apps e encaminhando o tráfego apenas para instâncias funcionais.
 
 Use os comandos a seguir para gerenciar os balanceadores de carga no serviço Load Balancer da infraestrutura clássica do {{site.data.keyword.cloud_notm}}.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -59,7 +59,7 @@ La versión más reciente de la CLI {{site.data.keyword.cloud_notm}} está insta
 
 * Para Windows&trade; 10 Pro, ejecute el mandato siguiente como administrador:
   ```
-  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
 
@@ -110,6 +110,6 @@ La salida lista las instrucciones de uso, la versión actual y los mandatos admi
 ## Pasos siguientes
 {: #next-steps}
 
-* Ahora está listo para desarrollar y desplegar su primera aplicación. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli) para obtener más información.
+* Ahora está listo para desarrollar y desplegar su primera app. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli) para obtener más información.
 
 * Puede recibir notificaciones sobre los nuevos releases de la CLI de {{site.data.keyword.cloud_notm}}. Suscríbase al [Repositorio de releases de la CLI de {{site.data.keyword.cloud_notm}}](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -27,11 +27,11 @@ subcollection: cloud-cli
 {{site.data.keyword.dev_cli_short}} 명령행 인터페이스(CLI)의 일반 문제에 대한 솔루션을 참조하십시오. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {: shortdesc}
 
-## 비모바일 패턴으로 앱을 작성할 때 호스트 이름 오류가 발생하는 이유
+## 비모바일 패턴으로 애플리케이션을 작성할 때 호스트 이름 오류가 발생하는 이유
 {: #ts-cli-hostname-error}
 {: troubleshoot}
 
-{{site.data.keyword.dev_cli_short}} CLI를 사용하여 Cloud Foundry에 앱을 배치하는 경우 다음 오류가 표시될 수 있습니다. 고유 호스트 이름을 입력해도 여전히 이 메시지가 표시될 수 있습니다.
+{{site.data.keyword.dev_cli_short}} CLI를 사용하여 Cloud Foundry에 애플리케이션을 배치하는 경우 다음 오류가 표시될 수 있습니다. 고유 호스트 이름을 입력해도 여전히 이 메시지가 표시될 수 있습니다.
 ```
 The hostname <myHostname> is taken.
 ```
@@ -274,7 +274,7 @@ directly.
 {: tsSymptoms}
 
 이 오류의 원인은 다음 중 하나일 수 있습니다.
-- 애플리케이션의 소스 디렉토리가 아닌 디렉토리에서 [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 명령 실행.
+- 앱의 소스 디렉토리가 아닌 디렉토리에서 [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 명령 실행.
 - 인식되지 않는 언어로 된 앱에 대해 [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 명령 실행.
 {: tsCauses}
 
@@ -291,8 +291,8 @@ directly.
 다음과 같은 각 링크에서 여러 다른 가능한 원인을 찾을 수 있습니다.
 {: tsCauses}
 
-- Spring 앱에서 해당 문제점을 해결하는 데 관한 자세한 정보는 [클라우드 배치를 위해 기존 Spring 부트 애플리케이션 사용](/docs/java-spring?topic=java-spring-enable_existing#enable_existing)을 참조하십시오.
-- `Node.js` 앱에서 해당 문제점을 해결하는 데 관한 자세한 정보는 [클라우드 배치를 위해 기존 Node.js 애플리케이션 사용](/docs/node?topic=nodejs-enable_existing#enable_existing)을 참조하십시오.
+- Spring 앱에서 해당 문제점을 해결하는 데 관한 자세한 정보는 [클라우드 배치를 위해 기존 Spring 부트 앱 사용](/docs/java-spring?topic=java-spring-enable_existing#enable_existing)을 참조하십시오.
+- `Node.js` 앱에서 해당 문제점을 해결하는 데 관한 자세한 정보는 [클라우드 배치를 위해 기존 Node.js 앱 사용](/docs/node?topic=nodejs-enable_existing#enable_existing)을 참조하십시오.
 {: tsResolve}
 
 ## {{site.data.keyword.dev_cli_notm}} CLI 컴포넌트를 개별적으로 수동으로 설치하는 방법

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, monitoring, logging, cloud logging, metrics, monitor cpu, monitor usage, memory utilization, runtime logging
 
@@ -33,6 +33,6 @@ Para obter mais informações, veja [Monitoramento no {{site.data.keyword.cloud_
 
 O {{site.data.keyword.cloud_notm}}, por padrão, coleta e exibe os logs para seus apps, tempos de execução de apps e tempos de execução de cálculo nos quais esses apps são executados. Os recursos de criação de log do {{site.data.keyword.cloud_notm}} são integrados na plataforma e a coleção de dados é ativada automaticamente para recursos em nuvem. 
 
-O serviço {{site.data.keyword.loganalysisfull_notm}} fornece serviços de coleção de logs e de procura de log para a plataforma {{site.data.keyword.cloud_notm}}, coletando automaticamente dados do aplicativo e dos serviços do {{site.data.keyword.cloud_notm}} de serviços selecionados. Use o serviço {{site.data.keyword.loganalysisshort}} para expandir suas capacidades de coleção de logs, retenção de log e procura de log quando você está trabalhando com logs.
+O serviço {{site.data.keyword.loganalysisfull_notm}} fornece serviços de coleção de logs e de procura de log para a plataforma {{site.data.keyword.cloud_notm}}, coletando dados do app e dos serviços do {{site.data.keyword.cloud_notm}} automaticamente de serviços selecionados. Use o serviço {{site.data.keyword.loganalysisshort}} para expandir suas capacidades de coleção de logs, retenção de log e procura de log quando você está trabalhando com logs.
 
 Para obter mais informações, consulte [Efetuando login no {{site.data.keyword.cloud_notm}}](/docs/services/CloudLogAnalysis?topic=cloudloganalysis-log_analysis_ov#log_analysis_ov).

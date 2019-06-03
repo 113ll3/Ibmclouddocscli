@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -63,7 +63,7 @@ Viene utilizzato l'elemento di configurazione `build-cmd-debug` per creare l'app
 
 Per eseguire la creazione con più contenitori, la tua applicazione deve avere un file [Compose](https://docs.docker.com/compose/overview/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno"), che è specificato in `cli-config.yml`, oppure puoi utilizzare il parametro del comando `dockerfile-tools` per fornirne uno.
 
-Esegui il seguente comando nella tua directory dell'applicazione corrente per creare la tua applicazione:  
+Esegui il seguente comando nella tua directory dell'applicazione corrente per avviare la creazione:  
 ```
 ibmcloud dev build [--debug]
 ```
@@ -74,9 +74,9 @@ ibmcloud dev build [--debug]
 
 Utilizza il comando `code` per scaricare un'applicazione precedentemente creata con il codice del template dell'applicazione e i file di configurazione per {{site.data.keyword.cloud_notm}}. Puoi utilizzare questo comando quando devi estrarre una seconda copia di un'applicazione.
 
-Esegui il seguente comando per scaricare il codice da una specifica applicazione.
+Esegui il seguente comando per scaricare il codice da un'applicazione specificata.
 ```
-ibmcloud dev code <applicationName>
+ibmcloud dev code <appName>
 ```
 {: codeblock}
 
@@ -89,7 +89,7 @@ Puoi fornire un nome applicazione e la CLI ignora la messa in corrispondenza bas
 
 Immetti il seguente comando per aprire un browser web per la console web della tua applicazione.
 ```
-ibmcloud dev console [applicationName]
+ibmcloud dev console [appName]
 ```
 {: codeblock}
 
@@ -117,7 +117,7 @@ ibmcloud dev build --debug
 ```
 {: codeblock}
 
-Per iniziare, immetti il seguente comando nella tua directory dell'applicazione corrente per eseguire il debug della tua applicazione:
+Per iniziare, immetti il seguente comando nella tua directory dell'applicazione corrente per avviare il debug:
 ```
 ibmcloud dev debug
 ```
@@ -130,8 +130,7 @@ Per uscire dalla sessione di debug, utilizza `CTRL-C`.
 ### parametri comando debug
 {: #debug-parameters}
 
-I seguenti parametri sono esclusivi per il comando `debug` e
-a assistono con il debug di un'applicazione. Ci sono degli [ulteriori parametri](#command-parameters) che sono condivisi con altri comandi.
+I seguenti parametri sono esclusivi per il comando `debug` e assistono con il debug di un'applicazione. Ci sono degli [ulteriori parametri](#command-parameters) che sono condivisi con altri comandi.
 
 #### `container-port-map-debug`
 {: #port-map-debug}
@@ -158,7 +157,7 @@ Utilizza il comando `delete` per rimuovere le applicazioni dal tuo spazio {{site
 
 Esegui il seguente comando per eliminare la tua applicazione da {{site.data.keyword.cloud_notm}}:
 ```
-ibmcloud dev delete <applicationName>
+ibmcloud dev delete <appName>
 ```
 {: codeblock}
 
@@ -179,7 +178,7 @@ Per distribuire la tua applicazione su Kubernetes, devi specificare `deploy-targ
 In `cli-config.yml` è anche possibile specificare altri parametri necessari per configurare la distribuzione Kubernetes utilizzando gli argomenti della riga di comando. Se non definisci questi parametri in `cli-config.yml`, devi eseguire la distribuzione con il parametro `-t container`. Ti vengono quindi richiesti tutti gli altri valori.
 
 ```yaml
-chart-path: "chart/myapplication"
+chart-path: "chart/myapp"
 
 deploy-target: "container"
 
@@ -401,7 +400,7 @@ Ci sono dei [parametri aggiuntivi](#command-parameters) che sono condivisi con a
 {: #container-name-run2}
 
 * Il nome del contenitore di esecuzione.
-* Utilizzo: `ibmcloud dev run --container-name-run [<applicationName>]`
+* Utilizzo: `ibmcloud dev run --container-name-run [<appName>]`
 
 #### `container-path-run`
 {: #container-path-run}
@@ -515,20 +514,20 @@ I seguenti parametri vengono utilizzati per il comando `stop`. Ci sono dei [para
 {: #container-name-run}
 
 * Il nome del contenitore di esecuzione.
-* Utilizzo: `ibmcloud dev stop --container-name-run [<applicationName>]`
+* Utilizzo: `ibmcloud dev stop --container-name-run [<appName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * Il nome del contenitore degli strumenti.
-* Utilizzo: `ibmcloud dev stop --container-name-tools [<applicationName>]`
+* Utilizzo: `ibmcloud dev stop --container-name-tools [<appName>]`
 
 ## test
 {: #test}
 
 Se stai utilizzando Windows&trade;, devi eseguire Windows&trade; 10 Pro o versioni successive.
 
-Puoi eseguire la tua applicazione tramite il comando `test`. Deve prima essere completata una build sull'applicazione utilizzando il comando `build --debug`. Il contenitore degli strumenti viene quindi utilizzato per avviare il `test-cmd` per l'applicazione.
+Puoi verificare la tua applicazione tramite il comando `test`. Deve prima essere completata una build sull'applicazione utilizzando il comando `build --debug`. Il contenitore degli strumenti viene quindi utilizzato per avviare il `test-cmd` per l'applicazione.
 
 Per prima cosa, compila la tua applicazione:
 ```
@@ -635,13 +634,13 @@ I parametri di comando immessi sulla riga di comando hanno la precedenza sulla c
 {: #container-name-run1}
 
 * Il nome del contenitore di esecuzione.
-* Utilizzo: `ibmcloud dev <run|status|stop> --container-name-run [<applicationName>]`
+* Utilizzo: `ibmcloud dev <run|status|stop> --container-name-run [<appName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * Il nome del contenitore degli strumenti.
-* Utilizzo: `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<applicationName>]`
+* Utilizzo: `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<appName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}

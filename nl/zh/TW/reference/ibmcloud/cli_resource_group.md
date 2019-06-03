@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-21"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -873,47 +873,47 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
 
 搜尋名稱開頭為指定文字的 Cloud Foundry 應用程式：
 ```
-ibmcloud resource search 'name:my* AND type:cf-application'
+ibmcloud resource search "name:my* AND type:cf-application"
 ```
 
 搜尋指定服務名稱的 Cloud Foundry 服務實例：
 ```
-ibmcloud resource search 'service_name:messagehub AND type:cf-service-instance'
+ibmcloud resource search "service_name:messagehub AND type:cf-service-instance"
 ```
 
 在組織中搜尋具有指定 ID 的 Cloud Foundry 服務連結：
 ```
-ibmcloud resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
+ibmcloud resource search "organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding"
 ```
 
 搜尋具有指定名稱且位於兩個指定地區之一的 Cloud Foundry 空間：
 ```
-ibmcloud resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
+ibmcloud resource search "name:dev AND type:cf-space AND region:(us-south OR eu-gb)"
 ```
 
 在具有指定 ID 的 Cloud Foundry 空間中，搜尋名稱包含 dev 一字的資源：
 ```
-ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
+ibmcloud resource search "name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7"
 ```
 
 搜尋指定位置（亦即 us-south 地區）中的資源控制器資源：
 ```
-ibmcloud resource search 'region:us-south AND family:resource_controller'
+ibmcloud resource search "region:us-south AND family:resource_controller"
 ```
 
 在具有指定 ID 的資源群組中搜尋資源或別名：
 ```
-ibmcloud resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
+ibmcloud resource search "(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)"
 ```
 
 搜尋名稱為 default 的資源群組：
 ```
-ibmcloud resource search 'name:default AND type:resource-group'
+ibmcloud resource search "name:default AND type:resource-group"
 ```
 
 搜尋指定服務名稱的資源連結：
 ```
-ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-binding'
+ibmcloud resource search "service_name:cloud-object-storage AND type:resource-binding"
 ```
 
 搜尋具有指定「雲端資源名稱 (CRN)」的資源：
@@ -929,13 +929,13 @@ ibmcloud resource search "tags:\"mykey:myvalue\""
 
 搜尋具有所指定 ID 的「標準基礎架構虛擬訪客」資源（僅具有 -p classic-infrastructure）：
 ```
-ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
+ibmcloud resource search "id:12345678 _objectType:SoftLayer_Virtual_Guest"
 ```
 {: codeblock}
 
 搜尋具有所指定標籤名稱的「標準基礎架構硬體」資源（僅具有 -p classic-infrastructure）：
 ```
-ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hardware'
+ibmcloud resource search "tagReferences.tag.name:name _objectType:SoftLayer_Hardware"
 ```
 {: codeblock}
 
@@ -967,7 +967,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
 
 將一個以上的標籤連接至資源：
 ```
-ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
 ```
 <strong>必要條件</strong>：端點、登入
 
@@ -975,8 +975,10 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 <dl>
   <dt>--tag-names（必要）</dt>
   <dd>以逗點區隔的標籤名稱清單</dd>
+  <dt>--resource-name</dt>
+  <dd>應連接標籤之資源的名稱。此選項無法與標準基礎架構資源搭配使用。</dd>
   <dt>--resource-id</dt>
-  <dd>將連接標籤之資源的 CRN；對於標準基礎架構資源，它是資源的 ID。您可以使用 'ibmcloud resourcesearch' 指令，來取得資源的 CRN 或 ID。</dd>
+  <dd>將連接標籤之資源的 CRN；對於標準基礎架構資源，它是資源的 ID。您可以使用 'ibmcloud resource search' 指令，來取得資源的 CRN 或 ID。</dd>
   <dt>--resource-type</dt>
   <dd>將連接標籤之標準基礎架構資源的資源類型；如果將標籤連接至標準基礎架構資源，則此為必要參數。--resource-type 的可能值為：SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress、SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall 及 SoftLayer_Virtual_Guest。</dd>
 </dl>
@@ -1001,6 +1003,13 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   ```
   {: codeblock}
 
+* 若要將標籤 `MyTag` 連接至資源名稱 `MyResource`，請執行下列指令：
+  ```
+  ibmcloud resource tag-attach --tag-name MyTag --resource-name  'MyResource'
+  ```
+  {: codeblock}
+  
+  
 * 若要將標籤 `MyTag` 連接至名稱為 `MyVM` 的標準基礎架構虛擬來賓，請先尋找您要標示之虛擬來賓的 ID：
   ```
   ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
@@ -1020,7 +1029,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 
 分離一個以上的標籤與資源：
 ```
-ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -1029,6 +1038,8 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 <dl>
   <dt>--tag-names（必要）</dt>
   <dd>以逗點區隔的標籤名稱清單</dd>
+  <dt>--resource-name</dt>
+  <dd>應從中分離標籤之資源的名稱。此選項無法與標準基礎架構資源搭配使用。</dd>
   <dt>--resource-id</dt>
   <dd>將從中分離標籤之資源的 CRN；若為標準基礎架構資源，其為資源的 ID。您可以使用 'ibmcloud resource search' 指令，來取得資源的 CRN 或 ID。</dd>
   <dt>--resource-type</dt>

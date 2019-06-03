@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -27,7 +27,7 @@ subcollection: cloud-cli
 Vedi le soluzioni ai problemi comuni con la CLI (command line interface) {{site.data.keyword.dev_cli_short}}. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
 {: shortdesc}
 
-## Perché ricevo un errore di nome host quando creo un'applicazione con un modello non mobile?
+## Perché ricevo un errore di nome host quando creo un'applicazione con un modello non mobile? 
 {: #ts-cli-hostname-error}
 {: troubleshoot}
 
@@ -274,7 +274,7 @@ directly.
 {: tsSymptoms}
 
 Questo errore potrebbe essere dovuto a una delle seguenti cause:
-- Esecuzione del comando [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) da una directory che non è la directory di origine della tua applicazione.
+- Esecuzione del comando [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) da una directory che non è la directory di origine della tua applicazione. 
 - Esecuzione del comando [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) per un'applicazione di una lingua che non è riconosciuta.
 {: tsCauses}
 
@@ -291,7 +291,7 @@ Potresti riscontrare diversi errori durante la [creazione](/docs/cli/idt?topic=c
 Le molte possibili cause differenti possono essere trovate in ognuno dei seguenti link.
 {: tsCauses}
 
-- Per ulteriori informazioni sulla risoluzione di tali problemi con un'applicazione Spring, consulta [Abilitazione delle applicazioni Spring Boot esistenti per la distribuzione cloud](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
+- Per ulteriori informazioni sulla risoluzione di tali problemi con un'applicazione Spring, consulta [Abilitazione delle applicazioni Spring Boot esistenti per la distribuzione cloud](/docs/java-spring?topic=java-spring-enable_existing#enable_existing). 
 - Per ulteriori informazioni sulla risoluzione di tali problemi con un'applicazione `Node.js`, consulta [Abilitazione delle applicazioni Node.js esistenti per la distribuzione cloud](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 

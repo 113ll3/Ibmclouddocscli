@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-21"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -19,50 +19,53 @@ subcollection: cloud-cli
 # Comandos gerais da CLI (ibmcloud)
 {: #ibmcloud_cli}
 
-A interface de linha de comandos (CLI) do {{site.data.keyword.cloud_notm}} fornece um conjunto de comandos que são agrupados por namespace para que os usuários interajam com o {{site.data.keyword.cloud_notm}}.
-
-O cliente da linha de comando do {{site.data.keyword.cloud_notm}} empacota um cliente da linha de comando do Cloud Foundry em sua instalação. Se você tiver o seu próprio cf cli instalado, não use os comandos da CLI do {{site.data.keyword.cloud_notm}} `ibmcloud [command]` e os comandos da CLI do Cloud Foundry `cf [command]` de sua própria instalação no mesmo contexto. Em vez disso, use `ibmcloud cf [command]` se desejar usar cf cli para gerenciar recursos do Cloud Foundry no contexto do {{site.data.keyword.cloud_notm}} CLI. Observe que `ibmcloud cf api/login/logout/target` não é permitido e é necessário usar `ibmcloud api/login/logout/target` como alternativa.
-
-Desde maio de 2018 comandos da CLI do {{site.data.keyword.cloud_notm}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que eles sejam removidos posteriormente.
-{: tip}
-
-A seguir são listados os comandos detalhados que são suportados pelo {{site.data.keyword.cloud_notm}} CLI, incluindo seus nomes, argumentos, opções, pré-requisitos, descrições e exemplos.
+A interface da linha de comandos (CLI) do {{site.data.keyword.cloud_notm}} fornece um conjunto de comandos que são agrupados por namespace para que os usuários interajam com o {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-Os *Pré-requisitos* listam quais ações são necessárias antes de usar o comando. Os comandos que não têm ações de pré-requisito listam **Nenhum**. Caso contrário, os pré-requisitos podem incluir uma ou mais das ações a seguir:
+O cliente da linha de comando do {{site.data.keyword.cloud_notm}} empacota um cliente da linha de comando do Cloud Foundry em sua instalação. Se você tiver a sua própria CLI do Cloud Foundry instalada, não use os comandos da CLI do {{site.data.keyword.cloud_notm}} e os comandos da CLI do Cloud Foundry de sua própria instalação no mesmo contexto. Em vez disso, use **`ibmcloud cf [command]`** se desejar usar a CLI do Cloud Foundry para gerenciar recursos do Cloud Foundry no contexto da CLI do {{site.data.keyword.cloud_notm}}. Observe que **`ibmcloud cf api/login/logout/target`** não é permitido e é necessário usar **`ibmcloud api/login/logout/target`** como alternativa.
+
+Desde maio de 2018 comandos da CLI do {{site.data.keyword.cloud_notm}} mudaram de **`bluemix`** e **`bx`** para **`ibmcloud`**. No entanto, ainda é possível usar os comandos da CLI **`bluemix`** e **`bx`** até que eles sejam removidos posteriormente.
+{: tip}
+
+A seguir são listados os comandos detalhados suportados pela CLI do {{site.data.keyword.cloud_notm}}, incluindo seus nomes, argumentos, opções, pré-requisitos, descrições e exemplos.
+
+Os pré-requisitos listam quais ações são necessárias antes de usar o comando e podem incluir uma ou mais das ações a seguir:
 
 <dl>
-<dt>Endpoint</dt>
-<dd>Um terminal de API deve ser configurado por meio de <code>ibmcloud api</code> antes de usar o comando.</dd>
-<dt>Login</dt>
-<dd>O login usando o comando <code>ibmcloud login</code> é necessário antes de usar esse comando.
-Se estiver efetuando login com o ID federado, use a opção '--sso' para se autenticar com uma senha única ou use '--apikey' para se autenticar com a chave API.
-</dd>
-<dt>Target</dt>
-<dd>O comando <code>ibmcloud target</code> deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
 <dt>Docker</dt>
-<dd>A CLI do Docker (docker) deve estar instalada para executar esse comando.</dd>
+<dd>Instale a CLI do Docker.</dd>
+<dt>Terminal</dt>
+<dd>Use o comando **`ibmcloud api`** para configurar um terminal de API.</dd>
+<dt>Efetuar login</dt>
+<dd>Use o comando **`ibmcloud login`** para efetuar login. Se você estiver efetuando login com um ID federado, use a opção **`--sso`** para se autenticar com uma senha única ou use a opção **`--apikey`** para se autenticar com uma chave de API.</dd>
+<dt>Destino</dt>
+<dd>Use o comando **`ibmcloud target`** para configurar uma organização e um espaço.</dd>
 </dl>
 
 ## ibmcloud help
 {: #ibmcloud_help}
 
-Exiba a ajuda geral para comandos integrados de primeiro nível e namespaces suportados da CLI {{site.data.keyword.cloud_notm}} ou a ajuda para um comando ou namespace integrado específico.
+Exibe a ajuda geral para comandos integrados de primeiro nível e namespaces suportados da CLI do {{site.data.keyword.cloud_notm}} ou a ajuda para um comando ou um namespace integrado específico.
 
 ```
 Ibmcloud help [ COMMAND | NAMESPACE ]
 ```
 
-<strong>Pré-requisitos</strong>: Nenhum
+### Pré-requisito
+{: #help-prereqs}
 
-<strong>Opções de comando</strong>:
+Nenhum.
 
-   <dl>
-   <dt>COMMAND|NAMESPACE (opcional)</dt>
-   <dd>O comando ou namespace para o qual a ajuda é exibida. Se não especificado, a ajuda geral para a CLI do {{site.data.keyword.Bluemix_notm}} será mostrada.</dd>
-   </dl>
+### Opções de comandos
+{: #help-options}
 
-<strong>Exemplos</strong>:
+<dl>
+<dt>COMMAND|NAMESPACE</dt>
+<dd>O comando ou namespace para o qual a ajuda é exibida. Se não especificado, a ajuda geral para a CLI do {{site.data.keyword.Bluemix_notm}} será mostrada. Opcional.</dd>
+</dl>
+
+### Exemplos
+{: #help-examples}
 
 Exiba a ajuda geral para a CLI do {{site.data.keyword.cloud_notm}}:
 ```
@@ -70,7 +73,7 @@ ibmcloud help
 ```
 {: codeblock}
 
-Exiba a ajuda para o comando `dev`:
+Exiba a ajuda para o comando **`dev`**:
 ```
 ibmcloud help dev
 ```
@@ -84,18 +87,25 @@ Configure ou visualize o terminal da API do {{site.data.keyword.cloud_notm}}.
 ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 ```
 
-<strong>Pré-requisitos</strong>: Nenhum
+### Pré-requisito
+{: #api-prereqs}
 
-<strong>Opções de comando</strong>:
-   <dl>
-   <dt>API_ENDPOINT (opcional)</dt>
-   <dd>O terminal de API que é direcionado, por exemplo, `https://cloud.ibm.com`. Se as opções *API_ENDPOINT* e `--unset` não forem especificadas, o terminal de API atual será exibido.</dd>
-   <dt>--unset (opcional)</dt>
-   <dd>Remova a configuração do terminal de API.</dd>
-   <dt>--skip-ssl-validation (opcional)</dt>
-   <dd>Validação SSL de bypass de solicitações de HTTP.</dd>
-   </dl>
-<strong>Exemplos</strong>:
+Nenhum.
+
+### Opções de comandos
+{: #api-options}
+
+<dl>
+<dt>API_ENDPOINT</dt>
+<dd>O terminal de API que é direcionado, por exemplo, `https://cloud.ibm.com`. Se nem a opção **`API_ENDPOINT`** nem a opção **`--unset`** forem especificadas, o terminal de API atual será exibido. Opcional.</dd>
+<dt>--skip-ssl-validation</dt>
+<dd>Validação SSL de bypass de solicitações de HTTP. Opcional.</dd>
+<dt>--unset</dt>
+<dd>Remova a configuração do terminal de API.</dd>
+</dl>
+
+### Exemplos
+{: #api-examples}
 
 Configure o terminal de API como cloud.ibm.com:
 ```
@@ -114,7 +124,7 @@ ibmcloud api
 ```
 {: codeblock}
 
-Desconfigure o terminal de API:
+Remova o terminal de API:
 ```
 Ibmcloud api -- unset
 ```
@@ -123,31 +133,38 @@ Ibmcloud api -- unset
 ## Ibmcloud config
 {: #ibmcloud_config}
 
-Grave os valores padrão no arquivo de configuração.
+Grava valores padrão no arquivo de configuração.
 
 ```
 ibmcloud config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/file) | --color (true|false) | --locale (LOCALE|CLEAR) | --check-version (true|false)
 ```
 
-<strong>Pré-requisitos</strong>: Nenhum
+### Pré-requisito
+{: #config-prereqs}
 
-<strong>Opções de comando</strong>:
-   <dl>
-   <dt>--http-timeout <i>TIMEOUT_IN_SECONDS</i></dt>
-   <dd>O valor de tempo limite para solicitações de HTTP. O valor padrão é 60 segundos.</dd>
-   <dt>--trace true|false|<i>path-to-file</i></dt>
-   <dd>Rastreie solicitações de HTTP para o terminal ou arquivo especificado.</dd>
-   <dt>--color true|false</dt>
-   <dd>Ative ou desative a saída de cor. A saída de cor é ativada por padrão.</dd>
-   <dt>--locale <i>LOCALE|CLEAR</i></dt>
-   <dd>Configure um código padrão de idioma. Se LOCALE for <i>CLEAR</i>, o código de idioma anterior será excluído.</dd>
-   <dt>--check-version true|false</dt>
-   <dd>Ative ou desative a verificação de versão da CLI.</dd>
-   </dl>
+Nenhum.
 
-Somente uma dessas opções pode ser especificada por vez.
+### Opções de comandos
+{: #config-options}
 
-<strong>Exemplos</strong>:
+<dl>
+<dt>--check-version</dt>
+<dd>Ative ou desative a verificação de versão da CLI. Os valores válidos são `true` ou `false`.</dd>
+<dt>--color</dt>
+<dd>Ative ou desative a saída de cor. Essa opção está desativada por padrão. Os valores válidos são `true` ou `false`.</dd>
+<dt>--http-timeout</dt>
+<dd>O valor de tempo limite para solicitações de HTTP em segundos. O valor padrão é 60 segundos.</dd>
+<dt>--locale</dt>
+<dd>Configure um código padrão de idioma. Se nenhum valor for especificado, o código de idioma anterior será excluído. </dd>
+<dt>--trace</dt>
+<dd>Rastreie solicitações de HTTP para o terminal ou arquivo especificado. Os valores válidos são `true` ou `false`.</dd>
+</dl>
+
+É possível especificar somente uma das opções de cada vez.
+{: tip}
+
+### Exemplos
+{: #config-examples}
 
 Configure o tempo limite de solicitação de HTTP como 30 segundos:
 ```
@@ -161,7 +178,7 @@ Ibmcloud config -- trace true
 ```
 {: codeblock}
 
-Rastreie solicitações de HTTP para um arquivo especificado */home/usera/my_trace*:
+Rastreie solicitações de HTTP para o arquivo `/home/usera/my_trace`:
 ```
 Ibmcloud config -- trace
 ```
@@ -188,118 +205,170 @@ Ibmcloud config -- locale CLEAR
 ## ibmcloud info
 {: #ibmcloud_info}
 
-O comando `ibmcloud info` não está mais disponível como a versão da CLI `0.14`. Para instalar a versão mais recente da CLI, consulte [Instalando a CLI do {{site.data.keyword.cloud_notm}} independente](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
-{: note}
+O comando **`ibmcloud info`** não está mais disponível a partir da versão 0.14 da CLI. Para instalar a versão mais recente da CLI, consulte [Instalando a CLI do {{site.data.keyword.cloud_notm}} independente](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
 
 ## Cf ibmcloud
 {: #ibmcloud_cf}
 
-Chamar o CF CLI integrado
+Chame a CLI integrada do Cloud Foundry.
 ```
 Ibmcloud [ -q, -- quiet ] cf COMMAND ...
 ```
 
-<strong>Pré-requisitos</strong>: Nenhum
+### Pré-requisito
+{: #info-prereqs}
 
-<strong>Opções de comando</strong>:
+Nenhum.
+
+### Opções de comandos
+{: #info-options}
+
 <dl>
   <dt>-q, --quiet</dt>
-  <dd>Desativar a mensagem "Chamando comando cf..."</dd>
+  <dd>Não exiba a mensagem de chamada.</dd>
 </dl>
 
-<strong>Exemplos</strong>:
+### Exemplos
+{: #info-examples}
 
-Liste apps cf:
-
+Liste os aplicativos do Cloud Foundry:
 ```
 Ibmcloud cf apps
 ```
+{: codeblock}
 
-Listar serviços cf sem a mensagem "Chamando comando cf...":
+Liste os serviços do Cloud Foundry sem exibir a mensagem `Invoking cf command...`:
 ```
 Ibmcloud -q cf services
 ```
 {: codeblock}
 
+## ibmcloud cf install
+{: #ibmcloud_cf_install}
+
+Instale uma CLI do Cloud Foundry para a CLI do IBM Cloud
+```
+ibmcloud cf install [-v, --version VERSION] [--restore] [-f, --force]
+```
+
+### Pré-requisito
+{: #cfinstall-prereqs}
+
+Nenhum.
+
+### Opções de comandos
+{: #cfinstall-options}
+
+<dl>
+  <dt>-v, --version</dt>
+  <dd>Especifique a versão da CLI do Cloud Foundry para instalar</dd>
+  <dt>--restore</dt>
+  <dd>Restaure para a versão pré-empacotada da CLI do Cloud Foundry</dd>
+  <dt>-f, --force</dt>
+  <dd>Forçar instalação sem confirmação</dd>
+</dl>
+
+### Exemplos
+{: #cfinstall-examples}
+
+Instale a CLI do Cloud Foundry `6.44.1`:
+
+```
+ibmcloud cf install -v 6.44.1
+```
+
+Instale a versão mais recente da CLI do Cloud Foundry sem confirmação:
+
+```
+ibmcloud cf install -f
+```
+
+Recupere para a CLI do Cloud Foundry empacotada padrão:
+
+```
+ibmcloud cf install --restore
+```
+
 ## ibmcloud login
 {: #ibmcloud_login}
 
-Efetue login do usuário.
+Efetue login na CLI do {{site.data.keyword.cloud_notm}}.
+
 ```
 ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-r REGION | --no-region] [-o ORG] [-s SPACE]
 ```
+### Pré-requisito
+{: #login-prereqs}
 
-<strong>Pré-requisitos</strong>: Nenhum
+Nenhum.
 
-<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
+### Opções de comandos
+{: #login-options}
 
-<strong>Opções de comando</strong>:
 <dl>
-  <dt> -a <i>API_ENDPOINT</i> (opcional)</dt>
-  <dd> Terminal de API (por exemplo: cloud.ibm.com)</dd>
-  <dt> --apikey <i>API_KEY ou @API_KEY_FILE_PATH</i>
-  <dd> Conteúdo da chave de API ou o caminho de um arquivo-chave de API que é indicado por @</dd>
-  <dt> --sso (opcional) </dt>
-  <dd> Use uma senha descartável para efetuar login </dd>
-  <dt> -u <i>USERNAME</i> (opcional)</dt>
-  <dd> Nome do usuário</dd>
-  <dt> -p <i>PASSWORD</i> (opcional)</dt>
-  <dd> Senha</dd>
-  <dt> -c <i>ACCOUNT_ID</i> (opcional) </dt>
-  <dd> ID da conta de destino. Essa opção é exclusiva com -- no-account</dd>
-  <dt> --no-account (opcional) </dt>
-  <dd> Forçar login sem conta. Essa opção não é recomendada. Essa opção é exclusiva com -c.</dd>
-  <dt> -g <i>RESOURCE_GROUP</i> (opcional) </dt>
-  <dd> Nome do grupo de recursos de destino</dd>
-  <dt> -r REGION</dt>
-  <dd> Nome da região, como 'us-south' ou 'eu-gb'</dt>
-  <dt> -- no-region</dt>
-  <dd> Force o login sem destinar uma região.</dd>
-  <dt> -o <i>ORG</i> (opcional)</dt>
-  <dd> Nome da organização de destino (descontinuado, use 'ibmcloud target -o ORG')</dd>
-  <dt> -s <i>SPACE</i> (opcional) </dt>
-  <dd> Nome do espaço de destino (descontinuado, use 'ibmcloud target -s SPACE')</dd>
-  <dt> --no-iam </dt>
-  <dd> Forçar a autenticação com o servidor de login em vez do IAM público</dd>
-  <dt> --skip-ssl-validation (opcional) </dt>
-  <dd> Validação SSL de bypass de solicitações de HTTP. Essa opção não é recomendada.</dd>
+<dt>-a API_ENDPOINT</dt>
+<dd>O terminal de API, por exemplo, `cloud.ibm.com`. </dd>
+<dt>--apikey API_KEY ou @API_KEY_FILE_PATH</dt>
+<dd>O conteúdo da chave de API ou o caminho de um arquivo-chave de API indicado pelo símbolo @.</dd>
+<dt>-u USER_NAME</dt>
+<dd>O nome do usuário. Opcional.</dd>
+<dt>-p PASS_WORD</dt>
+<dd>A senha do usuário. Opcional.</dd>
+<dt>-c ACCOUNT_ID</dt>
+<dd>O ID da conta de destino. Essa opção é exclusiva com a opção **`--no account`**.</dd>
+<dt>--no-account</dt>
+<dd>Login forçado sem a conta. Essa opção não é recomendada e é exclusiva com a opção **`-c`**.</dd>
+<dt>-g RESOURCE_GROUP</dt>
+<dd>O nome do grupo de recursos de destino. Opcional.</dd>
+<dt>-r REGION</dt>
+<dd>O nome da região de destino, por exemplo, us-south ou eu-gb.</dd>
+<dt>-- no-region</dt>
+<dd>Login forçado sem ter uma região como destino.</dd>
+<dt>-o ORG</dt>
+<dd>O nome da organização de destino. Essa opção foi descontinuada. Use **`ibmcloud target -o org_name`** no lugar. Opcional.</dd>
+<dt>-s SPACE</dt>
+<dd>O nome do espaço de destino. Essa opção foi descontinuada. Use **`ibmcloud target -s space_name`** no lugar. Opcional.</dd>
+<dt>--no-iam</dt>
+<dd>Force a autenticação com o servidor de login em vez do IAM público.</dd>
+<dt>--skip-ssl-validation</dt>
+<dd>Ignore a validação de SSL de solicitações de HTTP. Essa opção não é recomendada.</dd>
 </dl>
 
-<strong>Exemplos</strong>:
+### Exemplos
+{: #login-examples}
 
-### Login interativo
+Efetue login interativamente.
 
 ```
 ibmcloud login
 ```
 {: codeblock}
 
-Efetue login com o nome do usuário e senha e configure a conta de destino, a organização e o espaço:
+Efetue login com um nome de usuário e uma senha e configure uma conta de destino, uma organização e um espaço:
 ```
 ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Efetue login com uma senha descartável e configure a conta de destino, a organização e o espaço
+Efetue login com uma senha única e configure uma conta de destino, uma organização e um espaço:
 ```
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
-### Para usar os serviços do Cloud Foundry
+Configure sua organização e seu espaço do Cloud Foundry. É possível executar o comando a seguir para identificar interativamente a organização e o espaço:
 
-Para usar os serviços do Cloud Foundry, deve-se destinar uma organização e um espaço do Cloud Foundry. É possível executar o comando a seguir para escolher interativamente a organização e o espaço:
 ```
 ibmcloud target --cf
 ```
 {: codeblock}
 
-Opcionalmente, é possível usar a saída do comando anterior para configurar manualmente a organização e o espaço
-com o comando a seguir:
+Ou, se você souber a qual organização e a qual espaço o serviço pertence, será possível usar o comando a seguir:
+
 ```
 ibmcloud target -o <value> -s <value>
 ```
 {: codeblock}
 
-### A chave de API tem a conta que está associada
+Use uma chave de API com uma conta associada:
 
 ```
 ibmcloud login --apikey api-key-string -o MyOrg -s MySpace
@@ -309,7 +378,7 @@ ibmcloud login --apikey api-key-string -o MyOrg -s MySpace
 ibmcloud login --apikey @filename -o MyOrg -s MySpace
 ```
 
-### A chave de API não tem nenhuma conta que está associada
+Use uma chave de API sem nenhuma conta associada:
 
 ```
 ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
@@ -319,81 +388,101 @@ ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
-<strong>Nota:</strong> se a Chave de API tiver uma conta associada, a alternância para outra conta não será permitida.
+Se a chave de API tiver uma conta associada, a alternância para outra conta não será suportada.
+{ :note}
 
-### Usar uma senha única
+Use uma senha única:
+
 ```
 ibmcloud login -u UserID --sso
 ```
 {: codeblock}
 
-Em seguida, a CLI fornece um link de URL e solicita uma senha:
+Em seguida, a CLI fornece um link de URL e solicita a senha:
+
 ```
 One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 ```
 {: screen}
 
-Abra o link no navegador, para obter uma senha. Digite a senha fornecida no console e será possível efetuar login.
+Abra o link em um navegador para obter uma senha. Insira a senha fornecida no console para efetuar login.
 
 ## ibmcloud logout
 {: #ibmcloud_logout}
 
-Efetue logout do usuário.
+Efetue logout da CLI.
+
 ```
 ibmcloud logout
 ```
 {: codeblock}
 
-<strong>Pré-requisitos</strong>: Nenhum
+### Pré-requisito
+{: #logout-prereqs}
+
+Nenhum.
 
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
 Visualize as informações para todas as regiões no {{site.data.keyword.Bluemix_notm}}.
+
 ```
 ibmcloud regions
 ```
 {: codeblock}
 
-<strong>Pré-requisitos</strong>: Terminal
+### Pré-requisito
+{: #regions-prereqs}
+
+Use o comando **`ibmcloud api`** para configurar um terminal de API.
 
 ## ibmcloud target
 {: #ibmcloud_target}
 
-
 Configure ou visualize a conta de destino, a região, a organização ou o espaço.
+
 ```
 ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
 ```
 
-<strong>Pré-requisitos</strong>: Terminal, Login
+### Pré-requisito
+{: #target-prereqs}
 
-<strong>Opções de comando</strong>:
+* Use o comando **`ibmcloud api`** para configurar um terminal de API.
+* Use o comando **`ibmcloud login`** para efetuar login. Se você estiver efetuando login com um ID federado, use a opção **`--sso`** para se autenticar com uma senha única ou use a opção **`--apikey`** para se autenticar com uma chave de API.
+
+### Opções de comandos
+{: #target-options}
+
 <dl>
-   <dt>-c <i>ACCOUNT_ID</i> (opcional)</dt>
-   <dd>O ID da conta que será o destino.</dd>
-   <dt>-r <i>REGION_NAME</i> (opcional)</dt>
-   <dd>Nome da região a ser alternada, como 'us-south' ou 'eu-gb'.</dd>
-   <dt>-g <i>RESOURCE_GROUP</i> (opcional)</dt>
-   <dd>Nome do grupo de recursos</dd>
-   <dt>--cf</dt>
-   <dd>Selecione de forma interativa o espaço e a organização de destino</dd>
-   <dt>--cf-api</dt>
-   <dd>Terminal de API do Cloud Foundry</dd>
-   <dt>-o <i>ORG_NAME</i> (opcional)</dt>
-   <dd>O nome da organização que será o destino.</dd>
-   <dt>-s <i>SPACE_NAME</i> (opcional)</dt>
-   <dd>O nome do espaço que será o destino.</dd>
-   <dt>-- unset-region</dt>
-   <dd>Desconfigurar região destinada</dd>
-   <dt>--unset-resource-group</dt>
-   <dd>Remover configuração do grupo de recursos de destino</dd>
-   <dt>--output <i>FORMAT</i></dt>
-   <dd>Especifica o formato de saída. Apenas JSON é suportado agora.</dd>
+<dt>-c ACCOUNT_ID</dt>
+<dd>O ID da conta de destino. Opcional.</dd>
+<dt>-r REGION</dt>
+<dd>O nome da região de destino, por exemplo, us-south ou eu-gb. Opcional.</dd>
+<dt>-g RESOURCE_GROUP</dt>
+<dd>O nome do grupo de recursos de destino. Opcional.</dd>
+<dt>--cf</dt>
+<dd>Especifique interativamente a organização e o espaço de destino.</dd>
+<dt>--cf-api</dt>
+<dd>O terminal de API do Cloud Foundry.</dd>
+<dt>-o ORG</dt>
+<dd>O nome da organização de destino. Opcional.</dd>
+<dt>-s SPACE</dt>
+<dd>O nome do espaço de destino. Opcional.</dd>
+<dt>-- unset-region</dt>
+<dd>Limpe a região de destino.</dd>
+<dt>--unset-resource-group</dt>
+<dd>Limpe o grupo de recursos de destino.</dd>
+<dt>--output FORMAT</dt>
+<dd>O formato de saída especificado. O JSON é atualmente o único formato suportado.</dd>
 </dl>
-Se nenhuma das opções estiver especificada, a conta, a região, a organização e o espaço atuais serão exibidos.
 
-<strong>Exemplos</strong>:
+Se nenhuma das opções estiver especificada, a conta, a região, a organização e o espaço atuais serão exibidos.
+{: note}
+
+### Exemplos
+{: #target-examples}
 
 Configure a conta, a organização e o espaço atuais:
 ```
@@ -417,25 +506,27 @@ ibmcloud target
 {: #ibmcloud_update}
 
 Atualize a CLI para a versão mais recente.
+
 ```
 Atualizar ibmcloud [ -f ]
 ```
+### Pré-requisito
+{: #update-prereqs}
 
-<strong>Pré-requisitos</strong>: Nenhum
+### Opções de comandos
+{: #update-options}
 
-<strong>Opções de comando</strong>:
 <dl>
   <dt>-f</dt>
-  <dd>Forçar atualização sem confirmação. Privilégio de administrador é necessário.</dd>
+  <dd>Force uma atualização sem confirmação. Privilégio de administrador é necessário.</dd>
 </dl>
-
 
 ## Comandos gerais de serviço de infraestrutura clássica
 {: #softlayer_cli}
 
-Use os comandos de infraestrutura clássica na interface da linha de comandos (CLI) do {{site.data.keyword.cloud_notm}} para configurar e gerenciar os serviços de infraestrutura.
+Use comandos de infraestrutura clássica na CLI do {{site.data.keyword.cloud_notm}} para configurar e gerenciar serviços de infraestrutura.
 
-Execute o comando `ibmcloud sl` para ver a lista de comandos disponíveis:
+Execute o comando **`ibmcloud sl`** para ver a lista de comandos disponíveis:
 ```
 USO:
    ibmcloud sl command [arguments...] [ opções ...]
@@ -463,12 +554,12 @@ COMMANDS:
 ```
 {: screen}
 
-Para visualizar informações da ajuda sobre um comando, execute:
+Para visualizar informações da ajuda sobre um comando, execute o comando a seguir:
 ```
 ibmcloud sl [ command ] -h
 ```
 
-O comando `ibmcloud sl init` não está mais disponível como a versão da CLI `0.14`. Para instalar a versão mais recente da CLI, consulte [Instalando a CLI do {{site.data.keyword.cloud_notm}} independente](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
+O comando **`ibmcloud sl init`** não está mais disponível como a versão da CLI `0.14`. Para instalar a versão mais recente da CLI, consulte [Instalando a CLI do {{site.data.keyword.cloud_notm}} independente](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
 {: note}
 
 ## ibmcloud sl help

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, mobile sdk, server sdk, client sdk, add sdk, android sdk, cordova
 
@@ -36,7 +36,7 @@ Se você tiver um aplicativo do servidor Java, NodeJS ou Swift, poderá usar os 
 ## -SDKs Clientes
 {: #client_sdk}
 
-É possível usar os SDKs a seguir em seu aplicativo móvel para usar os respectivos recursos.
+É possível usar os SDKs a seguir em seu app móvel para usar os respectivos recursos.
 
 ### SDKs Android
 {: #android_sdk}

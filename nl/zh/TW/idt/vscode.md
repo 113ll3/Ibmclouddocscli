@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -84,7 +84,7 @@ Visual Studio Code 的 IBM Cloud Developer Tools 延伸規格可以直接存取 
   * 手動建立新的 Cloud Foundry 應用程式
 * 在 Visual Studio Code 編輯器中本端開啟專案資料夾
 * 使用 `ibmcloud cf apps`，以列出您的所有應用程式
-* 使用 `ibmcloud cf push`，以將您應用程式的建置推送至 Cloud Foundry 運行環境
-* 使用 ibmcloud `cf <start/stop/restage/restart>` 來變更應用程式的狀態
-* 使用 `ibmcloud cf logs`，以檢視您應用程式的即時日誌串流
+* 使用 `ibmcloud cf push`，以將應用程式的建置推送至 Cloud Foundry 運行環境
+* 使用 `ibmcloud cf <start/stop/restage/restart>` 來變更應用程式的狀態
+* 使用 `ibmcloud cf logs`，以檢視應用程式的即時日誌串流
   * 使用 `ibmcloud cf logs`，以停止日誌串流

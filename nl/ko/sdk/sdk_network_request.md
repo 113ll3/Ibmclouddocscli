@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-05-21"
 
 keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
@@ -55,7 +55,7 @@ subcollection: cloud-cli
 ## iOS
 {: #request-ios}
 
-1. iOS 애플리케이션에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios)했는지 확인하십시오.
+1. iOS iOS 앱에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios)했는지 확인하십시오.
 
 2. 네트워크 요청을 작성하십시오.
 
@@ -104,7 +104,7 @@ subcollection: cloud-cli
 ## Cordova
 {: #request-cordova}
 
-1. Cordova 애플리케이션에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova)했는지 확인하십시오.
+1. Cordova 앱에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova)했는지 확인하십시오.
 
 2. 네트워크 요청을 작성하십시오.
 

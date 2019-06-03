@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -59,11 +59,11 @@ Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ult
 
 Vous pouvez générer votre application en utilisant la commande `build`. Les commandes `test`, `debug` et `run` s'attendent à trouver une application compilée, par conséquent, vous devez préalablement exécuter une opération `build`.
 
-L'élément de configuration `build-cmd-debug` est utilisé afin de générer l'application pour toutes les utilisations, à l'exception de`run`. Vous générez votre application à des fins d débogage en spécifiant l'option de ligne de commande `--debug`. L'élément de configuration `build-cmd-run` est utilisé lors de la génération de l'application afin de l'utiliser avec la commande `run`.
+L'élément de configuration `build-cmd-debug` est utilisé afin de générer l'application pour toutes les utilisations, à l'exception de `run`. Vous générez votre application à des fins d débogage en spécifiant l'option de ligne de commande `--debug`. L'élément de configuration `build-cmd-run` est utilisé lors de la génération de l'application afin de l'utiliser avec la commande `run`.
 
 Pour une génération avec plusieurs conteneurs, votre application doit contenir un fichier [Compose](https://docs.docker.com/compose/overview/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"), qui est indiqué dans le fichier `cli-config.yml` ou vous pouvez utiliser le paramètre de commande `dockerfile-tools` pour en indiquer un.
 
-Exécutez la commande suivante dans votre répertoire d'application en cours pour générer votre application :  
+Exécutez la commande suivante dans votre répertoire d'application en cours pour lancer la génération :  
 ```
 ibmcloud dev build [--debug]
 ```
@@ -76,7 +76,7 @@ Utilisez la commande `code` pour télécharger une application précédemment cr
 
 Exécutez la commande suivante pour télécharger le code à partir d'une application spécifiée :
 ```
-ibmcloud dev code <applicationName>
+ibmcloud dev code <appName>
 ```
 {: codeblock}
 
@@ -89,7 +89,7 @@ Vous pouvez indiquer un nom d'application ; l'interface de ligne de commande ign
 
 Exécutez la commande suivante pour ouvrir un navigateur Web sur la console Web de votre application :
 ```
-ibmcloud dev console [applicationName]
+ibmcloud dev console [appName]
 ```
 {: codeblock}
 
@@ -109,7 +109,7 @@ ibmcloud dev create
 
 Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ultérieure.
 
-Vous pouvez déboguer votre application avec la commande `debug`. Une génération doit d'abord être effectuée pour l'application en utilisant la commande build avec l'argument `--debug`. Le lancement de la commande `debug` entraîne le démarrage d'un conteneur qui fournit un ou plusieurs ports de débogage définis par la valeur `container-port-map-debug` dans le fichier cli-config.yml ou spécifiés sur la ligne de commande. Connectez votre outil de débogage favori au port ou aux ports et vous pourrez déboguer votre application en mode normal.
+Vous pouvez déboguer votre application à l'aide de la commande `debug`. Une génération doit d'abord être effectuée pour l'application en utilisant la commande build avec l'argument `--debug`. Le lancement de la commande `debug` entraîne le démarrage d'un conteneur qui fournit un ou plusieurs ports de débogage définis par la valeur `container-port-map-debug` dans le fichier cli-config.yml ou spécifiés sur la ligne de commande. Connectez votre outil de débogage favori au port ou aux ports et vous pourrez déboguer votre application en mode normal.
 
 Compilez tout d'abord votre application :
 ```
@@ -130,13 +130,12 @@ Pour quitter la session de débogage, utilisez `CTRL-C`.
 ### Paramètres de la commande debug
 {: #debug-parameters}
 
-Les paramètres ci-dessous, qui sont réservés à la commande
-`debug`, facilitent le débogage d'une application. Des [paramètres supplémentaires](#command-parameters) sont partagés avec d'autres commandes. 
+Les paramètres ci-dessous, qui sont réservés à la commande `debug`, facilitent le débogage d'une application. Des [paramètres supplémentaires](#command-parameters) sont partagés avec d'autres commandes.
 
 #### `container-port-map-debug`
 {: #port-map-debug}
 
-* Mappages de port pour le port de débogage. La première valeur est le port à utiliser dans le système d'exploitation hôte, la seconde est le port dans le conteneur [`host-port:container-port`]. 
+* Mappages de port pour le port de débogage. La première valeur est le port à utiliser dans le système d'exploitation hôte, la seconde est le port dans le conteneur [`host-port:container-port`].
 * Syntaxe : `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
@@ -148,8 +147,7 @@ Les paramètres ci-dessous, qui sont réservés à la commande
 #### `debug-cmd`
 {: #debug-cmd}
 
-* Paramètre utilisé pour spécifier une commande pour commencer le débogage dans le conteneur tools. Utilisez-le si
-`build-cmd-debug` démarre votre application en mode débogage.
+* Paramètre utilisé pour spécifier une commande pour commencer le débogage dans le conteneur tools. Utilisez-le si `build-cmd-debug` démarre votre application en mode débogage.
 * Syntaxe : `ibmcloud dev debug --debug-cmd /the/debug/command`
 
 ## Commande delete
@@ -159,7 +157,7 @@ Utilisez la commande `delete` pour supprimer des applications de votre espace {{
 
 Exécutez la commande suivante pour supprimer votre application dans {{site.data.keyword.cloud_notm}} :
 ```
-ibmcloud dev delete <applicationName>
+ibmcloud dev delete <appName>
 ```
 {: codeblock}
 
@@ -180,7 +178,7 @@ Pour déployer votre application sur Kubernetes, vous devez spécifier l'éléme
 D'autres paramètres requis pour la configuration du déploiement Kubernetes peuvent également être spécifiés dans le fichier `cli-config.yml` via des arguments de ligne de commande. Si vous ne définissez pas ces paramètres dans le fichier `cli-config.yml`, vous devez effectuer le déploiement avec le paramètre `-t container`. Vous êtes ensuite invité à entrer toutes les autres valeurs.
 
 ```yaml
-chart-path: "chart/myapplication"
+chart-path: "chart/myapp"
 
 deploy-target: "container"
 
@@ -263,7 +261,7 @@ ibmcloud dev diag
 ## edit
 {: #edit}
 
-Modifiez votre application en ajoutant des options, comme la connexion de cette dernière à une application se trouvant déjà dans {{site.data.keyword.cloud_notm}}, la gestion des services {{site.data.keyword.cloud_notm}} de l'application et de sa chaîne d'outils {{site.data.keyword.cloud_notm}} déployée dans IBM Cloud Kubernetes, Cloud Foundry ou Cloud Foundry Enterprise Environment. Avec une application locale connectée à une application dans {{site.data.keyword.cloud_notm}}, utilisez `edit` pour ajouter de nouveaux services, connecter et déconnecter les services existants ou retirer des services existants de votre compte. En outre, vous pouvez créer ou afficher une chaîne d'outils {{site.data.keyword.cloud_notm}} pour l'application. Exécutez la commande suivante à la racine du répertoire d'application :
+Editez votre application en ajoutant des options, comme la connexion de cette dernière à une application se trouvant déjà dans {{site.data.keyword.cloud_notm}}, la gestion des services {{site.data.keyword.cloud_notm}} de l'application et de sa chaîne d'outils {{site.data.keyword.cloud_notm}} déployée dans IBM Cloud Kubernetes, Cloud Foundry ou Cloud Foundry Enterprise Environment. Avec une application locale connectée à une application dans {{site.data.keyword.cloud_notm}}, utilisez `edit` pour ajouter de nouveaux services, connecter et déconnecter les services existants ou retirer des services existants de votre compte. En outre, vous pouvez créer ou afficher une chaîne d'outils {{site.data.keyword.cloud_notm}} pour l'application. Exécutez la commande suivante à la racine du répertoire d'application :
 ```
 ibmcloud dev edit
 ```
@@ -375,7 +373,7 @@ ibmcloud dev list
 
 Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ultérieure.
 
-Vous pouvez exécuter votre application avec la commande `run`. Une génération doit d'abord être effectuée pour l'application à l'aide de la commande `build`. Lorsque vous exécutez la commande `run`, le conteneur run démarre et expose les ports tels qu'ils sont définis par le paramètre `container-port-map`. Le paramètre `run-cmd` est utilisé pour appeler l'application si le conteneur run `Dockerfile` ne contient pas de point d'entrée pour effectuer cette étape.
+Vous pouvez exécuter votre application à l'aide de la commande `run`. Une génération doit d'abord être effectuée pour l'application à l'aide de la commande `build`. Lorsque vous exécutez la commande `run`, le conteneur run démarre et expose les ports tels qu'ils sont définis par le paramètre `container-port-map`. Le paramètre `run-cmd` est utilisé pour appeler l'application si le conteneur run `Dockerfile` ne contient pas de point d'entrée pour effectuer cette étape.
 
 Pour une exécution avec plusieurs conteneurs, votre application doit contenir un fichier [Compose](https://docs.docker.com/compose/overview/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"), spécifié dans le fichier `cli-config.yml` ou vous pouvez utiliser le paramètre de commande `dockerfile-run` pour en indiquer un.
 
@@ -404,7 +402,7 @@ Des [paramètres supplémentaires](#command-parameters) sont partagés avec d'au
 {: #container-name-run2}
 
 * Nom de conteneur pour le conteneur run.
-* Syntaxe : `ibmcloud dev run --container-name-run [<applicationName>]`
+* Syntaxe : `ibmcloud dev run --container-name-run [<appName>]`
 
 #### `container-path-run`
 {: #container-path-run}
@@ -437,8 +435,7 @@ l'exécution.
 #### `run-cmd`
 {: #run-cmd}
 
-* Paramètre utilisé pour exécuter le code dans le conteneur run. Utilisez ce
-paramètre si votre image démarre votre application.
+* Paramètre utilisé pour exécuter le code dans le conteneur run. Utilisez ce paramètre si votre image démarre votre application.
 * Syntaxe : `ibmcloud dev run --run-cmd [/commande à exécuter]`
 
 ## Commande shell
@@ -521,20 +518,20 @@ Les paramètres ci-après sont utilisés pour la commande `stop`. Des [paramètr
 {: #container-name-run}
 
 * Nom de conteneur pour le conteneur run.
-* Syntaxe : `ibmcloud dev stop --container-name-run [<applicationName>]`
+* Syntaxe : `ibmcloud dev stop --container-name-run [<appName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * Nom de conteneur pour le conteneur tools.
-* Syntaxe : `ibmcloud dev stop --container-name-tools [<applicationName>]`
+* Syntaxe : `ibmcloud dev stop --container-name-tools [<appName>]`
 
 ## Commande test
 {: #test}
 
 Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ultérieure.
 
-Vous pouvez tester votre application avec la commande `test`. Une génération doit d'abord être effectuée pour l'application à l'aide de la commande `build --debug`. Le conteneur tools est ensuite utilisé afin de démarrer `test-cmd` pour l'application.
+Vous pouvez tester votre application à l'aide de la commande `test`. Une génération doit d'abord être effectuée pour l'application à l'aide de la commande `build --debug`. Le conteneur tools est ensuite utilisé afin de démarrer `test-cmd` pour l'application.
 
 Compilez tout d'abord votre application :
 ```
@@ -644,13 +641,13 @@ Les paramètres de commande qui sont entrés sur la ligne de commande sont prior
 {: #container-name-run1}
 
 * Nom de conteneur pour le conteneur run.
-* Syntaxe : `ibmcloud dev <run|status|stop> --container-name-run [<applicationName>]`
+* Syntaxe : `ibmcloud dev <run|status|stop> --container-name-run [<appName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * Nom de conteneur pour le conteneur tools.
-* Syntaxe : `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<applicationName>]`
+* Syntaxe : `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<appName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}

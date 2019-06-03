@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -27,11 +27,11 @@ subcollection: cloud-cli
 Veja as soluções para problemas comuns com a interface de linha de comandos (CLI) do {{site.data.keyword.dev_cli_short}}. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
 {: shortdesc}
 
-## Por que obtenho um erro de nome do host ao criar um app com um padrão não móvel?
+## Por que obtenho um erro de nome do host ao criar um aplicativo com um padrão não móvel?
 {: #ts-cli-hostname-error}
 {: troubleshoot}
 
-O erro a seguir poderá ser exibido se você usar a CLI do {{site.data.keyword.dev_cli_short}} para implementar um app para o Cloud Foundry. Se você inserir um nome de host exclusivo, ainda poderá ver essa mensagem.
+O erro a seguir poderá ser exibido se você usar a CLI do {{site.data.keyword.dev_cli_short}} para implementar um aplicativo no Cloud Foundry. Se você inserir um nome de host exclusivo, ainda poderá ver essa mensagem.
 ```
 The hostname <myHostname> is taken.
 ```
@@ -275,7 +275,7 @@ directly.
 {: tsSymptoms}
 
 Esse erro pode ser devido a uma das causas a seguir:
-- Executar o comando [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) por meio de um diretório que não é o diretório de origem de seu aplicativo.
+- Executar o comando [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) por meio de um diretório que não é o diretório de origem de seu app.
 - Executar o comando [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) para um app de um idioma que não é reconhecido.
 {: tsCauses}
 
@@ -293,8 +293,8 @@ para implementação na nuvem.
 As diferentes causas possíveis podem ser localizadas em cada um dos links a seguir.
 {: tsCauses}
 
-- Para obter mais informações sobre como resolver esses problemas com um app Spring, consulte [Ativando aplicativos Spring Boot existentes para implementação na nuvem](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
-- Para obter mais informações sobre como resolver esses problemas com um app `Node.js`, consulte [Ativando aplicativos Node.js existentes para implementação na nuvem](/docs/node?topic=nodejs-enable_existing#enable_existing).
+- Para obter mais informações sobre como resolver esses problemas com um app Spring, consulte [Ativando apps Spring Boot existentes para implementação na nuvem](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
+- Para obter mais informações sobre como resolver esses problemas com um app `Node.js`, consulte [Ativando apps Node.js existentes para implementação na nuvem](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 
 ## Como instalar manualmente os componentes da CLI do {{site.data.keyword.dev_cli_notm}} separadamente
@@ -322,8 +322,8 @@ Esse erro pode ser devido a uma das causas a seguir:
 
 Certifique-se de que o Docker esteja instalado e em execução:
 - Para instalar ou iniciar o [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
-- Para instalar ou iniciar o [Docker for Windows &trade;](https://docs.docker.com/docker-for-windows/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
-- Para instalar ou iniciar o [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
+- Para instalar ou iniciar o [Docker for Windows&trade;](https://docs.docker.com/docker-for-windows/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
+- Para instalar ou iniciar o [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
 {: tsResolve}
 
 ## Como resolver versões do Helm incompatíveis?

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-05-21"
 
 keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
@@ -55,7 +55,7 @@ subcollection: cloud-cli
 ## iOS
 {: #request-ios}
 
-1. iOS アプリケーションに [Client SDK をインポートして初期化](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios)しておくようにしてください。
+1. iOS アプリに [Client SDK をインポートして初期化](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios)しておくようにしてください。
 
 2. ネットワーク要求を作成します。
 
@@ -104,7 +104,7 @@ subcollection: cloud-cli
 ## Cordova
 {: #request-cordova}
 
-1. Cordova アプリケーションに [Client SDK をインポートして初期化](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova)しておくようにしてください。
+1. Cordova アプリに [Client SDK をインポートして初期化](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova)しておくようにしてください。
 
 2. ネットワーク要求を作成します。
 

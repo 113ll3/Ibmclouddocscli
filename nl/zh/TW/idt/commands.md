@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -57,13 +57,13 @@ subcollection: cloud-cli
 
 如果您使用 Windows&trade;，則必須執行 Windows&trade; 10 Pro 或更新版本。
 
-您可以使用 `build` 指令來建置應用程式。`test`、`debug` 和 `run` 指令預期會發現已編譯的應用程式，因此您必須先執行 `build` 作業。
+您可以使用 `build` 指令來建置應用程式。`test`、`debug` 及 `run` 指令預期會發現已編譯的應用程式，因此您必須先執行 `build` 作業。
 
 `build-cmd-debug` 配置元素用於為除了 `run` 之外的所有使用情形而建置應用程式。建置應用程式以便進行除錯的方法是指定指令行選項 `--debug`。`build-cmd-run` 配置元素用於建置應用程式以搭配使用 `run` 指令。
 
 若要使用多個容器來建置，您的應用程式必須有 [Compose](https://docs.docker.com/compose/overview/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 檔案（指定於 `cli-config.yml` 中），或者您可以使用 `dockerfile-tools` 指令參數來提供檔案。
 
-在現行應用程式目錄中執行下列指令，以建置您的應用程式：  
+在現行應用程式目錄中執行下列指令，以開始建置：  
 ```
 ibmcloud dev build [--debug]
 ```
@@ -76,7 +76,7 @@ ibmcloud dev build [--debug]
 
 執行下列指令，以從指定的應用程式下載程式碼。
 ```
-ibmcloud dev code <applicationName>
+ibmcloud dev code <appName>
 ```
 {: codeblock}
 
@@ -87,16 +87,16 @@ ibmcloud dev code <applicationName>
 
 您可以提供應用程式名稱，CLI 即會跳過根據資料夾或應用程式名稱進行比對。在此情況下，CLI 會在 Web 瀏覽器中開啟具名應用程式的主控台。  
 
-執行下列指令，以將 Web 瀏覽器開啟到應用程式的 Web 主控台。
+執行下列指令，將 Web 瀏覽器開啟到應用程式的 Web 主控台。
 ```
-ibmcloud dev console [applicationName]
+ibmcloud dev console [appName]
 ```
 {: codeblock}
 
 ## create
 {: #create}
 
-建立應用程式，其會提示您輸入所有資訊，包括資源類型、語言、入門範本套件及「DevOps 工具鏈」選項。這些選項包括 IBM Cloud Foundry 或 Cloud Foundry Enterprise Environment，以及 Kubernetes。應用程式會在現行目錄中建立。
+建立應用程式，以提示您輸入所有資訊，包括資源類型、語言、入門範本套件及「DevOps 工具鏈」選項。這些選項包括 IBM Cloud Foundry 或 Cloud Foundry Enterprise Environment，以及 Kubernetes。應用程式會在現行目錄中建立。
 
 若要在現行目錄中建立應用程式，並讓服務與其相關聯，請執行下列指令：
 ```
@@ -109,7 +109,7 @@ ibmcloud dev create
 
 如果您使用 Windows&trade;，則必須執行 Windows&trade; 10 Pro 或更新版本。
 
-您可以透過 `debug` 指令，對您的應用程式進行除錯。必須先搭配使用 build 指令與 `--debug` 引數，針對應用程式完成建置。當您啟動 `debug` 指令時，會啟動容器，以提供 cli-config.yml 中 `container-port-map-debug` 值所定義或指令行上所指定的一個以上除錯埠。將您的最愛除錯工具連接至一個以上的埠，而且可以正常地對應用程式進行除錯。
+您可以透過 `debug` 指令，對您的應用程式進行除錯。必須先搭配使用 build 指令與 `--debug` 引數，針對應用程式完成建置。當您啟動 `debug` 指令時，會啟動容器，以提供 cli-config.yml 中 `container-port-map-debug` 值所定義或指令行上所指定的一個以上除錯埠。將您的最愛除錯工具連接至一個以上的埠，就可以正常地對應用程式進行除錯。
 
 首先，請編譯您的應用程式：
 ```
@@ -117,7 +117,7 @@ ibmcloud dev build --debug
 ```
 {: codeblock}
 
-若要開始，請在現行應用程式目錄中執行下列指令，以對應用程式進行除錯：
+若要開始，請在現行應用程式目錄中執行下列指令，以開始除錯：
 ```
 ibmcloud dev debug
 ```
@@ -153,11 +153,11 @@ ibmcloud dev debug
 ## delete
 {: #delete}
 
-使用 `delete` 指令，以移除 {{site.data.keyword.cloud_notm}} 空間中的應用程式。您可以執行沒有參數的指令來列出可用的應用程式，然後從編號清單中選取要刪除的應用程式。應用程式碼及目錄不會從本端磁碟空間移除。
+使用 `delete` 指令，以移除 {{site.data.keyword.cloud_notm}} 空間中的應用程式。您可以執行沒有參數的指令來列出可用的應用程式，然後從編號清單中選取要刪除的應用程式。不會從本端磁碟空間移除應用程式碼及目錄。
 
 執行下列指令，以從 {{site.data.keyword.cloud_notm}} 刪除應用程式：
 ```
-ibmcloud dev delete <applicationName>
+ibmcloud dev delete <appName>
 ```
 {: codeblock}
 
@@ -178,7 +178,7 @@ ibmcloud dev delete <applicationName>
 使用指令行引數，也可以將配置 Kubernetes 部署所需的其他參數指定於 `cli-config.yml` 中。如果您未在 `cli-config.yml` 中定義這些參數，則必須使用 `-t container` 參數進行部署。然後，系統會提示您輸入所有其他值。
 
 ```yaml
-chart-path: "chart/myapplication"
+chart-path: "chart/myapp"
 
 deploy-target: "container"
 
@@ -261,7 +261,7 @@ ibmcloud dev diag
 ## edit
 {: #edit}
 
-使用選項來編輯應用程式，例如將它與已在 {{site.data.keyword.cloud_notm}} 中的應用程式連接、管理應用程式的 {{site.data.keyword.cloud_notm}} 服務，以及使用其部署至 IBM Cloud Kubernetes、Cloud Foundry 或 Cloud Foundry Enterprise Environment 的 {{site.data.keyword.cloud_notm}} 工具鏈。如果本端應用程式已連接至 {{site.data.keyword.cloud_notm}} 中的應用程式，請使用`編輯`來新增服務、連接及中斷連接現有的服務，或是移除您帳戶中的現有服務。此外，您還可以建立或檢視應用程式的 {{site.data.keyword.cloud_notm}} 工具鏈。請在應用程式目錄的根目錄中執行下列指令：
+使用選項來編輯應用程式，例如將它與已在 {{site.data.keyword.cloud_notm}} 中的應用程式連接、管理應用程式的 {{site.data.keyword.cloud_notm}} 服務，以及使用其部署至 IBM Cloud Kubernetes、Cloud Foundry 或 Cloud Foundry Enterprise Environment 的 {{site.data.keyword.cloud_notm}} 工具鏈。如果本端應用程式已連接至 {{site.data.keyword.cloud_notm}} 中的應用程式，請使用 `edit` 來新增服務、連接及中斷連接現有的服務，或是移除您帳戶中的現有服務。此外，您還可以建立或檢視應用程式的 {{site.data.keyword.cloud_notm}} 工具鏈。請在應用程式目錄的根目錄中執行下列指令：
 ```
 ibmcloud dev edit
 ```
@@ -271,7 +271,7 @@ ibmcloud dev edit
 
 不過，如果您在帳戶上有任何現有服務，這個指令會顯示那些服務的清單，以及每個服務是否連接至應用程式。
 
-* 已連接的服務可讓您選擇是要中斷服務與應用程式的連線，還是從帳戶刪除服務，以中斷它與已連接的所有應用程式的連線。
+* 已連接的服務可讓您選擇是要中斷服務與應用程式的連線，還是從帳戶刪除服務，以中斷它與已連接之所有應用程式的連線。
 
 * 已中斷連線的服務可讓您選擇是要將該服務連接至應用程式，還是從帳戶刪除服務。連接現有的服務也會下載認證或原始碼這類檔案，以開始使用該服務。
 
@@ -282,9 +282,9 @@ ibmcloud dev edit
 
 啟用現有應用程式以進行 {{site.data.keyword.cloud_notm}} 部署。`enable` 指令會嘗試自動偵測現有應用程式的語言，然後提示您輸入必要的其他資訊。這會產生及新增可用於本端 Docker 容器、Cloud Foundry 部署、Cloud Foundry Enterprise Environment 部署或「Kubernetes 容器」部署的檔案。您可以透過手動 `deploy` 或使用「DevOps 工具鏈」，來利用所有部署環境。
 
-登入 {{site.data.keyword.cloud_notm}} 後，您可以選擇將這個本端應用程式與已在 {{site.data.keyword.cloud_notm}} 中的應用程式連接，或是建立新的 {{site.data.keyword.cloud_notm}} 應用程式。若要充分運用服務和 DevOps 工具鏈這類 {{site.data.keyword.cloud_notm}} 特性，就需要位於 {{site.data.keyword.cloud_notm}} 中的應用程式。針對從 Git 儲存庫複製的應用程式建立 {{site.data.keyword.cloud_notm}} 應用程式時，{{site.data.keyword.cloud_notm}} 應用程式會將這個儲存庫內含在其配置中。 
+登入 {{site.data.keyword.cloud_notm}} 後，您可以選擇將這個本端應用程式與已在 {{site.data.keyword.cloud_notm}} 中的應用程式連接，或是建立新的 {{site.data.keyword.cloud_notm}} 應用程式。若要充分運用服務及 DevOps 工具鏈這類 {{site.data.keyword.cloud_notm}} 特性，就需要位於 {{site.data.keyword.cloud_notm}} 中的應用程式。針對從 Git 儲存庫複製的應用程式建立 {{site.data.keyword.cloud_notm}} 應用程式時，{{site.data.keyword.cloud_notm}} 應用程式會將這個儲存庫內含在其配置中。 
 
-`enable` 是測試版特性。如果您在啟用應用程式時遇到問題，我們的[疑難排解頁面](/docs/cli/ts_createapps.html#troubleshoot)可為您提供協助。具體而言，`enable` 不適用於行動應用程式或架構。對於會產生數個可部署資產的複式應用程式，必須個別啟用應用程式的每個元件。 
+`enable` 是測試版特性。如果您在啟用應用程式時遇到問題，我們的[疑難排解頁面](/docs/cli/ts_createapps.html#troubleshoot)可為您提供協助。具體而言，`enable` 不適用於行動應用程式或架構。對於會產生數個可部署資產的複雜應用程式，必須個別啟用應用程式的每個元件。 
 
 執行下列指令，以在現行目錄中啟用現有應用程式：
 ```
@@ -398,7 +398,7 @@ ibmcloud dev run
 {: #container-name-run2}
 
 * run 容器的容器名稱。
-* 用法：`ibmcloud dev run --container-name-run [<applicationName>]`
+* 用法：`ibmcloud dev run --container-name-run [<appName>]`
 
 #### `container-path-run`
 {: #container-path-run}
@@ -446,7 +446,7 @@ ibmcloud dev shell
 ```
 {: codeblock}
 
-{{site.data.keyword.dev_cli_short}} CLI 會開啟互動式 Shell，以連接至應用程式的 Docker 容器。Shell 指令的預設目標容器是由 `cli-config.yml` 檔案中的 `container-shell-target` 值所定義，而有效值是 `run` 或 `tools`。如果未定義此值，或指定無效值，則依預設 `shell` 指令會以 `tools` 容器為目標。shell 指令會將容器開啟到對應 Dockerfile 中 `WORKDIR` 指示所指定的目錄。如果 Dockerfile 中未列出 `WORKDIR`，則會使用容器根目錄作為工作目錄。如需相關資訊，請參閱[此參考資料](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
+{{site.data.keyword.dev_cli_short}} CLI 會將互動式 Shell 開啟至應用程式的 Docker 容器。Shell 指令的預設目標容器是由 `cli-config.yml` 檔案中的 `container-shell-target` 值所定義，而有效值是 `run` 或 `tools`。如果未定義此值，或指定無效值，則依預設 `shell` 指令會以 `tools` 容器為目標。shell 指令會將容器開啟到對應 Dockerfile 中 `WORKDIR` 指示所指定的目錄。如果 Dockerfile 中未列出 `WORKDIR`，則會使用容器根目錄作為工作目錄。如需相關資訊，請參閱[此參考資料](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
 或者，您可以決定要傳遞 `run` 或 `tools` 作為指令的引數，以便啟動該容器和開啟 Shell 來連接該容器。同樣地，您可以使用 `container-name` 參數，傳遞您要以 Shell 方式連接的容器名稱。不過，此旗標應該保留用於沒有容器在執行中的情況。`run` 和 `tools` 引數更有彈性，而且可讓您在執行中的容器之間切換。例如，如果 tools 容器正在執行，且您執行 `ibmcloud dev shell run`，則會停止 `tools` 容器，並啟動 `run` 容器，反之亦然。
 
@@ -512,13 +512,13 @@ ibmcloud dev stop
 {: #container-name-run}
 
 * run 容器的容器名稱。
-* 用法：`ibmcloud dev stop --container-name-run [<applicationName>]`
+* 用法：`ibmcloud dev stop --container-name-run [<appName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * tools 容器的容器名稱。
-* 用法：`ibmcloud dev stop --container-name-tools [<applicationName>]`
+* 用法：`ibmcloud dev stop --container-name-tools [<appName>]`
 
 ## test
 {: #test}
@@ -557,7 +557,7 @@ ibmcloud dev test
 
 對於部署至 Cloud Foundry 的應用程式，URL 包含應用程式的主機名稱及應用程式的網域。
 
-對於部署至 Kubernetes 的應用程式，URL 包含其部署所在之節點的 IP 位址及公用埠。如果指令判定應用程式已部署至 Kubernetes，則 CLI 工具會提示進行確認。如果您指定應用程式未部署至 Kubernetes，則會顯示 Cloud Foundry URL。如果您預期指令顯示 Kubernetes 已部署應用程式的 URL，則請確定 `cli-config.yml` 包含 `chart-path` 的項目，或透過指令行提供它（如[這裡](#chart-path)所示）。
+對於部署至 Kubernetes 的應用程式，URL 包含其部署所在之節點的 IP 位址，以及公用埠。如果指令判定應用程式已部署至 Kubernetes，則 CLI 工具會提示進行確認。如果您指定應用程式未部署至 Kubernetes，則會顯示 Cloud Foundry URL。如果您預期指令顯示 Kubernetes 已部署應用程式的 URL，則請確定 `cli-config.yml` 包含 `chart-path` 的項目，或透過指令行提供它（如[這裡](#chart-path)所示）。
 
 執行下列指令，以檢視您的應用程式：
 ```
@@ -632,13 +632,13 @@ ibmcloud dev build/deploy/view -t container --trace
 {: #container-name-run1}
 
 * run 容器的容器名稱。
-* 用法：`ibmcloud dev <run|status|stop> --container-name-run [<applicationName>]`
+* 用法：`ibmcloud dev <run|status|stop> --container-name-run [<appName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * tools 容器的容器名稱。
-* 用法：`ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<applicationName>]`
+* 用法：`ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<appName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}

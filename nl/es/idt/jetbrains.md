@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # IBM Cloud Developer Tools para IDE de JetBrains
 {: #ibm-dev-tools-for-jetbrains}
 
-La extensión de herramientas de desarrollador de {{site.data.keyword.cloud}} para IDE de JetBrains, que incluye `IntelliJ`, `WebStorm`, `Android Studio`, entre otros, proporciona nuevas entradas de menú para acceder directamente a mandatos {{site.data.keyword.dev_cli_notm}} CLI desde dentro del IDE. Puede acceder rápidamente a un subconjunto de mandatos de `ibmcloud dev` para ambos flujos de trabajo de Docker y Cloud Foundry, incluyendo despliegue de apps, iniciar/detener/reiniciar apps en {{site.data.keyword.cloud_notm}}, visualización de los registros de app remoto, etc. Todo ello sin tener que abandonar el contexto del editor.
+La extensión de herramientas de desarrollador de {{site.data.keyword.cloud}} para IDE de JetBrains, que incluye `IntelliJ`, `WebStorm`, `Android Studio`, entre otros, proporciona nuevas entradas de menú para acceder directamente a mandatos {{site.data.keyword.dev_cli_notm}} CLI desde dentro del IDE. Puede acceder rápidamente a un subconjunto de mandatos de `ibmcloud dev` para ambos flujos de trabajo de Docker y Cloud Foundry, incluyendo despliegue de aplicaciones, iniciar/detener/reiniciar apps en {{site.data.keyword.cloud_notm}}, visualización de los registros de app remoto, etc. Todo ello sin tener que abandonar el contexto del editor.
 {: shortdesc}
 
 ![Captura de pantalla de IBM Cloud Developer Tools ejecutándose dentro delIDE de WebStorm.](jetbrains.png "Ejemplo de menú de herramientas de desarrollador de {{site.data.keyword.cloud_notm}} que se ejecuta dentro del IDE de WebStorm")

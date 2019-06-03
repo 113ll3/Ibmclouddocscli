@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -15,26 +15,27 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:new_window: target="_blank"}
 {:note: .note}
+{:important: .important}
 {:tip: .tip}
 
 # CLI de administración de {{site.data.keyword.cloud_notm}}
 {: #bluemixadmincli}
 
-Puede gestionar el entorno de {{site.data.keyword.cloud_notm}} Local o {{site.data.keyword.cloud_notm}} Dedicado mediante la interfaz de línea de mandatos de Cloud Foundry con el plugin de CLI de administración de {{site.data.keyword.cloud_notm}}. Por ejemplo, puede añadir usuarios de un registro de LDAP. Para obtener información sobre la gestión de su cuenta de {{site.data.keyword.cloud_notm}} pública, consulte [Administración](/docs/account?topic=account-accounts#accounts).
+Puede gestionar el entorno de {{site.data.keyword.cloud_notm}} Local o {{site.data.keyword.cloud_notm}} Dedicado mediante la interfaz de línea de mandatos de Cloud Foundry con el plugin de CLI de administración de {{site.data.keyword.cloud_notm}}. Por ejemplo, puede añadir usuarios de un registro de LDAP.
 
-Antes de empezar, instale la interfaz de línea de mandatos de Cloud Foundry. El plug-in de CLI de administración de {{site.data.keyword.cloud_notm}} necesita `cf` versión 6.11.2 o posterior. [Descargar la interfaz de línea de mandatos de Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
+Antes de empezar, instale la CLI de Cloud Foundry. El plugin de CLI de administración de {{site.data.keyword.cloud_notm}} necesita `cf` versión 6.11.2 o posterior. [Descargar la interfaz de línea de mandatos de Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
 
-**Restricción:** Cygwin no admite la interfaz de línea de mandatos de Cloud Foundry. Utilice esta interfaz en una ventana de línea de mandatos que no sea la ventana de Cygwin.
+Cygwin no admite la CLI de Cloud Foundry. Utilice la CLI de Cloud Foundry de en una ventana de línea de mandatos que no sea la ventana de Cygwin.
 
 La CLI de administración de {{site.data.keyword.cloud_notm}} solo se utiliza para el entorno {{site.data.keyword.cloud_notm}} local y el entorno {{site.data.keyword.cloud_notm}} dedicado. No está soportado por {{site.data.keyword.cloud_notm}} Público.
 {: note}
 
-## Adición del plug-in de CLI de administración de {{site.data.keyword.cloud_notm}}
+## Adición del plugin de CLI de administración de {{site.data.keyword.cloud_notm}}
 {: #add-admin-cli}
 
-Una vez instalada la interfaz de línea de mandatos Cloud Foundry, puede añadir el plug-in de CLI de administración de {{site.data.keyword.cloud_notm}}.
+Una vez instalada la CLI de Cloud Foundry, puede añadir el plugin de CLI de administración de {{site.data.keyword.cloud_notm}}.
 
-Si ha instalado anteriormente el plugin Admin de {{site.data.keyword.cloud_notm}}, es posible que tenga que desinstalarlo, suprimir el repositorio y, a continuación, volver a instalarlo para obtener las actualizaciones más recientes.
+Si ha instalado anteriormente el plugin de administración de {{site.data.keyword.cloud_notm}}, es posible que tenga que desinstalarlo, suprimir el repositorio y, a continuación, volver a instalarlo para obtener las actualizaciones más recientes.
 {: tip}
 
 Siga estos pasos para añadir el repositorio e instalar el plug-in:
@@ -58,7 +59,7 @@ Siga estos pasos para añadir el repositorio e instalar el plug-in:
 ## Desinstalación del plugin de CLI de administración de {{site.data.keyword.cloud_notm}}
 {: #remove-admin-cli}
 
-Si necesita desinstalar el plug-in, puede utilizar los mandatos siguientes y, a continuación, puede añadir el repositorio actualizado e instalar el plug-in más reciente:
+Siga los siguientes pasos para desinstalar el plugin. 
 
 1. Desinstale el plugin:
   ```
@@ -72,10 +73,12 @@ Si necesita desinstalar el plug-in, puede utilizar los mandatos siguientes y, a 
   ```
   {: codeblock}
 
-## Utilización del plug-in de la CLI de administración de {{site.data.keyword.cloud_notm}}
+A continuación, puede añadir el repositorio actualizado e instalar el plugin más reciente.
+
+## Utilización del plugin de la CLI de administración de {{site.data.keyword.cloud_notm}}
 {: #using-admin-cli}
 
-Puede utilizar el plug-in de CLI de administración de {{site.data.keyword.cloud_notm}} para añadir o eliminar usuarios, asignar o desasignar usuarios de organizaciones y para realizar otras tareas de gestión.
+Puede utilizar el plugin de CLI de administración de {{site.data.keyword.cloud_notm}} para añadir o eliminar usuarios, asignar o desasignar usuarios de organizaciones y para realizar otras tareas de gestión.
 
 Para ver una lista de mandatos, ejecute el mandato siguiente:
 ```
@@ -88,31 +91,27 @@ Para obtener más ayuda sobre un mandato, utilice la opción `-help`.
 ### Conexión e inicio de sesión en {{site.data.keyword.cloud_notm}}
 {: #connecting-ibm-cloud}
 
-Para poder utilizar el plugin de CLI de administración, debe conectar e iniciar sesión.
-
 1. Para conectar con el punto final de la API de {{site.data.keyword.cloud_notm}}, ejecute este mandato:
   ```
   cf api api.us-south.cf.cloud.ibm.com
   ```
   {: codeblock}
+  
+  Aunque los puntos finales de API de Cloud Foundry `api.*.bluemix.net` heredados siguen estando disponibles, puede actualizar los scripts y la automatización de infraestructura para que utilicen los puntos finales de API de Cloud Foundry actualizados siguientes para su región:
 
-  Puede consultar la página de Recursos e información de la Consola de administración para obtener el URL correcto. El URL se muestra en la sección de información de la API en el campo **URL de API**.
+  * api.us-south.cf.cloud.ibm.com (anteriormente api.ng.bluemix.net)
+  * api.eu-gb.cf.cloud.ibm.com (anteriormente api.eu-gb.bluemix.net)
+  * api.us-east.cf.cloud.ibm.com (anteriormente api.us-east.bluemix.net)
+  * api.eu-de.cf.cloud.ibm.com (anteriormente api.eu-de.bluemix.net)
+  * api.au-syd.cf.cloud.ibm.com (anteriormente api.au-syd.bluemix.net)
+
+  Puede consultar la página de Recursos e información de la consola de administración para obtener el URL correcto. El URL se muestra en la sección de información de la API en el campo **URL de API**.
 
 2. Inicie una sesión en {{site.data.keyword.cloud_notm}} con el siguiente mandato:
   ```
   cf login
   ```
   {: codeblock}
-
-**Utilización de puntos finales de Cloud Foundry heredados**:
-
-Aunque los puntos finales de API de Cloud Foundry `api.*.bluemix.net` heredados siguen estando disponibles, puede actualizar los scripts y la automatización de infraestructura para que utilicen los puntos finales de API de Cloud Foundry actualizados siguientes para su región:
-
-* api.us-south.cf.cloud.ibm.com (anteriormente api.ng.bluemix.net)
-* api.eu-gb.cf.cloud.ibm.com (anteriormente api.eu-gb.bluemix.net)
-* api.us-east.cf.cloud.ibm.com (anteriormente api.us-east.bluemix.net)
-* api.eu-de.cf.cloud.ibm.com (anteriormente api.eu-de.bluemix.net)
-* api.au-syd.cf.cloud.ibm.com (anteriormente api.au-syd.bluemix.net)
 
 ## Administración de usuarios
 {: #admin_users}
@@ -127,21 +126,18 @@ cf ba add-user <nombre_usuario> <organización> <nombre> <apellido>
 ```
 {: codeblock}
 
-Para añadir un usuario a una organización específica, debe ser un **Administrador** con el permiso **users.write** (o **Superusuario**). Si es un gestor de organización, también se le puede proporcionar la posibilidad de añadir usuarios a su organización mediante un Superusuario que ejecute el mandato **enable-managers-add-users**. Para obtener más información, consulte [Permitir a los gestores agregar usuarios](#clius_emau).
+Para añadir un usuario a una organización específica, debe ser un administrador con el permiso users.write (o Superusuario). Si es un gestor de organización, también se le puede proporcionar la posibilidad de añadir usuarios a su organización mediante un Superusuario que ejecute el mandato **`enable-managers-add-users`**. Para obtener más información, consulte [Permitir a los gestores agregar usuarios](#clius_emau).
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre del usuario en el registro de LDAP.</dd>
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización {{site.data.keyword.cloud_notm}} a la que se va a añadir el usuario.</dd>
-<dt class="pt dlterm">&lt;nombre&gt;</dt>
-<dd class="pd">El nombre del usuario que se añadirá a la organización.</dd>
-<dt class="pt dlterm">&lt;apellido&gt;</dt>
-<dd class="pd">El apellido del usuario que se añadirá a la organización.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_usuario_ | El nombre del usuario en el registro de LDAP. |
+| _organización_ | El nombre o GUID de la organización {{site.data.keyword.cloud_notm}} a la que se va a añadir el usuario. |
+| _nombre_ | El nombre del usuario que se añadirá a la organización. | 
+| _apellido_ | El apellido del usuario que se añadirá a la organización. | 
+{: caption="Tabla 1. Opciones del mandato cf ba add-user" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba au** como alias para el nombre de mandato
-**ba add-user** más largo.
+También puede usar **`ba au`** como alias para el nombre de mandato **`ba add-user`** más largo.
+{: tip}
 
 ### Invitación a un usuario de {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_invite_public}
@@ -152,34 +148,31 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 ```
 {: pre}
 
-Para añadir usuarios del entorno Dedicado a su cuenta pública de {{site.data.keyword.cloud_notm}}, debe ser un **Administrador** de la cuenta Dedicada.
+Para añadir usuarios del entorno Dedicado a su cuenta pública de {{site.data.keyword.cloud_notm}}, debe ser un Administrador de la cuenta Dedicada.
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;user_email&gt;</dt>
-<dd class="pd">Si va a invitar a un único usuario, el correo electrónico del usuario.</dd>
-<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
-<dd class="pd">Si va a invitar invitando a todos los usuarios actuales de una organización de cuenta Dedicada, el ID de organización de cuenta Dedicada.</dd>
-<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
-<dd class="pd">Una clave de API para invitar a usuarios a la cuenta pública. Debe generarla el <b>Administrador</b> de la cuenta pública.</dd>
-<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
-<dd class="pd">El ID de la organización de cuenta pública a la que va a invitar a los usuarios.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| -userid | Si va a invitar a un único usuario, el correo electrónico del usuario. |
+| -organization | Si va a invitar invitando a todos los usuarios actuales de una organización de cuenta Dedicada, el ID de organización de cuenta Dedicada. |
+| -apikey | Una clave de API para invitar a usuarios a la cuenta pública. Debe generarla el administrador de la cuenta pública. | 
+| -public_org_id | El ID de la organización de cuenta pública a la que va a invitar a los usuarios. | 
+{: caption="Tabla 2. Opciones del mandato cf ba invite-users-to-public" caption-side="top"}
 
 ### Listado de usuarios invitados desde {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-Si ha invitado a los usuarios del entorno Dedicado a su cuenta de {{site.data.keyword.Bluemix_notm}} con el mandato [`invite-users-to-public`](#admin_dedicated_invite_public), puede listar a los usuarios en su cuenta para ver el estado de su invitación. Los usuarios invitados que tienen un IBMid existente tendrás un estado `ACTIVE`. Los usuarios que no tengas un IBMid existente tiene el estado `PENDING` o `ACTIVE`, en función de si ya han aceptado la invitación a la cuenta o no. Para listar los usuarios de su cuenta de {{site.data.keyword.Bluemix_notm}}:
+Si ha invitado a los usuarios del entorno Dedicado a su cuenta de {{site.data.keyword.Bluemix_notm}} con el [mandato **`invite-users-to-public`**](#admin_dedicated_invite_public), puede listar a los usuarios en su cuenta para ver el estado de su invitación. Los usuarios invitados que tienen un IBMid existente tendrán un estado ACTIVO. Los usuarios que no tengan un IBMid existente tendrán el estado PENDIENTE o ACTIVO, en función de si ya han aceptado la invitación a la cuenta o no. Para listar los usuarios de su cuenta de {{site.data.keyword.Bluemix_notm}}:
 
 ```
 cf ba invite-users-status -apikey=<public_api_key>
 ```
 {: pre}
 
-Para añadir usuarios del entorno Dedicado a su cuenta pública de {{site.data.keyword.Bluemix_notm}}, debe ser un **Administrador** de la cuenta Dedicada.
+Para añadir usuarios del entorno Dedicado a su cuenta pública de {{site.data.keyword.Bluemix_notm}}, debe ser un administrador de la cuenta Dedicada.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
-<dd class="pd">La clave de API que se ha utilizado para invitar a los usuarios a la cuenta. Debe generarla el <b>Administrador</b> de la cuenta pública.</dd>
+<dd class="pd">La clave de API que se ha utilizado para invitar a los usuarios a la cuenta. Debe generarla el administrador de la cuenta pública.</dd>
 </dl>
 
 <!-- staging-only commands start. Live for interconnect -->
@@ -194,21 +187,16 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 ```
 {: codeblock}
 
-<dl class="parml">
+| Opción | Descripción | 
+| -------| ------------|
+| -name | El nombre del usuario. |
+| -permission | El permiso asignado al usuario. Los permisos disponibles son admin (o superuser), login (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. No se puede utilizar este parámetro con el parámetro de organización en la misma consulta. |
+| -organization | El nombre de la organización a la que pertenece el usuario. No se puede utilizar este parámetro con el parámetro de permiso en la misma consulta. | 
+| -role | El rol de organización asignado al usuario. Los roles disponibles son auditors, managers y billing_managers. Especifique la organización con este parámetro. | 
+{: caption="Tabla 3. Opciones del mandato cf ba search-users" caption-side="top"}
 
-<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
-<dd class="pd">El nombre del usuario en {{site.data.keyword.Bluemix_notm}}. </dd>
-<dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">El permiso asignado al usuario. Los permisos disponibles son: admin (o superuser), login (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. No se puede utilizar este parámetro con el parámetro de organización en la misma consulta. </dd>
-<dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">El nombre de la organización a la que pertenece el usuario. No se puede utilizar este parámetro con el parámetro de permiso en la misma consulta.</dd>
-<dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">El rol de organización asignado al usuario. Los roles disponibles son: 'auditors', 'managers' y 'billing_managers'. Especifique la organización con este parámetro.</dd>
-
-</dl>
-
-**Sugerencia:** También puede usar **ba su** como alias para el nombre de mandato
-**ba search-users** más largo.
+También puede usar **`ba su`** como alias para el nombre de mandato **`ba search-users`** más largo.
+{: tip}
 
 ### Establecimiento de permisos para un usuario
 {: #admin_setperm_user}
@@ -219,20 +207,17 @@ cf ba set-permissions <nombre_usuario> <permiso> <acceso>
 ```
 {: codeblock}
 
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_usuario_ | El nombre del usuario. |
+| _permiso_ | Establece el permiso asignado al usuario. Los permisos disponibles son admin (o superuser), login (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. No se puede utilizar este parámetro con el parámetro de organización en la misma consulta. |
+| _acceso_ | Para permisos del catálogo, informes o usuarios, también debe tener el nivel de acceso `read` o `write` (lectura o escritura). |  
+{: caption="Tabla 4. Opciones del mandato cf ba set-permissions" caption-side="top"}
+
 Puede establecer los permisos de uno en uno.
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre del usuario en {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt class="pt dlterm">&lt;permiso&gt;</dt>
-<dd class="pd">Establecer los permisos para el usuario: Admin (una alternativa válida es Superusuario), Iniciar sesión (una alternativa válida es Básico), Catálogo (acceso de lectura o escritura),
-Informes (acceso de lectura o escritura) o Usuarios (acceso de lectura o escritura).</dd>
-<dt class="pt dlterm">&lt;acceso&gt;</dt>
-<dd class="pd">Para permisos del Catálogo, Informes o Usuarios, también debe tener el nivel de acceso <code>read</code> o <code>write</code> (lectura o escritura).</dd>
-</dl>
-
-**Sugerencia:** También puede usar **ba sp** como alias para el nombre de mandato
-**ba set-permissions** más largo.
+También puede usar **`ba sp`** como alias para el nombre de mandato **`ba set-permissions`** más largo.
+{: tip}
 
 <!-- staging-only commands end -->
 
@@ -253,34 +238,34 @@ cf ba remove-user <nombre_usuario>
 
 </dl>
 
-**Sugerencia:** También puede usar **ba ru** como alias para el nombre de mandato
-**ba remove-user** más largo.
+También puede usar **`ba ru`** como alias para el nombre de mandato **`ba remove-user`** más largo.
+{: tip}
 
-### Permitir a los gestores añadir usuarios
+### Permitir a los gestores agregar usuarios
 {: #clius_emau}
 
-Si tiene el permiso **Superusuario** en el entorno de {{site.data.keyword.Bluemix_notm}}, puede permitir a los gestores de la organización que agreguen usuarios a las organizaciones que gestionan. Para permitir a los gestores añadir usuarios, utilice el mandato siguiente:
+Si tiene el permiso Superusuario en el entorno de {{site.data.keyword.Bluemix_notm}}, puede permitir a los gestores de la organización que agreguen usuarios a las organizaciones que gestionan. Para permitir a los gestores añadir usuarios, utilice el mandato siguiente:
 
 ```
 cf ba enable-managers-add-users
 ```
 {: codeblock}
 
-**Sugerencia:** También puede usar **ba emau** como alias para el nombre de mandato
-**ba enable-managers-add-users** más largo.
+También puede usar **`ba emau`** como alias para el nombre de mandato **`ba enable-managers-add-users`** más largo.
+{: tip}
 
-### No permitir a los gestores añadir a los usuarios
+### No permitir a los gestores agregar usuarios
 {: #clius_dmau}
 
-Si se permite que los gestores de la organización puedan añadir usuarios a las organizaciones que gestionan en el entorno de {{site.data.keyword.Bluemix_notm}} con el mandato **enable-managers-add-users**, y si tiene el permiso **Superusuario**, puede eliminar este valor. Para no permitir a los gestores añadir usuarios, utilice el mandato siguiente:
+Si se permite que los gestores de la organización puedan añadir usuarios a las organizaciones que gestionan en el entorno de {{site.data.keyword.Bluemix_notm}} con el mandato **`enable-managers-add-users`**, y si tiene el permiso Superusuario, puede eliminar este valor. Para no permitir a los gestores añadir usuarios, utilice el mandato siguiente:
 
 ```
 cf ba disable-managers-add-users
 ```
 {: codeblock}
 
-**Sugerencia:** También puede usar **ba dmau** como alias para el nombre de mandato
-**ba disable-managers-add-users** más largo.
+También puede usar **`ba dmau`** como alias para el nombre de mandato **`ba disable-managers-add-users`** más largo.
+{: tip}
 
 ## Administración de organizaciones
 {: #admin_orgs}
@@ -295,15 +280,14 @@ cf ba create-org <organización> <gestor>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} que va a añadir.</dd>
-<dt class="pt dlterm">&lt;gestor&gt;</dt>
-<dd class="pd">El nombre de usuario del gestor de la organización.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _organización_ | El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} que va a añadir |
+| _gestor_ | El nombre de usuario del gestor de la organización. |
+{: caption="Tabla 5. Opciones del mandato cf ba create-org" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba co** como alias para el nombre de mandato
-**ba create-org** más largo.
+También puede usar **`ba co`** como alias para el nombre de mandato **`ba create-org`** más largo.
+{: tip}
 
 ### Supresión de una organización
 {: #admin_delete_org}
@@ -320,8 +304,8 @@ cf ba delete-org <organization>
 <dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.cloud_notm}} que va a suprimir.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba do** como alias para el nombre de mandato
-**ba delete-org** más largo.
+También puede usar **`ba do`** como alias para el nombre de mandato **`ba delete-org`** más largo.
+{: tip}
 
 ### Asignación de un usuario a una organización
 {: #admin_ass_user_org}
@@ -334,17 +318,15 @@ cf ba set-org <nombre_usuario> <organización> [<rol>]
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre del usuario en {{site.data.keyword.cloud_notm}}.</dd>
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización {{site.data.keyword.cloud_notm}} a la que se va a asignar el usuario.</dd>
-<dt class="pt dlterm">&lt;rol&gt;</dt>
-<dd class="pd">Consulte [Roles](/docs/iam?topic=iam-userroles#userroles) para ver los roles de usuario de {{site.data.keyword.cloud_notm}} y sus descripciones.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_usuario_ | El nombre del usuario. |
+| _organización_ | El nombre o GUID de la organización {{site.data.keyword.cloud_notm}} a la que se va a asignar el usuario. |
+| _rol_ | El rol del usuario. Los valores válidos son `OrgManager`, `BillingManager`, `OrgAuditor`. Consulte [Roles](/docs/iam?topic=iam-userroles#userroles) para ver las descripciones de los roles. |  
+{: caption="Tabla 6. Opciones del mandato cf ba set-org" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba so** como alias para el nombre de mandato
-**ba set-org** más largo.
+También puede usar **`ba so`** como alias para el nombre de mandato **`ba set-org`** más largo.
+{: tip}
 
 ### Eliminación de la asignación de un usuario de una organización
 {: #admin_unass_user_org}
@@ -357,35 +339,15 @@ cf ba unset-org <nombre_usuario> <organización> [<rol>]
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre del usuario en {{site.data.keyword.cloud_notm}}.</dd>
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización {{site.data.keyword.cloud_notm}} a la que se va a asignar el usuario.</dd>
-<dt class="pt dlterm">&lt;rol&gt;</dt>
-<dd class="pd">Consulte [Asignación de roles](/docs/iam?topic=iam-userroles#userroles) para
-roles y descripciones de usuarios de {{site.data.keyword.cloud_notm}}.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_usuario_ | El nombre del usuario. |
+| _organización_ | El nombre o GUID de la organización de {{site.data.keyword.cloud_notm}}. |
+| _rol_ | El rol del usuario. Los valores válidos son `OrgManager`, `BillingManager`, `OrgAuditor`. Consulte [Roles](/docs/iam?topic=iam-userroles#userroles) para ver las descripciones de los roles. |  
+{: caption="Tabla 7. Opciones del mandato cf ba unset-org" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba uo** como alias para el nombre de mandato
-**ba unset-org** más largo.
-
-#### Asignación de roles
-
-<dl class="parml">
-<dt class="pt dlterm">OrgManager</dt>
-<dd class="pd">Gestor de la organización. Un gestor de la organización tiene autorización para realizar las siguientes acciones:
-<ul>
-<li>Crea o suprime espacios en la organización.</li>
-<li>Invita a usuarios a la organización y gestiona usuarios.</li>
-<li>Gestiona dominios de la organización.</li>
-</ul>
-</dd>
-<dt class="pt dlterm">BillingManager</dt>
-<dd class="pd">Gestor de facturación. Un gestor de facturación puede ver información de uso de tiempo de ejecución y servicio para la organización.</dd>
-<dt class="pt dlterm">OrgAuditor</dt>
-<dd class="pd">Auditor de la organización. Un auditor de la organización puede ver el contenido de la aplicación y el servicio en el espacio.</dd>
-</dl>
+También puede usar **`ba uo`** como alias para el nombre de mandato **`ba unset-org`** más largo.
+{: tip}
 
 ### Configuración de una cuota para una organización
 {: #admin_set_org_quota}
@@ -397,15 +359,14 @@ cf ba set-quota <organización> <plan>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} para la que va a definir la cuota.</dd>
-<dt class="pt dlterm">&lt;plan&gt;</dt>
-<dd class="pd">El plan de cuotas de una organización.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _organización_ | El nombre o GUID de la organización de {{site.data.keyword.cloud_notm}} para la que va a definir la cuota. |
+| _plan_ | El plan de cuotas de una organización. |  
+{: caption="Tabla 8. Opciones del mandato cf ba set-quota" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba sq** como alias para el nombre de mandato
-**ba set-quota** más largo.
+También puede usar **`ba sq`** como alias para el nombre de mandato **`ba set-quota`** más largo.
+{: tip}
 
 
 ### Búsqueda de cuotas de contenedor para una organización
@@ -424,7 +385,8 @@ cf ibmcloud-admin containers-quota <organización>
 parámetro es obligatorio.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba cq** como alias para el nombre de mandato **ibmcloud-admin containers-quota** más largo.
+También puede usar **`ba cq`** como alias para el nombre de mandato **`ibmcloud-admin containers-quota`** más largo.
+{: tip}
 
 ### Configuración de cuotas de contenedor para una organización
 {: #admin_set_containquotas}
@@ -436,39 +398,16 @@ cf ibmcloud-admin set-containers-quota <organización> <opciones>
 ```
 {: codeblock}
 
-**Nota**: puede incluir varias opciones, pero debe incluir al menos una.
+Puede incluir varias opciones, pero debe incluir al menos una.
+{: note}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o ID de la organización en IBM Cloud. Este
-parámetro es obligatorio.</dd>
-<dt class="pt dlterm">&lt;opciones&gt;</dt>
-<dd class="pd">Incluya una o varias de las opciones siguientes en las que el valor debe ser un entero:
-<ul>
-<li>floating-ips-max &lt;valor&gt;</li>
-<li>floating-ips-space-default &lt;valor&gt;</li>
-<li>memory-max &lt;valor&gt;</li>
-<li>memory-space-default &lt;valor&gt;</li>
-<li>image-limit &lt;valor&gt;</li>
-</ul>
-</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _organización_ | El nombre o ID de la organización de {{site.data.keyword.cloud_notm}} para la que va a definir la cuota. |
+| _opciones_ | Las opciones son **`floating-ips-max valor`** (nombre abreviado **`fim`**), **`floating-ips-space-default valor`** (nombre abreviado **`fisd`**), **`memory-max valor`** (nombre abreviado **`mm`**), **`memory-space-default valor`** (nombre abreviado **`msd`**) o **`image-limit valor`** (nombre abreviado **`il`**). El valor debe ser un entero.  |  
+{: caption="Tabla 9. Opciones del mandato cf ibmcloud-admin set-containers-quota" caption-side="top"}
 
-**Consejo:** También puede utilizar los siguientes nombres abreviados como alias de nombres de opciones más largos:
-<dl class="parml">
-<dt class="pt dlterm">floating-ips-max &lt;valor&gt;</dt>
-<dd class="pd"><strong>fim</strong></dd>
-<dt class="pt dlterm">floating-ips-space-default &lt;valor&gt;</dt>
-<dd class="pd"><strong>fisd</strong></dd>
-<dt class="pt dlterm">memory-max &lt;valor&gt;</dt>
-<dd class="pd"><strong>mm</strong></dd>
-<dt class="pt dlterm">memory-space-default &lt;valor&gt;</dt>
-<dd class="pd"><strong>msd</strong></dd>
-<dt class="pt dlterm">image-limit &lt;valor&gt;</dt>
-<dd class="pd"><strong>il</strong></dd>
-</dl>
-
-Opcionalmente, puede proporcionar un archivo que contenga parámetros de configuración específicos en un objeto JSON válido. Si utiliza la opción **-file**, esta prevalece y las otras opciones se pasan por alto. Para proporcionar un archivo en lugar de definir las opciones, utilice el siguiente mandato:
+Opcionalmente, puede proporcionar un archivo que contenga parámetros de configuración específicos en un objeto JSON válido. Si utiliza la opción **`-file`**, esta prevalece y las otras opciones se pasan por alto. Para proporcionar un archivo en lugar de definir las opciones, utilice el siguiente mandato:
 
 ```
 cf ibmcloud-admin set-containers-quota <organización> <-file path_to_JSON_file>
@@ -488,7 +427,8 @@ El archivo JSON debe tener el formato que se muestra en el siguiente ejemplo:
 ```
 {: codeblock}
 
-**Sugerencia:** También puede usar **ba scq** como alias para el nombre de mandato **ibmcloud-admin set-containers-quota** más largo.
+También puede usar **`ba scq`** como alias para el nombre de mandato **`ibmcloud-admin set-containers-quota`** más largo.
+{: tip}
 
 ## Administración de espacios
 {: #admin_spaces}
@@ -503,15 +443,14 @@ cf ibmcloud-admin create-space <organización> <nombre_espacio>
 
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización a la que se añadirá el espacio.</dd>
-<dt class="pt dlterm">&lt;nombre_espacio&gt;</dt>
-<dd class="pd">El nombre del espacio que se creará en la organización.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _organización_ | El nombre o GUID de la organización a la que se va a añadir el espacio. |
+| _nombre_espacio_ | El nombre del espacio que añade a la organización. |  
+{: caption="Tabla 10. Opciones del mandato cf ibmcloud-admin create-space" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba cs** como alias para el nombre de mandato
-**ba create-space** más largo.
+También puede usar **`ba cs`** como alias para el nombre de mandato **`ba create-space`** más largo.
+{: tip}
 
 ### Suprimir un espacio de la organización
 
@@ -523,15 +462,14 @@ cf ibmcloud-admin delete-space <organización> <nombre_espacio>
 
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización de la que se elimina el espacio.</dd>
-<dt class="pt dlterm">&lt;nombre_espacio&gt;</dt>
-<dd class="pd">El nombre del espacio que se eliminará de la organización.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _organización_ | El nombre o GUID de la organización de la que se elimina el espacio. |
+| _nombre_espacio_ | El nombre del espacio que se elimina de la organización. |  
+{: caption="Tabla 11. Opciones del mandato cf ibmcloud-admin delete-space" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba cs** como alias para el nombre de mandato
-**ba delete-space** más largo.
+También puede usar **`ba cs`** como alias para el nombre de mandato **`ba delete-space`** más largo.
+{: tip}
 
 ### Añadir un usuario a un espacio con un rol
 
@@ -543,20 +481,16 @@ cf ibmcloud-admin set-space <organización> <nombre_espacio> <nombre_usuario> <r
 
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización a la que se añade el usuario.</dd>
-<dt class="pt dlterm">&lt;nombre_espacio&gt;</dt>
-<dd class="pd">El nombre del espacio al que se añade el usuario.</dd>
-<dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre del usuario al que se añade.</dd>
-<dt class="pt dlterm">&lt;rol&gt;</dt>
-<dd class="pd">El rol del usuario al que se asigna. El valor puede ser Gestor, Desarrollador o Auditor. Consulte [Asignación de roles](/docs/iam?topic=iam-userroles#userroles) para
-roles de usuario y descripciones de {{site.data.keyword.Bluemix_notm}}
-en un espacio.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _organización_ | El nombre o GUID de la organización a la que se añade el usuario. |
+| _nombre_espacio_ | El nombre del espacio al que se añade el usuario. |
+| _nombre_usuario_ | El nombre del usuario. |
+| _rol_ | El rol del usuario. Los valores válidos son `Manager`, `Developer` o `Auditor`. |  
+{: caption="Tabla 12. Opciones del mandato cf ibmcloud-admin set-space" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba ss** como alias para el nombre de mandato **ba set-space** más largo.
+También puede usar **`ba ss`** como alias para el nombre de mandato **`ba set-space`** más largo.
+{: tip}
 
 
 ### Eliminar el rol de un usuario en un espacio
@@ -569,22 +503,18 @@ cf ibmcloud-admin unset-space <organización> <nombre_espacio> <nombre_usuario> 
 
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización a la que se añade el usuario.</dd>
-<dt class="pt dlterm">&lt;nombre_espacio&gt;</dt>
-<dd class="pd">El nombre del espacio al que se añade el usuario.</dd>
-<dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre del usuario al que se añade.</dd>
-<dt class="pt dlterm">&lt;rol&gt;</dt>
-<dd class="pd">El rol del usuario al que se asigna. El valor puede ser Gestor, Desarrollador o Auditor. Consulte [Asignación de roles](/docs/iam?topic=iam-userroles#userroles) para
-roles de usuario y descripciones de {{site.data.keyword.cloud_notm}}
-en un espacio.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _organización_ | El nombre o GUID de la organización a la que pertenece el usuario. |
+| _nombre_espacio_ | El nombre del espacio al que pertenece el usuario. |
+| _nombre_usuario_ | El nombre del usuario. |
+| _rol_ | El rol del usuario. Los valores válidos son `Manager`, `Developer` o `Auditor`. |  
+{: caption="Tabla 13. Opciones del mandato cf ibmcloud-admin unset-space" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba us** como alias para el nombre de mandato **ba unset-space** más largo.
+También puede usar **`ba us`** como alias para el nombre de mandato **`ba unset-space`** más largo.
+{: tip}
 
-## Administrar el catálogo
+## Administración del catálogo
 {: #admin_catalog}
 
 ### Habilitación de servicios para todas las organizaciones
@@ -602,8 +532,8 @@ cf ba enable-service-plan <identificador_plan>
 <dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que puede elegir. Para identificar un nombre de plan, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio. </dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba esp** como alias para el nombre de mandato
-**ba enable-service-plan** más largo.
+También puede usar **`ba esp`** como alias para el nombre de mandato **`ba enable-service-plan`** más largo.
+{: tip}
 
 ### Inhabilitación de servicios para todas las organizaciones
 {: #admin_dis_service_org}
@@ -620,48 +550,46 @@ cf ba disable-service-plan <identificador_plan>
 <dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que puede elegir. Para identificar un nombre de plan, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba dsp** como alias para el nombre de mandato
-**ba disable-service-plan** más largo.
+También puede usar **`ba dsp`** como alias para el nombre de mandato **`ba disable-service-plan`** más largo.
+{: tip}
 
 ### Adición de la visibilidad de los servicios de las organizaciones
 {: #admin_addvis_service_org}
 
-Puede añadir una organización de la lista de organizaciones que pueden ver un servicio específico en el Catálogo de {{site.data.keyword.Bluemix_notm}}. Para permitir que una organización pueda ver un servicio específico en el catálogo de {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente:
+Puede añadir una organización de la lista de organizaciones que pueden ver un servicio específico en el Catálogo de {{site.data.keyword.Bluemix_notm}}. Para permitir que una organización pueda ver un servicio específico en el catálogo, utilice el mandato siguiente:
 
 ```
 cf ba add-service-plan-visibility <identificador_plan> <organización>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que puede elegir. Para identificar un nombre de plan, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio.</dd>
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} que va a agregar a la lista de visibilidad del servicio.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _identificador_plan_ | Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que puede elegir. Para identificar un nombre de plan, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio. |
+| _organización_ | El nombre o GUID de la organización de que va a añadir a la lista de visibilidad del servicio. |  
+{: caption="Tabla 14. Opciones del mandato cf ba add-service-plan-visibility" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba aspv** como alias para el nombre de mandato
-**ba add-service-plan-visibility** más largo.
+También puede usar **`ba aspv`** como alias para el nombre de mandato **`ba add-service-plan-visibility`** más largo.
+{: tip}
 
 ### Eliminación de la visibilidad de los servicios de las organizaciones
 {: #admin_remvis_service_org}
 
-Puede eliminar una organización de la lista de organizaciones que pueden ver un servicio específico en el Catálogo de {{site.data.keyword.Bluemix_notm}}. Para eliminar la visibilidad de un servicio en el catálogo de {{site.data.keyword.Bluemix_notm}} de una organización, utilice el mandato siguiente:
+Puede eliminar una organización de la lista de organizaciones que pueden ver un servicio específico en el Catálogo de {{site.data.keyword.Bluemix_notm}}. Para eliminar la visibilidad de un servicio en el catálogo de una organización, utilice el mandato siguiente:
 
 ```
 cf ba remove-service-plan-visibility <identificador_plan> <organización>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que puede elegir. Para identificar un nombre de plan, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio.</dd>
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} que va a eliminar de la lista de visibilidad del servicio.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _identificador_plan_ | Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que puede elegir. Para identificar un nombre de plan, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio. |
+| _organización_ | El nombre o GUID de la organización que va a eliminar de la lista de visibilidad del servicio. |  
+{: caption="Tabla 15. Opciones del mandato cf ba remove-service-plan-visibility" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba rspv** como alias para el nombre de mandato
-**ba remove-service-plan-visibility** más largo.
+También puede usar **`ba rspv`** como alias para el nombre de mandato **`ba remove-service-plan-visibility`** más largo.
+{: tip}
 
 ### Edición de la visibilidad de los servicios de las organizaciones
 {: #admin_editvis_service_org}
@@ -675,15 +603,14 @@ cf ba edit-service-plan-visibilities <identificador_plan> <organización_1> <org
 
 Este mandato sustituye los servicios visibles existentes de las organizaciones especificadas por el servicio que especifique en el mandato.
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que puede elegir. Para identificar un nombre de plan, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio.</dd>
-<dt class="pt dlterm">&lt;organización&gt;</dt>
-<dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} a la que va a agregar visibilidad. Puede habilitar la visibilidad del servicio a más de una organización especificando nombres o GUID adicionales en el mandato.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _identificador_plan_ | Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que puede elegir. Para identificar un nombre de plan, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio. |
+| _organización_ | El nombre o GUID de la organización a la que va a añadir visibilidad. Puede habilitar la visibilidad del servicio a más de una organización especificando nombres o GUID adicionales en el mandato. |  
+{: caption="Tabla 16. Opciones del mandato cf ba edit-service-plan-visibilities" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba espv** como alias para el nombre de mandato
-**ba edit-service-plan-visibility** más largo.
+También puede usar **`ba espv`** como alias para el nombre de mandato **`ba edit-service-plan-visibility`** más largo.
+{: tip}
 
 ## Administración de informes
 {: #admin_add_report}
@@ -698,21 +625,18 @@ cf ba add-report <categoría> <fecha> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
 
-Si tiene acceso de escritura para el permiso de informes, puede crear una nueva categoría y añadir un informe en cualquiera de los formatos aceptados para sus usuarios. Especifique el nombre de la nueva categoría para el parámetro `category` o añada su informe en una categoría existente.
+Si tiene acceso de escritura para el permiso de informes, puede crear una nueva categoría y añadir un informe en cualquiera de los formatos aceptados para sus usuarios. Especifique el nombre de la nueva categoría para el parámetro **`category`** o añada su informe en una categoría existente.
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;categoría&gt;</dt>
-<dd class="pd">La categoría del informe. Utilice las comillas si hay un espacio en el nombre.</dd>
-<dt class="pt dlterm">&lt;fecha&gt;</dt>
-<dd class="pd">La fecha del informe con el formato <samp class="ph codeph">AAAAMMDD</samp>.</dd>
-<dt class="pt dlterm">&lt;PDF|TXT|LOG&gt;</dt>
-<dd class="pd">La vía de acceso del PDF del informe, del archivo de texto o de registro que va a cargar.</dd>
-<dt class="pt dlterm">&lt;RTF&gt;</dt>
-<dd class="pd">Opción para incluir una versión de formato de texto enriquecido (RTF) del PDF. Esta opción solo se aplica si ha incluido una vía de acceso al PDF del informe. La versión RTF se utiliza para indexar y buscar.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _categoría_ | La categoría del informe. Utilice las comillas si hay un espacio en el nombre. |
+| _fecha_ | La fecha del informe con el formato AAAAMMDD. |  
+| _vía_acceso_archivo_ | La vía de acceso del PDF del informe, del archivo de texto o de registro que va a cargar. |
+| _RTF_ | Opción para incluir una versión de formato de texto enriquecido (RTF) del PDF. Esta opción solo se aplica si ha incluido una vía de acceso al PDF del informe. La versión RTF se utiliza para indexar y buscar. |
+{: caption="Tabla 17. Opciones del mandato cf ba add-report" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba ar** como alias para el nombre de mandato
-**ba add-report** más largo.
+También puede usar **`ba ar`** como alias para el nombre de mandato **`ba add-report`** más largo.
+{: tip}
 
 ### Supresión de informes
 {: #admin_del_report}
@@ -724,17 +648,15 @@ cf ba delete-report <categoría> <fecha> <nombre>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;categoría&gt;</dt>
-<dd class="pd">La categoría del informe. Utilice las comillas si hay un espacio en el nombre.</dd>
-<dt class="pt dlterm">&lt;fecha&gt;</dt>
-<dd class="pd">La fecha del informe con el formato <samp class="ph codeph">AAAAMMDD</samp>.</dd>
-<dt class="pt dlterm">&lt;nombre&gt;</dt>
-<dd class="pd">El nombre del informe.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _categoría_ | La categoría del informe. Utilice las comillas si hay un espacio en el nombre. |
+| _fecha_ | La fecha del informe con el formato AAAAMMDD. |  
+| _nombre_ | El nombre del informe. |
+{: caption="Tabla 18. Opciones del mandato cf ba delete-report" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba dr** como alias para el nombre de mandato
-**ba delete-report** más largo.
+También puede usar **`ba dr`** como alias para el nombre de mandato **`ba delete-report`** más largo.
+{: tip}
 
 ### Recuperación de informes
 {: #admin_retr_report}
@@ -751,8 +673,8 @@ cf ba retrieve-report <buscar>
 <dd class="pd">El nombre de archivo del informe. Utilice las comillas si hay un espacio en el nombre.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba rr** como alias para el nombre de mandato
-**ba retrieve-report** más largo.
+También puede usar **`ba rr`** como alias para el nombre de mandato **`ba retrieve-report`** más largo.
+{: tip}
 
 ## Visualización de información de métricas de recursos
 {: #cliresourceusage}
@@ -763,8 +685,8 @@ Puede ver información sobre métricas de recursos, incluidos el uso de memoria,
 cf ba resource-metrics
 ```
 
-**Sugerencia:** También puede usar **ba rsm** como alias para el nombre de mandato
-**ba resource-metrics** más largo.
+También puede usar **`ba rsm`** como alias para el nombre de mandato **`ba resource-metrics`** más largo.
+{: tip}
 
 ## Visualización del historial de métricas de recursos
 {: #cliresourceusagehistory}
@@ -776,33 +698,26 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;--hourly&gt;</dt>
-<dd class="pd">Ver los datos históricos de las últimas 48 horas. Este es el valor predeterminado.</dd>
-<dt class="pt dlterm">&lt;--daily&gt;</dt>
-<dd class="pd">Ver el promedio diario de los datos históricos de los últimos 30 días.</dd>
-<dt class="pt dlterm">&lt;--monthly&gt;</dt>
-<dd class="pd">Ver el promedio mensual de los datos históricos de los últimos 6 meses. </dd>
-<dt class="pt dlterm">&lt;--memory&gt;</dt>
-<dd class="pd">Ver la memoria física y reservada utilizada y total. </dd>
-<dt class="pt dlterm">&lt;--disk&gt;</dt>
-<dd class="pd">Ver el disco físico y reservado utilizado y total.</dd>
-<dt class="pt dlterm">&lt;--start&gt;</dt>
-<dd class="pd">Especificar una fecha de inicio para daily o monthly (el formato debe ser mm-dd-aaaa), o una fecha y hora de inicio para hourly (el formato debe ser mm-dd-aaaa hh:mm:ss huso_horario) </dd>
-<dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">Especifique una fecha de finalización para daily o monthly (el formato debe ser mm-dd-aaaa), o una fecha y hora de finalización para hourly (el formato debe ser mm-dd-aaaa hh:mm:ss huso_horario) </dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| --hourly | View the historical data for the last 48 hours. This is the default value. |
+| --daily | View the historical data daily average for the last 30 days. |  
+| --monthly | View the historical data monthly average for the last 6 months. |
+| --memory | View the used and total reserved and physical memory. |
+| --disk | View the used and total reserved and physical disk. | 
+| --start | Specify a start date for daily or monthly in the format of mm-dd-yyyy, or start date and time for hourly in the format of mm-dd-yyyy hh:mm:ss time zone. |
+| --end | Specify an end date for daily or monthly in the format of mm-dd-yyyy, or end date and time for hourly in the format of mm-dd-yyyy hh:mm:ss time zone. |
+{: caption="Tabla 19. Opciones del mandato cf ba resource-metrics-history" caption-side="top"}
 
+**Ejemplos**
+
+```
+cf ibmcloud-admin resource-metrics-history
+cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017
+cf ibmcloud-admin resource-metrics-history --monthly --memory
+cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT
+```
 {: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Ejemplos&gt;</dt>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
-</dl>
-
 
 Puede visualizar la lista anterior de parámetros de mandatos y ejemplos utilizando el mandato siguiente:
 
@@ -810,8 +725,8 @@ Puede visualizar la lista anterior de parámetros de mandatos y ejemplos utiliza
 cf ba resource-metrics-history -help
 ```
 
-**Sugerencia:** También puede usar **ba rsmh** como alias para el nombre de mandato
-**ba resource-metrics-history** más largo.
+También puede usar **`ba rsmh`** como alias para el nombre de mandato **`ba resource-metrics-history`** más largo.
+{: tip}
 
 ## Administración de intermediarios de servicio
 {: #admin_servbro}
@@ -819,7 +734,7 @@ cf ba resource-metrics-history -help
 ### Listado de intermediarios de servicio
 {: #clilistservbro}
 
-Para listar todos los intermediarios de servicio, utilice el mandato siguiente:
+Para listar los intermediarios de servicio, utilice el mandato siguiente:
 
 ```
 cf ba service-brokers <broker_name>
@@ -827,40 +742,37 @@ cf ba service-brokers <broker_name>
 {: codeblock}
 
 Para mostrar una lista de todos los intermediarios de servicio, especifique el mandato sin el parámetro
-`broker_name`.
+**`broker_name`**.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nombre_intermediario&gt;</dt>
-<dd class="pd">Opcional: El nombre del intermediario de servicio personalizado. Utilice este parámetro, si quiere obtener información
-para un intermediario de servicio específico.</dd>
+<dd class="pd">El nombre del intermediario de servicio personalizado. Utilice este parámetro, si quiere obtener información
+para un intermediario de servicio específico. Opcional.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba sb** como alias para el nombre de mandato
-**ba service-brokers** más largo.
+También puede usar **`ba sb`** como alias para el nombre de mandato **`ba service-brokers`** más largo.
+{: tip}
 
 ### Adición de un intermediario de servicio
 {: #cliaddservbro}
 
-Para añadir un intermediario de servicio, de modo que puede añadir un servicio personalizado a su catálogo de {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente:
+Para añadir un intermediario de servicio, de modo que pueda añadir un servicio personalizado al catálogo de {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente:
 
 ```
 cf ba add-service-broker <nombre_intermediario> <nombre_usuario> <contraseña> <url_intermediario>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;nombre_intermediario&gt;</dt>
-<dd class="pd">El nombre del intermediario de servicio personalizado.</dd>
-<dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre de usuario de la cuenta que tiene acceso al intermediario de servicios.</dd>
-<dt class="pt dlterm">&lt;contraseña&gt;</dt>
-<dd class="pd">La contraseña de la cuenta que tiene acceso al intermediario de servicios.</dd>
-<dt class="pt dlterm">&lt;url_intermediario&gt;</dt>
-<dd class="pd">El URL del intermediario de servicio.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_intermediario_ | El nombre del intermediario de servicio personalizado. |
+| _nombre_usuario_ | El nombre de usuario de la cuenta que tiene acceso al intermediario de servicios. |  
+| _contraseña_ | La contraseña de la cuenta que tiene acceso al intermediario de servicios. |
+| _url_intermediario_ | El URL del intermediario de servicio. |
+{: caption="Tabla 20. Opciones del mandato cf ba add-service-broker" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba asb** como alias para el nombre de mandato
-**ba add-service-broker** más largo.
+También puede usar **`ba asb`** como alias para el nombre de mandato **`ba add-service-broker`** más largo.
+{: tip}
 
 ### Supresión de un intermediario de servicio
 {: #clidelservbro}
@@ -877,8 +789,8 @@ cf ba delete-service-broker <intermediario_servicio>
 <dd class="pd">El nombre o GUID del intermediario de servicio personalizado.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba dsb** como alias para el nombre de mandato
-**ba delete-service-broker** más largo.
+También puede usar **`ba dsb`** como alias para el nombre de mandato **`ba delete-service-broker`** más largo.
+{: tip}
 
 ### Actualización de un intermediario de servicio
 {: #cliupdservbro}
@@ -890,52 +802,46 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;nombre_intermediario&gt;</dt>
-<dd class="pd">El nombre del intermediario de servicio personalizado.</dd>
-<dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre de usuario de la cuenta que tiene acceso al intermediario de servicios.</dd>
-<dt class="pt dlterm">&lt;contraseña&gt;</dt>
-<dd class="pd">La contraseña de la cuenta que tiene acceso al intermediario de servicios.</dd>
-<dt class="pt dlterm">&lt;url_intermediario&gt;</dt>
-<dd class="pd">El URL del intermediario de servicio.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_intermediario_ | El nombre del intermediario de servicio personalizado. |
+| _nombre_usuario_ | El nombre de usuario de la cuenta que tiene acceso al intermediario de servicios. |  
+| _contraseña_ | La contraseña de la cuenta que tiene acceso al intermediario de servicios. |
+| _url_intermediario_ | El URL del intermediario de servicio. |
+{: caption="Tabla 21. Opciones del mandato cf ba update-service-broker" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba usb** como alias para el nombre de mandato
-**ba update-service-broker** más largo.
+También puede usar **`ba usb`** como alias para el nombre de mandato **`ba update-service-broker`** más largo.
+{: tip}
 
 ## Administración de grupos de seguridad de aplicaciones
 {: #admin_secgro}
 
 Para trabajar con grupos de seguridad de aplicaciones (ASG), debe ser un administrador con acceso completo al entorno local o dedicado. Todos los usuarios del entorno pueden mostrar una lista de los ASG disponibles para la organización que el mandato tiene como objetivo. No obstante, para crear, actualizar o enlazar ASG, debe ser administrador del entorno de {{site.data.keyword.Bluemix_notm}}.
 
-Los ASG funcionan como cortafuegos virtuales que controlan el tráfico de salida de las aplicaciones del entorno de
-{{site.data.keyword.Bluemix_notm}}. Cada ASG está compuesto por una lista de reglas que permiten comunicaciones y tráfico específicos hacia y desde el exterior de la red. Puede enlazar uno o más ASG con un conjunto de grupos de seguridad específico, por ejemplo, un conjunto de grupos que se utiliza para aplicar el acceso global, o puede enlazar con espacios dentro de la organización en el entorno de
+Los ASG funcionan como cortafuegos virtuales que controlan el tráfico de salida de las apps del entorno de
+{{site.data.keyword.cloud_notm}}. Cada ASG está compuesto por una lista de reglas que permiten comunicaciones y tráfico específicos hacia y desde el exterior de la red. Puede enlazar uno o más ASG con un conjunto de grupos de seguridad específico, por ejemplo, un conjunto de grupos que se utiliza para aplicar el acceso global, o puede enlazar con espacios dentro de la organización en el entorno de
 {{site.data.keyword.Bluemix_notm}}.
 
 {{site.data.keyword.Bluemix_notm}} se configura inicialmente con todo el acceso a la red externa restringido. Dos grupos de seguridad creados por IBM, `public_networks` y `dns`, permiten el acceso global a la red externa al enlazar dichos grupos con los conjuntos de grupos de seguridad de Cloud Foundry predeterminados. Los dos conjuntos de grupos de seguridad de Cloud Foundry que se utilizan para aplicar el acceso global son los conjuntos de grupos **Default Staging** y **Default Running**. Estos conjuntos de grupos aplican las reglas para permitir tráfico hacia todas las apps en ejecución o todas las apps en transferencia. Si no desea enlazar estos dos conjuntos de grupos de seguridad, puede desenlazarlos de los conjuntos de grupos de Cloud Foundry y, a continuación, enlazar el grupo de seguridad con un espacio específico. Para obtener más información, consulte
 [Enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").
 
-**AVISO**: al desenlazar los conjuntos de grupos **Default Staging** o **Default Running** de los dos grupos de seguridad creados por IBM, `public_networks` y `dns` inhabilitarán el acceso global a la red externa. Utilice la acción de desenlazar con precaución y conocimiento de su efecto potencial en las aplicaciones en ejecución y en transferencia de su entorno.
+Al desenlazar los conjuntos de grupos **Default Staging** o **Default Running** de los dos grupos de seguridad creados por IBM, `public_networks` y `dns` inhabilitarán el acceso global a la red externa. Utilice la acción de desenlazar con precaución y conocimiento de su efecto potencial en las apps en ejecución y en transferencia de su entorno.
+{: important}
 
 Los mandatos siguientes que le permiten trabajar con grupos de seguridad se basan en la versión 1.6 de Cloud Foundry. Para obtener más información, incluidos los campos necesarios y opcionales, consulte la información de Cloud Foundry acerca de la
 [Creación de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").
-{: note}
 
 ### Listado de grupos de seguridad
 {: #clilissecgro}
 
-* Para listar todos los grupos de seguridad, utilice el siguiente mandato:
+Para listar todos los grupos de seguridad, utilice el siguiente mandato:
 
 ```
 cf ba security-groups
 ```
 {: codeblock}
 
-**Sugerencia:** También puede usar **ba sgs** como alias para el nombre de mandato
-**ba security-groups** más largo.
-
-* Para mostrar detalles para un grupo de seguridad específico, utilice el mandato siguiente:
+Para mostrar detalles para un grupo de seguridad específico, utilice el mandato siguiente:
 
 ```
 cf ba security-groups <grupo-seguridad>
@@ -947,14 +853,11 @@ cf ba security-groups <grupo-seguridad>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba sg** como alias para el nombre de mandato
-**ba security-groups** más largo con el parámetro `security-group`.
+También puede usar **`ba sg`** como alias para el nombre de mandato **`ba security-groups`** más largo.
+{: tip}
 
 ### Creación de un grupo de seguridad
 {: #clicreasecgro}
-
-Para obtener más información sobre la creación de grupos de seguridad y de las reglas que definen el tráfico de salida, consulte
-[Creación de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").
 
 Para crear un grupo de seguridad, utilice el siguiente mandato:
 ```
@@ -965,15 +868,17 @@ cf ba create-security-group <grupo-seguridad> <vía-acceso-archivo-reglas>
 Cada grupo de seguridad que cree tiene el prefijo
 `adminconsole_` añadido al nombre para distinguirlo de los grupos de seguridad creados por IBM.
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
-<dd class="pd">Nombre del grupo de seguridad</dd>
-<dt class="pt dlterm">&lt;vía-acceso-archivo-reglas&gt;</dt>
-<dd class="pd">Vía de acceso absoluta o relativa al archivo de reglas</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_grupo_ | El nombre del grupo de seguridad. |
+| _vía_acceso_archivo_ | La vía de acceso absoluta o relativa al archivo de reglas. |  
+{: caption="Tabla 22. Opciones del mandato cf ba create-security-group" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba csg** como alias para el nombre de mandato
-**ba create-security-group** más largo.
+También puede usar **`ba csg`** como alias para el nombre de mandato **`ba create-security-group`** más largo.
+{: tip}
+
+Para obtener más información sobre la creación de grupos de seguridad y de las reglas que definen el tráfico de salida, consulte
+[Creación de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").
 
 ### Actualización de un grupo de seguridad
 {: #cliupdsecgro}
@@ -985,15 +890,14 @@ cf ba update-security-group <grupo-seguridad> <vía-acceso-archivo-reglas>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
-<dd class="pd">Nombre del grupo de seguridad</dd>
-<dt class="pt dlterm">&lt;vía-acceso-archivo-reglas&gt;</dt>
-<dd class="pd">Vía de acceso absoluta o relativa al archivo de reglas</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_grupo_ | El nombre del grupo de seguridad. |
+| _vía_acceso_archivo_ | La vía de acceso absoluta o relativa al archivo de reglas. |  
+{: caption="Tabla 23. Opciones del mandato cf ba update-security-group" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba usg** como alias para el nombre de mandato
-**ba update-security-group** más largo.
+También puede usar **`ba usg`** como alias para el nombre de mandato **`ba update-security-group`** más largo.
+{: tip}
 
 ### Supresión de un grupo de seguridad
 {: #clidelsecgro}
@@ -1009,16 +913,13 @@ cf ba delete-security-group <grupo-seguridad>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba dsg** como alias para el nombre de mandato
-**ba delete-security-group** más largo.
+También puede usar **`ba dsg`** como alias para el nombre de mandato **`ba delete-security-group`** más largo.
+{: tip}
 
 ### Enlace de grupos de seguridad
 {: #clibindsecgro}
 
-Para obtener más información sobre el enlace de grupos de seguridad, consulte
-[Enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").
-
-* Para enlazar con el conjunto de grupos de seguridad Default Staging, utilice el siguiente mandato:
+Para enlazar con el conjunto de grupos de seguridad Default Staging, utilice el siguiente mandato:
 
 ```
 cf ba bind-staging-security-group <grupo-seguridad>
@@ -1030,10 +931,10 @@ cf ba bind-staging-security-group <grupo-seguridad>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba bssg** como alias para el nombre de mandato
-**ba bind-staging-security-group** más largo.
+También puede usar **`ba bssg`** como alias para el nombre de mandato **`ba bind-staging-security-group`** más largo.
+{: tip}
 
-* Para enlazar con el conjunto de grupos de seguridad Default Running, utilice el siguiente mandato:
+Para enlazar con el conjunto de grupos de seguridad Default Running, utilice el siguiente mandato:
 
 ```
 cf ba bind-running-security-group <grupo-seguridad>
@@ -1045,35 +946,33 @@ cf ba bind-running-security-group <grupo-seguridad>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba brsg** como alias para el nombre de mandato
-**ba bind-running-security-group** más largo.
+También puede usar **`ba brsg`** como alias para el nombre de mandato **`ba bind-running-security-group`** más largo.
+{: tip}
 
-* Para enlazar un grupo de seguridad con un espacio, utilice el siguiente mandato:
+Para enlazar un grupo de seguridad con un espacio, utilice el siguiente mandato:
 
 ```
 cf ba bind-security-group <grupo-seguridad> <org> <espacio>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
-<dd class="pd">Nombre del grupo de seguridad</dd>
-<dt class="pt dlterm">&lt;org&gt;</dt>
-<dd class="pd">Nombre de la organización con la que enlazar el grupo de seguridad</dd>
-<dt class="pt dlterm">&lt;espacio&gt;</dt>
-<dd class="pd">Nombre del espacio dentro de la organización con el que enlazar el grupo de seguridad</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_grupo_ | El nombre del grupo de seguridad. |
+| _org_ | El nombre de la organización con la que enlazar el grupo de seguridad. |
+| _espacio_ | El nombre del espacio dentro de la organización con el que enlazar el grupo de seguridad. |
+{: caption="Tabla 24. Opciones del mandato cf ba bind-security-group" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba bsg** como alias para el nombre de mandato
-**ba bind-security-group** más largo.
+También puede usar **`ba bsg`** como alias para el nombre de mandato **`ba bind-security-group`** más largo.
+{: tip}
+
+Para obtener más información sobre el enlace de grupos de seguridad, consulte
+[Enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").
 
 ### Anulación de enlace de grupos de seguridad
 {: #cliunbindsecgro}
 
-Para obtener más información sobre cómo anular el enlace de grupos de seguridad, consulte
-[Anulación del enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").
-
-* Para anular el enlace desde un conjunto de grupos de seguridad Default Staging, utilice el siguiente mandato:
+Al desenlazar el conjunto de grupos Default Staging de los dos grupos de seguridad creados por IBM, `public_networks` y `dns`, se inhabilita el acceso global a la red externa y debe utilizarse con precaución y conocimiento de las ramificaciones que tiene en todas las apps en transferencia de su entorno. Para anular el enlace desde un conjunto de grupos de seguridad Default Staging, utilice el siguiente mandato:
 
 ```
 cf ba unbind-staging-security-group <security-group>
@@ -1085,12 +984,10 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Aviso**: Al desenlazar el conjunto de grupos **Default Staging** de los dos grupos de seguridad creados por IBM, `public_networks` y `dns` inhabilitarán el acceso global a la red externa y deberán utilizarse con precaución y conocimiento de las ramificaciones en todas las aplicaciones en transferencia de su entorno.
+También puede usar **`ba ussg`** como alias para el nombre de mandato **`ba unbind-staging-security-group`** más largo.
+{: tip}
 
-**Sugerencia:** También puede usar **ba ussg** como alias para el nombre de mandato
-**ba unbind-staging-security-group** más largo.
-
-* Para anular el enlace desde un conjunto de grupos de seguridad Default Running, utilice el siguiente mandato:
+Al desenlazar el conjunto de grupos Default Running de los dos grupos de seguridad creados por IBM; `public_networks` y `dns`, se inhabilita el acceso global a la red externa y debe utilizarse con precaución y conocimiento de las ramificaciones que tiene en todas las apps en ejecución de su entorno. Para anular el enlace desde un conjunto de grupos de seguridad Default Running, utilice el siguiente mandato:
 
 ```
 cf ba unbind-running-security-group <grupo-seguridad>
@@ -1102,29 +999,28 @@ cf ba unbind-running-security-group <grupo-seguridad>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Aviso**: Al desenlazar el conjunto de grupos **Default Running** de los dos grupos de seguridad creados por IBM; `public_networks` y `dns` inhabilitarán el acceso global a la red externa y deberán utilizarse con precaución y conocimiento de las ramificaciones en todas las aplicaciones en ejecución de su entorno.
+También puede usar **`ba brsg`** como alias para el nombre de mandato **`ba unbind-running-security-group`** más largo.
+{: tip}
 
-**Sugerencia:** También puede usar **ba brsg** como alias para el nombre de mandato
-**ba unbind-running-security-group** más largo.
-
-* Para anular el enlace de un grupo de seguridad con un espacio, utilice el siguiente mandato:
+Para anular el enlace de un grupo de seguridad con un espacio, utilice el siguiente mandato:
 
 ```
 cf ba unbind-security-group <grupo-seguridad> <org> <espacio>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
-<dd class="pd">Nombre del grupo de seguridad</dd>
-<dt class="pt dlterm">&lt;org&gt;</dt>
-<dd class="pd">Nombre de la organización con la que enlazar el grupo de seguridad</dd>
-<dt class="pt dlterm">&lt;espacio&gt;</dt>
-<dd class="pd">Nombre del espacio dentro de la organización con el que enlazar el grupo de seguridad</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_grupo_ | El nombre del grupo de seguridad. |
+| _org_ | El nombre de la organización de la que desenlazar el grupo de seguridad. |
+| _espacio_ | El nombre del espacio dentro de la organización del que desea desenlazar el grupo de seguridad. |
+{: caption="Tabla 25. Opciones del mandato cf ba unbind-security-group" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba usg** como alias para el nombre de mandato
-**ba unbind-staging-security-group** más largo.
+También puede usar **`ba usg`** como alias para el nombre de mandato **`ba unbind-security-group`** más largo.
+{: tip}
+
+Para obtener más información sobre cómo anular el enlace de grupos de seguridad, consulte
+[Anulación del enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Administración de paquetes de compilación
 {: #admin_buildpack}
@@ -1144,30 +1040,28 @@ cf ba buildpacks <nombre_paquete_compilación>
 <dd class="pd">Un parámetro opcional para especificar un paquete de compilación concreto para ver.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba lb** como alias para el nombre de mandato
-**ba buildpacks** más largo.
+También puede usar **`ba lb`** como alias para el nombre de mandato **`ba buildpacks`** más largo.
+{: tip}
 
 ### Creación y carga de un paquete de compilación
 {: #clicreupbuildpack}
 
-Si tiene permisos de escritura en el catálogo de las apps, puede crear y cargar un paquete de compilación. Puede cargar cualquier archivo comprimido que tenga un tipo de archivo .zip. Para cargar un paquete de compilación, utilice el siguiente mandato:
+Si tiene permisos de escritura en el catálogo de las apps, puede crear y cargar un paquete de compilación. Puede cargar cualquier archivo comprimido que tenga un tipo de archivo `.zip`. Para cargar un paquete de compilación, utilice el siguiente mandato:
 
 ```
 cf ba create-buildpack <nombre_paquete_compilación> <vía_acceso_archivo> <posición>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;nombre_paquete_compilación&gt;</dt>
-<dd class="pd">Nombre del paquete de compilación que se cargará.</dd>
-<dt class="pt dlterm">&lt;vía_acceso_archivo&gt;</dt>
-<dd class="pd">Vía de acceso al archivo comprimido del paquete de compilación.</dd>
-<dt class="pt dlterm">&lt;posición&gt;</dt>
-<dd class="pd">Orden en el que se comprueban los paquetes de compilación durante la detección automática del paquete de compilación.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_ | Nombre del paquete de compilación que se cargará. |
+| _vía_acceso_archivo_ | Vía de acceso al archivo comprimido del paquete de compilación. |
+| _posición_ | Orden en el que se comprueban los paquetes de compilación durante la detección automática del paquete de compilación. |
+{: caption="Tabla 26. Opciones del mandato cf ba create-buildpack" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba cb** como alias para el nombre de mandato
-**ba create-buildpack** más largo.
+También puede usar **`ba cb`** como alias para el nombre de mandato **`ba create-buildpack`** más largo.
+{: tip}
 
 ### Actualización de un paquete de compilación
 {: #cliupdabuildpack}
@@ -1178,19 +1072,16 @@ cf ba update-buildpack <nombre_paquete_compilación> <posición> <habilitado> <b
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;nombre_paquete_compilación&gt;</dt>
-<dd class="pd">Nombre del paquete de compilación que se actualizará.</dd>
-<dt class="pt dlterm">&lt;posición&gt;</dt>
-<dd class="pd">Orden en el que se comprueban los paquetes de compilación durante la detección automática del paquete de compilación.</dd>
-<dt class="pt dlterm">&lt;habilitado&gt;</dt>
-<dd class="pd">Indica si el paquete de compilación se utilizará para la transferencia.</dd>
-<dt class="pt dlterm">&lt;bloqueado&gt;</dt>
-<dd class="pd">Indica si el paquete de compilación está bloqueado para impedir actualizaciones.</dd>
-</dl>
+| Opción | Descripción | 
+| -------| ------------|
+| _nombre_ | Nombre del paquete de compilación que se actualizará. |
+| _posición_ | Orden en el que se comprueban los paquetes de compilación durante la detección automática del paquete de compilación. |
+| _habilitado_ | Indica si el paquete de compilación se utilizará para la transferencia. |
+| _bloqueado_ | Indica si el paquete de compilación está bloqueado para impedir actualizaciones. | 
+{: caption="Tabla 27. Opciones del mandato cf ba update-buildpack" caption-side="top"}
 
-**Sugerencia:** También puede usar **ba ub** como alias para el nombre de mandato
-**ba update-buildpack** más largo.
+También puede usar **`ba ub`** como alias para el nombre de mandato **`ba update-buildpack`** más largo.
+{: tip}
 
 ### Supresión de un paquete de compilación
 {: #clidelbuildpack}
@@ -1206,5 +1097,5 @@ cf ba delete-buildpack <nombre_paquete_compilación>
 <dd class="pd">Nombre del paquete de compilación que se suprimirá.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba db** como alias para el nombre de mandato
-**ba delete-buildpack** más largo.
+También puede usar **`ba db`** como alias para el nombre de mandato **`ba delete-buildpack`** más largo.
+{: tip}

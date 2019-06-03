@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -17,32 +17,32 @@ subcollection: cloud-cli
 {:pre: .pre}
 {:tip: .tip}
 
-# Abilitazione delle applicazioni Python esistenti per la distribuzione cloud
+# Abilitazione delle applicazioni Python esistenti per la distribuzione cloud 
 {: #enable-existing-python}
 
-Puoi generare i file necessari per abilitare la tua applicazione Python all'esecuzione su {{site.data.keyword.cloud}} utilizzando il [comando enable della CLI {{site.data.keyword.dev_cli_long}}](/docs/cli/idt?topic=cloud-cli-idt-cli#enable).
+Puoi generare i file necessari per abilitare la tua applicazione Python all'esecuzione su {{site.data.keyword.cloud}} utilizzando il [comando enable della CLI {{site.data.keyword.dev_cli_long}}](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). 
 
-## Abilitazione della tua applicazione Python
+## Abilitazione della tua applicazione Python 
 {: #enable-app-python}
 
-Immetti il seguente comando dalla directory root del tuo progetto Python:
+Immetti il seguente comando dalla directory root del tuo progetto Python: 
 ```
 ibmcloud dev enable
 ```
 {: codeblock}
 
-* Quando ti viene richiesto di verificare il framework rilevato per il progetto, **Python - Flask** o **Python - Django**, rispondi `y`. 
-* Ti viene in seguito richiesto **Connect to an IBM Cloud app**. Seleziona l'opzione **Generate assets, create a new IBM Cloud app and connect to it** o **Generate assets without connecting to an IBM Cloud app** per la tua applicazione.
-* Il comando `enable` può anche creare i servizi e associarli alla tua applicazione. Per questo esempio di base, rispondi `n`.
+* Quando ti viene richiesto di verificare il framework rilevato per il progetto, **Python - Flask** o **Python - Django**, rispondi `y`.  
+* Ti viene in seguito richiesto **Connect to an IBM Cloud app**. Seleziona le opzioni **Generate assets, create a new IBM Cloud app and connect to it** o **Generate assets without connecting to an IBM Cloud app** per la tua applicazione.
+* Il comando `enable` crea anche i servizi e li associa alla tua applicazione. Per questo esempio di base, rispondi `n`. 
 
-Consulta il seguente output di esempio:
+Consulta il seguente output di esempio: 
 ```
 > ibmcloud dev enable
 The enable feature is currently in Beta.
 Please provide your experience and feedback at: https://ibm-cloud-tech.slack.com/messages/developer-tools/
-Only server-side applications are supported by the enable feature
+Only server-side apps are supported by the enable feature
 
-? Python - Flask application discovered. Do you want to proceed with this
+? Python - Flask app discovered. Do you want to proceed with this
 language choice? [y/n]> y
 
 
@@ -105,53 +105,54 @@ LICENSE
 The application, <appname>, has been successfully saved
 into the current directory.
 ```
+{: screen}
 
-## Crea e distribuisci un'applicazione Python abilitata per il cloud
+## Crea e distribuisci un'applicazione Python abilitata per il cloud 
 {: #build-deploy-python}
 
-Successivamente, crea la tua applicazione con il comando [`build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build):
+Successivamente, crea la tua applicazione con il [comando `build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build):
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-Se la creazione viene completata correttamente, puoi distribuire la tua applicazione a {{site.data.keyword.cloud_notm}} con il seguente comando [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy):
+Se la creazione viene completata correttamente, puoi distribuire la tua applicazione a {{site.data.keyword.cloud_notm}} con il seguente comando [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy): 
 ```
 ibmcloud dev deploy
 ```
 {: codeblock}
 
-## Cosa fare se la tua applicazione abilitata non viene creata o distribuita
+## Cosa fare se la tua applicazione abilitata non viene creata o distribuita 
 {: #build-failure-python}
 
-Non tutte le applicazioni vengo abilitate correttamente dal comando `enable`. Ad esempio, si potrebbe verificare il seguente errore quando il nome del progetto è diverso dal nome della directory che contiene i file `wsgi.py` e `settings.py`:
+Non tutte le applicazioni vengo abilitate correttamente dal comando `enable`. Ad esempio, si potrebbe verificare il seguente errore quando il nome del progetto è diverso dal nome della directory che contiene i file `wsgi.py` e `settings.py`: 
 ```
 ImportError: No module named <projectname>.wsgi
 ```
 {: screen}
 
-Il nome del file `<projectname>.wsgi` è il nome del progetto che sta venendo abilitato.
+Il nome del file `<projectname>.wsgi` è il nome del progetto che viene abilitato. 
 
-Se la tua applicazione non viene creata o distribuita dopo aver eseguito `ibmcloud dev enable`, puoi modificare i file generati per completare l'abilitazione cloud.
+Se la tua applicazione non viene creata o distribuita dopo aver eseguito `ibmcloud dev enable`, puoi modificare i file generati per completare l'abilitazione cloud. 
 
-### Configurazione manuale dei file di abilitazione cloud generati
+### Configurazione manuale dei file di abilitazione cloud generati 
 {: #manual-enable-python}
 
-Per abilitare le applicazioni Python che utilizzano il framework Django, aggiorna la riga `CMD` nel Dockerfile con il comando che normalmente utilizzi per eseguire il tuo progetto.
+Per abilitare le applicazioni Python che utilizzano il framework Django, aggiorna la riga `CMD` nel Dockerfile con il comando che normalmente utilizzi per eseguire il tuo progetto. 
 
-Ad esempio, se il comando che utilizzi per eseguire il progetto è:
+Ad esempio, se il comando che utilizzi per eseguire il progetto è: 
 ```
 gunicorn -b 0.0.0.0:3000 --env DJANGO_SETTINGS_MODULE=<projectname>.settings.production <projectname>.wsgi
 ```
 {: codeblock}
 
-Aggiorna la voce `CMD` nel tuo Dockerfile in questo modo:
+Aggiorna la voce `CMD` nel tuo Dockerfile in questo modo: 
 ```
 CMD ["gunicorn", "-b", "0.0.0.0:3000", "--env", "DJANGO_SETTINGS_MODULE=<projectname>.settings.production", "<projectname>.wsgi"]
 ```
 {: codeblock}
 
-## Passi successivi
+## Passi successivi 
 {: #next_steps_existing_python notoc}
 
-Per ulteriori informazioni, consulta [CLI IBM Cloud Developer Tools](/docs/cli/idt?topic=cloud-cli-idt-cli#idt-cli).
+Per ulteriori informazioni, consulta [CLI IBM Cloud Developer Tools](/docs/cli/idt?topic=cloud-cli-idt-cli#idt-cli). 

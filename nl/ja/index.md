@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-05-21"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -20,11 +20,8 @@ subcollection: cloud-cli
 # {{site.data.keyword.cloud_notm}} CLI の概説
 {: #ibmcloud-cli}
 
-このチュートリアルでは、一連の {{site.data.keyword.cloud}} 開発者ツールをインストールし、インストールを検証して、環境を構成します。 {{site.data.keyword.cloud_notm}} 開発者ツールは、Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションを作成、開発、およびデプロイするためのコマンド・ライン・アプローチを提供します。
+このチュートリアルでは、一連の {{site.data.keyword.cloud}} 開発者ツールをインストールし、インストールを検証して、環境を構成します。 {{site.data.keyword.dev_cli_notm}} には、クラウド・アプリケーションを作成、開発、デプロイするためのコマンド・ライン・アプローチが備わっています。
 {: shortdesc}
-
-必ず最新バージョンの {{site.data.keyword.cloud_notm}} パブリック用スタンドアロン {{site.data.keyword.cloud_notm}} CLI を使用してください。32 ビット・バージョン、または {{site.data.keyword.cloud_notm}} 専用環境用の最新バージョン以外の旧バージョンを使用する必要がある場合は、[{{site.data.keyword.cloud_notm}} CLI リリース](/docs/cli?topic=cloud-cli-cli-releases)を参照してください。
-{: note}
 
 このチュートリアルのインストール・コマンドにより、入手可能な最新のスタンドアロン {{site.data.keyword.cloud_notm}} CLI バージョンと、以下のツールがインストールされます。
 
@@ -45,30 +42,33 @@ subcollection: cloud-cli
 
 [{{site.data.keyword.cloud_notm}} アカウント](https://cloud.ibm.com/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") と以下のシステム要件が必要です。
 
-* Windows を実行している場合、一部の機能は、Windows 10 Pro を実行していないとサポートされません。
+* Windows&trade; を実行している場合、一部の機能は、Windows&trade; 10 Pro を実行していないとサポートされません。
 * Docker の Stable チャネル (安定版) を使用する必要があり、バージョン 1.13.1 以上が必要です。
 
 ## ステップ 1. インストール・コマンドの実行
 {: #step1-install-idt}
 
-* Mac および Linux の場合、次のコマンドを実行します。
+以下のコマンドを実行すると、最新バージョンの {{site.data.keyword.cloud_notm}} CLI がインストールされます。
+
+* Mac および Linux&trade; の場合、次のコマンドを実行します。
   ```
   curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
 
-* Windows 10 Pro の場合、管理者として次のコマンドを実行します。
+* Windows&trade; 10 Pro の場合、管理者として次のコマンドを実行します。
   ```
-  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
 
-  Windows PowerShell アイコンを右クリックして、**「管理者として実行」**を選択します。
+  Windows&trade; PowerShell アイコンを右クリックして、**「管理者として実行」**を選択します。
   {: tip}
 
 この [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") からインストーラー・スクリプトをダウンロードすることもできます。
 
-これらのツールを手動でインストールする手順については、[{{site.data.keyword.cloud_notm}} 開発者用ツール CLI プラグイン・コンポーネントの手動によるインストール](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually)を参照してください。
+32 ビット・バージョンの CLI、または {{site.data.keyword.cloud_notm}} 専用環境用の最新バージョン以外の旧バージョンを使用する必要がある場合は、[{{site.data.keyword.cloud_notm}} CLI リリース](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部リンクのアイコン](../icons/launch-glyph.svg "外部リンクのアイコン")を参照してください。
+{: note}
 
 ## ステップ 2. インストールの検証
 {: #step2-verify-idt}
@@ -108,4 +108,6 @@ ibmcloud dev help
 ## 次のステップ
 {: #next-steps}
 
-最初のアプリケーションの開発およびデプロイに取り掛かることができます。 詳しくは、[CLI を使用したアプリの作成およびデプロイ](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli)を参照してください。
+* 最初のアプリの開発およびデプロイに取り掛かることができます。 詳しくは、[CLI を使用したアプリの作成およびデプロイ](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli)を参照してください。
+
+* 新しい {{site.data.keyword.cloud_notm}} CLI リリースに関する通知を受け取ることができます。 [{{site.data.keyword.cloud_notm}} CLI リリース・リポジトリー](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部リンクのアイコン](../icons/launch-glyph.svg "外部リンクのアイコン") にサブスクライブします。

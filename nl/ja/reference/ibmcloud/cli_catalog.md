@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # カタログ・オファリングの検索と管理
 {: #ibmcloud_catalog}
@@ -57,7 +58,6 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 <strong>例</strong>:
 
 サービス `Automation test` を検索します
-
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -66,7 +66,6 @@ ibmcloud catalog search -k service -q 'Automation test'
 {: #ibmcloud_catalog_entry}
 
 カタログ・エントリーを取得します
-
 ```
 ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
@@ -257,6 +256,7 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
 ibmcloud catalog service-marketplace --global
 ```
+{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
@@ -300,6 +300,7 @@ ibmcloud catalog template TEMPLATE_ID
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
+{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
@@ -331,19 +332,23 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 
 <strong>例</strong>:
 
-`javaHelloWorld` テンプレートをベースにして cf アプリケーション `my-app` を作成します。
+`javaHelloWorld` テンプレートに基づいて、`my-app` という名前の `cf` アプリを作成します。
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
+{: codeblock}
 
-`rubyHelloWorld` テンプレートに基づき、
-```ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud"
-``` という記述を使用して、アプリケーション `my-ruby-app` を作成します。
+`rubyHelloWorld` テンプレートに基づいて、説明付きのアプリ `my-ruby-app` を作成します。
+```
+ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
+```
+{: codeblock}
 
-`pythonHelloWorld` テンプレートをベースにして、自動開始なしでアプリケーション `my-python-app` を作成します。
+`pythonHelloWorld` テンプレートをベースにして、自動開始なしでアプリ `my-python-app` を作成します。
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
+{: codeblock}
 
 ## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
@@ -384,6 +389,7 @@ ibmcloud catalog runtime RUNTIME_ID
 ```
 catalog runtime nodejsHelloWorld
 ```
+{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
@@ -406,3 +412,4 @@ ibmcloud catalog runtimes [-d]
 ```
 ibmcloud catalog runtimes -d
 ```
+{: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -45,10 +45,10 @@ Vous devez avoir un compte [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.
 * Sous Windows&trade;, certaines fonctions ne sont pas prises en charge sauf si vous exécutez Windows&trade; 10 Pro.
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
 
-## Etape 1. Lancez la commande d'installation
+## Etape 1. Lancer la commande d'installation
 {: #step1-install-idt}
 
-La dernière version de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} est installée lorsque vous exécutez la commande. 
+La dernière version de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} est installée lorsque vous exécutez la commande.
 
 * Pour Mac et Linux, exécutez la commande suivante :
   ```
@@ -58,7 +58,7 @@ La dernière version de l'interface de ligne de commande {{site.data.keyword.clo
 
 * Pour Windows&trade; 10 Pro, exécutez la commande suivante en tant qu'administrateur :
   ```
-  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
 

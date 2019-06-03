@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -27,11 +27,11 @@ subcollection: cloud-cli
 Consulte las soluciones a problemas comunes con la interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_short}}. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
 {: shortdesc}
 
-## ¿Por qué recibo un error de nombre de host cuando creo una app con un patrón no móvil?
+## ¿Por qué recibo un error de nombre de host cuando creo una aplicación con un patrón no móvil?
 {: #ts-cli-hostname-error}
 {: troubleshoot}
 
-Es posible que aparezca el siguiente error si utiliza la CLI de {{site.data.keyword.dev_cli_short}} para desplegar una app en Cloud Foundry. Aunque especifique un nombre de host exclusivo, es posible que siga viendo el mensaje.
+Es posible que aparezca el siguiente error si utiliza la CLI de {{site.data.keyword.dev_cli_short}} para desplegar una aplicación en Cloud Foundry. Aunque especifique un nombre de host exclusivo, es posible que siga viendo el mensaje.
 ```
 The hostname <myHostname> is taken.
 ```
@@ -274,7 +274,7 @@ directly.
 {: tsSymptoms}
 
 Este error puede deberse a una de las causas siguientes:
-- Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) desde un directorio que no es el directorio de origen de la aplicación.
+- Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) desde un directorio que no es el directorio de origen de la app.
 - Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) para una app de un idioma que no se reconoce.
 {: tsCauses}
 
@@ -291,8 +291,8 @@ Es posible que se produzcan varias anomalías al [crear](/docs/cli/idt?topic=clo
 En los siguientes enlaces encontrará muchas de las posibles causas.
 {: tsCauses}
 
-- Para obtener más información sobre cómo resolver estos problemas con una app Spring, consulte [Habilitación de aplicaciones Spring Boot existentes para el despliegue en la nube](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
-- Para obtener más información sobre cómo resolver estos problemas con una app `Node.js`, consulte [Habilitación de aplicaciones Node.js existentes para el despliegue en la nube](/docs/node?topic=nodejs-enable_existing#enable_existing).
+- Para obtener más información sobre cómo resolver estos problemas con una app Spring, consulte [Habilitación de apps Spring Boot existentes para el despliegue en la nube](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
+- Para obtener más información sobre cómo resolver estos problemas con una app `Node.js`, consulte [Habilitación de apps Node.js existentes para el despliegue en la nube](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 
 ## Cómo instalar manualmente los componentes de la CLI de {{site.data.keyword.dev_cli_notm}} de forma independiente

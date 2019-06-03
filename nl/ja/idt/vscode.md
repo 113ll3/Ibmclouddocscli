@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -71,7 +71,7 @@ Visual Studio Code のコマンド・パレットを使用して、拡張コマ�
 * `ibmcloud dev debug` コマンドを使用して、開発用のローカル Docker でアプリを実行します
 > 注: ローカル Docker コンテナー内で実行されている Node.js アプリケーションをデバッグするには、[ローカル・コンテナー用のデバッグ構成を追加](https://github.com/IBM-Cloud/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") する必要があります。
 * `ibmcloud dev run` コマンドを使用して、アプリをローカル Docker 内でリリース・モードで実行します
-* `ibmcloud dev deploy` コマンドを使用して、アプリケーションを {{site.data.keyword.cloud_notm}} 上の Cloud Foundry ランタイムにデプロイします
+* `ibmcloud dev deploy` コマンドを使用して、アプリを {{site.data.keyword.cloud_notm}} 上の Cloud Foundry ランタイムにデプロイします
 
 ### Cloud Foundry ワークフローでの IBM Developer Extension の使用
 {: #usage-cloud-foundry}
@@ -79,12 +79,12 @@ Visual Studio Code のコマンド・パレットを使用して、拡張コマ�
 現在、{{site.data.keyword.cloud_notm}} 上の Cloud Foundry ランタイムにアプリをデプロイしているユーザー用に、`cf` 操作セットのサポートもあります。
 
 以下のに示すように、ほんの数ステップで Cloud Foundry ワークフローを開始することができます。
-* 新規 Cloud Foundry アプリケーションを作成します。
+* 新規 Cloud Foundry アプリを作成します。
   * [{{site.data.keyword.cloud_notm}} Web コンソール](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") を使用し、スターター・コードをダウンロードします。
-  * 新しい Cloud Foundry アプリケーションを手動で作成します
+  * 新しい Cloud Foundry アプリを手動で作成します
 * Visual Studio Code エディターでローカル環境でプロジェクト・フォルダーを開きます
-* `ibmcloud cf apps` を使用して、すべてのアプリケーションをリストします
-* `ibmcloud cf push` を使用して、アプリケーションのビルドを Cloud Foundry ランタイムにプッシュします
-* `ibmcloud cf <start/stop/restage/restart>` を使用して、アプリケーションの状況を変更します
-* `ibmcloud cf logs` を使用して、アプリケーションの稼働中のログ・ストリームを表示します
+* `ibmcloud cf apps` を使用して、すべてのアプリをリストします
+* `ibmcloud cf push` を使用して、アプリのビルドを Cloud Foundry ランタイムにプッシュします
+* `ibmcloud cf <start/stop/restage/restart>` を使用して、アプリの状況を変更します
+* `ibmcloud cf logs` を使用して、アプリの稼働中のログ・ストリームを表示します
   * `ibmcloud cf logs` を使用してログ・ストリームを停止します

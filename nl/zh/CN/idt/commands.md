@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -63,7 +63,7 @@ subcollection: cloud-cli
 
 要使用多个容器进行构建，应用程序必须包含 `cli-config.yml` 中指定的 [Compose](https://docs.docker.com/compose/overview/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 文件，您也可以使用 `dockerfile-tools` 命令参数提供该文件。
 
-在当前应用程序目录中运行以下命令来构建应用程序：  
+在当前应用程序目录中运行以下命令开始构建：  
 ```
 ibmcloud dev build [--debug]
 ```
@@ -72,31 +72,31 @@ ibmcloud dev build [--debug]
 ## code
 {: #code}
 
-使用 `code` 命令可下载先前为 {{site.data.keyword.cloud_notm}} 创建的包含应用程序模板代码和配置文件的应用程序。您可以在需要抽取应用程序的第二个副本时使用此命令。
+使用 `code` 命令可下载先前使用 {{site.data.keyword.cloud_notm}} 的应用程序模板代码和配置文件创建的应用程序。您可以在需要抽取应用程序的第二个副本时使用此命令。
 
 运行以下命令从指定应用程序下载代码。
 ```
-ibmcloud dev code <applicationName>
+ibmcloud dev code <appName>
 ```
 {: codeblock}
 
 ## console
 {: #console}
 
-使用 `console` 命令可打开 Web 浏览器并转至 {{site.data.keyword.cloud_notm}} 上的应用程序 Web 控制台。可以从应用程序的文件夹内运行 `ibmcloud dev console` 命令。CLI 会尝试在 {{site.data.keyword.cloud_notm}} 上查找与当前目录具有相同应用程序标识的匹配应用程序。如果系统找不到匹配的名称，将会在 {{site.data.keyword.cloud_notm}} 上打开 **Web 和移动**仪表板，而不是打开特定的应用程序。
+使用 `console` 命令可打开 Web 浏览器并转至 {{site.data.keyword.cloud_notm}} 上的应用程序 Web 控制台。可以从应用程序的文件夹内运行 `ibmcloud dev console` 命令。CLI 会尝试在 {{site.data.keyword.cloud_notm}} 上查找与当前目录具有相同应用程序标识的匹配应用程序。如果系统找不到匹配的名称，会在 {{site.data.keyword.cloud_notm}} 上打开 **Web 和移动**仪表板，而不是打开特定的应用程序。
 
-您可以提供应用程序名称，这样 CLI 会跳过基于文件夹或应用程序名称进行匹配。在这种情况下，CLI 会在 Web 浏览器中打开指定应用程序的控制台。  
+您可以提供应用程序名称，这样 CLI 会跳过基于文件夹或应用程序名称进行的匹配。在这种情况下，CLI 会在 Web 浏览器中打开指定应用程序的控制台。  
 
 运行以下命令来打开 Web 浏览器并转至应用程序的 Web 控制台。
 ```
-ibmcloud dev console [applicationName]
+ibmcloud dev console [appName]
 ```
 {: codeblock}
 
 ## create
 {: #create}
 
-创建应用程序，这将提示输入所有信息，包括资源类型、语言、入门模板工具包和 DevOps 工具链选项，包括 IBM Cloud Foundry 或 Cloud Foundry Enterprise Environment 以及 Kubernetes。这将在当前目录中创建应用程序。
+创建应用程序，这将提示输入所有信息，包括资源类型、语言、入门模板工具包和 DevOps 工具链选项。包括 IBM Cloud Foundry 或 Cloud Foundry Enterprise Environment 以及 Kubernetes。这将在当前目录中创建应用程序。
 
 要在当前目录中创建应用程序并使服务与其相关联，请运行以下命令：
 ```
@@ -117,7 +117,7 @@ ibmcloud dev build --debug
 ```
 {: codeblock}
 
-首先，在当前应用程序目录中运行以下命令来调试应用程序：
+首先，在当前应用程序目录中运行以下命令开始调试：
 ```
 ibmcloud dev debug
 ```
@@ -157,7 +157,7 @@ ibmcloud dev debug
 
 运行以下命令从 {{site.data.keyword.cloud_notm}} 中删除应用程序：
 ```
-ibmcloud dev delete <applicationName>
+ibmcloud dev delete <appName>
 ```
 {: codeblock}
 
@@ -178,7 +178,7 @@ ibmcloud dev delete <applicationName>
 此外，还可以使用命令行自变量在 `cli-config.yml` 中指定配置 Kubernetes 部署所需的其他参数。如果未在 `cli-config.yml` 中定义这些参数，那么必须使用 `-t container` 参数进行部署。然后，系统会提示您输入所有其他值。
 
 ```yaml
-chart-path: "chart/myapplication"
+chart-path: "chart/myapp"
 
 deploy-target: "container"
 
@@ -261,7 +261,7 @@ ibmcloud dev diag
 ## edit
 {: #edit}
 
-使用选项来编辑应用程序，例如将应用程序与 {{site.data.keyword.cloud_notm}} 中已有的应用程序相连接，以及管理应用程序的 {{site.data.keyword.cloud_notm}} 服务及其 {{site.data.keyword.cloud_notm}} 工具链以部署到 IBM Cloud Kubernetes、Cloud Foundry 或 Cloud Foundry Enterprise Environment。对于与 {{site.data.keyword.cloud_notm}} 中的应用程序连接的本地应用程序，使用 `edit` 来添加新服务，将现有服务连接和断开连接，或者从帐户中除去现有服务。此外，可以创建或查看应用程序的 {{site.data.keyword.cloud_notm}} 工具链。在应用程序目录的根目录中运行以下命令：
+使用选项来编辑应用程序，例如将应用程序与 {{site.data.keyword.cloud_notm}} 中已有的应用程序相连接，以及管理应用程序的 {{site.data.keyword.cloud_notm}} 服务及其部署到 IBM Cloud Kubernetes、Cloud Foundry 或 Cloud Foundry Enterprise Environment 的 {{site.data.keyword.cloud_notm}} 工具链。对于与 {{site.data.keyword.cloud_notm}} 中的应用程序连接的本地应用程序，使用 `edit` 来添加新服务，将现有服务连接和断开连接，或者从帐户中除去现有服务。此外，可以创建或查看应用程序的 {{site.data.keyword.cloud_notm}} 工具链。在应用程序目录的根目录中运行以下命令：
 ```
 ibmcloud dev edit
 ```
@@ -275,7 +275,7 @@ ibmcloud dev edit
 
 * 对于断开连接的服务，您可以选择将该服务连接到应用程序，也可以将该服务从帐户中删除。连接现有服务还会下载文件（如凭证或源代码）以便开始使用该服务。
 
-您还可以向应用程序添加新服务，系统会提示您选择服务并下载其他文件（如凭证文件或源代码）以便开始使用新服务。
+您还可以向应用程序添加新服务，系统会提示您选择服务并下载其他文件（如凭证文件或源代码），以便开始使用新服务。
 
 ## enable
 {: #enable}
@@ -342,7 +342,7 @@ ibmcloud dev enable
 ## get-credentials
 {: #get-credentials}
 
-获取所需的凭证，以便在应用程序中可以使用连接的服务。
+获取应用程序所需的凭证，才能使用连接的服务。
 
 ## help
 {: #help}
@@ -392,13 +392,14 @@ ibmcloud dev run
 ### run 命令参数
 {: #run-parameters}
 
-以下参数是 `run` 命令独有的，可帮助管理 run 容器内的应用程序。有一些[其他参数](#command-parameters)是与其他命令共享的。
+以下参数是 `run` 命令独有的，可帮助管理 run 容器内的应用程序。
+有一些[其他参数](#command-parameters)是与其他命令共享的。
 
 #### `container-name-run`
 {: #container-name-run2}
 
 * run 容器的容器名称。
-* 用法：`ibmcloud dev run --container-name-run [<applicationName>]`
+* 用法：`ibmcloud dev run --container-name-run [<appName>]`
 
 #### `container-path-run`
 {: #container-path-run}
@@ -512,13 +513,13 @@ ibmcloud dev stop
 {: #container-name-run}
 
 * run 容器的容器名称。
-* 用法：`ibmcloud dev stop --container-name-run [<applicationName>]`
+* 用法：`ibmcloud dev stop --container-name-run [<appName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * tools 容器的容器名称。
-* 用法：`ibmcloud dev stop --container-name-tools [<applicationName>]`
+* 用法：`ibmcloud dev stop --container-name-tools [<appName>]`
 
 ## test
 {: #test}
@@ -553,11 +554,11 @@ ibmcloud dev test
 ## view
 {: #view}
 
-可以通过 `view` 命令来查看应用程序部署到的 URL。在要查看的应用程序的根目录中运行此命令。`view` 命令还会在缺省浏览器中打开相应 URL。
+可以通过 `view` 命令来查看应用程序部署的目标 URL。在要查看的应用程序的根目录中运行此命令。`view` 命令还会在缺省浏览器中打开相应 URL。
 
 对于部署到 Cloud Foundry 的应用程序，URL 由应用程序的主机名和应用程序的域组成。
 
-对于部署到 Kubernetes 的应用程序，URL 由其部署到的节点的 IP 地址和公共端口组成。如果该命令确定应用程序已部署到 Kubernetes，那么 CLI 工具会提示进行确认。如果您指定应用程序未部署到 Kubernetes，那么将显示 Cloud Foundry URL。如果您预期该命令显示部署到 Kubernetes 的应用程序的 URL，请确保 `cli-config.yml` 包含 `chart-path` 的条目，或者通过命令行提供该条目，如[此处](#chart-path)所示。
+对于部署到 Kubernetes 的应用程序，URL 由其部署到的节点的 IP 地址和公共端口组成。如果该命令确定应用程序已部署到 Kubernetes，那么 CLI 工具会提示进行确认。如果您指定应用程序未部署到 Kubernetes，那么将显示 Cloud Foundry URL。如果您预期该命令显示 Kubernetes 部署的应用程序的 URL，请确保 `cli-config.yml` 包含 `chart-path` 的条目，或者通过命令行提供该条目，如[此处](#chart-path)所示。
 
 运行以下命令来查看应用程序：
 ```
@@ -632,13 +633,13 @@ ibmcloud dev build/deploy/view -t container --trace
 {: #container-name-run1}
 
 * run 容器的容器名称。
-* 用法：`ibmcloud dev <run|status|stop> --container-name-run [<applicationName>]`
+* 用法：`ibmcloud dev <run|status|stop> --container-name-run [<appName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * tools 容器的容器名称。
-* 用法：`ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<applicationName>]`
+* 用法：`ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<appName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}

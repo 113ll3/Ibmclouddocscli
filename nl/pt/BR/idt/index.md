@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # Desenvolvendo e implementando seus apps
 {: #developing}
 
-O desenvolvimento de aplicativos nativos de nuvem com a CLI do {{site.data.keyword.dev_cli_notm}} segue um fluxo bastante simples:
+O desenvolvimento de aplicativos nativos da nuvem com a CLI do {{site.data.keyword.dev_cli_notm}} segue um fluxo bastante simples:
 
 1. [Crie ou ative um app para implementação](#idt-create).
 2. [Codifique, construa e execute](#code-build-run) seu app localmente usando contêineres.
@@ -39,8 +39,7 @@ Há diversas maneiras pelas quais é possível criar um app.
 
 Para qualquer um dos métodos de criação anteriores, o fluxo é semelhante. Selecione o tipo de projeto, a linguagem de implementação e o padrão de app a serem usados. Também é possível optar por incluir serviços em seu app, como autenticação ou persistência. Finalmente, é possível incluir o recurso DevOps no app, que fornece uma cadeia de ferramentas completa de controle de versão e comunicações de equipe. Incluindo um pipeline que é acionado em cada confirmação para validar, construir e implementar seu app para o {{site.data.keyword.cloud_notm}}.
 
-![Amostra de fluxo de criação que usaa CLI do {{site.data.keyword.dev_cli_notm}}](create_flow.png "Amostra de fluxo de criação que usa a CLI do {{site.data.keyword.dev_cli_notm}}") <br> Figura 2. Amostra de fluxo de criação que usa a CLI do {{site.data.keyword.dev_cli_notm}}
-
+![Fluxo de criação de amostra que usa a CLI do {{site.data.keyword.dev_cli_notm}}](create_flow.png "Fluxo de criação de amostra que usa a CLI do {{site.data.keyword.dev_cli_notm}}")
 
 A CLI do {{site.data.keyword.dev_cli_notm}} trabalha estreitamente junto para fornecer uma experiência suave durante o desenvolvimento. Os projetos que são criados nos consoles da web fornecem um botão **Fazer download de código** para fazer download do código-fonte
 gerado para sua estação de trabalho para desenvolvimento adicional.
@@ -76,7 +75,7 @@ Os projetos que são criados ou ativados para uso com as ferramentas do desenvol
 
 Uma vez que o seu projeto for criado, caberá a você transformá-lo em algo útil. O fluxo geral consiste em editar o código-fonte e, em seguida, executar [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) para compilar o app dentro de um contêiner local específico para a linguagem e a configuração de seu app. Dependendo de seu idioma e do gerador de apps que é usado, há um ou mais contêineres que são definidos por padrão para suportar a construção e a execução localmente. Normalmente, há um contêiner de "ferramentas" para construções e depuração local. Esse contêiner tem ferramentas extras e recursos para auxiliá-lo no desenvolvimento. Há também um contêiner de "execução" que imita o ambiente de tempo de execução de seu app quando ele é implementado na nuvem, no Cloud Foundry ou no ambiente de contêiner baseado em Kubernetes da IBM.
 
-Você é livre para usar qualquer IDE ou editor que preferir para codificar seu aplicativo. O {{site.data.keyword.IBM_notm}} oferece uma extensão para o editor do Microsoft&trade;
+Você está livre para usar qualquer IDE ou editor que preferir para codificar seu app. O {{site.data.keyword.IBM_notm}} oferece uma extensão para o editor do Microsoft&trade;
 Visual Studio Code (VSCode) que permite acessar todos os comandos IDE diretamente no editor.
 
 Quando o projeto for construído, execute seu app usando [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) ou [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug). O app é executado dentro do contêiner adequado. Alguns padrões de apps suportam múltiplos contêineres externos para os seus apps. Os apps iniciam e configuram automaticamente durante a execução ou depuração. Há também um comando [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) que executa quaisquer casos de teste que estão associados ao app.
@@ -84,10 +83,9 @@ Quando o projeto for construído, execute seu app usando [`ibmcloud dev run`](/d
 ### Como os contêineres locais são usados
 {: #local-containers}
 
-A CLI do {{site.data.keyword.dev_cli_long}} usa dois contêineres para construir e testar o seu aplicativo. O primeiro é o contêiner de ferramentas, que contém os utilitários necessários para construir e testar seu aplicativo. O Dockerfile para esse contêiner é definido pelo parâmetro [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters). Você pode pensar nisso como um contêiner de desenvolvimento, pois ele contém as ferramentas normalmente usadas para o desenvolvimento de um tempo de execução específico.
+A CLI do {{site.data.keyword.dev_cli_long}} usa dois contêineres para construir e testar seu app. O primeiro é o contêiner de ferramentas, que contém os utilitários necessários para construir e testar seu app. O Dockerfile para esse contêiner é definido pelo parâmetro [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters). Você pode pensar nisso como um contêiner de desenvolvimento, pois ele contém as ferramentas normalmente usadas para o desenvolvimento de um tempo de execução específico.
 
-O segundo contêiner é o contêiner de execução. Esse contêiner tem um formato adequado para ser implementado para uso, por exemplo, no {{site.data.keyword.cloud}}. Como resultado, um ponto de entrada que inicia seu aplicativo é definido. Ao selecionar para executar o aplicativo por meio da CLI do {{site.data.keyword.dev_cli_short}},
-ele usa esse contêiner. O Dockerfile para esse contêiner é definido pelo parâmetro [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters).
+O segundo contêiner é o contêiner de execução. Esse contêiner tem um formato adequado para ser implementado para uso, por exemplo, no {{site.data.keyword.cloud}}. Como resultado, é definido um ponto de entrada que inicia seu app. Quando você seleciona a execução do seu app por meio da CLI do {{site.data.keyword.dev_cli_short}}, ele usa esse contêiner. O Dockerfile para esse contêiner é definido pelo parâmetro [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters).
 
 ### Comandos úteis da CLI
 {: #helpful2}

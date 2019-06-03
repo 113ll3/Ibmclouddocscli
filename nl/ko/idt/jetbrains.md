@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # JetBrains IDE용 IBM Cloud Developer Tools
 {: #ibm-dev-tools-for-jetbrains}
 
-`IntelliJ`, `WebStorm`, `Android Studio` 등을 포함하는 JetBrains IDE용 {{site.data.keyword.cloud}} 개발자 도구 확장은 IDE 내에서 직접 {{site.data.keyword.dev_cli_notm}} CLI 명령에 액세스하는 새 메뉴 항목을 제공합니다. 이를 사용하면 앱 배치, {{site.data.keyword.cloud_notm}}에서의 앱 시작/중지/재시작, 원격 앱 로그 보기 등을 포함하여 Docker 및 Cloud Foundry 워크플로우에서 `ibmcloud dev` 명령의 서브세트에 신속하게 액세스할 수 있습니다. 이 모든 경우에 편집기의 컨텍스트에서 나가지 않아도 됩니다.
+`IntelliJ`, `WebStorm`, `Android Studio` 등을 포함하는 JetBrains IDE용 {{site.data.keyword.cloud}} 개발자 도구 확장은 IDE 내에서 직접 {{site.data.keyword.dev_cli_notm}} CLI 명령에 액세스하는 새 메뉴 항목을 제공합니다. 이를 사용하면 애플리케이션 배치, {{site.data.keyword.cloud_notm}}에서의 앱 시작/중지/재시작, 원격 앱 로그 보기 등을 포함하여 Docker 및 Cloud Foundry 워크플로우에서 `ibmcloud dev` 명령의 서브세트에 신속하게 액세스할 수 있습니다. 이 모든 경우에 편집기의 컨텍스트에서 나가지 않아도 됩니다.
 {: shortdesc}
 
 ![WebStorm IDE 내에서 실행 중인 IBM Cloud Developer Tools의 화면 캡처입니다. ](jetbrains.png "{{site.data.keyword.cloud_notm}} 개발자 도구 메뉴 예(WebStorm IDE 내에서 실행 중)")

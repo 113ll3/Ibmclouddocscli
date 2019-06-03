@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-21"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -70,17 +70,17 @@ ibmcloud dev debug
 
 
 <!--
-## Swift application debugging - content from mike tunnicliffe
+## Swift app debugging - content from mike tunnicliffe
 {: #swift}
 
-Steps to enable debug for a Swift application:  
+Steps to enable debug for a Swift app:  
 
-1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
+1. On the App server (or system where the Swift app will execute), you should start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
-2. On the App server, build the Kitura-based server application using the debug configuration:
+2. On the App server, build the Kitura-based server app using the debug configuration:
  - `swift build debug`
-3. On the App server, start the Kitura-based server application:
+3. On the App server, start the Kitura-based server app:
  - `./build/debug/Kitura-Starter`
 4. On the client system (also known as the host system), start the 'lldb client':
  - `lldb`

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -42,4 +42,4 @@ Vous pouvez commencer par utiliser une application existante côté serveur et l
 
 Pour activer une application côté serveur générique, sélectionnez **Outils** > **IBM Cloud Developer Tools** > **Activer l'application pour {{site.data.keyword.cloud_notm}}**. Tous les fichiers requis sont recherchés et ajoutés (si besoin) pour déploiement sur {{site.data.keyword.cloud_notm}} en utilisant une application Cloud Foundry, ou dans un cluster Kubernetes.
 
-Développez votre application native en cloud en utilisant les actions Générer/Exécuter/Déployer de base du menu {{site.data.keyword.cloud_notm}} Developer Tools. Si vous devez effectuer des actions qui ne figurent pas dans le menu, il vous suffit d'ouvrir l'onglet Terminal et d'entrer manuellement les commandes. 
+Développez votre application native en cloud en utilisant les actions Générer/Exécuter/Déployer de base du menu {{site.data.keyword.cloud_notm}} Developer Tools. Si vous devez effectuer des actions qui ne figurent pas dans le menu, il vous suffit d'ouvrir l'onglet Terminal et d'entrer manuellement les commandes.

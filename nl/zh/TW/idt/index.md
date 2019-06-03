@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -38,9 +38,7 @@ subcollection: cloud-cli
 
 針對上述任何建立方法，流程類似。選取要使用的專案類型、實作語言及應用程式模式。您也可以選擇將服務新增至應用程式（例如鑑別或持續性）。最後，您可以將 DevOps 功能新增至應用程式，這會提供原始檔控制及團隊通訊的完整工具鏈。其中包括每次確定時觸發的管線，以驗證、建置應用程式，以及將您的應用程式部署至 {{site.data.keyword.cloud_notm}}。
 
-![使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程](create_flow.png "使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程") <br> 圖 2. 使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程
-
-{{site.data.keyword.dev_cli_notm}} CLI 緊密合作，以在開發期間提供順暢經驗。從 Web 主控台中建立的專案都會提供**下載程式碼**按鈕，以將產生的原始碼下載至工作站，以進行進一步開發。
+![使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程](create_flow.png "使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程"){: caption="圖 1. 使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程" caption-side="bottom"}{{site.data.keyword.dev_cli_notm}} CLI 緊密合作，以在開發期間提供順暢經驗。從 Web 主控台中建立的專案都會提供**下載程式碼**按鈕，以將產生的原始碼下載至工作站，以進行進一步開發。
 
 ### 有用的 CLI 指令
 {: #helpful}
@@ -79,7 +77,7 @@ subcollection: cloud-cli
 
 {{site.data.keyword.dev_cli_long}} CLI 使用兩個容器來建置及測試應用程式。第一個是 tools 容器，其中包含用來建置及測試應用程式的必要公用程式。此容器的 Dockerfile 是透過 [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters) 參數所定義。您可能會將它視為一個開發容器，因為它包含一般用於開發特定運行環境的工具。
 
-第二個容器是 run 容器。此容器是適合部署以供使用的表單，例如，在 {{site.data.keyword.cloud}} 中。因此，定義的進入點可啟動您的應用程式。當您選擇透過 {{site.data.keyword.dev_cli_short}} CLI 執行應用程式時，它會使用此容器。此容器的 Dockerfile 是透過 [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters) 參數所定義。
+第二個容器是 run 容器。此容器是適合部署以供使用的表單，例如，在 {{site.data.keyword.cloud}} 中。因此，定義了一個進入點以便啟動您的應用程式。當您選擇透過 {{site.data.keyword.dev_cli_short}} CLI 執行應用程式時，它會使用此容器。此容器的 Dockerfile 是透過 [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters) 參數所定義。
 
 ### 有用的 CLI 指令
 {: #helpful2}

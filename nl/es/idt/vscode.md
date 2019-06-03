@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -71,7 +71,7 @@ Puede empezar con flujos de trabajo de `ibmcloud dev` en unos cuantos pasos:
 * Utilice el mandato `ibmcloud dev debug` para ejecutar la app en el Docker local para desarrollo
 > Nota: para depurar una aplicación Node.js que se ejecuta dentro del contenedor local de Docker, deberá [añadir una configuración de depuración para el contenedor local](https://github.com/IBM-Cloud/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
 * Utilice el mandato `ibmcloud dev run` para ejecutar la app en el Docker local en modo de publicación
-* Utilice el mandato `ibmcloud dev deploy` para desplegar la aplicación en un tiempo de ejecución de Cloud Foundry en {{site.data.keyword.cloud_notm}}
+* Utilice el mandato `ibmcloud dev deploy` para desplegar la app en un tiempo de ejecución de Cloud Foundry en {{site.data.keyword.cloud_notm}}
 
 ### Utilice IBM Developer Extension para flujos de trabajo de Cloud Foundry
 {: #usage-cloud-foundry}
@@ -79,12 +79,12 @@ Puede empezar con flujos de trabajo de `ibmcloud dev` en unos cuantos pasos:
 Para los usuarios que están actualmente desplegando apps en tiempos de ejecución de Cloud Foundry en {{site.data.keyword.cloud_notm}}, también se ofrece soporte para el conjunto de operaciones `cf`.
 
 Puede empezar con flujos de trabajo de Cloud Foundry en unos cuantos pasos:
-* Cree una nueva aplicación de Cloud Foundry
+* Cree una nueva app de Cloud Foundry
   * Utilice la [consola web de {{site.data.keyword.cloud_notm}}](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") y descargue el código de inicio
-  * Cree una nueva aplicación de Cloud Foundry manualmente
+  * Cree una nueva app de Cloud Foundry manualmente
 * Abra la carpeta del proyecto localmente en el editor de Visual Studio Code
-* Utilice `ibmcloud cf apps` para mostrar una lista de todas sus aplicaciones
-* Utilice `ibmcloud cf push` para enviar una compilación de su aplicación al tiempo de ejecución de Cloud Foundry
-* Utilice ibmcloud `cf <start/stop/restage/restart>` para cambiar el estado de la aplicación
-* Utilice `ibmcloud cf logs` para ver la corriente de anotaciones cronológicas en directo de su aplicación
+* Utilice `ibmcloud cf apps` para mostrar una lista de todas sus apps
+* Utilice `ibmcloud cf push` para enviar una compilación de su app al tiempo de ejecución de Cloud Foundry
+* Utilice ibmcloud `cf <start/stop/restage/restart>` para cambiar el estado de la app
+* Utilice `ibmcloud cf logs` para ver la corriente de anotaciones cronológicas en directo de su app
   * Utilice `ibmcloud cf logs` para detener la corriente de anotaciones cronológicas

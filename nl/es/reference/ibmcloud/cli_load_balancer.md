@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
@@ -17,7 +17,7 @@ subcollection: cloud-cli
 # Cómo trabajar con el servicio de equilibrador de carga
 {: #sl-load-balancer-service}
 
-El servicio de Equilibrador de carga de {{site.data.keyword.cloud}} ayuda a mejorar la disponibilidad de las aplicaciones más importantes de negocio distribuyendo el tráfico entre varias instancias del servidor de aplicaciones, y reenviando el tráfico únicamente a instancias en buen estado.
+El servicio de Equilibrador de carga de {{site.data.keyword.cloud}} ayuda a mejorar la disponibilidad de las aplicaciones más importantes de negocio distribuyendo el tráfico entre varias instancias del servidor de apps, y reenviando el tráfico únicamente a instancias en buen estado.
 
 Utilice los mandatos siguientes para gestionar los equilibradores de carga en el servicio de equilibrador de carga de la infraestructura clásica de {{site.data.keyword.cloud_notm}}.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -81,10 +81,10 @@ Pour les utilisateurs qui déploient actuellement des applications dans des envi
 Vous pouvez démarrer les flux de travail Cloud Foundry en quelques étapes seulement :
 * Créez une nouvelle application Cloud Foundry.
   * Utilisez la console Web [{{site.data.keyword.cloud_notm}}](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") et téléchargez le code de démarrage.
-  * Créez manuellement une application Cloud Foundry
+  * Créez une nouvelle application Cloud Foundry manuellement.
 * Ouvrez le dossier du projet localement dans l'éditeur Visual Studio Code.
 * Utilisez la commande `ibmcloud cf apps` pour répertorier toutes vos applications.
 * Utilisez la commande `ibmcloud cf push` pour envoyer votre application à l'environnement d'exécution Cloud Foundry.
-* Utilisez ibmcloud `cf <start/stop/restage/restart>` pour modifier le statut de votre application.
-* Utilisez la commande `ibmcloud cf logs` pour afficher le flux de journalisation opérationnel pour votre application.
+* Utilisez la commande ibmcloud `cf <start/stop/restage/restart>` pour modifier le statut de votre application. 
+* Utilisez la commande `ibmcloud cf logs` pour afficher le flux de journalisation opérationnel pour votre application. 
   * Utilisez la commande `ibmcloud cf logs` pour arrêter le flux de journalisation.

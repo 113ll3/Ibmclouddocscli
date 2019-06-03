@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
 
@@ -60,9 +60,9 @@ subcollection: cloud-cli
 
   接著執行 `pod install` 指令，然後開啟所產生的 `.xcworkspace` 檔案。若要更新為較新版的 `BMSCore`，請使用 `pod update BMSCore`。
 
-  如需使用 CocoaPods 的相關資訊，請參閱 [CocoaPods 手冊 ](https://guides.cocoapods.org/using/index.html){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+  如需使用 CocoaPods 的相關資訊，請參閱 [CocoaPods 手冊 ](https://guides.cocoapods.org/using/index.html){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
-2. 若要使用 Carthage 安裝 `BMSCore`，請遵循下列[指示 ](https://github.com/Carthage/Carthage#getting-started){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+2. 若要使用 Carthage 安裝 `BMSCore`，請遵循下列[指示 ](https://github.com/Carthage/Carthage#getting-started){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
   1. 將下行新增至 Cartfile：
 
@@ -73,7 +73,7 @@ subcollection: cloud-cli
 
   2. 執行 `carthage update` 指令。
 
-  3. 在建置完成之後，請遵循 Carthage 指示中的[步驟 3 ](https://github.com/Carthage/Carthage#getting-started){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，以將 `BMSCore.framework` 新增至專案。
+  3. 在建置完成之後，請遵循 Carthage 指示中的[步驟 3 ](https://github.com/Carthage/Carthage#getting-started){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")，以將 `BMSCore.framework` 新增至專案。
 
       針對使用 Swift 2.3 所建置的應用程式，請使用 `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` 指令。否則，請使用 `carthage update` 指令。
 
@@ -98,7 +98,7 @@ subcollection: cloud-cli
 ## 起始設定 Cordova 應用程式
 {: #init-BMSClient-cordova}
 
-1. 從您的 Cordova 應用程式根目錄，執行下列指令以新增 Cordova 外掛程式：
+1. 從您的 Cordova 應用程式根目錄中執行下列指令，以新增 Cordova 外掛程式：
 
   ```
   cordova plugin add bms-core
@@ -117,6 +117,6 @@ subcollection: cloud-cli
 ## 相關鏈結
 {: #BMSClient-rellinks notoc}
 
-* [BMSCore Android SDK ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
-* [BMSCore iOS SDK ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
-* [BMSCore Cordova 外掛程式 ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
+* [BMSCore Android SDK ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* [BMSCore iOS SDK ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* [BMSCore Cordova 外掛程式 ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")

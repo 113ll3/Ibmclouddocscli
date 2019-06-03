@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-05-21"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -24,10 +24,10 @@ subcollection: cloud-cli
 # {{site.data.keyword.cloud_notm}} Developer Tools CLI プラグインのトラブルシューティング
 {: #troubleshoot}
 
-{{site.data.keyword.dev_cli_short}} コマンド・ライン・インターフェース (CLI) を使用してアプリを作成する際の一般的な問題には、デプロイメントの失敗や、コードを取得できないなどが含まれます。 多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
+{{site.data.keyword.dev_cli_short}} コマンド・ライン・インターフェース (CLI) の共通問題 (よくある問題) に対する解決方法を参照してください。 多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {: shortdesc}
 
-## 非モバイル・パターンでアプリを作成するとホスト名エラーになるのはなぜですか?
+## 非モバイル・パターンでアプリケーションを作成するとホスト名エラーになるのはなぜですか?
 {: #ts-cli-hostname-error}
 {: troubleshoot}
 
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-このエラーは、`appmetrics` モジュールが別のアーキテクチャーにインストールされている場合に発生します。 1 つのアーキテクチャーにインストールされているネイティブ NPM モジュールは、別のアーキテクチャーでは機能しません。 付属の Docker イメージは、Linux カーネルに基づいています。
+このエラーは、`appmetrics` モジュールが別のアーキテクチャーにインストールされている場合に発生します。 1 つのアーキテクチャーにインストールされているネイティブ NPM モジュールは、別のアーキテクチャーでは機能しません。 付属の Docker イメージは、Linux&trade; カーネルに基づいています。
 {: tsCauses}
 
 `node_modules` フォルダーを削除してから、`ibmcloud dev run` コマンドを再度実行します。
@@ -218,7 +218,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 {: screen}
 {: tsSymptoms}
 
-これは、ほとんどの場合、無効のクラスター名が原因です。 同じコマンドに `--trace` を付けて実行することによって、原因を確認することができます。エラー出力には、以下の詳細が含まれる場合があります。
+この問題は、ほとんどの場合、無効なクラスター名が原因です。 同じコマンドに `--trace` を付けて実行することによって、原因を確認することができます。エラー出力には、以下の詳細が含まれる場合があります。
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
@@ -236,7 +236,7 @@ ibmcloud cs cluster-config <cluster-name>
 {: #ts-deploy-image-target}
 {: troubleshoot}
 
-デプロイ用イメージ・ターゲットのプロンプトが出された後、以下の失敗が表示される場合があります。
+デプロイメント用イメージ・ターゲットのプロンプトが出された後、以下の失敗が表示される場合があります。
 ```
 FAILED
 Failed to execute the action:  exit status 1:denied: requested access to the resource is denied
@@ -248,10 +248,10 @@ Failed to push the Run image tagged 'us.icr.io/<namespace>/<app-name>:0.0.1' to 
 {: screen}
 {: tsSymptoms}
 
-これは、ほとんどの場合、無効のデプロイ用イメージ・ターゲットが原因です。 具体的には、デプロイ用イメージ・ターゲットの中間値である名前空間が無効である可能性があります。
+この問題は、ほとんどの場合、無効なデプロイメント用イメージ・ターゲットが原因です。 具体的には、デプロイメント用イメージ・ターゲットの中間値である名前空間が無効である可能性があります。
 {: tsCauses}
 
-デプロイ用イメージ・ターゲット内の名前空間が、次のコマンドを実行して表示される名前空間のいずれかと一致していることを確認してください。
+デプロイメント用イメージ・ターゲット内の名前空間が、次のコマンドを実行して表示される名前空間のいずれかと一致していることを確認してください。
 ```
 ibmcloud cr namespaces
 ```
@@ -262,7 +262,7 @@ ibmcloud cr namespaces
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
-アプリを開始しようとしたときに、以下の失敗が表示されることがあります。
+アプリの開始時に、以下の失敗が表示されることがあります。
 ```
 FAILED
 Could not determine the language of your app.
@@ -274,25 +274,25 @@ directly.
 {: tsSymptoms}
 
 このエラーの原因は、以下のいずれかである可能性があります。
-- アプリケーションのソース・ディレクトリーではないディレクトリーから [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) コマンドを実行する。
+- アプリのソース・ディレクトリーではないディレクトリーから [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) コマンドを実行する。
 - 認識されていない言語のアプリに対して [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) コマンドを実行する。
 {: tsCauses}
 
-必ず、アプリのソース・コードを含んでいるアプリ・ディレクトリーからコマンドを実行してください。 これで問題が解決されず、言語が[サポートされる言語](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options)のいずれかである場合は、`--language` パラメーターを使用して言語を指定してください。
+必ず、アプリのソース・コードを含んでいるアプリ・ディレクトリーからコマンドを実行してください。 問題が解決されず、言語が[サポートされる言語](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options)のいずれかの場合は、`--language` パラメーターを使用して言語を指定してください。
 {: tsResolve}
 
 ## クラウド・デプロイメントが有効になっているアプリをビルドまたは実行できないのはなぜですか?
 {: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-有効になっているアプリを[ビルド](/docs/cli/idt?topic=cloud-cli-idt-cli#build)または[実行](/docs/cli/idt?topic=cloud-cli-idt-cli#run)しようとしたときに、さまざまな失敗が発生することがあります。
+クラウド・デプロイメントが有効になっているアプリを[ビルド](/docs/cli/idt?topic=cloud-cli-idt-cli#build)または[実行](/docs/cli/idt?topic=cloud-cli-idt-cli#run)できない、さまざまな障害が発生することがあります。
 {: tsSymptoms}
 
 多くの考えられる原因が以下の各リンクに記載されています。
 {: tsCauses}
 
-- Spring アプリでのそのような問題の解決について詳しくは、『[既存 Spring Boot アプリケーションでのクラウド・デプロイメントの有効化 (Enabling existing Spring Boot applications for cloud deployment)](/docs/java-spring?topic=java-spring-enable_existing#enable_existing)』を参照してください。
-- `Node.js` アプリでのそのような問題の解決について詳しくは、『[既存の Node.js アプリケーションでのクラウド・デプロイメントの有効化 (Enabling existing Node.js applications for cloud deployment)](/docs/node?topic=nodejs-enable_existing#enable_existing)』を参照してください。
+- Spring アプリでのそのような問題の解決について詳しくは、『[既存 Spring Boot アプリでのクラウド・デプロイメントの有効化 (Enabling existing Spring Boot apps for cloud deployment)](/docs/java-spring?topic=java-spring-enable_existing#enable_existing)』を参照してください。
+- `Node.js` アプリでのそのような問題の解決について詳しくは、『[既存の Node.js アプリでのクラウド・デプロイメントの有効化 (Enabling existing Node.js apps for cloud deployment)](/docs/node?topic=nodejs-enable_existing#enable_existing)』を参照してください。
 {: tsResolve}
 
 ## {{site.data.keyword.dev_cli_notm}} CLI コンポーネントを別個にインストールする方法
@@ -318,10 +318,10 @@ Docker イメージのビルド中に、エラー exit status 1 が
 - Docker デーモンが稼働していない。
 {: tsCauses}
 
-以下のようにして、Docker がインストール済みで、かつ稼動していることを確認します。
+次のようにして、Docker がインストール済みで稼動していることを確認します。
 - [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") をインストールまたは開始する場合
-- [Docker for Windows](https://docs.docker.com/docker-for-windows/install/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") をインストールまたは開始する場合
-- [Docker for Linux](https://docs.docker.com/v17.12/install/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") をインストールまたは開始する場合
+- [Docker for Windows&trade;](https://docs.docker.com/docker-for-windows/install/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") をインストールまたは開始する場合
+- [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") をインストールまたは開始する場合
 {: tsResolve}
 
 ## Helm バージョンの非互換性を解決するには、どうすればよいですか?
@@ -346,10 +346,10 @@ cannot list resource "configmaps" in API group "" in the namespace
 ```
 {: screen}
 
-この問題を解決するには、クライアントのバージョンをクラスターと同じバージョンに設定します。例えば、Helm バージョン 2.8.1 をインストールするには、以下のコマンドを実行します。
+この問題を解決するには、クライアントのバージョンをクラスターと同じバージョンに設定します。 例えば、Helm バージョン 2.8.1 をインストールするには、以下のコマンドを実行します。
 {: tsResolve}
 
-* Mac および Linux の場合、次のコマンドを実行します。
+* Mac および Linux&trade; の場合、次のコマンドを実行します。
   ```
   export DESIRED_VERSION=v2.8.1
 
@@ -358,18 +358,19 @@ cannot list resource "configmaps" in API group "" in the namespace
   export HELM_HOME=~/.helm
   ```
 
-* Windows の場合、管理者として次の操作を実行します。[https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") で `helm` バイナリーをダウンロードしてインストールします。
+* Windows&trade; の場合: 管理者として、[https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") で `helm` バイナリーをダウンロードし、インストールします。
   
   PowerShell 端末から、次のコマンドを使用します。
   ```
   Set-Location Env:
   Set-Item HELM_HOME C:\.helm\
   ```
+  {: codeblock}
 
 ## 「@」が含まれるユーザー名の使用時に ibmcloud dev build が失敗するのはなぜですか?
 {: ts-cli-username}
 {: troubleshoot}
-イメージをビルドするプロセス中に、Docker ツールのイメージ内でユーザーとしてご使用のユーザー名が使用されます。このユーザー名に「@」や「-」などの特殊文字が含まれている場合、Docker イメージをビルドするプロセスが失敗し、以下のエラーが発生することがあります。
+イメージをビルドするプロセス中に、Docker ツールのイメージ内でユーザーとしてご使用のユーザー名が使用されます。 このユーザー名に「@」や「-」などの特殊文字が含まれている場合、Docker イメージをビルドするプロセスが次のエラーで失敗します。
 ```
 イメージにユーザー johnsmith@acme.com (ID 501) が追加されます
 
@@ -382,7 +383,7 @@ Docker イメージのビルド中に、エラー exit status 1 が検出され�
 ```
 {: screen}
 
-この問題を解決するには、ご使用のユーザー名を変更して特殊文字が含まれないようにするか、以下のフラグを指定して代わりに root ユーザーを使用します。
+この問題を解決するには、ご使用のユーザー名を特殊文字を含まないように変更するか、または次のフラグを指定して、代わりに root ユーザーを使用します。
 ```
 ibmcloud dev build --use-root-user-tools
 ```

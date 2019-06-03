@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-21"
 
 keywords: cli, docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
 
@@ -65,8 +65,8 @@ ibmcloud login
 인증 정보가 거부되는 경우 연합 ID를 사용 중일 수 있습니다. 자세한 사항은 [연합 ID로 로그인](/docs/iam?topic=iam-federated_id#federated_id)을 참조하십시오.
 {: tip}
 
-{{site.data.keyword.dev_cli_notm}} CLI 플러그인은 두 개의 컨테이너를 사용하여 애플리케이션 빌드와 테스트를 용이하게 합니다. 첫 번째는 tools 컨테이너로서 애플리케이션 빌드와 테스트에 필요한 유틸리티를 포함합니다. 이 컨테이너를 위한 `Dockerfile`은 [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters) 매개변수로 정의됩니다. 특정 런타임의 개발에 일반적으로 사용되는 도구를 포함하고 있으므로 개발 컨테이너로 생각할 수 있습니다.
+{{site.data.keyword.dev_cli_notm}} CLI 플러그인은 두 개의 컨테이너를 사용하여 애플리케이션 빌드와 테스트를 용이하게 합니다. 첫 번째는 tools 컨테이너로서 앱 빌드와 테스트에 필요한 유틸리티를 포함합니다. 이 컨테이너를 위한 `Dockerfile`은 [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters) 매개변수로 정의됩니다. 특정 런타임의 개발에 일반적으로 사용되는 도구를 포함하고 있으므로 개발 컨테이너로 생각할 수 있습니다.
 
-두 번째 컨테이너는 클라우드에 배치될 때 앱의 실제 런타임 환경을 근접하게 모방하는 run 컨테이너입니다. 이 컨테이너는 예를 들어 {{site.data.keyword.cloud_notm}}에서 사용하기 위해 배치하는 데 적합한 양식으로 되어 있습니다. 결과적으로 애플리케이션을 시작하는 시작점이 정의됩니다. {{site.data.keyword.dev_cli_notm}} CLI 플러그인 CLI를 통해 애플리케이션을 실행하도록 선택하면 이 컨테이너가 사용됩니다. 이 컨테이너를 위한 `Dockerfile`은 [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters) 매개변수로 정의됩니다.
+두 번째 컨테이너는 클라우드에 배치될 때 앱의 실제 런타임 환경을 근접하게 모방하는 run 컨테이너입니다. 이 컨테이너는 예를 들어 {{site.data.keyword.cloud_notm}}에서 사용하기 위해 배치하는 데 적합한 양식으로 되어 있습니다. 결과적으로 앱을 시작하는 시작점이 정의됩니다. {{site.data.keyword.dev_cli_notm}} CLI 플러그인 CLI를 통해 앱을 실행하도록 선택하면 이 컨테이너가 사용됩니다. 이 컨테이너를 위한 `Dockerfile`은 [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters) 매개변수로 정의됩니다.
 
-이제 {{site.data.keyword.dev_cli_notm}}를 사용하여 {{site.data.keyword.cloud_notm}} 리소스를 관리하고 애플리케이션을 개발 및 배치할 준비가 되었습니다.
+이제 {{site.data.keyword.dev_cli_notm}}를 사용하여 {{site.data.keyword.cloud_notm}} 리소스를 관리하고 앱을 개발 및 배치할 준비가 되었습니다.

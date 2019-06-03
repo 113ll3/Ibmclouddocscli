@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -40,9 +40,9 @@ ibmcloud dev enable
 > ibmcloud dev enable
 The enable feature is currently in Beta.
 Please provide your experience and feedback at: https://ibm-cloud-tech.slack.com/messages/developer-tools/
-Only server-side applications are supported by the enable feature
+Only server-side apps are supported by the enable feature
 
-? Python - Flask application discovered. Do you want to proceed with this
+? Python - Flask app discovered. Do you want to proceed with this
 language choice? [y/n]> y
 
 
@@ -105,6 +105,7 @@ LICENSE
 The application, <appname>, has been successfully saved
 into the current directory.
 ```
+{: screen}
 
 ## 建置並部署具備雲端功能的 Python 應用程式
 {: #build-deploy-python}
@@ -121,7 +122,7 @@ ibmcloud dev deploy
 ```
 {: codeblock}
 
-## 如果已啟用的應用程式無法建置或部署，應該如何處理
+## 已啟用的應用程式無法建置或部署時，應該如何處理
 {: #build-failure-python}
 
 並非所有應用程式都會順利由 `enable` 指令啟用。例如，當專案名稱與包含 `wsgi.py` 和 `settings.py` 檔案的目錄不同時，可能會發生下列錯誤：

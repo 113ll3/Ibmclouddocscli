@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-21"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # リソースおよびリソース・グループの処理
 {: #ibmcloud_commands_resource}
 
-リソース・グループは、アカウント・リソースをカスタマイズ可能なグループに編成するための方法です。 以下のコマンドを使用して、{{site.data.keyword.cloud}} リソースとリソース・グループ内のリソースを管理します。
+リソース・グループは、アカウント・リソースをカスタマイズ可能なグループに編成するための方法です。 以下のコマンドを使用して、リソース・グループ内の {{site.data.keyword.cloud}} リソースを管理します。
 {: shortdesc}
 
 ## ibmcloud resource groups
@@ -872,49 +872,49 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
 
 <strong>例</strong>:
 
-指定したテキストで始まる名前の Cloud Foundry アプリケーションを検索します。
+指定したテキストで始まる名前の Cloud Foundry アプリを検索します。
 ```
-ibmcloud resource search 'name:my* AND type:cf-application'
+ibmcloud resource search "name:my* AND type:cf-application"
 ```
 
 指定したサービス名の Cloud Foundry サービス・インスタンスを検索します。
 ```
-ibmcloud resource search 'service_name:messagehub AND type:cf-service-instance'
+ibmcloud resource search "service_name:messagehub AND type:cf-service-instance"
 ```
 
 指定した ID を持つ組織内の Cloud Foundry サービス・バインディングを検索します。
 ```
-ibmcloud resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
+ibmcloud resource search "organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding"
 ```
 
 指定した 2 つの地域のどちらかにある、指定した名前の Cloud Foundry スペースを検索します。
 ```
-ibmcloud resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
+ibmcloud resource search "name:dev AND type:cf-space AND region:(us-south OR eu-gb)"
 ```
 
 指定した ID の Cloud Foundry スペースの中で、名前に dev が入ったリソースを検索します。
 ```
-ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
+ibmcloud resource search "name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7"
 ```
 
 指定した場所 (つまり us-south 地域) で、リソース・コントローラーのリソースを検索します。
 ```
-ibmcloud resource search 'region:us-south AND family:resource_controller'
+ibmcloud resource search "region:us-south AND family:resource_controller"
 ```
 
 指定した ID を持つリソース・グループ内のリソースまたは別名を検索します。
 ```
-ibmcloud resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
+ibmcloud resource search "(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)"
 ```
 
 デフォルトの名前を持つリソース・グループを検索します。
 ```
-ibmcloud resource search 'name:default AND type:resource-group'
+ibmcloud resource search "name:default AND type:resource-group"
 ```
 
 指定したサービス名のリソース・バインディングを検索します。
 ```
-ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-binding'
+ibmcloud resource search "service_name:cloud-object-storage AND type:resource-binding"
 ```
 
 指定したクラウド・リソース名 (CRN) を持つリソースを検索します。
@@ -930,13 +930,13 @@ ibmcloud resource search "tags:\"mykey:myvalue\""
 
 指定した ID を持つクラシック・インフラストラクチャー仮想ゲスト・リソースを検索します (-p classic-infrastructure が指定されている場合のみ)。
 ```
-ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
+ibmcloud resource search "id:12345678 _objectType:SoftLayer_Virtual_Guest"
 ```
 {: codeblock}
 
 指定したタグ名を持つクラシック・インフラストラクチャー・ハードウェア・リソースを検索します (-p classic-infrastructure が指定されている場合のみ)。
 ```
-ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hardware'
+ibmcloud resource search "tagReferences.tag.name:name _objectType:SoftLayer_Hardware"
 ```
 {: codeblock}
 
@@ -968,7 +968,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
 
 1 つ以上のタグをリソースにアタッチします。
 ```
-ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
 ```
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -976,6 +976,8 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 <dl>
   <dt>--tag-names(必須)</dt>
   <dd>タグ名のコンマ区切りリスト</dd>
+  <dt>--resource-name</dt>
+  <dd>タグをアタッチするリソースの名前。クラシック・インフラストラクチャー・リソースでは、このオプションを使用できません。</dd>
   <dt>--resource-id</dt>
   <dd>タグをアタッチするリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。 「ibmcloud resource search」コマンドを使用して、リソースの CRN または ID を入手できます。</dd>
   <dt>--resource-type</dt>
@@ -1002,6 +1004,13 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   ```
   {: codeblock}
 
+* タグ `MyTag` をリソース名 `MyResource` にアタッチするには、以下のようにします。
+  ```
+  ibmcloud resource tag-attach --tag-name MyTag --resource-name  'MyResource'
+  ```
+  {: codeblock}
+  
+  
 * タグ `MyTag` を `MyVM` という名前のクラシック・インフラストラクチャー仮想ゲストにアタッチするには、最初に以下のようにして、タグをアタッチしようとしている仮想ゲストの ID を検索します。
   ```
   ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
@@ -1021,7 +1030,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 
 1 つ以上のタグをリソースから切り離します。
 ```
-ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1030,6 +1039,8 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 <dl>
   <dt>--tag-names(必須)</dt>
   <dd>タグ名のコンマ区切りリスト</dd>
+  <dt>--resource-name</dt>
+  <dd>タグをデタッチするリソースの名前。クラシック・インフラストラクチャー・リソースでは、このオプションを使用できません。</dd>
   <dt>--resource-id</dt>
   <dd>タグを切り離すリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。 「ibmcloud resource search」コマンドを使用して、リソースの CRN または ID を入手できます。</dd>
   <dt>--resource-type</dt>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-21"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
@@ -26,7 +26,7 @@ ibmcloud -v
 ## Come aggiorno la mia CLI?
 {: #cli-update-version}
 
-Immetti il seguente comando per eseguire l'aggiornamento all'ultima versione della CLI: 
+Immetti il seguente comando per eseguire l'aggiornamento all'ultima versione della CLI:
 
 ```
 ibmcloud update
@@ -43,7 +43,7 @@ Sì, puoi essere informato sulle nuove release della CLI come sono disponibili. 
 
 Le applicazioni create o abilitate dalla CLI sono fornite con impostazioni preconfigurate incapsulate nel file `cli-config.yml`. Il file `cli-config.yml` contiene le voci predefinite utilizzate dai comandi della CLI che possono essere sovrascritte dai valori passati attraverso la riga di comando.
 
-Le applicazioni che sono state distribuite in una toolchain DevOps possono anche contenere file come `toolchain.yml` e `pipeline.yml`. Le applicazioni che vengono distribuite manualmente possono contenere un file `manifest.yml` e i file di grafico Helm (ad esempio, per le distribuzioni in Cloud Foundry o Kubernetes).
+Le applicazioni che sono state distribuite in una toolchain DevOps possono anche contenere file come `toolchain.yml` e `pipeline.yml`. Le applicazioni che vengono distribuite manualmente possono contenere un file `manifest.yml` e i file di grafico Helm (ad esempio, per le distribuzioni in Cloud Foundry o Kubernetes). 
 
 ## Come vengono utilizzati i contenitori locali?
 {: #cli-faq-containers}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -274,7 +274,7 @@ directly.
 {: tsSymptoms}
 
 Cette erreur peut être due à l'une des causes suivantes :
-- Exécution de la commande [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) à partir d'un répertoire qui n'est pas le répertoire source de votre application
+- Exécution de la commande [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) à partir d'un répertoire qui n'est pas le répertoire source de votre application.
 - Exécution de la commande [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) pour une application utilisant un langage qui n'est pas reconnu.
 {: tsCauses}
 
@@ -368,7 +368,7 @@ Pour résoudre ce problème, indiquez une version de client identique à la vers
 ## Pourquoi la génération ibmcloud dev échoue-t-elle lorsqu'un nom d'utilisateur inclut le caractère "@" ?
 {: ts-cli-username}
 {: troubleshoot}
-Lors du processus de génération d'image, votre nom d'utilisateur est employé pour l'utilisateur dans l'image des outils Docker. Si le nom d'utilisateur contient des caractères spéciaux tels que '@' ou '-', le processus de génération d'image Docker échoue et l'erreur suivante est générée : 
+Lors du processus de génération d'image, votre nom d'utilisateur est employé pour l'utilisateur dans l'image des outils Docker. Si le nom d'utilisateur contient des caractères spéciaux tels que '@' ou '-', le processus de génération d'image Docker échoue et l'erreur suivante est générée :
 ```
 Image will have user johnsmith@acme.com with id 501 added
 

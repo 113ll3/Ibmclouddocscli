@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-21"
 
 keywords: cli, docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
 
@@ -67,7 +67,6 @@ Si vos données d'identification sont rejetées, vous pouvez utiliser un ID féd
 
 Le plug-in {{site.data.keyword.dev_cli_notm}} CLI utilise deux conteneurs pour faciliter la génération et le test de votre application. Le premier est le conteneur tools, qui contient les utilitaires nécessaires pour générer et tester votre application. Le fichier `Dockerfile` pour ce conteneur est défini par le paramètre [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters). Vous pouvez le considérer comme un conteneur de développement car il contient les outils qui sont normalement utilisés pour le développement d'un environnement d'exécution particulier.
 
-Le second conteneur est le conteneur "run" qui reproduit fidèlement l'environnement d'exécution réel de votre application une fois cette dernière déployée sur le cloud. Il peut être déployé pour être utilisé dans {{site.data.keyword.cloud_notm}}, par exemple. Par conséquent, un point
-d'entrée démarrant votre application est défini. Lorsque vous choisissez d'exécuter votre application via le plug-in d'interface de ligne de commande {{site.data.keyword.dev_cli_notm}}, ce conteneur est utilisé. Le fichier `Dockerfile` pour ce conteneur est défini par le paramètre [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters).
+Le second conteneur est le conteneur "run" qui reproduit fidèlement l'environnement d'exécution réel de votre application une fois cette dernière déployée sur le cloud. Il peut être déployé pour être utilisé dans {{site.data.keyword.cloud_notm}}, par exemple. Par conséquent, un point d'entrée démarrant votre application est défini. Lorsque vous choisissez d'exécuter votre application via le plug-in d'interface de ligne de commande {{site.data.keyword.dev_cli_notm}}, ce conteneur est utilisé. Le fichier `Dockerfile` pour ce conteneur est défini par le paramètre [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters).
 
 Vous êtes maintenant prêt à utiliser {{site.data.keyword.dev_cli_notm}} pour gérer des ressources {{site.data.keyword.cloud_notm}} ainsi que pour développer et déployer vos applications.

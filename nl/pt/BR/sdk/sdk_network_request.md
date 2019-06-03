@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-05-21"
 
 keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
@@ -55,7 +55,7 @@ Para obter exemplos de uso completos, consulte no `BMSCore` GitHub [LEIA-ME](htt
 ## iOS
 {: #request-ios}
 
-1. Certifique-se de que você tenha [importado o SDK do Client e o inicializado](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) em seu aplicativo iOS.
+1. Certifique-se de que tenha [importado e inicializado o SDK do cliente](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) em seu app iOS.
 
 2. Crie uma solicitação de rede.
 
@@ -85,7 +85,7 @@ Para obter exemplos de uso completos, consulte no `BMSCore` GitHub [LEIA-ME](htt
 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
-		if error == nil {
+  if error == nil {
 			print ("Response: \(response?.responseText), no error")
 		} else {
 			print ("Error: \(error)")
@@ -104,7 +104,7 @@ Para obter exemplos de uso completos, consulte o [LEIA-ME](https://github.com/ib
 ## Cordova
 {: #request-cordova}
 
-1. Certifique-se de que você tenha [importado o SDK do Client e o inicializado](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) em seu aplicativo Cordova.
+1. Certifique-se de que tenha [importado e inicializado o SDK do cliente](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) em seu app Cordova.
 
 2. Crie uma solicitação de rede.
 

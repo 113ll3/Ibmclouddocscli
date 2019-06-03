@@ -61,16 +61,18 @@ IBM Cloud CLI y Developer Tools
 	idt/commands.md
 
 	{: .topicgroup}
-	Plugins de la CLI de IBM Cloud
+	Plugins de CLI de IBM Cloud
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
 		/auto-scaling-cli-plugin/auto-scaling-cli-autoscalingcli
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
-		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
+		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/hyper-protect-dbaas-dbaas_cli_plugin
 		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
+		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
+		/hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
 
 	{: .topicgroup}
 	Plugins de la CLI de Cloud Foundry

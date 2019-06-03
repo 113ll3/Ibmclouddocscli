@@ -14,6 +14,7 @@ IBM Cloud CLI および Developer Tools
 	reference/ibmcloud/extend_cli.md
 	reference/ibmcloud/cli_docker.md
 	reference/ibmcloud/enable_cli_autocompletion.md
+	reference/ibmcloud/uninstall_cli.md
 	idt/index.md
 
 	{: .topicgroup}
@@ -36,7 +37,6 @@ IBM Cloud CLI および Developer Tools
 		reference/ibmcloud/cli_block_storage.md
 		reference/ibmcloud/cli_catalog.md
 		reference/ibmcloud/cli_cdn.md
-		reference/ibmcloud/cf_index.md
 		reference/ibmcloud/cli_cf_apps.md
 		reference/ibmcloud/cli_cf_services.md
 		reference/ibmcloud/cli_cfee.md
@@ -59,22 +59,24 @@ IBM Cloud CLI および Developer Tools
 		reference/ibmcloud/cli_virtual_server.md
 		reference/ibmcloud/cli_vlan.md
 	idt/commands.md
-	reference/ibmcloud/all_versions.md
 
 	{: .topicgroup}
 	IBM Cloud CLI プラグイン
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
 		/auto-scaling-cli-plugin/auto-scaling-cli-autoscalingcli
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
-		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
+		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/hyper-protect-dbaas-dbaas_cli_plugin
 		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
+		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
+		/hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
 
 	{: .topicgroup}
 	Cloud Foundry CLI プラグイン
+		/cf-cli-plugin/cf-cli-plugin-cf-cli-plugin
 		plugins/bluemix_admin/index.md
 		plugins/vpn/index.md
 
@@ -90,5 +92,6 @@ IBM Cloud CLI および Developer Tools
 	{: .navgroup-end}
 
     {: .navgroup id="help"}
-	ts_createapps.md
+    faq.md
+    ts_createapps.md
     {: .navgroup-end}

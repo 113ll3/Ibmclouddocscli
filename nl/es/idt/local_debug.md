@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-21"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -17,28 +17,28 @@ subcollection: cloud-cli
 {:pre: .pre}
 {:note: .note}
 
-# Depuración de aplicaciones locales para la CLI de {{site.data.keyword.dev_cli_notm}}
+# Depuración de apps locales para la CLI de {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
 
 Existen herramientas para ayudarle a depurar la aplicación en Java&trade; y Node.js en {{site.data.keyword.cloud_notm}}.
 
-## Depuración de aplicaciones Java
+## Depuración de apps Java
 {: #java}
 
-Pasos para habilitar la herramienta de depuración para una aplicación Java&trade;:
+Pasos para habilitar la herramienta de depuración para una app Java&trade;:
 
-1. Desde el directorio raíz del proyecto de su aplicación, ejecute el mandato siguiente:
+1. Desde el directorio raíz del proyecto de su app, ejecute el mandato siguiente:
 
   ```
   ibmcloud dev debug
   ```
   {: codeblock}
 
-2. Conexión del depurador a su aplicación:
+2. Conexión del depurador a su app:
 
 	* Eclipse
       1. Importe el **Proyecto maven existente** en Eclipse.
-      2. Cree una configuración de depuración de [aplicación Java&trade; remota](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
+      2. Cree una configuración de depuración de [app Java&trade; remota](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
          1. Especifique la dirección IP o `localhost:<port>`  
          2. Escriba `7777` como número de puerto.
          3. Especifique el nombre del proyecto que ha importado.
@@ -53,34 +53,34 @@ Pasos para habilitar la herramienta de depuración para una aplicación Java&tra
 	* [VSCode](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 	* Línea de mandatos de JDK: `jdb -attach <host:port>`
 
-## Depuración de aplicaciones Node.js
+## Depuración de apps Node.js
 {: #idt-node-debug}
 
-Pasos para habilitar la herramienta de depuración para una aplicación Node.js:
+Pasos para habilitar la herramienta de depuración para una app Node.js:
 
-1. Desde el directorio raíz del proyecto de aplicación, ejecute el mandato siguiente:
+1. Desde el directorio raíz del proyecto de app, ejecute el mandato siguiente:
   ```
   ibmcloud dev debug
   ```
   {: codeblock}
 
-2. Conexión del depurador a su aplicación:
+2. Conexión del depurador a su app:
 	* [VSCode](https://blog.docker.com/2016/07/live-debugging-docker/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 	* [WebStorm](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 
 
 <!--
-## Swift application debugging - content from mike tunnicliffe
+## Swift app debugging - content from mike tunnicliffe
 {: #swift}
 
-Steps to enable debug for a Swift application:  
+Steps to enable debug for a Swift app:  
 
-1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
+1. On the App server (or system where the Swift app will execute), you should start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
-2. On the App server, build the Kitura-based server application using the debug configuration:
+2. On the App server, build the Kitura-based server app using the debug configuration:
  - `swift build debug`
-3. On the App server, start the Kitura-based server application:
+3. On the App server, start the Kitura-based server app:
  - `./build/debug/Kitura-Starter`
 4. On the client system (also known as the host system), start the 'lldb client':
  - `lldb`

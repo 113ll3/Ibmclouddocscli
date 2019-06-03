@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -15,16 +15,17 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:new_window: target="_blank"}
 {:note: .note}
+{:important: .important}
 {:tip: .tip}
 
 # {{site.data.keyword.cloud_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.cloud_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.cloud_notm}} Local 或 {{site.data.keyword.cloud_notm}} Dedicated 环境。例如，可以从 LDAP 注册表添加用户。有关管理 {{site.data.keyword.cloud_notm}} Public 帐户的信息，请参阅[管理](/docs/account?topic=account-accounts#accounts)。
+您可以使用带有 {{site.data.keyword.cloud_notm}} 管理 CLI 插件的 Cloud Foundry 命令行界面 (CLI) 来管理 {{site.data.keyword.cloud_notm}} Local 或 {{site.data.keyword.cloud_notm}} Dedicated 环境。 例如，可以从 LDAP 注册表添加用户。
 
-开始之前，请安装 Cloud Foundry 命令行界面。{{site.data.keyword.cloud_notm}} 管理 CLI 插件需要 `cf` V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")
+开始之前，请先安装 Cloud Foundry CLI。{{site.data.keyword.cloud_notm}} 管理 CLI 插件需要 `cf` V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")
 
-**限制：**Cygwin 不支持 Cloud Foundry 命令行界面。请在非 Cygwin 命令行窗口中使用 Cloud Foundry 命令行界面。
+Cygwin 不支持 Cloud Foundry CLI。请在非 Cygwin 命令行窗口中使用 Cloud Foundry CLI。
 
 {{site.data.keyword.cloud_notm}} 管理 CLI 仅用于 {{site.data.keyword.cloud_notm}} Local 和 {{site.data.keyword.cloud_notm}} Dedicated 环境。{{site.data.keyword.cloud_notm}} Public 不支持该管理 CLI。
 {: note}
@@ -32,9 +33,9 @@ subcollection: cloud-cli
 ## 添加 {{site.data.keyword.cloud_notm}} 管理 CLI 插件
 {: #add-admin-cli}
 
-安装了 Cloud Foundry 命令行界面后，可以添加 {{site.data.keyword.cloud_notm}} 管理 CLI 插件。
+安装 Cloud Foundry CLI 后，可以添加 {{site.data.keyword.cloud_notm}} 管理 CLI 插件。
 
-如果先前安装了 {{site.data.keyword.cloud_notm}} 管理插件，那么可能需要卸载此插件，删除存储库，然后重新安装以获取最新更新。
+如果先前安装了 {{site.data.keyword.cloud_notm}} 管理插件，那么可能需要卸载此插件，删除存储库，然后再次安装以获取最新更新。
 {: tip}
 
 完成以下步骤来添加存储库并安装该插件：
@@ -45,7 +46,7 @@ subcollection: cloud-cli
   ```
   {: codeblock}
 
-  您可以在管理控制台 CLI 页面中查找与实际端点相同的命令：`https://<customer_console_endpoint>.bluemix.net/cli`。
+  您可以在管理控制台 CLI 页面上查找与实际端点相同的命令：`https://<customer_console_endpoint>.bluemix.net/cli`。
   {: note}
 
 2. 要安装 {{site.data.keyword.cloud_notm}} 管理 CLI 插件，请运行以下命令：
@@ -57,7 +58,7 @@ subcollection: cloud-cli
 ## 卸载 {{site.data.keyword.cloud_notm}} 管理 CLI 插件
 {: #remove-admin-cli}
 
-如果需要卸载插件，那么可以使用以下命令，然后可以添加更新的存储库并安装最新的插件：
+要卸载插件，请完成以下步骤。 
 
 1. 卸载插件：
   ```
@@ -70,6 +71,8 @@ subcollection: cloud-cli
   cf remove-plugin-repo IBMCloudAdmin
   ```
   {: codeblock}
+
+然后，可以添加更新的存储库并安装最新的插件。
 
 ## 使用 {{site.data.keyword.cloud_notm}} 管理 CLI 插件
 {: #using-admin-cli}
@@ -87,31 +90,27 @@ cf plugins
 ### 连接并登录到 {{site.data.keyword.cloud_notm}}
 {: #connecting-ibm-cloud}
 
-必须先连接并登录，才能使用管理 CLI 插件。
-
 1. 要连接到 {{site.data.keyword.cloud_notm}} API 端点，请运行以下命令：
   ```
   cf api api.us-south.cf.cloud.ibm.com
   ```
   {: codeblock}
+  
+  虽然旧的 `api..bluemix.net` Cloud Foundry API 端点仍可用，但您也可以更新脚本和基础架构自动化，以针对您的区域使用以下更新的 Cloud Foundry API 端点：
+
+  * api.us-south.cf.cloud.ibm.com（先前为 api.ng.bluemix.net）
+  * api.eu-gb.cf.cloud.ibm.com（先前为 api.eu-gb.bluemix.net）
+  * api.us-east.cf.cloud.ibm.com（先前为 api.us-east.bluemix.net）
+  * api.eu-de.cf.cloud.ibm.com（先前为 api.eu-de.bluemix.net）
+  * api.au-syd.cf.cloud.ibm.com（先前为 api.au-syd.bluemix.net）
 
   您可以查看管理控制台的“资源和信息”页面，以获取正确的 URL。此 URL 显示在“API 信息”部分的 **API URL** 字段中。
 
-2. 使用以下命令登录到 {{site.data.keyword.cloud_notm}}：
+2. 通过运行以下命令，登录到 {{site.data.keyword.cloud_notm}}：
   ```
 cf login
 ```
   {: codeblock}
-
-**使用旧 Cloud Foundry 端点**：
-
-虽然旧的 `api..bluemix.net` Cloud Foundry API 端点仍可用，但您也可以更新脚本和基础架构自动化，以针对您的区域使用以下更新的 Cloud Foundry API 端点：
-
-* api.us-south.cf.cloud.ibm.com（先前为 api.ng.bluemix.net）
-* api.eu-gb.cf.cloud.ibm.com（先前为 api.eu-gb.bluemix.net）
-* api.us-east.cf.cloud.ibm.com（先前为 api.us-east.bluemix.net）
-* api.eu-de.cf.cloud.ibm.com（先前为 api.eu-de.bluemix.net）
-* api.au-syd.cf.cloud.ibm.com（先前为 api.au-syd.bluemix.net）
 
 ## 管理用户
 {: #admin_users}
@@ -125,20 +124,19 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-要向特定组织添加用户，您必须是拥有 **users.write** 许可权（或 **Superuser** 许可权）的**管理员**。如果您是组织管理者，那么还可以通过 Superuser 来运行 **enable-managers-add-users** 命令，以向组织添加用户。有关更多信息，请参阅[允许管理者添加用户](#clius_emau)。
+要向特定组织添加用户，您必须是具有 users.write（或 Superuser）许可权的管理员。如果您是组织管理者，那么还可以通过 Superuser 来运行 **`enable-managers-add-users`** 命令，以向组织添加用户。有关更多信息，请参阅[允许管理者添加用户](#clius_emau)。
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">LDAP 注册表中用户的名称。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要向其添加用户的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。</dd>
-<dt class="pt dlterm">&lt;first_name&gt;</dt>
-<dd class="pd">要添加到组织的用户的名字。</dd>
-<dt class="pt dlterm">&lt;last_name&gt;</dt>
-<dd class="pd">要添加到组织的用户的姓氏。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _userName_ |LDAP 注册表中用户的名称。|
+| _organization_ |要向其添加用户的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。|
+| _firstName_ |要添加到组织的用户的名字。| 
+| _lastName_ |要添加到组织的用户的姓氏。| 
+{: caption="表 1. cf ba add-user 命令选项" caption-side="top"}
 
-**提示：****ba add-user** 命令名较长，您还可以使用 **ba au** 作为其别名。
+**`ba add-user`** 命令名较长，您还可以使用 **`ba au`** 作为其别名。
+{: tip}
 
 ### 邀请 {{site.data.keyword.Bluemix_dedicated_notm}} 中的用户
 {: #admin_dedicated_invite_public}
@@ -149,34 +147,32 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 ```
 {: pre}
 
-要将 Dedicated 环境用户添加到 {{site.data.keyword.cloud_notm}} 公共帐户，您必须是 Dedicated 帐户的**管理员**。
+要将 Dedicated 环境用户添加到 {{site.data.keyword.cloud_notm}} 公共帐户，您必须是 Dedicated 帐户的管理员。
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;user_email&gt;</dt>
-<dd class="pd">如果要邀请单个用户，请使用该用户的电子邮件。</dd>
-<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
-<dd class="pd">如果要邀请当前位于 Dedicated 帐户组织中的所有用户，请使用 Dedicated 帐户组织标识。</dd>
-<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
-<dd class="pd">用于邀请用户加入公共帐户的 API 密钥。此密钥必须由公共帐户的<b>管理员</b>来生成。</dd>
-<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
-<dd class="pd">要邀请用户加入的公共帐户组织的标识。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| -userid |如果要邀请单个用户，请使用该用户的电子邮件。|
+| -organization |如果要邀请当前位于 Dedicated 帐户组织中的所有用户，请使用 Dedicated 帐户组织标识。|
+| -apikey |用于邀请用户加入公共帐户的 API 密钥。此密钥必须由公共帐户的管理员来生成。| 
+| -public_org_id |要邀请用户加入的公共帐户组织的标识。| 
+{: caption="表 2. cf ba invite-users-to-public 命令选项" caption-side="top"}
 
 ### 列出邀请的 {{site.data.keyword.Bluemix_dedicated_notm}} 用户
 {: #admin_dedicated_list}
 
-如果已使用 [`invite-users-to-public` 命令](#admin_dedicated_invite_public)邀请 Dedicated 环境用户加入 {{site.data.keyword.Bluemix_notm}} 帐户，那么可以列出帐户中的用户以查看他们的邀请状态。具有现有 IBM 标识的受邀用户的状态为`活动`。没有现有 IBM 标识的受邀用户的状态为`暂挂`或`活动`，具体取决于他们是否已接受加入帐户的邀请。要列出 {{site.data.keyword.Bluemix_notm}} 帐户中的用户，请运行以下命令：
+如果已使用 [**`invite-users-to-public`** 命令](#admin_dedicated_invite_public)邀请 Dedicated 环境用户加入 {{site.data.keyword.Bluemix_notm}} 帐户，那么可以列出帐户中的用户以查看他们的邀请状态。具有现有 IBM 标识的受邀用户的状态为“活动”。没有现有 IBM 标识的受邀用户的状态为“暂挂”或“活动”，具体取决于他们是否已接受加入帐户的邀请。要列出 {{site.data.keyword.Bluemix_notm}} 帐户中的用户，请运行以下命令：
 
 ```
 cf ba invite-users-status -apikey=<public_api_key>
 ```
 {: pre}
 
-要将 Dedicated 环境用户添加到 {{site.data.keyword.Bluemix_notm}} 公共帐户，您必须是 Dedicated 帐户的**管理员**。
+要将 Dedicated 环境用户添加到 {{site.data.keyword.Bluemix_notm}} 公共帐户，您必须是 Dedicated 帐户的管理员。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
-<dd class="pd">用于邀请用户加入帐户的 API 密钥。此密钥必须由公共帐户的<b>管理员</b>来生成。</dd>
+<dd class="pd">用于邀请用户加入帐户的 API 密钥。此密钥必须由公共帐户的管理员来生成。</dd>
 </dl>
 
 <!-- staging-only commands start. Live for interconnect -->
@@ -191,20 +187,17 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 ```
 {: codeblock}
 
-<dl class="parml">
+|选项|描述
+| 
+| -------| ------------|
+| -name |用户的名称。|
+| -permission |分配给用户的许可权。可用的许可权为 admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。不能将此参数与 organization 参数用于同一查询中。|
+| -organization |用户所属的组织名称。不能将此参数与 permission 参数用于同一查询中。| 
+| -role |分配给用户的组织角色。可用的角色为 auditors、managers 和 billing_managers。使用此参数时必须指定组织。| 
+{: caption="表 3. cf ba search-users 命令选项" caption-side="top"}
 
-<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
-<dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">分配给用户的许可权。可用的许可权为：admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。不能将此参数与 organization 参数用于同一查询中。</dd>
-<dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">用户所属的组织名称。不能将此参数与 permission 参数用于同一查询中。</dd>
-<dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">分配给用户的组织角色。可用的角色为：“auditors”、“managers”和“billing_managers”。使用此参数时必须指定组织。</dd>
-
-</dl>
-
-**提示：****ba search-users** 命令名较长，您还可以使用 **ba su** 作为其别名。
+**`ba search-users`** 命令名较长，您还可以使用 **`ba su`** 作为其别名。
+{: tip}
 
 ### 为用户设置许可权
 {: #admin_setperm_user}
@@ -215,18 +208,18 @@ cf ba set-permissions <user_name> <permission> <access>
 ```
 {: codeblock}
 
+|选项|描述
+| 
+| -------| ------------|
+| _userName_ |用户的名称。|
+| _permission_ |设置分配给用户的许可权。可用的许可权为 admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。不能将此参数与 organization 参数用于同一查询中。|
+| _access_ |对于 catalog、reports 或 user 许可权，还必须将访问级别设置为 `read` 或 `write`。|  
+{: caption="表 4. cf ba set-permissions 命令选项" caption-side="top"}
+
 一次只能设置一个许可权。
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
-<dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">为用户设置许可权：Admin（可用的替代项为 Superuser）、Login（可用替代项为 Basic）、Catalog（read 或 write 访问权）、Reports（read 或 write 访问权）或 Users（read 或 write 访问权）。</dd>
-<dt class="pt dlterm">&lt;access&gt;</dt>
-<dd class="pd">对于 Catalog、Reports 或 Users 许可权，还必须将访问级别设置为 <code>read</code> 或 <code>write</code>。</dd>
-</dl>
-
-**提示：****ba set-permissions** 命令名较长，您还可以使用 **ba sp** 作为其别名。
+**`ba set-permissions`** 命令名较长，您还可以使用 **`ba sp`** 作为其别名。
+{: tip}
 
 <!-- staging-only commands end -->
 
@@ -247,31 +240,34 @@ cf ba remove-user <user_name>
 
 </dl>
 
-**提示：****ba remove-user** 命令名较长，您还可以使用 **ba ru** 作为其别名。
+**`ba remove-user`** 命令名较长，您还可以使用 **`ba ru`** 作为其别名。
+{: tip}
 
-### 允许管理者添加用户
+### 允许管理员添加用户
 {: #clius_emau}
 
-如果您在 {{site.data.keyword.Bluemix_notm}} 环境中有 **Superuser** 许可权，那么可以允许组织管理者向其管理的组织添加用户。要使管理者能够添加用户，请使用以下命令：
+如果您在 {{site.data.keyword.Bluemix_notm}} 环境中有 Superuser 许可权，那么可以允许组织管理者向其管理的组织添加用户。要使管理者能够添加用户，请使用以下命令：
 
 ```
 cf ba enable-managers-add-users
 ```
 {: codeblock}
 
-**提示：****ba enable-managers-add-users** 命令名较长，您还可以使用 **ba emau** 作为其别名。
+**`ba enable-managers-add-users`** 命令名较长，您还可以使用 **`ba emau`** 作为其别名。
+{: tip}
 
 ### 禁止管理者添加用户
 {: #clius_dmau}
 
-如果在 {{site.data.keyword.Bluemix_notm}} 环境中已允许组织管理者通过 **enable-managers-add-users** 命令向其管理的组织添加用户，并且您有 **Superuser** 许可权，那么可以除去此设置。要禁止管理者添加用户，请使用以下命令：
+如果在 {{site.data.keyword.Bluemix_notm}} 环境中已允许组织管理者通过 **`enable-managers-add-users`** 命令向其管理的组织添加用户，并且您有 Superuser 许可权，那么可以除去此设置。要禁止管理者添加用户，请使用以下命令：
 
 ```
 cf ba disable-managers-add-users
 ```
 {: codeblock}
 
-**提示：****ba disable-managers-add-users** 命令名较长，您还可以使用 **ba dmau** 作为其别名。
+**`ba disable-managers-add-users`** 命令名较长，您还可以使用 **`ba dmau`** 作为其别名。
+{: tip}
 
 ## 管理组织
 {: #admin_orgs}
@@ -286,14 +282,15 @@ cf ba create-org <organization> <manager>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要添加的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
-<dt class="pt dlterm">&lt;manager&gt;</dt>
-<dd class="pd">组织的管理者的用户名。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _organization_ |要添加的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID|
+| _manager_ |组织的管理者的用户名。|
+{: caption="表 5. cf ba create-org 命令选项" caption-side="top"}
 
-**提示：****ba create-org** 命令名较长，您还可以使用 **ba co** 作为其别名。
+**`ba create-org`** 命令名较长，您还可以使用 **`ba co`** 作为其别名。
+{: tip}
 
 ### 删除组织
 {: #admin_delete_org}
@@ -310,7 +307,8 @@ cf ba delete-org <organization>
 <dd class="pd">要删除的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。</dd>
 </dl>
 
-**提示：****ba delete-org** 命令名较长，您还可以使用 **ba do** 作为其别名。
+**`ba delete-org`** 命令名较长，您还可以使用 **`ba do`** 作为其别名。
+{: tip}
 
 ### 向组织分配用户
 {: #admin_ass_user_org}
@@ -322,16 +320,16 @@ cf ba set-org <user_name> <organization> [<role>]
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">{{site.data.keyword.cloud_notm}} 中用户的名称。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要向其分配用户的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。</dd>
-<dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">有关 {{site.data.keyword.cloud_notm}} 用户角色和描述的信息，请参阅[角色](/docs/iam?topic=iam-userroles#userroles)。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _userName_ |用户的名称。|
+| _organization_ |要向其分配用户的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。|
+| _role_ |用户的角色。有效值为 `OrgManager`、`BillingManager` 和 `OrgAuditor`。有关角色描述，请参阅 [角色](/docs/iam?topic=iam-userroles#userroles)。|  
+{: caption="表 6. cf ba set-org 命令选项" caption-side="top"}
 
-**提示：****ba set-org** 命令名较长，您还可以使用 **ba so** 作为其别名。
+**`ba set-org`** 命令名较长，您还可以使用 **`ba so`** 作为其别名。
+{: tip}
 
 ### 从组织中取消分配用户
 {: #admin_unass_user_org}
@@ -343,32 +341,16 @@ cf ba unset-org <user_name> <organization> [<role>]
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">{{site.data.keyword.cloud_notm}} 中用户的名称。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要向其分配用户的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。</dd>
-<dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">有关 {{site.data.keyword.cloud_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/iam?topic=iam-userroles#userroles)。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _userName_ |用户的名称。|
+| _organization_ |{{site.data.keyword.cloud_notm}} 组织的名称或 GUID。|
+| _role_ |用户的角色。有效值为 `OrgManager`、`BillingManager` 和 `OrgAuditor`。有关角色描述，请参阅 [角色](/docs/iam?topic=iam-userroles#userroles)。|  
+{: caption="表 7. cf ba unset-org 命令选项" caption-side="top"}
 
-**提示：****ba unset-org** 命令名较长，您还可以使用 **ba uo** 作为其别名。
-
-#### 分配角色
-
-<dl class="parml">
-<dt class="pt dlterm">OrgManager</dt>
-<dd class="pd">组织管理者。组织管理者有权执行以下操作：<ul>
-<li>在组织内创建或删除空间。</li>
-<li>邀请用户加入组织并管理用户。</li>
-<li>管理组织的域。</li>
-</ul>
-</dd>
-<dt class="pt dlterm">BillingManager</dt>
-<dd class="pd">记帐管理者。记帐管理者可以查看组织的运行时和服务使用情况信息。</dd>
-<dt class="pt dlterm">OrgAuditor</dt>
-<dd class="pd">组织审计员。组织审计员可以查看空间中的应用程序和服务内容。</dd>
-</dl>
+**`ba unset-org`** 命令名较长，您还可以使用 **`ba uo`** 作为其别名。
+{: tip}
 
 ### 设置组织的配额
 {: #admin_set_org_quota}
@@ -380,14 +362,15 @@ cf ba set-quota <organization> <plan>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要为其设置配额的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
-<dt class="pt dlterm">&lt;plan&gt;</dt>
-<dd class="pd">组织的配额计划。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _organization_ |要为其设置配额的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。|
+| _plan_ |组织的配额计划。|  
+{: caption="表 8. cf ba set-quota 命令选项" caption-side="top"}
 
-**提示：****ba set-quota** 命令名较长，您还可以使用 **ba sq** 作为其别名。
+**`ba set-quota`** 命令名较长，您还可以使用 **`ba sq`** 作为其别名。
+{: tip}
 
 
 ### 查找组织的容器配额
@@ -405,7 +388,8 @@ cf ibmcloud-admin containers-quota <organization>
 <dd class="pd">IBM Cloud 中组织的名称或标识。此参数是必需的。</dd>
 </dl>
 
-**提示：****ibmcloud-admin containers-quota** 命令名较长，您还可以使用 **ba cq** 作为其别名。
+**`ibmcloud-admin containers-quota`** 命令名较长，您还可以使用 **`ba cq`** 作为其别名。
+{: tip}
 
 ### 设置组织的容器配额
 {: #admin_set_containquotas}
@@ -417,37 +401,17 @@ cf ibmcloud-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
-**注**：您可以包含多个选项，但必须至少包含一个选项。
+您可以包含多个选项，但必须至少包含一个选项。
+{: note}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">IBM Cloud 中组织的名称或标识。此参数是必需的。</dd>
-<dt class="pt dlterm">&lt;options&gt;</dt>
-<dd class="pd">包含以下一个或多个选项，其中值必须为整数：<ul>
-<li>floating-ips-max &lt;value&gt;</li>
-<li>floating-ips-space-default &lt;value&gt;</li>
-<li>memory-max &lt;value&gt;</li>
-<li>memory-space-default &lt;value&gt;</li>
-<li>image-limit &lt;value&gt;</li>
-</ul>
-</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _organization_ |要为其设置配额的 {{site.data.keyword.cloud_notm}} 组织的名称或标识。|
+| _options_ |选项为 **`floating-ips-max value`**（短名称 **`fim`**）、**`floating-ips-space-default value`**（短名称 **`fisd`**）、**`memory-max value`**（短名称 **`mm`**）、**`memory-space-default value`**（短名称 **`msd`**）或 **`image-limit value`**（短名称 **`il`**）。该值必须为整数。|  
+{: caption="表 9. cf ibmcloud-admin set-containers-quota 命令选项" caption-side="top"}
 
-**提示：**对于较长的选项名称，您还可以使用以下短名称作为其别名：
-<dl class="parml">
-<dt class="pt dlterm">floating-ips-max &lt;value&gt;</dt>
-<dd class="pd"><strong>fim</strong></dd>
-<dt class="pt dlterm">floating-ips-space-default &lt;value&gt;</dt>
-<dd class="pd"><strong>fisd</strong></dd>
-<dt class="pt dlterm">memory-max &lt;value&gt;</dt>
-<dd class="pd"><strong>mm</strong></dd>
-<dt class="pt dlterm">memory-space-default &lt;value&gt;</dt>
-<dd class="pd"><strong>msd</strong></dd>
-<dt class="pt dlterm">image-limit &lt;value&gt;</dt>
-<dd class="pd"><strong>il</strong></dd>
-</dl>
-
-（可选）可以提供一个在有效 JSON 对象中包含特定配置参数的文件。如果使用 **-file** 选项，那么会优先使用此选项并忽略其他选项。要提供文件，而不设置选项，请使用以下命令：
+（可选）可以提供一个在有效 JSON 对象中包含特定配置参数的文件。如果使用 **`-file`** 选项，那么会优先使用此选项并忽略其他选项。要提供文件，而不设置选项，请使用以下命令：
 
 ```
 cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
@@ -467,7 +431,8 @@ JSON 文件的格式应该如以下示例中所示：
 ```
 {: codeblock}
 
-**提示：****ibmcloud-admin set-containers-quota** 命令名较长，您还可以使用 **ba scq** 作为其别名。
+**`ibmcloud-admin set-containers-quota`** 命令名较长，您还可以使用 **`ba scq`** 作为其别名。
+{: tip}
 
 ## 管理空间
 {: #admin_spaces}
@@ -482,14 +447,15 @@ cf ibmcloud-admin create-space <organization> <space_name>
 
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要向其添加空间的组织的名称或 GUID。</dd>
-<dt class="pt dlterm">&lt;space_name&gt;</dt>
-<dd class="pd">要在组织中创建的空间的名称。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _organization_ |要向其添加空间的组织的名称或 GUID。|
+| _spaceName_ |要添加到组织的空间的名称。|  
+{: caption="表 10. cf ibmcloud-admin create-space 命令选项" caption-side="top"}
 
-**提示：****ba create-space** 命令名较长，您还可以使用 **ba cs** 作为其别名。
+**`ba create-space`** 命令名较长，您还可以使用 **`ba cs`** 作为其别名。
+{: tip}
 
 ### 从组织中删除空间
 
@@ -501,14 +467,15 @@ cf ibmcloud-admin delete-space <organization> <space_name>
 
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要从中除去空间的组织的名称或 GUID。</dd>
-<dt class="pt dlterm">&lt;space_name&gt;</dt>
-<dd class="pd">要从组织中除去的空间的名称。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _organization_ |要从中除去空间的组织的名称或 GUID。|
+| _spaceName_ |要从组织中除去的空间的名称。|  
+{: caption="表 11. cf ibmcloud-admin delete-space 命令选项" caption-side="top"}
 
-**提示：****ba delete-space** 命令名较长，您还可以使用 **ba cs** 作为其别名。
+**`ba delete-space`** 命令名较长，您还可以使用 **`ba cs`** 作为其别名。
+{: tip}
 
 ### 向空间添加具有角色的用户
 
@@ -520,18 +487,17 @@ cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要向其添加用户的组织的名称或 GUID。</dd>
-<dt class="pt dlterm">&lt;space_name&gt;</dt>
-<dd class="pd">要向其添加用户的空间的名称。</dd>
-<dt class="pt dlterm">&lt;user_anme&gt;</dt>
-<dd class="pd">要添加的用户的名称。</dd>
-<dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">要分配的用户角色。值可以为 Manager（管理者）、Developer（开发者）或 Auditor（审计员）。有关空间中的 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/iam?topic=iam-userroles#userroles)。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _organization_ |要向其添加用户的组织的名称或 GUID。|
+| _spaceName_ |要向其添加用户的空间的名称。|
+| _userName_ |用户的名称。|
+| _role_ |用户的角色。有效值为 `Manager`、`Developer` 或 `Auditor`。|  
+{: caption="表 12. cf ibmcloud-admin set-space 命令选项" caption-side="top"}
 
-**提示：****ba set-space** 命令名较长，您还可以使用 **ba ss** 作为其别名。
+**`ba set-space`** 命令名较长，您还可以使用 **`ba ss`** 作为其别名。
+{: tip}
 
 
 ### 除去空间中用户的角色
@@ -544,18 +510,17 @@ cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要向其添加用户的组织的名称或 GUID。</dd>
-<dt class="pt dlterm">&lt;space_name&gt;</dt>
-<dd class="pd">要向其添加用户的空间的名称。</dd>
-<dt class="pt dlterm">&lt;user_anme&gt;</dt>
-<dd class="pd">要添加的用户的名称。</dd>
-<dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">要分配的用户角色。值可以为 Manager（管理者）、Developer（开发者）或 Auditor（审计员）。有关空间中的 {{site.data.keyword.cloud_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/iam?topic=iam-userroles#userroles)。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _organization_ |用户所属组织的名称或 GUID。|
+| _spaceName_ |用户所属空间的名称。|
+| _userName_ |用户的名称。|
+| _role_ |用户的角色。有效值为 `Manager`、`Developer` 或 `Auditor`。|  
+{: caption="表 13. cf ibmcloud-admin unset-space 命令选项" caption-side="top"}
 
-**提示：****ba unset-space** 命令名较长，您还可以使用 **ba us** 作为其别名。
+**`ba unset-space`** 命令名较长，您还可以使用 **`ba us`** 作为其别名。
+{: tip}
 
 ## 管理目录
 {: #admin_catalog}
@@ -575,7 +540,8 @@ cf ba enable-service-plan <plan_identifier>
 <dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
 </dl>
 
-**提示：****ba enable-service-plan** 命令名较长，您还可以使用 **ba esp** 作为其别名。
+**`ba enable-service-plan`** 命令名较长，您还可以使用 **`ba esp`** 作为其别名。
+{: tip}
 
 ### 对所有组织禁用服务
 {: #admin_dis_service_org}
@@ -592,45 +558,48 @@ cf ba disable-service-plan <plan_identifier>
 <dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
 </dl>
 
-**提示：****ba disable-service-plan** 命令名较长，您还可以使用 **ba dsp** 作为其别名。
+**`ba disable-service-plan`** 命令名较长，您还可以使用 **`ba dsp`** 作为其别名。
+{: tip}
 
 ### 添加组织的服务可视性
 {: #admin_addvis_service_org}
 
-可以在能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表中添加组织。要允许某个组织在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务，请使用以下命令：
+可以在能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表中添加组织。要允许某个组织在目录中查看特定服务，请使用以下命令：
 
 ```
 cf ba add-service-plan-visibility <plan_identifier> <organization>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要添加到服务的可视性列表的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _planIdentifier_ |要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。|
+| _organization_ |要添加到服务的可视性列表的组织的名称或 GUID。|  
+{: caption="表 14. cf ba add-service-plan-visibility 命令选项" caption-side="top"}
 
-**提示：****ba add-service-plan-visibility** 命令名较长，您还可以使用 **ba aspv** 作为其别名。
+**`ba add-service-plan-visibility`** 命令名较长，您还可以使用 **`ba aspv`** 作为其别名。
+{: tip}
 
 ### 除去组织的服务可视性
 {: #admin_remvis_service_org}
 
-可以从能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表中除去组织。要在某个组织的 {{site.data.keyword.Bluemix_notm}}“目录”中除去某个服务的可视性，请使用以下命令：
+可以从能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表中除去组织。要在某个组织的目录中除去某个服务的可视性，请使用以下命令：
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要从服务的可视性列表中除去的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _planIdentifier_ |要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。|
+| _organization_ |要从服务的可视性列表中除去的组织的名称或 GUID。|  
+{: caption="表 15. cf ba remove-service-plan-visibility 命令选项" caption-side="top"}
 
-**提示：****ba remove-service-plan-visibility** 命令名较长，您还可以使用 **ba rspv** 作为其别名。
+**`ba remove-service-plan-visibility`** 命令名较长，您还可以使用 **`ba rspv`** 作为其别名。
+{: tip}
 
 ### 编辑组织的服务可视性
 {: #admin_editvis_service_org}
@@ -644,14 +613,15 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 此命令会将指定组织的现有可视服务替换为在命令中指定的服务。
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要为其添加可视性的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。可以通过在命令中输入更多组织名称或 GUID，对多个组织启用服务可视性。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _planIdentifier_ |要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。|
+| _organization_ |要为其添加可视性的组织的名称或 GUID。可以通过在命令中输入更多组织名称或 GUID，对多个组织启用服务可视性。|  
+{: caption="表 16. cf ba edit-service-plan-visibs 命令选项" caption-side="top"}
 
-**提示：****ba edit-service-plan-visibility** 命令名较长，您还可以使用 **ba espv** 作为其别名。
+**`ba edit-service-plan-visibility`** 命令名较长，您还可以使用 **`ba espv`** 作为其别名。
+{: tip}
 
 ## 管理报告
 {: #admin_add_report}
@@ -666,20 +636,19 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
 
-如果您拥有报告的写访问权，那么可以使用用户接受的任何格式，创建新类别并添加报告。输入 `category` 参数的新类别名称，或者添加新报告到现有类别。
+如果您拥有报告的写访问权，那么可以使用用户接受的任何格式，创建新类别并添加报告。输入 **`category`** 参数的新类别名称，或者添加新报告到现有类别。
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">报告的类别。如果名称中有空格，请使用引号将名称括起。</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd">报告日期，格式为 <samp class="ph codeph">YYYYMMDD</samp>。</dd>
-<dt class="pt dlterm">&lt;PDF|TXT|LOG&gt;</dt>
-<dd class="pd">要上传的报告 PDF、文本文件或日志文件的路径。</dd>
-<dt class="pt dlterm">&lt;RTF&gt;</dt>
-<dd class="pd">用于包含富文本格式 (RTF) 版本的 PDF 的选项。仅当包含报告 PDF 的路径时，此选项才适用。RTF 版本用于建立索引和执行搜索。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _category_ |报告的类别。如果名称中有空格，请使用引号。|
+| _date_ |报告日期，格式为 YYYYMMDD。|  
+| _filePath_ |要上传的报告 PDF、文本文件或日志文件的路径。|
+| _RTF_ |用于包含富文本格式 (RTF) 版本的 PDF 的选项。仅当包含报告 PDF 的路径时，此选项才适用。RTF 版本用于建立索引和执行搜索。|
+{: caption="表 17. cf ba add-report 命令选项" caption-side="top"}
 
-**提示：****ba add-report** 命令名较长，您还可以使用 **ba ar** 作为其别名。
+**`ba add-report`** 命令名较长，您还可以使用 **`ba ar`** 作为其别名。
+{: tip}
 
 ### 删除报告
 {: #admin_del_report}
@@ -691,16 +660,16 @@ cf ba delete-report <category> <date> <name>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">报告的类别。如果名称中有空格，请使用引号将名称括起。</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd">报告日期，格式为 <samp class="ph codeph">YYYYMMDD</samp>。</dd>
-<dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">报告的名称。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _category_ |报告的类别。如果名称中有空格，请使用引号。|
+| _date_ |报告日期，格式为 YYYYMMDD。|  
+| _name_ |报告的名称。|
+{: caption="表 18. cf ba delete-report 命令选项" caption-side="top"}
 
-**提示：****ba delete-report** 命令名较长，您还可以使用 **ba dr** 作为其别名。
+**`ba delete-report`** 命令名较长，您还可以使用 **`ba dr`** 作为其别名。
+{: tip}
 
 ### 检索报告
 {: #admin_retr_report}
@@ -717,7 +686,8 @@ cf ba retrieve-report <search>
 <dd class="pd">报告的文件名。如果名称中有空格，请使用引号将名称括起。</dd>
 </dl>
 
-**提示：****ba retrieve-report** 命令名较长，您还可以使用 **ba rr** 作为其别名。
+**`ba retrieve-report`** 命令名较长，您还可以使用 **`ba rr`** 作为其别名。
+{: tip}
 
 ## 查看资源度量值信息
 {: #cliresourceusage}
@@ -728,7 +698,8 @@ cf ba retrieve-report <search>
 cf ba resource-metrics
 ```
 
-**提示：****ba resource-metrics** 命令名较长，您还可以使用 **ba rsm** 作为其别名。
+**`ba resource-metrics`** 命令名较长，您还可以使用 **`ba rsm`** 作为其别名。
+{: tip}
 
 ## 查看资源度量值历史记录
 {: #cliresourceusagehistory}
@@ -740,33 +711,27 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;--hourly&gt;</dt>
-<dd class="pd">查看最近 48 小时的历史记录数据。这是缺省值。</dd>
-<dt class="pt dlterm">&lt;--daily&gt;</dt>
-<dd class="pd">查看最近 30 天的历史记录数据每天平均值。</dd>
-<dt class="pt dlterm">&lt;--monthly&gt;</dt>
-<dd class="pd">查看最近 6 个月的历史记录数据每月平均值。</dd>
-<dt class="pt dlterm">&lt;--memory&gt;</dt>
-<dd class="pd">查看预留内存和物理内存的已使用量和总量。</dd>
-<dt class="pt dlterm">&lt;--disk&gt;</dt>
-<dd class="pd">查看预留磁盘和物理磁盘的已使用量和总量。</dd>
-<dt class="pt dlterm">&lt;--start&gt;</dt>
-<dd class="pd">指定按天或按月的开始日期（格式必须为 mm-dd-yyyy），或者按小时的开始日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss time zone）</dd>
-<dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">指定按天或按月的结束日期（格式必须为 mm-dd-yyyy），或者按小时的结束日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss time zone）</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| --hourly | View the historical data for the last 48 hours. This is the default value. |
+| --daily | View the historical data daily average for the last 30 days. |  
+| --monthly | View the historical data monthly average for the last 6 months. |
+| --memory | View the used and total reserved and physical memory. |
+| --disk | View the used and total reserved and physical disk. | 
+| --start | Specify a start date for daily or monthly in the format of mm-dd-yyyy, or start date and time for hourly in the format of mm-dd-yyyy hh:mm:ss time zone. |
+| --end | Specify an end date for daily or monthly in the format of mm-dd-yyyy, or end date and time for hourly in the format of mm-dd-yyyy hh:mm:ss time zone. |
+{: caption="表 19： cf ba resource-metrics-history 命令选项" caption-side="top"}
 
+**示例**
+
+```
+cf ibmcloud-admin resource-metrics-history
+cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017
+cf ibmcloud-admin resource-metrics-history --monthly --memory
+cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT
+```
 {: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;示例&gt;</dt>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
-</dl>
-
 
 您可以使用以下命令来查看上面的命令参数和示例列表：
 
@@ -774,7 +739,8 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 cf ba resource-metrics-history -help
 ```
 
-**提示：****ba resource-metrics-history** 命令名较长，您还可以使用 **ba rsmh** 作为其别名。
+**`ba resource-metrics-history`** 命令名较长，您还可以使用 **`ba rsmh`** 作为其别名。
+{: tip}
 
 ## 管理服务代理程序
 {: #admin_servbro}
@@ -782,21 +748,22 @@ cf ba resource-metrics-history -help
 ### 列出服务代理程序
 {: #clilistservbro}
 
-要列出所有服务代理程序，请使用以下命令：
+要列出服务代理程序，请使用以下命令：
 
 ```
 cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
-要列出所有服务代理程序，请输入不带 `broker_name` 参数的命令。
+要列出所有服务代理程序，请输入不带 **`broker_name`** 参数的命令。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;broker_name&gt;</dt>
-<dd class="pd">可选：定制服务代理程序的名称。如果要获取特定服务代理程序的信息，请使用此参数。</dd>
+<dd class="pd">定制服务代理程序的名称。如果要获取特定服务代理程序的信息，请使用此参数。可选。</dd>
 </dl>
 
-**提示：****ba service-brokers** 命令名较长，您还可以使用 **ba sb** 作为其别名。
+**`ba service-brokers`** 命令名较长，您还可以使用 **`ba sb`** 作为其别名。
+{: tip}
 
 ### 添加服务代理程序
 {: #cliaddservbro}
@@ -808,18 +775,17 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;broker_name&gt;</dt>
-<dd class="pd">定制服务代理程序的名称。</dd>
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">有权访问服务代理程序的帐户的用户名。</dd>
-<dt class="pt dlterm">&lt;password&gt;</dt>
-<dd class="pd">有权访问服务代理程序的帐户的密码。</dd>
-<dt class="pt dlterm">&lt;broker_url&gt;</dt>
-<dd class="pd">服务代理程序的 URL。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _brokerName_ |定制服务代理程序的名称。|
+| _userName_ |有权访问服务代理程序的帐户的用户名。|  
+| _password_ |有权访问服务代理程序的帐户的密码。|
+| _brokerURL_ |服务代理程序的 URL。|
+{: caption="表 20. cf ba add-service-broker 命令选项" caption-side="top"}
 
-**提示：****ba add-service-broker** 命令名较长，您还可以使用 **ba asb** 作为其别名。
+**`ba add-service-broker`** 命令名较长，您还可以使用 **`ba asb`** 作为其别名。
+{: tip}
 
 ### 删除服务代理程序
 {: #clidelservbro}
@@ -836,7 +802,8 @@ cf ba delete-service-broker <service_broker>
 <dd class="pd">定制服务代理程序的名称或 GUID。</dd>
 </dl>
 
-**提示：****ba delete-service-broker** 命令名较长，您还可以使用 **ba dsb** 作为其别名。
+**`ba delete-service-broker`** 命令名较长，您还可以使用 **`ba dsb`** 作为其别名。
+{: tip}
 
 ### 更新服务代理程序
 {: #cliupdservbro}
@@ -848,46 +815,44 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;broker_name&gt;</dt>
-<dd class="pd">定制服务代理程序的名称。</dd>
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">有权访问服务代理程序的帐户的用户名。</dd>
-<dt class="pt dlterm">&lt;password&gt;</dt>
-<dd class="pd">有权访问服务代理程序的帐户的密码。</dd>
-<dt class="pt dlterm">&lt;broker_url&gt;</dt>
-<dd class="pd">服务代理程序的 URL。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _brokerName_ |定制服务代理程序的名称。|
+| _userName_ |有权访问服务代理程序的帐户的用户名。|  
+| _password_ |有权访问服务代理程序的帐户的密码。|
+| _brokerURL_ |服务代理程序的 URL。|
+{: caption="表 21. cf ba update-service-broker 命令选项" caption-side="top"}
 
-**提示：****ba update-service-broker** 命令名较长，您还可以使用 **ba usb** 作为其别名。
+**`ba update-service-broker`** 命令名较长，您还可以使用 **`ba usb`** 作为其别名。
+{: tip}
 
 ## 管理应用程序安全组
 {: #admin_secgro}
 
 要使用应用程序安全组 (ASG)，您必须是具有本地或专用环境完全访问权的管理员。对于命令的目标组织，环境的所有用户都可以列出可用的 ASG。但是，要创建、更新或绑定 ASG，您必须是 {{site.data.keyword.Bluemix_notm}} 环境的管理员。
 
-ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.Bluemix_notm}} 环境中应用程序的出站流量。每一个 ASG 都包含一个规则列表，允许与外部网络相互进行特定流量传输和通信。您可以将一个或多个 ASG 绑定到特定安全组集（例如，用于应用全局访问的组集），或者绑定到 {{site.data.keyword.Bluemix_notm}} 环境中某个组织内的空间。
+ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.cloud_notm}} 环境中应用程序的出站流量。每一个 ASG 都包含一个规则列表，允许与外部网络相互进行特定流量传输和通信。您可以将一个或多个 ASG 绑定到特定安全组集（例如，用于应用全局访问的组集），或者绑定到 {{site.data.keyword.Bluemix_notm}} 环境中某个组织内的空间。
 
 {{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
-**警告**：如果取消**缺省编译打包**或**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问。请慎用取消绑定，应了解取消绑定对环境中正在运行和编译打包的应用程序的潜在影响。
+如果取消**缺省编译打包**或**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问。请慎用取消绑定，应了解取消绑定对环境中正在运行和编译打包的应用程序的潜在影响。
+{: important}
 
 您可以使用以下命令来处理安全组，这些命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标") 的 Cloud Foundry 信息。
-{: note}
+
 
 ### 列出安全组
 {: #clilissecgro}
 
-* 要列出所有安全组，请使用以下命令：
+要列出所有安全组，请使用以下命令：
 
 ```
 cf ba security-groups
 ```
 {: codeblock}
 
-**提示：****ba security-groups** 命令名较长，您还可以使用 **ba sgs** 作为其别名。
-
-* 要显示特定安全组的详细信息，请使用以下命令：
+要显示特定安全组的详细信息，请使用以下命令：
 
 ```
 cf ba security-groups <security-group>
@@ -899,12 +864,11 @@ cf ba security-groups <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**提示：**具有 `security-group` 参数的 **ba security-groups** 命令名较长，您还可以使用 **ba sg** 作为其别名。
+**`ba security-groups`** 命令名较长，您还可以使用 **`ba sg`** 作为其别名。
+{: tip}
 
 ### 创建安全组
 {: #clicreasecgro}
-
-有关创建安全组和规则来定义传出流量的更多信息，请参阅[创建应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 要创建安全组，请使用以下命令：
 ```
@@ -914,14 +878,17 @@ cf ba create-security-group <security-group> <path-to-rules-file>
 
 您创建的每一个安全组其名称前都添加了 `adminconsole_` 前缀，用于与 IBM 创建的安全组加以区分。
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;Security group&gt;</dt>
-<dd class="pd">安全组的名称</dd>
-<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
-<dd class="pd">规则文件的绝对或相对路径</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _groupName_ |安全组的名称。|
+| _filePath_ |规则文件的绝对或相对路径。|  
+{: caption="表 22. cf ba create-security-group 命令选项" caption-side="top"}
 
-**提示：****ba create-security-group** 命令名较长，您还可以使用 **ba csg** 作为其别名。
+**`ba create-security-group`** 命令名较长，您还可以使用 **`ba csg`** 作为其别名。
+{: tip}
+
+有关创建安全组和规则来定义传出流量的更多信息，请参阅[创建应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 ### 更新安全组
 {: #cliupdsecgro}
@@ -933,14 +900,15 @@ cf ba update-security-group <security-group> <path-to-rules-file>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;Security group&gt;</dt>
-<dd class="pd">安全组的名称</dd>
-<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
-<dd class="pd">规则文件的绝对或相对路径</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _groupName_ |安全组的名称。|
+| _filePath_ |规则文件的绝对或相对路径。|  
+{: caption="表 23. cf ba update-security-group 命令选项" caption-side="top"}
 
-**提示：****ba update-security-group** 命令名较长，您还可以使用 **ba usg** 作为其别名。
+**`ba update-security-group`** 命令名较长，您还可以使用 **`ba usg`** 作为其别名。
+{: tip}
 
 ### 删除安全组
 {: #clidelsecgro}
@@ -956,14 +924,13 @@ cf ba delete-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**提示：****ba delete-security-group** 命令名较长，您还可以使用 **ba dsg** 作为其别名。
+**`ba delete-security-group`** 命令名较长，您还可以使用 **`ba dsg`** 作为其别名。
+{: tip}
 
 ### 绑定安全组
 {: #clibindsecgro}
 
-有关绑定安全组的更多信息，请参阅[绑定应用程序安全组 ](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
-
-* 要绑定 Default Staging 安全组集，请使用以下命令：
+要绑定 Default Staging 安全组集，请使用以下命令：
 
 ```
 cf ba bind-staging-security-group <security-group>
@@ -975,9 +942,10 @@ cf ba bind-staging-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**提示：****ba bind-staging-security-group** 命令名较长，您还可以使用 **ba bssg** 作为其别名。
+**`ba bind-staging-security-group`** 命令名较长，您还可以使用 **`ba bssg`** 作为其别名。
+{: tip}
 
-* 要绑定 Default Running 安全组集，请使用以下命令：
+要绑定 Default Running 安全组集，请使用以下命令：
 
 ```
 cf ba bind-running-security-group <security-group>
@@ -989,32 +957,33 @@ cf ba bind-running-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**提示：****ba bind-running-security-group** 命令名较长，您还可以使用 **ba brsg** 作为其别名。
+**`ba bind-running-security-group`** 命令名较长，您还可以使用 **`ba brsg`** 作为其别名。
+{: tip}
 
-* 要将安全组绑定到空间，请使用以下命令：
+要将安全组绑定到空间，请使用以下命令：
 
 ```
 cf ba bind-security-group <security-group> <org> <space>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;Security group&gt;</dt>
-<dd class="pd">安全组的名称</dd>
-<dt class="pt dlterm">&lt;Org&gt;</dt>
-<dd class="pd">安全组绑定到的组织的名称</dd>
-<dt class="pt dlterm">&lt;Space&gt;</dt>
-<dd class="pd">安全组绑定到的组织内空间的名称</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _groupName_ |安全组的名称。|
+| _org_ |要将安全组绑定到的组织的名称。|
+| _space_ |要将安全组绑定到的组织内空间的名称。|
+{: caption="表 24. cf ba bind-security-group 命令选项" caption-side="top"}
 
-**提示：****ba bind-security-group** 命令名较长，您还可以使用 **ba bsg** 作为其别名。
+**`ba bind-security-group`** 命令名较长，您还可以使用 **`ba bsg`** 作为其别名。
+{: tip}
+
+有关绑定安全组的更多信息，请参阅[绑定应用程序安全组 ](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 ### 取消绑定安全组
 {: #cliunbindsecgro}
 
-有关取消绑定安全组的更多信息，请参阅[取消绑定应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
-
-* 要取消绑定 Default Staging 安全组集，请使用以下命令：
+如果取消“缺省编译打包”组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解这样对环境中所有正在编译打包的应用程序的可能影响。要取消绑定 Default Staging 安全组集，请使用以下命令：
 
 ```
 cf ba unbind-staging-security-group <security-group>
@@ -1026,11 +995,10 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**警告**：如果取消**缺省编译打包**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解这样对环境中所有正在编译打包的应用程序的可能影响。
+**`ba unbind-staging-security-group`** 命令名较长，您还可以使用 **`ba ussg`** 作为其别名。
+{: tip}
 
-**提示：****ba unbind-staging-security-group** 命令名较长，您还可以使用 **ba ussg** 作为其别名。
-
-* 要取消绑定 Default Running 安全组集，请使用以下命令：
+如果取消“缺省运行”组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解这样对环境中所有正在运行的应用程序的可能影响。要取消绑定 Default Running 安全组集，请使用以下命令：
 
 ```
 cf ba unbind-running-security-group <security-group>
@@ -1042,27 +1010,28 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**警告**：如果取消**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解这样对环境中所有正在运行的应用程序的可能影响。
+**`ba unbind-running-security-group`** 命令名较长，您还可以使用 **`ba brsg`** 作为其别名。
+{: tip}
 
-**提示：****ba unbind-running-security-group** 命令名较长，也可以使用 **ba brsg** 作为其别名。
-
-* 要将安全组取消绑定到空间，请使用以下命令：
+要将安全组取消绑定到空间，请使用以下命令：
 
 ```
 cf ba unbind-security-group <security-group> <org> <space>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;Security group&gt;</dt>
-<dd class="pd">安全组的名称</dd>
-<dt class="pt dlterm">&lt;Org&gt;</dt>
-<dd class="pd">安全组绑定到的组织的名称</dd>
-<dt class="pt dlterm">&lt;Space&gt;</dt>
-<dd class="pd">安全组绑定到的组织内空间的名称</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _groupName_ |安全组的名称。|
+| _org_ |要取消绑定安全组的组织的名称。|
+| _space_ |要取消绑定安全组的组织内空间的名称。|
+{: caption="表 25. cf ba unbind-security-group 命令选项" caption-side="top"}
 
-**提示：****ba unbind-staging-security-group** 命令名较长，您还可以使用 **ba usg** 作为其别名。
+**`ba unbind-security-group`** 命令名较长，您还可以使用 **`ba usg`** 作为其别名。
+{: tip}
+
+有关取消绑定安全组的更多信息，请参阅[取消绑定应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 ## 管理 buildpack
 {: #admin_buildpack}
@@ -1082,28 +1051,29 @@ cf ba buildpacks <buildpack_name>
 <dd class="pd">可选参数，用于指定要查看的特定 buildpack。</dd>
 </dl>
 
-**提示：****ba buildpacks** 命令名较长，您还可以使用 **ba lb** 作为其别名。
+**`ba buildpacks`** 命令名较长，您还可以使用 **`ba lb`** 作为其别名。
+{: tip}
 
 ### 创建并上传 buildpack
 {: #clicreupbuildpack}
 
-如果您有应用程序目录写许可权，那么可以创建并上传 buildpack。可以上传文件类型为 .zip 的任何压缩文件。要上传 buildpack，请使用以下命令：
+如果您有应用程序目录写许可权，那么可以创建并上传 buildpack。可以上传文件类型为 `.zip` 的任何压缩文件。要上传 buildpack，请使用以下命令：
 
 ```
 cf ba create-buildpack <buildpack_name> <file_path> <position>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
-<dd class="pd">要上传的 buildpack 的名称。</dd>
-<dt class="pt dlterm">&lt;file_path&gt;</dt>
-<dd class="pd">buildpack 压缩文件的路径。</dd>
-<dt class="pt dlterm">&lt;position&gt;</dt>
-<dd class="pd">在 buildpack 自动检测期间检查 buildpack 的顺序。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _name_ |要上传的 buildpack 的名称。|
+| _filePath_ |buildpack 压缩文件的路径。|
+| _position_ |在 buildpack 自动检测期间检查 buildpack 的顺序。|
+{: caption="表 26. cf ba create-buildpack 命令选项" caption-side="top"}
 
-**提示：****ba create-buildpack** 命令名较长，您还可以使用 **ba cb** 作为其别名。
+**`ba create-buildpack`** 命令名较长，您还可以使用 **`ba cb`** 作为其别名。
+{: tip}
 
 ### 更新 buildpack
 {: #cliupdabuildpack}
@@ -1114,18 +1084,17 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ```
 {: codeblock}
 
-<dl class="parml">
-<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
-<dd class="pd">要更新的 buildpack 的名称。</dd>
-<dt class="pt dlterm">&lt;position&gt;</dt>
-<dd class="pd">在 buildpack 自动检测期间检查 buildpack 的顺序。</dd>
-<dt class="pt dlterm">&lt;enabled&gt;</dt>
-<dd class="pd">指示 buildpack 是否用于编译打包。</dd>
-<dt class="pt dlterm">&lt;locked&gt;</dt>
-<dd class="pd">指示 buildpack 是否已锁定以阻止更新。</dd>
-</dl>
+|选项|描述
+| 
+| -------| ------------|
+| _name_ |要更新的 buildpack 的名称。|
+| _position_ |在 buildpack 自动检测期间检查 buildpack 的顺序。|
+| _enabled_ |指示 buildpack 是否用于编译打包。|
+| _locked_ |指示 buildpack 是否已锁定以阻止更新。| 
+{: caption="表 27. cf ba update-buildpack 命令选项" caption-side="top"}
 
-**提示：****ba update-buildpack** 命令名较长，您还可以使用 **ba ub** 作为其别名。
+**`ba update-buildpack`** 命令名较长，您还可以使用 **`ba ub`** 作为其别名。
+{: tip}
 
 ### 删除 buildpack
 {: #clidelbuildpack}
@@ -1141,4 +1110,5 @@ cf ba delete-buildpack <buildpack_name>
 <dd class="pd">要删除的 buildpack 的名称。</dd>
 </dl>
 
-**提示：****ba delete-buildpack** 命令名较长，您还可以使用 **ba db** 作为其别名。
+**`ba delete-buildpack`** 命令名较长，您还可以使用 **`ba db`** 作为其别名。
+{: tip}

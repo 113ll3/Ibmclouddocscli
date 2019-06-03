@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-21"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -873,49 +873,49 @@ Puede buscar los atributos siguientes:
 
 <strong>Ejemplos</strong>:
 
-Buscar aplicaciones de Cloud Foundry cuyo nombre comience con un texto especificado:
+Buscar apps de Cloud Foundry cuyo nombre comience con un texto especificado:
 ```
-ibmcloud resource search 'name:my* AND type:cf-application'
+ibmcloud resource search "name:my* AND type:cf-application"
 ```
 
 Buscar instancias de servicio de Cloud Foundry del nombre de servicio especificado:
 ```
-ibmcloud resource search 'service_name:messagehub AND type:cf-service-instance'
+ibmcloud resource search "service_name:messagehub AND type:cf-service-instance"
 ```
 
 Buscar enlaces de servicio de Cloud Foundry en la organización con el ID especificado:
 ```
-ibmcloud resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
+ibmcloud resource search "organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding"
 ```
 
 Buscar espacios de Cloud Foundry con el nombre especificado y ubicados en una de las dos regiones especificadas:
 ```
-ibmcloud resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
+ibmcloud resource search "name:dev AND type:cf-space AND region:(us-south OR eu-gb)"
 ```
 
 Buscar recursos cuyo nombre contenga la palabra dev en el espacio de Cloud Foundry con el ID especificado:
 ```
-ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
+ibmcloud resource search "name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7"
 ```
 
 Buscar recursos de Resource Controller en la ubicación especificada (p.ej. en la región EE.UU. sur):
 ```
-ibmcloud resource search 'region:us-south AND family:resource_controller'
+ibmcloud resource search "region:us-south AND family:resource_controller"
 ```
 
 Buscar recursos o alias en el grupo de recursos con el ID especificado:
 ```
-ibmcloud resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
+ibmcloud resource search "(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)"
 ```
 
 Buscar grupos de recursos con el nombre default:
 ```
-ibmcloud resource search 'name:default AND type:resource-group'
+ibmcloud resource search "name:default AND type:resource-group"
 ```
 
 Buscar entre los enlaces de servicio el nombre de servicio especificado:
 ```
-ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-binding'
+ibmcloud resource search "service_name:cloud-object-storage AND type:resource-binding"
 ```
 
 Buscar un recurso con el nombre de Recurso de Nube (CRN) especificado:
@@ -931,13 +931,13 @@ ibmcloud resource search "tags:\"mykey:myvalue\""
 
 Buscar el recurso de invitado virtual de infraestructura clásica con el ID especificado (solo con -p classic-infrastructure):
 ```
-ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
+ibmcloud resource search "id:12345678 _objectType:SoftLayer_Virtual_Guest"
 ```
 {: codeblock}
 
 Buscar el recurso de hardware de infraestructura clásica con el nombre de etiqueta especificado (solo con -p classic-infrastructure):
 ```
-ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hardware'
+ibmcloud resource search "tagReferences.tag.name:name _objectType:SoftLayer_Hardware"
 ```
 {: codeblock}
 
@@ -969,7 +969,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
 
 Adjuntar una o más etiquetas a un recurso:
 ```
-ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
 ```
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
@@ -977,6 +977,8 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 <dl>
   <dt>--tag-names(obligatorio)</dt>
   <dd>Lista separada por comas de nombres de etiqueta</dd>
+  <dt>--resource-name</dt>
+  <dd>Nombre del recurso al que se deben adjuntar las etiquetas. Esta opción no se puede utilizar con recursos de infraestructura clásica.</dd>
   <dt>--resource-id</dt>
   <dd>CRN del recurso al que se van a adjuntar las etiquetas; para recursos de infraestructura clásica, es el ID del recurso. Puede obtener el CRN o el ID del recurso utilizando el mandato 'ibmcloud resource search'.</dd>
   <dt>--resource-type</dt>
@@ -1003,6 +1005,13 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   ```
   {: codeblock}
 
+* Para añadir la etiqueta `MyTag` a un recurso denominado `MyResource`:
+  ```
+  ibmcloud resource tag-attach --tag-name MyTag --resource-name  'MyResource'
+  ```
+  {: codeblock}
+  
+  
 * Para adjuntar la etiqueta `MyTag` a un invitado virtual de infraestructura clásica denominado
 `MyVM`, busque primero el ID del invitado virtual que desee etiquetar:
   ```
@@ -1023,7 +1032,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 
 Desvincular una o más etiquetas de un recurso:
 ```
-ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
@@ -1032,6 +1041,8 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 <dl>
   <dt>--tag-names(obligatorio)</dt>
   <dd>Lista separada por comas de nombres de etiqueta</dd>
+  <dt>--resource-name</dt>
+  <dd>Nombre del recurso del que se deben desconectar las etiquetas. Esta opción no se puede utilizar con recursos de infraestructura clásica.</dd>
   <dt>--resource-id</dt>
   <dd>CRN del recurso del que se van a desvincular las etiquetas; para recursos de infraestructura clásica, es el ID del recurso. Puede obtener el CRN o el ID del recurso utilizando el mandato 'ibmcloud resource search'.</dd>
   <dt>--resource-type</dt>

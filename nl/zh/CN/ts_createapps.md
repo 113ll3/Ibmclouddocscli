@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -292,8 +292,8 @@ directly.
 在以下每个链接中，可以找到多种不同的可能原因。
 {: tsCauses}
 
-- 有关如何使用 Spring 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Spring Boot 应用程序](/docs/java-spring?topic=java-spring-enable_existing#enable_existing)。
-- 有关如何使用 `Node.js` 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Node.js 应用程序](/docs/node?topic=nodejs-enable_existing#enable_existing)。
+- 有关使用 Spring 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Spring Boot 应用程序](/docs/java-spring?topic=java-spring-enable_existing#enable_existing)。
+- 有关使用 `Node.js` 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Node.js 应用程序](/docs/node?topic=nodejs-enable_existing#enable_existing)。
 {: tsResolve}
 
 ## 如何单独手动安装 {{site.data.keyword.dev_cli_notm}} CLI 组件

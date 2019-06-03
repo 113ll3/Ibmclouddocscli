@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # Sviluppo e distribuzione delle tue applicazioni
 {: #developing}
 
-Lo sviluppo delle applicazioni native cloud utilizzando la CLI {{site.data.keyword.dev_cli_notm}} segue un flusso abbastanza semplice:
+Lo sviluppo di applicazioni native cloud con la CLI {{site.data.keyword.dev_cli_notm}} segue un flusso abbastanza semplice:
 
 1. [Crea o abilita un'applicazione per la distribuzione](#idt-create).
 2. [Codifica, crea ed esegui](#code-build-run) la tua applicazione localmente utilizzando i contenitori.
@@ -38,7 +38,7 @@ Puoi creare un'applicazione in diversi modi.
 
 Per ognuno dei metodi di creazione precedenti, il flusso è simile. Seleziona il tipo di progetto, il linguaggio di implementazione e il modello dell'applicazione da utilizzare. Puoi anche scegliere di aggiungere servizi alla tua applicazione, come l'autenticazione o la persistenza. Infine puoi aggiungere la funzionalità DevOps all'applicazione che fornisce una toolchain completa del controllo di origine e le comunicazioni con il team. Inclusa una pipeline che viene attivata ad ogni commit per convalidare, creare e distribuire la tua applicazione a {{site.data.keyword.cloud_notm}}.
 
-![Flusso di creazione di esempio che utilizza la CLI {{site.data.keyword.dev_cli_notm}} ](create_flow.png "Flusso di creazione di esempio che utilizza la CLI {{site.data.keyword.dev_cli_notm}} ") <br> Figura 2. Flusso di creazione di esempio che utilizza la CLI {{site.data.keyword.dev_cli_notm}}
+![Flusso di creazione di esempio che utilizza la CLI {{site.data.keyword.dev_cli_notm}} ](create_flow.png "Flusso di creazione di esempio che utilizza la CLI {{site.data.keyword.dev_cli_notm}} ")
 
 La CLI {{site.data.keyword.dev_cli_notm}} lavora a stretto contatto per fornire un'esperienza ottimale durante lo sviluppo. I progetti creati dalle console web forniscono un pulsante **Download code** per scaricare il codice sorgente generato sulla tua workstation per un ulteriore sviluppo.
 
