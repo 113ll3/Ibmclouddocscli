@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-03"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -36,7 +36,7 @@ There are several ways that you can create an app.
 - {{site.data.keyword.dev_cli_notm}} CLIs [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) command to create a new app.
 - {{site.data.keyword.dev_cli_notm}} CLIs [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) command to quickly enable the cloud on an existing server-side app.
 
-For any of the previous creation methods, the flow is similar. Select the project type, implementation language, and app pattern to use. You can also opt to add services to your app, such as authentication or persistence. Finally, you can add DevOps capability to the app, which provides a complete toolchain of source control and team communications. Including a pipeline that is triggered on each commit to validate, build, and deploy your app to the {{site.data.keyword.cloud_notm}}.
+For any of the previous creation methods, the flow is similar. Select the project type, implementation language, and app pattern to use. You can also opt to add services to your app, such as authentication or persistence. Finally, you can configure continuous devlivery for the app, which provides a complete toolchain of source control and team communications. Including a pipeline that is triggered on each commit to validate, build, and deploy your app to the {{site.data.keyword.cloud_notm}}.
 
 ![Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI](create_flow.png "Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI"){: caption="Figure 1. Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI" caption-side="bottom"}
 

@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-03"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -27,27 +27,7 @@ Released: 28 March 2019
 As of May 2018, the {{site.data.keyword.cloud}} CLI commands `bluemix` and `bx` are now `ibmcloud`. However, you can still use the `bluemix` and `bx` CLI commands until they're removed later.
 {: tip}
 
-Use the following {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) commands to create an application, manage, deploy, debug, and test it.
-
-- [build](#build): Build the application in a local container.
-- [code](#code): Download the code for an application.
-- [console](#console): Opens the {{site.data.keyword.cloud_notm}} console for an application.
-- [create](#create): Creates a new application and gives you the option to add services.
-- [debug](#debug): Debug your application in a local container.
-- [delete](#delete): Deletes an application from your space.
-- [deploy](#deploy): Deploy an application to {{site.data.keyword.cloud_notm}}.
-- [diag](#diag): Displays version information about installed dependencies.
-- [edit](#edit): Add or remove services from an existing application.
-- [enable](#enable): Update an existing application for use with {{site.data.keyword.cloud_notm}} Developer Tools.
-- [get-credentials](#get-credentials): Gets credentials that are required by the application to enable the use of connected {{site.data.keyword.cloud_notm}} services.
-- [help](#help): Help on the CLI syntax and arguments.
-- [list](#list): List all {{site.data.keyword.cloud_notm}} applications in a resource group.
-- [run](#run): Run your application in a local container.
-- [shell](#shell): Open a shell into a local container.
-- [status](#status): Check the status of the containers that are used by the CLI.
-- [stop](#stop): Stop a container.
-- [test](#test): Test your application in a local container.
-- [view](#view): View the deployed URL of the application for testing and viewing.
+Use the {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) commands to create an application, manage, deploy, debug, and test it.
 
 Run multiple commands in a single command line statement by using [compound commands](#compound).
 {: tip}
@@ -96,7 +76,7 @@ ibmcloud dev console [appName]
 ## create
 {: #create}
 
-Create an app that prompts for all information, including resource type, language, starter kit, and DevOps Toolchain options. Including IBM Cloud Foundry or Cloud Foundry Enterprise Environment, and Kubernetes. The app is created in the current directory.
+Create an app that prompts for all information, including resource type, language, starter kit, and DevOps toolchain options. Including IBM Cloud Foundry or Cloud Foundry Enterprise Environment, and Kubernetes. The app is created in the current directory.
 
 To create an app in the current directory and to associate services with it, run the following command:
 ```
@@ -187,7 +167,7 @@ deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Nam
 ibm-cluster: "mycluster"
 ```
 
-In the `cli-config.yml`, you can choose to define the location of a Helm chart in the `chart-path` property and configure the `deploy-image-target` as shown in the example. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.cloud_notm}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster that you created in {{site.data.keyword.cloud_notm}}.
+In the `cli-config.yml`, you can define the location of a Helm chart in the `chart-path` property and configure the `deploy-image-target` as shown in the example. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.cloud_notm}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster that you created in {{site.data.keyword.cloud_notm}}.
 
 Run the following command in your current app directory to build your app:  
 ```
@@ -204,7 +184,7 @@ ibmcloud dev deploy
 ### deploy to {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment 
 {: #deploy-cfee}
 
-You can deploy to an {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment. To do so, configure your local environment for this environment by using `ibmcloud target --cf`, and then choose the correct environment from that list. You can then use the `deploy` command as you would for {{site.data.keyword.cloud_notm}} Public Cloud Foundry.
+You can deploy to an {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment. To do so, configure your local environment for this environment by using `ibmcloud target --cf`, and then select the correct environment from that list. You can then use the `deploy` command as you would for {{site.data.keyword.cloud_notm}} Public Cloud Foundry.
 
 ### deploy command parameters
 {: #deploy-parameters}
@@ -261,7 +241,7 @@ ibmcloud dev diag
 ## edit
 {: #edit}
 
-Edit your app with options such as connecting it with an app already in {{site.data.keyword.cloud_notm}}, managing the {{site.data.keyword.cloud_notm}} services of the app, and its {{site.data.keyword.cloud_notm}} Toolchain that deploys to IBM Cloud Kubernetes, Cloud Foundry, or Cloud Foundry Enterprise Environment. With a local app that is connected to an app in {{site.data.keyword.cloud_notm}}, use `edit` to add new services, connect and disconnect existing services, or remove existing services from your account. Additionally, you can create or view an {{site.data.keyword.cloud_notm}} Toolchain for the app. Run the following command in the root of your app directory:
+Edit your app with options such as connecting it with an app already in {{site.data.keyword.cloud_notm}}, managing the {{site.data.keyword.cloud_notm}} services of the app, and its {{site.data.keyword.cloud_notm}} toolchain that deploys to IBM Cloud Kubernetes, Cloud Foundry, or Cloud Foundry Enterprise Environment. With a local app that is connected to an app in {{site.data.keyword.cloud_notm}}, use `edit` to add new services, connect and disconnect existing services, or remove existing services from your account. Additionally, you can create or view an {{site.data.keyword.cloud_notm}} toolchain for the app. Run the following command in the root of your app directory:
 ```
 ibmcloud dev edit
 ```
@@ -280,9 +260,9 @@ You can also add a new service to your app, where you are guided through service
 ## enable
 {: #enable}
 
-Enable an existing app for {{site.data.keyword.cloud_notm}} deployment. The `enable` command attempts to automatically detect the language of an existing app and then prompt for necessary additional information. This generates and adds files that can be used for local Docker containers, Cloud Foundry deployment, Cloud Foundry Enterprise Environment deployment, or Kubernetes Container deployment. All deployment environments can be utilized through a manual `deploy` or by using a DevOps Toolchain.
+Enable an existing app for {{site.data.keyword.cloud_notm}} deployment. The `enable` command attempts to automatically detect the language of an existing app and then prompt for necessary additional information. This generates and adds files that can be used for local Docker containers, Cloud Foundry deployment, Cloud Foundry Enterprise Environment deployment, or Kubernetes Container deployment. All deployment environments can be utilized through a manual `deploy` or by using a DevOps toolchain.
 
-When logged in to {{site.data.keyword.cloud_notm}}, you can choose to connect this local app with an app that is already in {{site.data.keyword.cloud_notm}} or create a new {{site.data.keyword.cloud_notm}} app. To take advantage of {{site.data.keyword.cloud_notm}} features such as services and DevOps Toolchains, an app in {{site.data.keyword.cloud_notm}} is necessary. When an {{site.data.keyword.cloud_notm}} app is created for an app that is cloned from a Git repository, the {{site.data.keyword.cloud_notm}} app includes this repository in its configuration. 
+When logged in to {{site.data.keyword.cloud_notm}}, you can connect this local app with an app that is already in {{site.data.keyword.cloud_notm}} or create a new {{site.data.keyword.cloud_notm}} app. To take advantage of {{site.data.keyword.cloud_notm}} features such as services and DevOps toolchains, an app in {{site.data.keyword.cloud_notm}} is necessary. When an {{site.data.keyword.cloud_notm}} app is created for an app that is cloned from a Git repository, the {{site.data.keyword.cloud_notm}} app includes this repository in its configuration. 
 
 `Enable` is a Beta feature. If you have trouble enabling your app, our [troubleshooting page](/docs/cli/ts_createapps.html#troubleshoot) has help for you. In particular, `enable` isn't intended for mobile apps or frameworks. For complex apps that produce several deployable assets, each component of the app must be enabled individually. 
 

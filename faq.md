@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-03"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
@@ -43,7 +43,7 @@ Yes, you stay up to date on new releases of the CLI as they become available. Su
 
 Applications that are created or enabled from the CLI come with pre-configured settings encapsulated in the `cli-config.yml` file. The `cli-config.yml` contains default entries that are used by the commands of the CLI that can be overridden by values that are passed through the command line.
 
-Apps that have deployed to a DevOps Toolchain may also contain files such as `toolchain.yml` and `pipeline.yml`. Apps that are being manually deployed can contain a `manifest.yml` and Helm chart files (for deployment to Cloud Foundry or Kubernetes, for example).
+Apps that have deployed to a DevOps toolchain may also contain files such as `toolchain.yml` and `pipeline.yml`. Apps that are being manually deployed can contain a `manifest.yml` and Helm chart files (for deployment to Cloud Foundry or Kubernetes, for example).
 
 ## How are local containers used?
 {: #cli-faq-containers}
