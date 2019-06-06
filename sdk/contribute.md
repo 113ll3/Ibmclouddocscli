@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-06-06"
 
 keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
@@ -150,7 +150,7 @@ The required runtime libraries are managed under the `vendor` directory and are 
 
 Nested dependencies aren't listed.
 
-* [github.ibm.com/Bluemix/bluemix-cli-sdk](https://github.ibm.com/Bluemix/bluemix-cli-sdk){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* [github.com/IBM-Cloud/ibm-cloud-cli-sdk](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
    The {{site.data.keyword.cloud_notm}} CLI plug-in SDK, which provides infrastructure to develop {{site.data.keyword.cloud_notm}} CLI plug-ins.
 

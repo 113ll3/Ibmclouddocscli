@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-06"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -300,7 +300,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>NAME (required)</dt>
   <dd>Name of the service instance</dd>
   <dt>SERVICE_NAME or SERVICE_ID (required)</dt>
-  <dd>Name or ID of the service. To list service offerings, use the `ibmcloud catalog service-marketplace`[command](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace).</dd>
+  <dd>Name or ID of the service. To list service offerings, use the `ibmcloud catalog service-marketplace`[command](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace).</dd>
   <dt>SERVICE_PLAN_NAME or SERVICE_PLAN_ID (required)</dt>
   <dd>Name or ID of the service plan</dd>
   <dt>LOCATION (required)</dt>
@@ -312,7 +312,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Resource group name</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>Types of the service endpoints</dd>
+  <dd>Types of the service endpoints. Possible values are 'public', 'private', 'public-and-private'.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -348,7 +348,7 @@ ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Resource group name</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>Types of the service endpoints</dd>
+  <dd>Types of the service endpoints. Possible values are 'public', 'private', 'public-and-private'.</dd>
   <dt>-f, --force</dt>
   <dd>Force update without confirmation</dd>
 </dl>
@@ -468,7 +468,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
   <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>Parameters JSON file or JSON string</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>Type of the service endpoint</dd>
+  <dd>Type of the service endpoint. Possible values are 'public', 'private'.</dd>
   <dt>-f, --force</dt>
   <dd>Force creation without confirmation</dd>
 </dl>
@@ -609,7 +609,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Resource group name</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>Type of the service endpoint</dd>
+  <dd>Type of the service endpoint. Possible values are 'public', 'private'.</dd>
   <dt>-f, --force</dt>
   <dd>Force creation without confirmation</dd>
 </dl>

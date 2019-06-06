@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-06-06"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -81,7 +81,7 @@ You can use the `container-registry` CLI plug-in to set up your own image namesp
   ```
   {: codeblock}
 
-For more information, see the [{{site.data.keyword.registrylong}} command reference](/docs/services/Registry?topic=registry-registry_cli_reference).
+For more information, see the [{{site.data.keyword.registrylong}} command reference](/docs/services/Registry?topic=container-registry-cli-plugin-containerregcli).
 
 ## Installing {{site.data.keyword.containerlong_notm}} CLI plug-in
 {: #idt-install-kubernetes-cli-plugin}
