@@ -63,7 +63,7 @@ Projects that are created or enabled for use with the developer tools come with 
 {: #ref1}
 
 - Video: [Installing {{site.data.keyword.cloud_notm}} developer tools on Ubuntu Linux&trade;](https://www.youtube.com/watch?v=sr7KjHAKpEs){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-- Blog: [Enable existing projects for IBM Cloud with the {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+- Blog: [Enable existing projects for IBM Cloud with the {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/cloud-archive/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli//){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
 ## Code, build, and run
 {: #code-build-run}
