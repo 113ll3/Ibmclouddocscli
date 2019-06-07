@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-07"
 
 keywords: cli, sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
 
@@ -19,7 +19,7 @@ subcollection: cloud-cli
 # SDK Generator
 {: #sdk-cli}
 
-The {{site.data.keyword.IBM}} SDK Generator plug-in can be installed in the {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+The {{site.data.keyword.IBM}} SDK Generator plug-in can be installed in the {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-getting-started).
 
 As a developer on {{site.data.keyword.cloud_notm}}, you can use this plug-in to generate SDKs from your [Open API Specification](https://www.openapis.org/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") compliant REST API definition. As you make changes to your REST API definition, you can use this plug-in to regenerate only the SDK instead of regenerating the entire project.
 
@@ -40,7 +40,7 @@ Ensure that you satisfy the following requirements.
 ## Installation
 {: #sdk-installation}
 
-Install the [{{site.data.keyword.cloud_notm}} developer tools](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+Install the [{{site.data.keyword.cloud_notm}} developer tools](/docs/cli?topic=cloud-cli-getting-started).
 
 ## Commands
 {: #commands}

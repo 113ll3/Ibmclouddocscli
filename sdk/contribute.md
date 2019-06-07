@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-06-07"
 
 keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
@@ -31,7 +31,7 @@ Follow these guidelines to contribute to the {{site.data.keyword.cloud}} CLI SDK
 
    For more information about the Cloud Foundry CLI, see the [documentation](/docs/cli?topic=cloud-cli-cf#cf).
 
-* {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+* {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-getting-started).
 
    This plug-in is added to the {{site.data.keyword.cloud_notm}} CLI and provides useful resources to access {{site.data.keyword.cloud_notm}} from the command line.
 
