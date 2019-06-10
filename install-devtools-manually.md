@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-10"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -121,7 +121,7 @@ ibmcloud plugin install cloud-functions
 ```
 {: codeblock}
 
-For more information, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI plug-in](/docs/openwhisk?topic=cloud-functions-cloudfunctions_cli#cloudfunctions_cli).
+For more information, see [Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in](/docs/openwhisk?topic=cloud-functions-cli_install).
 
 ## Installing the SDK Generator CLI plug-in
 {: #idt-install-sdk-gen}
