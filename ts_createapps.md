@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -69,7 +69,7 @@ ibmcloud login
 {: codeblock}
 {: tsResolve}
 
-## Why is the image for my new app not recognized?
+## Why is the image for a new app not recognized?
 {: #ts-cli-nosuchimage}
 {: troubleshoot}
 
@@ -120,7 +120,7 @@ This error is due to the {{site.data.keyword.objectstorageshort}} service, which
 Select a different plan.
 {: tsResolve}
 
-## Why isn't my code retrieved when I create an app?
+## Why isn't code retrieved when I create an app?
 {: #retrieve-code-error}
 {: troubleshoot}
 
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-This error occurs when the `appmetrics` module is installed on a different architecture. Native npm modules that are installed on one architecture do not work on another. The included Docker images are based on the Linux&trade; kernel.
+This error occurs when the `appmetrics` module is installed on a different architecture. Native `npm` modules that are installed on one architecture do not work on another. The included Docker images are based on the Linux&trade; kernel.
 {: tsCauses}
 
 Delete the `node_modules` folder and run the `ibmcloud dev run` command again.
@@ -258,7 +258,7 @@ ibmcloud cr namespaces
 {: codeblock}
 {: tsResolve}
 
-## Why can't the language for my app be determined?
+## Why can't the language determined?
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
@@ -302,7 +302,7 @@ The many different possible causes can be found in each of the following links.
 To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
 
 ## Why can't I build the Docker image?
-{: $ts-cli-docker}
+{: #ts-cli-docker}
 {: troubleshoot}
 
 If you see the following the error: 
@@ -324,11 +324,11 @@ Be sure that Docker is installed and running:
 - To install or start [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
 {: tsResolve}
 
-## How to resolve incompatible helm versions?
-{: ts-cli-helm}
+## Helm upgrade is failing with errors
+{: #ts-cli-helm-rbac}
 {: troubleshoot}
 
-If the client and server helm versions are not in sync, you might see the following errors:
+You can run into the following error due to role-based access control (RBAC) issues:
 ```
 FAILED
 Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
@@ -338,6 +338,19 @@ cannot list resource "configmaps" in API group "" in the namespace
 ```
 {: screen}
 
+To resolve the issue, run the following command:
+{: tsResolve}
+
+```
+kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:default -n kube-system
+```
+{: codeblock}
+
+## How to resolve incompatible helm versions?
+{: #ts-cli-helm}
+{: troubleshoot}
+
+If the client and server helm versions are not in sync, you might see the following errors:
 ```
 FAILED
 The 'helm upgrade ' command failed to complete due to: exit status 1
@@ -356,7 +369,7 @@ To resolve the issue, set the client's version to the same as the cluster's vers
   export HELM_HOME=~/.helm
   ```
 
-* For Windows&trade;: As an administrator, download and install the `helm` binary at [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+* For Windows&trade;: As an administrator, download and install the `helm` binary from [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
   
   From the PowerShell terminal, use the following commands:
   ```
@@ -366,7 +379,7 @@ To resolve the issue, set the client's version to the same as the cluster's vers
   {: codeblock}
 
 ## Why is ibmcloud dev build failing with a user name that includes "@"?
-{: ts-cli-username}
+{: #ts-cli-username}
 {: troubleshoot}
 During the image build process, your user name is used for the user in the Docker tools image. If the user name contains any special characters like '@' or '-', then the Docker image build process fails with the following error:
 ```
