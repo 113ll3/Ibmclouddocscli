@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-10"
 
 keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
@@ -215,7 +215,7 @@ sh bin/build.sh
 ```
 {: codeblock}
 
-The build script also installs the plug-in to the {{site.data.keyword.Bluemix_notm}} CLI.
+The build script also installs the plug-in to the {{site.data.keyword.cloud_notm}} CLI.
 {: note}
 
 Test the plug-in by choosing either of the following commands.

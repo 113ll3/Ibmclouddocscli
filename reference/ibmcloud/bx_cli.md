@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -61,7 +61,7 @@ None.
 
 <dl>
 <dt>COMMAND|NAMESPACE</dt>
-<dd>The command or namespace that help is displayed for. If not specified, the general help for {{site.data.keyword.Bluemix_notm}} CLI is shown. Optional.</dd>
+<dd>The command or namespace that help is displayed for. If not specified, the general help for {{site.data.keyword.cloud_notm}} CLI is shown. Optional.</dd>
 </dl>
 
 ### Examples
@@ -425,7 +425,7 @@ None.
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
-View the information for all regions on {{site.data.keyword.Bluemix_notm}}.
+View the information for all regions on {{site.data.keyword.cloud_notm}}.
 
 ```
 ibmcloud regions
@@ -522,7 +522,7 @@ ibmcloud update [-f]
 </dl>
 
 ## General classic infrastructure service commands
-{: #softlayer_cli}
+{: #classic-service-commands}
 
 Use classic infrastructure commands in the {{site.data.keyword.cloud_notm}} CLI to configure and manage infrastructure services.
 
@@ -532,23 +532,23 @@ USAGE:
    ibmcloud sl command [arguments...] [options...]
 
 COMMANDS:
-   block           Gen1 infrastructure Block Storage
-   cdn             Gen1 infrastructure Content Delivery Network
-   file            Gen1 infrastructure File Storage
-   dns             Gen1 infrastructure Domain Name System
-   globalip        Gen1 infrastructure Global IP addresses
-   hardware        Gen1 infrastructure hardware servers
-   image           Gen1 infrastructure Compute images
-   ipsec           Gen1 infrastructure IPSEC VPN
-   loadbal         Gen1 infrastructure Load balancers
-   security        Gen1 infrastructure SSH Keys and SSL Certificates
-   securitygroup   Gen1 infrastructure network security groups
-   subnet          Gen1 infrastructure Network subnets
-   ticket          Gen1 infrastructure Manage Tickets
-   vlan            Gen1 infrastructure Network VLANs
-   vs              Gen1 infrastructure Virtual Servers
-   order           Gen1 infrastructure Orders
-   user            Gen1 infrastructure Manage Users
+   block           Classic infrastructure Block Storage
+   cdn             Classic infrastructure Content Delivery Network
+   file            Classic infrastructure File Storage
+   dns             Classic infrastructure Domain Name System
+   globalip        Classic infrastructure Global IP addresses
+   hardware        Classic infrastructure hardware servers
+   image           Classic infrastructure Compute images
+   ipsec           Classic infrastructure IPSEC VPN
+   loadbal         Classic infrastructure Load balancers
+   security        Classic infrastructure SSH Keys and SSL Certificates
+   securitygroup   Classic infrastructure network security groups
+   subnet          Classic infrastructure Network subnets
+   ticket          Classic infrastructure Manage Tickets
+   vlan            Classic infrastructure Network VLANs
+   vs              Classic infrastructure Virtual Servers
+   order           Classic infrastructure Orders
+   user            Classic infrastructure Manage Users
    call-api        Call arbitrary API endpoints.
    help            Print command usage message
 ```
