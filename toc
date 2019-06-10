@@ -78,7 +78,7 @@ IBM Cloud CLI and Developer Tools
 	{: .topicgroup}
 	Cloud Foundry CLI plug-ins
 		/cf-cli-plugin/cf-cli-plugin-cf-cli-plugin
-		plugins/bluemix_admin/index.md
+		plugins/admin/index.md
 		plugins/vpn/index.md
 
 	monitoring_logging.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-10"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -19,7 +19,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # {{site.data.keyword.cloud_notm}} admin CLI
-{: #bluemixadmincli}
+{: #ibmcloud-admincli}
 
 You can manage your {{site.data.keyword.cloud_notm}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command-line interface (CLI) with the {{site.data.keyword.cloud_notm}} admin CLI plug-in. For example, you can add users from an LDAP registry.
 
@@ -167,14 +167,14 @@ To add Dedicated environment users to your {{site.data.keyword.cloud_notm}} publ
 ### Listing users who are invited from {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-If you've invited Dedicated environment users to your {{site.data.keyword.Bluemix_notm}} account with the [**`invite-users-to-public`** command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users that have an existing IBMid has a status of ACTIVE. Invited users that didn't have an existing IBMid has a status of either PENDING or ACTIVE depending on whether they've accepted the invitation to the account yet. To list the users in your {{site.data.keyword.Bluemix_notm}} account:
+If you've invited Dedicated environment users to your {{site.data.keyword.cloud_notm}} account with the [**`invite-users-to-public`** command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users that have an existing IBMid has a status of ACTIVE. Invited users that didn't have an existing IBMid has a status of either PENDING or ACTIVE depending on whether they've accepted the invitation to the account yet. To list the users in your {{site.data.keyword.cloud_notm}} account:
 
 ```
 cf ba invite-users-status -apikey=public_api_key
 ```
 {: pre}
 
-To add Dedicated environment users to your {{site.data.keyword.Bluemix_notm}} public account, you must be an admin of the Dedicated account.
+To add Dedicated environment users to your {{site.data.keyword.cloud_notm}} public account, you must be an admin of the Dedicated account.
 
 <dl>
 <dt>public_api_key</dt>
@@ -234,7 +234,7 @@ You can also use **`ba sp`** as an alias for the longer **`ba set-permissions`**
 ### Removing a user
 {: #admin_remov_user}
 
-To remove a user from your {{site.data.keyword.Bluemix_notm}} environment, use the following command:
+To remove a user from your {{site.data.keyword.cloud_notm}} environment, use the following command:
 
 ```
 cf ba remove-user user_name
@@ -243,7 +243,7 @@ cf ba remove-user user_name
 
 <dl>
 <dt>user_name</dt>
-<dd>The name of the user in {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd>The name of the user in {{site.data.keyword.cloud_notm}}.</dd>
 </dl>
 
 You can also use the **`ba ru`** as an alias for the longer **`ba remove-user`** command name.
@@ -252,7 +252,7 @@ You can also use the **`ba ru`** as an alias for the longer **`ba remove-user`**
 ### Enabling managers to add users
 {: #clius_emau}
 
-If you have the Superuser permission in your {{site.data.keyword.Bluemix_notm}} environment, you can enable organization managers to add users to the organizations they manage. To enable managers to add users, use the following command:
+If you have the Superuser permission in your {{site.data.keyword.cloud_notm}} environment, you can enable organization managers to add users to the organizations they manage. To enable managers to add users, use the following command:
 
 ```
 cf ba enable-managers-add-users
@@ -265,7 +265,7 @@ You can also use the **`ba emau`** as an alias for the longer **`ba enable-manag
 ### Disabling managers from adding users
 {: #clius_dmau}
 
-If organization managers are enabled to add users to the organizations they manage in your {{site.data.keyword.Bluemix_notm}} environment with the **`enable-managers-add-users`** command, and if you have the Superuser permission, you can remove this setting. To disable managers from adding users, use the following command:
+If organization managers are enabled to add users to the organizations they manage in your {{site.data.keyword.cloud_notm}} environment with the **`enable-managers-add-users`** command, and if you have the Superuser permission, you can remove this setting. To disable managers from adding users, use the following command:
 
 ```
 cf ba disable-managers-add-users
@@ -290,7 +290,7 @@ cf ba create-org organization manager
 
 <dl>
 <dt>organization</dt>
-<dd>The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add.</dd>
+<dd>The name or GUID of the {{site.data.keyword.cloud_notm}} org to add.</dd>
 <dt>manager</dt>
 <dd>The user name of the manager for the org.</dd>
 </dl>
@@ -561,7 +561,7 @@ You can also use **`ba esp`** as an alias for the longer **`ba enable-service-pl
 ### Disabling services for all organizations
 {: #admin_dis_service_org}
 
-To disable a service from being visible in the {{site.data.keyword.Bluemix_notm}} catalog for all
+To disable a service from being visible in the {{site.data.keyword.cloud_notm}} catalog for all
 organizations, use the following command:
 
 ```
@@ -580,7 +580,7 @@ You can also use **`ba dsp`** as an alias for the longer **`ba disable-service-p
 ### Adding service visibility for organizations
 {: #admin_addvis_service_org}
 
-You can add an organization from the list of organizations that can see a specific service in the {{site.data.keyword.Bluemix_notm}} catalog. To allow an organization to view a specific service in the catalog, use the following command:
+You can add an organization from the list of organizations that can see a specific service in the {{site.data.keyword.cloud_notm}} catalog. To allow an organization to view a specific service in the catalog, use the following command:
 
 ```
 cf ba add-service-plan-visibility plan_identifier organization
@@ -601,7 +601,7 @@ You can also use **`ba aspv`** as an alias for the longer **`ba add-service-plan
 {: #admin_remvis_service_org}
 
 You can remove an organization from the list of organizations that can see a
-specific service in the {{site.data.keyword.Bluemix_notm}} catalog. To remove the visibility of a service in the catalog for an organization, use the following command:
+specific service in the {{site.data.keyword.cloud_notm}} catalog. To remove the visibility of a service in the catalog for an organization, use the following command:
 
 ```
 cf ba remove-service-plan-visibility plan_identifier organization
@@ -622,7 +622,7 @@ You can also use **`ba rspv`** as an alias for the longer **`ba remove-service-p
 {: #admin_editvis_service_org}
 
 You can edit and replace the list of services that specific
-organizations can see in the {{site.data.keyword.Bluemix_notm}} catalog. To replace all existing visible services for an organization or multiple organizations, use the
+organizations can see in the {{site.data.keyword.cloud_notm}} catalog. To replace all existing visible services for an organization or multiple organizations, use the
 following command:
 
 ```
@@ -797,7 +797,7 @@ You can also use **`ba sb`** as an alias for the longer **`ba service-brokers`**
 ### Adding a service broker
 {: #cliaddservbro}
 
-To add a service broker so that you can add a custom service to the {{site.data.keyword.Bluemix_notm}} catalog, use the following command:
+To add a service broker so that you can add a custom service to the {{site.data.keyword.cloud_notm}} catalog, use the following command:
 
 ```
 cf ba add-service-broker broker_name user_name password broker_url
@@ -822,7 +822,7 @@ You can also use **`ba asb`** as an alias for the longer **`ba add-service-broke
 {: #clidelservbro}
 
 To delete a service broker that removes the custom service from the
-{{site.data.keyword.Bluemix_notm}} catalog, use the following command:
+{{site.data.keyword.cloud_notm}} catalog, use the following command:
 
 ```
 cf ba delete-service-broker service_broker
@@ -864,11 +864,11 @@ You can also use **`ba usb`** as an alias for the longer **`ba update-service-br
 ## Administering application security groups
 {: #admin_secgro}
 
-To work with application security groups (ASGs), you must be a full access administrator for the local or dedicated environment. All users of the environment can list the available ASGs for the organization that is being targeted with the command. However, to create, update, or bind ASGs, you must be an administrator for the {{site.data.keyword.Bluemix_notm}} environment.
+To work with application security groups (ASGs), you must be a full access administrator for the local or dedicated environment. All users of the environment can list the available ASGs for the organization that is being targeted with the command. However, to create, update, or bind ASGs, you must be an administrator for the {{site.data.keyword.cloud_notm}} environment.
 
-ASGs function as virtual firewalls that control outbound traffic from the apps in your {{site.data.keyword.cloud_notm}} environment. Each ASG consists of a list of rules that allow specific traffic and communication to and from the outside network. You can bind one or more ASGs to a specific security group set, for example a group set that is used for applying global access, or you can bind to spaces within an organization in your {{site.data.keyword.Bluemix_notm}} environment.
+ASGs function as virtual firewalls that control outbound traffic from the apps in your {{site.data.keyword.cloud_notm}} environment. Each ASG consists of a list of rules that allow specific traffic and communication to and from the outside network. You can bind one or more ASGs to a specific security group set, for example a group set that is used for applying global access, or you can bind to spaces within an organization in your {{site.data.keyword.cloud_notm}} environment.
 
-{{site.data.keyword.Bluemix_notm}} is initially set up with all access to the outside network restricted. Two IBM-created security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+{{site.data.keyword.cloud_notm}} is initially set up with all access to the outside network restricted. Two IBM-created security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 Unbinding the **Default Staging** or **Default Running** group sets from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network. Use unbinding with caution and awareness of its potential impact on the running and staging apps in your environment.
 {: important}
