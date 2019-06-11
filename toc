@@ -68,7 +68,7 @@ IBM Cloud CLI and Developer Tools
 		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
 		/cloud-object-storage-cli-plugin/cloud-object-storage-cli-ic-cos-cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
-		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
+		/containers-cli-plugin/containers-cli-plugin-kubernetes-service-cli
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
 		/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
