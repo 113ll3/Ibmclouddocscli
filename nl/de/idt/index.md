@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # Apps entwickeln und bereitstellen
 {: #developing}
 
-Das Entwickeln von cloudnativen Apps mithilfe der {{site.data.keyword.dev_cli_notm}}-CLI ist ein relativ unkomplizierter Vorgang:
+Das Entwickeln von cloudnativen Anwendungen mit der {{site.data.keyword.dev_cli_notm}}-CLI ist ein relativ unkomplizierter Vorgang:
 
 1. [Erstellen oder Aktivieren einer App für die Entwicklung](#idt-create).
 2. [Codieren, Build erstellen und ausführen](#code-build-run) der App sollte lokal mithilfe von Containern erfolgen.
@@ -38,7 +38,7 @@ Es gibt mehrere Möglichkeiten, eine App zu erstellen.
 
 Für alle oben aufgeführten Erstellungsmethoden ist der Ablauf derselbe. Wählen Sie den Projekttyp, die Implementierungssprache und das zu verwendende App-Muster aus. Sie können auch Services zu Ihrer App hinzufügen (z. B. Authentifizierung oder Persistenz). Schließlich können Sie DevOps-Funktionalität für die App hinzufügen, die eine vollständige Toolchain von der Quellcodeverwaltung bis zur Teamkommunikation liefert. Dies schließt eine Pipeline ein, die bei jedem Commit ausgelöst wird, um Ihre App zu validieren, einen Build zu erstellen und in der {{site.data.keyword.cloud_notm}} bereitzustellen.
 
-![Beispielablauf für die Erstellung mit der {{site.data.keyword.dev_cli_notm}}-CLI](create_flow.png "Beispielablauf für die Erstellung mit der {{site.data.keyword.dev_cli_notm}}-CLI") <br> Abbildung 2. Beispielablauf für die Erstellung mit der {{site.data.keyword.dev_cli_notm}}-Befehlszeilenschnittstelle
+![Beispielablauf für die Erstellung mit der {{site.data.keyword.dev_cli_notm}}-CLI](create_flow.png "Beispielablauf für die Erstellung mit der {{site.data.keyword.dev_cli_notm}}-CLI")
 
 Die {{site.data.keyword.dev_cli_notm}}-CLI ist nahtlos integriert für eine möglichst benutzerfreundliche Entwicklung. Projekte, die von einer der Webkonsolen aus erstellt wurden, haben eine Schaltfläche **Code herunterladen**, um den generierten Quellcode zur weiteren Entwicklung auf Ihre Workstation herunterzuladen.
 
@@ -46,18 +46,18 @@ Die {{site.data.keyword.dev_cli_notm}}-CLI ist nahtlos integriert für eine mög
 {: #helpful}
 
 Die folgenden `ibmcloud dev`-CLI-Befehle unterstützen Sie bei der Arbeit mit Ihrem Projekt und den Webkonsolen:
-- [`code`](/docs/cli/idt?topic=cloud-cli-idt-cli#code) wird zum Herunterladen eines App-Quellcodes auf Ihre Workstation verwendet. 
+- [`code`](/docs/cli/idt?topic=cloud-cli-idt-cli#code) wird zum Herunterladen eines App-Quellcodes auf Ihre Workstation verwendet.
 - [`console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) öffnet den Browser auf der Projektseite der aktuellen App in {{site.data.keyword.cloud_notm}}.
-- [`create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) erstellt eine neue App. 
+- [`create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) erstellt eine neue App.
 - [`delete`](/docs/cli/idt?topic=cloud-cli-idt-cli#delete) wird zum Löschen der aktuellen App aus dem {{site.data.keyword.cloud_notm}}-Projektbereich verwendet.
-- [`enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) wird zum Aktivieren einer vorhandenen serverseitigen App für die Cloud verwendet. 
-- [`get-credentials`](/docs/cli/idt?topic=cloud-cli-idt-cli#get-credentials) werden verwendet, um Berechtigungsnachweise abzurufen, die für das Projekt erforderlich sind, um die Verwendung von gebundenen Services zu aktivieren. 
-- [`list`](/docs/cli/idt/?topic=cloud-cli-idt-cli#list) listet alle Apps auf, die in der/dem aktuell ausgewählten Organisation/Bereich entweder über die CLI oder die Konsolen erstellt wurden. 
+- [`enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) wird zum Aktivieren einer vorhandenen serverseitigen App für die Cloud verwendet.
+- [`get-credentials`](/docs/cli/idt?topic=cloud-cli-idt-cli#get-credentials) werden verwendet, um Berechtigungsnachweise abzurufen, die für das Projekt erforderlich sind, um die Verwendung von gebundenen Services zu aktivieren.
+- [`list`](/docs/cli/idt/?topic=cloud-cli-idt-cli#list) listet alle Apps auf, die in der/dem aktuell ausgewählten Organisation/Bereich entweder über die CLI oder die Konsolen erstellt wurden.
 
 ### Untersuchen der Projektstruktur der App
 {: #exploring-project}
 
-Projekte, die für die Verwendung mit den Entwicklertools erstellt oder aktiviert werden, haben vorkonfigurierte Einstellungen in der Datei `cli-config.yml`. Die Datei `cli-config.yml` enthält Standardeinträge, die von den `ibmcloud dev`-Befehlen verwendet werden, die mit an die Befehlszeile übergebenen Werten überschrieben werden können. 
+Projekte, die für die Verwendung mit den Entwicklertools erstellt oder aktiviert werden, haben vorkonfigurierte Einstellungen in der Datei `cli-config.yml`. Die Datei `cli-config.yml` enthält Standardeinträge, die von den `ibmcloud dev`-Befehlen verwendet werden, die mit an die Befehlszeile übergebenen Werten überschrieben werden können.
 
 ### Referenz-Blogs und -Videos
 {: #ref1}
@@ -68,9 +68,9 @@ Projekte, die für die Verwendung mit den Entwicklertools erstellt oder aktivier
 ## Codieren, Build erstellen und ausführen
 {: #code-build-run}
 
-Sobald Ihr Projekt erstellt ist, können Sie es für Ihre Zwecke anpassen. Der grundsätzliche Ablauf besteht aus dem Bearbeiten des Quellcodes und dem anschließenden Ausführen von [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build), um die App in einem lokalen Container zu kompilieren, der für die Sprache und Konfiguration Ihrer App spezifisch ist. Abhängig von der Sprache und dem Generator Ihrer Apps können mehrere Container verfügbar sein, die standardmäßig einen Wert annehmen, der die lokale Builderstellung und Ausführung unterstützt. Typischerweise gibt es einen Container 'tools' für Builds und lokales Debugging. Dieser Container enthält zusätzliche Tools und Funktionalitäten, die Sie bei der Entwicklung unterstützen. Es gibt auch einen Container 'run', der die Laufzeit Ihrer App abbildet, sobald sie in der Cloud bereitgestellt wurde - entweder in Cloud Foundry oder in einer Kubernetes-basierten Containerumgebung von IBM. 
+Sobald Ihr Projekt erstellt ist, können Sie es für Ihre Zwecke anpassen. Der grundsätzliche Ablauf besteht aus dem Bearbeiten des Quellcodes und dem anschließenden Ausführen von [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build), um die App in einem lokalen Container zu kompilieren, der für die Sprache und Konfiguration Ihrer App spezifisch ist. Abhängig von der Sprache und dem Generator Ihrer Apps können mehrere Container verfügbar sein, die standardmäßig einen Wert annehmen, der die lokale Builderstellung und Ausführung unterstützt. Typischerweise gibt es einen Container 'tools' für Builds und lokales Debugging. Dieser Container enthält zusätzliche Tools und Funktionalitäten, die Sie bei der Entwicklung unterstützen. Es gibt auch einen Container 'run', der die Laufzeit Ihrer App abbildet, sobald sie in der Cloud bereitgestellt wurde - entweder in Cloud Foundry oder in einer Kubernetes-basierten Containerumgebung von IBM.
 
-Sie können eine beliebige IDE oder einen beliebigen Editor verwenden, um Ihre Anwendung zu codieren. {{site.data.keyword.IBM_notm}} bietet
+Sie können eine beliebige IDE oder einen beliebigen Editor verwenden, um Ihre App zu codieren. {{site.data.keyword.IBM_notm}} bietet
 eine Erweiterung für den Microsoft&trade; VisualStudio Code-Editor (VSCode) an, mit der Sie direkt auf alle IDE-Befehle zugreifen können.
 
 Wenn das Projekt erstellt ist, führen Sie Ihre App mit dem Befehl [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) oder [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug) aus. Die App wird innerhalb des entsprechenden Containers ausgeführt. Manche App-Muster unterstützen mehrere externe Container außerhalb Ihrer Apps. Die Apps werden während der Ausführung oder beim Debugging automatisch gestartet und konfiguriert. Außerdem gibt es einen Befehl [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test), der alle zugeordneten Testfälle für die App ausführt.
@@ -78,9 +78,9 @@ Wenn das Projekt erstellt ist, führen Sie Ihre App mit dem Befehl [`ibmcloud de
 ### Vorgehensweise zur Verwendung lokaler Container
 {: #local-containers}
 
-Die {{site.data.keyword.dev_cli_long}}-CLI verwendet zwei Container zum Erstellen und Testen Ihrer Anwendung. Der erste ist der Container 'tools', der die erforderlichen Dienstprogramme zum Erstellen und Testen Ihrer Anwendung enthält. Die Dockerfile für diesen Container ist durch den Parameter [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters) definiert. Sie können ihn als Entwicklungscontainer ansehen, denn er enthält die Tools, die üblicherweise für die Entwicklung einer bestimmten Laufzeit verwendet werden.
+Die {{site.data.keyword.dev_cli_long}}-CLI verwendet zwei Container zum Erstellen und Testen Ihrer App. Der erste ist der Container 'tools', der die erforderlichen Dienstprogramme zum Erstellen und Testen Ihrer App enthält. Die Dockerfile für diesen Container ist durch den Parameter [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters) definiert. Sie können ihn als Entwicklungscontainer ansehen, denn er enthält die Tools, die üblicherweise für die Entwicklung einer bestimmten Laufzeit verwendet werden.
 
-Der zweite Container ist der Container 'run'. Dieser Container hat ein Format, das beispielsweise für die Verwendung in {{site.data.keyword.cloud}} geeignet ist. In der Folge wird ein Eingangspunkt definiert, der Ihre Anwendung startet. Wenn Ihre Anwendung über die {{site.data.keyword.dev_cli_short}}-CLI ausgeführt werden soll, verwendet sie diesen Container. Die Dockerfile für diesen Container ist durch den Parameter [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters) definiert.
+Der zweite Container ist der Container 'run'. Dieser Container hat ein Format, das beispielsweise für die Verwendung in {{site.data.keyword.cloud}} geeignet ist. In der Folge wird ein Eingangspunkt definiert, der Ihre App startet. Wenn Ihre App über die {{site.data.keyword.dev_cli_short}}-CLI ausgeführt werden soll, verwendet die App diesen Container. Die Dockerfile für diesen Container ist durch den Parameter [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters) definiert.
 
 ### Hilfreiche CLI-Befehle
 {: #helpful2}

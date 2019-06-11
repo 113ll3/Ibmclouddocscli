@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -27,11 +27,11 @@ subcollection: cloud-cli
 Lösungen zu häufig auftretenden Problemen finden Sie in der {{site.data.keyword.dev_cli_short}}-Befehlszeilenschnittstelle (Command Line Interface, CLI). In vielen Fällen können Sie diese Probleme durch Ausführen weniger einfacher Schritte beheben.
 {: shortdesc}
 
-## Warum wird ein Hostnamenfehler gemeldet, wenn ich eine App mit einem nicht mobilen Muster erstelle?
+## Warum wird ein Hostnamenfehler gemeldet, wenn ich eine Anwendung mit einem nicht mobilen Muster erstelle?
 {: #ts-cli-hostname-error}
 {: troubleshoot}
 
-Wenn Sie eine App über die {{site.data.keyword.dev_cli_short}}-CLI in Cloud Foundry bereitstellen, wird möglicherweise der folgende Fehler angezeigt. Diese Meldung wird gegebenenfalls auch noch nach Eingabe eines eindeutigen Hostnamens angezeigt.
+Wenn Sie eine Anwendung über die {{site.data.keyword.dev_cli_short}}-CLI in Cloud Foundry bereitstellen, wird möglicherweise der folgende Fehler angezeigt. Diese Meldung wird gegebenenfalls auch noch nach Eingabe eines eindeutigen Hostnamens angezeigt.
 ```
 The hostname <myHostname> is taken.
 ```
@@ -149,7 +149,7 @@ Rufen Sie den Code auf eine der folgenden Arten ab:
 
 * Öffnen Sie die {{site.data.keyword.dev_console}}.
 
-	1. Wählen Sie Ihre [App ](https://cloud.ibm.com/resources){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") in der {{site.data.keyword.dev_console}} aus.
+	1. Wählen Sie Ihre [App](https://cloud.ibm.com/resources){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") in der {{site.data.keyword.dev_console}} aus.
 
 	2. Klicken Sie auf **Code herunterladen**.
 {: tsResolve}
@@ -181,7 +181,8 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-Dieser Fehler tritt auf, wenn das Modul `appmetrics` in einer anderen Architektur installiert ist. Native NPM-Module, die in einer Architektur installiert sind, funktionieren nicht in einer anderen. Die enthaltenen Docker-Images basieren auf dem Linux&trade;-Kernel.{: tsCauses}
+Dieser Fehler tritt auf, wenn das Modul `appmetrics` in einer anderen Architektur installiert ist. Native NPM-Module, die in einer Architektur installiert sind, funktionieren nicht in einer anderen. Die enthaltenen Docker-Images basieren auf dem Linux&trade;-Kernel.
+{: tsCauses}
 
 Löschen Sie den Ordner `node_modules` und führen Sie den Befehl `ibmcloud dev run` erneut aus.
 {: tsResolve}
@@ -261,7 +262,7 @@ ibmcloud cr namespaces
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
-Der folgende Fehler wird möglicherweise angezeigt, wenn Sie Ihre App starten: 
+Der folgende Fehler wird möglicherweise angezeigt, wenn Sie Ihre App starten:
 ```
 FAILED
 Could not determine the language of your app.
@@ -273,7 +274,7 @@ directly.
 {: tsSymptoms}
 
 Dieser Fehler kann eine der folgenden Ursachen haben:
-- Der Befehl [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) wurde in einem Verzeichnis ausgeführt, das nicht das Quellenverzeichnis Ihrer Anwendung ist.
+- Der Befehl [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) wurde in einem Verzeichnis ausgeführt, das nicht das Quellenverzeichnis Ihrer App ist.
 - Der Befehl [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) wurde für eine App einer Sprache ausgeführt, die nicht erkannt wird.
 {: tsCauses}
 
@@ -290,8 +291,8 @@ Möglicherweise sind verschiedene Probleme aufgetreten, als Sie eine App, die f�
 Die vielfältigen verschiedenen möglichen Ursachen sind jeweils unter den folgenden Links aufgeführt.
 {: tsCauses}
 
-- Weitere Informationen zum Beheben derartiger Probleme bei einer Spring-App finden Sie in [Vorhandene Spring Boot-Anwendungen für die Cloudbereitstellung aktivieren](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
-- Weitere Informationen zum Beheben derartiger Probleme bei einer `Node.js`-App finden Sie in [Vorhandene Node.js-Anwendungen für die Cloudbereitstellung aktivieren](/docs/node?topic=nodejs-enable_existing#enable_existing).
+- Weitere Informationen zum Beheben derartiger Probleme bei einer Spring-App finden Sie in [Vorhandene Spring Boot-Apps für die Cloudbereitstellung aktivieren](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
+- Weitere Informationen zum Beheben derartiger Probleme bei einer `Node.js`-App finden Sie in [Vorhandene Node.js-Apps für die Cloudbereitstellung aktivieren](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 
 ## Vorgehensweise zur manuellen separaten Installation der Komponenten der {{site.data.keyword.dev_cli_notm}}-CLI
@@ -367,7 +368,7 @@ Zur Behebung des Problems müssen Sie die Version des Clients auf die der Cluste
 ## Warum schlägt 'ibmcloud dev build' bei Verwendung eines Benutzernamens, der "@" enthält, fehl?
 {: ts-cli-username}
 {: troubleshoot}
-Während des Image-Erstellungsprozesses wird Ihr Benutzername für den Benutzer im Docker-Tool-Image verwendet. Wenn der Benutzername Sonderzeichen wie '@' oder '-' enthält, schlägt der Erstellungsprozess des Docker-Images fehl und der folgende Fehler wird angezeigt: 
+Während des Image-Erstellungsprozesses wird Ihr Benutzername für den Benutzer im Docker-Tool-Image verwendet. Wenn der Benutzername Sonderzeichen wie '@' oder '-' enthält, schlägt der Erstellungsprozess des Docker-Images fehl und der folgende Fehler wird angezeigt:
 ```
 Image will have user johnsmith@acme.com with id 501 added
 

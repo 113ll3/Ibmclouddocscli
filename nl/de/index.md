@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -50,15 +50,15 @@ Sie benötigen ein [{{site.data.keyword.cloud_notm}}-Konto](https://cloud.ibm.co
 
 Die aktuellste Version der {{site.data.keyword.cloud_notm}}-CLI wird installiert, wenn Sie den Befehl ausführen.
 
-* Führen Sie für Mac und Linux&trade; den folgenden Befehl aus: 
+* Führen Sie für Mac und Linux&trade; den folgenden Befehl aus:
   ```
   curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
 
-* Führen Sie für Windows&trade; 10 Pro den folgenden Befehl als Administrator aus: 
+* Führen Sie für Windows&trade; 10 Pro den folgenden Befehl als Administrator aus:
   ```
-  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
 
@@ -108,6 +108,6 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 ## Nächste Schritte
 {: #next-steps}
 
-* Sie sind jetzt bereit, Ihre erste Anwendung zu entwickeln und bereitzustellen. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli).
+* Sie können nun Ihre erste App entwickeln und bereitstellen. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli).
 
 * Sie können Benachrichtigungen zu neuen Releases der {{site.data.keyword.cloud_notm}}-CLI erhalten. Abonnieren Sie das [Release-Repository der {{site.data.keyword.cloud_notm}}-CLI](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").

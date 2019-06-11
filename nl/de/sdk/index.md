@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
 
@@ -23,7 +23,7 @@ Das {{site.data.keyword.IBM}} SDK Generator-Plug-in kann in der {{site.data.keyw
 
 Als Entwickler können Sie dieses Plug-in in {{site.data.keyword.cloud_notm}} verwenden, um SDKs aus Ihrer mit der [Open API-Spezifikation ](https://www.openapis.org/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") kompatiblen REST-API-Definition zu generieren. Wenn Sie Änderungen an Ihrer REST-API-Definition vornehmen, können Sie dieses Plug-in verwenden, um nur das SDK und nicht das gesamte Projekt neu zu erstellen.
 
-Sie können auch prüfen, ob Ihre Cloud Foundry-Apps in einem angegebenen Bereich REST-API-Definitionen aufweisen, die für die SDK-Generierung gültig sind. Schließlich können Sie das {{site.data.keyword.IBM_notm}} SDK Generator-Plug-in verwenden, um alle REST-API-Definitionen zu prüfen und sicherzustellen, dass sie den SDK Generator-Definitionen entsprechen.
+Sie können auch prüfen, ob Ihre Cloud Foundry-Anwendungen in einem angegebenen Bereich REST-API-Definitionen aufweisen, die für die SDK-Generierung gültig sind. Schließlich können Sie das {{site.data.keyword.IBM_notm}} SDK Generator-Plug-in verwenden, um alle REST-API-Definitionen zu prüfen und sicherzustellen, dass sie den SDK Generator-Definitionen entsprechen.
 
 Dieses {{site.data.keyword.IBM_notm}} SDK Generator-Plug-in ermöglicht Ihnen, Ihre Back-End-Services mit einem generierten SDK einfach in Ihre App zu integrieren. Wenn eine Änderung a einer REST-API auftritt, können Sie das SDK neu generieren und das alte ersetzen, um ein nahtloses SDK-Upgrade zu ermöglichen. Sie können auch die CLI in eine DevOps-Pipeline integrieren und sicherstellen, dass das SDK immer mit den API-Spezifikationen übereinstimmt, wenn die App erstellt wird.
 

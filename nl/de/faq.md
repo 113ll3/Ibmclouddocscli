@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-21"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
@@ -43,14 +43,14 @@ Ja, Sie bleiben so auf dem Laufenden über neue Releases der CLI und werden bena
 
 Anwendungen, die über die CLI erstellt oder aktiviert werden, enthalten vorkonfigurierte Einstellungen, die in der Datei `cli-config.yml` zusammengefasst sind. Die Datei `cli-config.yml` enthält Standardeinträge, die von den Befehlen der CLI verwendet werden und durch an die Befehlszeile übergebene Werte überschrieben werden können.
 
-Anwendungen, die in einer DevOps-Toolchain bereitgestellt wurden, können ebenfalls Dateien wie z. B. `toolchain.yml` und `pipeline.yml` enthalten. Anwendungen, die manuell bereitgestellt werden, können eine `manifest.yml`-Datei und Helm-Diagrammdateien enthalten (z. B. für die Bereitstellung in Cloud Foundry oder Kubernetes).
+Apps, die in einer DevOps-Toolchain bereitgestellt wurden, können ebenfalls Dateien wie `toolchain.yml` und `pipeline.yml` enthalten. Apps, die manuell bereitgestellt werden, können eine Datei `manifest.yml` und Helm-Diagrammdateien enthalten (z. B. für die Bereitstellung in Cloud Foundry oder Kubernetes).
 
 ## Wie werden lokale Container verwendet?
 {: #cli-faq-containers}
 
-Das {{site.data.keyword.dev_cli_long}}-CLI-Plug-in verwendet zwei Container, um das Erstellen und Testen Ihrer Anwendung zu vereinfachen. Der erste ist der Container 'tools', der die erforderlichen Dienstprogramme zum Erstellen und Testen Ihrer Anwendung enthält. Die `Dockerfile` für diesen Container ist durch den Parameter [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters) definiert. Sie können ihn als Entwicklungscontainer ansehen, denn er enthält die Tools, die üblicherweise für die Entwicklung einer bestimmten Laufzeit verwendet werden.
+Das {{site.data.keyword.dev_cli_long}}-CLI-Plug-in verwendet zwei Container, um das Erstellen und Testen Ihrer App zu vereinfachen. Der erste ist der Container 'tools', der die erforderlichen Dienstprogramme zum Erstellen und Testen Ihrer App enthält. Die `Dockerfile` für diesen Container ist durch den Parameter [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters) definiert. Sie können ihn als Entwicklungscontainer ansehen, denn er enthält die Tools, die üblicherweise für die Entwicklung einer bestimmten Laufzeit verwendet werden.
 
-Der zweite Container ist der Ausführungscontainer, der die tatsächliche Laufzeitumgebung Ihrer App recht genau abbildet, nachdem diese in der Cloud bereitgestellt wurde. Dieser Container weist ein Format auf, das beispielsweise für die Bereitstellung zur Verwendung in {{site.data.keyword.cloud_notm}} geeignet ist. In der Folge wird ein Eingangspunkt definiert, der Ihre Anwendung startet. Wenn Sie entscheiden, dass Ihre Anwendung über die {{site.data.keyword.dev_cli_long}}-CLI ausgeführt werden soll, verwendet die Anwendung diesen Container. Die `Dockerfile` für diesen Container ist durch den Parameter [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) definiert.
+Der zweite Container ist der Ausführungscontainer, der die tatsächliche Laufzeitumgebung Ihrer App recht genau abbildet, nachdem diese in der Cloud bereitgestellt wurde. Dieser Container weist ein Format auf, das beispielsweise für die Bereitstellung zur Verwendung in {{site.data.keyword.cloud_notm}} geeignet ist. In der Folge wird ein Eingangspunkt definiert, der Ihre App startet. Wenn Ihre App über das {{site.data.keyword.dev_cli_long}}-CLI-Plug-in ausgeführt werden soll, verwendet die App diesen Container. Die `Dockerfile` für diesen Container ist durch den Parameter [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) definiert.
 
 ## Wie implementiere ich vorhandenen Code?
 
