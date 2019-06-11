@@ -117,7 +117,7 @@ ibmcloud resource group-create example-group
 
 Update an existing resource group
 ```
-ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] 
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -128,8 +128,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
   <dd>Name of the target resource group</dd>
   <dt>-n, --name</dt>
   <dd>New name of the resource group</dd>
-  <dt>-q, --quota</dt>
-  <dd>Name of the new quota definition</dd>
   <dt>-f</dt>
   <dd>Force update without confirmation</dd>
 </dl>
@@ -139,12 +137,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 Rename resource group `example-group` to `trial-group`:
 ```
 ibmcloud resource group-update example-group -n trial-group
-```
-{: codeblock}
-
-Change the quota of resource group `example-group` to `free`:
-```
-ibmcloud resource group-update example-group -q free
 ```
 {: codeblock}
 
