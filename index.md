@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-19"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -35,7 +35,6 @@ The installation command in this tutorial installs the latest stand-alone {{site
 * {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} plug-in
 * {{site.data.keyword.registrylong_notm}} plug-in
 * {{site.data.keyword.containerlong_notm}} plug-in
-* `sdk-gen` plug-in
 
 ## Before you begin
 {: #idt-prereq}

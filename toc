@@ -85,8 +85,6 @@ IBM Cloud CLI and Developer Tools
 
 	{: .topicgroup}
 	SDKs for Mobile
-		sdk/index.md
-		sdk/contribute.md
 		sdk/sdk.md
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md

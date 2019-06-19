@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -123,15 +123,3 @@ ibmcloud plugin install cloud-functions
 
 For more information, see [Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in](/docs/openwhisk?topic=cloud-functions-cli_install).
 
-## Installing the SDK Generator CLI plug-in
-{: #idt-install-sdk-gen}
-
-As an {{site.data.keyword.cloud_notm}} developer you can use the plug-in to generate SDKs from your [Open API Specification](https://www.openapis.org/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")-compliant REST API definition. As the REST API definition evolves, you can use the plug-in to regenerate only the SDK instead of regenerating the entire project.
-
-To install the SDK Generator CLI plug-in, run the following command:
-```
-ibmcloud plugin install sdk-gen
-```
-{: codeblock}
-
-For more information, see [SDK Generator](/docs/cli/sdk?topic=cloud-cli-sdk-cli#sdk-cli).
