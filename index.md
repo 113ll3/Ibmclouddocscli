@@ -33,6 +33,7 @@ The installation command in this tutorial installs the latest stand-alone {{site
 * `curl`
 * {{site.data.keyword.dev_cli_notm}} plug-in
 * {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} plug-in
+* {{site.data.keyword.cos_full_notm}} plug-in
 * {{site.data.keyword.registrylong_notm}} plug-in
 * {{site.data.keyword.containerlong_notm}} plug-in
 

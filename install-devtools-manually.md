@@ -70,6 +70,18 @@ To view a local version of the Kubernetes dashboard, and to deploy apps into you
 
 The prefix for running commands by using the Kubernetes command line tool is `kubectl`. For more information, see [Setting up the CLI and API](/docs/containers?topic=containers-cs_cli_install#cs_cli_install).
 
+## Installing {{site.data.keyword.cos_full_notm}} CLI plug-in
+
+The {{site.data.keyword.cos_full_notm}} plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with Object Storage resources.
+
+* To install the {{site.data.keyword.cos_full_notm}} plug-in, run the following command:
+  ```
+  ibmcloud plugin install cloud-object-storage
+  ```
+  {: codeblock}
+
+For more information, see the [{{site.data.keyword.cos_full_notm}} command reference](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli).
+
 ## Installing {{site.data.keyword.registrylong_notm}} CLI plug-in
 {: #idt-install-container-registry-cli-plugin}
 
