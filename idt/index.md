@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-06-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -13,7 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 
@@ -38,7 +38,7 @@ There are several ways that you can create an app.
 
 For any of the previous creation methods, the flow is similar. Select the project type, implementation language, and app pattern to use. You can also opt to add services to your app, such as authentication or persistence. Finally, you can configure continuous devlivery for the app, which provides a complete toolchain of source control and team communications. Including a pipeline that is triggered on each commit to validate, build, and deploy your app to the {{site.data.keyword.cloud_notm}}.
 
-![Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI](create_flow.png "Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI"){: caption="Figure 1. Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI" caption-side="bottom"}
+![Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI](../images/create_flow.png "Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI"){: caption="Figure 1. Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI" caption-side="bottom"}
 
 The {{site.data.keyword.dev_cli_notm}} CLI works closely together to provide a smooth experience during development. Projects that are created from the web consoles provide a **Download code** button to download the generated source code to your workstation for further development.
 
