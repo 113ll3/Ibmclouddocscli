@@ -97,7 +97,6 @@ ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/
 ```
 {: codeblock}
 
-Output:
 ```
 Attempting to download the binary file...
  7.28 MiB / 7.28 MiB [===========================================] 100.00% 0s
