@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-25"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -533,7 +533,6 @@ USAGE:
 
 COMMANDS:
    block           Classic infrastructure Block Storage
-   cdn             Classic infrastructure Content Delivery Network
    file            Classic infrastructure File Storage
    dns             Classic infrastructure Domain Name System
    globalip        Classic infrastructure Global IP addresses

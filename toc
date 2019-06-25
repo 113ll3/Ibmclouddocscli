@@ -36,7 +36,6 @@ IBM Cloud CLI and Developer Tools
 		reference/ibmcloud/cli_billing.md
 		reference/ibmcloud/cli_block_storage.md
 		reference/ibmcloud/cli_catalog.md
-		reference/ibmcloud/cli_cdn.md
 		reference/ibmcloud/cli_cf_apps.md
 		reference/ibmcloud/cli_cf_services.md
 		reference/ibmcloud/cli_cfee.md
