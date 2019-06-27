@@ -402,14 +402,14 @@ ibmcloud dev pipeline-run [pipelineID] [--stage-id stageID] [--json]
 ## pipeline-log
 {: #pipeline-log}
 
-View recents logs of a pipeline. If the pipeline ID is only specified as an argument, all logs for all jobs in all stages are printed for that pipeline.
+View recent pipeline logs by using the `pipeline-log` command. 
 
-If the stage ID flag is populated, the logs are filtered by that stage in the pipeline. 
+* If the pipeline ID is specified as an argument, all logs for all jobs in all stages are printed for that pipeline.
+* If the stage ID flag is populated, the logs are filtered by that stage in the pipeline. 
+* If the job ID is specified with the stage ID, the logs are filtered to just the job in the stage. 
+* If the job execution ID is specified along with the stage ID and job ID, a search is done among all available logs that match the job execution ID specified.
 
-If the job ID is specified with the stage ID, the logs are filtered to just the job in the stage. 
-
-If the job execution ID is specified along with the stage ID and job ID, a search is done among all available logs that match the job execution ID specified.
-
+Usage:
 ```
 ibmcloud dev pipeline-log [pipelineID] [--stage-id stageID] [--job-id jobID] [--job-exec-id jobExecutionID]
 ```
@@ -443,7 +443,6 @@ ibmcloud dev pipeline-log [pipelineID] [--stage-id stageID] [--job-id jobID] [--
 {: #pipeline-open}
 
 View the URL for the pipeline through the `pipeline-open` command. The `pipeline-open` command also opens the URL in your default browser.
-
 ```
 ibmcloud dev pipeline-open [pipelineID]
 ```
@@ -638,7 +637,7 @@ The following parameter is exclusive to the `test` command. There are [parameter
 
 Delete a toolchain. If no toolchain name is provided, you can select one from a list. The list of toolchains depends on the currently targeted resource group and region.
 
-The targeted Resource Group is found in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target). 
+The targeted Resource Group is found in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target).
 ```
 ibmcloud dev toolchain-delete [toolchainName] [--force,-f]
 ```
