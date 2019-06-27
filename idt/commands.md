@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-27"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -137,12 +137,22 @@ Use the `delete` command to remove apps from your {{site.data.keyword.cloud_notm
 
 Run the following command to delete your app from {{site.data.keyword.cloud_notm}}:
 ```
-ibmcloud dev delete <appName>
+ibmcloud dev delete [appName] [--force,-f]
 ```
 {: codeblock}
 
 {{site.data.keyword.cloud_notm}} services aren't removed.
 {: note}
+
+
+### delete command parameters
+{: #delete-command-parameters}
+
+#### `force`
+{: #delete-force}
+
+* Parameter optionally used to skip the prompt confirmation for deleting an application
+* Usage `ibmcloud dev delete [appName] --force`
 
 ## deploy
 {: #deploy}
@@ -200,7 +210,7 @@ The following parameters can be used with the `deploy` command or by updating th
 #### `deploy-target`
 {: #deploy-target}
 
-* Parameter optionally used to indicate the type of deployment to be completed. The default deployment type is buildpack.
+* Parameter used to indicate the type of deployment to be completed. The default deployment type is buildpack.
 * Usage `ibmcloud dev deploy -t|--target buildpack|container`
 
 #### `deploy-image-target`
@@ -212,25 +222,25 @@ The following parameters can be used with the `deploy` command or by updating th
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* Parameter optionally used to define the name of the Kubernetes cluster for a container deployment to {{site.data.keyword.cloud_notm}}
+* Parameter used to define the name of the Kubernetes cluster for a container deployment to {{site.data.keyword.cloud_notm}}.
 * Usage `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `host`
 {: #host}
 
-* Parameter optionally used to define the host name of the app when you deploy to Cloud Foundry.
+* Parameter used to define the host name of the app when you deploy to Cloud Foundry.
 * Usage `ibmcloud dev deploy --host [hostname]`
 
 #### `domain`
 {: #domain}
 
-* Parameter optionally used to define the domain of the app when you deploy to Cloud Foundry.
+* Parameter used to define the domain of the app when you deploy to Cloud Foundry.
 * Usage `ibmcloud dev deploy --domain [domain]`
 
 ## diag
 {: #diag}
 
-The `diag` command is used as a diagnostic to display the version information of installed dependencies for the {{site.data.keyword.dev_cli_notm}} CLI. This is helpful to determine whether you're missing any dependencies or to help in debugging problems.
+The `diag` command is used as a diagnostic to display the version information of installed dependencies for the {{site.data.keyword.dev_cli_notm}} CLI. Running `diag` is helpful to determine whether you're missing any dependencies or to help in debugging problems.
 
 Run the following command to display the versions of your installed dependencies:
 ```
@@ -241,7 +251,7 @@ ibmcloud dev diag
 ## edit
 {: #edit}
 
-Edit your app with options such as connecting it with an app already in {{site.data.keyword.cloud_notm}}, managing the {{site.data.keyword.cloud_notm}} services of the app, and its {{site.data.keyword.cloud_notm}} toolchain that deploys to IBM Cloud Kubernetes, Cloud Foundry, or Cloud Foundry Enterprise Environment. With a local app that is connected to an app in {{site.data.keyword.cloud_notm}}, use `edit` to add new services, connect and disconnect existing services, or remove existing services from your account. Additionally, you can create or view an {{site.data.keyword.cloud_notm}} toolchain for the app. Run the following command in the root of your app directory:
+Edit your app with options such as connecting it with an existing {{site.data.keyword.cloud_notm}} app, managing {{site.data.keyword.cloud_notm}}, and its {{site.data.keyword.cloud_notm}} toolchain that deploys to {{site.data.keyword.cloud_notm}} Kubernetes, Cloud Foundry, or Cloud Foundry Enterprise Environment. With a local app that is connected to an app in {{site.data.keyword.cloud_notm}}, use `edit` to add new services, connect and disconnect existing services, or remove existing services from your account. Additionally, you can create or view an {{site.data.keyword.cloud_notm}} toolchain for the app. Run the following command in the root of your app directory:
 ```
 ibmcloud dev edit
 ```
@@ -264,7 +274,7 @@ Enable an existing app for {{site.data.keyword.cloud_notm}} deployment. The `ena
 
 While logged in to {{site.data.keyword.cloud_notm}}, you can connect this local app with an app that is already in {{site.data.keyword.cloud_notm}} or create a new {{site.data.keyword.cloud_notm}} app. To take advantage of {{site.data.keyword.cloud_notm}} features such as services and DevOps toolchains, an app in {{site.data.keyword.cloud_notm}} is necessary. When an {{site.data.keyword.cloud_notm}} app is created for an app that is cloned from a Git repository, the {{site.data.keyword.cloud_notm}} app includes this repository in its configuration. 
 
-`Enable` is a Beta feature. If you have trouble cloud enabling your app, see [troubleshooting](/docs/cli?topic=cloud-cli-troubleshoot). In particular, `enable` isn't intended for mobile apps or frameworks. For complex apps that produce several deployable assets, each component of the app must be enabled individually. 
+The `enable` command is a Beta feature. If you have trouble with the `enable` command, see [troubleshooting](/docs/cli?topic=cloud-cli-troubleshoot). In particular, `enable` isn't intended for mobile apps or frameworks. For complex apps that produce several deployable assets, each component of the app must be enabled individually. 
 
 Run the following command to enable an existing app in the current directory:
 ```
@@ -294,7 +304,7 @@ Language options include:
 * java-mp (interpreted as Java&trade; - Java&trade; MicroProfile)
 * java-spring (interpreted as Java&trade; - Spring Framework)
 
-Files that are created by using the `ibmcloud dev enable` command, and have name conflicts with existing files in the app folder, are saved with a `.merge` file extension.  
+Files that are created by using the `ibmcloud dev enable` command are saved with a `.merge` file extension if there are name conflicts with existing files in the app folder.
 
 ### enable command parameters
 {: #enable-parameters}
@@ -346,6 +356,99 @@ ibmcloud dev list
 ```
 {: codeblock}
 
+## pipeline-get
+{: #pipeline-get}
+
+View the details of a pipeline.
+
+```
+ibmcloud dev pipeline-get [pipelineID] [--json]
+```
+{: codeblock}
+
+### pipeline-get command parameters
+{: #pipeline-get-command-parameters}
+
+#### `json`
+{: #json}
+
+* Parameter used to output the pipeline details in JSON format.
+* Usage `ibmcloud dev pipeline-get [pipelineID] --json`
+
+## pipeline-run
+{: #pipeline-run}
+
+Run a pipeline.
+```
+ibmcloud dev pipeline-run [pipelineID] [--stage-id stageID] [--json] 
+```
+{: codeblock}
+
+### pipeline-run command parameters
+{: #pipeline-run-command-parameters}
+
+#### `stage-id`
+{: #stage-id}
+
+* Parameter optionally used to select a pipeline's stage to run
+* Usage `ibmcloud dev pipeline-run [pipelineID] --stage-id [stageID]`
+
+#### `json`
+{: #json}
+
+* Parameter used to output the pipeline's invocation details in JSON format.
+* Usage `ibmcloud dev pipeline-run [pipelineID] --json`
+
+## pipeline-log
+{: #pipeline-log}
+
+View recents logs of a pipeline. If the pipeline ID is only specified as an argument, all logs for all jobs in all stages are printed for that pipeline.
+
+If the stage ID flag is populated, the logs are filtered by that stage in the pipeline. 
+
+If the job ID is specified with the stage ID, the logs are filtered to just the job in the stage. 
+
+If the job execution ID is specified along with the stage ID and job ID, a search is done among all available logs that match the job execution ID specified.
+
+```
+ibmcloud dev pipeline-log [pipelineID] [--stage-id stageID] [--job-id jobID] [--job-exec-id jobExecutionID]
+```
+{: codeblock}
+
+### pipeline-log command parameters
+{: #pipeline-log-command-parameters}
+
+#### `stage-id`
+{: #stage-id}
+
+* Parameter used to filter the logs by the stage ID.
+* Usage `ibmcloud dev pipeline-log [pipelineID]  --stage-id [stageID]`
+
+#### `job-id`
+{: #job-id}
+
+* Parameter used to filter the logs by the job ID.
+* Requires the `stage-id` flag.
+* Usage `ibmcloud dev pipeline-log [pipelineID]  --stage-id [stageID] --job-id [jobID]`
+
+#### `job-exec-id`
+{: #job-exec-id}
+
+* Parameter used to filter the logs by the job execution ID.
+* Requires the `stage-id` flag.
+* Requires the `job-id` flag.
+* Usage `ibmcloud dev pipeline-log [pipelineID]  --stage-id [stageID] --job-id [jobID] --job-exec-id [jobExecutionID]`
+
+## pipeline-open
+{: #pipeline-open}
+
+View the URL for the pipeline through the `pipeline-open` command. The `pipeline-open` command also opens the URL in your default browser.
+
+```
+ibmcloud dev pipeline-open [pipelineID]
+```
+{: codeblock}
+
 ## run
 {: #run}
 
@@ -353,7 +456,7 @@ If you're using Windows&trade;, you must run Windows&trade; 10 Pro or later.
 
 You can run your app through the `run` command. A build must first be completed against the app by using the `build` command. When you run the `run` command, the run container starts and exposes the ports as defined by the `container-port-map` parameter. The `run-cmd` parameter is used to invoke the app if the run container `Dockerfile` doesn't contain an entry point to complete this step.
 
-In order to run with multiple containers, either your app must contain a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one.
+In order to run with multiple containers, your app must contain a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one.
 
 First, compile your app:
 ```
@@ -426,13 +529,13 @@ ibmcloud dev shell
 ```
 {: codeblock}
 
-The {{site.data.keyword.dev_cli_short}} CLI opens an interactive shell into the app's docker container. The default target container for the shell command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command targets the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. See [this reference](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") for more information.
+The {{site.data.keyword.dev_cli_short}} CLI opens an interactive shell into the app's docker container. The default target container for the shell command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command targets the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. For more information, see [this reference](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
-Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container is brought up and the shell is opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you want to shell. However, this flag is reserved for when no containers are running. The `run` and `tools` arguments are more flexible and let you switch between containers when one is running. For example, if the tools container is running and you execute `ibmcloud dev shell run`, the `tools` container is stopped and the `run` container starts, and vice versa.
+Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container is brought up and the shell is opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you want to shell. However, this flag is reserved for when no containers are running. The `run` and `tools` arguments are more flexible so you can switch between containers when one is running. For example, if the tools container is running and you execute `ibmcloud dev shell run`, the `tools` container is stopped and the `run` container starts, and vice versa.
 
-If the target `run` or `tools` container is not already running when you execute the `shell` command, then the target container is started. However, the default `Cmd` or `Entrypoint` in the Dockerfile is overridden to start directly into the shell instead of starting the server process. This allows you to start the `run` or `tools` container, and manually start the server with your own arbitrary or custom commands.
+If the target `run` or `tools` container is not already running when you execute the `shell` command, then the target container is started. However, the default `Cmd` or `Entrypoint` in the Dockerfile is overridden to start directly into the shell instead of starting the server process. So you can start the `run` or `tools` container, and then manually start the server with your own arbitrary or custom commands.
 
-You can also specify the shell executable that you want to open by using the `container-shell` parameter. By default, `/bin/sh` is used. If you'd prefer to use the bash shell, then specify the `container-shell` value to be `/bin/bash`; however, keep in mind that bash is not automatically available across all Linux&trade; variants.
+You can also specify the shell that you want to open by using the `container-shell` parameter. By default, `/bin/sh` is used. If you'd prefer to use the bash shell, then specify the `container-shell` value to be `/bin/bash`; however, keep in mind that bash is not automatically available across all Linux&trade; variants.
 
 Any additional arguments that you pass to the command beyond the flags are parsed as the command to be run when the shell is opened. If you provide a command, the shell inside the container exits upon running the command and returns you to your terminal.
 
@@ -530,6 +633,75 @@ The following parameter is exclusive to the `test` command. There are [parameter
 * Parameter that is used to specify a command to test code in the tools container.
 * Usage: `ibmcloud dev test --test-cmd /the/test/command`
 
+## toolchain-delete
+{: #toolchain-delete}
+
+Delete a toolchain. If no toolchain name is provided, you can select one from a list. The list of toolchains depends on the currently targeted resource group and region.
+
+The targeted Resource Group is found in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target). 
+```
+ibmcloud dev toolchain-delete [toolchainName] [--force,-f]
+```
+{: codeblock}
+
+### toolchain-delete command parameters
+{: #toolchain-delete-command-parameters}
+
+#### `force`
+{: #force}
+
+* Parameter used to skip the prompt confirmation for deleting a toolchain.
+* Usage `ibmcloud dev toolchain-delete [toolchainName] --force`
+
+## toolchain-get
+{: #toolchain-get}
+
+View the details of a toolchain. If no toolchain name is provided, you can select one from a list. 
+
+Uses the targeted resource group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry based toolchains might not be compatible with this command.
+```
+ibmcloud dev toolchain-get [toolchainName] [--json]
+```
+{: codeblock}
+
+### toolchain-get command parameters
+{: #toolchain-get-command-parameters}
+
+#### `json`
+{: #json}
+
+* Parameter used to output the toolchain details in JSON format.
+* Usage `ibmcloud dev toolchain-get [toolchainName] --json`.
+
+## toolchain-open
+{: #toolchain-open}
+
+View the URL for the toolchain through the `toolchain-open` command. The `toolchain-open` command also opens the URL in your default browser. If no toolchain name is provided, a list of toolchains is provided to select from.
+```
+ibmcloud dev toolchain-open [toolchainName]
+```
+{: codeblock}
+
+## toolchains
+{: #toolchains}
+
+View a list of toolchains in the current resource group. 
+
+Uses the targeted Resource Group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry based toolchains might not be compatible with this command.
+```
+ibmcloud dev toolchains [--json]
+```
+{: codeblock}
+
+### toolchains command parameters
+{: #toolchains-command-parameters}
+
+#### `json`
+{: #json}
+
+* Parameter used to output the toolchains in JSON format.
+* Usage `ibmcloud dev toolchains --json`
+
 ## view
 {: #view}
 
@@ -552,7 +724,7 @@ The following parameters are exclusive to the `view` command.
 
 #### `deploy-target`
 
-* Parameter optionally used to indicate the type of deployment to bypass the prompt.
+* Parameter used to indicate the type of deployment to bypass the prompt.
 * Usage `ibmcloud dev view -t|--target buildpack|container`
 
 #### `no-open`
@@ -570,13 +742,13 @@ The following parameters are exclusive to the `view` command.
 #### `ibm-cluster`
 {: #ibm-cluster2}
 
-* Parameter optionally used to define the name of the Kubernetes cluster when you target a container deployment.
+* Parameter used to define the name of the Kubernetes cluster when you target a container deployment.
 * Usage `ibmcloud dev view --ibm-cluster [cluster-name]`
 
 ## compound commands
 {: #compound}
 
-You are able to run several commands in one command line statement by separating the {{site.data.keyword.cloud_notm}} developer tools commands with the `/` delimiter. Additional command line flags can be used after you specify the compound commands. The following commands are examples of how you can use compound commands:
+You are able to run several commands in one command line statement by separating the {{site.data.keyword.cloud_notm}} developer tools commands with the `/` delimiter. More command line flags can be used after you specify the compound commands. The following commands are examples of how you can use compound commands:
 ```
 ibmcloud dev build/run
 ibmcloud dev build/deploy --trace -t buildpack
@@ -605,7 +777,7 @@ Command parameters that are entered on the command line take precedence over the
 #### `config-file`  
 {: #config-file}
 
-* Specify a cli-config.yml file to use for a command.
+* Specify a `cli-config.yml` file to use for a command.
 * Usage: `ibmcloud dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
@@ -635,7 +807,7 @@ Command parameters that are entered on the command line take precedence over the
 #### `container-port-map`
 {: #container-port-map}
 
-* Port mappings for the container. The first value is the port to use in the host OS, the second is the port in the container [host-port:container-port].
+* Port mappings for the container. The first value is the port to use in the host OS, the second is the port in the container [`host-port:container-port`].
 * Usage: `ibmcloud dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
 
 #### `dockerfile-tools`
