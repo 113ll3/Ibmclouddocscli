@@ -16,6 +16,7 @@ IBM Cloud CLI and Developer Tools
 	reference/ibmcloud/enable_cli_autocompletion.md
 	reference/ibmcloud/uninstall_cli.md
 	idt/index.md
+	idt/manage_devops_resources.md
 
 	{: .topicgroup}
 	IBM Cloud Developer Tools IDE Extensions
