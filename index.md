@@ -17,7 +17,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:note: .note}
 
-# Getting started with the IBM Cloud CLI
+# Getting started with the {{site.data.keyword.cloud_notm}} CLI
 {: #getting-started}
 
 In this tutorial, you install a set of {{site.data.keyword.cloud}} developer tools, verify the installation, and configure the environment. The {{site.data.keyword.dev_cli_notm}} offer a command line approach to creating, developing, and deploying cloud applications.
