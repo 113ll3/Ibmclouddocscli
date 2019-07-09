@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-09"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -359,7 +359,7 @@ ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ```
 {: codeblock}
 
-## ibmcloud api-key-delete
+## ibmcloud iam api-key-delete
 {: #ibmcloud_iam_api_key_delete}
 
 Delete a {{site.data.keyword.cloud_notm}} platform API key:
@@ -379,7 +379,7 @@ ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 <dd>Force deletion without confirmation.</dd>
 </dl>
 
-## ibmcloud api-key-lock
+## ibmcloud iam api-key-lock
 {: #ibmcloud_iam_api_key_lock}
 
 Lock a platform API key:
@@ -413,7 +413,7 @@ ibmcloud iam api-key-lock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 ```
 {: codeblock}s
 
-## ibmcloud api-key-unlock
+## ibmcloud iam api-key-unlock
 {: #ibmcloud_iam_api_key_unlock}
 
 Unlock a platform API key:
