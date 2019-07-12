@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -36,13 +36,13 @@ ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID
    <dt>-r REGION_NAME</dt>
    <dd>Region name. List the organizations in the region specified. Default to current region if not specified. If set to 'all', list the organizations in all regions.</dd>
    <dt>--guid</dt>
-   <dd>Display the guid of the organizations. This option is exclusive with '--output'.</dd>
+   <dd>Display the guid of the organizations. This option is exclusive with `--output`.</dd>
    <dt>--output FORMAT</dt>
-   <dd>Specify output format, only JSON is supported now. This option is exclusive with '--guid'.</dd>
+   <dd>Specify output format, only JSON is supported now. This option is exclusive with `--guid`.</dd>
    <dt>-c ACCOUNT_ID</dt>
-   <dd>Account ID. List the organizations under the account. Default to current account if not specified. If set to 'all', list organizations under all accounts. This option is exclusive with '-u'.</dd>
+   <dd>Account ID. List the organizations under the account. Default to current account if not specified. If set to `all`, list organizations under all accounts. This option is exclusive with `-u`.</dd>
    <dt>-u ACCOUNT_OWNER</dt>
-   <dd>Account owner name. List the organizations under the accounts that are owned by the user. Default to current account if not specified. If set to 'all', list organizations under all accounts. This option is exclusive with '-c'.</dd>
+   <dd>Account owner name. List the organizations under the accounts that are owned by the user. Default to current account if not specified. If set to 'all', list organizations under all accounts. This option is exclusive with `-c`.</dd>
    </dl>
 
 <strong>Examples</strong>:
@@ -74,11 +74,11 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
    <dt>ORG_NAME (required)</dt>
    <dd>The name of the organization.</dd>
    <dt>-r REGION</dt>
-   <dd>Region name. If not specified, the default is current region. If set to 'all', orgs with the given name in all regions are listed.</dd>
+   <dd>Region name. If not specified, the default is current region. If set to `all`, orgs with the given name in all regions are listed.</dd>
    <dt>--guid</dt>
-   <dd>Retrieve and display the given org's guid. All other output for the org is suppressed. This option is exclusive with '--output'.</dd>
+   <dd>Retrieve and display the given org's guid. All other output for the org is suppressed. This option is exclusive with `--output`.</dd>
    <dt>--output REGION</dt>
-   <dd>Specify output format, only JSON is supported now. This option is exclusive with '--guid'.</dd>
+   <dd>Specify output format, only JSON is supported now. This option is exclusive with `--guid`.</dd>
    </dl>
 
 <strong>Examples</strong>:
@@ -91,7 +91,7 @@ ibmcloud account org IBM --guid
 ## ibmcloud account org-create
 {: #ibmcloud_account_org_create}
 
-Create a new organization. This operation can only be run by account owner.
+Create an organization. This operation can be run only by account owner.
 ```
 ibmcloud account org-create ORG_NAME [-f]
 ```
@@ -205,9 +205,9 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
    <dt>-o ORG_NAME</dt>
    <dd>Organization name. Default to current organization if not specified.</dd>
    <dt>--guid</dt>
-   <dd>Retrieve and display the given space's guid. All other output for the space is suppressed. This option is exclusive with '--output'.</dd>
+   <dd>Retrieve and display the given space's guid. All other output for the space is suppressed. This option is exclusive with `--output`.</dd>
    <dt>--output FORMAT</dt>
-   <dd>Specify output format, only JSON is supported now. All other output for the space is suppressed. This option is exclusive with '--guid'.</dd>
+   <dd>Specify output format, only JSON is supported now. All other output for the space is suppressed. This option is exclusive with `--guid`.</dd>
    <dt>--security-group-rules</dt>
    <dd>Retrieve the rules for all the security groups associated with the space.</dd>
    </dl>
@@ -340,7 +340,7 @@ Assign user `Mary` to the organization `IBM` as `OrgManager` role:
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-You can set org/space roles by using the CLI, but if you want to set the other permissions, you must use the UI. For further details, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).
+You can set org and space roles by using the CLI, but if you want to set the other permissions, you must use the UI. For more information, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).
 {: note}
 <!-- Begin Staging URL vs Prod URL -->
 
@@ -398,7 +398,7 @@ ibmcloud account space-users ORG_NAME SPACE_NAME
 ## ibmcloud account space-role-set
 {: #ibmcloud_account_space_role_set}
 
-Assign a space role to a user. This operation can only be run by a space manager.
+Assign a space role to a user. This operation can be run only by a space manager.
 ```
 ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 ```
@@ -433,7 +433,7 @@ ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 ## ibmcloud account space-role-unset
 {: #ibmcloud_account_space_role_unset}
 
-Remove a space role from a user. This operation can only be run by a space manager.
+Remove a space role from a user. This operation can be run only by a space manager.
 ```
 ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 ```
@@ -621,7 +621,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dd>Space role. Valid inputs are: SpaceManager, SpaceDeveloper, and SpaceAuditor.</dd>
 </dl>
 
-If you aren't ready to assign access or want to assign an IAM policy instead of Cloud Foundry access, then you can invite a user with no access and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser#assign_new_access).
+If you aren't ready to assign access or want to assign an IAM policy instead of Cloud Foundry access, you can invite a user with no access and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser#assign_new_access).
 {: tip}
 
 ## ibmcloud account user-reinvite

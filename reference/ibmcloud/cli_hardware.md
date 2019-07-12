@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-07-12"
 
 keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
@@ -35,7 +35,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 <dt>-i, --immediate</dt>
 <dd>Cancels the server immediately (instead of on the billing anniversary).</dd>
 <dt>-r, --reason</dt>
-<dd>An optional cancellation reason. See 'ibmcloud sl hardware cancel-reasons' for a list of available options.</dd>
+<dd>An optional cancellation reason. See `ibmcloud sl hardware cancel-reasons` for a list of available options.</dd>
 <dt>-c, --comment</dt>
 <dd>An optional comment to add to the cancellation ticket.</dd>
 <dt>-f, --force</dt>

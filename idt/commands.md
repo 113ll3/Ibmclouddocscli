@@ -297,12 +297,12 @@ You can also override the detected app language by using the `--language` argume
 {: #enable-language-options}
 
 Language options include:
-* node
-* swift
-* python
-* java-ee (interpreted as Java&trade; - Java&trade; EE)
-* java-mp (interpreted as Java&trade; - Java&trade; MicroProfile)
-* java-spring (interpreted as Java&trade; - Spring Framework)
+* Node
+* Swift
+* Python
+* Java EE (interpreted as Java&trade; - Java&trade; EE)
+* Java-mp (interpreted as Java&trade; - Java&trade; MicroProfile)
+* Java-spring (interpreted as Java&trade; - Spring Framework)
 
 Files that are created by using the `ibmcloud dev enable` command are saved with a `.merge` file extension if there are name conflicts with existing files in the app folder.
 
@@ -455,7 +455,7 @@ If you're using Windows&trade;, you must run Windows&trade; 10 Pro or later.
 
 You can run your app through the `run` command. A build must first be completed against the app by using the `build` command. When you run the `run` command, the run container starts and exposes the ports as defined by the `container-port-map` parameter. The `run-cmd` parameter is used to invoke the app if the run container `Dockerfile` doesn't contain an entry point to complete this step.
 
-In order to run with multiple containers, your app must contain a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one.
+To run with multiple containers, your app must contain a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one.
 
 First, compile your app:
 ```

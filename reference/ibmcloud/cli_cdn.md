@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-07-12"
 
 keywords: cli, content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
 
@@ -79,9 +79,9 @@ ibmcloud sl cdn order [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-b, --bandwidth</dt>
-<dd>CDN bandwidth, 'Pay as You Go' price will be used if not specified.</dd>
+<dd>CDN bandwidth, Pay as You Go price will be used if not specified.</dd>
 <dt>-s, --storage</dt>
-<dd>CDN storage, 'Pay as You Go' price will be used if not specified.</dd>
+<dd>CDN storage, Pay as You Go price will be used if not specified.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>

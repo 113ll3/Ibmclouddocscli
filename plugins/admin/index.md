@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -73,7 +73,7 @@ Complete the following steps to uninstall the plug-in.
   ```
   {: codeblock}
 
-Then you can add the updated repository and install the latest plug-in.
+Then, you can add the updated repository and install the latest plug-in.
 
 ## Using the {{site.data.keyword.cloud_notm}} admin CLI Plug-in
 {: #using-admin-cli}
@@ -145,7 +145,7 @@ You can also use **`ba au`** as an alias for the longer **`ba add-user`** comman
 ### Inviting a user from {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_invite_public}
 
-Each {{site.data.keyword.Bluemix_dedicated_notm}} environment has a public, client-owned, corporate account in {{site.data.keyword.cloud_notm}}. In order for users in the Dedicated environment to create clusters with the {{site.data.keyword.containershort}}, the administrator must add the users to this public corporate account. Once the users are added to the public corporate account, their Dedicated and public accounts are linked together. Users can then use their IBMid to log in to both Dedicated and public simultaneously, and can create resources in the public account from the Dedicated interface. For more information, see [Setting up IBM Cloud Container Service on Dedicated](/docs/containers?topic=containers-dedicated#dedicated_setup). To invite Dedicated users to the public account:
+Each {{site.data.keyword.Bluemix_dedicated_notm}} environment has a public, client-owned, corporate account in {{site.data.keyword.cloud_notm}}. In order for users in the Dedicated environment to create clusters with the {{site.data.keyword.containershort}}, the administrator must add the users to this public corporate account. When the users are added to the public corporate account, their Dedicated and public accounts are linked together. Users can then use their IBMid to log in to both Dedicated and public simultaneously, and can create resources in the public account from the Dedicated interface. For more information, see [Setting up IBM Cloud Container Service on Dedicated](/docs/containers?topic=containers-dedicated#dedicated_setup). To invite Dedicated users to the public account:
 ```
 cf ba invite-users-to-public -userid=user_email -organization=dedicated_org_id -apikey=public_api_key -public_org_id=public_org_id
 ```
@@ -167,7 +167,7 @@ To add Dedicated environment users to your {{site.data.keyword.cloud_notm}} publ
 ### Listing users who are invited from {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-If you've invited Dedicated environment users to your {{site.data.keyword.cloud_notm}} account with the [**`invite-users-to-public`** command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users that have an existing IBMid has a status of ACTIVE. Invited users that didn't have an existing IBMid has a status of either PENDING or ACTIVE depending on whether they've accepted the invitation to the account yet. To list the users in your {{site.data.keyword.cloud_notm}} account:
+If you invite Dedicated environment users to your {{site.data.keyword.cloud_notm}} account with the [**`invite-users-to-public`** command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users with an existing IBMid have an ACTIVE status. Invited users that didn't have an existing IBMid have a status of either PENDING or ACTIVE, depending on whether the invitation was accepted. To list the users in your {{site.data.keyword.cloud_notm}} account:
 
 ```
 cf ba invite-users-status -apikey=public_api_key
@@ -198,7 +198,7 @@ cf ba search-users -name=user_name -permission=permission_value -organization=or
 <dt>user_name</dt>
 <dd>The name of the user.</dd>
 <dt>permission_value</dt>
-<dd>The permission that is assigned to the user. The available permissions are admin (or superuser), login (or basic), catalog.read, catalog.write, reports.read, reports.write, users.read, or users.write. You can't use this parameter with the organization parameter in the same query.</dd>
+<dd>The permission that is assigned to the user. The available permissions are admin (or superuser), log in (or basic), catalog.read, catalog.write, reports.read, reports.write, users.read, or users.write. You can't use this parameter with the organization parameter in the same query.</dd>
 <dt>organization_value</dt>
 <dd>The organization name that the user belongs to. You can't use this parameter with the permission parameter in the same query.</dd>
 <dt>role_value</dt>
@@ -221,7 +221,7 @@ cf ba set-permissions user_name permission access
 <dt>user_name</dt>
 <dd>The name of the user.</dd>
 <dt>permission</dt>
-<dd>Set the permission that is assigned to the user. The available permissions are admin (or superuser), login (or basic), catalog.read, catalog.write, reports.read, reports.write, users.read, or users.write. You can't use this parameter with the organization parameter in the same query.</dd>
+<dd>Set the permission that is assigned to the user. The available permissions are admin (or superuser), log in (or basic), catalog.read, catalog.write, reports.read, reports.write, users.read, or users.write. You can't use this parameter with the organization parameter in the same query.</dd>
 <dt>access</dt>
 <dd>For the catalog, reports, or user permissions, you must also set the level of access as `read` or `write`.</dd>
 </dl>
@@ -265,7 +265,7 @@ You can also use the **`ba emau`** as an alias for the longer **`ba enable-manag
 ### Disabling managers from adding users
 {: #clius_dmau}
 
-If organization managers are enabled to add users to the organizations they manage in your {{site.data.keyword.cloud_notm}} environment with the **`enable-managers-add-users`** command, and if you have the Superuser permission, you can remove this setting. To disable managers from adding users, use the following command:
+To disable managers from adding users, use the following command:
 
 ```
 cf ba disable-managers-add-users
@@ -332,7 +332,7 @@ cf ba set-org user_name organization [role]
 <dt>organization</dt>
 <dd>The name or GUID of the {{site.data.keyword.cloud_notm}} org to assign the user to.</dd>
 <dt>role</dt>
-<dd>The role of the user. Valid values are OrgManager, BillingManager, OrgAuditor. See See [Roles](/docs/iam?topic=iam-userroles#userroles) for the role descriptions.</dd>
+<dd>The role of the user. Valid values are OrgManager, BillingManager, OrgAuditor. See [Roles](/docs/iam?topic=iam-userroles#userroles) for the role descriptions.</dd>
 </dl>
 
 You can also use **`ba so`** as an alias for the longer **`ba set-org`** command name.
@@ -636,7 +636,7 @@ This command replaces existing visible services for the specified organizations 
 <dt>plan_identifier</dt>
 <dd>The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select <b>Add</b> to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
 <dt>organization</dt>
-<dd>The name or GUID of the org to to add visibility for. You can enable visibility of the service for more than one organization by entering more organization names or GUIDs in the command.</dd>
+<dd>The name or GUID of the org to add visibility for. You can enable visibility of the service for more than one organization by entering more organization names or GUIDs in the command.</dd>
 </dl>
 
 You can also use **`ba espv`** as an alias for the longer **`ba edit-service-plan-visibility`** command name.
@@ -665,7 +665,7 @@ If you have write access for the reports permission, you can create a new catego
 <dt>PDF|TXT|LOG</dt>
 <dd>The path for the report PDF, text file, or log file to upload.</dd>
 <dt>RTF</dt>
-<dd>An option to include a Rich Text Format (RTF) version of the PDF. This option applies only if you includ a path to the report PDF. The RTF version is used for indexing and searching.</dd>
+<dd>An option to include a Rich Text Format (RTF) version of the PDF. This option applies only if you include a path to the report PDF. The RTF version is used for indexing and searching.</dd>
 </dl>
 
 You can also use **`ba ar`** as an alias for the longer **`ba add-report`** command name.
@@ -715,7 +715,7 @@ You can also use **`ba rr`** as an alias for the longer **`ba retrieve-report`**
 ## Viewing resource metric information
 {: #cliresourceusage}
 
-You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) and cells (Diego architecture) usage data. To view the resource metric information, use the following command:
+You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources and the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) and cells (Diego architecture) usage data. To view the resource metric information, use the following command:
 
 ```
 cf ba resource-metrics
@@ -866,14 +866,14 @@ You can also use **`ba usb`** as an alias for the longer **`ba update-service-br
 
 To work with application security groups (ASGs), you must be a full access administrator for the local or dedicated environment. All users of the environment can list the available ASGs for the organization that is being targeted with the command. However, to create, update, or bind ASGs, you must be an administrator for the {{site.data.keyword.cloud_notm}} environment.
 
-ASGs function as virtual firewalls that control outbound traffic from the apps in your {{site.data.keyword.cloud_notm}} environment. Each ASG consists of a list of rules that allow specific traffic and communication to and from the outside network. You can bind one or more ASGs to a specific security group set, for example a group set that is used for applying global access, or you can bind to spaces within an organization in your {{site.data.keyword.cloud_notm}} environment.
+ASGs function as virtual firewalls that control outbound traffic from the apps in your {{site.data.keyword.cloud_notm}} environment. Each ASG consists of a list of rules that allow specific traffic and communication to and from the outside network. You can bind one or more ASGs to a specific security group set. For example, by applying global access for a group set or binding to spaces within an organization in your {{site.data.keyword.cloud_notm}} environment.
 
 {{site.data.keyword.cloud_notm}} is initially set up with all access to the outside network restricted. Two IBM-created security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 Unbinding the **Default Staging** or **Default Running** group sets from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network. Use unbinding with caution and awareness of its potential impact on the running and staging apps in your environment.
 {: important}
 
-The following commands that enable you to work with security groups are based on the Cloud Foundry 1.6 version. For more information, including required and optional fields, see the Cloud Foundry information about [Creating Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+The following commands enable you to work with security groups are based on the Cloud Foundry 1.6 version. For more information, including required and optional fields, see the Cloud Foundry information about [Creating Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 ### Listing security groups
 {: #clilissecgro}

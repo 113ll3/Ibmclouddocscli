@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-07-12"
 
 keywords: cli, vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
@@ -15,20 +15,20 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:note: .note}
 
-# VPN CLI Plug-in for cf CLI
+# VPN CLI plug-in for cf CLI
 {: #vpn_cli_for_cf}
 
-You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.cloud}} CLI plug-in. Both versions of the plug-in provide the same functionality.
+You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.cloud}} CLI plug-in. Both versions of the plug-in provide the same functions.
 {:shortdesc}
 
 The {{site.data.keyword.vpn_short}} plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
 
-## Install the cf CLI Plug-in
+## Install the cf CLI plug-in
 {: #install-cf-cli-plugin}
 
 Before you begin, install the cf CLI. See [Cloud Foundry command line interface](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli) for details.
 
-## Install the VPN CLI Plug-in
+## Install the VPN CLI plug-in
 {: #install-vpn-cli-plugin}
 
 If you have a previous version of the {{site.data.keyword.vpn_short}} CLI plug-in that is installed, you must first uninstall it. Use the command:
@@ -41,7 +41,7 @@ cf uninstall-plugin vpn
 
 ### Install locally
 
-1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from the [{{site.data.keyword.cloud_notm}} CLI Plug-in Repository](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from the [{{site.data.keyword.cloud_notm}} CLI plug-in Repository](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 2. Install the {{site.data.keyword.vpn_short}} plug-in by using the following command:
 
@@ -119,7 +119,7 @@ Remote endpoint IP address of the VPN tunnel.
 
 **-admin_state:** Status of the VPN connection. Values: UP or DOWN.
 
-**-dpd-action:** Action to be taken when the peer is detected as dead. Values: hold; clear; disabled; restart; restart-by-peer. Default value: hold
+**-dpd-action:** Action taken when the peer is detected as dead. Values: hold; clear; disabled; restart; restart-by-peer. Default value: hold
 
 **-gateway_ip:** IP address of the local VPN tunnel endpoint.
 
@@ -349,7 +349,7 @@ Preshared key.
 
 **-admin_state:** Status of the VPN connection. Values: UP or DOWN.
 
-**-dpd-action:** Action to be taken when the peer is detected as dead. Values: hold; clear; disabled; restart; restart-by-peer. Default value: hold
+**-dpd-action:** Action taken when the peer is detected as dead. Values: hold; clear; disabled; restart; restart-by-peer. Default value: hold
 
 **-gateway_ip:** IP address of the local VPN tunnel endpoint.
 

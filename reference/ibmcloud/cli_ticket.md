@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-07-12"
 
 keywords: cli, manage softlayer tickets, softlayer, classic infrastructure, user management, ibmcloud sl ticket
 
@@ -58,7 +58,7 @@ ibmcloud sl ticket create [OPTIONS]
 <dt>--rootpwd</dt>
 <dd>Root password that is associated with the attached device ID.</dd>
 <dt>--subject-id</dt>
-<dd>Required. The subject ID to use for the ticket, issue 'ibmcloudsl ticket subjects' to get the list.</dd>
+<dd>Required. The subject ID to use for the ticket, issue `ibmcloudsl ticket subjects` to get the list.</dd>
 <dt>--title</dt>
 <dd>Required. The title of the ticket.</dd>
 <dt>--body</dt>

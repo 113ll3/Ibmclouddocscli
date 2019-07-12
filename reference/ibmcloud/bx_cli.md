@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-25"
+lastupdated: "2019-07-12"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -22,9 +22,9 @@ subcollection: cloud-cli
 The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own Cloud Foundry CLI installed, don't use both {{site.data.keyword.cloud_notm}} CLI commands and Cloud Foundry CLI commands of your own installation in the same context. Instead, use **`ibmcloud cf [command]`** if you want to use the Cloud Foundry CLI to manage Cloud Foundry resources in {{site.data.keyword.cloud_notm}} CLI context. Note that **`ibmcloud cf api/login/logout/target`** isn't allowed, and you must use **`ibmcloud api/login/logout/target`** instead.
+{{site.data.keyword.cloud_notm}} command-line client bundles a Cloud Foundry command-line client in its installation. If you have your own Cloud Foundry CLI installed, don't use both {{site.data.keyword.cloud_notm}} CLI commands and Cloud Foundry CLI commands of your own installation in the same context. Instead, use **`ibmcloud cf [command]`** if you want to use the Cloud Foundry CLI to manage Cloud Foundry resources in {{site.data.keyword.cloud_notm}} CLI context. **`ibmcloud cf api/login/logout/target`** isn't allowed, and you must use **`ibmcloud api/login/logout/target`** instead.
 
-As of May 2018 the {{site.data.keyword.cloud_notm}} CLI commands have changed from **`bluemix`** and **`bx`** to **`ibmcloud`**. However, you can still use the **`bluemix`** and **`bx`** CLI commands until they're removed later.
+As of May 2018, the {{site.data.keyword.cloud_notm}} CLI commands changed from **`bluemix`** and **`bx`** to **`ibmcloud`**. However, you can still use the **`bluemix`** and **`bx`** CLI commands until they're removed later.
 {: tip}
 
 The following lists detailed commands that are supported by the {{site.data.keyword.cloud_notm}} CLI, including their names, arguments, options, prerequisites, descriptions, and examples.
@@ -37,7 +37,7 @@ Prerequisites list which actions are required before using the command, and migh
 <dt>Endpoint</dt>
 <dd>Use the **`ibmcloud api`** command to set an API endpoint.</dd>
 <dt>Log in</dt>
-<dd>Use the **`ibmcloud login`** command to log in. If you are logging in with a federated ID, use the **`--sso`** option to authenticate with a one time passcode, or use the **`--apikey`** option to authenticate with an API key.</dd>
+<dd>Use the **`ibmcloud login`** command to log in. If you log in with a federated ID, use the **`--sso`** option to authenticate with a one time passcode, or use the **`--apikey`** option to authenticate with an API key.</dd>
 <dt>Target</dt>
 <dd>Use the **`ibmcloud target`** command to set an org and space.</dd>
 </dl>
@@ -327,7 +327,7 @@ None.
 <dt>-o ORG</dt>
 <dd>The name of the target organization. This option is deprecated. Use **`ibmcloud target -o org_name`** instead. Optional.</dd>
 <dt>-s SPACE</dt>
-<dd>The name of the target space. This option is deprected. Use **`ibmcloud target -s space_name`** instead. Optional.</dd>
+<dd>The name of the target space. This option is deprecated. Use **`ibmcloud target -s space_name`** instead. Optional.</dd>
 <dt>--no-iam</dt>
 <dd>Force authentication with the login server instead of the public IAM.</dd>
 <dt>--skip-ssl-validation</dt>
@@ -475,7 +475,7 @@ ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_G
 <dt>--unset-resource-group</dt>
 <dd>Clear the targeted resource group.</dd>
 <dt>--output FORMAT</dt>
-<dd>The specified output format. JSON is currently the only supported format.</dd>
+<dd>The specified output format. JSON is the only supported format.</dd>
 </dl>
 
 If none of the options are specified, the current account, region, org, and space are displayed.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-07-12"
 
 keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
@@ -81,9 +81,9 @@ ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>Required. The port number .</dd>
 <dt>-t, --routing-type</dt>
-<dd>Required. The ID of routing type . Run 'ibmcloud sl loadbal routing-types' to find an ID.</dd>
+<dd>Required. The ID of routing type . Run `ibmcloud sl loadbal routing-types` to find an ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Required. The ID of routing method . Run 'ibmcloud sl loadbal routing-methods' to find an ID.</dd>
+<dd>Required. The ID of routing method . Run `ibmcloud sl loadbal routing-methods` to find an ID.</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-delete
@@ -115,9 +115,9 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>Change the port number.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Change the ID of routing type. Run 'ibmcloud sl loadbal routing-types' to find an ID.</dd>
+<dd>Change the ID of routing type. Run `ibmcloud sl loadbal routing-types` to find an ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Change the ID of routing method. Run 'ibmcloud sl loadbal routing-methods' to find an ID.</dd>
+<dd>Change the ID of routing method. Run `ibmcloud sl loadbal routing-methods` to find an ID.</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-reset
