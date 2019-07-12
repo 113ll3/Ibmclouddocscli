@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -370,7 +370,7 @@ ibmcloud dev pipeline-get [pipelineID] [--json]
 {: #pipeline-get-command-parameters}
 
 #### `json`
-{: #json}
+{: #json-get}
 
 * Parameter used to output the pipeline details in JSON format.
 * Usage `ibmcloud dev pipeline-get [pipelineID] --json`
@@ -388,13 +388,13 @@ ibmcloud dev pipeline-run [pipelineID] [--stage-id stageID] [--json]
 {: #pipeline-run-command-parameters}
 
 #### `stage-id`
-{: #stage-id}
+{: #run-stage-id}
 
 * Parameter optionally used to select a pipeline's stage to run
 * Usage `ibmcloud dev pipeline-run [pipelineID] --stage-id [stageID]`
 
 #### `json`
-{: #json}
+{: #json-run}
 
 * Parameter used to output the pipeline's invocation details in JSON format.
 * Usage `ibmcloud dev pipeline-run [pipelineID] --json`
@@ -419,7 +419,7 @@ ibmcloud dev pipeline-log [pipelineID] [--stage-id stageID] [--job-id jobID] [--
 {: #pipeline-log-command-parameters}
 
 #### `stage-id`
-{: #stage-id}
+{: #log-stage-id}
 
 * Parameter used to filter the logs by the stage ID.
 * Usage `ibmcloud dev pipeline-log [pipelineID]  --stage-id [stageID]`
@@ -667,7 +667,7 @@ ibmcloud dev toolchain-get [toolchainName] [--json]
 {: #toolchain-get-command-parameters}
 
 #### `json`
-{: #json}
+{: #json-toolchain-get}
 
 * Parameter used to output the toolchain details in JSON format.
 * Usage `ibmcloud dev toolchain-get [toolchainName] --json`.
@@ -696,7 +696,7 @@ ibmcloud dev toolchains [--json]
 {: #toolchains-command-parameters}
 
 #### `json`
-{: #json}
+{: #json-toolchains}
 
 * Parameter used to output the toolchains in JSON format.
 * Usage `ibmcloud dev toolchains --json`
@@ -722,6 +722,7 @@ ibmcloud dev view
 The following parameters are exclusive to the `view` command.
 
 #### `deploy-target`
+{: #commands-deploy-target}
 
 * Parameter used to indicate the type of deployment to bypass the prompt.
 * Usage `ibmcloud dev view -t|--target buildpack|container`
