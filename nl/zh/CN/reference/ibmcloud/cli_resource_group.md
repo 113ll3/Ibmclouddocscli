@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-06"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -117,7 +117,7 @@ ibmcloud resource group-create example-group
 
 更新现有资源组
 ```
-ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] 
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -128,8 +128,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
   <dd>目标资源组的名称</dd>
   <dt>-n, --name</dt>
   <dd>资源组的新名称</dd>
-  <dt>-q, --quota</dt>
-  <dd>新配额定义的名称</dd>
   <dt>-f</dt>
   <dd>强制更新而不确认</dd>
 </dl>
@@ -139,12 +137,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 将资源组 `example-group` 重命名为 `trial-group`：
 ```
 ibmcloud resource group-update example-group -n trial-group
-```
-{: codeblock}
-
-将资源组 `example-group` 的配额更改为 `free`：
-```
-ibmcloud resource group-update example-group -q free
 ```
 {: codeblock}
 
@@ -301,7 +293,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>NAME（必需）</dt>
   <dd>服务实例的名称</dd>
   <dt>SERVICE_NAME 或 SERVICE_ID（必需）</dt>
-  <dd>服务的名称或标识。要列出服务产品，请使用 `ibmcloud catalog service-marketplace` [命令](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace)。</dd>
+  <dd>服务的名称或标识。要列出服务产品，请使用 `ibmcloud catalog service-marketplace` [命令](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace)。</dd>
   <dt>SERVICE_PLAN_NAME 或 SERVICE_PLAN_ID（必需）</dt>
   <dd>服务套餐的名称或标识</dd>
   <dt>LOCATION（必需）</dt>
@@ -313,7 +305,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>资源组名称</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>服务端点的类型</dd>
+  <dd>服务端点的类型。可能的值为“public”、“private”和“public-and-private”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -349,7 +341,7 @@ ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>资源组名称</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>服务端点的类型</dd>
+  <dd>服务端点的类型。可能的值为“public”、“private”和“public-and-private”。</dd>
   <dt>-f, --force</dt>
   <dd>强制更新而不确认</dd>
 </dl>
@@ -469,7 +461,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
   <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>参数 JSON 文件或 JSON 字符串</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>服务端点的类型</dd>
+  <dd>服务端点的类型。可能的值为“public”和“private”。</dd>
   <dt>-f, --force</dt>
   <dd>强制创建而不确认</dd>
 </dl>
@@ -610,7 +602,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>资源组名称</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>服务端点的类型</dd>
+  <dd>服务端点的类型。可能的值为“public”和“private”。</dd>
   <dt>-f, --force</dt>
   <dd>强制创建而不确认</dd>
 </dl>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -62,7 +62,7 @@ ibmcloud help [COMMAND|NAMESPACE]
 
 <dl>
 <dt>COMMAND|NAMESPACE</dt>
-<dd>顯示其說明的指令或名稱空間。如果未指定，則會顯示 {{site.data.keyword.Bluemix_notm}} CLI 的一般說明。選用。</dd>
+<dd>顯示其說明的指令或名稱空間。如果未指定，則會顯示 {{site.data.keyword.cloud_notm}} CLI 的一般說明。選用。</dd>
 </dl>
 
 ### 範例
@@ -234,10 +234,10 @@ ibmcloud [-q, --quiet] cf COMMAND...
 {: #info-examples}
 
 列出 Cloud Foundry 應用程式：
+
 ```
 ibmcloud cf apps
 ```
-{: codeblock}
 
 列出 Cloud Foundry 服務，而不顯示 `Invoking cf command...` 訊息：
 ```
@@ -427,7 +427,7 @@ ibmcloud logout
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
-檢視 {{site.data.keyword.Bluemix_notm}} 上所有地區的資訊。
+檢視 {{site.data.keyword.cloud_notm}} 上所有地區的資訊。
 
 ```
 ibmcloud regions
@@ -524,7 +524,7 @@ ibmcloud update [-f]
 </dl>
 
 ## 一般標準基礎架構服務指令
-{: #softlayer_cli}
+{: #classic-service-commands}
 
 請在 {{site.data.keyword.cloud_notm}} CLI 中使用標準基礎架構指令，以配置及管理基礎架構服務。
 
@@ -534,23 +534,23 @@ USAGE:
    ibmcloud sl command [arguments...] [options...]
 
 COMMANDS:
-   block           Gen1 infrastructure Block Storage
-   cdn             Gen1 infrastructure Content Delivery Network
-   file            Gen1 infrastructure File Storage
-   dns             Gen1 infrastructure Domain Name System
-   globalip        Gen1 infrastructure Global IP addresses
-   hardware        Gen1 infrastructure hardware servers
-   image           Gen1 infrastructure Compute images
-   ipsec           Gen1 infrastructure IPSEC VPN
-   loadbal         Gen1 infrastructure Load balancers
-   security        Gen1 infrastructure SSH Keys and SSL Certificates
-   securitygroup   Gen1 infrastructure network security groups
-   subnet          Gen1 infrastructure Network subnets
-   ticket          Gen1 infrastructure Manage Tickets
-   vlan            Gen1 infrastructure Network VLANs
-   vs              Gen1 infrastructure Virtual Servers
-   order           Gen1 infrastructure Orders
-   user            Gen1 infrastructure Manage Users
+   block           Classic infrastructure Block Storage
+   cdn             Classic infrastructure Content Delivery Network
+   file            Classic infrastructure File Storage
+   dns             Classic infrastructure Domain Name System
+   globalip        Classic infrastructure Global IP addresses
+   hardware        Classic infrastructure hardware servers
+   image           Classic infrastructure Compute images
+   ipsec           Classic infrastructure IPSEC VPN
+   loadbal         Classic infrastructure Load balancers
+   security        Classic infrastructure SSH Keys and SSL Certificates
+   securitygroup   Classic infrastructure network security groups
+   subnet          Classic infrastructure Network subnets
+   ticket          Classic infrastructure Manage Tickets
+   vlan            Classic infrastructure Network VLANs
+   vs              Classic infrastructure Virtual Servers
+   order           Classic infrastructure Orders
+   user            Classic infrastructure Manage Users
    call-api        Call arbitrary API endpoints.
    help            Print command usage message
 ```

@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -27,27 +27,7 @@ subcollection: cloud-cli
 2018년 5월 현재, {{site.data.keyword.cloud}} CLI 명령인 `bluemix` 및 `bx`는 이제 `ibmcloud`입니다. 그러나 나중에 제거되기 전까지는 여전히 `bluemix` 및 `bx` CLI 명령을 사용할 수 있습니다.
 {: tip}
 
-애플리케이션을 작성하고 이를 관리, 배치, 디버그 및 테스트하려면 다음 {{site.data.keyword.dev_cli_notm}} CLI(`ibmcloud dev`) 명령을 사용하십시오.
-
-- [build](#build): 로컬 컨테이너에서 애플리케이션을 빌드합니다.
-- [code](#code): 애플리케이션의 코드를 다운로드합니다.
-- [console](#console): 애플리케이션에 대한 {{site.data.keyword.cloud_notm}} 콘솔을 엽니다.
-- [create](#create): 새 애플리케이션을 작성하고 서비스를 추가할 수 있는 옵션을 제공합니다.
-- [debug](#debug): 로컬 컨테이너에 있는 애플리케이션을 디버깅합니다.
-- [delete](#delete): 영역에서 애플리케이션을 삭제합니다.
-- [deploy](#deploy): 애플리케이션을 {{site.data.keyword.cloud_notm}}에 배치합니다.
-- [diag](#diag): 설치된 종속 항목에 대한 버전 정보를 표시합니다.
-- [edit](#edit): 기존 애플리케이션에서 서비스를 추가하거나 제거합니다.
-- [enable](#enable): {{site.data.keyword.cloud_notm}}와 함께 사용할 수 있도록 기존 애플리케이션을 업데이트합니다.
-- [get-credentials](#get-credentials): 연결된 {{site.data.keyword.cloud_notm}} 서비스를 사용할 수 있도록 애플리케이션에 필요한 인증 정보를 가져옵니다.
-- [help](#help): CLI 구문 및 인수에 대한 도움말입니다.
-- [list](#list): 리소스 그룹 내의 모든 {{site.data.keyword.cloud_notm}} 애플리케이션을 나열합니다.
-- [run](#run): 로컬 컨테이너에 있는 애플리케이션을 실행합니다.
-- [shell](#shell): 로컬 컨테이너에 대한 쉘을 엽니다.
-- [status](#status): CLI에서 사용되는 컨테이너의 상태를 확인합니다.
-- [stop](#stop): 컨테이너를 중지합니다.
-- [test](#test): 로컬 컨테이너에 있는 애플리케이션을 테스트합니다.
-- [view](#view): 테스트 및 보기를 위해 애플리케이션의 배치된 URL을 봅니다.
+애플리케이션을 작성하고 이를 관리, 배치, 디버그 및 테스트하려면 {{site.data.keyword.dev_cli_notm}} CLI(`ibmcloud dev`) 명령을 사용하십시오.
 
 [compound commands](#compound)를 사용하여 하나의 명령행 명령문에서 여러 개의 명령을 실행합니다.
 {: tip}
@@ -187,7 +167,7 @@ deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Nam
 ibm-cluster: "mycluster"
 ```
 
-`cli-config.yml`에서는 예에 표시되어 있는 바와 같이 `chart-path` 특성에 Helm 차트의 위치를 정의하고 `deploy-image-target`을 구성하도록 선택할 수 있습니다. `cli-config.yml`의 `deploy-image-target` 요소는 `chart/values.yml` 파일의 `repository` 및 `tag` 요소 대신 사용됩니다. 구체적으로 {{site.data.keyword.cloud_notm}}에 배치하려면 구성 요소 `ibm-cluster`를 {{site.data.keyword.cloud_notm}}에서 작성한 Kubernetes 클러스터의 이름으로 설정하십시오.
+`cli-config.yml`에서는 예에 표시되어 있는 바와 같이 `chart-path` 특성에 Helm 차트의 위치를 정의하고 `deploy-image-target`을 구성할 수 있습니다. `cli-config.yml`의 `deploy-image-target` 요소는 `chart/values.yml` 파일의 `repository` 및 `tag` 요소 대신 사용됩니다. 구체적으로 {{site.data.keyword.cloud_notm}}에 배치하려면 구성 요소 `ibm-cluster`를 {{site.data.keyword.cloud_notm}}에서 작성한 Kubernetes 클러스터의 이름으로 설정하십시오.
 
 앱을 빌드하려면 현재 앱 디렉토리에서 다음 명령을 실행하십시오.  
 ```
@@ -204,7 +184,7 @@ ibmcloud dev deploy
 ### {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment에 배치 
 {: #deploy-cfee}
 
-{{site.data.keyword.cloud_notm}} Foundry Enterprise Environment에 배치할 수 있습니다. 그러기 위해서는 `ibmcloud target --cf`를 사용하여 이 환경에 대한 올바른 로컬 환경을 구성한 다음 목록에서 올바른 환경을 선택해야 합니다. 그런 다음 {{site.data.keyword.cloud_notm}} Public Cloud Foundry의 경우와 같이 `deploy` 명령을 사용할 수 있습니다.
+{{site.data.keyword.cloud_notm}} Foundry Enterprise Environment에 배치할 수 있습니다. 그러기 위해서는 `ibmcloud target --cf`를 사용하여 이 환경에 대한 올바른 로컬 환경을 구성한 다음 목록에서 올바른 환경을 선택하십시오. 그런 다음 {{site.data.keyword.cloud_notm}} Public Cloud Foundry의 경우와 같이 `deploy` 명령을 사용할 수 있습니다.
 
 ### deploy 명령 매개변수
 {: #deploy-parameters}
@@ -250,7 +230,7 @@ ibmcloud dev deploy
 ## diag
 {: #diag}
 
-이 명령은 {{site.data.keyword.dev_cli_notm}} CLI에 대한 설치된 종속 항목의 버전 정보를 표시하기 위해 진단으로 사용됩니다. 이는 종속 항목이 누락되었는지 판별하거나 디버깅 문제점에 대한 도움을 받을 때 유용합니다.
+`diag` 명령은 {{site.data.keyword.dev_cli_notm}} CLI에 대한 설치된 종속 항목의 버전 정보를 표시하기 위한 진단으로 사용됩니다. 이는 종속 항목이 누락되었는지 판별하거나 디버깅 문제점에 대한 도움을 받을 때 유용합니다.
 
 다음 명령을 실행하여 설치된 종속 항목의 버전을 표시하십시오.
 ```
@@ -271,20 +251,20 @@ ibmcloud dev edit
 
 계정에 기존 서비스가 있는 경우 이 명령은 이러한 서비스의 목록, 그리고 각 서비스와 앱 간의 연결 여부를 표시합니다.
 
-* 연결된 서비스는 해당 서비스와 앱의 연결을 끊거나, 계정에서 해당 서비스를 삭제하여 이와 연결된 모든 앱으로부터 해당 서비스의 연결을 끊는 옵션을 제공합니다.
+* 연결된 서비스는 해당 서비스와 앱의 연결을 끊거나, 계정에서 해당 서비스를 삭제하여 모든 앱으로부터 해당 서비스의 연결을 끊는 옵션을 제공합니다.
 
-* 연결되지 않은 서비스는 해당 서비스를 앱에 연결하거나 계정에서 해당 서비스를 삭제하는 옵션을 제공합니다. 기존 서비스를 연결하면 해당 서비스의 사용을 시작하는 데 필요한 인증 정보 및 소스 코드와 같은 파일 또한 다운로드합니다.
+* 연결되지 않은 서비스는 해당 서비스를 앱에 연결하거나 계정에서 해당 서비스를 삭제하는 옵션을 제공합니다. 기존 서비스를 연결하면 인증 정보 및 소스 코드와 같은 파일도 다운로드됩니다.
 
-또한 앱에 새 서비스를 추가할 수 있으며 이를 통해 서비스 선택 프롬프트가 안내되고 해당 새 서비스의 사용을 시작하는 데 필요한 인증 정보 파일 또는 소스 코드와 같은 추가 파일이 다운로드됩니다.
+또한 앱에 서비스를 추가할 수 있으며 이를 통해 서비스 선택 프롬프트를 안내하여 인증 정보 파일 또는 소스 코드와 같은 파일을 다운로드합니다.
 
 ## enable
 {: #enable}
 
-{{site.data.keyword.cloud_notm}} 배치에 기존 앱을 사용할 수 있도록 설정합니다. `enable` 명령은 기존 앱의 언어를 자동으로 발견하려 시도한 후 필요한 추가 정보에 대한 프롬프트를 표시합니다. 이는 로컬 Docker 컨테이너, Cloud Foundry 배치, Cloud Foundry Enterprise Environment 배치 또는 Kubernetes 컨테이너 배치에 사용할 수 있는 파일을 생성하고 추가합니다. 모든 배치 환경은 수동 `deploy` 또는 DevOps 도구 체인을 통해 사용할 수 있습니다.
+{{site.data.keyword.cloud_notm}} 배치에 기존 앱을 사용할 수 있도록 설정합니다. `enable` 명령은 기존 앱의 언어를 자동으로 발견하려 시도한 후 필요한 추가 정보에 대한 프롬프트를 표시합니다. 로컬 Docker 컨테이너, Cloud Foundry 배치, Cloud Foundry Enterprise Environment 배치 또는 Kubernetes 컨테이너 배치에 사용할 파일을 생성합니다. 모든 배치 환경은 수동 `deploy` 또는 DevOps 도구 체인을 통해 사용할 수 있습니다.
 
-{{site.data.keyword.cloud_notm}}에 로그인할 때 이 로컬 앱을 이미 {{site.data.keyword.cloud_notm}}에 있는 앱과 연결하거나 새 {{site.data.keyword.cloud_notm}} 앱을 작성하도록 선택할 수 있습니다. 서비스 및 DevOps 도구 체인과 같은 {{site.data.keyword.cloud_notm}} 기능을 활용하려면 {{site.data.keyword.cloud_notm}}의 앱이 필요합니다. Git 저장소에서 복제된 앱에 대한 {{site.data.keyword.cloud_notm}} 앱이 작성되면 {{site.data.keyword.cloud_notm}} 앱의 구성에 이 저장소가 포함됩니다. 
+{{site.data.keyword.cloud_notm}}에 로그인한 상태로 이 로컬 앱을 이미 {{site.data.keyword.cloud_notm}}에 있는 앱과 연결하거나 새 {{site.data.keyword.cloud_notm}} 앱을 작성할 수 있습니다. 서비스 및 DevOps 도구 체인과 같은 {{site.data.keyword.cloud_notm}} 기능을 활용하려면 {{site.data.keyword.cloud_notm}}의 앱이 필요합니다. Git 저장소에서 복제된 앱에 대한 {{site.data.keyword.cloud_notm}} 앱이 작성되면 {{site.data.keyword.cloud_notm}} 앱의 구성에 이 저장소가 포함됩니다. 
 
-`Enable`은 베타 기능입니다. 앱을 사용으로 설정하는 데 문제가 있는 경우 [문제점 해결 페이지](/docs/cli/ts_createapps.html#troubleshoot)가 도움이 됩니다. 특히 `enable`은 모바일 앱 또는 프레임워크를 대상으로 하지 않습니다. 여러 배치 가능한 자산을 생성하는 복합 앱의 경우 앱의 각 컴포넌트가 개별적으로 사용으로 설정되어야 합니다. 
+`Enable`은 베타 기능입니다. 앱을 사용으로 설정하는 데 문제가 있는 클라우드가 있는 경우, [문제점 해결](/docs/cli?topic=cloud-cli-troubleshoot)을 참조하십시오. 특히 `enable`은 모바일 앱 또는 프레임워크를 대상으로 하지 않습니다. 여러 배치 가능한 자산을 생성하는 복합 앱의 경우 앱의 각 컴포넌트가 개별적으로 사용으로 설정되어야 합니다. 
 
 현재 디렉토리에 있는 기본 앱을 사용하려면 다음 명령을 실행하십시오.
 ```
@@ -297,11 +277,11 @@ ibmcloud dev enable
 * `package.json` 파일이 있는 경우 Node.js 앱이 식별됩니다.
 * `package.swift` 파일이 있는 경우 Swift 앱이 식별됩니다.
 * `setup.py` 또는 `requirements.txt` 파일이 있는 경우 Python 앱이 식별됩니다.
-* `pom.xml` 또는 `build.gradle` 파일이 있는 경우 Java 앱이 식별됩니다.
+* `pom.xml` 또는 `build.gradle` 파일이 있는 경우 Java&trade; 앱이 식별됩니다.
 	* `pom.xml`이 있는 경우 Maven 앱이 식별됩니다.
 	* `build.gradle`이 있는 경우 Gradle 앱이 식별됩니다.
 
-선택적으로 `--language` 인수를 사용하여 발견된 앱 언어를 대체할 수 있습니다. 올바르며 완전한 앱만 지원됩니다. enable 명령은 소스 코드를 수정하지 않습니다.
+또한 `--language` 인수를 사용하여 발견된 앱 언어를 대체할 수도 있습니다. 올바르며 완전한 앱만 지원됩니다. enable 명령은 소스 코드를 수정하지 않습니다.
 
 ### enable 언어 옵션
 {: #enable-language-options}
@@ -336,7 +316,7 @@ ibmcloud dev enable
 #### `no-create`
 {: #enable-no-create}
 
-* 로컬로 인에이블먼트 파일을 작성하는 동안 {{site.data.keyword.cloud_notm}}에 앱을 작성하지 못하도록 하는 매개변수입니다.
+* 로컬로 인에이블먼트 파일을 작성하고 {{site.data.keyword.cloud_notm}}에 앱을 작성하지 못하도록 하는 매개변수입니다.
 * 사용법: `ibmcloud dev enable --no-create`
 
 ## get-credentials
@@ -392,8 +372,7 @@ ibmcloud dev run
 ### run 명령 매개변수
 {: #run-parameters}
 
-다음 매개변수는 `run` 명령 전용이며 run 컨테이너 내에서 앱을 관리하는 데 도움을 줍니다.
-다른 명령과 공유되는 [추가 매개변수](#command-parameters)가 있습니다.
+다음 매개변수는 `run` 명령 전용이며 run 컨테이너 내에서 앱을 관리하는 데 도움을 줍니다. 다른 명령과 공유되는 [매개변수](#command-parameters)가 있습니다.
 
 #### `container-name-run`
 {: #container-name-run2}
@@ -417,7 +396,7 @@ ibmcloud dev run
 {: #dockerfile-run}
 
 * run 컨테이너의 Dockerfile입니다.
-* 여러 컨테이너에서 실행하려는 경우 이 파일은 Compose 파일이어야 합니다.
+* 여러 컨테이너에서 실행하려는 경우, Compose 파일을 사용하십시오.
 * 여러 compose 파일을 사용하려면 쉼표로 구분된 파일 이름 목록을 큰따옴표로 묶으십시오.
 * 사용법: `ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
 * 사용법: `ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
@@ -449,7 +428,7 @@ ibmcloud dev shell
 
 {{site.data.keyword.dev_cli_short}} CLI가 앱의 Docker 컨테이너에 대한 대화식 쉘을 엽니다. shell 명령의 기본 대상 컨테이너는 `cli-config.yml` 파일의 `container-shell-target` 값으로 정의되며, 올바른 값은 `run` 또는 `tools`입니다. 이 값이 정의되지 않거나 올바르지 않은 값이 지정된 경우 `shell` 명령은 기본적으로 `tools` 컨테이너를 대상으로 합니다. shell 명령은 해당 Dockerfile의 `WORKDIR` 명령어로 지정된 디렉토리에 컨테이너를 엽니다. Dockerfile에 `WORKDIR`이 나열되지 않은 경우에는 컨테이너 루트가 작업 디렉토리로 사용됩니다. 자세한 정보는 [이 참조](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
-또는 `run` 또는 `tools`를 인수로 전달하도록 결정할 수 있으며 이렇게 하면 해당 컨테이너가 선택되고 이 컨테이너에 대해 쉘이 열립니다. 마찬가지로, `container-name` 매개변수를 사용하여 쉘하려는 위치의 컨테이너 이름을 전달할 수 있습니다. 그러나 이 플래그는 실행 중인 컨테이너가 없는 경우 사용해야 합니다. `run` 및 `tools` 인수는 더 유연하며 실행 중인 컨테이너가 있는 경우 이 컨테이너로 전환할 수 있게 해 줍니다. 예를 들어, tools 컨테이너가 실행 중인 상태에서 `ibmcloud dev shell run`을 실행하는 경우 `tools` 컨테이너가 중지되고 `run` 컨테이너가 시작되며, 이는 반대의 경우도 마찬가지입니다.
+또는 `run` 또는 `tools`를 인수로 전달하도록 결정할 수 있으며 이렇게 하면 해당 컨테이너가 선택되고 이 컨테이너에 대해 쉘이 열립니다. 마찬가지로, `container-name` 매개변수를 사용하여 쉘하려는 위치의 컨테이너 이름을 전달할 수 있습니다. 그러나 이 플래그는 실행 중인 컨테이너가 없는 경우를 위해 예약됩니다. `run` 및 `tools` 인수는 더 유연하며 실행 중인 컨테이너가 있는 경우 이 컨테이너로 전환할 수 있게 해 줍니다. 예를 들어, tools 컨테이너가 실행 중인 상태에서 `ibmcloud dev shell run`을 실행하는 경우 `tools` 컨테이너가 중지되고 `run` 컨테이너가 시작되며, 이는 반대의 경우도 마찬가지입니다.
 
 `shell` 명령을 실행할 때 대상 `run` or `tools` 컨테이너가 이미 실행 중이 아닌 경우에는 대상 컨테이너가 시작됩니다. 그러나 Dockerfile의 기본 `Cmd` 또는 `Entrypoint`는 서버 프로세스를 시작하는 대신 직접 쉘에서 실행하기 위해 대체됩니다. 이는 사용자가 `run` 또는 `tools` 컨테이너를 시작하고, 임의의 또는 사용자 정의 명령을 사용하여 서버를 수동으로 시작할 수 있게 해 줍니다.
 
@@ -457,7 +436,7 @@ ibmcloud dev shell
 
 플래그 외에 이 명령에 전달하는 추가 매개변수는 쉘이 열린 후 실행하는 명령으로 구문 분석됩니다. 명령을 제공하면 컨테이너 내의 쉘은 해당 명령을 실행한 후 종료되며 터미널로 리턴됩니다.
 
-예를 들면, &trade; `bx dev shell tools ls`를 호출하여 tools 컨테이너 쉘 내에서 Linux `ls` 명령을 실행할 수 있습니다. `ibmcloud dev shell "ls -la"`와 같이 인수를 따옴표로 묶어 쉘 명령 실행에 전달되는 추가 플래그를 지정할 수도 있습니다.
+예를 들면, &trade; `bx dev shell tools ls`를 호출하여 tools 컨테이너 쉘 내에서 Linux `ls` 명령을 실행할 수 있습니다. 또한 `ibmcloud dev shell "ls -la"`와 같이 인수를 따옴표로 묶어 쉘 명령 실행에 전달되는 플래그를 지정할 수도 있습니다.
 
 ### shell 명령 매개변수
 {: #shell-parameters}
@@ -507,7 +486,7 @@ ibmcloud dev stop
 ### stop 명령 매개변수
 {: #stop-parameters}
 
-다음 매개변수는 `stop` 명령에 사용됩니다. 다른 명령과 공유되는 [추가 매개변수](#command-parameters)가 있습니다.
+다음 매개변수는 `stop` 명령에 사용됩니다. 다른 명령과 공유되는 [매개변수](#command-parameters)가 있습니다.
 
 #### `container-name-run`
 {: #container-name-run}
@@ -543,7 +522,7 @@ ibmcloud dev test
 ### test 명령 매개변수
 {: #test-parameters}
 
-다음 매개변수는 `test` 명령 전용입니다. 다른 명령과 공유되는 [추가 매개변수](#command-parameters)가 있습니다.
+다음 매개변수는 `test` 명령 전용입니다. 다른 명령과 공유되는 [매개변수](#command-parameters)가 있습니다.
 
 #### `test-cmd`
 {: #test-cmd}

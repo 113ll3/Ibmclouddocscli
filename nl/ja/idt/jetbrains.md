@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -18,16 +18,15 @@ subcollection: cloud-cli
 # JetBrains IDE 用 IBM Cloud Developer Tools
 {: #ibm-dev-tools-for-jetbrains}
 
-{{site.data.keyword.cloud}} Developer Tools の JetBrains IDE 用拡張機能には、`IntelliJ`、`WebStorm`、`Android Studio` などが含まれ、IDE 内から {{site.data.keyword.dev_cli_notm}} CLI コマンドに直接アクセスするための新しいメニュー項目が用意されています。 アプリケーションのデプロイメント、{{site.data.keyword.cloud_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と Cloud Foundry の両方のワークフローで、`ibmcloud dev` コマンドのサブセットに素早くアクセスできます。どの操作も、エディターのコンテキストを離れずに実行できます。
+{{site.data.keyword.cloud}} Developer Tools の JetBrains IDE 用拡張機能には、`IntelliJ`、`WebStorm`、`Android Studio` などが含まれ、IDE 内から {{site.data.keyword.dev_cli_notm}} CLI コマンドに直接アクセスするための新しいメニュー項目が用意されています。 アプリケーションのデプロイメント、{{site.data.keyword.cloud_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と Cloud Foundry の両方のワークフローで、`ibmcloud dev` コマンドのサブセットに素早くアクセスできます。 どの操作も、エディターのコンテキストを離れずに実行できます。
 {: shortdesc}
 
-![WebStorm IDE 内で実行される IBM Cloud Developer Tools の画面キャプチャー。](jetbrains.png "WebStorm IDE 内で実行される {{site.data.keyword.cloud_notm}} Developer Tools のメニューの例")
-
+![WebStorm IDE 内で実行される IBM Cloud Developer Tools の画面キャプチャー](../images/jetbrains.png "WebStorm IDE 内で実行される {{site.data.keyword.cloud_notm}} Developer Tools のメニューの例")
 
 ## 従属関係
 {: #jetbrains-dependencies}
 
-{{site.data.keyword.cloud_notm}} Developer Tools の JetBrains ベースの IDE の拡張機能を使用するには、[{{site.data.keyword.dev_cli_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) がシステムにインストールされている必要があります。
+{{site.data.keyword.cloud_notm}} Developer Tools の JetBrains ベースの IDE の拡張機能を使用するには、[{{site.data.keyword.dev_cli_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) がシステムにインストールされている必要があります。
 
 ## インストール
 {: #jetbrains-installation}

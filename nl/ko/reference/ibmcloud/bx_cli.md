@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -61,7 +61,7 @@ ibmcloud help [COMMAND|NAMESPACE]
 
 <dl>
 <dt>COMMAND|NAMESPACE</dt>
-<dd>해당 도움말이 표시되는 명령 또는 네임스페이스입니다. 값을 지정하지 않으면 {{site.data.keyword.Bluemix_notm}} CLI의 일반 도움말이 표시됩니다. 선택사항.</dd>
+<dd>해당 도움말이 표시되는 명령 또는 네임스페이스입니다. 값을 지정하지 않으면 {{site.data.keyword.cloud_notm}} CLI의 일반 도움말이 표시됩니다. 선택사항.</dd>
 </dl>
 
 ### 예제
@@ -225,17 +225,17 @@ ibmcloud [-q, --quiet] cf COMMAND...
 
 <dl>
   <dt>-q, --quiet</dt>
-  <dd>호출 메시지를 표시하지 않습니다. </dd>
+  <dd>호출 메시지를 표시하지 않습니다.</dd>
 </dl>
 
 ### 예제
 {: #info-examples}
 
-Cloud Foundry 애플리케이션을 나열합니다.
+Cloud Foundry 앱을 나열합니다.
+
 ```
 ibmcloud cf apps
 ```
-{: codeblock}
 
 `Invoking cf command...` 메시지를 표시하지 않고 Cloud Foundry 서비스를 나열합니다.
 ```
@@ -425,7 +425,7 @@ ibmcloud logout
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
-{{site.data.keyword.Bluemix_notm}}의 모든 지역에 대한 정보를 확인합니다.
+{{site.data.keyword.cloud_notm}}의 모든 지역에 대한 정보를 확인합니다.
 
 ```
 ibmcloud regions
@@ -522,7 +522,7 @@ ibmcloud update [-f]
 </dl>
 
 ## 일반 클래식 인프라 서비스 명령
-{: #softlayer_cli}
+{: #classic-service-commands}
 
 인프라 서비스를 구성하고 관리하려면 {{site.data.keyword.cloud_notm}} CLI에서 클래식 인프라 명령을 사용하십시오.
 
@@ -532,23 +532,23 @@ USAGE:
    ibmcloud sl command [arguments...] [options...]
 
 COMMANDS:
-   block           Gen1 infrastructure Block Storage
-   cdn             Gen1 infrastructure Content Delivery Network
-   file            Gen1 infrastructure File Storage
-   dns             Gen1 infrastructure Domain Name System
-   globalip        Gen1 infrastructure Global IP addresses
-   hardware        Gen1 infrastructure hardware servers
-   image           Gen1 infrastructure Compute images
-   ipsec           Gen1 infrastructure IPSEC VPN
-   loadbal         Gen1 infrastructure Load balancers
-   security        Gen1 infrastructure SSH Keys and SSL Certificates
-   securitygroup   Gen1 infrastructure network security groups
-   subnet          Gen1 infrastructure Network subnets
-   ticket          Gen1 infrastructure Manage Tickets
-   vlan            Gen1 infrastructure Network VLANs
-   vs              Gen1 infrastructure Virtual Servers
-   order           Gen1 infrastructure Orders
-   user            Gen1 infrastructure Manage Users
+   block           Classic infrastructure Block Storage
+   cdn             Classic infrastructure Content Delivery Network
+   file            Classic infrastructure File Storage
+   dns             Classic infrastructure Domain Name System
+   globalip        Classic infrastructure Global IP addresses
+   hardware        Classic infrastructure hardware servers
+   image           Classic infrastructure Compute images
+   ipsec           Classic infrastructure IPSEC VPN
+   loadbal         Classic infrastructure Load balancers
+   security        Classic infrastructure SSH Keys and SSL Certificates
+   securitygroup   Classic infrastructure network security groups
+   subnet          Classic infrastructure Network subnets
+   ticket          Classic infrastructure Manage Tickets
+   vlan            Classic infrastructure Network VLANs
+   vs              Classic infrastructure Virtual Servers
+   order           Classic infrastructure Orders
+   user            Classic infrastructure Manage Users
    call-api        Call arbitrary API endpoints.
    help            Print command usage message
 ```

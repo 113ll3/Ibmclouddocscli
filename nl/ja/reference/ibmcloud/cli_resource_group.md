@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-06"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -117,7 +117,7 @@ ibmcloud resource group-create example-group
 
 既存のリソース・グループを更新します
 ```
-ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] 
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -128,8 +128,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
   <dd>ターゲット・リソース・グループの名前</dd>
   <dt>-n, --name</dt>
   <dd>リソース・グループの新しい名前</dd>
-  <dt>-q, --quota</dt>
-  <dd>新規割り当て量定義の名前</dd>
   <dt>-f</dt>
   <dd>確認を求めずに更新を強制します</dd>
 </dl>
@@ -139,12 +137,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 リソース・グループ `example-group` を `trial-group` に名前変更します
 ```
 ibmcloud resource group-update example-group -n trial-group
-```
-{: codeblock}
-
-リソース・グループ `example-group` の割り当て量を `free` に変更します
-```
-ibmcloud resource group-update example-group -q free
 ```
 {: codeblock}
 
@@ -300,7 +292,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>NAME (必須)</dt>
   <dd>サービス・インスタンスの名前</dd>
   <dt>SERVICE_NAME または SERVICE_ID (必須)</dt>
-  <dd>サービスの名前または ID。 サービス・オファリングをリストするには、`ibmcloud catalog service-marketplace`[コマンド](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace)を使用します。</dd>
+  <dd>サービスの名前または ID。 サービス・オファリングをリストするには、`ibmcloud catalog service-marketplace`[コマンド](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace)を使用します。</dd>
   <dt>SERVICE_PLAN_NAME または SERVICE_PLAN_ID (必須)</dt>
   <dd>サービス・プランの名前または ID</dd>
   <dt>LOCATION (必須)</dt>
@@ -312,7 +304,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>リソース・グループ名</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>サービス・エンドポイントのタイプ</dd>
+  <dd>サービス・エンドポイントのタイプ。 指定可能な値は「public」、「private」、「public-and-private」です。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -348,7 +340,7 @@ ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>リソース・グループ名</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>サービス・エンドポイントのタイプ</dd>
+  <dd>サービス・エンドポイントのタイプ。 指定可能な値は「public」、「private」、「public-and-private」です。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに更新を強制します</dd>
 </dl>
@@ -468,7 +460,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
   <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>パラメーター JSON ファイルまたは JSON 文字列</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>サービス・エンドポイントのタイプ</dd>
+  <dd>サービス・エンドポイントのタイプ。 指定可能な値は、「public」および「private」です。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに作成を強制します</dd>
 </dl>
@@ -609,7 +601,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>リソース・グループ名</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>サービス・エンドポイントのタイプ</dd>
+  <dd>サービス・エンドポイントのタイプ。 指定可能な値は、「public」および「private」です。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに作成を強制します</dd>
 </dl>
@@ -977,7 +969,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
   <dt>--tag-names(必須)</dt>
   <dd>タグ名のコンマ区切りリスト</dd>
   <dt>--resource-name</dt>
-  <dd>タグをアタッチするリソースの名前。クラシック・インフラストラクチャー・リソースでは、このオプションを使用できません。</dd>
+  <dd>タグをアタッチするリソースの名前。 クラシック・インフラストラクチャー・リソースでは、このオプションを使用できません。</dd>
   <dt>--resource-id</dt>
   <dd>タグをアタッチするリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。 「ibmcloud resource search」コマンドを使用して、リソースの CRN または ID を入手できます。</dd>
   <dt>--resource-type</dt>
@@ -1040,7 +1032,7 @@ ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --re
   <dt>--tag-names(必須)</dt>
   <dd>タグ名のコンマ区切りリスト</dd>
   <dt>--resource-name</dt>
-  <dd>タグをデタッチするリソースの名前。クラシック・インフラストラクチャー・リソースでは、このオプションを使用できません。</dd>
+  <dd>タグをデタッチするリソースの名前。 クラシック・インフラストラクチャー・リソースでは、このオプションを使用できません。</dd>
   <dt>--resource-id</dt>
   <dd>タグを切り離すリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。 「ibmcloud resource search」コマンドを使用して、リソースの CRN または ID を入手できます。</dd>
   <dt>--resource-type</dt>

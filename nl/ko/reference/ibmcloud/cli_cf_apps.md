@@ -223,7 +223,7 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME(필수)</dt>
    <dd>라우트로 맵핑되는 cf 애플리케이션 또는 컨테이너 그룹의 이름입니다.</dd>
    <dt>DOMAIN(필수)</dt>
-   <dd>라우트의 도메인입니다. (예: mybluemix.net). </dd>
+   <dd>라우트의 도메인입니다. (예: mybluemix.net).</dd>
    <dt>-n <i>HOST_NAME</i>(선택사항)</dt>
    <dd>라우트의 호스트 이름입니다. 값을 제공하지 않으면 호스트 이름이 기본적으로 앱 이름 또는 컨테이너 그룹 이름으로 설정됩니다.</dd>
    </dl>
@@ -259,7 +259,7 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME(필수)</dt>
    <dd>cf 애플리케이션 또는 컨테이너 그룹의 이름입니다.</dd>
    <dt>DOMAIN(필수)</dt>
-   <dd>라우트의 도메인입니다. (예: mybluemix.net). </dd>
+   <dd>라우트의 도메인입니다. (예: mybluemix.net).</dd>
    <dt>-n <i>HOST_NAME</i>(선택사항)</dt>
    <dd>라우트의 호스트 이름입니다. 값을 제공하지 않으면 호스트 이름이 기본적으로 앱 이름 또는 컨테이너 그룹 이름으로 설정됩니다.</dd>
    </dl>

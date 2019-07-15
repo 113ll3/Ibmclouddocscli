@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-19"
 
 keywords: cli, docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
 
@@ -29,7 +29,6 @@ subcollection: cloud-cli
 * {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} 플러그인
 * {{site.data.keyword.registrylong_notm}} 플러그인
 * {{site.data.keyword.containerlong_notm}} 플러그인
-* `sdk-gen` 플러그인
 
 ## 시작하기 전에
 {: #idt-docker-prereq}

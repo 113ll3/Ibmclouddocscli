@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Creazione e gestione di server virtuali
 {: #cli-virtual-servers}
 
-I {{site.data.keyword.BluVirtServers}} sono server virtuali scalabili acquistati con allocazioni di memoria e core dedicati. Sono una opzione molto valida se stai cercando risorse di calcolo che è possibile aggiungere in pochi minuti, con accesso a funzioni come i template immagine. 
+I {{site.data.keyword.BluVirtServers}} sono server virtuali scalabili acquistati con allocazioni di memoria e core dedicati. Sono un'opzione molto valida se stai cercando risorse di calcolo che è possibile aggiungere in pochi minuti, con accesso a funzioni come i template immagine. 
 
 Utilizza i seguenti comandi per gestire i server virtuali dell'infrastruttura classica.
 {: shortdesc}

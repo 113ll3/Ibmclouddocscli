@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -13,7 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 
@@ -36,9 +36,11 @@ subcollection: cloud-cli
 - {{site.data.keyword.dev_cli_notm}} CLI 的 [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) 指令以建立新的應用程式。
 - {{site.data.keyword.dev_cli_notm}} CLI 的 [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 指令以快速在現有伺服器端應用程式上啟用雲端。
 
-針對上述任何建立方法，流程類似。選取要使用的專案類型、實作語言及應用程式模式。您也可以選擇將服務新增至應用程式（例如鑑別或持續性）。最後，您可以將 DevOps 功能新增至應用程式，這會提供原始檔控制及團隊通訊的完整工具鏈。其中包括每次確定時觸發的管線，以驗證、建置應用程式，以及將您的應用程式部署至 {{site.data.keyword.cloud_notm}}。
+針對上述任何建立方法，流程類似。選取要使用的專案類型、實作語言及應用程式模式。您也可以選擇將服務新增至應用程式（例如鑑別或持續性）。最後，您可以配置應用程式的持續交付，這會提供原始檔控制及團隊通訊的完整工具鏈。其中包括每次確定時觸發的管線，以驗證、建置應用程式，以及將您的應用程式部署至 {{site.data.keyword.cloud_notm}}。
 
-![使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程](create_flow.png "使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程"){: caption="圖 1. 使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程" caption-side="bottom"}{{site.data.keyword.dev_cli_notm}} CLI 緊密合作，以在開發期間提供順暢經驗。從 Web 主控台中建立的專案都會提供**下載程式碼**按鈕，以將產生的原始碼下載至工作站，以進行進一步開發。
+![使用 {{site.data.keyword.dev_cli_notm}} CLI 的建立流程範例](../images/create_flow.png "使用 {{site.data.keyword.dev_cli_notm}} CLI 的建立流程範例"){: caption="圖 1. 使用 {{site.data.keyword.dev_cli_notm}} CLI 的建立流程範例" caption-side="bottom"}
+
+{{site.data.keyword.dev_cli_notm}} CLI 緊密合作，以在開發期間提供順暢經驗。從 Web 主控台中建立的專案都會提供**下載程式碼**按鈕，以將產生的原始碼下載至工作站，以進行進一步開發。
 
 ### 有用的 CLI 指令
 {: #helpful}
@@ -61,7 +63,7 @@ subcollection: cloud-cli
 {: #ref1}
 
 - 視訊：[在 Ubuntu Linux 上安裝 {{site.data.keyword.cloud_notm}} Developer Tools&trade;](https://www.youtube.com/watch?v=sr7KjHAKpEs){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
-- 部落格：[使用 {{site.data.keyword.dev_cli_short}} CLI 啟用 IBM Cloud 的現有專案](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+- 部落格：[使用 {{site.data.keyword.dev_cli_short}} CLI 啟用 IBM Cloud 的現有專案](https://www.ibm.com/blogs/cloud-archive/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli//){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 
 ## 編寫程式碼、建置及執行
 {: #code-build-run}
@@ -112,5 +114,5 @@ subcollection: cloud-cli
 ### 參照部落格及視訊
 {: #ref3}
 
-- 部落格：[使用 {{site.data.keyword.cloud_notm}} Developer Tools CLI 部署至 {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
-- 部落格：[使用 {{site.data.keyword.cloud_notm}} Developer Tools CLI 部署至 Kubernetes on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+- 部落格：[Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+- 部落格：[Deploying to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/cloud-archive/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -32,7 +32,7 @@ ibmcloud dev enable
 {: codeblock}
 
 * 系統提示您驗證專案的偵測到架構時，請選取 **Python - Flask** 或 **Python - Django**，並回覆 `y`。 
-* 然後，系統會提示您 **Connect to an IBM Cloud app**。請針對您的應用程式選取 **Generate assets, create a new IBM Cloud app and connect to it** 或 **Generate assets without connecting to an IBM Cloud app** 選項。
+* 然後，系統會提示您 **Connect to an IBM Cloud app**。請選取 **Generate assets, create a new IBM Cloud app and connect to it** 或 **Generate assets without connecting to an IBM Cloud app** 選項，以連接您的應用程式。
 * `enable` 指令也可以建立服務，並將它們連結至應用程式。對於這個基本範例，請回覆 `n`。
 
 請參閱下列輸出範例：

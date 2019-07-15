@@ -355,7 +355,7 @@ ibmcloud sl vs list [OPTIONS]
 <dt>--sortby</dt>
 <dd>Colonne de tri par défaut : hostname - Options : id, hostname, domain, datacenter, cpu, memory, public_ip, private_ip.</dd>
 <dt>--column</dt>
-<dd>Colonnes à afficher, valeurs par par défaut : id, hostname, public_ip, private_ip, datacenter, action - Options : guid, power_state, created_by, tags.</dd>
+<dd>Colonnes à afficher, valeurs par défaut : id, hostname, public_ip, private_ip, datacenter, action - Options : guid, power_state, created_by, tags.</dd>
 </dl>
 
 **Exemples** :

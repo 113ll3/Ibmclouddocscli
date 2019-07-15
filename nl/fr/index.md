@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-19"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -17,8 +17,8 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:note: .note}
 
-# Initiation à l'interface de ligne de commande {{site.data.keyword.cloud_notm}}
-{: #ibmcloud-cli}
+# Tutoriel d'initiation
+{: #getting-started}
 
 En suivant ce tutoriel, vous allez installer un ensemble d'outils {{site.data.keyword.cloud}} Developer Tools, vérifier l'installation et configurer l'environnement. {{site.data.keyword.dev_cli_notm}} propose une approche de ligne de commande permettant de créer, développer et déployer des applications en cloud.
 {: shortdesc}
@@ -33,9 +33,9 @@ La commande d'installation présentée dans ce tutoriel installe la dernière ve
 * `curl`
 * Plug-in {{site.data.keyword.dev_cli_notm}}
 * Plug-in {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
+* Plug-in {{site.data.keyword.cos_full_notm}}
 * Plug-in {{site.data.keyword.registrylong_notm}}
 * Plug-in {{site.data.keyword.containerlong_notm}}
-* Plug-in `sdk-gen`
 
 ## Avant de commencer
 {: #idt-prereq}
@@ -84,7 +84,7 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 ## Etape 3. Configurer votre environnement
 {: #step3-configure-idt-env}
 
-1. Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de votre IBMid. Si vous avez plusieurs comptes, vous êtes invité à sélectionner le compte à utiliser. Si vous n'indiquez pas de région avec l'option `-r`, vous devez également choisir une région.
+1. Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de votre IBMid. Si vous avez plusieurs comptes, vous êtes invité à sélectionner le compte à utiliser. Si vous n'indiquez pas de région avec l'option `-r`, vous devez également sélectionner une région.
   ```
   ibmcloud login
   ```

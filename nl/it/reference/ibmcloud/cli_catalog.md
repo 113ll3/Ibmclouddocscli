@@ -24,7 +24,7 @@ Utilizza i seguenti comandi per gestire le voci del catalogo {{site.data.keyword
 ## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
-Cerca voci del catalogo: 
+Cerca voci del catalogo:
 ```
 ibmcloud catalog search <QUERY> [-r, --region REGIONE] [-k, --kind TIPO] [-p, --price PREZZO] [-t, --tag TAG] [--sort-by PROPRIETÀ] [--col COLONNE] [--reverse] [--output TIPO] [--csv] [--global]
 ```
@@ -34,17 +34,17 @@ ibmcloud catalog search <QUERY> [-r, --region REGIONE] [-k, --kind TIPO] [-p, --
 <strong>Opzioni del comando</strong>:
 <dl>
   <dt>-r, --region</dt>
-  <dd>Specifica la regione geografica in cui cercare. Attualmente sono supportate solo "us-south" e "united-kingdom" </dd>
+  <dd>Specifica la regione geografica in cui cercare. Attualmente sono supportate solo "us-south" e "united-kingdom"</dd>
   <dt>-k, --kind</dt>
-  <dd>Filtra in base al tipo di risorse. Attualmente sono supportati solo "service-cf", "iaas", "runtime", "template" e "dashboard" </dd>
+  <dd>Filtra in base al tipo di risorse. Attualmente sono supportati solo "service-cf", "iaas", "runtime", "template" e "dashboard"</dd>
   <dt>-p, --price</dt>
-  <dd>Filtra in base al prezzo. Attualmente sono supportati solo "free", "paygo" e "ibmcloud-subscription" </dd>
+  <dd>Filtra in base al prezzo. Attualmente sono supportati solo "free", "paygo" e "ibmcloud-subscription"</dd>
   <dt>-t, --tag</dt>
   <dd>Filtra in base alla tag.</dd>
   <dt>--sort-by</dt>
   <dd>Proprietà in base a cui ordinare</dd>
   <dt>--col</dt>
-  <dd>Specifica colonne aggiuntive per la tabella. Attualmente "group", "provider" e "tags" </dd>
+  <dd>Specifica colonne aggiuntive per la tabella. Attualmente "group", "provider" e "tags"</dd>
   <dt>--reverse</dt>
   <dd>Indica se invertire la sequenza di ordinamento</dd>
   <dt>--output TIPO (facoltativo)</dt>
@@ -65,7 +65,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
-Ottiene una voce di catalogo: 
+Ottiene una voce di catalogo:
 ```
 ibmcloud catalog entry ID [--children] [--output TIPO] [--global]
 ```
@@ -92,7 +92,7 @@ ibmcloud catalog entry 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 
-Crea una nuova voce di catalogo (solo amministratore catalogo di un account): 
+Crea una nuova voce di catalogo (solo amministratore catalogo di un account):
 ```
 ibmcloud catalog entry-create [-c PARAMETERI_COME_JSON] [-p, --parent ELEMENTO_PRINCIPALE] [--global]
 ```
@@ -119,7 +119,7 @@ ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
 
-Aggiorna una voce di catalogo esistente (solo editor o amministratore di catalogo di un account): 
+Aggiorna una voce di catalogo esistente (solo editor o amministratore di catalogo di un account):
 ```
 ibmcloud catalog entry-update ID [-c PARAMETRI_COME_JSON] [--global]
 ```
@@ -193,7 +193,7 @@ ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ## ibmcloud catalog entry-visibility-set
 {: #ibmcloud_catalog_entry_visibility_set}
 
-Aggiorna la visibilità di una voce di catalogo esistente (solo amministratore di catalogo di un account): 
+Aggiorna la visibilità di una voce di catalogo esistente (solo amministratore di catalogo di un account):
 ```
 ibmcloud catalog entry-visibility-set ID [--includes-add ELENCO] [--includes-remove ELENCO] [--excludes-add ELENCO] [--excludes-remove ELENCO] [--owner ID o Email] [--restrict] [--unrestrict] [-c PARAMETRI_COME_JSON] [--global]
 ```
@@ -233,7 +233,7 @@ ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ## ibmcloud catalog service-marketplace
 {: #ibmcloud_catalog_service_marketplace}
 
-Elenca le offerte di servizio nel marketplace: 
+Elenca le offerte di servizio nel marketplace:
 ```
 ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
@@ -324,7 +324,7 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
    <dt>--desc <i>DESCRIPTION</i> (facoltativo)</dt>
    <dd>Descrizione dell'applicazione.</dd>
    <dt>--no-start (facoltativo)</dt>
-   <dd>Non avviare l'applicazione automaticamente dopo la sua creazione. Se non viene specificata, l'applicazione viene avviata automaticamente dopo la sua creazione. </dd>
+   <dd>Non avviare l'applicazione automaticamente dopo la sua creazione. Se non viene specificata, l'applicazione viene avviata automaticamente dopo la sua creazione.</dd>
    </dl>
 
 

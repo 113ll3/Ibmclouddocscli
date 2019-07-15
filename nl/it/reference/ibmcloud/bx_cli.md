@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -29,7 +29,7 @@ A partire da maggio 2018, i comandi della CLI {{site.data.keyword.cloud_notm}} s
 
 Di seguito sono riportati i comandi dettagliati supportati dalla CLI {{site.data.keyword.cloud_notm}}, inclusi nomi, argomenti, opzioni, prerequisiti, descrizioni ed esempi.
 
-I prerequisiti elencano quali azioni sono necessarie prima di utilizzare il comando e potrebbero essere incluse una o più delle seguenti azioni: 
+I prerequisiti elencano quali azioni sono necessarie prima di utilizzare il comando e potrebbero essere incluse una o più delle seguenti azioni:
 
 <dl>
 <dt>Docker</dt>
@@ -56,12 +56,12 @@ ibmcloud help [COMANDO|SPAZIONOMI]
 
 Nessuno.
 
-### Opzioni del comando 
+### Opzioni del comando
 {: #help-options}
 
 <dl>
 <dt>COMMAND|NAMESPACE</dt>
-<dd>Il comando o lo spazio dei nomi per cui viene visualizzata la guida. Se non viene specificata, viene visualizzata la guida generale per la CLI {{site.data.keyword.Bluemix_notm}}. Facoltativo.</dd>
+<dd>Il comando o lo spazio dei nomi per cui viene visualizzata la guida. Se non viene specificata, viene visualizzata la guida generale per la CLI {{site.data.keyword.cloud_notm}}. Facoltativo.</dd>
 </dl>
 
 ### Esempi
@@ -92,7 +92,7 @@ ibmcloud api [ENDPOINT_API] [--unset] [--skip-ssl-validation]
 
 Nessuno.
 
-### Opzioni del comando 
+### Opzioni del comando
 {: #api-options}
 
 <dl>
@@ -144,7 +144,7 @@ ibmcloud config --http-timeout TIMEOUT_IN_SECONDI | --trace (true|false|percorso
 
 Nessuno.
 
-### Opzioni del comando 
+### Opzioni del comando
 {: #config-options}
 
 <dl>
@@ -220,7 +220,7 @@ ibmcloud [-q, --quiet] cf COMANDO...
 
 Nessuno.
 
-### Opzioni del comando 
+### Opzioni del comando
 {: #info-options}
 
 <dl>
@@ -232,10 +232,10 @@ Nessuno.
 {: #info-examples}
 
 Elenca le applicazioni Cloud Foundry:
+
 ```
 ibmcloud cf apps
 ```
-{: codeblock}
 
 Elenca i servizi Cloud Foundry senza visualizzare il messaggio `Invoking cf command...`:
 ```
@@ -256,7 +256,7 @@ ibmcloud cf install [-v, --version VERSION] [--restore] [-f, --force]
 
 Nessuno.
 
-### Opzioni del comando 
+### Opzioni del comando
 {: #cfinstall-options}
 
 <dl>
@@ -292,7 +292,7 @@ ibmcloud cf install --restore
 ## ibmcloud login
 {: #ibmcloud_login}
 
-Accedi alla CLI {{site.data.keyword.cloud_notm}}. 
+Accedi alla CLI {{site.data.keyword.cloud_notm}}.
 
 ```
 ibmcloud login [-a API_ENDPOINT] [--sso] [-u NOMEUTENTE] [-p PASSWORD] [--apikey CHIAVE | @FILE_CHIAVI] [--no-iam] [-c ID_ACCOUNT | --no-account] [-g GRUPPO_RISORSE] [-r REGIONE | --no-region] [-o ORG] [-s SPAZIO]
@@ -302,7 +302,7 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u NOMEUTENTE] [-p PASSWORD] [--apikey
 
 Nessuno.
 
-### Opzioni del comando 
+### Opzioni del comando
 {: #login-options}
 
 <dl>
@@ -323,7 +323,7 @@ Nessuno.
 <dt>-r REGIONE</dt>
 <dd>Il nome della regione di destinazione, ad esempio, us-south o eu-gb.</dd>
 <dt>--no-region</dt>
-<dd>Accesso forzato senza selezionare una regione. </dd>
+<dd>Accesso forzato senza selezionare una regione.</dd>
 <dt>-o ORG</dt>
 <dd>Il nome dell'organizzazione di destinazione. Questa opzione è obsoleta. Utilizza invece **`ibmcloud target -o org_name`**. Facoltativo.</dd>
 <dt>-s SPAZIO</dt>
@@ -389,7 +389,7 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
 Se la chiave API ha un account associato, il passaggio a un altro account non è supportato.
-{ :note}
+{: note}
 
 Utilizza un passcode monouso:
 
@@ -425,7 +425,7 @@ Nessuno.
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
-Visualizza le informazioni per tutte le regioni su {{site.data.keyword.Bluemix_notm}}.
+Visualizza le informazioni per tutte le regioni su {{site.data.keyword.cloud_notm}}.
 
 ```
 ibmcloud regions
@@ -452,14 +452,14 @@ ibmcloud target [-r NOME_REGIONE | --unset-region] [-c ID_ACCOUNT] [-g GRUPPO_RI
 * Utilizza il comando **`ibmcloud api`** per impostare un endpoint API.
 * Utilizza il comando **`ibmcloud login`** per accedere. Se stai eseguendo l'accesso un ID federato, utilizza l'opzione **`--sso`** per l'autenticazione tramite un passcode monouso oppure l'opzione **`--apikey`** per l'autenticazione tramite una chiave API.
 
-### Opzioni del comando 
+### Opzioni del comando
 {: #target-options}
 
 <dl>
 <dt>-c ID_ACCOUNT</dt>
 <dd>L'ID dell'account di destinazione. Facoltativo.</dd>
 <dt>-r REGIONE</dt>
-<dd>Il nome della regione di destinazione, ad esempio, us-south o eu-gb.Facoltativo.</dd>
+<dd>Il nome della regione di destinazione, ad esempio, us-south o eu-gb. Facoltativo.</dd>
 <dt>-g GRUPPO_RISORSE</dt>
 <dd>Il nome del gruppo di risorse di destinazione. Facoltativo.</dd>
 <dt>--cf</dt>
@@ -513,7 +513,7 @@ ibmcloud update [-f]
 ### Prerequisiti
 {: #update-prereqs}
 
-### Opzioni del comando 
+### Opzioni del comando
 {: #update-options}
 
 <dl>
@@ -522,7 +522,7 @@ ibmcloud update [-f]
 </dl>
 
 ## Comandi del servizio dell'infrastruttura classica generali
-{: #softlayer_cli}
+{: #classic-service-commands}
 
 Utilizza i comandi dell'infrastruttura classica nella CLI {{site.data.keyword.cloud_notm}} per configurare e gestire i servizi dell'infrastruttura.
 
@@ -532,23 +532,23 @@ USAGE:
    ibmcloud sl command [arguments...] [options...]
 
 COMMANDS:
-   block           Gen1 infrastructure Block Storage
-   cdn             Gen1 infrastructure Content Delivery Network
-   file            Gen1 infrastructure File Storage
-   dns             Gen1 infrastructure Domain Name System
-   globalip        Gen1 infrastructure Global IP addresses
-   hardware        Gen1 infrastructure hardware servers
-   image           Gen1 infrastructure Compute images
-   ipsec           Gen1 infrastructure IPSEC VPN
-   loadbal         Gen1 infrastructure Load balancers
-   security        Gen1 infrastructure SSH Keys and SSL Certificates
-   securitygroup   Gen1 infrastructure network security groups
-   subnet          Gen1 infrastructure Network subnets
-   ticket          Gen1 infrastructure Manage Tickets
-   vlan            Gen1 infrastructure Network VLANs
-   vs              Gen1 infrastructure Virtual Servers
-   order           Gen1 infrastructure Orders
-   user            Gen1 infrastructure Manage Users
+   block           Classic infrastructure Block Storage
+   cdn             Classic infrastructure Content Delivery Network
+   file            Classic infrastructure File Storage
+   dns             Classic infrastructure Domain Name System
+   globalip        Classic infrastructure Global IP addresses
+   hardware        Classic infrastructure hardware servers
+   image           Classic infrastructure Compute images
+   ipsec           Classic infrastructure IPSEC VPN
+   loadbal         Classic infrastructure Load balancers
+   security        Classic infrastructure SSH Keys and SSL Certificates
+   securitygroup   Classic infrastructure network security groups
+   subnet          Classic infrastructure Network subnets
+   ticket          Classic infrastructure Manage Tickets
+   vlan            Classic infrastructure Network VLANs
+   vs              Classic infrastructure Virtual Servers
+   order           Classic infrastructure Orders
+   user            Classic infrastructure Manage Users
    call-api        Call arbitrary API endpoints.
    help            Print command usage message
 ```

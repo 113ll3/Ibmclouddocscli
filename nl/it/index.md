@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-19"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -17,8 +17,8 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:note: .note}
 
-# Introduzione alla CLI {{site.data.keyword.cloud_notm}}
-{: #ibmcloud-cli}
+# Esercitazione introduttiva
+{: #getting-started}
 
 In questa esercitazione, vengono forniti i passi per installare una serie di strumenti per sviluppatori {{site.data.keyword.cloud}}, verificare l'installazione e configurare l'ambiente. {{site.data.keyword.dev_cli_notm}} offre un approccio da riga di comando per la creazione, lo sviluppo e la distribuzione di applicazioni cloud.
 {: shortdesc}
@@ -33,9 +33,9 @@ Il comando di installazione in questa esercitazione installa l'ultima versione d
 * `curl`
 * Plug-in {{site.data.keyword.dev_cli_notm}}
 * Plug-in {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
+* Plug-in {{site.data.keyword.cos_full_notm}}
 * Plug-in {{site.data.keyword.registrylong_notm}}
 * Plug-in {{site.data.keyword.containerlong_notm}}
-* Plug-in `sdk-gen`
 
 ## Prima di iniziare
 {: #idt-prereq}
@@ -84,7 +84,7 @@ L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supp
 ## Passo 3. Configura il tuo ambiente
 {: #step3-configure-idt-env}
 
-1. Accedi a {{site.data.keyword.cloud_notm}} con il tuo ID IBM. Se hai più account, ti viene richiesto di selezionare quale account utilizzare. Se non specifichi una regione con l'indicatore `-r`, devi scegliere anche una regione.
+1. Accedi a {{site.data.keyword.cloud_notm}} con il tuo ID IBM. Se hai più account, ti viene richiesto di selezionare quale account utilizzare. Se non specifichi una regione con l'indicatore `-r`, devi selezionare anche una regione.
   ```
   ibmcloud login
   ```

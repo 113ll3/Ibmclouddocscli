@@ -836,6 +836,6 @@ ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
    <dd>O nome ou o ID da instância do CFEE.</dd>
    <dt>--poll</dt>
    <dd>Especifique se você gostaria de tornar essa chamada recorrente para pesquisar até estar no estado estável</dd>
-   <dt>--output FORMAT</dt>
+   <dt>-- FORMATO de saída</dt>
    <dd>Especifique o formato de saída de status. No momento, somente JSON é suportado.</dd>
   </dl>

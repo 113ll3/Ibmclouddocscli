@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -21,13 +21,12 @@ subcollection: cloud-cli
 JetBrains IDE（包括 `IntelliJ`、`WebStorm`、`Android Studio` 等等）的 {{site.data.keyword.cloud}} Developer Tools 延伸規格提供了新的功能表項目，可從 IDE 內直接存取 {{site.data.keyword.dev_cli_notm}} CLI 指令。您可以快速存取 Docker 及 Cloud Foundry 工作流程的部分 `ibmcloud dev` 指令，包括應用程式部署、在 {{site.data.keyword.cloud_notm}} 上啟動/停止/重新啟動應用程式、檢視遠端應用程式日誌等。這些都不需要離開編輯器的環境定義。
 {: shortdesc}
 
-![在 WebStorm IDE 內執行之 IBM Cloud Developer Tools 的畫面擷取。](jetbrains.png "在 WebStorm IDE 內執行的 {{site.data.keyword.cloud_notm}} Developer Tools 功能表範例")
-
+![在 WebStorm IDE 內執行之 IBM Cloud Developer Tools 的畫面擷取。](../images/jetbrains.png "{{site.data.keyword.cloud_notm}} Developer Tools 功能表範例，在 WebStorm IDE 內執行"){: caption="圖 1. IBM Cloud Developer Tools 在 WebStorm IDE 內執行。" caption-side="bottom"}
 
 ## 相依關係
 {: #jetbrains-dependencies}
 
-若要針對以 JetBrains 為基礎的 IDE 使用 {{site.data.keyword.cloud_notm}} Developer Tools 延伸規格，您需要在系統上安裝 [{{site.data.keyword.dev_cli_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)。
+若要針對以 JetBrains 為基礎的 IDE 使用 {{site.data.keyword.cloud_notm}} Developer Tools 延伸規格，您需要在系統上安裝 [{{site.data.keyword.dev_cli_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)。
 
 ## 安裝
 {: #jetbrains-installation}

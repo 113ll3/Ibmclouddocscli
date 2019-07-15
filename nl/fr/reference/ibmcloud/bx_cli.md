@@ -1,8 +1,8 @@
-﻿---
+---
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -35,11 +35,11 @@ La zone Prérequis répertorie les actions requises avant l'utilisation de la co
 <dt>Docker</dt>
 <dd>Installez l'interface CLI Docker.</dd>
 <dt>Noeud final</dt>
-<dd>Utilisez la commande **`ibmcloud api`** pour définir un noeud final d'API. </dd>
+<dd>Utilisez la commande **`ibmcloud api`** pour définir un noeud final d'API.</dd>
 <dt>Se connecter</dt>
 <dd>Utilisez la commande **`ibmcloud login`** pour vous connecter. Si vous vous connectez avec un ID fédéré, utilisez l'option **`--sso`** pour vous authentifier avec un code d'accès unique ou utilisez l'option **`--apikey`** pour vous authentifier avec une clé d'API.</dd>
 <dt>Cible</dt>
-<dd>Utilisez la commande **`ibmcloud target`** pour configurer une organisation et un espace. </dd>
+<dd>Utilisez la commande **`ibmcloud target`** pour configurer une organisation et un espace.</dd>
 </dl>
 
 ## ibmcloud help
@@ -61,7 +61,7 @@ Néant.
 
 <dl>
 <dt>COMMAND|NAMESPACE</dt>
-<dd>Commande ou espace de nom pour lequel afficher l'aide. Si la commande ou l'espace de nom n'est pas spécifié, l'aide générale de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} est affichée. Facultatif.</dd>
+<dd>Commande ou espace de nom pour lequel afficher l'aide. Si la commande ou l'espace de nom n'est pas spécifié, l'aide générale de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} est affichée. Facultatif.</dd>
 </dl>
 
 ### Exemples
@@ -210,7 +210,7 @@ La commande **`ibmcloud info`** n'est plus disponible depuis la version 0.14 de 
 ## ibmcloud cf
 {: #ibmcloud_cf}
 
-Appelez l'interface de ligne de commande Cloud Foundry imbriquée. 
+Appelez l'interface de ligne de commande Cloud Foundry imbriquée.
 ```
 ibmcloud [-q, --quiet] cf COMMAND...
 ```
@@ -225,17 +225,17 @@ Néant.
 
 <dl>
   <dt>-q, --quiet</dt>
-  <dd>Ne pas afficher le message d'appel. </dd>
+  <dd>Ne pas afficher le message d'appel.</dd>
 </dl>
 
 ### Exemples
 {: #info-examples}
 
 Répertorier les applications Cloud Foundry :
+
 ```
 ibmcloud cf apps
 ```
-{: codeblock}
 
 Répertorier les services Cloud Foundry sans afficher le message `Invoking cf command...` :
 ```
@@ -315,21 +315,21 @@ Néant.
 <dt>-p PASS_WORD</dt>
 <dd>Mot de passe de l'utilisateur. Facultatif.</dd>
 <dt>-c ACCOUNT_ID</dt>
-<dd>ID du compte cible. Cette option exclut l'option **`--no account`**. </dd>
+<dd>ID du compte cible. Cette option exclut l'option **`--no account`**.</dd>
 <dt>--no-account</dt>
-<dd>Connexion forcée sans le compte. Cette option n'est pas recommandée et elle exclut l'option **`-c`**. </dd>
+<dd>Connexion forcée sans le compte. Cette option n'est pas recommandée et elle exclut l'option **`-c`**.</dd>
 <dt>-g RESOURCE_GROUP</dt>
 <dd>Nom du groupe de ressources cible. Facultatif.</dd>
 <dt>-r REGION</dt>
 <dd>Nom de la région cible, par exemple, us-south ou eu-gb.</dd>
 <dt>--no-region</dt>
-<dd>Connexion forcée sans cibler une région. </dd>
+<dd>Connexion forcée sans cibler une région.</dd>
 <dt>-o ORG</dt>
 <dd>Nom de l'organisation cible. Cette option est obsolète. Utilisez **`ibmcloud target -o org_name`** à la place. Facultatif.</dd>
 <dt>-s SPACE</dt>
 <dd>Nom de l'espace cible. Cette option est obsolète. Utilisez **`ibmcloud target -s space_name`** à la place. Facultatif.</dd>
 <dt>--no-iam</dt>
-<dd>Imposer une authentification avec un serveur de connexion plutôt qu'avec un système IAM public. </dd>
+<dd>Imposer une authentification avec un serveur de connexion plutôt qu'avec un système IAM public.</dd>
 <dt>--skip-ssl-validation</dt>
 <dd>Ignorer la validation SSL des demandes HTTP. Cette option n'est pas recommandée.</dd>
 </dl>
@@ -337,7 +337,7 @@ Néant.
 ### Exemples
 {: #login-examples}
 
-Se connecter de manière interactive. 
+Se connecter de manière interactive.
 
 ```
 ibmcloud login
@@ -388,7 +388,8 @@ ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Si un compte est associé à la clé d'API, le passage à un autre compte n'est pas autorisé. { :Remarque}
+Si un compte est associé à la clé d'API, le passage à un autre compte n'est pas autorisé.
+{: note}
 
 Utiliser un code d'accès unique :
 
@@ -404,12 +405,12 @@ One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 ```
 {: screen}
 
-Ouvrez le lien dans un navigateur pour obtenir un code d'accès. Entrez le code d'accès donné dans la console pour vous connecter. 
+Ouvrez le lien dans un navigateur pour obtenir un code d'accès. Entrez le code d'accès donné dans la console pour vous connecter.
 
 ## ibmcloud logout
 {: #ibmcloud_logout}
 
-Se déconnecter de l'interface de ligne de commande. 
+Se déconnecter de l'interface de ligne de commande.
 
 ```
 ibmcloud logout
@@ -424,7 +425,7 @@ Néant.
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
-Afficher les informations pour toutes les régions dans {{site.data.keyword.Bluemix_notm}}.
+Afficher les informations pour toutes les régions dans {{site.data.keyword.cloud_notm}}.
 
 ```
 ibmcloud regions
@@ -434,7 +435,7 @@ ibmcloud regions
 ### Prérequis
 {: #regions-prereqs}
 
-Utilisez la commande **`ibmcloud api`** pour définir un noeud final d'API. 
+Utilisez la commande **`ibmcloud api`** pour définir un noeud final d'API.
 
 ## ibmcloud target
 {: #ibmcloud_target}
@@ -448,9 +449,8 @@ ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_G
 ### Prérequis
 {: #target-prereqs}
 
-* Utilisez la commande **`ibmcloud api`** pour définir un noeud final d'API. 
+* Utilisez la commande **`ibmcloud api`** pour définir un noeud final d'API.
 * Utilisez la commande **`ibmcloud login`** pour vous connecter. Si vous vous connectez avec un ID fédéré, utilisez l'option **`--sso`** pour vous authentifier avec un code d'accès unique ou utilisez l'option **`--apikey`** pour vous authentifier avec une clé d'API.
-
 
 ### Options de commande
 {: #target-options}
@@ -459,23 +459,23 @@ ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_G
 <dt>-c ACCOUNT_ID</dt>
 <dd>ID du compte cible. Facultatif.</dd>
 <dt>-r REGION</dt>
-<dd>Nom de la région cible, par exemple, us-south ou eu-gb.Facultatif.</dd>
+<dd>Nom de la région cible, par exemple, us-south ou eu-gb. Facultatif.</dd>
 <dt>-g RESOURCE_GROUP</dt>
 <dd>Nom du groupe de ressources cible. Facultatif.</dd>
 <dt>--cf</dt>
-<dd>Spécifier l'organisation ou l'espace cible de manière interactive. </dd>
+<dd>Spécifier l'organisation ou l'espace cible de manière interactive.</dd>
 <dt>--cf-api</dt>
-<dd>Noeud final de l'API Cloud Foundry. </dd>
+<dd>Noeud final de l'API Cloud Foundry.</dd>
 <dt>-o ORG</dt>
 <dd>Nom de l'organisation cible. Facultatif.</dd>
 <dt>-s SPACE</dt>
 <dd>Nom de l'espace cible. Facultatif.</dd>
 <dt>--unset-region</dt>
-<dd>Effacer la région ciblée. </dd>
+<dd>Effacer la région ciblée.</dd>
 <dt>--unset-resource-group</dt>
-<dd>Effacer le groupe de ressources ciblé. </dd>
+<dd>Effacer le groupe de ressources ciblé.</dd>
 <dt>--output FORMAT</dt>
-<dd>Format de sortie spécifié. JSON est actuellement le seul format pris en charge. </dd>
+<dd>Format de sortie spécifié. JSON est actuellement le seul format pris en charge.</dd>
 </dl>
 
 Si aucune de ces options n'est spécifiée, le compte, la région, l'organisation et l'espace en cours s'affichent.
@@ -522,7 +522,7 @@ ibmcloud update [-f]
 </dl>
 
 ## Commandes générales du service d'infrastructure classique
-{: #softlayer_cli}
+{: #classic-service-commands}
 
 Utilisez les commandes de l'infrastructure classique dans l'interface de ligne de commande (CLI) {{site.data.keyword.cloud_notm}} pour configurer et gérer les services de l'infrastructure.
 
@@ -532,23 +532,23 @@ USAGE:
    ibmcloud sl command [arguments...] [options...]
 
 COMMANDS:
-   block           Gen1 infrastructure Block Storage
-   cdn             Gen1 infrastructure Content Delivery Network
-   file            Gen1 infrastructure File Storage
-   dns             Gen1 infrastructure Domain Name System
-   globalip        Gen1 infrastructure Global IP addresses
-   hardware        Gen1 infrastructure hardware servers
-   image           Gen1 infrastructure Compute images
-   ipsec           Gen1 infrastructure IPSEC VPN
-   loadbal         Gen1 infrastructure Load balancers
-   security        Gen1 infrastructure SSH Keys and SSL Certificates
-   securitygroup   Gen1 infrastructure network security groups
-   subnet          Gen1 infrastructure Network subnets
-   ticket          Gen1 infrastructure Manage Tickets
-   vlan            Gen1 infrastructure Network VLANs
-   vs              Gen1 infrastructure Virtual Servers
-   order           Gen1 infrastructure Orders
-   user            Gen1 infrastructure Manage Users
+   block           Classic infrastructure Block Storage
+   cdn             Classic infrastructure Content Delivery Network
+   file            Classic infrastructure File Storage
+   dns             Classic infrastructure Domain Name System
+   globalip        Classic infrastructure Global IP addresses
+   hardware        Classic infrastructure hardware servers
+   image           Classic infrastructure Compute images
+   ipsec           Classic infrastructure IPSEC VPN
+   loadbal         Classic infrastructure Load balancers
+   security        Classic infrastructure SSH Keys and SSL Certificates
+   securitygroup   Classic infrastructure network security groups
+   subnet          Classic infrastructure Network subnets
+   ticket          Classic infrastructure Manage Tickets
+   vlan            Classic infrastructure Network VLANs
+   vs              Classic infrastructure Virtual Servers
+   order           Classic infrastructure Orders
+   user            Classic infrastructure Manage Users
    call-api        Call arbitrary API endpoints.
    help            Print command usage message
 ```

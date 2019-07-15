@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -69,7 +69,7 @@ ibmcloud login
 {: codeblock}
 {: tsResolve}
 
-## Pour quelle raison l'image de ma nouvelle application n'est-elle pas reconnue ?
+## Pour quelle raison l'image d'une nouvelle application n'est-elle pas reconnue ?
 {: #ts-cli-nosuchimage}
 {: troubleshoot}
 
@@ -120,7 +120,7 @@ Cette erreur est liée au service {{site.data.keyword.objectstorageshort}}, qui 
 Sélectionnez un autre plan.
 {: tsResolve}
 
-## Pour quelle raison mon code n'est-il pas extrait lorsque je crée une application ?
+## Pour quelle raison le code n'est-il pas extrait lorsque je crée une application ?
 {: #retrieve-code-error}
 {: troubleshoot}
 
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-Cette erreur survient lorsque le module `appmetrics` est installé dans une architecture différente. Les modules npm natifs qui sont installés sur une architecture ne fonctionnent pas sur une autre architecture. Les images Docker incluses sont basées sur le noyau Linux.
+Cette erreur survient lorsque le module `appmetrics` est installé dans une architecture différente. Les modules `npm` natifs qui sont installés sur une architecture ne fonctionnent pas sur une autre architecture. Les images Docker incluses sont basées sur le noyau Linux.
 {: tsCauses}
 
 Supprimez le dossier `node_modules` et exécutez à nouveau la commande `ibmcloud dev run`.
@@ -258,7 +258,7 @@ ibmcloud cr namespaces
 {: codeblock}
 {: tsResolve}
 
-## Pour quelle raison le langage de mon application ne peut-il pas être déterminé ?
+## Pour quelle raison le langage ne peut-il pas être déterminé ?
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
@@ -302,7 +302,7 @@ Les nombreuses causes possibles sont décrites dans chacun des liens suivants :
 Pour installer manuellement et séparément les composants de l'interface CLI {{site.data.keyword.dev_cli_notm}}, vous pouvez suivre cette [procédure](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
 
 ## Pourquoi ne puis-je pas générer l'image Docker ?
-{: $ts-cli-docker}
+{: #ts-cli-docker}
 {: troubleshoot}
 
 Si l'erreur suivante s'affiche : 
@@ -324,11 +324,11 @@ Assurez-vous que Docker est installé et en cours d'exécution :
 - Pour installer ou démarrer [Docker pour Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
 {: tsResolve}
 
-## Comment résoudre le problème lié aux versions Helm incompatibles ?
-{: ts-cli-helm}
+## La mise à niveau de Helm échoue avec des erreurs
+{: #ts-cli-helm-rbac}
 {: troubleshoot}
 
-Si les versions Helm client et serveur ne sont pas synchronisées, les erreurs suivantes peuvent être générées :
+Vous pouvez obtenir l'erreur suivante en raison de problèmes de contrôle d'accès à base de rôles (RBAC) :
 ```
 FAILED
 Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
@@ -338,6 +338,19 @@ cannot list resource "configmaps" in API group "" in the namespace
 ```
 {: screen}
 
+Pour résoudre le problème, exécutez la commande suivante :
+{: tsResolve}
+
+```
+kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:default -n kube-system
+```
+{: codeblock}
+
+## Comment résoudre le problème lié aux versions Helm incompatibles ?
+{: #ts-cli-helm}
+{: troubleshoot}
+
+Si les versions Helm client et serveur ne sont pas synchronisées, les erreurs suivantes peuvent être générées :
 ```
 FAILED
 The 'helm upgrade ' command failed to complete due to: exit status 1
@@ -356,7 +369,7 @@ Pour résoudre ce problème, indiquez une version de client identique à la vers
   export HELM_HOME=~/.helm
   ```
 
-* Pour Windows&trade; : En tant qu'administrateur, téléchargez et installer le fichier binaire `helm` à partir de la page [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Icône de lien exerne](../icons/launch-glyph.svg "Icône de lien externe").
+* Pour Windows&trade; : En tant qu'administrateur, téléchargez et installer le fichier binaire `helm` depuis [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Icône de lien exerne](../icons/launch-glyph.svg "Icône de lien externe").
   
   Sur le terminal PowerShell, utilisez les commandes suivantes :
   ```
@@ -366,7 +379,7 @@ Pour résoudre ce problème, indiquez une version de client identique à la vers
   {: codeblock}
 
 ## Pourquoi la génération ibmcloud dev échoue-t-elle lorsqu'un nom d'utilisateur inclut le caractère "@" ?
-{: ts-cli-username}
+{: #ts-cli-username}
 {: troubleshoot}
 Lors du processus de génération d'image, votre nom d'utilisateur est employé pour l'utilisateur dans l'image des outils Docker. Si le nom d'utilisateur contient des caractères spéciaux tels que '@' ou '-', le processus de génération d'image Docker échoue et l'erreur suivante est générée :
 ```

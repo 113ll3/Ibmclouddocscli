@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -32,8 +32,8 @@ ibmcloud dev enable
 {: codeblock}
 
 * 프로젝트, **Python - Flask** 또는 **Python-Django**에 대해 발견된 프레임워크를 확인하도록 프롬프트가 표시되면 `y`를 선택하십시오. 
-* 그러면 **IBM Cloud 앱에 연결**하라는 프롬프트가 표시됩니다. 앱에 **Generate assets, create a new IBM Cloud app and connect to it** 또는 **Generate assets without connecting to an IBM Cloud app** 옵션을 선택하십시오.
-* `enable` 명령은 서비스를 작성하여 앱에 바인드할 수도 있습니다. 이 기본 예제에서는 `n`을 선택하십시오.
+* 그러면 **IBM Cloud 앱에 연결**할지 여부를 확인하는 프롬프트가 표시됩니다. **Generate assets, create a new IBM Cloud app and connect to it** 또는 **Generate assets without connecting to an IBM Cloud app** 옵션을 선택하여 앱에 연결하십시오.
+* `enable` 명령은 서비스를 작성하여 앱에 바인딩할 수도 있습니다. 이 기본 예제에서는 `n`을 선택하십시오.
 
 다음 샘플 결과를 참조하십시오.
 ```

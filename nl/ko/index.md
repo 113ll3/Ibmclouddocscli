@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-19"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -17,8 +17,8 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:note: .note}
 
-# {{site.data.keyword.cloud_notm}} CLI 시작하기
-{: #ibmcloud-cli}
+# 시작하기 튜토리얼
+{: #getting-started}
 
 이 튜토리얼에서는 {{site.data.keyword.cloud}} 개발자 도구 세트를 설치하고, 설치를 확인하고, 환경을 구성합니다. {{site.data.keyword.dev_cli_notm}}는 클라우드 애플리케이션의 작성, 개발 및 배치를 위한 명령행 접근 방식을 제공합니다.
 {: shortdesc}
@@ -33,9 +33,9 @@ subcollection: cloud-cli
 * `curl`
 * {{site.data.keyword.dev_cli_notm}} 플러그인
 * {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} 플러그인
+* {{site.data.keyword.cos_full_notm}} 플러그인
 * {{site.data.keyword.registrylong_notm}} 플러그인
 * {{site.data.keyword.containerlong_notm}} 플러그인
-* `sdk-gen` 플러그인
 
 ## 시작하기 전에
 {: #idt-prereq}

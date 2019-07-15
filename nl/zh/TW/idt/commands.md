@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -27,27 +27,7 @@ subcollection: cloud-cli
 自 2018 年 5 月開始，{{site.data.keyword.cloud}} CLI 指令 `bluemix` 及 `bx` 現在是 `ibmcloud`。不過，您仍然可以使用 `bluemix` 及 `bx` CLI 指令，直到未來移除它們為止。
 {: tip}
 
-請使用下列 {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) 指令來建立、管理、部署、除錯及測試應用程式。
-
-- [build](#build)：在本端容器中建置應用程式。
-- [code](#code)：下載應用程式的程式碼。
-- [console](#console)：開啟應用程式的 {{site.data.keyword.cloud_notm}} 主控台。
-- [create](#create)：建立新的應用程式，並讓您選擇新增服務。
-- [debug](#debug)：在本端容器中針對您的應用程式進行除錯。
-- [delete](#delete)：刪除您空間中的應用程式。
-- [deploy](#deploy)：將應用程式部署至 {{site.data.keyword.cloud_notm}}。
-- [diag](#diag)：顯示已安裝之相依關係的版本資訊。
-- [edit](#edit)：在現有應用程式中新增或移除服務。
-- [enable](#enable)：更新現有應用程式以搭配使用 {{site.data.keyword.cloud_notm}} Developer Tools。
-- [get-credentials](#get-credentials)：取得應用程式所需的認證，以啟用連接的 {{site.data.keyword.cloud_notm}} 服務。
-- [help](#help)：CLI 語法和引數的說明。
-- [list](#list)：列出資源群組中的所有 {{site.data.keyword.cloud_notm}} 應用程式。
-- [run](#run)：在本端容器中執行應用程式。
-- [shell](#shell)：開啟 Shell 以連接至本端容器。
-- [status](#status)：檢查 CLI 所使用容器的狀態。
-- [stop](#stop)：停止容器。
-- [test](#test)：在本端容器中測試應用程式。
-- [view](#view): 檢視應用程式的已部署 URL，以進行測試和檢視。
+請使用 {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) 指令來建立、管理、部署、除錯及測試應用程式。
 
 使用[複合指令](#compound)，在單一指令行陳述式中執行多個指令。
 {: tip}
@@ -96,7 +76,7 @@ ibmcloud dev console [appName]
 ## create
 {: #create}
 
-建立應用程式，以提示您輸入所有資訊，包括資源類型、語言、入門範本套件及「DevOps 工具鏈」選項。這些選項包括 IBM Cloud Foundry 或 Cloud Foundry Enterprise Environment，以及 Kubernetes。應用程式會在現行目錄中建立。
+建立應用程式，以提示您輸入所有資訊，包括資源類型、語言、入門範本套件及 DevOps 工具鏈選項。這些選項包括 IBM Cloud Foundry 或 Cloud Foundry Enterprise Environment，以及 Kubernetes。應用程式會在現行目錄中建立。
 
 若要在現行目錄中建立應用程式，並讓服務與其相關聯，請執行下列指令：
 ```
@@ -187,7 +167,7 @@ deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Nam
 ibm-cluster: "mycluster"
 ```
 
-在 `cli-config.yml` 中，您可以選擇在 `chart-path` 內容中定義 Helm 圖表位置，並配置 `deploy-image-target`（如範例中所示）。使用 `cli-config.yml` 中的 `deploy-image-target` 元素，而不是 `chart/values.yml` 檔案中的 `repository` 及 `tag` 元素。若要特別部署至 {{site.data.keyword.cloud_notm}}，請將配置元素 `ibm-cluster` 設為您在 {{site.data.keyword.cloud_notm}} 中建立的 Kubernetes 叢集名稱。
+在 `cli-config.yml` 中，您可以在 `chart-path` 內容中定義 Helm 圖表位置，並配置 `deploy-image-target`（如範例中所示）。使用 `cli-config.yml` 中的 `deploy-image-target` 元素，而不是 `chart/values.yml` 檔案中的 `repository` 及 `tag` 元素。若要特別部署至 {{site.data.keyword.cloud_notm}}，請將配置元素 `ibm-cluster` 設為您在 {{site.data.keyword.cloud_notm}} 中建立的 Kubernetes 叢集名稱。
 
 在現行應用程式目錄中執行下列指令，以建置您的應用程式：  
 ```
@@ -204,7 +184,7 @@ ibmcloud dev deploy
 ### 部署至 {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment 
 {: #deploy-cfee}
 
-您可以部署至 {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment。若要這樣做，請使用 `ibmcloud target --cf` 來配置此環境的本端環境，然後從該清單中選擇正確的環境。您接著可以使用也用於 {{site.data.keyword.cloud_notm}} Public Cloud Foundry 的 `deploy` 指令。
+您可以部署至 {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment。若要這樣做，請使用 `ibmcloud target --cf` 來配置此環境的本端環境，然後從該清單中選取正確的環境。您接著可以使用也用於 {{site.data.keyword.cloud_notm}} Public Cloud Foundry 的 `deploy` 指令。
 
 ### deploy 指令參數
 {: #deploy-parameters}
@@ -250,7 +230,7 @@ ibmcloud dev deploy
 ## diag
 {: #diag}
 
-這個指令用來作為診斷，以顯示 {{site.data.keyword.dev_cli_notm}} CLI 之已安裝相依關係的版本資訊。這有助於判斷您是否遺漏任何相依關係，或是協助進行問題除錯。
+`diag` 指令用來作為診斷，以顯示 {{site.data.keyword.dev_cli_notm}} CLI 之已安裝相依關係的版本資訊。這有助於判斷您是否遺漏任何相依關係，或是協助進行問題除錯。
 
 執行下列指令，以顯示已安裝相依關係的版本：
 ```
@@ -271,20 +251,20 @@ ibmcloud dev edit
 
 不過，如果您在帳戶上有任何現有服務，這個指令會顯示那些服務的清單，以及每個服務是否連接至應用程式。
 
-* 已連接的服務可讓您選擇是要中斷服務與應用程式的連線，還是從帳戶刪除服務，以中斷它與已連接之所有應用程式的連線。
+* 已連接的服務可讓您選擇是要中斷服務與應用程式的連線，還是從帳戶刪除服務，這樣會中斷它與所有應用程式的連線。
 
-* 已中斷連線的服務可讓您選擇是要將該服務連接至應用程式，還是從帳戶刪除服務。連接現有的服務也會下載認證或原始碼這類檔案，以開始使用該服務。
+* 已中斷連線的服務可讓您選擇是要將該服務連接至應用程式，還是從帳戶刪除服務。連接現有的服務也會下載認證或原始碼這類檔案。
 
-您也可以將新的服務新增至應用程式，在其中，會引導您完成選取服務提示，並下載認證檔或原始碼這類其他檔案，以開始使用新的服務。
+您也可以將新的服務新增至應用程式，在其中，會引導您完成選取服務提示，並下載認證檔或原始碼這類檔案。
 
 ## enable
 {: #enable}
 
-啟用現有應用程式以進行 {{site.data.keyword.cloud_notm}} 部署。`enable` 指令會嘗試自動偵測現有應用程式的語言，然後提示您輸入必要的其他資訊。這會產生及新增可用於本端 Docker 容器、Cloud Foundry 部署、Cloud Foundry Enterprise Environment 部署或「Kubernetes 容器」部署的檔案。您可以透過手動 `deploy` 或使用「DevOps 工具鏈」，來利用所有部署環境。
+啟用現有應用程式以進行 {{site.data.keyword.cloud_notm}} 部署。`enable` 指令會嘗試自動偵測現有應用程式的語言，然後提示您輸入必要的其他資訊。這會產生檔案，以便用於本端 Docker 容器、Cloud Foundry 部署、Cloud Foundry Enterprise Environment 部署或「Kubernetes 容器」部署。您可以透過手動 `deploy` 或使用 DevOps 工具鏈，來利用所有部署環境。
 
-登入 {{site.data.keyword.cloud_notm}} 後，您可以選擇將這個本端應用程式與已在 {{site.data.keyword.cloud_notm}} 中的應用程式連接，或是建立新的 {{site.data.keyword.cloud_notm}} 應用程式。若要充分運用服務及 DevOps 工具鏈這類 {{site.data.keyword.cloud_notm}} 特性，就需要位於 {{site.data.keyword.cloud_notm}} 中的應用程式。針對從 Git 儲存庫複製的應用程式建立 {{site.data.keyword.cloud_notm}} 應用程式時，{{site.data.keyword.cloud_notm}} 應用程式會將這個儲存庫內含在其配置中。 
+登入 {{site.data.keyword.cloud_notm}} 後，您可以將這個本端應用程式與已在 {{site.data.keyword.cloud_notm}} 中的應用程式連接，或是建立新的 {{site.data.keyword.cloud_notm}} 應用程式。若要充分運用服務及 DevOps 工具鏈這類 {{site.data.keyword.cloud_notm}} 特性，就需要位於 {{site.data.keyword.cloud_notm}} 中的應用程式。針對從 Git 儲存庫複製的應用程式建立 {{site.data.keyword.cloud_notm}} 應用程式時，{{site.data.keyword.cloud_notm}} 應用程式會將這個儲存庫內含在其配置中。 
 
-`enable` 是測試版特性。如果您在啟用應用程式時遇到問題，我們的[疑難排解頁面](/docs/cli/ts_createapps.html#troubleshoot)可為您提供協助。具體而言，`enable` 不適用於行動應用程式或架構。對於會產生數個可部署資產的複雜應用程式，必須個別啟用應用程式的每個元件。 
+`enable` 是測試版特性。如果您在啟用應用程式的雲端功能時遇到問題，請參閱[疑難排解](/docs/cli?topic=cloud-cli-troubleshoot)。具體而言，`enable` 不適用於行動應用程式或架構。對於會產生數個可部署資產的複雜應用程式，必須個別啟用應用程式的每個元件。 
 
 執行下列指令，以在現行目錄中啟用現有應用程式：
 ```
@@ -297,11 +277,11 @@ ibmcloud dev enable
 * `package.json` 檔的存在會識別 Node.js 應用程式。
 * `package.swift` 檔的存在會識別 Swift 應用程式。
 * `setup.py` 或 `requirements.txt` 檔的存在會識別 Python 應用程式。
-* `pom.xml` 或 `build.gradle` 檔的存在會識別 Java 應用程式。
+* `pom.xml` 或 `build.gradle` 檔的存在會識別 Java&trade; 應用程式。
 	* `pom.xml` 檔的存在會識別 Maven 應用程式。
 	* `build.gradle` 檔的存在會識別 Gradle 應用程式。
 
-您也可以選擇性地使用 `--language` 引數來置換偵測到的應用程式語言。只支援有效且完整的應用程式。enable 指令不會修改原始碼。
+您也可以地使用 `--language` 引數來置換偵測到的應用程式語言。只支援有效且完整的應用程式。enable 指令不會修改原始碼。
 
 ### enable language 選項
 {: #enable-language-options}
@@ -314,7 +294,7 @@ ibmcloud dev enable
 * java-mp（解譯為 Java&trade; - Java&trade; MicroProfile）
 * java-spring（解譯為 Java&trade; - Spring Framework）
 
-如果使用 `ibmcloud dev enable` 指令所建立檔案的名稱與應用程式資料夾中的現有檔案衝突，則會儲存為 `.merge` 副檔名。  
+如果使用 `ibmcloud dev enable` 指令所建立檔案與應用程式資料夾中的現有檔案發生名稱衝突，則會儲存為 `.merge` 副檔名。  
 
 ### enable 指令參數
 {: #enable-parameters}
@@ -336,7 +316,7 @@ ibmcloud dev enable
 #### `no-create`
 {: #enable-no-create}
 
-* 在本端建立啟用檔案時，此參數可防止在 {{site.data.keyword.cloud_notm}} 中建立應用程式。
+* 用來防止在 {{site.data.keyword.cloud_notm}} 建立應用程式的參數，且會在本端建立啟用檔案。
 * 用法：`ibmcloud dev enable --no-create`
 
 ## get-credentials
@@ -392,7 +372,7 @@ ibmcloud dev run
 ### run 指令參數
 {: #run-parameters}
 
-下列參數專用於 `run` 指令，並且可協助您在 run 容器內管理您的應用程式。還有[其他參數](#command-parameters)與其他指令共用。
+下列參數專用於 `run` 指令，並且可協助您在 run 容器內管理您的應用程式。還有[參數](#command-parameters)與其他指令共用。
 
 #### `container-name-run`
 {: #container-name-run2}
@@ -416,7 +396,7 @@ ibmcloud dev run
 {: #dockerfile-run}
 
 * run 容器的 Dockerfile。
-* 如果您打算使用數個容器來執行，這應該是 Compose 檔案。
+* 如果您打算使用數個容器來執行，請使用 Compose 檔案。
 * 若要使用多個 Compose 檔案，請用雙引號括住以逗點區隔的檔名清單。
 * 用法：`ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
 * 用法：`ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
@@ -448,7 +428,7 @@ ibmcloud dev shell
 
 {{site.data.keyword.dev_cli_short}} CLI 會將互動式 Shell 開啟至應用程式的 Docker 容器。Shell 指令的預設目標容器是由 `cli-config.yml` 檔案中的 `container-shell-target` 值所定義，而有效值是 `run` 或 `tools`。如果未定義此值，或指定無效值，則依預設 `shell` 指令會以 `tools` 容器為目標。shell 指令會將容器開啟到對應 Dockerfile 中 `WORKDIR` 指示所指定的目錄。如果 Dockerfile 中未列出 `WORKDIR`，則會使用容器根目錄作為工作目錄。如需相關資訊，請參閱[此參考資料](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
-或者，您可以決定要傳遞 `run` 或 `tools` 作為指令的引數，以便啟動該容器和開啟 Shell 來連接該容器。同樣地，您可以使用 `container-name` 參數，傳遞您要以 Shell 方式連接的容器名稱。不過，此旗標應該保留用於沒有容器在執行中的情況。`run` 和 `tools` 引數更有彈性，而且可讓您在執行中的容器之間切換。例如，如果 tools 容器正在執行，且您執行 `ibmcloud dev shell run`，則會停止 `tools` 容器，並啟動 `run` 容器，反之亦然。
+或者，您可以決定要傳遞 `run` 或 `tools` 作為指令的引數，以便啟動該容器和開啟 Shell 來連接該容器。同樣地，您可以使用 `container-name` 參數，傳遞您要以 Shell 方式連接的容器名稱。不過，此旗標保留用於沒有容器在執行中的情況。`run` 和 `tools` 引數更有彈性，而且可讓您在執行中的容器之間切換。例如，如果 tools 容器正在執行，且您執行 `ibmcloud dev shell run`，則會停止 `tools` 容器，並啟動 `run` 容器，反之亦然。
 
 如果在您執行 `shell` 指令時，目標 `run` 或 `tools` 容器尚未執行，則會啟動目標容器。不過，會置換 Dockerfile 中的預設 `Cmd` 或 `Entrypoint` 以直接啟動到 Shell，而不是啟動伺服器處理程序。這可讓您啟動 `run` 或 `tools` 容器，並使用您自己的任意或自訂指令手動啟動伺服器。
 
@@ -456,7 +436,7 @@ ibmcloud dev shell
 
 您在旗標後面傳遞給指令的任何其他引數都會剖析為要在開啟 Shell 時執行的指令。如果您提供指令，則容器內的 Shell 會在執行指令時結束，並回到您的終端機。
 
-例如，您可以呼叫 &trade; `ibmcloud dev shell tools ls`，以在 tools 容器 Shell 內執行 Linux `ls` 指令。您也可以使用引號括住引數（例如 `ibmcloud dev shell "ls -la"`），來指定要傳入 Shell 指令執行的其他旗標。
+例如，您可以呼叫 &trade; `ibmcloud dev shell tools ls`，以在 tools 容器 Shell 內執行 Linux `ls` 指令。您也可以使用引號括住引數（例如 `ibmcloud dev shell "ls -la"`），來指定要傳入 Shell 指令執行的旗標。
 
 ### shell 指令參數
 {: #shell-parameters}
@@ -506,7 +486,7 @@ ibmcloud dev stop
 ### stop 指令參數
 {: #stop-parameters}
 
-下列參數用於 `stop` 指令。還有[其他參數](#command-parameters)與其他指令共用。
+下列參數用於 `stop` 指令。還有[參數](#command-parameters)與其他指令共用。
 
 #### `container-name-run`
 {: #container-name-run}
@@ -542,7 +522,7 @@ ibmcloud dev test
 ### test 指令參數
 {: #test-parameters}
 
-下列參數專屬於 `test` 指令。還有[其他參數](#command-parameters)與其他指令共用。
+下列參數專屬於 `test` 指令。還有[參數](#command-parameters)與其他指令共用。
 
 #### `test-cmd`
 {: #test-cmd}

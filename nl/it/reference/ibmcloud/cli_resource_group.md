@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-06"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -117,7 +117,7 @@ ibmcloud resource group-create example-group
 
 Aggiorna un gruppo di risorse esistente
 ```
-ibmcloud resource group-update NOME [-n, --name NUOVO_NOME] [-q, --quota NOME_NUOVA_QUOTA]
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] 
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
@@ -128,8 +128,6 @@ ibmcloud resource group-update NOME [-n, --name NUOVO_NOME] [-q, --quota NOME_NU
   <dd>Nome del gruppo di risorse di destinazione</dd>
   <dt>-n, --name</dt>
   <dd>Nuovo nome del gruppo di risorse</dd>
-  <dt>-q, --quota</dt>
-  <dd>Nome della nuova definizione di quota</dd>
   <dt>-f</dt>
   <dd>Forza l'aggiornamento senza conferma</dd>
 </dl>
@@ -139,12 +137,6 @@ ibmcloud resource group-update NOME [-n, --name NUOVO_NOME] [-q, --quota NOME_NU
 Rinomina il gruppo di risorse `example-group` come `trial-group`:
 ```
 ibmcloud resource group-update example-group -n trial-group
-```
-{: codeblock}
-
-Modifica la quota del gruppo di risorse `example-group` come `free`:
-```
-ibmcloud resource group-update example-group -q free
 ```
 {: codeblock}
 
@@ -182,7 +174,7 @@ ibmcloud resource quota NOME
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome della quota</dd>
@@ -300,7 +292,7 @@ ibmcloud resource service-instance-create NOME (NOME_SERVIZIO | ID_SERVIZIO) NOM
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome dell'istanza del servizio</dd>
   <dt>NOME_SERVIZIO o ID_SERVIZIO (obbligatorio)</dt>
-  <dd>Nome o ID del servizio. Per elencare le offerte di servizio, utilizza il [comando](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace)`ibmcloud catalog service-marketplace`.</dd>
+  <dd>Nome o ID del servizio. Per elencare le offerte di servizio, utilizza il comando `ibmcloud catalog service-marketplace`[](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace).</dd>
   <dt>NOME_PIANO_SERVIZIO o ID_PIANO_SERVIZIO (obbligatorio)</dt>
   <dd>Nome o ID del piano di servizio</dd>
   <dt>LOCATION (obbligatorio)</dt>
@@ -312,7 +304,7 @@ ibmcloud resource service-instance-create NOME (NOME_SERVIZIO | ID_SERVIZIO) NOM
   <dt>-g <i>GRUPPO_RISORSE</i></dt>
   <dd>Nome del gruppo di risorse</dd>
   <dt>--service-endpoints <i>TIPO_ENDPOINT_SERVIZIO</i></dt>
-  <dd>Tipi di endpoint del servizio</dd>
+  <dd>Tipi di endpoint del servizio. I valori possibili sono 'public', 'private', 'public-and-private'.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -348,7 +340,7 @@ ibmcloud resource ( NOME | ID ) [-n, --name NUOVO_NOME] [--service-plan-id ID_PI
   <dt>-g <i>GRUPPO_RISORSE</i></dt>
   <dd>Nome del gruppo di risorse</dd>
   <dt>--service-endpoints <i>TIPO_ENDPOINT_SERVIZIO</i></dt>
-  <dd>Tipi di endpoint del servizio</dd>
+  <dd>Tipi di endpoint del servizio. I valori possibili sono 'public', 'private', 'public-and-private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forza l'aggiornamento senza conferma</dd>
 </dl>
@@ -468,7 +460,7 @@ ibmcloud resource service-binding-create NOME_ALIAS_SERVIZIO NOME_APPLICAZIONE N
   <dt>-p, --parameter <i>@FILE_JSON | TESTO_JSON</i></dt>
   <dd>File JSON o stringa JSON dei parametri</dd>
   <dt>--service-endpoint <i>TIPO_ENDPOINT_SERVIZIO</i></dt>
-  <dd>Tipo di endpoint del servizio</dd>
+  <dd>Tipo di endpoint del servizio. I valori possibili sono 'public', 'private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forza la creazione senza conferma</dd>
 </dl>
@@ -518,7 +510,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NOME | --ali
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--instance-id</dt>
   <dd>ID istanza del servizio</dd>
@@ -609,7 +601,7 @@ ibmcloud resource service-key-create NOME NOME_RUOLO ( --instance-id ID_ISTANZA_
   <dt>-g <i>GRUPPO_RISORSE</i></dt>
   <dd>Nome del gruppo di risorse</dd>
   <dt>--service-endpoint <i>TIPO_ENDPOINT_SERVIZIO</i></dt>
-  <dd>Tipo di endpoint del servizio</dd>
+  <dd>Tipo di endpoint del servizio. I valori possibili sono 'public', 'private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forza la creazione senza conferma</dd>
 </dl>
@@ -631,7 +623,7 @@ ibmcloud resource service-key-update ( NOME | ID ) [-n, --name NUOVO_NOME] [-g G
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME | ID</dt>
   <dd>Nome o ID della chiave</dd>
@@ -872,7 +864,7 @@ Puoi cercare i seguenti attributi:
 
 <strong>Esempi</strong>:
 
-Cerca le applicazioni Cloud Foundry il cui nome inizia con uno testo specifico: 
+Cerca le applicazioni Cloud Foundry il cui nome inizia con uno testo specifico:
 ```
 ibmcloud resource search "name:my* AND type:cf-application"
 ```
@@ -977,7 +969,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
   <dt>--tag-names (obbligatorio)</dt>
   <dd>Elenco separato da virgole di nomi di tag</dd>
   <dt>--resource-name</dt>
-  <dd>Il nome della risorsa a cui devono essere collegate le tag. Questa opzione non può essere utilizzata con le risorse dell'infrastruttura classica. </dd>
+  <dd>Il nome della risorsa a cui devono essere collegate le tag. Questa opzione non può essere utilizzata con le risorse dell'infrastruttura classica.</dd>
   <dt>--resource-id</dt>
   <dd>Il CRN della risorsa a cui verranno collegate le tag; per le risorse dell'infrastruttura classica, è l'ID della risorsa. Puoi ottenere il CRN o l'ID della risorsa utilizzando il comando 'ibmcloud resource search'.</dd>
   <dt>--resource-type</dt>
@@ -1040,7 +1032,7 @@ ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --re
   <dt>--tag-names (obbligatorio)</dt>
   <dd>Elenco separato da virgole di nomi di tag</dd>
   <dt>--resource-name</dt>
-  <dd>Il nome della risorsa da cui devono essere scollegate le tag. Questa opzione non può essere utilizzata con le risorse dell'infrastruttura classica. </dd>
+  <dd>Il nome della risorsa da cui devono essere scollegate le tag. Questa opzione non può essere utilizzata con le risorse dell'infrastruttura classica.</dd>
   <dt>--resource-id</dt>
   <dd>Il CRN della risorsa da cui verranno scollegate le tag; per le risorse dell'infrastruttura classica, è l'ID della risorsa. Puoi ottenere il CRN o l'ID della risorsa utilizzando il comando 'ibmcloud resource search'.</dd>
   <dt>--resource-type</dt>

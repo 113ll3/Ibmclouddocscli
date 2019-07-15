@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -27,27 +27,7 @@ subcollection: cloud-cli
 从 2018 年 5 月起，{{site.data.keyword.cloud}} CLI 命令 `bluemix` 和 `bx` 都变为 `ibmcloud`。但是，您仍然可以使用 `bluemix` 和 `bx` CLI 命令，直到稍后这些命令被除去为止。
 {: tip}
 
-使用以下 {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) 命令，可创建、管理、部署、调试和测试应用程序。
-
-- [build](#build)：在本地容器中构建应用程序。
-- [code](#code)：下载应用程序的代码。
-- [console](#console)：打开应用程序的 {{site.data.keyword.cloud_notm}} 控制台。
-- [create](#create)：创建新应用程序并提供用于添加服务的选项。
-- [debug](#debug)：在本地容器中调试应用程序。
-- [delete](#delete)：从空间中删除应用程序。
-- [deploy](#deploy)：将应用程序部署到 {{site.data.keyword.cloud_notm}}。
-- [diag](#diag)：显示有关已安装依赖项的版本信息。
-- [edit](#edit)：在现有应用程序中添加或除去服务。
-- [enable](#enable)：更新现有应用程序以用于 {{site.data.keyword.cloud_notm}} Developer Tools。
-- [get-credentials](#get-credentials)：获取使应用程序支持使用连接的 {{site.data.keyword.cloud_notm}} 服务所需的凭证。
-- [help](#help)：有关 CLI 语法和自变量的帮助。
-- [list](#list)：列出资源组中的所有 {{site.data.keyword.cloud_notm}} 应用程序。
-- [run](#run)：在本地容器中运行应用程序。
-- [shell](#shell)：将 shell 打开到本地容器中。
-- [status](#status)：检查 CLI 使用的容器的状态。
-- [stop](#stop)：停止容器。
-- [test](#test)：在本地容器中测试应用程序。
-- [view](#view)：查看应用程序的已部署 URL 以进行测试和查看。
+使用 {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) 命令，可创建、管理、部署、调试和测试应用程序。
 
 使用[复合命令](#compound)在一个命令行语句中运行多个命令。
 {: tip}
@@ -187,7 +167,7 @@ deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Nam
 ibm-cluster: "mycluster"
 ```
 
-在 `cli-config.yml` 中，可以选择在 `chart-path` 属性中定义 Helm chart 的位置，然后配置 `deploy-image-target`，如示例所示。这将使用 `cli-config.yml` 中的 `deploy-image-target` 元素，而不是 `chart/values.yml` 文件中的 `repository` 和 `tag` 元素。具体来说，要部署到 {{site.data.keyword.cloud_notm}}，请将配置元素 `ibm-cluster` 设置为您在 {{site.data.keyword.cloud_notm}} 中创建的 Kubernetes 集群的名称。
+在 `cli-config.yml` 中，可以在 `chart-path` 属性中定义 Helm chart 的位置，然后配置 `deploy-image-target`，如示例所示。这将使用 `cli-config.yml` 中的 `deploy-image-target` 元素，而不是 `chart/values.yml` 文件中的 `repository` 和 `tag` 元素。具体来说，要部署到 {{site.data.keyword.cloud_notm}}，请将配置元素 `ibm-cluster` 设置为您在 {{site.data.keyword.cloud_notm}} 中创建的 Kubernetes 集群的名称。
 
 在当前应用程序目录中运行以下命令来构建应用程序：  
 ```
@@ -209,7 +189,7 @@ ibmcloud dev deploy
 ### deploy 命令参数
 {: #deploy-parameters}
 
-以下参数可以与 `deploy` 命令配合使用，也可以通过直接更新应用程序的 `cli-config.yml` 文件来使用。有一些[其他参数](#command-parameters)是与其他命令共享的。
+以下参数可以与 `deploy` 命令配合使用，也可以通过直接更新应用程序的 `cli-config.yml` 文件来使用。还有与其他命令共享的[更多参数](#command-parameters)。
 
 #### `chart-path`
 {: #chart-path}
@@ -250,7 +230,7 @@ ibmcloud dev deploy
 ## diag
 {: #diag}
 
-此命令用作诊断功能，以显示 {{site.data.keyword.dev_cli_notm}} CLI 的已安装依赖项的版本信息。此命令对于确定是否缺少任何依赖项或帮助调试问题很有帮助。
+`diag` 命令用作诊断功能，以显示 {{site.data.keyword.dev_cli_notm}} CLI 的已安装依赖项的版本信息。此命令对于确定是否缺少任何依赖项或帮助调试问题很有帮助。
 
 运行以下命令以显示已安装依赖项的版本：
 ```
@@ -271,20 +251,20 @@ ibmcloud dev edit
 
 但是，如果您的帐户上有任何现有服务，此命令将显示这些服务的列表以及每个服务是否已连接到应用程序。
 
-* 对于连接的服务，您可以选择断开该服务与应用程序的连接，也可以将该服务从帐户中删除，从而使其与所连接的所有应用程序断开连接。
+* 对于连接的服务，您可以选择断开该服务与应用程序的连接，也可以将该服务从帐户中删除，从而使其与所有应用程序断开连接。
 
-* 对于断开连接的服务，您可以选择将该服务连接到应用程序，也可以将该服务从帐户中删除。连接现有服务还会下载文件（如凭证或源代码）以便开始使用该服务。
+* 对于断开连接的服务，您可以选择将该服务连接到应用程序，也可以将该服务从帐户中删除。连接现有服务还会下载文件，如凭证或源代码。
 
-您还可以向应用程序添加新服务，系统会提示您选择服务并下载其他文件（如凭证文件或源代码），以便开始使用新服务。
+您还可以向应用程序添加服务，系统会提示您选择服务以下载文件，如凭证文件或源代码。
 
 ## enable
 {: #enable}
 
-允许现有应用程序进行 {{site.data.keyword.cloud_notm}} 部署。`enable` 命令尝试自动检测现有应用程序的语言，然后提示您输入其他必要信息。这将生成并添加可用于本地 Docker 容器、Cloud Foundry 部署、Cloud Foundry Enterprise Environment 部署或 Kubernetes 容器部署的文件。您可以手动运行 `deploy` 或使用 DevOps 工具链来利用所有部署环境。
+允许现有应用程序进行 {{site.data.keyword.cloud_notm}} 部署。`enable` 命令尝试自动检测现有应用程序的语言，然后提示您输入其他必要信息。这将生成文件以用于本地 Docker 容器、Cloud Foundry 部署、Cloud Foundry Enterprise Environment 部署或 Kubernetes 容器部署。所有部署环境都可以通过手动运行 `deploy` 或通过 DevOps 工具链来使用。
 
-登录到 {{site.data.keyword.cloud_notm}} 后，您可以选择将此本地应用程序与 {{site.data.keyword.cloud_notm}} 中已有的应用程序相连接，或创建新的 {{site.data.keyword.cloud_notm}} 应用程序。要利用 {{site.data.keyword.cloud_notm}} 功能（例如，各种服务和 DevOps 工具链），需要 {{site.data.keyword.cloud_notm}} 中的应用程序。为从 Git 存储库克隆的应用程序创建 {{site.data.keyword.cloud_notm}} 应用程序时，该 {{site.data.keyword.cloud_notm}} 应用程序会在其配置中包含此存储库。 
+登录到 {{site.data.keyword.cloud_notm}} 后，您可以将此本地应用程序与 {{site.data.keyword.cloud_notm}} 中已有的应用程序相连接，或创建新的 {{site.data.keyword.cloud_notm}} 应用程序。要利用 {{site.data.keyword.cloud_notm}} 功能（例如，各种服务和 DevOps 工具链），需要 {{site.data.keyword.cloud_notm}} 中的应用程序。为从 Git 存储库克隆的应用程序创建 {{site.data.keyword.cloud_notm}} 应用程序时，该 {{site.data.keyword.cloud_notm}} 应用程序会在其配置中包含此存储库。 
 
-`enable` 是 Beta 功能。如果在启用应用程序时遇到困难，可查看我们的[故障诊断页面](/docs/cli/ts_createapps.html#troubleshoot)来获取帮助。特别是，`enable` 不适用于移动应用程序或框架。对于生成多个可部署资产的复杂应用程序，必须分别启用应用程序的每个组件。 
+`enable` 是 Beta 功能。如果在对应用程序启用云时遇到困难，请参阅[故障诊断](/docs/cli?topic=cloud-cli-troubleshoot)。特别是，`enable` 不适用于移动应用程序或框架。对于生成多个可部署资产的复杂应用程序，必须分别启用应用程序的每个组件。 
 
 运行以下命令来启用当前目录中的现有应用程序：
 ```
@@ -297,11 +277,11 @@ ibmcloud dev enable
 * 存在 `package.json` 文件可识别 Node.js 应用程序。
 * 存在 `package.swift` 文件可识别 Swift 应用程序。
 * 存在 `setup.py` 或 `requirements.txt` 文件可识别 Python 应用程序。
-* 存在 `pom.xml` 或 `build.gradle` 文件可识别 Java 应用程序。
+* 存在 `pom.xml` 或 `build.gradle` 文件可识别 Java&trade; 应用程序。
 	* 存在 `pom.xml` 可识别 Maven 应用程序。
 	* 存在 `build.gradle` 可识别 Gradle 应用程序。
 
-（可选）您还可以使用 `--language` 自变量来覆盖检测到的应用程序语言。仅支持有效且完整的应用程序。enable 命令不会修改源代码。
+您还可以使用 `--language` 自变量来覆盖检测到的应用程序语言。仅支持有效且完整的应用程序。enable 命令不会修改源代码。
 
 ### 启用语言选项
 {: #enable-language-options}
@@ -314,12 +294,12 @@ ibmcloud dev enable
 * java-mp（解释为 Java&trade; - Java&trade; MicroProfile）
 * java-spring（解释为 Java&trade; - Spring Framework）
 
-如果使用 `ibmcloud dev enable` 命令创建的文件与应用程序文件夹中的现有文件存在命名冲突，这些文件将使用 `.merge` 文件扩展名进行保存。  
+如果使用 `ibmcloud dev enable` 命令创建的文件与应用程序文件夹中的现有文件存在名称冲突，这些文件将使用 `.merge` 文件扩展名进行保存。  
 
 ### enable 命令参数
 {: #enable-parameters}
 
-以下参数可以与 `enable` 命令配合使用，也可以通过直接更新应用程序的 `cli-config.yml` 文件来使用。有一些[其他参数](#command-parameters)是与其他命令共享的。
+以下参数可以与 `enable` 命令配合使用，也可以通过直接更新应用程序的 `cli-config.yml` 文件来使用。还有与其他命令共享的[更多参数](#command-parameters)。
 
 #### `language`
 {: #enable-language}
@@ -336,7 +316,7 @@ ibmcloud dev enable
 #### `no-create`
 {: #enable-no-create}
 
-* 用于阻止在本地创建启用文件时在 {{site.data.keyword.cloud_notm}} 中创建应用程序的参数。
+* 用于阻止在 {{site.data.keyword.cloud_notm}} 中创建应用程序的参数，并在本地创建启用文件。
 * 用法：`ibmcloud dev enable --no-create`
 
 ## get-credentials
@@ -393,7 +373,7 @@ ibmcloud dev run
 {: #run-parameters}
 
 以下参数是 `run` 命令独有的，可帮助管理 run 容器内的应用程序。
-有一些[其他参数](#command-parameters)是与其他命令共享的。
+有一些[参数](#command-parameters)是与其他命令共享的。
 
 #### `container-name-run`
 {: #container-name-run2}
@@ -417,7 +397,7 @@ ibmcloud dev run
 {: #dockerfile-run}
 
 * run 容器的 Dockerfile。
-* 如果打算使用多个容器来运行，那么此项应为 Compose 文件。
+* 如果打算使用多个容器来运行，请使用 Compose 文件。
 * 要使用多个 Compose 文件，请将文件名的逗号分隔列表括在双引号内。
 * 用法：`ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
 * 用法：`ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
@@ -449,7 +429,7 @@ ibmcloud dev shell
 
 {{site.data.keyword.dev_cli_short}} CLI 会将交互式 shell 打开到应用程序的 Docker 容器中。shell 命令的缺省目标容器由 `cli-config.yml` 文件中的 `container-shell-target` 值定义，其中有效值为 `run` 或 `tools`。如果未定义此值或指定了无效的值，那么缺省情况下 `shell` 命令会将 `tools` 容器设置为目标容器。shell 命令会将容器打开到相应 Dockerfile 中 `WORKDIR` 指令所指定的目录。如果 Dockerfile 中未列出 `WORKDIR`，那么会将容器根目录用作工作目录。有关更多信息，请参阅[此参考](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
 
-或者，您可以决定将 `run` 或 `tools` 作为自变量传递给命令，这会启动该容器，并为该容器打开 shell。与此类似，可以使用 `container-name` 参数来传递要将 shell 打开到其中的容器的名称。但是，应该保留此标志用于没有容器在运行的情况。`run` 和 `tools` 自变量更灵活，并支持在当前有一个容器正在运行的情况下切换容器。例如，如果 tools 容器正在运行，而您执行了 `ibmcloud dev shell run`，那么 `tools` 容器会停止，而 `run` 容器会启动，反之亦然。
+或者，您可以决定将 `run` 或 `tools` 作为自变量传递给命令，这会启动该容器，并为该容器打开 shell。与此类似，可以使用 `container-name` 参数来传递要将 shell 打开到其中的容器的名称。但是，此标志会保留用于没有容器在运行的情况。`run` 和 `tools` 自变量更灵活，并支持在当前有一个容器正在运行的情况下切换容器。例如，如果 tools 容器正在运行，而您执行了 `ibmcloud dev shell run`，那么 `tools` 容器会停止，而 `run` 容器会启动，反之亦然。
 
 如果在执行 `shell` 命令时目标 `run` 或 `tools` 容器尚未运行，那么会启动目标容器。但是，会覆盖 Dockerfile 中的缺省 `Cmd` 或 `Entrypoint`，以直接启动到 shell 中，而不是启动服务器进程。这允许您启动 `run` 或 `tools` 容器，并使用自己的任意命令或定制命令来手动启动服务器。
 
@@ -457,7 +437,7 @@ ibmcloud dev shell
 
 除了标志以外，传递给命令的其他任何自变量都会解析为打开 shell 时要运行的命令。如果提供了命令，那么容器内的 shell 会在运行该命令后退出并返回到终端。
 
-例如，可以通过调用 `ibmcloud dev shell tools ls` 在 tools 容器 shell 内运行 Linux&trade; `ls` 命令。还可以通过将自变量括在引号内来指定要传递到 shell 命令执行中的其他标志，例如 `ibmcloud dev shell "ls -la"`。
+例如，可以通过调用 `ibmcloud dev shell tools ls` 在 tools 容器 shell 内运行 Linux&trade; `ls` 命令。还可以通过将自变量括在引号内来指定要传递到 shell 命令执行中的标志，例如 `ibmcloud dev shell "ls -la"`。
 
 ### shell 命令参数
 {: #shell-parameters}
@@ -507,7 +487,7 @@ ibmcloud dev stop
 ### stop 命令参数
 {: #stop-parameters}
 
-以下参数用于 `stop` 命令。有一些[其他参数](#command-parameters)是与其他命令共享的。
+以下参数用于 `stop` 命令。有一些[参数](#command-parameters)是与其他命令共享的。
 
 #### `container-name-run`
 {: #container-name-run}
@@ -543,7 +523,7 @@ ibmcloud dev test
 ### test 命令参数
 {: #test-parameters}
 
-以下参数是 `test` 命令独有的。有一些[其他参数](#command-parameters)是与其他命令共享的。
+以下参数是 `test` 命令独有的。有一些[参数](#command-parameters)是与其他命令共享的。
 
 #### `test-cmd`
 {: #test-cmd}

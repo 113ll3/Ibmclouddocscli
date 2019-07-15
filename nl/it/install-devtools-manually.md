@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # Installazione manuale del plugin della CLI {{site.data.keyword.cloud_notm}} Developer Tools
 {: #install-devtools-manually}
 
-Puoi installare manualmente il plugin della CLI (command line interface) {{site.data.keyword.cloud}} Developer Tools se preferisci un controllo più granulare per l'installazione dei componenti. Altrimenti, tutti i prerequisiti vengono installati automaticamente per la maggior parte degli utenti utilizzando i [programmi di installazione della piattaforma](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt).
+Puoi installare manualmente il plugin della CLI (command line interface) {{site.data.keyword.cloud}} Developer Tools se preferisci un controllo più granulare per l'installazione dei componenti. Altrimenti, tutti i prerequisiti vengono installati automaticamente per la maggior parte degli utenti utilizzando i [programmi di installazione della piattaforma](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt).
 {: shortdesc}
 
 ## Prima di iniziare
@@ -70,10 +70,22 @@ Per visualizzare una versione locale del dashboard Kubernetes e per distribuire 
 
 Il prefisso per l'esecuzione di comandi utilizzando lo strumento della riga di comando Kubernetes è `kubectl`. Per ulteriori informazioni, vedi [Configurazione della CLI e della API](/docs/containers?topic=containers-cs_cli_install#cs_cli_install).
 
+## Installazione del plugin della CLI {{site.data.keyword.cos_full_notm}}
+
+Il plugin {{site.data.keyword.cos_full_notm}} estende l'interfaccia di riga comando (CLI) {{site.data.keyword.cloud_notm}} con un wrapper API per utilizzare le risorse Object Storage.
+
+* Per installare il plugin {{site.data.keyword.cos_full_notm}}, immetti il seguente comando:
+  ```
+  ibmcloud plugin install cloud-object-storage
+  ```
+  {: codeblock}
+
+Per ulteriori informazioni, vedi il [riferimento ai comandi {{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli).
+
 ## Installazione del plugin della CLI {{site.data.keyword.registrylong_notm}}
 {: #idt-install-container-registry-cli-plugin}
 
-Puoi utilizzare il plugin della CLI `container-registry` per configurare il tuo spazio dei nomi di immagini in un registro privato, gestito e ospitato da IBM. In cui puoi memorizzare e condividere le immagini Docker con tutti gli utenti nel tuo account {{site.data.keyword.cloud_notm}}. 
+Puoi utilizzare il plugin della CLI `container-registry` per configurare il tuo spazio dei nomi di immagini in un registro privato, gestito e ospitato da IBM. In cui puoi memorizzare e condividere le immagini Docker con tutti gli utenti nel tuo account {{site.data.keyword.cloud_notm}}.
 
 * Per installare il plugin {{site.data.keyword.registrylong}}, immetti il seguente comando:
   ```
@@ -81,7 +93,7 @@ Puoi utilizzare il plugin della CLI `container-registry` per configurare il tuo 
   ```
   {: codeblock}
 
-Per ulteriori informazioni, vedi il [riferimento ai comandi {{site.data.keyword.registrylong}}](/docs/services/Registry?topic=registry-registry_cli_reference).
+Per ulteriori informazioni, vedi il [riferimento ai comandi {{site.data.keyword.registrylong}}](/docs/services/Registry?topic=container-registry-cli-plugin-containerregcli).
 
 ## Installazione del plugin della CLI {{site.data.keyword.containerlong_notm}}
 {: #idt-install-kubernetes-cli-plugin}
@@ -121,17 +133,5 @@ ibmcloud plugin install cloud-functions
 ```
 {: codeblock}
 
-Per ulteriori informazioni, vedi [Configurazione del plugin CLI {{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-cloudfunctions_cli#cloudfunctions_cli).
+Per ulteriori informazioni, vedi [Installazione del plugin CLI {{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-cli_install).
 
-## Installazione del plugin della CLI SDK Generator
-{: #idt-install-sdk-gen}
-
-Come sviluppatore di {{site.data.keyword.cloud_notm}}, puoi utilizzare il plugin per generare SDK dalla tua definizione dell'API REST conforme alla [Open API Specification](https://www.openapis.org/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Quando è coinvolta la tua definizione API REST, puoi utilizzare il plugin per rigenerare solo il SDK anziché rigenerare l'intero progetto.
-
-Per installare il plugin della CLI SDK Generator, immetti il seguente comando:
-```
-ibmcloud plugin install sdk-gen
-```
-{: codeblock}
-
-Per ulteriori informazioni, vedi [SDK Generator](/docs/cli/sdk?topic=cloud-cli-sdk-cli#sdk-cli).

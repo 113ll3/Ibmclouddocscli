@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # Instalando o plug-in da CLI do {{site.data.keyword.cloud_notm}} developer tools manualmente
 {: #install-devtools-manually}
 
-É possível instalar manualmente o plug-in da interface da linha de comandos (CLI) das ferramentas do desenvolvedor do {{site.data.keyword.cloud}} se você preferir um controle mais granular para instalar os componentes. Caso contrário, todos os pré-requisitos serão instalados automaticamente para a maioria dos usuários usando os [instaladores de plataforma](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt).
+É possível instalar manualmente o plug-in da interface da linha de comandos (CLI) das ferramentas do desenvolvedor do {{site.data.keyword.cloud}} se você preferir um controle mais granular para instalar os componentes. Caso contrário, todos os pré-requisitos serão instalados automaticamente para a maioria dos usuários usando os [instaladores de plataforma](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt).
 {: shortdesc}
 
 ## Antes de começar
@@ -70,6 +70,18 @@ Para visualizar uma versão local do painel do Kubernetes e para implementar app
 
 O prefixo para executar comandos usando a ferramenta de linha de comandos do Kubernetes é `kubectl`. Para obter mais informações, consulte [Configurando a CLI e a API](/docs/containers?topic=containers-cs_cli_install#cs_cli_install).
 
+## Instalando o plug-in da CLI do {{site.data.keyword.cos_full_notm}}
+
+O plug-in do {{site.data.keyword.cos_full_notm}} amplia a interface da linha de comandos (CLI) do {{site.data.keyword.cloud_notm}} com um wrapper de API para trabalhar com os recursos do Object Storage.
+
+* Para instalar o plug-in do {{site.data.keyword.cos_full_notm}}, execute o comando a seguir:
+  ```
+  ibmcloud plugin install cloud-object-storage
+  ```
+  {: codeblock}
+
+Para obter mais informações, consulte a [referência de comando do {{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli).
+
 ## Instalando o plug-in da CLI do {{site.data.keyword.registrylong_notm}}
 {: #idt-install-container-registry-cli-plugin}
 
@@ -81,7 +93,7 @@ O prefixo para executar comandos usando a ferramenta de linha de comandos do Kub
   ```
   {: codeblock}
 
-Para obter mais informações, consulte a [referência de comando do {{site.data.keyword.registrylong}}](/docs/services/Registry?topic=registry-registry_cli_reference).
+Para obter mais informações, consulte a [referência de comando do {{site.data.keyword.registrylong}}](/docs/services/Registry?topic=container-registry-cli-plugin-containerregcli).
 
 ## Instalando o plug-in da CLI do {{site.data.keyword.containerlong_notm}}
 {: #idt-install-kubernetes-cli-plugin}
@@ -108,7 +120,7 @@ curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | 
   ```
   {: codeblock}
 
-* Os usuários do Windows&trade; podem fazer download e instalar o [binário](https://github.com/helm/helm/releases/tag/v2.7.2){: new_window} do Helm ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
+* Os usuários do Windows&trade; podem fazer download e instalar o [binário](https://github.com/helm/helm/releases/tag/v2.7.2){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") do Helm.
 
 ## Instalando o plug-in da CLI do {{site.data.keyword.openwhisk_short}}
 {: #idt-install-functions}
@@ -122,17 +134,5 @@ ibmcloud plugin install cloud-functions
 ```
 {: codeblock}
 
-Para obter mais informações, consulte [Configurando o plug-in da CLI do {{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-cloudfunctions_cli#cloudfunctions_cli).
+Para obter mais informações, consulte [Instalando o plug-in da CLI do {{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-cli_install).
 
-## Instalando o plug-in da CLI do SDK Generator
-{: #idt-install-sdk-gen}
-
-Como um desenvolvedor do {{site.data.keyword.cloud_notm}}, é possível usar o plug-in para gerar SDKs em sua definição de API de REST compatível com [Open API Specification](https://www.openapis.org/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Conforme a definição da API de REST evolui, é possível usar o plug-in para gerar novamente somente o SDK, em vez de gerar novamente o projeto inteiro.
-
-Para instalar o plug-in da CLI do SDK Generator, execute o comando a seguir:
-```
-Ibmcloud plugin install sdk-gen
-```
-{: codeblock}
-
-Para obter mais informações, consulte  [ Gerador de SDK ](/docs/cli/sdk?topic=cloud-cli-sdk-cli#sdk-cli).

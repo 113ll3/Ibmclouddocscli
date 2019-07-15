@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -69,7 +69,7 @@ ibmcloud login
 {: codeblock}
 {: tsResolve}
 
-## Por que a imagem para meu novo app não é reconhecida?
+## Por que a imagem para um novo app não é reconhecida?
 {: #ts-cli-nosuchimage}
 {: troubleshoot}
 
@@ -120,7 +120,7 @@ Esse erro é devido ao serviço {{site.data.keyword.objectstorageshort}}, que fo
 Selecione um plano diferente.
 {: tsResolve}
 
-## Por que meu código não é recuperado quando eu crio um app?
+## Por que o código não é recuperado quando eu crio um app?
 {: #retrieve-code-error}
 {: troubleshoot}
 
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-Esse erro ocorre quando o módulo `appmetrics` é instalado em uma arquitetura diferente. Módulos npm nativos que estão instalados em uma arquitetura não funcionam em outra. As imagens incluídas do Docker são baseadas no kernel do Linux&trade;.
+Esse erro ocorre quando o módulo `appmetrics` é instalado em uma arquitetura diferente. Os módulos `npm` nativos que são instalados em uma arquitetura não funcionam em outra. As imagens incluídas do Docker são baseadas no kernel do Linux&trade;.
 {: tsCauses}
 
 Exclua a pasta `node_modules` e execute o comando `ibmcloud dev run` novamente.
@@ -259,7 +259,7 @@ ibmcloud cr namespaces
 {: codeblock}
 {: tsResolve}
 
-## Por que o idioma para o meu app não pode ser determinado?
+## Por que a linguagem não pode ser determinada?
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
@@ -304,7 +304,7 @@ As diferentes causas possíveis podem ser localizadas em cada um dos links a seg
 Para instalar manualmente os componentes da CLI do {{site.data.keyword.dev_cli_notm}} separadamente, é possível seguir estas [etapas](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
 
 ## Por que não posso construir a imagem do Docker?
-{: $ts-cli-docker}
+{: #ts-cli-docker}
 {: troubleshoot}
 
 Se você vir o erro a seguir: 
@@ -322,15 +322,15 @@ Esse erro pode ser devido a uma das causas a seguir:
 
 Certifique-se de que o Docker esteja instalado e em execução:
 - Para instalar ou iniciar o [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
-- Para instalar ou iniciar o [Docker for Windows&trade;](https://docs.docker.com/docker-for-windows/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
-- Para instalar ou iniciar o [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
+- Para instalar ou iniciar o [Docker for Windows&trade;](https://docs.docker.com/docker-for-windows/install/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
+- Para instalar ou iniciar o [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
 {: tsResolve}
 
-## Como resolver versões do Helm incompatíveis?
-{: ts-cli-helm}
+## O upgrade do Helm está falhando com erros
+{: #ts-cli-helm-rbac}
 {: troubleshoot}
 
-Se as versões do cliente e do Helm do servidor não estiverem sincronizadas, os erros a seguir poderão ser exibidos:
+É possível se deparar com o erro a seguir devido a problemas de controle de acesso baseado na função (RBAC):
 ```
 FAILED
 Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
@@ -340,6 +340,19 @@ cannot list resource "configmaps" in API group "" in the namespace
 ```
 {: screen}
 
+Para resolver o problema, execute o comando a seguir:
+{: tsResolve}
+
+```
+kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:default -n kube-system
+```
+{: codeblock}
+
+## Como resolver versões do Helm incompatíveis?
+{: #ts-cli-helm}
+{: troubleshoot}
+
+Se as versões do cliente e do Helm do servidor não estiverem sincronizadas, os erros a seguir poderão ser exibidos:
 ```
 FAILED
 The 'helm upgrade ' command failed to complete due to: exit status 1
@@ -358,7 +371,7 @@ Para resolver o problema, configure a versão do cliente para a mesma que a vers
   export HELM_HOME=~/.helm
   ```
 
-* Para o Windows&trade;: como um administrador, faça download e instale o binário do `helm` em [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
+* Para Windows&trade;: como um administrador, faça download e instale o binário `helm` por meio de [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
   
   No terminal PowerShell, use os comandos a seguir:
   ```
@@ -368,7 +381,7 @@ Para resolver o problema, configure a versão do cliente para a mesma que a vers
   {: codeblock}
 
 ## Por que o ibmcloud dev build falha com um nome de usuário que inclui "@"?
-{: ts-cli-username}
+{: #ts-cli-username}
 {: troubleshoot}
 Durante o processo de construção de imagem, seu nome de usuário é usado para o usuário na imagem de ferramentas do Docker. Se o nome do usuário contiver algum caractere especial como '@' ou '-', o
 processo de construção da imagem do Docker falhará com o erro a seguir:

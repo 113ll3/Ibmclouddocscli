@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -37,7 +37,7 @@ subcollection: cloud-cli
 <dt>エンドポイント</dt>
 <dd>**`ibmcloud api`** コマンドを使用して、 API エンドポイントを設定します。</dd>
 <dt>ログイン</dt>
-<dd>**`ibmcloud login`** コマンドを使用して、ログインします。フェデレーテッド ID でログインする場合は、**`--sso`** オプションを使用してワンタイム・パスコードで認証するか、**`--apikey`** オプションを使用して API キーで認証します。</dd>
+<dd>**`ibmcloud login`** コマンドを使用して、ログインします。 フェデレーテッド ID でログインする場合は、**`--sso`** オプションを使用してワンタイム・パスコードで認証するか、**`--apikey`** オプションを使用して API キーで認証します。</dd>
 <dt>ターゲット</dt>
 <dd>**`ibmcloud target`** コマンドを使用して、組織とスペースを設定します。</dd>
 </dl>
@@ -61,7 +61,7 @@ ibmcloud help [COMMAND|NAMESPACE]
 
 <dl>
 <dt>COMMAND|NAMESPACE</dt>
-<dd>ヘルプを表示する対象のコマンドまたは名前空間。 指定されない場合、{{site.data.keyword.Bluemix_notm}} CLI の一般ヘルプが表示されます。 オプション。</dd>
+<dd>ヘルプを表示する対象のコマンドまたは名前空間。 指定されない場合、{{site.data.keyword.cloud_notm}} CLI の一般ヘルプが表示されます。 オプション。</dd>
 </dl>
 
 ### 例
@@ -149,13 +149,13 @@ ibmcloud config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/
 
 <dl>
 <dt>--check-version</dt>
-<dd>CLI バージョン・チェックを使用可能または使用不可にします。有効値は `true` または `false` です。</dd>
+<dd>CLI バージョン・チェックを使用可能または使用不可にします。 有効値は `true` または `false` です。</dd>
 <dt>--color</dt>
-<dd>カラー出力を使用可能または使用不可にします。 このオプションはデフォルトで使用不可になっています。有効値は `true` または `false` です。</dd>
+<dd>カラー出力を使用可能または使用不可にします。 このオプションはデフォルトで使用不可になっています。 有効値は `true` または `false` です。</dd>
 <dt>--http-timeout</dt>
-<dd>HTTP 要求のタイムアウト値 (秒)。デフォルト値は 60 秒です。</dd>
+<dd>HTTP 要求のタイムアウト値 (秒)。 デフォルト値は 60 秒です。</dd>
 <dt>--locale</dt>
-<dd>デフォルト・ロケールを設定します。 値を指定しない場合は、前のロケールが削除されます。</dd>
+<dd>デフォルト・ロケールを設定します。 値を指定しない場合は、前のロケールが削除されます。 </dd>
 <dt>--trace</dt>
 <dd>端末または指定されたファイルへの HTTP 要求をトレースします。 有効値は `true` または `false` です。</dd>
 </dl>
@@ -231,11 +231,11 @@ ibmcloud [-q, --quiet] cf COMMAND...
 ### 例
 {: #info-examples}
 
-Cloud Foundry アプリケーションをリストします。
+Cloud Foundry アプリをリストします。
+
 ```
 ibmcloud cf apps
 ```
-{: codeblock}
 
 `Invoking cf command...` メッセージを表示せずに Cloud Foundry サービスをリストします。
 ```
@@ -307,27 +307,27 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
 
 <dl>
 <dt>-a API_ENDPOINT</dt>
-<dd>API エンドポイント (例えば、`cloud.ibm.com`)。</dd>
+<dd>API エンドポイント (例えば、`cloud.ibm.com`)。 </dd>
 <dt>--apikey API_KEY または @API_KEY_FILE_PATH</dt>
 <dd>API キーの内容、または @ 記号で示された API キー・ファイルのパス。</dd>
 <dt>-u USER_NAME</dt>
 <dd>ユーザー名。 オプション。</dd>
 <dt>-p PASS_WORD</dt>
-<dd>ユーザー・パスワード。オプション。</dd>
+<dd>ユーザー・パスワード。 オプション。</dd>
 <dt>-c ACCOUNT_ID</dt>
-<dd>ターゲット・アカウントの ID。このオプションは、**`--no account`** オプションと同時に指定することはできません。</dd>
+<dd>ターゲット・アカウントの ID。 このオプションは、**`--no account`** オプションと同時に指定することはできません。</dd>
 <dt>--no-account</dt>
-<dd>アカウントなしでログインを強制します。このオプションは非推奨です。**`-c`** オプションと同時に指定することはできません。</dd>
+<dd>アカウントなしでログインを強制します。 このオプションは非推奨です。**`-c`** オプションと同時に指定することはできません。</dd>
 <dt>-g RESOURCE_GROUP</dt>
-<dd>ターゲット・リソース・グループの名前。オプション。</dd>
+<dd>ターゲット・リソース・グループの名前。 オプション。</dd>
 <dt>-r REGION</dt>
 <dd>ターゲット地域の名前。例えば、us-south や eu-gb などです。</dd>
 <dt>--no-region</dt>
 <dd>地域をターゲットにせずにログインを強制します。</dd>
 <dt>-o ORG</dt>
-<dd>ターゲット組織の名前。このオプションは非推奨です。代わりに **`ibmcloud target -o org_name`** を使用してください。オプション。</dd>
+<dd>ターゲット組織の名前。 このオプションは非推奨です。 代わりに **`ibmcloud target -o org_name`** を使用してください。 オプション。</dd>
 <dt>-s SPACE</dt>
-<dd>ターゲット・スペースの名前。このオプションは非推奨です。代わりに **`ibmcloud target -s space_name`** を使用してください。オプション。</dd>
+<dd>ターゲット・スペースの名前。 このオプションは非推奨です。 代わりに **`ibmcloud target -s space_name`** を使用してください。 オプション。</dd>
 <dt>--no-iam</dt>
 <dd>パブリック IAM の代わりにログイン・サーバーでの認証を強制します。</dd>
 <dt>--skip-ssl-validation</dt>
@@ -354,7 +354,7 @@ ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Cloud Found の組織とスペースを設定します。以下のコマンドを実行して、対話式に組織とスペースを特定できます。
+Cloud Found の組織とスペースを設定します。 以下のコマンドを実行して、対話式に組織とスペースを特定できます。
 
 ```
 ibmcloud target --cf
@@ -388,7 +388,8 @@ ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
-API キーにアカウントが関連付けられている場合は、別のアカウントへの切り替えはできません。{ :note}
+API キーにアカウントが関連付けられている場合は、別のアカウントへの切り替えはできません。
+{: note}
 
 ワンタイム・パスコードを使用します。
 
@@ -424,7 +425,7 @@ ibmcloud logout
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
-{{site.data.keyword.Bluemix_notm}} のすべての地域の情報を表示します。
+{{site.data.keyword.cloud_notm}} のすべての地域の情報を表示します。
 
 ```
 ibmcloud regions
@@ -449,32 +450,32 @@ ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_G
 {: #target-prereqs}
 
 * **`ibmcloud api`** コマンドを使用して、 API エンドポイントを設定します。
-* **`ibmcloud login`** コマンドを使用して、ログインします。フェデレーテッド ID でログインする場合は、**`--sso`** オプションを使用してワンタイム・パスコードで認証するか、**`--apikey`** オプションを使用して API キーで認証します。
+* **`ibmcloud login`** コマンドを使用して、ログインします。 フェデレーテッド ID でログインする場合は、**`--sso`** オプションを使用してワンタイム・パスコードで認証するか、**`--apikey`** オプションを使用して API キーで認証します。
 
 ### コマンド・オプション
 {: #target-options}
 
 <dl>
 <dt>-c ACCOUNT_ID</dt>
-<dd>ターゲット・アカウントの ID。オプション。</dd>
+<dd>ターゲット・アカウントの ID。 オプション。</dd>
 <dt>-r REGION</dt>
-<dd>ターゲット地域の名前。例えば、us-south や eu-gb などです。オプション。</dd>
+<dd>ターゲット地域の名前。例えば、us-south や eu-gb などです。 オプション。</dd>
 <dt>-g RESOURCE_GROUP</dt>
-<dd>ターゲット・リソース・グループの名前。オプション。</dd>
+<dd>ターゲット・リソース・グループの名前。 オプション。</dd>
 <dt>--cf</dt>
 <dd>ターゲットの組織とスペースを対話式に指定します。</dd>
 <dt>--cf-api</dt>
 <dd>Cloud Foundry API エンドポイント。</dd>
 <dt>-o ORG</dt>
-<dd>ターゲット組織の名前。オプション。</dd>
+<dd>ターゲット組織の名前。 オプション。</dd>
 <dt>-s SPACE</dt>
-<dd>ターゲット・スペースの名前。オプション。</dd>
+<dd>ターゲット・スペースの名前。 オプション。</dd>
 <dt>--unset-region</dt>
 <dd>ターゲット領域をクリアします。</dd>
 <dt>--unset-resource-group</dt>
 <dd>ターゲット・リソース・グループをクリアします。</dd>
 <dt>--output FORMAT</dt>
-<dd>指定の出力形式。現時点では JSON 形式だけがサポートされています。</dd>
+<dd>指定の出力形式。 現時点では JSON 形式だけがサポートされています。</dd>
 </dl>
 
 どのオプションも指定されていない場合、現行のアカウント、地域、組織、およびスペースが表示されます。
@@ -521,7 +522,7 @@ ibmcloud update [-f]
 </dl>
 
 ## 汎用クラシック・インフラストラクチャーのサービス・コマンド
-{: #softlayer_cli}
+{: #classic-service-commands}
 
 {{site.data.keyword.cloud_notm}} CLI でクラシック・インフラストラクチャー・コマンドを使用して、インフラストラクチャー・サービスを構成したり管理したりします。
 
@@ -531,23 +532,23 @@ USAGE:
    ibmcloud sl command [arguments...] [options...]
 
 COMMANDS:
-   block           Gen1 infrastructure Block Storage
-   cdn             Gen1 infrastructure Content Delivery Network
-   file            Gen1 infrastructure File Storage
-   dns             Gen1 infrastructure Domain Name System
-   globalip        Gen1 infrastructure Global IP addresses
-   hardware        Gen1 infrastructure hardware servers
-   image           Gen1 infrastructure Compute images
-   ipsec           Gen1 infrastructure IPSEC VPN
-   loadbal         Gen1 infrastructure Load balancers
-   security        Gen1 infrastructure SSH Keys and SSL Certificates
-   securitygroup   Gen1 infrastructure network security groups
-   subnet          Gen1 infrastructure Network subnets
-   ticket          Gen1 infrastructure Manage Tickets
-   vlan            Gen1 infrastructure Network VLANs
-   vs              Gen1 infrastructure Virtual Servers
-   order           Gen1 infrastructure Orders
-   user            Gen1 infrastructure Manage Users
+   block           Classic infrastructure Block Storage
+   cdn             Classic infrastructure Content Delivery Network
+   file            Classic infrastructure File Storage
+   dns             Classic infrastructure Domain Name System
+   globalip        Classic infrastructure Global IP addresses
+   hardware        Classic infrastructure hardware servers
+   image           Classic infrastructure Compute images
+   ipsec           Classic infrastructure IPSEC VPN
+   loadbal         Classic infrastructure Load balancers
+   security        Classic infrastructure SSH Keys and SSL Certificates
+   securitygroup   Classic infrastructure network security groups
+   subnet          Classic infrastructure Network subnets
+   ticket          Classic infrastructure Manage Tickets
+   vlan            Classic infrastructure Network VLANs
+   vs              Classic infrastructure Virtual Servers
+   order           Classic infrastructure Orders
+   user            Classic infrastructure Manage Users
    call-api        Call arbitrary API endpoints.
    help            Print command usage message
 ```

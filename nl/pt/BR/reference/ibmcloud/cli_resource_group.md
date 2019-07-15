@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-06"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -117,7 +117,7 @@ ibmcloud resource group-create example-group
 
 Atualizar um grupo de recursos existente
 ```
-ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] 
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
@@ -128,8 +128,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
   <dd>Nome do grupo de recursos de destino</dd>
   <dt>-n, --name</dt>
   <dd>Novo nome do grupo de recursos</dd>
-  <dt>-q, --quota</dt>
-  <dd>Nome da nova definição de cota</dd>
   <dt>-f</dt>
   <dd>Forçar atualização sem confirmação</dd>
 </dl>
@@ -139,12 +137,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 Renomeie o grupo de recursos `example-group` para `trial-group`:
 ```
 ibmcloud resource group-update example-group -n trial-group
-```
-{: codeblock}
-
-Mude a cota do grupo de recursos `example-group` para `free`:
-```
-ibmcloud resource group-update example-group -q free
 ```
 {: codeblock}
 
@@ -300,7 +292,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>NAME (necessário)</dt>
   <dd>Nome da instância de serviço</dd>
   <dt>SERVICE_NAME ou SERVICE_ID (necessário)</dt>
-  <dd>Nome ou ID do serviço. Para listar ofertas de serviços, use o comando `ibmcloud catalog service-marketplace`[](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace).</dd>
+  <dd>Nome ou ID do serviço. Para listar ofertas de serviço, use o [comando](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace) `ibmcloud catalog service-marketplace`.</dd>
   <dt>SERVICE_PLAN_NAME ou SERVICE_PLAN_ID (necessário)</dt>
   <dd>Nome ou ID do plano de serviço</dd>
   <dt>LOCATION (necessário)</dt>
@@ -312,7 +304,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Nome do grupo de recursos</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>Tipos de terminais em serviço</dd>
+  <dd>Tipos dos terminais de serviço. Os valores possíveis são 'public', 'private', 'public-and-private'.</dd>
 </dl>
 
 <strong>Exemplos</strong>:
@@ -348,7 +340,7 @@ ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Nome do grupo de recursos</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>Tipos de terminais em serviço</dd>
+  <dd>Tipos dos terminais de serviço. Os valores possíveis são 'public', 'private', 'public-and-private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forçar atualização sem confirmação</dd>
 </dl>
@@ -468,7 +460,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
   <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>Arquivo JSON ou sequência JSON de parâmetros</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>Tipo do terminal em serviço</dd>
+  <dd>Tipo do terminal de serviço. Os valores possíveis são 'public', 'private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forçar a criação sem confirmação</dd>
 </dl>
@@ -610,7 +602,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Nome do grupo de recursos</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>Tipo do terminal em serviço</dd>
+  <dd>Tipo do terminal de serviço. Os valores possíveis são 'public', 'private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forçar a criação sem confirmação</dd>
 </dl>

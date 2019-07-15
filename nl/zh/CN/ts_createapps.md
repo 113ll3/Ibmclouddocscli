@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -121,7 +121,7 @@ ibmcloud dev run
 请选择其他套餐。
 {: tsResolve}
 
-## 为什么在我创建应用程序时未检索我的代码？
+## 为什么在我创建应用程序时未检索到代码？
 {: #retrieve-code-error}
 {: troubleshoot}
 
@@ -182,7 +182,7 @@ module.js:597
 {: screen}
 {: tsSymptoms}
 
-`appmetrics` 模块安装在其他体系结构上时，会发生此错误。安装在一个体系结构上的本机 npm 模块不能在另一个体系结构上运行。包含的 Docker 映像基于 Linux&trade; 内核。
+`appmetrics` 模块安装在其他体系结构上时，会发生此错误。安装在一个体系结构上的本机 `npm` 模块不能在另一个体系结构上运行。包含的 Docker 映像基于 Linux&trade; 内核。
 {: tsCauses}
 
 删除 `node_modules` 文件夹，然后再次运行 `ibmcloud dev run` 命令。
@@ -259,7 +259,7 @@ ibmcloud cr namespaces
 {: codeblock}
 {: tsResolve}
 
-## 为什么无法确定我的应用程序的语言？
+## 为什么无法确定语言？
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
@@ -303,7 +303,7 @@ directly.
 要单独手动安装 {{site.data.keyword.dev_cli_notm}} CLI 组件，可以执行以下[步骤](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually)。
 
 ## 为什么我无法构建 Docker 映像？
-{: $ts-cli-docker}
+{: #ts-cli-docker}
 {: troubleshoot}
 
 如果看到以下错误： 
@@ -325,11 +325,11 @@ image.
 - 要安装或启动 [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
 {: tsResolve}
 
-## 如何解决 helm 版本不兼容的问题？
-{: ts-cli-helm}
+## Helm 升级失败，发生错误
+{: #ts-cli-helm-rbac}
 {: troubleshoot}
 
-如果客户机和服务器的 helm 版本不同步，那么可能会看到以下错误：
+由于基于角色的访问控制 (RBAC) 问题，您可能会遇到以下错误：
 ```
 FAILED
 Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
@@ -339,6 +339,19 @@ cannot list resource "configmaps" in API group "" in the namespace
 ```
 {: screen}
 
+要解决问题，请运行以下命令：
+{: tsResolve}
+
+```
+kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:default -n kube-system
+```
+{: codeblock}
+
+## 如何解决 helm 版本不兼容的问题？
+{: #ts-cli-helm}
+{: troubleshoot}
+
+如果客户机和服务器的 helm 版本不同步，那么可能会看到以下错误：
 ```
 FAILED
 The 'helm upgrade ' command failed to complete due to: exit status 1
@@ -367,7 +380,7 @@ The 'helm upgrade ' command failed to complete due to: exit status 1
   {: codeblock}
 
 ## 为什么使用包含“@”的用户名时 ibmcloud dev 构建会失败？
-{: ts-cli-username}
+{: #ts-cli-username}
 {: troubleshoot}
 在映像构建过程中，您的用户名用于 Docker 工具映像中的用户。如果用户名包含诸如“@”或“-”的任何特殊字符，那么 Docker 映像构建过程会失败，并且会返回以下错误：
 ```

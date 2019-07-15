@@ -32,9 +32,9 @@ ibmcloud sl ticket attach TICKETID [OPTIONS]
 <strong>명령 옵션</strong>:
 <dl>
 <dt>--hardware</dt>
-<dd>첨부할 하드웨어에 대한 식별자입니다. </dd>
+<dd>첨부할 하드웨어에 대한 식별자입니다.</dd>
 <dt>--virtual</dt>
-<dd>첨부할 가상 서버의 ID입니다. </dd>
+<dd>첨부할 가상 서버의 ID입니다.</dd>
 </dl>
 
 **예제**:
@@ -56,13 +56,13 @@ ibmcloud sl ticket create [OPTIONS]
 <dt>--attachment</dt>
 <dd>티켓에 첨부할 초기 오브젝트 ID 번호입니다.</dd>
 <dt>--rootpwd</dt>
-<dd>첨부된 디바이스 ID와 연관된 루트 비밀번호입니다. </dd>
+<dd>첨부된 디바이스 ID와 연관된 루트 비밀번호입니다.</dd>
 <dt>--subject-id</dt>
-<dd>필수. 티켓에 사용할 주제 ID입니다. 'ibmcloudsl ticket subjects'를 실행하여 목록을 가져옵니다. </dd>
+<dd>필수. 티켓에 사용할 주제 ID입니다. 'ibmcloudsl ticket subjects'를 실행하여 목록을 가져옵니다.</dd>
 <dt>--title</dt>
 <dd>필수. 티켓의 제목입니다.</dd>
 <dt>--body</dt>
-<dd>티켓 본문입니다. </dd>
+<dd>티켓 본문입니다.</dd>
 <dt>--priority</dt>
 <dd>티켓 우선순위[1|2|3|4]입니다. 1 (위험)부터 4(최소 영향)까지 있습니다. 고급 및 프리미엄 지원에서만 설정할 수 있습니다. https://www.ibm.com/cloud/support를 참조하십시오.</dd>
 <dt>--attachment-type</dt>
@@ -80,9 +80,9 @@ ibmcloud sl ticket detach TICKETID [OPTIONS]
 <strong>명령 옵션</strong>:
 <dl>
 <dt>--hardware</dt>
-<dd>분리할 하드웨어에 대한 식별자입니다. </dd>
+<dd>분리할 하드웨어에 대한 식별자입니다.</dd>
 <dt>--virtual</dt>
-<dd>분리할 가상 서버의 ID입니다. </dd>
+<dd>분리할 가상 서버의 ID입니다.</dd>
 </dl>
 
 **예제**:
@@ -124,7 +124,7 @@ ibmcloud sl ticket detail 767676 --count 10
 ## ibmcloud sl ticket list 
 {: #sl_ticket_list} 
 
-티켓을 나열하려면 다음을 수행하십시오. 
+티켓을 나열하려면 다음을 수행하십시오.
 ```
 ibmcloud sl ticket list[OPTIONS]
 ```

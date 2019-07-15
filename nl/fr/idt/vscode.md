@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -21,12 +21,12 @@ subcollection: cloud-cli
 L'extension IBM Cloud Developer Tools pour Visual Studio Code permet d'accéder aux fonctions de l'interface CLI IBM Developer directement dans la palette de commandes de l'éditeur Visual Studio Code. Vous pouvez accéder rapidement à un sous-ensemble de commandes `ibmcloud dev` pour les flux de travail Docker et Cloud Foundry, incluant notamment le déploiement d'application, le démarrage/l'arrêt/le redémarrage d'applications sur {{site.data.keyword.cloud}}, la visualisation de journaux d'applications distants, sans avoir à quitter votre éditeur.
 {:shortdesc}
 
-![Capture d'écran de l'écran de téléchargement de l'extension IBM Developer Tools.](vscode.png "Ecran de téléchargement d'extension dans Visual Studio Code")
+![Capture de l'écran de téléchargement de l'extension IBM Cloud Developer Tools.](../images/vscode.png "Ecran de téléchargement d'extension dans Visual Studio Code")
 
 ## Dépendances
 {: #vscode-dependencies}
 
-Pour utiliser l'extension IBM Cloud Developer Tools pour Visual Studio Code, l'interface CLI [{{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) et le plug-in {{site.data.keyword.cloud_notm}} CLI doivent être installés sur votre système.
+Pour utiliser l'extension IBM Cloud Developer Tools pour Visual Studio Code, l'[interface CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started) et le plug-in de l'interface CLI {{site.data.keyword.cloud_notm}} doivent être installés sur votre système.
 
 ## Installation
 {: #vscode-installation}
@@ -85,6 +85,6 @@ Vous pouvez démarrer les flux de travail Cloud Foundry en quelques étapes seul
 * Ouvrez le dossier du projet localement dans l'éditeur Visual Studio Code.
 * Utilisez la commande `ibmcloud cf apps` pour répertorier toutes vos applications.
 * Utilisez la commande `ibmcloud cf push` pour envoyer votre application à l'environnement d'exécution Cloud Foundry.
-* Utilisez la commande ibmcloud `cf <start/stop/restage/restart>` pour modifier le statut de votre application. 
-* Utilisez la commande `ibmcloud cf logs` pour afficher le flux de journalisation opérationnel pour votre application. 
+* Utilisez la commande ibmcloud `cf <start/stop/restage/restart>` pour modifier le statut de votre application.
+* Utilisez la commande `ibmcloud cf logs` pour afficher le flux de journalisation opérationnel pour votre application.
   * Utilisez la commande `ibmcloud cf logs` pour arrêter le flux de journalisation.

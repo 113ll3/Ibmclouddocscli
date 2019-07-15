@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-03"
 
 keywords: cli, mobile sdk, server sdk, client sdk, add sdk, android sdk, cordova
 
@@ -13,7 +13,7 @@ subcollection: cloud-cli
 # 可用的行動 SDK
 {: #sdk}
 
-若要將 {{site.data.keyword.cloud}} Web 及行動服務 SDK 新增至您的應用程式，請選擇您要使用的 SDK，並配置相依關係管理程式以將 SDK 取回至應用程式。
+若要將 {{site.data.keyword.cloud}} Web 及行動服務 SDK 新增至您的應用程式，請選取您要使用的 SDK，並配置相依關係管理程式以將 SDK 取回至應用程式。
 
 ## 伺服器 SDK
 {: #server_sdk}

@@ -17,7 +17,7 @@ subcollection: cloud-cli
 # Gestione del servizio Load Balancer (Programma di bilanciamento del carico)
 {: #sl-load-balancer-service}
 
-Il servizio Load Balancer (Programma di bilanciamento del carico) di {{site.data.keyword.cloud}} aiuta a migliorare la disponibilità delle tue applicazioni business-critical distribuendo il traffico tra più istanze del server delle applicazioni oppure inoltrando il traffico solo a istanze integre. 
+Il servizio Load Balancer (Programma di bilanciamento del carico) di {{site.data.keyword.cloud}} aiuta a migliorare la disponibilità delle tue applicazioni business-critical distribuendo il traffico tra più istanze del server delle applicazioni oppure inoltrando il traffico solo a istanze integre.
 
 Utilizza i seguente comandi per gestire i programmi di bilanciamento del carico nel servizio Load Balancer dell'infrastruttura classica {{site.data.keyword.cloud_notm}}.
 {: shortdesc}

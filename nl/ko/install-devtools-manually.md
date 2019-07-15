@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # 수동으로 {{site.data.keyword.cloud_notm}} 개발자 도구 CLI 플러그인 설치
 {: #install-devtools-manually}
 
-컴포넌트 설치를 위해 더 세부적인 제어를 원하는 경우 {{site.data.keyword.cloud}} 개발자 도구 명령행 인터페이스(CLI) 플러그인을 수동으로 설치할 수 있습니다. 그렇지 않으면 대부분의 사용자를 위해 [플랫폼 설치 프로그램](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt)을 사용하여 모든 필수 소프트웨어가 설치됩니다.
+컴포넌트 설치를 위해 더 세부적인 제어를 원하는 경우 {{site.data.keyword.cloud}} 개발자 도구 명령행 인터페이스(CLI) 플러그인을 수동으로 설치할 수 있습니다. 그렇지 않으면 대부분의 사용자를 위해 [플랫폼 설치 프로그램](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt)을 사용하여 모든 필수 소프트웨어가 설치됩니다.
 {: shortdesc}
 
 ## 시작하기 전에
@@ -48,7 +48,7 @@ ibmcloud plugin install dev
 ## Kubernetes 명령행 도구 설치
 {: #idt-install-kube}
 
-Kubernetes 대시보드의 로컬 버전을 보고 애플리케이션을 클러스터에 배치하려면 플랫폼에 대한 [Kubernetes 명령행 도구](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 설치하십시오. 
+Kubernetes 대시보드의 로컬 버전을 보고 애플리케이션을 클러스터에 배치하려면 플랫폼에 대한 [Kubernetes 명령행 도구](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 설치하십시오.
 
 * Mac:
   ```
@@ -70,6 +70,18 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/wi
 
 Kubernetes 명령행 도구를 사용하여 명령을 실행하기 위한 접두부는 `kubectl`입니다. 자세한 정보는 [CLI 및 API 설치](/docs/containers?topic=containers-cs_cli_install#cs_cli_install)를 참조하십시오.
 
+## {{site.data.keyword.cos_full_notm}} CLI 플러그인 설치
+
+{{site.data.keyword.cos_full_notm}} 플러그인은 Object Storage 리소스 작업에 대한 API 랩퍼를 사용하여 {{site.data.keyword.cloud_notm}} 명령행 인터페이스(CLI)를 확장합니다.
+
+* {{site.data.keyword.cos_full_notm}} 플러그인을 설치하려면 다음 명령을 실행하십시오.
+  ```
+  ibmcloud plugin install cloud-object-storage
+  ```
+  {: codeblock}
+
+자세한 정보는 [{{site.data.keyword.cos_full_notm}} 명령 참조서](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli)를 참조하십시오.
+
 ## {{site.data.keyword.registrylong_notm}} CLI 플러그인 설치
 {: #idt-install-container-registry-cli-plugin}
 
@@ -81,7 +93,7 @@ ibmcloud plugin install container-registry
   ```
   {: codeblock}
 
-자세한 정보는 [{{site.data.keyword.registrylong}} 명령 참조서](/docs/services/Registry?topic=registry-registry_cli_reference)를 참조하십시오.
+자세한 정보는 [{{site.data.keyword.registrylong}} 명령 참조서](/docs/services/Registry?topic=container-registry-cli-plugin-containerregcli)를 참조하십시오.
 
 ## {{site.data.keyword.containerlong_notm}} CLI 플러그인 설치
 {: #idt-install-kubernetes-cli-plugin}
@@ -121,17 +133,5 @@ ibmcloud plugin install cloud-functions
 ```
 {: codeblock}
 
-자세한 정보는 [{{site.data.keyword.openwhisk_short}} CLI 플러그인 설치](/docs/openwhisk?topic=cloud-functions-cloudfunctions_cli#cloudfunctions_cli)를 참조하십시오.
+자세한 정보는 [{{site.data.keyword.openwhisk_short}} CLI 플러그인 설치](/docs/openwhisk?topic=cloud-functions-cli_install)를 참조하십시오.
 
-## SDK 생성기 CLI 플러그인 설치
-{: #idt-install-sdk-gen}
-
-{{site.data.keyword.cloud_notm}} 개발자는 플러그인을 사용하여 [Open API 스펙 ](https://www.openapis.org/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 준수 REST API 정의에서 SDK를 생성할 수 있습니다. REST API 정의가 변경되면 플러그인을 사용하여 전체 프로젝트가 아닌 SDK만 재생성할 수 있습니다.
-
-SDK 생성기 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.
-```
-ibmcloud plugin install sdk-gen
-```
-{: codeblock}
-
-자세한 정보는 [SDK 생성기](/docs/cli/sdk?topic=cloud-cli-sdk-cli#sdk-cli)를 참조하십시오.

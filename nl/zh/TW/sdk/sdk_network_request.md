@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-03"
 
 keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
@@ -103,7 +103,7 @@ subcollection: cloud-cli
 	```
 	{: codeblock}
 
-`Request` 類別是提出 HTTP 要求並在要求完成後取得回應的簡單方法。如果您想要得到比 `Request` 類別更多的彈性與控制，可以使用 `BMSURLSession` 類別。`BMSURLSession` 類別部分特性包括監視上傳的進度，以及暫停或取消要求。若要取得回應，您可以選擇完成處理程式或委派。
+`Request` 類別是提出 HTTP 要求並在要求完成後取得回應的簡單方法。如果您想要得到比 `Request` 類別更多的彈性與控制，可以使用 `BMSURLSession` 類別。`BMSURLSession` 類別部分特性包括監視上傳的進度，以及暫停或取消要求。若要取得回應，您可以選取完成處理程式或委派。
 
 `BMSURLSession` 類別僅適用於 iOS。
 

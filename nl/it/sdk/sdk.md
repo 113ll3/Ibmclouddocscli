@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-03"
 
 keywords: cli, mobile sdk, server sdk, client sdk, add sdk, android sdk, cordova
 
@@ -13,7 +13,7 @@ subcollection: cloud-cli
 # SDK mobili disponibili
 {: #sdk}
 
-Per aggiungere le SDK dei servizi {{site.data.keyword.cloud}} Web e Mobile alla tua applicazione, scegli gli SDK che vuoi utilizzare e configura quindi il gestore dipendenze per introdurre gli SDK nella tua applicazione.
+Per aggiungere gli SDK dei servizi {{site.data.keyword.cloud}} Web e Mobile alla tua applicazione, seleziona gli SDK che vuoi utilizzare e configura quindi il gestore dipendenze per introdurre gli SDK nella tua applicazione.
 
 ## SDK server
 {: #server_sdk}
@@ -36,13 +36,13 @@ Se hai un'applicazione server Java, NodeJS o Swift, puoi utilizzare le seguenti 
 ## SDK client
 {: #client_sdk}
 
-Puoi utilizzare i seguenti SDK nella tua applicazione mobile per sfruttare le rispettive funzionalità. 
+Puoi utilizzare i seguenti SDK nella tua applicazione mobile per sfruttare le rispettive funzionalità.
 
 ### SDK Android
 {: #android_sdk}
 
 - [Core SDK ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
-- [{{site.data.keyword.appid_short}} SDK)](https://github.com/ibm-cloud-security/appid-clientsdk-android){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") 
+- [{{site.data.keyword.appid_short}} SDK)](https://github.com/ibm-cloud-security/appid-clientsdk-android){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 - [{{site.data.keyword.mobileanalytics_short}} SDK ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 - [{{site.data.keyword.mobilepushshort}} SDK ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
@@ -58,4 +58,4 @@ Puoi utilizzare i seguenti SDK nella tua applicazione mobile per sfruttare le ri
 {: #cordova_plugin}
 
 - [Plug-in Core ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
-- [{{site.data.keyword.mobilepushshort}} plug-in ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") 
+- [{{site.data.keyword.mobilepushshort}} plug-in ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")

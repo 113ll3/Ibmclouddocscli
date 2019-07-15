@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-06-21"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
@@ -28,32 +28,32 @@ Il [repository di plugin della CLI {{site.data.keyword.cloud_notm}} ](https://pl
 Per ulteriori comandi per gestire i plugin, esegui `ibmcloud plugin` per visualizzare i messaggi della guida.
 {: tip}
 
-## Installa un plugin dal repository della CLI {{site.data.keyword.cloud_notm}}
+## Installazione di un plugin dal repository della CLI {{site.data.keyword.cloud_notm}}
 {: #install-from-repo}
 
-### Passo 1: cerca il plugin
-{: #step1-search-plugin}
+### Ricerca di un plugin
+{: #cli-search-plugin}
 
-1. Utilizza il comando `ibmcloud plugin repo-plugins -r REPO_NAME` per cercare un plugin nel repository.
-2. La CLI {{site.data.keyword.cloud_notm}} ha il repository ufficiale denominato 'IBM Cloud', puoi cercare i plugin ufficiali come mostrato nel seguente esempio:
+Utilizza il comando `ibmcloud plugin repo-plugins -r REPO_NAME` per cercare un plugin nel repository.
+
+La CLI {{site.data.keyword.cloud_notm}} fornisce un repository di plugin ufficiale con il nome 'IBM Cloud', in cui puoi effettuare la ricerca come mostrato nel seguente esempio:
 ```
 ibmcloud plugin repo-plugins -r "IBM Cloud"
 ```
 {: codeblock}
 
 ```
-Status             Name                                   Versions                       Description   
-Update Available   container-service/kubernetes-service   0.2.99, 0.2.95, 0.2.80...      IBM Cloud Kubernetes Service for management of Kubernetes clusters   
-Update Available   cloud-functions                        1.0.30, 1.0.29, 1.0.28...      IBM Cloud CLI plug-in for IBM Cloud Functions   
+Status             Name                                        Versions                       Description   
+Update Available   container-service/kubernetes-service        0.3.49, 0.3.47, 0.3.34...      IBM Cloud Kubernetes Service for management of Kubernetes clusters   
+Update Available   cloud-functions                             1.0.32, 1.0.30, 1.0.29...      Manage Cloud Functions 
 ...
 ```
 {: screen}
 
-### Passo 2: installa il plugin
-{: step2-install-plugin}
+### Installazione del plugin
+{: #cli-install-plugin}
 
 Utilizza il comando `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` per installare il plugin. Ad esempio, utilizza il seguente comando per installare un plugin dal repository di plugin ufficiale di IBM 'IBM Cloud':
-
 ```
 ibmcloud plugin install auto-scaling
 ```
@@ -71,11 +71,10 @@ Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bl
 ```
 {: screen}
 
-## Installa un plugin localmente
+## Installazione di un plugin localmente
 {: #install-plugin-locally}
 
 Utilizza il comando `ibmcloud plugin install LOCAL_FILE_NAME` per installare un file binario del plugin sulla macchina locale. Ad esempio:
-
 ```
 ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.7
 ```
@@ -89,8 +88,8 @@ $
 ```
 {: screen}
 
-## Installa un plugin da un URL web
-{: install-plugin-from-url}
+## Installazione di un plugin da un URL web
+{: #install-plugin-from-url}
 
 Utilizza il comando `ibmcloud plugin install URL` per installare un plugin direttamente da un URL web. Ad esempio:
 ```
@@ -98,7 +97,6 @@ ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/
 ```
 {: codeblock}
 
-Output:
 ```
 Attempting to download the binary file...
  7.28 MiB / 7.28 MiB [===========================================] 100.00% 0s

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-06"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -117,7 +117,7 @@ ibmcloud resource group-create example-group
 
 기존 리소스 그룹을 업데이트합니다.
 ```
-ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] 
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -128,8 +128,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
   <dd>대상 리소스 그룹의 이름</dd>
   <dt>-n, --name</dt>
   <dd>리소스 그룹의 새 이름</dd>
-  <dt>-q, --quota</dt>
-  <dd>새 할당량 정의의 이름</dd>
   <dt>-f</dt>
   <dd>확인 없이 업데이트 강제 실행</dd>
 </dl>
@@ -139,12 +137,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 리소스 그룹 이름 `example-group`을 `trial-group`으로 바꾸기:
 ```
 ibmcloud resource group-update example-group -n trial-group
-```
-{: codeblock}
-
-리소스 그룹 `example-group`의 할당량을 `free`로 변경:
-```
-ibmcloud resource group-update example-group -q free
 ```
 {: codeblock}
 
@@ -300,7 +292,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>NAME(필수)</dt>
   <dd>서비스 인스턴스의 이름</dd>
   <dt>SERVICE_NAME 또는 SERVICE_ID(필수)</dt>
-  <dd>서비스의 이름 또는 ID입니다. 서비스 오퍼링을 나열하려면 `ibmcloud catalog service-marketplace` [명령](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace)을 사용하십시오.</dd>
+  <dd>서비스의 이름 또는 ID입니다. 서비스 오퍼링을 나열하려면 `ibmcloud catalog service-marketplace`[명령](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace)을 사용하십시오.</dd>
   <dt>SERVICE_PLAN_NAME 또는 SERVICE_PLAN_ID(필수)</dt>
   <dd>서비스 플랜의 이름 또는 ID</dd>
   <dt>LOCATION(필수)</dt>
@@ -312,7 +304,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>리소스 그룹 이름</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>서비스 엔드포인트의 유형</dd>
+  <dd>서비스 엔드포인트의 유형. 가능한 값은 'public', 'private', 'public-and-private'입니다.</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -348,7 +340,7 @@ ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>리소스 그룹 이름</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>서비스 엔드포인트의 유형</dd>
+  <dd>서비스 엔드포인트의 유형. 가능한 값은 'public', 'private', 'public-and-private'입니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 업데이트 강제 실행</dd>
 </dl>
@@ -468,7 +460,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
   <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>매개변수 JSON 파일 또는 JSON 문자열</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>서비스 엔드포인트의 유형</dd>
+  <dd>서비스 엔드포인트의 유형. 가능한 값은 'public', 'private'입니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 작성 강제 실행</dd>
 </dl>
@@ -609,7 +601,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>리소스 그룹 이름</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>서비스 엔드포인트의 유형</dd>
+  <dd>서비스 엔드포인트의 유형. 가능한 값은 'public', 'private'입니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 작성 강제 실행</dd>
 </dl>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-このエラーは、`appmetrics` モジュールが別のアーキテクチャーにインストールされている場合に発生します。 1 つのアーキテクチャーにインストールされているネイティブ NPM モジュールは、別のアーキテクチャーでは機能しません。 付属の Docker イメージは、Linux&trade; カーネルに基づいています。
+このエラーは、`appmetrics` モジュールが別のアーキテクチャーにインストールされている場合に発生します。 1 つのアーキテクチャーにインストールされているネイティブ `NPM` モジュールは、別のアーキテクチャーでは機能しません。 付属の Docker イメージは、Linux&trade; カーネルに基づいています。
 {: tsCauses}
 
 `node_modules` フォルダーを削除してから、`ibmcloud dev run` コマンドを再度実行します。
@@ -258,7 +258,7 @@ ibmcloud cr namespaces
 {: codeblock}
 {: tsResolve}
 
-## アプリの言語を判別できないのはなぜですか?
+## 言語を判別できないのはなぜですか?
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
@@ -302,7 +302,7 @@ directly.
 {{site.data.keyword.dev_cli_notm}} CLI コンポーネントを別個にインストールするには、これらの[ステップ](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually)に従ってください。
 
 ## Docker イメージをビルドできないのはなぜですか?
-{: $ts-cli-docker}
+{: #ts-cli-docker}
 {: troubleshoot}
 
 以下のエラーが表示されることがあります。 
@@ -324,11 +324,11 @@ Docker イメージのビルド中に、エラー exit status 1 が
 - [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") をインストールまたは開始する場合
 {: tsResolve}
 
-## Helm バージョンの非互換性を解決するには、どうすればよいですか?
-{: ts-cli-helm}
+## Helm のアップグレードがエラーで失敗します
+{: #ts-cli-helm-rbac}
 {: troubleshoot}
 
-クライアントとサーバーで Helm のバージョンが同期していない場合、以下のエラーが表示されることがあります。
+役割ベースのアクセス制御 (RBAC) の問題により、以下のエラーが発生することがあります。
 ```
 失敗
 アクションを実行できませんでした:  exit status 1: エラー: アップグレードが失敗しました:
@@ -340,6 +340,19 @@ cannot list resource "configmaps" in API group "" in the namespace
 ```
 {: screen}
 
+この問題を解決するには、以下のコマンドを実行します。
+{: tsResolve}
+
+```
+kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:default -n kube-system
+```
+{: codeblock}
+
+## Helm バージョンの非互換性を解決するには、どうすればよいですか?
+{: #ts-cli-helm}
+{: troubleshoot}
+
+クライアントとサーバーで Helm のバージョンが同期していない場合、以下のエラーが表示されることがあります。
 ```
 失敗
 「helm upgrade」コマンドを exit status 1 が原因で完了できませんでした
@@ -358,7 +371,7 @@ cannot list resource "configmaps" in API group "" in the namespace
   export HELM_HOME=~/.helm
   ```
 
-* Windows&trade; の場合: 管理者として、[https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") で `helm` バイナリーをダウンロードし、インストールします。
+* Windows&trade; の場合: 管理者として、[https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") から `helm` バイナリーをダウンロードし、インストールします。
   
   PowerShell 端末から、次のコマンドを使用します。
   ```
@@ -368,7 +381,7 @@ cannot list resource "configmaps" in API group "" in the namespace
   {: codeblock}
 
 ## 「@」が含まれるユーザー名の使用時に ibmcloud dev build が失敗するのはなぜですか?
-{: ts-cli-username}
+{: #ts-cli-username}
 {: troubleshoot}
 イメージをビルドするプロセス中に、Docker ツールのイメージ内でユーザーとしてご使用のユーザー名が使用されます。 このユーザー名に「@」や「-」などの特殊文字が含まれている場合、Docker イメージをビルドするプロセスが次のエラーで失敗します。
 ```

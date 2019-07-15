@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -27,7 +27,7 @@ subcollection: cloud-cli
 Vedi le soluzioni ai problemi comuni con la CLI (command line interface) {{site.data.keyword.dev_cli_short}}. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
 {: shortdesc}
 
-## Perché ricevo un errore di nome host quando creo un'applicazione con un modello non mobile? 
+## Perché ricevo un errore di nome host quando creo un'applicazione con un modello non mobile?
 {: #ts-cli-hostname-error}
 {: troubleshoot}
 
@@ -69,7 +69,7 @@ ibmcloud login
 {: codeblock}
 {: tsResolve}
 
-## Perché l'immagine per la mia nuova applicazione non viene riconosciuta?
+## Perché l'immagine per una nuova applicazione non viene riconosciuta?
 {: #ts-cli-nosuchimage}
 {: troubleshoot}
 
@@ -120,7 +120,7 @@ Questo errore è dovuto al servizio {{site.data.keyword.objectstorageshort}} che
 Seleziona un altro piano.
 {: tsResolve}
 
-## Perché il mio codice non viene richiamato quando creo un'applicazione?
+## Perché il codice non viene richiamato quando creo un'applicazione?
 {: #retrieve-code-error}
 {: troubleshoot}
 
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-Questo errore si verifica quando il modulo `appmetrics` viene installato su un'architettura diversa. I moduli npm nativi installati su un'architettura non funzionano su un'altra. Le immagini Docker incluse si basano sul kernel Linux&trade;.
+Questo errore si verifica quando il modulo `appmetrics` viene installato su un'architettura diversa. I moduli `npm` nativi installati su un'architettura non funzionano su un'altra. Le immagini Docker incluse si basano sul kernel Linux&trade;.
 {: tsCauses}
 
 Elimina la cartella `node_modules` ed esegui nuovamente il comando `ibmcloud dev run`.
@@ -258,7 +258,7 @@ ibmcloud cr namespaces
 {: codeblock}
 {: tsResolve}
 
-## Perché non posso determinare la lingua per la mia applicazione?
+## Perché non è possibile determinare il linguaggio?
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
@@ -274,7 +274,7 @@ directly.
 {: tsSymptoms}
 
 Questo errore potrebbe essere dovuto a una delle seguenti cause:
-- Esecuzione del comando [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) da una directory che non è la directory di origine della tua applicazione. 
+- Esecuzione del comando [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) da una directory che non è la directory di origine della tua applicazione.
 - Esecuzione del comando [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) per un'applicazione di una lingua che non è riconosciuta.
 {: tsCauses}
 
@@ -291,7 +291,7 @@ Potresti riscontrare diversi errori durante la [creazione](/docs/cli/idt?topic=c
 Le molte possibili cause differenti possono essere trovate in ognuno dei seguenti link.
 {: tsCauses}
 
-- Per ulteriori informazioni sulla risoluzione di tali problemi con un'applicazione Spring, consulta [Abilitazione delle applicazioni Spring Boot esistenti per la distribuzione cloud](/docs/java-spring?topic=java-spring-enable_existing#enable_existing). 
+- Per ulteriori informazioni sulla risoluzione di tali problemi con un'applicazione Spring, consulta [Abilitazione delle applicazioni Spring Boot esistenti per la distribuzione cloud](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
 - Per ulteriori informazioni sulla risoluzione di tali problemi con un'applicazione `Node.js`, consulta [Abilitazione delle applicazioni Node.js esistenti per la distribuzione cloud](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 
@@ -302,7 +302,7 @@ Le molte possibili cause differenti possono essere trovate in ognuno dei seguent
 Per installare manualmente i singoli componenti della CLI {{site.data.keyword.dev_cli_notm}}, puoi seguire questa [procedura](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
 
 ## Perché non riesco a creare l'immagine Docker?
-{: $ts-cli-docker}
+{: #ts-cli-docker}
 {: troubleshoot}
 
 Se visualizzi il seguente errore: 
@@ -324,11 +324,11 @@ Assicurati che Docker sia installato e in esecuzione:
 - Per installare o avviare [Docker per Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
 {: tsResolve}
 
-## Come posso risolvere le versioni Helm incompatibili?
-{: ts-cli-helm}
+## L'upgrade Helm ha avuto esito negativo con degli errori
+{: #ts-cli-helm-rbac}
 {: troubleshoot}
 
-Se le versioni Helm del client e del server non sono sincronizzate, potresti visualizzare i seguenti errori:
+Puoi riscontrare il seguente errore a causa di problemi RBAC (role-based access control):
 ```
 FAILED
 Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
@@ -338,6 +338,19 @@ cannot list resource "configmaps" in API group "" in the namespace
 ```
 {: screen}
 
+Per risolvere il problema, immetti il seguente comando:
+{: tsResolve}
+
+```
+kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:default -n kube-system
+```
+{: codeblock}
+
+## Come posso risolvere le versioni Helm incompatibili?
+{: #ts-cli-helm}
+{: troubleshoot}
+
+Se le versioni Helm del client e del server non sono sincronizzate, potresti visualizzare i seguenti errori:
 ```
 FAILED
 The 'helm upgrade ' command failed to complete due to: exit status 1
@@ -356,7 +369,7 @@ Per risolvere il problema, imposta la versione del client sullo stesso valore de
   export HELM_HOME=~/.helm
   ```
 
-* Per Windows&trade;: come amministratore scarica e installa il file binario `helm` all'indirizzo [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+* Per Windows&trade;: come amministratore scarica e installa il file binario `helm` da [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
   
   Dal terminale PowerShell, utilizza i seguenti comandi:
   ```
@@ -366,7 +379,7 @@ Per risolvere il problema, imposta la versione del client sullo stesso valore de
   {: codeblock}
 
 ## Perché il comando ibmcloud dev build non riesce con un nome utente che include "@"?
-{: ts-cli-username}
+{: #ts-cli-username}
 {: troubleshoot}
 Durante il processo di build dell'immagine, il tuo nome utente viene utilizzato per l'utente nell'immagine degli strumenti Docker. Se il nome utente contiene caratteri speciali come '@' o '-', il processo di build dell'immagine Docker non riesce e viene visualizzato il seguente errore:
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-06-10"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -27,7 +27,7 @@ subcollection: cloud-cli
 
 列出所有服务标识：
 ```
-ibmcloud iam service-ids [--uuid]
+ibmcloud iam service-ids [--uuid] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -36,6 +36,8 @@ ibmcloud iam service-ids [--uuid]
 <dl>
   <dt>--uuid</dt>
   <dd>仅显示服务标识的 UUID</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -51,7 +53,7 @@ ibmcloud iam service-ids --uuid
 
 显示服务标识的详细信息：
 ```
-ibmcloud iam service-id (NAME|UUID) [--uuid]
+ibmcloud iam service-id (NAME|UUID) [--uuid] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -64,6 +66,8 @@ ibmcloud iam service-id (NAME|UUID) [--uuid]
   <dd>服务的 UUID，与 NAME 互斥</dd>
   <dt>--uuid</dt>
   <dd>显示服务标识的 UUID</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -85,7 +89,7 @@ ibmcloud iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 
 创建服务标识：
 ```
-ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
+ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -98,6 +102,8 @@ ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
   <dd>服务标识的描述</dd>
   <dt>--lock</dt>
   <dd>锁定创建的服务标识</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -119,7 +125,7 @@ ibmcloud iam service-id-create sample-test -d 'hello, world!' --lock
 
 更新服务标识：
 ```
-ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
+ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [--output FORMAT] [-f, --force]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -134,6 +140,8 @@ ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --descript
   <dd>服务的新名称</dd>
   <dt>-d, --description</dt>
   <dd>服务的新描述</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
   <dt>-f, --force</dt>
   <dd>更新而不确认</dd>
 </dl>
@@ -264,20 +272,26 @@ ibmcloud iam service-id-unlock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ## ibmcloud iam api-keys
 {: #ibmcloud_iam_api_keys}
 
-列出所有 {{site.data.keyword.Bluemix_notm}} 平台 API 密钥：
+列出所有 {{site.data.keyword.cloud_notm}} 平台 API 密钥：
 ```
-ibmcloud iam api-keys
+ibmcloud iam api-keys [--output FORMAT]
 ```
 {: codeblock}
 
 <strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
+</dl>
 
 ## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
 
 创建新的 {{site.data.keyword.cloud_notm}} 平台 API 密钥：
 ```
-ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
+ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock] [--output FORMAT]
 ```
 
 将 {{site.data.keyword.cloud_notm}} CLI 登录与 API 密钥配合使用时，无法使用在 `control.softlayer.com` 上找到的旧 SL API 密钥。 需要升级基础架构通过 [cloud.ibm.com](https://cloud.ibm.com/registration){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标") 管理的 {{site.data.keyword.cloud_notm}} 帐户，才能将 {{site.data.keyword.cloud_notm}} CLI 登录与 API 密钥配合使用。
@@ -295,6 +309,8 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dd>将 API 密钥信息保存到指定的文件。</dd>
 <dt>--lock</dt>
 <dd>锁定创建的 API 密钥</dd>
+<dt>--output FORMAT</dt>
+<dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -314,9 +330,9 @@ ibmcloud iam api-key-create test-key --lock
 ## ibmcloud iam api-key-update
 {: #ibmcloud_iam_api_key_update}
 
-更新 {{site.data.keyword.Bluemix_notm}} 平台 API 密钥：
+更新 {{site.data.keyword.cloud_notm}} 平台 API 密钥：
 ```
-ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
+ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -331,6 +347,8 @@ ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 <dd>API 密钥的新名称</dd>
 <dt>-d <i>DESCRIPTION</i>（可选）</dt>
 <dd>API 密钥的新描述</dd>
+<dt>--output FORMAT</dt>
+<dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -344,7 +362,7 @@ ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ## ibmcloud api-key-delete
 {: #ibmcloud_iam_api_key_delete}
 
-删除 {{site.data.keyword.Bluemix_notm}} 平台 API 密钥：
+删除 {{site.data.keyword.cloud_notm}} 平台 API 密钥：
 ```
 ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 ```
@@ -434,7 +452,7 @@ ibmcloud iam api-key-unlock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 
 列出服务的所有 API 密钥：
 ```
-ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
+ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [--output FORMAT] [-f, --force]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -445,6 +463,8 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
   <dd>服务标识的名称，与 SERVICE_ID_UUID 互斥 </dd>
   <dt>SERVICE_ID_UUID（必填）</dt>
   <dd>服务标识的 UUID，与 SERVICE_ID_NAME 互斥 </dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
   <dt>-f, --force</dt>
   <dd>显示服务 API 密钥而不确认</dd>
 </dl>
@@ -462,7 +482,7 @@ ibmcloud iam service-api-keys sample-service
 
 列出服务 API 密钥的详细信息：
 ```
-ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [-f, --force]
+ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [--output FORMAT] [-f, --force]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -479,6 +499,8 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
   <dd>服务标识的 UUID，与 SERVICE_ID_NAME 互斥 </dd>
   <dt>--uuid</dt>
   <dd>显示服务 API 密钥的 UUID</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
   <dt>-f, --force</dt>
   <dd>显示服务 API 密钥而不确认</dd>
 </dl>
@@ -496,7 +518,7 @@ ibmcloud iam service-api-key sample-key sample-service
 
 创建服务 API 密钥：
 ```
-ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [-f, --force] [--lock]
+ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [--output FORMAT] [-f, --force] [--lock]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -513,6 +535,8 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dd>API 密钥的描述</dd>
   <dt>--file</dt>
   <dd>将 API 密钥信息保存到指定的文件。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
   <dt>-f, --force</dt>
   <dd>强制创建而不确认</dd>
 </dl>
@@ -530,7 +554,7 @@ ibmcloud iam service-api-key-create sample-key sample-service -f
 
 更新服务 API 密钥：
 ```
-ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
+ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [--output FORMAT] [-f, --force]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -549,6 +573,8 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
   <dd>服务 API 密钥的新名称</dd>
   <dt>-d, --description</dt>
   <dd>服务 API 密钥的新描述</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
   <dt>-f, --force</dt>
   <dd>更新而不确认</dd>
 </dl>
@@ -660,9 +686,9 @@ ibmcloud iam service-api-key-unlock sample-key sample-service
 ## ibmcloud iam user-policies
 {: #ibmcloud_iam_user_policies}
 
-列出用户 `name@example.com` 的策略：
+列出用户的策略
 ```
-ibmcloud iam user-policies name@example.com
+ibmcloud iam user-policies USER_NAME [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标帐户
@@ -671,6 +697,8 @@ ibmcloud iam user-policies name@example.com
 <dl>
 <dt>USER_NAME（必需）</dt>
 <dd>策略所属的用户名</dd>
+<dt>--output FORMAT</dt>
+<dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -685,7 +713,7 @@ ibmcloud iam user-policies name@example.com
 
 显示用户策略的详细信息：
 ```
-ibmcloud iam user-policy USER_NAME POLICY_ID
+ibmcloud iam user-policy USER_NAME POLICY_ID [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标帐户
@@ -696,6 +724,8 @@ ibmcloud iam user-policy USER_NAME POLICY_ID
 <dd>策略所属的用户名</dd>
 <dt>POLICY_ID（必需）</dt>
 <dd>策略的标识</dd>
+<dt>--output FORMAT</dt>
+<dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -710,7 +740,7 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 
 创建用户策略：
 ```
-ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标帐户
@@ -737,6 +767,8 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dd>资源组的名称。`*` 表示所有资源组。此选项与 `--file`、`--resource` 和 `--resource-group-id` 标志互斥。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>（可选）</dt>
 <dd>资源组的标识。`*` 表示所有资源组。此选项与 `--file`、`--resource` 和 `--resource-group-name` 标志互斥。</dd>
+<dt>--output FORMAT</dt>
+<dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -776,7 +808,7 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 
 更新用户策略：
 ```
-ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标帐户
@@ -804,6 +836,8 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dd>资源组的名称。`*` 表示所有资源组。此选项与 `--file`、`--resource` 和 `--resource-group-id` 标志互斥。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>（可选）</dt>
 <dd>资源组的标识。`*` 表示所有资源组。此选项与 `--file`、`--resource` 和 `--resource-group-name` 标志互斥。</dd>
+<dt>--output FORMAT</dt>
+<dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -880,7 +914,7 @@ ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 <dl>
   <dt>SERVICE_ID（必需）</dt>
   <dd>服务标识的名称或 UUID</dd>
-  <dt>--output FORMAT（可选）</dt>
+  <dt>--output FORMAT</dt>
   <dd>指定服务策略输出格式，目前仅支持 JSON。</dd>
   <dt>-f, --force（可选）</dt>
   <dd>显示服务策略而不确认</dd>
@@ -914,7 +948,7 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
   <dd>服务标识的名称或 UUID</dd>
   <dt>POLICY_ID（必需）</dt>
   <dd>服务策略的标识<dd>
-  <dt>--output FORMAT（可选）</dt>
+  <dt>--output FORMAT</dt>
   <dd>指定服务策略输出格式，目前仅支持 JSON。</dd>
   <dt>-f, --force（可选）</dt>
   <dd>显示服务策略而不确认</dd>
@@ -937,7 +971,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 
 创建服务策略：
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -966,6 +1000,8 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dd>资源组的标识。`*` 表示所有资源组。此选项与 `--file` 和 `--resource-group-name` 互斥。</dd>
   <dt>--account-management（可选）</dt>
   <dd>授予对所有帐户管理服务的访问权</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
   <dt>-f, --force</dt>
   <dd>创建服务策略而不确认</dd>
 </dl>
@@ -997,7 +1033,7 @@ ibmcloud iam service-policy-create test --roles Viewer
 
 更新服务策略：
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -1028,6 +1064,8 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dd>资源组的标识。`*` 表示所有资源组。此选项与 `--file` 和 `--resource-group-name` 互斥。</dd>
   <dt>--account-management（可选）</dt>
   <dd>授予对所有帐户管理服务的访问权</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
   <dt>-f, --force</dt>
   <dd>更新服务策略而不确认</dd>
 </dl>
@@ -1091,7 +1129,7 @@ ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac97
 
 检索并显示当前会话的 OAuth 令牌：
 ```
-ibmcloud iam oauth-tokens
+ibmcloud iam oauth-tokens [--output FORMAT]
 ```
 {: codeblock}
 
@@ -1099,6 +1137,8 @@ ibmcloud iam oauth-tokens
 
 <strong>命令选项</strong>：
 <dl>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1106,6 +1146,38 @@ ibmcloud iam oauth-tokens
 刷新并显示 OAuth 令牌：
 ```
 ibmcloud iam oauth-tokens
+```
+{: codeblock}
+
+## ibmcloud iam roles
+{: #ibmcloud_iam_roles}
+
+列出平台和服务定义的角色：
+```
+ibmcloud iam roles [--service SERVICE_NAME] [--output FORMAT]
+```
+{: codeblock}
+
+<strong>先决条件</strong>：登录和目标
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>--service SERVICE_NAME</dt>
+  <dd>服务名称，仅列出平台定义的角色（如果未指定）。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
+</dl>
+
+<strong>示例</strong>：
+
+列出平台角色
+```
+ibmcloud iam roles
+```
+
+以 JSON 格式列出服务 `cloudantnosql` 的角色：
+```
+ibmcloud iam roles --service cloudantnosql --output JSON
 ```
 {: codeblock}
 
@@ -1155,6 +1227,8 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>目标服务实例标识，与 `--target-service-instance-name` 互斥。如果未指定，将对目标服务的所有实例授予访问权。</dd>
   <dt>--target-resource-type</dt>
   <dd>目标服务的资源类型</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 ## ibmcloud iam authorization-policy-delete
@@ -1180,7 +1254,7 @@ ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 
 显示授权策略的详细信息：
 ```
-ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
+ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：登录和目标
@@ -1189,6 +1263,8 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 <dl>
   <dt>AUTHORIZATION_POLICY_ID</dt>
   <dd>要显示的授权策略的标识。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 ## ibmcloud iam authorization-policies
@@ -1196,18 +1272,24 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 
 列出当前帐户下的授权策略：
 ```
-ibmcloud iam authorization-policies
+ibmcloud iam authorization-policies [--output FORMAT]
 ```
 {: codeblock}
 
 <strong>先决条件</strong>：登录和目标
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
+</dl>
 
 ## ibmcloud iam access-groups
 {: #ibmcloud_iam_access_groups}
 
 列出当前帐户下的访问组：
 ```
-ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
+ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -1218,6 +1300,8 @@ ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
   <dd>列出用户所属的访问组。此标志与“-s”互斥。</dd>
   <dt>-s</dt>
   <dd>列出服务标识所属的访问组。此标志与“-u”互斥。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1233,7 +1317,7 @@ ibmcloud iam access-groups
 
 显示访问组的详细信息：
 ```
-ibmcloud iam access-group GROUP_NAME [--id]
+ibmcloud iam access-group GROUP_NAME [--id] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -1242,6 +1326,8 @@ ibmcloud iam access-group GROUP_NAME [--id]
 <dl>
   <dt>-id</dt>
   <dd>仅显示标识</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1256,7 +1342,7 @@ ibmcloud iam access-group example_group
 
 创建访问组：
 ```
-ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
+ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -1265,6 +1351,8 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 <dl>
   <dt>-d, --description</dt>
   <dd>访问组的描述</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1279,7 +1367,7 @@ ibmcloud iam access-group-create example_group -d "example access group"
 
 更新访问组：
 ```
-ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
+ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [--output FORMAT] [-f, --force]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -1290,6 +1378,8 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
   <dd>新访问组名称</dd>
   <dt>-d, --description</dt>
   <dd>新描述</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
   <dt>-f, --force</dt>
   <dd>强制更新而不确认</dd>
 </dl>
@@ -1332,13 +1422,15 @@ ibmcloud iam access-group-delete example_group --force
 
 列出访问组中的用户：
 ```
-ibmcloud iam access-group-users GROUP_NAME
+ibmcloud iam access-group-users GROUP_NAME [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
 <dl>
+<dt>--output FORMAT</dt>
+<dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1418,13 +1510,15 @@ ibmcloud iam access-group-user-purge name@example.com -f
 
 列出访问组中的服务标识：
 ```
-ibmcloud iam access-group-service-ids GROUP_NAME
+ibmcloud iam access-group-service-ids GROUP_NAME [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
 <dl>
+<dt>--output FORMAT</dt>
+<dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1505,13 +1599,15 @@ ibmcloud iam access-group-service-id-purge example --force
 
 列出访问组的策略：
 ```
-ibmcloud iam access-group-policies GROUP_NAME
+ibmcloud iam access-group-policies GROUP_NAME [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
 <dl>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1526,13 +1622,15 @@ ibmcloud iam access-group-policies example_group
 
 显示访问组策略的详细信息：
 ```
-ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
+ibmcloud iam access-group-policy GROUP_NAME POLICY_ID [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
 <dl>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1547,7 +1645,7 @@ ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 
 创建访问组策略：
 ```
-ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -1572,6 +1670,8 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
   <dd>资源组的名称。`*` 表示所有资源组。此选项与 `--file` 和 `--resource-group-id` 互斥。</dd>
   <dt>-resource-group-id</dt>
   <dd>资源组的标识。`*` 表示所有资源组。此选项与 `--file` 和 `--resource-group-name` 互斥。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1611,7 +1711,7 @@ ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-
 
 更新访问组策略：
 ```
-ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -1636,6 +1736,8 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
   <dd>资源组的名称。`*` 表示所有资源组。此选项与 `--file` 和 `--resource-group-id` 互斥。</dd>
   <dt>-resource-group-id</dt>
   <dd>资源组的标识。`*` 表示所有资源组。此选项与 `--file` 和 `--resource-group-name` 互斥。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，仅支持“JSON”。</dd>
 </dl>
 
 <strong>示例</strong>：

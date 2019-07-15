@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-06-21"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
@@ -31,29 +31,29 @@ subcollection: cloud-cli
 ## 从 {{site.data.keyword.cloud_notm}} CLI 存储库安装插件
 {: #install-from-repo}
 
-### 步骤 1：搜索插件
-{: #step1-search-plugin}
+### 搜索插件
+{: #cli-search-plugin}
 
-1. 使用 `ibmcloud plugin repo-plugins -r REPO_NAME` 命令在存储库中查找插件。
-2. {{site.data.keyword.cloud_notm}} CLI 具有名称为“IBM Cloud”的官方存储库，您可以搜索官方插件，如以下示例所示：
+使用 `ibmcloud plugin repo-plugins -r REPO_NAME` 命令在存储库中查找插件。
+
+{{site.data.keyword.cloud_notm}} CLI 提供名称为“IBM Cloud”的正式插件存储库，您可以进行搜索，如以下示例所示：
 ```
 ibmcloud plugin repo-plugins -r "IBM Cloud"
 ```
 {: codeblock}
 
 ```
-Status             Name                                   Versions                       Description   
-Update Available   container-service/kubernetes-service   0.2.99, 0.2.95, 0.2.80...      IBM Cloud Kubernetes Service for management of Kubernetes clusters   
-Update Available   cloud-functions                        1.0.30, 1.0.29, 1.0.28...      IBM Cloud CLI plug-in for IBM Cloud Functions   
+Status             Name                                        Versions                       Description   
+Update Available   container-service/kubernetes-service        0.3.49, 0.3.47, 0.3.34...      IBM Cloud Kubernetes Service for management of Kubernetes clusters   
+Update Available   cloud-functions                             1.0.32, 1.0.30, 1.0.29...      Manage Cloud Functions 
 ...
 ```
 {: screen}
 
-### 步骤 2：安装插件
-{: step2-install-plugin}
+### 安装插件
+{: #cli-install-plugin}
 
 使用 `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` 命令安装插件。例如，使用以下命令安装官方 IBM 插件存储库“IBM Cloud”中的插件：
-
 ```
 ibmcloud plugin install auto-scaling
 ```
@@ -75,7 +75,6 @@ Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bl
 {: #install-plugin-locally}
 
 使用 `ibmcloud plugin install LOCAL_FILE_NAME` 命令在本地计算机上安装插件二进制文件。例如：
-
 ```
 ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.7
 ```
@@ -90,7 +89,7 @@ $
 {: screen}
 
 ## 通过 Web URL 安装插件
-{: install-plugin-from-url}
+{: #install-plugin-from-url}
 
 使用 `ibmcloud plugin install URL` 命令直接通过 Web URL 安装插件。例如：
 ```
@@ -98,7 +97,6 @@ ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/
 ```
 {: codeblock}
 
-输出：
 ```
 Attempting to download the binary file...
  7.28 MiB / 7.28 MiB [===========================================] 100.00% 0s

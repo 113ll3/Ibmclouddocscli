@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2018, 2019
@@ -127,7 +127,7 @@ ibmcloud sl user list [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--column</dt>
-<dd>Colonne à afficher. [Options : id,username,email,displayName,status,hardwareCount,virtualGuestCount]  [default: id,username,email,displayName].</dd>
+<dd>Colonne à afficher. [Options : id,username,email,displayName,status,hardwareCount,virtualGuestCount][default: id,username,email,displayName].</dd>
 </dl>
 
 ## ibmcloud sl user permissions 

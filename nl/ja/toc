@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli?topic=cloud-cli-ibmcloud-cli" path="cli"}
+{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli?topic=cloud-cli-getting-started" path="cli"}
 IBM Cloud CLI および Developer Tools
 
 	{: .navgroup id="learn"}
@@ -66,26 +66,25 @@ IBM Cloud CLI および Developer Tools
 		/auto-scaling-cli-plugin/auto-scaling-cli-autoscalingcli
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
 		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
+		/cloud-object-storage-cli-plugin/cloud-object-storage-cli-ic-cos-cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
-		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
+		/containers-cli-plugin/containers-cli-plugin-kubernetes-service-cli
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
-		/dbaas-cli-plugin/hyper-protect-dbaas-dbaas_cli_plugin
-		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
+		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
+		/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
 		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
 		/hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
 
 	{: .topicgroup}
 	Cloud Foundry CLI プラグイン
 		/cf-cli-plugin/cf-cli-plugin-cf-cli-plugin
-		plugins/bluemix_admin/index.md
+		plugins/admin/index.md
 		plugins/vpn/index.md
 
 	monitoring_logging.md
 
 	{: .topicgroup}
 	モバイル用 SDK
-		sdk/index.md
-		sdk/contribute.md
 		sdk/sdk.md
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md

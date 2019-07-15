@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-10"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -19,9 +19,9 @@ subcollection: cloud-cli
 # Installation de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} autonome
 {: #install-ibmcloud-cli}
 
-L'interface CLI {{site.data.keyword.cloud}} fournit une interface de ligne de commande permettant de gérer les ressources dans {{site.data.keyword.cloud_notm}}. Vous pouvez toujours utiliser l'interface de ligne de commande `cf` pour vous connecter à {{site.data.keyword.cloud_notm}} mais elle fonctionne uniquement avec un service Cloud Foundry dans {{site.data.keyword.cloud_notm}}. 
+L'interface CLI {{site.data.keyword.cloud}} fournit une interface de ligne de commande pour gérer les ressources dans {{site.data.keyword.cloud_notm}}. Vous pouvez toujours utiliser l'interface de ligne de commande `cf` pour vous connecter à {{site.data.keyword.cloud_notm}} mais elle fonctionne uniquement avec un service Cloud Foundry dans {{site.data.keyword.cloud_notm}}. 
 
-Si vous souhaitez installer la dernière interface de ligne de commande {{site.data.keyword.cloud}} ainsi que d'autres outils et plug-in pour le développement d'applications pour {{site.data.keyword.cloud_notm}}, voir [Initiation à l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+Si vous souhaitez installer la dernière interface de ligne de commande {{site.data.keyword.cloud}} ainsi que d'autres outils et plug-in pour le développement d'applications pour {{site.data.keyword.cloud_notm}}, voir [Initiation à l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started).
 {: tip}
 
 ## Avant de commencer
@@ -34,11 +34,7 @@ Si vous avez besoin d'utiliser une version 32 bits ou une version antérieure au
 
 Procédez comme suit pour installer la dernière version autonome de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} :
 
-1. Sélectionnez le programme d'installation de votre système d'exploitation à télécharger :
-  *  macOS X 64 bits : [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
-  * Windows 64 bits : [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
-  * Linux x86 64 bits : [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
-  * Linux LE 64 bits (ppc64le) : [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
+1. Utilisez un navigateur pour accéder au référentiel GitHub [`ibm-cloud-cli-releases`](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/) officiel et **sélectionnez** le programme d'installation de votre système d'exploitation pour lancer le téléchargement. Les systèmes d'exploitation suivants sont pris en charge : macOS X 64 bits, Windows&trade; 64 bits, Linux&trade; x86 64 bits et Linux&trade; LE 64 bits (ppc64le).
 
 2. Exécutez le programme d'installation :
   * Pour Mac et Windows&trade;, exécutez le programme d'installation.
@@ -83,13 +79,7 @@ Pour installer manuellement la dernière interface de ligne de commande pour vot
 
 Lorsque vous utilisez des programmes d'installation ou un script shell pour installer l'interface CLI {{site.data.keyword.cloud_notm}}, elle est installée dans votre répertoires système. Si vous souhaitez indiquer un autre répertoire, procédez comme suit :
 
-1. Téléchargez le package binaire correspondant à votre système d'exploitation en utilisant les liens suivants :
-  * macOS : [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
-  * linux32 : [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
-  * linux64 : [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
-  * ppc64le : [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
-  * win32 : [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") /[sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
-  * win64 : [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
+1. Utilisez un navigateur pour accéder au référentiel GitHub [`ibm-cloud-cli-releases`](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/) officiel et **sélectionnez** le fichier binaire correspondant pour votre plateforme afin de lancer le téléchargement. Les plateformes suivantes sont prises en charge : macOS, linux32, linux64, ppc64le, win32 et win64.
 
 2. Extrayez le package dans un répertoire défini.
 
@@ -110,7 +100,7 @@ Lorsque vous utilisez des programmes d'installation ou un script shell pour inst
    ```
    {: screen}
 
-   Windows :
+   Windows&trade; :
    ```
    IBM_Cloud_CLI
    ├── LICENSE
@@ -124,7 +114,7 @@ Lorsque vous utilisez des programmes d'installation ou un script shell pour inst
 
 3. Ajoutez la variable d'environnement `PATH` et activez l'exécution automatique de shell.
   * Ajoutez `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` à la variable d'environnement `PATH`.
-  * Pour obtenir des informations de support sur l'exécution automatique de shell (Mac et Linux uniquement), consultez [ce guide](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
+  * Pour le support d'exécution automatique de shell (Mac et Linux&trade; uniquement), voir [Activation de l'exécution automatique de shell pour l'interface CLI IBM Cloud](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
 ## Mise à jour de l'interface de ligne de commande {{site.data.keyword.cloud_notm}}
 {: #update-ibmcloud-cli}

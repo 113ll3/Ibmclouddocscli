@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-이 오류는 `appmetrics` 모듈이 다른 아키텍처에 설치될 때 발생할 수 있습니다. 한 아키텍처에 설치된 기본 npm 모듈은 다른 아키텍처에서 작동하지 않습니다. 포함된 Docker 이미지는 Linux&trade; 커널을 기반으로 합니다.
+이 오류는 `appmetrics` 모듈이 다른 아키텍처에 설치될 때 발생할 수 있습니다. 한 아키텍처에 설치된 기본 `npm` 모듈은 다른 아키텍처에서 작동하지 않습니다. 포함된 Docker 이미지는 Linux&trade; 커널을 기반으로 합니다.
 {: tsCauses}
 
 `node_modules` 폴더를 삭제하고 `ibmcloud dev run` 명령을 다시 실행하십시오.
@@ -258,7 +258,7 @@ ibmcloud cr namespaces
 {: codeblock}
 {: tsResolve}
 
-## 내 앱의 언어를 판별할 수 없는 이유
+## 언어를 판별할 수 없는 이유
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
@@ -302,7 +302,7 @@ directly.
 {{site.data.keyword.dev_cli_notm}} CLI 컴포넌트를 개별적으로 수동으로 설치하려면 다음 [단계](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually)를 따르십시오.
 
 ## 왜 Docker 이미지를 빌드할 수 없습니까?
-{: $ts-cli-docker}
+{: #ts-cli-docker}
 {: troubleshoot}
 
 다음과 같은 오류가 표시되는 경우: 
@@ -324,11 +324,11 @@ Docker가 설치되어 실행 중인지 확인하십시오.
 - [Linux용 Docker&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 설치하거나 시작하기
 {: tsResolve}
 
-## 호환되지 않는 helm 버전을 해결하는 방법
-{: ts-cli-helm}
+## Helm 업그레이드가 실패하며 오류 발생 
+{: #ts-cli-helm-rbac}
 {: troubleshoot}
 
-클라이언트 및 서버 helm 버전이 동기화되지 않은 경우 다음 오류가 표시될 수 있습니다.
+역할 기반 액세스 제어(RBAC) 문제로 인해 다음과 같은 오류가 발생할 수 있습니다.
 ```
 FAILED
 Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
@@ -338,6 +338,19 @@ cannot list resource "configmaps" in API group "" in the namespace
 ```
 {: screen}
 
+문제를 해결하려면 다음 명령을 실행하십시오.
+{: tsResolve}
+
+```
+kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:default -n kube-system
+```
+{: codeblock}
+
+## 호환되지 않는 helm 버전을 해결하는 방법
+{: #ts-cli-helm}
+{: troubleshoot}
+
+클라이언트 및 서버 helm 버전이 동기화되지 않은 경우 다음 오류가 표시될 수 있습니다.
 ```
 FAILED
 The 'helm upgrade ' command failed to complete due to: exit status 1
@@ -366,7 +379,7 @@ The 'helm upgrade ' command failed to complete due to: exit status 1
   {: codeblock}
 
 ## ibmcloud dev 빌드가 "@"를 포함하는 사용자 이름 때문에 실패하는 이유
-{: ts-cli-username}
+{: #ts-cli-username}
 {: troubleshoot}
 이미지 빌드 프로세스 중에 사용자 이름이 Docker 도구 이미지의 사용자에 대해 사용됩니다. 사용자 이름에 '@' 또는 '-'와 같은 특수 문자가 포함되어 있는 경우, Docker 이미지 빌드 프로세스가 실패하고 다음 오류가 발생합니다.
 ```

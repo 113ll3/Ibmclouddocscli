@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -34,7 +34,7 @@ Os pré-requisitos listam quais ações são necessárias antes de usar o comand
 <dl>
 <dt>Docker</dt>
 <dd>Instale a CLI do Docker.</dd>
-<dt>Terminal</dt>
+<dt>Nó de Extremidade</dt>
 <dd>Use o comando **`ibmcloud api`** para configurar um terminal de API.</dd>
 <dt>Efetuar login</dt>
 <dd>Use o comando **`ibmcloud login`** para efetuar login. Se você estiver efetuando login com um ID federado, use a opção **`--sso`** para se autenticar com uma senha única ou use a opção **`--apikey`** para se autenticar com uma chave de API.</dd>
@@ -61,7 +61,7 @@ Nenhum.
 
 <dl>
 <dt>COMMAND|NAMESPACE</dt>
-<dd>O comando ou namespace para o qual a ajuda é exibida. Se não especificado, a ajuda geral para a CLI do {{site.data.keyword.Bluemix_notm}} será mostrada. Opcional.</dd>
+<dd>O comando ou namespace para o qual a ajuda é exibida. Se não especificado, a ajuda geral para a CLI do {{site.data.keyword.cloud_notm}} será mostrada. Opcional.</dd>
 </dl>
 
 ### Exemplos
@@ -231,11 +231,11 @@ Nenhum.
 ### Exemplos
 {: #info-examples}
 
-Liste os aplicativos do Cloud Foundry:
+Liste os apps Cloud Foundry:
+
 ```
 Ibmcloud cf apps
 ```
-{: codeblock}
 
 Liste os serviços do Cloud Foundry sem exibir a mensagem `Invoking cf command...`:
 ```
@@ -389,7 +389,7 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
 Se a chave de API tiver uma conta associada, a alternância para outra conta não será suportada.
-{ :note}
+{: note}
 
 Use uma senha única:
 
@@ -425,7 +425,7 @@ Nenhum.
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
-Visualize as informações para todas as regiões no {{site.data.keyword.Bluemix_notm}}.
+Visualize as informações para todas as regiões no {{site.data.keyword.cloud_notm}}.
 
 ```
 ibmcloud regions
@@ -522,33 +522,33 @@ Atualizar ibmcloud [ -f ]
 </dl>
 
 ## Comandos gerais de serviço de infraestrutura clássica
-{: #softlayer_cli}
+{: #classic-service-commands}
 
 Use comandos de infraestrutura clássica na CLI do {{site.data.keyword.cloud_notm}} para configurar e gerenciar serviços de infraestrutura.
 
 Execute o comando **`ibmcloud sl`** para ver a lista de comandos disponíveis:
 ```
-USO:
-   ibmcloud sl command [arguments...] [ opções ...]
+USAGE:
+   ibmcloud sl command [arguments...] [options...]
 
 COMMANDS:
-   block           Gen1 infrastructure Block Storage
-   cdn             Gen1 infrastructure Content Delivery Network
-   file            Gen1 infrastructure File Storage
-   dns             Gen1 infrastructure Domain Name System
-   globalip        Gen1 infrastructure Global IP addresses
-   hardware        Gen1 infrastructure hardware servers
-   image           Gen1 infrastructure Compute images
-   ipsec           Gen1 infrastructure IPSEC VPN
-   loadbal         Gen1 infrastructure Load balancers
-   security        Gen1 infrastructure SSH Keys and SSL Certificates
-   securitygroup   Gen1 infrastructure network security groups
-   subnet          Gen1 infrastructure Network subnets
-   ticket          Gen1 infrastructure Manage Tickets
-   vlan            Gen1 infrastructure Network VLANs
-   vs              Gen1 infrastructure Virtual Servers
-   order           Gen1 infrastructure Orders
-   user            Gen1 infrastructure Manage Users
+   block           Classic infrastructure Block Storage
+   cdn             Classic infrastructure Content Delivery Network
+   file            Classic infrastructure File Storage
+   dns             Classic infrastructure Domain Name System
+   globalip        Classic infrastructure Global IP addresses
+   hardware        Classic infrastructure hardware servers
+   image           Classic infrastructure Compute images
+   ipsec           Classic infrastructure IPSEC VPN
+   loadbal         Classic infrastructure Load balancers
+   security        Classic infrastructure SSH Keys and SSL Certificates
+   securitygroup   Classic infrastructure network security groups
+   subnet          Classic infrastructure Network subnets
+   ticket          Classic infrastructure Manage Tickets
+   vlan            Classic infrastructure Network VLANs
+   vs              Classic infrastructure Virtual Servers
+   order           Classic infrastructure Orders
+   user            Classic infrastructure Manage Users
    call-api        Call arbitrary API endpoints.
    help            Print command usage message
 ```

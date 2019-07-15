@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
 
@@ -39,8 +39,7 @@ subcollection: cloud-cli
   ```
   {: codeblock}
 
-  必须使用 **bluemixRegion** 参数来初始化 `BMSClient`。在初始化程序中，**bluemixRegion** 值指定您使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如 `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
-
+  必须使用 `bluemixRegion` 参数来初始化 `BMSClient`。在初始化程序中，`bluemixRegion` 值指定您使用的 {{site.data.keyword.cloud_notm}} 部署，例如 `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
 
 ## 初始化 iOS 应用程序
 {: #init-BMSClient-ios}
@@ -93,7 +92,7 @@ subcollection: cloud-cli
   ```
   {: codeblock}
 
-  必须使用 **bluemixRegion** 参数来初始化 `BMSClient`。在初始化程序中，**bluemixRegion** 值指定您使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如 `BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+  必须使用 **bluemixRegion** 参数来初始化 `BMSClient`。在初始化程序中，**bluemixRegion** 值指定您使用的 {{site.data.keyword.cloud_notm}} 部署，例如 `BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
 
 ## 初始化 Cordova 应用程序
 {: #init-BMSClient-cordova}
@@ -112,7 +111,7 @@ subcollection: cloud-cli
   ```
   {: codeblock}
 
-  必须使用 **bluemixRegion** 参数来初始化 `BMSClient`。在初始化程序中，**bluemixRegion** 值指定您使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如 `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
+  必须使用 **bluemixRegion** 参数来初始化 `BMSClient`。在初始化程序中，**bluemixRegion** 值指定您使用的 {{site.data.keyword.cloud_notm}} 部署，例如 `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
 
 ## 相关链接
 {: #BMSClient-rellinks notoc}

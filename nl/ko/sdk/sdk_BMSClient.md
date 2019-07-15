@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
 
@@ -39,8 +39,7 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
   ```
   {: codeblock}
 
-  **bluemixRegion** 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`).
-
+  `bluemixRegion` 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 `bluemixRegion` 값은 사용 중인 {{site.data.keyword.cloud_notm}} 배치를 지정합니다(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`).
 
 ## iOS 앱 초기화
 {: #init-BMSClient-ios}
@@ -93,7 +92,7 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
   ```
   {: codeblock}
 
-  **bluemixRegion** 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`).
+  **bluemixRegion** 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.cloud_notm}} 배치를 지정합니다(예: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`).
 
 ## Cordova 앱 초기화
 {: #init-BMSClient-cordova}
@@ -112,7 +111,7 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
   ```
   {: codeblock}
 
-  **bluemixRegion** 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`).
+  **bluemixRegion** 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.cloud_notm}} 배치를 지정합니다(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`).
 
 ## 관련 링크
 {: #BMSClient-rellinks notoc}

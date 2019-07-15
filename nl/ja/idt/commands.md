@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -27,27 +27,7 @@ subcollection: cloud-cli
 2018 年 5 月、{{site.data.keyword.cloud}} CLI コマンドの `bluemix` および `bx` は、`ibmcloud` になりました。 ただし、後に削除されるまで、`bluemix` および `bx` の CLI コマンドを引き続き使用できます。
 {: tip}
 
-以下の {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) コマンドを使用して、アプリケーションの作成、管理、デプロイ、デバッグ、およびテストを行います。
-
-- [build](#build): ローカル・コンテナー内にアプリケーションをビルドします。
-- [code](#code): アプリケーションのコードをダウンロードします。
-- [console](#console): アプリケーションの {{site.data.keyword.cloud_notm}} コンソールを開きます。
-- [create](#create): 新規アプリケーションを作成し、オプションでサービスを追加できます。
-- [debug](#debug): ローカル・コンテナー内でアプリケーションをデバッグします。
-- [delete](#delete): スペースからアプリケーションを削除します。
-- [deploy](#deploy): アプリケーションを {{site.data.keyword.cloud_notm}} にデプロイします。
-- [diag](#diag): インストール済みの従属物に関するバージョン情報を表示します。
-- [edit](#edit): 既存のアプリケーションにサービスを追加、あるいは既存のアプリケーションからサービスを削除します。
-- [enable](#enable): {{site.data.keyword.cloud_notm}} Developer Tools で使用するために、既存のアプリケーションを更新します。
-- [get-credentials](#get-credentials): 接続された {{site.data.keyword.cloud_notm}} サービスを使用可能にするためにアプリケーションによって必要とされる資格情報を取得します。
-- [help](#help): CLI の構文と引数に関するヘルプ。
-- [list](#list): リソース・グループ内のすべての {{site.data.keyword.cloud_notm}} アプリケーションをリストします。
-- [run](#run): ローカル・コンテナー内でアプリケーションを実行します。
-- [shell](#shell): ローカル・コンテナーにシェルを開きます。
-- [status](#status): CLI で使用されるコンテナーの状況をチェックします。
-- [stop](#stop): コンテナーを停止します。
-- [test](#test): ローカル・コンテナー内でアプリケーションをテストします。
-- [view](#view): テストや表示目的で、デプロイされたアプリケーションの URL を表示します。
+{{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) コマンドを使用して、アプリケーションの作成、管理、デプロイ、デバッグ、およびテストを行います。
 
 [複合コマンド](#compound)を使用して、単一のコマンド・ライン・ステートメント内で複数のコマンドを実行します。
 {: tip}
@@ -187,7 +167,7 @@ deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Nam
 ibm-cluster: "mycluster"
 ```
 
-以下の例に示すように、`cli-config.yml` 内で、Helm チャートの場所を `chart-path` プロパティーに定義し、`deploy-image-target` を構成するように選択できます。 `cli-config.yml` 内の `deploy-image-target` エレメントが、`chart/values.yml` ファイル内の `repository` エレメントおよび `tag` エレメントの代わりに使用されます。 具体的にデプロイ先を {{site.data.keyword.cloud_notm}} にするには、構成エレメント `ibm-cluster` に、{{site.data.keyword.cloud_notm}} 内に作成した Kubernetes クラスターの名前を設定します。
+以下の例に示すように、`cli-config.yml` 内で、Helm チャートの場所を `chart-path` プロパティーに定義し、`deploy-image-target` を構成できます。 `cli-config.yml` 内の `deploy-image-target` エレメントが、`chart/values.yml` ファイル内の `repository` エレメントおよび `tag` エレメントの代わりに使用されます。 具体的にデプロイ先を {{site.data.keyword.cloud_notm}} にするには、構成エレメント `ibm-cluster` に、{{site.data.keyword.cloud_notm}} 内に作成した Kubernetes クラスターの名前を設定します。
 
 現行アプリ・ディレクトリー内で以下のコマンドを実行して、アプリをビルドします。  
 ```
@@ -209,7 +189,7 @@ ibmcloud dev deploy
 ### deploy コマンド・パラメーター
 {: #deploy-parameters}
 
-以下のパラメーターを `deploy` コマンドに指定して使用するか、アプリの `cli-config.yml` ファイルを直接更新することで使用できます。 その他のコマンドと共有される[追加のパラメーター](#command-parameters)もあります。
+以下のパラメーターを `deploy` コマンドに指定して使用するか、アプリの `cli-config.yml` ファイルを直接更新することで使用できます。 その他のコマンドと共有される[追加パラメーター](#command-parameters)もあります。
 
 #### `chart-path`
 {: #chart-path}
@@ -250,7 +230,7 @@ ibmcloud dev deploy
 ## diag
 {: #diag}
 
-このコマンドは、{{site.data.keyword.dev_cli_notm}} CLI のインストール済みの従属物のバージョン情報を表示するための診断として使用されます。 これは、従属物が欠落しているかどうかの判別または問題のデバッグに役立ちます。
+`diag` コマンドは、{{site.data.keyword.dev_cli_notm}} CLI のインストール済みの従属物のバージョン情報を表示するための診断として使用されます。 これは、従属物が欠落しているかどうかの判別または問題のデバッグに役立ちます。
 
 インストール済みの従属物のバージョンを表示するには、次のコマンドを実行します。
 ```
@@ -271,20 +251,20 @@ ibmcloud dev edit
 
 ただし、アカウントに既存のサービスがある場合は、このコマンドによってその既存のサービスのリストが表示され、各サービスがアプリに接続されているかどうかが示されます。
 
-* 接続済みサービスでは、アプリからサービスを切断したり、アカウントからサービスを削除したりするためのオプションが示され、接続先のすべてのアプリからそのサービスを切断することができます。
+* 接続済みサービスでは、アプリからサービスを切断するオプションが示されます。また、アカウントからサービスを削除して、すべてのアプリからそのサービスが切断されるようにするオプションも示されます。
 
-* 切断されているサービスでは、そのサービスをアプリに接続するオプションと、そのサービスをアカウントから削除するオプションが示されます。 既存のサービスを接続すると、そのサービスの使用を開始するための資格情報やソース・コードなどのファイルもダウンロードされます。
+* 切断されているサービスでは、そのサービスをアプリに接続するオプションと、そのサービスをアカウントから削除するオプションが示されます。 既存のサービスを接続すると、資格情報やソース・コードなどのファイルもダウンロードされます。
 
-アプリに新しいサービスを追加することもできます。この場合は、サービス選択のプロンプトによるガイドに従って進み、新しいサービスの使用を開始するための資格情報ファイルやソース・コードなどの追加ファイルをダウンロードします。
+アプリにサービスを追加することもできます。この場合、サービス選択プロンプトによるガイドに従って、資格情報ファイルやソース・コードなどのファイルをダウンロードします。
 
 ## enable
 {: #enable}
 
-既存のアプリを {{site.data.keyword.cloud_notm}} デプロイメントに対応できるようにします。 `enable` コマンドは、既存アプリの言語の自動検出を試み、その後、必要な追加情報を求めるプロンプトを出します。 これにより、ローカル Docker コンテナー、Cloud Foundry デプロイメント、Cloud Foundry エンタープライズ環境デプロイメント、または Kubernetes コンテナー・デプロイメントに使用できるファイルが生成され、追加されます。 すべてのデプロイメント環境は、手動での `deploy` によって、または DevOps ツールチェーンを使用することによって利用できます。
+既存のアプリを {{site.data.keyword.cloud_notm}} デプロイメントに対応できるようにします。 `enable` コマンドは、既存アプリの言語の自動検出を試み、その後、必要な追加情報を求めるプロンプトを出します。 ローカル Docker コンテナー、Cloud Foundry デプロイメント、Cloud Foundry エンタープライズ環境デプロイメント、または Kubernetes コンテナー・デプロイメントで使用されるファイルが生成されます。すべてのデプロイメント環境は、手動での `deploy` によって、または DevOps ツールチェーンを使用することによって利用できます。
 
-{{site.data.keyword.cloud_notm}} にログインしている場合、当該ローカル・アプリを、{{site.data.keyword.cloud_notm}} に既に存在しているアプリに接続するか、新規 {{site.data.keyword.cloud_notm}} アプリを作成することを選択できます。 サービスや DevOps ツールチェーンなどの {{site.data.keyword.cloud_notm}} 機能を利用するには、{{site.data.keyword.cloud_notm}} 内のアプリが必要です。 Git リポジトリーから複製されたアプリケーションに対して {{site.data.keyword.cloud_notm}} アプリケーションが作成されると、{{site.data.keyword.cloud_notm}} アプリケーションはその構成にこのリポジトリーを組み込みます。 
+{{site.data.keyword.cloud_notm}} にログインしている間に、当該ローカル・アプリを、{{site.data.keyword.cloud_notm}} に既に存在するアプリに接続するか、新規 {{site.data.keyword.cloud_notm}} アプリを作成することができます。サービスや DevOps ツールチェーンなどの {{site.data.keyword.cloud_notm}} 機能を利用するには、{{site.data.keyword.cloud_notm}} 内のアプリが必要です。 Git リポジトリーから複製されたアプリケーションに対して {{site.data.keyword.cloud_notm}} アプリケーションが作成されると、{{site.data.keyword.cloud_notm}} アプリケーションはその構成にこのリポジトリーを組み込みます。 
 
-`enable` はベータ機能です。 アプリの有効化に問題がある場合は、[トラブルシューティング・ページ](/docs/cli/ts_createapps.html#troubleshoot)が役立ちます。 特に、`enable` はモバイル・アプリやフレームワーク向けではありません。 複数のデプロイ可能な資産を生成する複雑なアプリの場合、アプリの各コンポーネントを個別に有効にする必要があります。 
+`enable` はベータ機能です。 アプリのクラウド対応化で問題がある場合は、[トラブルシューティング](/docs/cli?topic=cloud-cli-troubleshoot)を参照してください。特に、`enable` はモバイル・アプリやフレームワーク向けではありません。 複数のデプロイ可能な資産を生成する複雑なアプリの場合、アプリの各コンポーネントを個別に有効にする必要があります。 
 
 以下のコマンドを実行して、現行ディレクトリー内の既存のアプリを有効にします。
 ```
@@ -297,11 +277,11 @@ ibmcloud dev enable
 * `package.json` ファイルが存在すると、Node.js アプリと識別されます。
 * `package.swift` ファイルが存在すると、Swift アプリと識別されます。
 * `setup.py` ファイルまたは `requirements.txt` ファイルのいずれかが存在すると、Python アプリと識別されます。
-* `pom.xml` ファイルまたは `build.gradle` ファイルのいずれかが存在すると、Java アプリと識別されます。
+* `pom.xml` ファイルまたは `build.gradle` ファイルのいずれかが存在すると、Java&trade; アプリと識別されます。
 	* `pom.xml` が存在すると、Maven アプリと識別されます。
 	* `build.gradle` が存在すると、Gradle アプリと識別されます。
 
-オプションで、検出されたアプリ言語を `--language` 引数を使用してオーバーライドすることもできます。 サポートされるのは有効かつ完全なアプリのみです。 enable コマンドによってソース・コードが変更されることはありません。
+検出されたアプリ言語を `--language` 引数を使用してオーバーライドすることもできます。 サポートされるのは有効かつ完全なアプリのみです。 enable コマンドによってソース・コードが変更されることはありません。
 
 ### 言語オプションの有効化
 {: #enable-language-options}
@@ -319,7 +299,7 @@ ibmcloud dev enable
 ### enable コマンド・パラメーター
 {: #enable-parameters}
 
-以下のパラメーターを `enable` コマンドに指定して使用するか、アプリの `cli-config.yml` ファイルを直接更新することで使用できます。 その他のコマンドと共有される[追加のパラメーター](#command-parameters)もあります。
+以下のパラメーターを `enable` コマンドに指定して使用するか、アプリの `cli-config.yml` ファイルを直接更新することで使用できます。 その他のコマンドと共有される[追加パラメーター](#command-parameters)もあります。
 
 #### `language`
 {: #enable-language}
@@ -336,7 +316,7 @@ ibmcloud dev enable
 #### `no-create`
 {: #enable-no-create}
 
-* 有効化ファイルをローカルに作成しながら、{{site.data.keyword.cloud_notm}} でアプリを作成しないようにするパラメーター。
+* {{site.data.keyword.cloud_notm}} でのアプリの作成を回避し、有効化ファイルをローカルに作成するパラメーター。
 * 使用法 `ibmcloud dev enable --no-create`
 
 ## get-credentials
@@ -393,8 +373,7 @@ ibmcloud dev run
 {: #run-parameters}
 
 以下のパラメーターは、`run` コマンド専用のパラメーターで、
-実行コンテナー内でのアプリの管理を支援するものです。
-その他のコマンドと共有される[追加のパラメーター](#command-parameters)もあります。
+実行コンテナー内でのアプリの管理を支援するものです。 その他のコマンドと共有される[パラメーター](#command-parameters)もあります。
 
 #### `container-name-run`
 {: #container-name-run2}
@@ -418,7 +397,7 @@ ibmcloud dev run
 {: #dockerfile-run}
 
 * 実行コンテナーの Dockerfile。
-* 複数のコンテナーを使用して実行する予定の場合、これは Compose ファイルにする必要があります。
+* 複数のコンテナーを使用して実行する予定の場合、Compose ファイルを使用します。
 * 複数の Compose ファイルを使用するには、ファイル名のコンマ区切りリストを二重引用符で囲んでください。
 * 使用法: `ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
 * 使用法: `ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
@@ -450,7 +429,7 @@ ibmcloud dev shell
 
 そうすると、{{site.data.keyword.dev_cli_short}} CLI によって、対話式シェルがアプリの Docker コンテナーに開かれます。 シェル・コマンドのデフォルトのターゲット・コンテナーは、`cli-config.yml` ファイルの `container-shell-target` 値によって定義され、有効な値は、`run` または `tools` です。 この値が定義されていない場合、または無効値が指定されている場合、`shell` コマンドは、デフォルトで `tools` コンテナーをターゲットとします。 シェル・コマンドは、対応する Dockerfile 内の `WORKDIR` 命令によって指定されたディレクトリーにコンテナーを開きます。 `WORKDIR` が Dockerfile 内にリストされていない場合、コンテナーのルートが作業ディレクトリーとして使用されます。 詳しくは、[この資料](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
-代わりの方法として、`run` または `tools` のいずれかを引数としてコマンドに渡すこともできます。そうすると、そのコンテナーが開始され、シェルはそのコンテナーに開かれます。 同様に、`container-name` パラメーターを使用して、シェルを開くコンテナーの名前を渡すことができます。 ただし、このフラグは、実行中のコンテナーがないときに限って使用するようにしてください。 `run` 引数および `tools` 引数のほうが柔軟性が高く、いずれかのコンテナーが実行中の場合、コンテナーの切り替えが可能です。 例えば、ツール・コンテナーが実行中の場合に `ibmcloud dev shell run` を実行すると、`tools` コンテナーは停止し、`run` コンテナーが開始されます。その逆も可能です。
+代わりの方法として、`run` または `tools` のいずれかを引数としてコマンドに渡すこともできます。そうすると、そのコンテナーが開始され、シェルはそのコンテナーに開かれます。 同様に、`container-name` パラメーターを使用して、シェルを開くコンテナーの名前を渡すことができます。 ただし、このフラグは、実行中のコンテナーがない場合のために予約されています。`run` 引数および `tools` 引数のほうが柔軟性が高く、いずれかのコンテナーが実行中の場合、コンテナーの切り替えが可能です。 例えば、ツール・コンテナーが実行中の場合に `ibmcloud dev shell run` を実行すると、`tools` コンテナーは停止し、`run` コンテナーが開始されます。その逆も可能です。
 
 `shell` コマンドを実行したときにターゲットの `run` コンテナーまたは `tools` コンテナーがまだ実行されていない場合、そこでターゲット・コンテナーが開始されます。 しかし、Dockerfile 内のデフォルトの `Cmd` または `Entrypoint` はオーバーライドされ、サーバー・プロセスが開始される代わりに、直接シェルで開始されます。 これで、`run` コンテナーまたは `tools` コンテナーを開始でき、任意のコマンドまたはカスタム・コマンドを独自に使用してサーバーを手動で開始できるようになります。
 
@@ -458,7 +437,7 @@ ibmcloud dev shell
 
 フラグの先にさらに引数を追加してコマンドに渡した場合、それらの引数はすべて、シェルが開かれたときに実行するコマンドとして解析されます。 コマンドを提供した場合、コンテナー内のシェルは、コマンドの実行をもって終了し、ユーザーの端末に戻ります。
 
-例えば、&trade; `ibmcloud dev shell tools ls` と呼び出すことにより、ツール・コンテナー・シェル内で Linux `ls` コマンドを実行できます。 また、引数を引用符で囲むことにより、シェル・コマンド実行に渡す追加のフラグを指定することもできます。例えば、`ibmcloud dev shell "ls -la"` のようにできます。
+例えば、&trade; `ibmcloud dev shell tools ls` と呼び出すことにより、ツール・コンテナー・シェル内で Linux `ls` コマンドを実行できます。 また、引数を引用符で囲むことにより、シェル・コマンド実行に渡すフラグを指定することもできます。例えば、`ibmcloud dev shell "ls -la"` のようにできます。
 
 ### shell コマンド・パラメーター
 {: #shell-parameters}
@@ -508,7 +487,7 @@ ibmcloud dev stop
 ### stop コマンド・パラメーター
 {: #stop-parameters}
 
-`stop` コマンドでは、以下のパラメーターが使用されます。 その他のコマンドと共有される[追加のパラメーター](#command-parameters)もあります。
+`stop` コマンドでは、以下のパラメーターが使用されます。 その他のコマンドと共有される[パラメーター](#command-parameters)もあります。
 
 #### `container-name-run`
 {: #container-name-run}
@@ -544,7 +523,7 @@ ibmcloud dev test
 ### test コマンド・パラメーター
 {: #test-parameters}
 
-以下のパラメーターは、`test` コマンド専用です。 その他のコマンドと共有される[追加のパラメーター](#command-parameters)もあります。
+以下のパラメーターは、`test` コマンド専用です。 その他のコマンドと共有される[パラメーター](#command-parameters)もあります。
 
 #### `test-cmd`
 {: #test-cmd}
@@ -559,7 +538,7 @@ ibmcloud dev test
 
 Cloud Foundry にデプロイされたアプリの場合、URL は、アプリのホスト名とドメインから構成されます。
 
-Kubernetes にデプロイされたアプリの場合、URL は、デプロイ先のノードの IP アドレスとパブリック・ポートから構成されます。 コマンドが、アプリのデプロイ先が Kubernetes であると判断した場合、CLI ツールによって確認を求めるプロンプトが出されます。 アプリのデプロイ先が Kubernetes ではなかったことを指定すると、Cloud Foundry URL が表示されます。 Kubernetes にデプロイされたアプリの URL がコマンドによって表示されるようにする場合は、`cli-config.yml` に `chart-path` のエントリーが含まれていることを確認するか、[ここ](#chart-path)に示すように、コマンド・ラインからそのエントリーを指定してください。
+Kubernetes にデプロイされたアプリの場合、URL は、デプロイ先のノードの IP アドレスとパブリック・ポートから構成されます。コマンドが、アプリのデプロイ先が Kubernetes であると判断した場合、CLI ツールによって確認を求めるプロンプトが出されます。 アプリのデプロイ先が Kubernetes ではなかったことを指定すると、Cloud Foundry URL が表示されます。 Kubernetes にデプロイされたアプリの URL がコマンドによって表示されるようにする場合は、`cli-config.yml` に `chart-path` のエントリーが含まれていることを確認するか、[ここ](#chart-path)に示すように、コマンド・ラインからそのエントリーを指定してください。
 
 以下のコマンドを実行して、アプリの URL を表示します。
 ```

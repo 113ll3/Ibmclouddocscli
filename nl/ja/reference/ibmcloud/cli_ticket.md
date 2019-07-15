@@ -64,9 +64,9 @@ ibmcloud sl ticket create [OPTIONS]
 <dt>--body</dt>
 <dd>チケット本体。</dd>
 <dt>--priority</dt>
-<dd>1 (重大) から 4 (最小の影響) までの、チケットの優先順位 [1|2|3|4]。アドバンスト・サポートとプレミアム・サポートの場合に限り設定できます。https://www.ibm.com/cloud/support を参照してください。</dd>
+<dd>1 (重大) から 4 (最小の影響) までの、チケットの優先順位 [1|2|3|4]。 アドバンスト・サポートとプレミアム・サポートの場合に限り設定できます。 https://www.ibm.com/cloud/support を参照してください。</dd>
 <dt>--attachment-type</dt>
-<dd>接続、ハードウェア、または仮想のタイプを指定します。デフォルトはハードウェアです。</dd>
+<dd>接続、ハードウェア、または仮想のタイプを指定します。 デフォルトはハードウェアです。</dd>
 </dl>
 
 ## ibmcloud sl ticket detach 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
 
@@ -39,8 +39,7 @@ subcollection: cloud-cli
   ```
   {: codeblock}
 
-  您必須起始設定具有 **bluemixRegion** 參數的 `BMSClient`。在起始設定程式中，**bluemixRegion** 值指定您要使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
-
+  您必須起始設定具有 `bluemixRegion` 參數的 `BMSClient`。在起始設定程式中，`bluemixRegion` 值指定您要使用的 {{site.data.keyword.cloud_notm}} 部署，例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
 
 ## 起始設定 iOS 應用程式
 {: #init-BMSClient-ios}
@@ -93,7 +92,7 @@ subcollection: cloud-cli
   ```
   {: codeblock}
 
-  您必須起始設定具有 **bluemixRegion** 參數的 `BMSClient`。在起始設定程式中，**bluemixRegion** 值指定您要使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如，`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+  您必須起始設定具有 **bluemixRegion** 參數的 `BMSClient`。在起始設定程式中，**bluemixRegion** 值指定您要使用的 {{site.data.keyword.cloud_notm}} 部署，例如，`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
 
 ## 起始設定 Cordova 應用程式
 {: #init-BMSClient-cordova}
@@ -112,7 +111,7 @@ subcollection: cloud-cli
   ```
   {: codeblock}
 
-  您必須起始設定具有 **bluemixRegion** 參數的 `BMSClient`。在起始設定程式中，**bluemixRegion** 值指定您要使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
+  您必須起始設定具有 **bluemixRegion** 參數的 `BMSClient`。在起始設定程式中，**bluemixRegion** 值指定您要使用的 {{site.data.keyword.cloud_notm}} 部署，例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
 
 ## 相關鏈結
 {: #BMSClient-rellinks notoc}

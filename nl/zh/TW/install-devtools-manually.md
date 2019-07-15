@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # 手動安裝 {{site.data.keyword.cloud_notm}} Developer Tools CLI 外掛程式
 {: #install-devtools-manually}
 
-如果您希望以更精細控制的方式來安裝元件，則可以手動安裝 {{site.data.keyword.cloud}} Developer Tools 指令行介面 (CLI) 外掛程式。否則，會使用[平台安裝程式](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt)為大部分使用者自動安裝所有必要條件。
+如果您希望以更精細控制的方式來安裝元件，則可以手動安裝 {{site.data.keyword.cloud}} Developer Tools 指令行介面 (CLI) 外掛程式。否則，會使用[平台安裝程式](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt)為大部分使用者自動安裝所有必要條件。
 {: shortdesc}
 
 ## 開始之前
@@ -70,6 +70,18 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/wi
 
 使用 Kubernetes 指令行工具來執行指令的字首是 `kubectl`。如需相關資訊，請參閱[設定 CLI 及 API](/docs/containers?topic=containers-cs_cli_install#cs_cli_install)。
 
+## 安裝 {{site.data.keyword.cos_full_notm}} CLI 外掛程式
+
+{{site.data.keyword.cos_full_notm}} 外掛程式會以 API 封套延伸 {{site.data.keyword.cloud_notm}} 指令行 (CLI)，以便使用 Object Storage 資源。
+
+* 若要安裝 {{site.data.keyword.cos_full_notm}} 外掛程式，請執行下列指令：
+  ```
+  ibmcloud plugin install cloud-object-storage
+  ```
+  {: codeblock}
+
+如需相關資訊，請參閱 [{{site.data.keyword.cos_full_notm}} 指令參考手冊](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli)。
+
 ## 安裝 {{site.data.keyword.registrylong_notm}} CLI 外掛程式
 {: #idt-install-container-registry-cli-plugin}
 
@@ -81,7 +93,7 @@ ibmcloud plugin install container-registry
 ```
   {: codeblock}
 
-如需相關資訊，請參閱 [{{site.data.keyword.registrylong}} 指令參考手冊](/docs/services/Registry?topic=registry-registry_cli_reference)。
+如需相關資訊，請參閱 [{{site.data.keyword.registrylong}} 指令參考手冊](/docs/services/Registry?topic=container-registry-cli-plugin-containerregcli)。
 
 ## 安裝 {{site.data.keyword.containerlong_notm}} CLI 外掛程式
 {: #idt-install-kubernetes-cli-plugin}
@@ -121,17 +133,5 @@ ibmcloud plugin install cloud-functions
 ```
 {: codeblock}
 
-如需相關資訊，請參閱[設定 {{site.data.keyword.openwhisk_short}} CLI 外掛程式](/docs/openwhisk?topic=cloud-functions-cloudfunctions_cli#cloudfunctions_cli)。
+如需相關資訊，請參閱[安裝 {{site.data.keyword.openwhisk_short}} CLI 外掛程式](/docs/openwhisk?topic=cloud-functions-cli_install)。
 
-## 安裝 SDK 產生器 CLI 外掛程式
-{: #idt-install-sdk-gen}
-
-作為 {{site.data.keyword.cloud_notm}} 開發人員，您可以使用外掛程式，從遵循 [OpenAPI 規格](https://www.openapis.org/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖") 的 REST API 定義來產生 SDK。隨著 REST API 定義逐步發展，您可以使用外掛程式，只重新產生 SDK，而不必重新產生整個專案。
-
-若要安裝「SDK 產生器 CLI」外掛程式，請執行下列指令：
-```
-ibmcloud plugin install sdk-gen
-	```
-{: codeblock}
-
-如需相關資訊，請參閱 [SDK 產生器](/docs/cli/sdk?topic=cloud-cli-sdk-cli#sdk-cli)。

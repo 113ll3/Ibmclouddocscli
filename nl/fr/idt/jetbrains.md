@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -18,17 +18,15 @@ subcollection: cloud-cli
 # IBM Cloud Developer Tools pour interfaces IDE JetBrains
 {: #ibm-dev-tools-for-jetbrains}
 
-L'extension {{site.data.keyword.cloud}} Developer Tools pour les interfaces IDE JetBrains, comprenant notamment `IntelliJ`, `WebStorm`, `Android Studio`, offre de nouvelles entrées de menu vous permettant d'accéder directement aux commandes de l'interface CLI {{site.data.keyword.dev_cli_notm}} depuis l'interface IDE. Vous pouvez accéder rapidement à un sous-ensemble de commandes `ibmcloud dev` pour les flux de travail Docker et Cloud Foundry, incluant notamment le déploiement d'application, le démarrage/l'arrêt/le redémarrage d'applications sur {{site.data.keyword.cloud_notm}}, la visualisation de journaux d'applications distants, etc.
-Le tout sans avoir à quitter le contexte de l'éditeur.
+L'extension {{site.data.keyword.cloud}} Developer Tools pour les interfaces IDE JetBrains, comprenant notamment `IntelliJ`, `WebStorm`, `Android Studio`, offre de nouvelles entrées de menu vous permettant d'accéder directement aux commandes de l'interface CLI {{site.data.keyword.dev_cli_notm}} depuis l'interface IDE. Vous pouvez accéder rapidement à un sous-ensemble de commandes `ibmcloud dev` pour les flux de travail Docker et Cloud Foundry, incluant notamment le déploiement d'application, le démarrage/l'arrêt/le redémarrage d'applications sur {{site.data.keyword.cloud_notm}}, la visualisation de journaux d'applications distants, etc. Le tout sans avoir à quitter le contexte de l'éditeur.
 {: shortdesc}
 
-Exemple de menu pour ![Capture d'écran d'IBM Cloud Developer Tools s'exécutant dans l'environnement IDE WebStorm.](jetbrains.png "{{site.data.keyword.cloud_notm}} Developer Tools s'exécutant dans l'environnement IDE WebStorm")
-
+![Capture d'écran des outils IBM Cloud Developer Tools s'exécutant dans l'environnement de développement intégré WebStorm.](../images/jetbrains.png "{{site.data.keyword.cloud_notm}} - exemple de menu d'outils de développement s'exécutant dans l'interface IDE WebStorm")
 
 ## Dépendances
 {: #jetbrains-dependencies}
 
-Pour pouvoir utiliser l'extension {{site.data.keyword.cloud_notm}} Developer Tools pour les interfaces IDE JetBrains, vous devez installer l'interface CLI [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) sur votre système.
+Pour pouvoir utiliser l'extension {{site.data.keyword.cloud_notm}} Developer Tools pour des interfaces IDE basées JetBrains, vous devez installer l'[interface CLI {{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-getting-started) sur votre système.
 
 ## Installation
 {: #jetbrains-installation}

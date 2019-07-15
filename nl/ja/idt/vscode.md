@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -21,12 +21,12 @@ subcollection: cloud-cli
 IBM Cloud Developer Tools の Visual Studio Code 用拡張機能を使用すると、Visual Studio Code エディターのコマンド・パレット内から直接 IBM Developer CLI の機能にアクセスすることができます。 アプリのデプロイメント、{{site.data.keyword.cloud}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と Cloud Foundry の両方のワークフローで、エディターのコンテキストを一切離れることなく、`ibmcloud dev` コマンドのサブセットに素早くアクセスすることができます。
 {:shortdesc}
 
-![IBM Developer Tools の拡張機能ダウンロード画面の画面キャプチャー。](vscode.png "Visual Studio Code 内の拡張機能ダウンロード画面")
+![IBM Developer Tools 拡張ダウンロード画面の画面キャプチャー。](../images/vscode.png "Visual Studio Code 内の拡張ダウンロード画面")
 
 ## 従属関係
 {: #vscode-dependencies}
 
-IBM Cloud Developer Tools の Visual Studio Code 用拡張機能を使用するには、[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) および {{site.data.keyword.cloud_notm}} CLI プラグインがシステムにインストールされている必要があります。
+IBM Cloud Developer Tools の Visual Studio Code 用拡張機能を使用するには、[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) および {{site.data.keyword.cloud_notm}} CLI プラグインがシステムにインストールされている必要があります。
 
 ## インストール
 {: #vscode-installation}

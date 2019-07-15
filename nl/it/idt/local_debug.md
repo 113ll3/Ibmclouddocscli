@@ -17,28 +17,28 @@ subcollection: cloud-cli
 {:pre: .pre}
 {:note: .note}
 
-# Debug dell'applicazione locale per la CLI {{site.data.keyword.dev_cli_notm}} 
+# Debug dell'applicazione locale per la CLI {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
 
 Esistono degli strumenti per aiutarti ad eseguire il debug della tua applicazione in Java&trade; e Node.js in {{site.data.keyword.cloud_notm}}.
 
-## Debug dell'applicazione Java 
+## Debug dell'applicazione Java
 {: #java}
 
-Procedura per abilitare lo strumento di debug per un'applicazione Java&trade;: 
+Procedura per abilitare lo strumento di debug per un'applicazione Java&trade;:
 
-1. Dalla directory root del tuo progetto dell'applicazione esegui il seguente comando: 
+1. Dalla directory root del tuo progetto dell'applicazione esegui il seguente comando:
 
   ```
   ibmcloud dev debug
   ```
   {: codeblock}
 
-2. Collegamento del programma di debug alla tua applicazione: 
+2. Collegamento del programma di debug alla tua applicazione:
 
 	* Eclipse
       1. Importa il progetto **Existing maven project** in Eclipse.
-      2. Crea una configurazione di debug dell'[applicazione remota Java&trade; ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno"). 
+      2. Crea una configurazione di debug dell'[applicazione remota Java&trade; ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
          1. Immetti l'indirizzo IP o `localhost:<port>`  
          2. Immetti `7777` per il numero di porta.
          3. Specifica il nome del progetto che hai importato.
@@ -53,18 +53,18 @@ Procedura per abilitare lo strumento di debug per un'applicazione Java&trade;:
 	* [VSCode ](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 	* Riga di comando JDK: `jdb -attach <host:port>`
 
-## Debug dell'applicazione Node.js 
+## Debug dell'applicazione Node.js
 {: #idt-node-debug}
 
-Procedura per abilitare lo strumento di debug per un'applicazione Node.js: 
+Procedura per abilitare lo strumento di debug per un'applicazione Node.js:
 
-1. Dalla directory root del tuo progetto dell'applicazione, esegui il seguente comando: 
+1. Dalla directory root del tuo progetto dell'applicazione, esegui il seguente comando:
   ```
   ibmcloud dev debug
   ```
   {: codeblock}
 
-2. Collegamento del programma di debug alla tua applicazione: 
+2. Collegamento del programma di debug alla tua applicazione:
 	* [VSCode ](https://blog.docker.com/2016/07/live-debugging-docker/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 	* [WebStorm ](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 

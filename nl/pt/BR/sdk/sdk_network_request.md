@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-03"
 
 keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
@@ -81,21 +81,18 @@ Para obter exemplos de uso completos, consulte no `BMSCore` GitHub [LEIA-ME](htt
 	{: #ios-swift22 notoc}
 
 	```Swift
-	let customResourceURL = "<your resource URL>"
-	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>" 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
   if error == nil {
-			print ("Response: \(response?.responseText), no error")
-		} else {
-			print ("Error: \(error)")
-		}
-	}
-	request.send(completionHandler: callBack)
+			print ("Response: \(response?.responseText), no error") 		} else {
+			print ("Error: \(error)") 		}
+	} 	request.send(completionHandler: callBack)
 	```
 	{: codeblock}
 
-A classe `Request` é uma maneira simples de fazer uma solicitação de HTTP e de obter a resposta após a solicitação ser concluída. Se deseja mais flexibilidade e controle do que é possível obter com a classe `Request`, a classe `BMSURLSession` pode ser usada. Alguns recursos da classe `BMSURLSession` incluem monitoramento do progresso de uploads e pausa ou cancelamento de solicitações. Para obter as respostas, é possível escolher manipuladores de conclusão ou delegados.
+A classe `Request` é uma maneira simples de fazer uma solicitação de HTTP e
+de obter a resposta após a solicitação ser concluída. Se deseja mais flexibilidade e controle do que é possível obter com a classe `Request`, a classe `BMSURLSession` pode ser usada. Alguns recursos da classe `BMSURLSession` incluem monitoramento do progresso de uploads e pausa ou cancelamento de solicitações. Para obter as respostas, é possível selecionar manipuladores de conclusão ou delegados.
 
 A classe `BMSURLSession` está disponível somente para iOS.
 

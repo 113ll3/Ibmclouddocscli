@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # {{site.data.keyword.cloud_notm}} Developer Tools CLI プラグインの手動インストール
 {: #install-devtools-manually}
 
-コンポーネントのインストールを細かく制御したい場合は、{{site.data.keyword.cloud}} 開発者用ツールのコマンド・ライン・インターフェース (CLI) プラグインを手動でインストールできます。それ以外の場合は、ほとんどのユーザー向けにすべての前提条件が[プラットフォーム・インストーラー](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt)を使用して自動的にインストールされます。
+コンポーネントのインストールを細かく制御したい場合は、{{site.data.keyword.cloud}} 開発者用ツールのコマンド・ライン・インターフェース (CLI) プラグインを手動でインストールできます。 それ以外の場合は、ほとんどのユーザー向けにすべての前提条件が[プラットフォーム・インストーラー](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt)を使用して自動的にインストールされます。
 {: shortdesc}
 
 ## 始める前に
@@ -48,9 +48,9 @@ ibmcloud plugin install dev
 ## Kubernetes コマンド・ライン・ツールのインストール
 {: #idt-install-kube}
 
-Kubernetes ダッシュボードのローカル・バージョンを表示したり、アプリをクラスター内にデプロイしたりするには、ご使用のプラットフォーム用の [Kubernetes コマンド・ライン・ツール](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") をインストールします。
+Kubernetes ダッシュボードのローカル・バージョンを表示したり、アプリをクラスター内にデプロイしたりするには、ご使用のプラットフォーム用の [Kubernetes コマンド・ライン・ツール](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![外部リンクのアイコン](../icons/launch-glyph.svg "外部リンクのアイコン") をインストールします。
 
-* MacOS:
+* Mac:
   ```
   curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
   ```
@@ -68,14 +68,24 @@ Kubernetes ダッシュボードのローカル・バージョンを表示した
   ```
   {: codeblock}
 
-Kubernetes コマンド・ライン・ツールを使用してコマンドを実行するための接頭部は、`kubectl` です。
-詳しくは、[CLI および API のセットアップ (Setting up the CLI and API)](/docs/containers?topic=containers-cs_cli_install#cs_cli_install) を参照してください。
+Kubernetes コマンド・ライン・ツールを使用してコマンドを実行するための接頭部は、`kubectl` です。 詳しくは、[CLI および API のセットアップ (Setting up the CLI and API)](/docs/containers?topic=containers-cs_cli_install#cs_cli_install) を参照してください。
+
+## {{site.data.keyword.cos_full_notm}} CLI プラグインのインストール
+
+{{site.data.keyword.cos_full_notm}} プラグインは、Object Storage リソースを処理するための API ラッパーによって、{{site.data.keyword.cloud_notm}} コマンド・ライン・インターフェース (CLI) を拡張します。
+
+* {{site.data.keyword.cos_full_notm}} プラグインをインストールするため、以下のコマンドを実行します。
+  ```
+  ibmcloud plugin install cloud-object-storage
+  ```
+  {: codeblock}
+
+詳しくは、[{{site.data.keyword.cos_full_notm}} コマンド・リファレンス](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli)を参照してください。
 
 ## {{site.data.keyword.registrylong_notm}} CLI プラグインのインストール
 {: #idt-install-container-registry-cli-plugin}
 
-`container-registry` CLI プラグインを使用すると、IBM によってホストおよび管理されている専用レジストリー内に、Docker イメージを保管したり、{{site.data.keyword.cloud_notm}} アカウント内のすべてのユーザーと Docker イメージを共有したりできる、独自のイメージ名前空間をセットアップすることができます。
-
+`container-registry` CLI プラグインを使用して、IBM によってホストおよび管理されている専用レジストリー内に独自のイメージ名前空間をセットアップすることができます。 その名前空間で、Docker イメージを保管したり、{{site.data.keyword.cloud_notm}} アカウント内のすべてのユーザーと Docker イメージを共有したりできます。
 
 * {{site.data.keyword.registrylong}} プラグインをインストールするため、以下のコマンドを実行します。
   ```
@@ -83,7 +93,7 @@ Kubernetes コマンド・ライン・ツールを使用してコマンドを実
   ```
   {: codeblock}
 
-詳しくは、[{{site.data.keyword.registrylong}} コマンド・リファレンス](/docs/services/Registry?topic=registry-registry_cli_reference)を参照してください。
+詳しくは、[{{site.data.keyword.registrylong}} コマンド・リファレンス](/docs/services/Registry?topic=container-registry-cli-plugin-containerregcli)を参照してください。
 
 ## {{site.data.keyword.containerlong_notm}} CLI プラグインのインストール
 {: #idt-install-kubernetes-cli-plugin}
@@ -99,12 +109,11 @@ Kubernetes コマンド・ライン・ツールを使用してコマンドを実
 詳しくは、[{{site.data.keyword.registryshort_notm}} コマンド・リファレンス](/docs/containers-cli-plugin?topic=containers-cli-plugin-cs_cli_reference)を参照してください。
 
 ## Helm のインストール
-
 {: #idt-install-helm}
 
 Kubernetes ベースのパッケージ・マネージャーである [Helm](https://helm.sh/docs/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") をインストールします。
 
-* MacOS および Linux&trade; ユーザーは、以下のコマンドを実行します。
+* Mac および Linux&trade; のユーザーは、以下のコマンドを実行します。
   ```
   export DESIRED_VERSION=v2.7.2
 curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
@@ -124,17 +133,5 @@ ibmcloud plugin install cloud-functions
 ```
 {: codeblock}
 
-詳しくは、[ {{site.data.keyword.openwhisk_short}} CLI プラグインのセットアップ (Setting up the OpenWhisk CLI plug-in) ](/docs/openwhisk?topic=cloud-functions-cloudfunctions_cli#cloudfunctions_cli)を参照してください。
+詳しくは、[{{site.data.keyword.openwhisk_short}} CLI プラグインのインストール](/docs/openwhisk?topic=cloud-functions-cli_install)を参照してください。
 
-## SDK Generator CLI プラグインのインストール
-{: #idt-install-sdk-gen}
-
-{{site.data.keyword.cloud_notm}} の開発者は、このプラグインを使用して [Open API 仕様 ](https://www.openapis.org/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") 準拠の REST API 定義から SDK を生成することができます。 REST API 定義を変更する際、このプラグインを使用することで、プロジェクト全体を再生成する代わりに SDK のみを再生成することができます。
-
-SDK ジェネレーター CLI プラグインをインストールするため、以下のコマンドを実行します。
-```
-ibmcloud plugin install sdk-gen
-```
-{: codeblock}
-
-詳しくは、[SDK ジェネレーター](/docs/cli/sdk?topic=cloud-cli-sdk-cli#sdk-cli)を参照してください。

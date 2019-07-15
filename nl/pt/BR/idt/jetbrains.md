@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -22,13 +22,12 @@ A extensão de ferramentas do desenvolvedor do {{site.data.keyword.cloud}} para 
 do {{site.data.keyword.dev_cli_notm}} dentro do IDE. É possível acessar rapidamente um subconjunto de comandos `ibmcloud dev` para os fluxos de trabalho do Docker e do Cloud Foundry, incluindo implementação do aplicativo, início/parada/reinício de apps no {{site.data.keyword.cloud_notm}}, visualização de logs do app remoto e muito mais. Todos sem a necessidade de sair do contexto do editor.
 {: shortdesc}
 
-Exemplo de menu de ferramentas do desenvolvedor do ![Captura de tela do IBM Cloud Developer Tools em execução no WebStorm IDE.](jetbrains.png "{{site.data.keyword.cloud_notm}} em execução no WebStorm IDE")
-
+![Captura de tela do IBM Cloud Developer Tools em execução no WebStorm IDE.](../images/jetbrains.png "Exemplo do menu de ferramentas do desenvolvedor do {{site.data.keyword.cloud_notm}} em execução no WebStorm IDE")
 
 ## Dependências
 {: #jetbrains-dependencies}
 
-Para usar a extensão de ferramenta do desenvolvedor do {{site.data.keyword.cloud_notm}} para IDEs baseados em JetBrains, é necessária a [CLI do {{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) instalada em seu sistema.
+Para usar a extensão de ferramentas do desenvolvedor do {{site.data.keyword.cloud_notm}} para IDEs baseados no JetBrains, você precisa da [CLI do {{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-getting-started) instalada em seu sistema.
 
 ## Instalação
 {: #jetbrains-installation}

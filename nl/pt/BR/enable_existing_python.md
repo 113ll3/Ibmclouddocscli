@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -32,7 +32,7 @@ Ibmcloud dev enable
 {: codeblock}
 
 * Quando for solicitado que você verifique a estrutura detectada para o projeto, **Python - Flask** ou **Python - Django**, responda `y`. 
-* Então, será solicitado: **Conectar a um app IBM Cloud**. Selecione as opções **Gerar ativos, criar um novo app do IBM Cloud e conectar-se a ele** ou **Gerar ativos sem se conectar a um app do IBM Cloud** para seu app.
+* Então, será solicitado: **Conectar a um app IBM Cloud**. Selecione as opções **Gerar ativos, crir um novo app IBM Cloud e conectar-se a ele** ou **Gerar ativos sem conectar-se a um app IBM Cloud** para conectar seu app.
 * O comando `enable` também pode criar serviços e ligá-los a seu app. Para esse exemplo básico, responda `n`.
 
 Consulte a seguinte saída de amostra:
@@ -124,7 +124,7 @@ ibmcloud dev deploy
 ## O que fazer se seu app ativado não for construído nem implementado?
 {: #build-failure-python}
 
-Nem todos os apps são ativados com êxito pelo comando `enable`. Por exemplo, o erro a seguir pode ocorrer quando o nome do projeto é diferente do nome de diretório que contém os arquivos `wsgi.py` e `settings.py`:
+Nem todos os apps são ativados com êxito pelo comando `enable`. Por exemplo, o erro a seguir poderá ocorrer quando o nome do projeto for diferente do nome de diretório que contém os arquivos `wsgi.py` e `settings.py`:
 ```
 ImportError: No module named <projectname>.wsgi
 ```

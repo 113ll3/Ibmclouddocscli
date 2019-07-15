@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-06-21"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
@@ -31,29 +31,29 @@ subcollection: cloud-cli
 ## {{site.data.keyword.cloud_notm}} CLI リポジトリーからのプラグインのインストール
 {: #install-from-repo}
 
-### ステップ 1: プラグインの検索
-{: #step1-search-plugin}
+### プラグインの検索
+{: #cli-search-plugin}
 
-1. リポジトリーでプラグインを探すには、`ibmcloud plugin repo-plugins -r REPO_NAME` コマンドを使用します。
-2. {{site.data.keyword.cloud_notm}} CLI には、「IBM Cloud」という名前の公式リポジトリーがあります。以下の例に示すように、この公式プラグインを検索できます。
+リポジトリーでプラグインを探すには、`ibmcloud plugin repo-plugins -r REPO_NAME` コマンドを使用します。
+
+{{site.data.keyword.cloud_notm}} CLI には、「IBM Cloud」という名前の公式プラグイン・リポジトリーがあります。これは、以下の例のように検索することができます。
 ```
 ibmcloud plugin repo-plugins -r "IBM Cloud"
 ```
 {: codeblock}
 
 ```
-状況             名前                                   バージョン                       説明
-更新が使用可能   container-service/kubernetes-service   0.2.99, 0.2.95, 0.2.80...      Kubernetes クラスター管理用の IBM Cloud Kubernetes サービス (IBM Cloud Kubernetes Service for management of Kubernetes clusters)
-更新が使用可能   cloud-functions                        1.0.30, 1.0.29, 1.0.28...      IBM Cloud Functions 用の IBM Cloud CLI プラグイン (IBM Cloud CLI plug-in for IBM Cloud Functions)
+Status             Name                                        Versions                       Description   
+Update Available   container-service/kubernetes-service        0.3.49, 0.3.47, 0.3.34...      IBM Cloud Kubernetes Service for management of Kubernetes clusters   
+Update Available   cloud-functions                             1.0.32, 1.0.30, 1.0.29...      Manage Cloud Functions 
 ...
 ```
 {: screen}
 
-### ステップ 2: プラグインのインストール
-{: step2-install-plugin}
+### プラグインのインストール
+{: #cli-install-plugin}
 
 プラグインをインストールするには、`ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` コマンドを使用します。 例えば、公式 IBM プラグイン・リポジトリー「IBM Cloud」からプラグインをインストールするには、次のコマンドを使用します。
-
 ```
 ibmcloud plugin install auto-scaling
 ```
@@ -68,7 +68,7 @@ ibmcloud plugin install auto-scaling
 バイナリーをインストールしています...
 OK
 プラグイン 'auto-scaling 0.2.7' は
-/Users/username/.bluemix/plugins/auto-scaling に正常にインストールされました。'ibmcloud plugin show auto-scaling' を使用して詳細を表示してください。
+/Users/username/.bluemix/plugins/auto-scaling に正常にインストールされました。 'ibmcloud plugin show auto-scaling' を使用して詳細を表示してください。
 ```
 {: screen}
 
@@ -76,7 +76,6 @@ OK
 {: #install-plugin-locally}
 
 ローカル・マシンにプラグイン・バイナリーをインストールするには、`ibmcloud plugin install LOCAL_FILE_NAME` コマンドを使用します。 以下に例を示します。
-
 ```
 ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.7
 ```
@@ -86,13 +85,13 @@ ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.7
 プラグイン './auto-scaling-darwin-amd64-0.2.7' をインストールしています...
 OK
 プラグイン 'auto-scaling 0.2.7' は
-/Users/username/.bluemix/plugins/auto-scaling に正常にインストールされました。'ibmcloud plugin show auto-scaling' を使用して詳細を表示してください。
+/Users/username/.bluemix/plugins/auto-scaling に正常にインストールされました。 'ibmcloud plugin show auto-scaling' を使用して詳細を表示してください。
 $
 ```
 {: screen}
 
 ## Web URL からのプラグインのインストール
-{: install-plugin-from-url}
+{: #install-plugin-from-url}
 
 Web URL から直接プラグインをインストールするには、`ibmcloud plugin install URL` コマンドを使用します。 以下に例を示します。
 ```
@@ -100,7 +99,6 @@ ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/
 ```
 {: codeblock}
 
-出力:
 ```
 バイナリー・ファイルをダウンロードしようとしています...
  7.28 MiB / 7.28 MiB [===========================================] 100.00% 0s
@@ -108,7 +106,7 @@ ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/
 バイナリーをインストールしています...
 OK
 プラグイン 'auto-scaling 0.2.7' は
-/Users/username/.bluemix/plugins/auto-scaling に正常にインストールされました。'ibmcloud plugin show auto-scaling' を使用して詳細を表示してください。
+/Users/username/.bluemix/plugins/auto-scaling に正常にインストールされました。 'ibmcloud plugin show auto-scaling' を使用して詳細を表示してください。
 $
 ```
 {: screen}

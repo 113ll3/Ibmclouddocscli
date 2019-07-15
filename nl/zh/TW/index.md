@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-19"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -17,8 +17,8 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:note: .note}
 
-# 開始使用 {{site.data.keyword.cloud_notm}} CLI
-{: #ibmcloud-cli}
+# 入門指導教學
+{: #getting-started}
 
 在本指導教學中，您將安裝一組 {{site.data.keyword.cloud}} Developer Tools、驗證安裝，並配置環境。{{site.data.keyword.dev_cli_notm}} 提供指令行方法，以建立、開發及部署雲端應用程式。
 {: shortdesc}
@@ -33,9 +33,9 @@ subcollection: cloud-cli
 * `curl`
 * {{site.data.keyword.dev_cli_notm}} 外掛程式
 * {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} 外掛程式
+* {{site.data.keyword.cos_full_notm}} 外掛程式
 * {{site.data.keyword.registrylong_notm}} 外掛程式
 * {{site.data.keyword.containerlong_notm}} 外掛程式
-* `sdk-gen` 外掛程式
 
 ## 開始之前
 {: #idt-prereq}
@@ -84,7 +84,8 @@ ibmcloud dev help
 ## 步驟 3. 配置環境
 {: #step3-configure-idt-env}
 
-1. 使用 IBM ID 登入 {{site.data.keyword.cloud_notm}}。如果您有多個帳戶，則系統會提示您選取要使用的帳戶。如果您未使用 `-r` 旗標來指定地區，則必須同時選擇地區。
+1. 使用 IBM ID 登入 {{site.data.keyword.cloud_notm}}。如果您有多個帳戶，則系統會提示您選取要使用的帳戶。如果您未使用 `-r` 旗標來指定地區，則必須同時選取地區。
+    
   ```
    ibmcloud login
    ```

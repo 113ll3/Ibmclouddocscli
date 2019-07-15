@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -13,7 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 
@@ -36,9 +36,9 @@ subcollection: cloud-cli
 - {{site.data.keyword.dev_cli_notm}} CLI の [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) コマンドでは、新規アプリを作成できます。
 - {{site.data.keyword.dev_cli_notm}} CLI の [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) コマンドでは、既存のサーバー・サイド・アプリ上でクラウドを素早く使用可能にすることができます。
 
-上記のいずれの作成方法でも、フローはよく似ています。 使用するプロジェクト・タイプ、実装言語、およびアプリ・パターンを選択します。 また、認証やパーシスタンスなど、サービスをアプリに追加することを選択できます。 最後に、アプリに対して DevOps 機能を追加できます。この機能は、ソース制御とチームのコミュニケーションのための完全なツールチェーンを提供します。 さらにアプリの検証、ビルド、および {{site.data.keyword.cloud_notm}} へのデプロイがコミットされるたびにトリガーされるパイプラインも含まれます。
+上記のいずれの作成方法でも、フローはよく似ています。 使用するプロジェクト・タイプ、実装言語、およびアプリ・パターンを選択します。 また、認証やパーシスタンスなど、サービスをアプリに追加することを選択できます。 最後に、アプリの継続的デリバリーを構成することができます。これにより、ソース制御とチームのコミュニケーションのための完全なツールチェーンを利用できるようになります。さらにアプリの検証、ビルド、および {{site.data.keyword.cloud_notm}} へのデプロイがコミットされるたびにトリガーされるパイプラインも含まれます。
 
-![{{site.data.keyword.dev_cli_notm}} CLI を使用する作成フローのサンプル](create_flow.png "{{site.data.keyword.dev_cli_notm}} CLI を使用する作成フローのサンプル")
+![{{site.data.keyword.dev_cli_notm}} CLI を使用する作成フローのサンプル](../images/create_flow.png " {{site.data.keyword.dev_cli_notm}} CLI を使用する作成フローのサンプル")
 
 {{site.data.keyword.dev_cli_notm}} CLI は、密接に連携することで、円滑な開発体験を提供します。 Web コンソールで作成されるプロジェクトには、生成済みのソース・コードをワークステーションにダウンロードしてさらに開発を追加するための**「コードのダウンロード」**ボタンが表示されます。
 
@@ -63,7 +63,7 @@ subcollection: cloud-cli
 {: #ref1}
 
 - ビデオ: [Ubuntu Linux 上での {{site.data.keyword.cloud_notm}} 開発者ツールのインストール&trade;](https://www.youtube.com/watch?v=sr7KjHAKpEs){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
-- ブログ: [Enable existing projects for IBM Cloud with the {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![外部リンクのアイコン](../../icons/launch-glyph.svg "外部リンクのアイコン")
+- ブログ: [Enable existing projects for IBM Cloud with the {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/cloud-archive/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli//){: new_window} ![外部リンクのアイコン](../../icons/launch-glyph.svg "外部リンクのアイコン")
 
 ## コーディング、ビルド、および実行
 {: #code-build-run}
@@ -114,5 +114,5 @@ subcollection: cloud-cli
 ### 関連するブログやビデオ
 {: #ref3}
 
-- ブログ: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
-- ブログ: [Deploying to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
+- ブログ: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
+- ブログ: [Deploying to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/cloud-archive/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")

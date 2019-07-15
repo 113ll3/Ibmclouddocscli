@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -13,7 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 
@@ -36,9 +36,9 @@ Puoi creare un'applicazione in diversi modi.
 - Il comando [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) delle CLI {{site.data.keyword.dev_cli_notm}} permette di creare una nuova applicazione.
 - Il comando [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) delle CLI {{site.data.keyword.dev_cli_notm}} permette di abilitare velocemente il cloud per un'applicazione lato server esistente.
 
-Per ognuno dei metodi di creazione precedenti, il flusso è simile. Seleziona il tipo di progetto, il linguaggio di implementazione e il modello dell'applicazione da utilizzare. Puoi anche scegliere di aggiungere servizi alla tua applicazione, come l'autenticazione o la persistenza. Infine puoi aggiungere la funzionalità DevOps all'applicazione che fornisce una toolchain completa del controllo di origine e le comunicazioni con il team. Inclusa una pipeline che viene attivata ad ogni commit per convalidare, creare e distribuire la tua applicazione a {{site.data.keyword.cloud_notm}}.
+Per ognuno dei metodi di creazione precedenti, il flusso è simile. Seleziona il tipo di progetto, il linguaggio di implementazione e il modello dell'applicazione da utilizzare. Puoi anche scegliere di aggiungere servizi alla tua applicazione, come l'autenticazione o la persistenza. Infine puoi configurare la fornitura continua per l'applicazione che fornisce una toolchain completa del controllo di origine e le comunicazioni con il team. Inclusa una pipeline che viene attivata ad ogni commit per convalidare, creare e distribuire la tua applicazione a {{site.data.keyword.cloud_notm}}.
 
-![Flusso di creazione di esempio che utilizza la CLI {{site.data.keyword.dev_cli_notm}} ](create_flow.png "Flusso di creazione di esempio che utilizza la CLI {{site.data.keyword.dev_cli_notm}} ")
+![Flusso di creazione di esempio che utilizza la CLI {{site.data.keyword.dev_cli_notm}} ](../images/create_flow.png "Flusso di creazione di esempio che utilizza la CLI {{site.data.keyword.dev_cli_notm}} ")
 
 La CLI {{site.data.keyword.dev_cli_notm}} lavora a stretto contatto per fornire un'esperienza ottimale durante lo sviluppo. I progetti creati dalle console web forniscono un pulsante **Download code** per scaricare il codice sorgente generato sulla tua workstation per un ulteriore sviluppo.
 
@@ -63,7 +63,7 @@ I progetti creati o abilitati per l'utilizzo con gli strumenti per gli sviluppat
 {: #ref1}
 
 - Video: [Installazione di {{site.data.keyword.cloud_notm}} Developer Tools su Ubuntu Linux&trade;](https://www.youtube.com/watch?v=sr7KjHAKpEs){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
-- Blog: [Enable existing projects for IBM Cloud with the {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
+- Blog: [Enable existing projects for IBM Cloud with the {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/cloud-archive/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli//){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
 ## Codifica, crea ed esegui
 {: #code-build-run}
@@ -114,5 +114,5 @@ I seguenti comandi CLI consentono di lavorare con il tuo progetto durante il pro
 ### Video e blog di riferimento
 {: #ref3}
 
-- Blog: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
-- Blog: [Deploying to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
+- Blog: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
+- Blog: [Deploying to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/cloud-archive/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")

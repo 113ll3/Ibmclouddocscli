@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -13,7 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 
@@ -36,9 +36,9 @@ subcollection: cloud-cli
 - 앱을 새로 작성하는 {{site.data.keyword.dev_cli_notm}} CLI [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) 명령
 - 기존 서버 측 앱에서 빠르게 클라우드를 사용할 수 있게 해 주는 {{site.data.keyword.dev_cli_notm}} CLI [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 명령
 
-이전 작성 방법의 경우에도 플로우는 유사합니다. 사용할 프로젝트 유형, 구현 언어 및 앱 패턴을 선택합니다. 또한 인증 또는 지속성과 같이 서비스를 앱에 추가하도록 선택할 수 있습니다. 마지막으로 DevOps 기능을 앱에 추가할 수 있으며, 이는 소스 제어 및 팀 커뮤니케이션의 완전한 도구 체인을 제공합니다. {{site.data.keyword.cloud_notm}}에 앱을 유효성 검증, 빌드, 배치하기 위해 각 커미트에서 트리거되는 파이프라인을 포함합니다.
+이전 작성 방법의 경우에도 플로우는 유사합니다. 사용할 프로젝트 유형, 구현 언어 및 앱 패턴을 선택합니다. 또한 인증 또는 지속성과 같이 서비스를 앱에 추가하도록 선택할 수 있습니다. 마지막으로 앱의 지속적 딜리버리를 구성할 수 있으며, 이는 소스 제어 및 팀 커뮤니케이션의 완전한 도구 체인을 제공합니다. {{site.data.keyword.cloud_notm}}에 앱을 유효성 검증, 빌드, 배치하기 위해 각 커미트에서 트리거되는 파이프라인을 포함합니다.
 
-![ {{site.data.keyword.dev_cli_notm}} CLI를 사용하는 샘플 작성 플로우](create_flow.png " {{site.data.keyword.dev_cli_notm}} CLI를 사용하는 샘플 작성 플로우"){: caption="그림 1. {{site.data.keyword.dev_cli_notm}} CLI를 사용하는 샘플 작성 플로우" caption-side="bottom"}
+![ {{site.data.keyword.dev_cli_notm}} CLI를 사용하는 샘플 작성 플로우](../images/create_flow.png " {{site.data.keyword.dev_cli_notm}} CLI를 사용하는 샘플 작성 플로우")
 
 {{site.data.keyword.dev_cli_notm}} CLI는 개발 중에 원활한 경험을 제공하기 위해 긴밀하게 협업합니다. 웹 콘솔에서 작성된 프로젝트는 추가 개발을 위해 워크스테이션에 생성된 소스 코드를 다운로드할 수 있는 **코드 다운로드** 단추를 제공합니다.
 
@@ -63,7 +63,7 @@ subcollection: cloud-cli
 {: #ref1}
 
 - 동영상: [Installing {{site.data.keyword.cloud_notm}} developer tools on Ubuntu Linux&trade;](https://www.youtube.com/watch?v=sr7KjHAKpEs){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
-- 블로그: [Enable existing projects for IBM Cloud with the {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
+- 블로그: [Enable existing projects for IBM Cloud with the {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/cloud-archive/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli//){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
 ## 코딩, 빌드 및 실행
 {: #code-build-run}
@@ -114,5 +114,5 @@ subcollection: cloud-cli
 ### 참조 블로그 및 동영상
 {: #ref3}
 
-- 블로그: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
-- 블로그: [Deploying to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
+- 블로그: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
+- 블로그: [Deploying to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/cloud-archive/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")

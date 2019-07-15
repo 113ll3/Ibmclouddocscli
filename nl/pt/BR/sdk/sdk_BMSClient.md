@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
 
@@ -39,8 +39,7 @@ O `BMSCore` fornece a infraestrutura de HTTP que os outros SDKs do cliente de se
   ```
   {: codeblock}
 
-  Deve-se inicializar o `BMSClient` com o parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação do {{site.data.keyword.Bluemix_notm}} está sendo usada, por exemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` ou `BMSClient.REGION_SYDNEY`.
-
+  Deve-se inicializar o `BMSClient` com o parâmetro `bluemixRegion`. No inicializador, o valor `bluemixRegion` especifica qual implementação do {{site.data.keyword.cloud_notm}} está sendo usada, por exemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` ou `BMSClient.REGION_SYDNEY`.
 
 ## Inicializando seu app iOS
 {: #init-BMSClient-ios}
@@ -94,7 +93,7 @@ O `BMSCore` fornece a infraestrutura de HTTP que os outros SDKs do cliente de se
   ```
   {: codeblock}
 
-  Deve-se inicializar o `BMSClient` com o parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação do {{site.data.keyword.Bluemix_notm}} você está usando, por exemplo, `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.
+  Deve-se inicializar o `BMSClient` com o parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação do {{site.data.keyword.cloud_notm}} você está usando, por exemplo, `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.
 
 ## Inicializando seu app Cordova
 {: #init-BMSClient-cordova}
@@ -113,7 +112,7 @@ O `BMSCore` fornece a infraestrutura de HTTP que os outros SDKs do cliente de se
   ```
   {: codeblock}
 
-  Deve-se inicializar o `BMSClient` com o parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação do {{site.data.keyword.Bluemix_notm}} você está usando, por exemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` ou `BMSClient.REGION_SYDNEY`.
+  Deve-se inicializar o `BMSClient` com o parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação do {{site.data.keyword.cloud_notm}} você está usando, por exemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` ou `BMSClient.REGION_SYDNEY`.
 
 ## Links Relacionados
 {: #BMSClient-rellinks notoc}

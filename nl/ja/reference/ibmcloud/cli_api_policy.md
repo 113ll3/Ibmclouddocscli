@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-06-10"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -27,7 +27,7 @@ subcollection: cloud-cli
 
 すべてのサービス ID をリストします。
 ```
-ibmcloud iam service-ids [--uuid]
+ibmcloud iam service-ids [--uuid] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -36,6 +36,8 @@ ibmcloud iam service-ids [--uuid]
 <dl>
   <dt>--uuid</dt>
   <dd>サービス ID の UUID のみを表示します</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -51,7 +53,7 @@ ibmcloud iam service-ids --uuid
 
 サービス ID の詳細を表示します。
 ```
-ibmcloud iam service-id (NAME|UUID) [--uuid]
+ibmcloud iam service-id (NAME|UUID) [--uuid] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -64,6 +66,8 @@ ibmcloud iam service-id (NAME|UUID) [--uuid]
   <dd>サービスの UUID。NAME と同時に指定することはできません。</dd>
   <dt>--uuid</dt>
   <dd>サービス ID の UUID を表示します</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -85,7 +89,7 @@ ibmcloud iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 
 サービス ID を作成します。
 ```
-ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
+ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -98,6 +102,8 @@ ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
   <dd>サービス ID の説明</dd>
   <dt>--lock</dt>
   <dd>作成時にサービス ID をロックします</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -119,7 +125,7 @@ ibmcloud iam service-id-create sample-test -d 'hello, world!' --lock
 
 サービス ID を更新します。
 ```
-ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
+ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [--output FORMAT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -134,6 +140,8 @@ ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --descript
   <dd>サービスの新しい名前</dd>
   <dt>-d, --description</dt>
   <dd>サービスの新しい説明</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに更新します</dd>
 </dl>
@@ -264,23 +272,29 @@ ibmcloud iam service-id-unlock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ## ibmcloud iam api-keys
 {: #ibmcloud_iam_api_keys}
 
-すべての {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーをリストします。
+すべての {{site.data.keyword.cloud_notm}} プラットフォーム API キーをリストします。
 ```
-ibmcloud iam api-keys
+ibmcloud iam api-keys [--output FORMAT]
 ```
 {: codeblock}
 
 <strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
+</dl>
 
 ## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
 
 新しい {{site.data.keyword.cloud_notm}} プラットフォーム API キーを作成します。
 ```
-ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
+ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock] [--output FORMAT]
 ```
 
-API キーを使用した {{site.data.keyword.cloud_notm}} CLI ログインの使用時には、`control.softlayer.com` 上にある従来の SL API キーを処理しません。API キーを使用した {{site.data.keyword.cloud_notm}} CLI ログインには、[cloud.ibm.com](https://cloud.ibm.com/registration){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") でインフラストラクチャーが管理されている、アップグレード済みの {{site.data.keyword.cloud_notm}} アカウントが必要です。
+API キーを使用した {{site.data.keyword.cloud_notm}} CLI ログインの使用時には、`control.softlayer.com` 上にある従来の SL API キーを処理しません。 API キーを使用した {{site.data.keyword.cloud_notm}} CLI ログインには、[cloud.ibm.com](https://cloud.ibm.com/registration){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") でインフラストラクチャーが管理されている、アップグレード済みの {{site.data.keyword.cloud_notm}} アカウントが必要です。
 {: note}
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -295,6 +309,8 @@ API キーを使用した {{site.data.keyword.cloud_notm}} CLI ログインの�
 <dd>指定されたファイルに API キー情報を保存します。</dd>
 <dt>--lock</dt>
 <dd>作成時に API キーをロックします</dd>
+<dt>--output FORMAT</dt>
+<dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -314,9 +330,9 @@ ibmcloud iam api-key-create test-key --lock
 ## ibmcloud iam api-key-update
 {: #ibmcloud_iam_api_key_update}
 
-{{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを更新します。
+{{site.data.keyword.cloud_notm}} プラットフォーム API キーを更新します。
 ```
-ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
+ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -331,6 +347,8 @@ ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 <dd>API キーの新しい名前</dd>
 <dt>-d <i>DESCRIPTION</i> (オプション)</dt>
 <dd>API キーの新しい説明</dd>
+<dt>--output FORMAT</dt>
+<dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -344,7 +362,7 @@ ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ## ibmcloud api-key-delete
 {: #ibmcloud_iam_api_key_delete}
 
-{{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを削除します。
+{{site.data.keyword.cloud_notm}} プラットフォーム API キーを削除します。
 ```
 ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 ```
@@ -434,7 +452,7 @@ ibmcloud iam api-key-unlock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 
 サービスのすべての API キーをリストします。
 ```
-ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
+ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [--output FORMAT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -445,6 +463,8 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
   <dd>サービス ID の名前。SERVICE_ID_UUID と同時に指定することはできません。</dd>
   <dt>SERVICE_ID_UUID (必須)</dt>
   <dd>サービス ID の UUID。SERVICE_ID_NAME と同時に指定することはできません。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずにサービス API キーを表示します</dd>
 </dl>
@@ -462,7 +482,7 @@ ibmcloud iam service-api-keys sample-service
 
 サービス API キーの詳細をリストします。
 ```
-ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [-f, --force]
+ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [--output FORMAT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -479,6 +499,8 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
   <dd>サービス ID の UUID。SERVICE_ID_NAME と同時に指定することはできません。</dd>
   <dt>--uuid</dt>
   <dd>サービス API キーの UUID を表示します</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずにサービス API キーを表示します</dd>
 </dl>
@@ -496,7 +518,7 @@ ibmcloud iam service-api-key sample-key sample-service
 
 サービス API キーを作成します。
 ```
-ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [-f, --force] [--lock]
+ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [--output FORMAT] [-f, --force] [--lock]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -513,6 +535,8 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dd>API キーの説明</dd>
   <dt>--file</dt>
   <dd>指定されたファイルに API キー情報を保存します。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに作成を強制します</dd>
 </dl>
@@ -530,7 +554,7 @@ ibmcloud iam service-api-key-create sample-key sample-service -f
 
 サービス API キーを更新します。
 ```
-ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
+ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [--output FORMAT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -549,6 +573,8 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
   <dd>サービスAPI キーの新しい名前</dd>
   <dt>-d, --description</dt>
   <dd>サービス API キーの新しい説明</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに更新します</dd>
 </dl>
@@ -660,9 +686,9 @@ ibmcloud iam service-api-key-unlock sample-key sample-service
 ## ibmcloud iam user-policies
 {: #ibmcloud_iam_user_policies}
 
-ユーザー `name@example.com` のポリシーをリストします
+ユーザーのポリシーをリストします
 ```
-ibmcloud iam user-policies name@example.com
+ibmcloud iam user-policies USER_NAME [--output FORMAT]
 ```
 
 <strong>前提条件</strong>:  エンドポイント、ログイン、ターゲットのアカウント
@@ -671,6 +697,8 @@ ibmcloud iam user-policies name@example.com
 <dl>
 <dt>USER_NAME (必須)</dt>
 <dd>ポリシーが属するユーザー名</dd>
+<dt>--output FORMAT</dt>
+<dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -685,7 +713,7 @@ ibmcloud iam user-policies name@example.com
 
 ユーザー・ポリシーの詳細を表示します。
 ```
-ibmcloud iam user-policy USER_NAME POLICY_ID
+ibmcloud iam user-policy USER_NAME POLICY_ID [--output FORMAT]
 ```
 
 <strong>前提条件</strong>:  エンドポイント、ログイン、ターゲットのアカウント
@@ -696,6 +724,8 @@ ibmcloud iam user-policy USER_NAME POLICY_ID
 <dd>ポリシーが属するユーザー名</dd>
 <dt>POLICY_ID (必須)</dt>
 <dd>ポリシーの ID</dd>
+<dt>--output FORMAT</dt>
+<dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -710,7 +740,7 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 
 ユーザー・ポリシーを作成します。
 ```
-ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
 ```
 
 <strong>前提条件</strong>:  エンドポイント、ログイン、ターゲットのアカウント
@@ -737,6 +767,8 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dd>リソース・グループの名前。 `*` はすべてのリソース・グループを表します。 これは、 `--file`、`--resource` および `--resource-group-id` フラグと同時に指定することはできません。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (オプション)</dt>
 <dd>リソース・グループの ID。 `*` はすべてのリソース・グループを表します。 これは、 `--file`、`--resource` および `--resource-group-name` フラグと同時に指定することはできません。</dd>
+<dt>--output FORMAT</dt>
+<dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -776,7 +808,7 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 
 ユーザー・ポリシーを更新します。
 ```
-ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
 ```
 
 <strong>前提条件</strong>:  エンドポイント、ログイン、ターゲットのアカウント
@@ -804,6 +836,8 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dd>リソース・グループの名前。 `*` はすべてのリソース・グループを表します。 これは、 `--file`、`--resource` および `--resource-group-id` フラグと同時に指定することはできません。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (オプション)</dt>
 <dd>リソース・グループの ID。 `*` はすべてのリソース・グループを表します。 これは、 `--file`、`--resource` および `--resource-group-name` フラグと同時に指定することはできません。</dd>
+<dt>--output FORMAT</dt>
+<dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -880,7 +914,7 @@ ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 <dl>
   <dt>SERVICE_ID (必須)</dt>
   <dd>サービス ID の名前または UUID</dd>
-  <dt>--output FORMAT (オプション)</dt>
+  <dt>--output FORMAT</dt>
   <dd>サービス・ポリシーの出力形式を指定します。現在、JSON のみがサポートされています。</dd>
   <dt>-f, --force (オプション)</dt>
   <dd>確認を求めずにサービス・ポリシーを表示します</dd>
@@ -914,7 +948,7 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
   <dd>サービス ID の名前または UUID</dd>
   <dt>POLICY_ID (必須)</dt>
   <dd>サービス・ポリシーの ID<dd>
-  <dt>--output FORMAT (オプション)</dt>
+  <dt>--output FORMAT</dt>
   <dd>サービス・ポリシーの出力形式を指定します。現在、JSON のみがサポートされています。</dd>
   <dt>-f, --force (オプション)</dt>
   <dd>確認を求めずにサービス・ポリシーを表示します</dd>
@@ -937,7 +971,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 
 サービス・ポリシーを作成します。
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -966,6 +1000,8 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dd>リソース・グループの ID。 `*` はすべてのリソース・グループを表します。 このオプションは、`--file` および `--resource-group-name` と同時に指定することはできません。</dd>
   <dt>--account-management (オプション)</dt>
   <dd>すべてのアカウント管理サービスにアクセス権限を付与します</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずにサービス・ポリシーを作成します</dd>
 </dl>
@@ -997,7 +1033,7 @@ ibmcloud iam service-policy-create test --roles Viewer
 
 サービス・ポリシーを更新します。
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1028,6 +1064,8 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dd>リソース・グループの ID。 `*` はすべてのリソース・グループを表します。 このオプションは、`--file` および `--resource-group-name` と同時に指定することはできません。</dd>
   <dt>--account-management (オプション)</dt>
   <dd>すべてのアカウント管理サービスにアクセス権限を付与します</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずにサービス・ポリシーを更新します</dd>
 </dl>
@@ -1091,7 +1129,7 @@ ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac97
 
 現行セッションの OAuth トークンを取得して表示します。
 ```
-ibmcloud iam oauth-tokens
+ibmcloud iam oauth-tokens [--output FORMAT]
 ```
 {: codeblock}
 
@@ -1099,6 +1137,8 @@ ibmcloud iam oauth-tokens
 
 <strong>コマンド・オプション</strong>:
 <dl>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1106,6 +1146,38 @@ ibmcloud iam oauth-tokens
 OAuth トークンを更新して表示します。
 ```
 ibmcloud iam oauth-tokens
+```
+{: codeblock}
+
+## ibmcloud iam roles
+{: #ibmcloud_iam_roles}
+
+プラットフォームおよびサービスの定義済み役割をリストします。
+```
+ibmcloud iam roles [--service SERVICE_NAME] [--output FORMAT]
+```
+{: codeblock}
+
+<strong>前提条件</strong>: ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--service SERVICE_NAME</dt>
+  <dd>サービスの名前、指定されていない場合はプラットフォームの定義済み役割のみをリストします。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
+</dl>
+
+<strong>例</strong>:
+
+プラットフォーム役割をリストします
+```
+ibmcloud iam roles
+```
+
+JSON 形式でサービス `cloudantnosql` の役割をリストします。
+```
+ibmcloud iam roles --service cloudantnosql --output JSON
 ```
 {: codeblock}
 
@@ -1155,6 +1227,8 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>ターゲット・サービス・インスタンス ID。`--target-service-instance-name` と同時に指定することはできません。 指定されない場合、ターゲット・サービスのすべてのインスタンスがアクセスを許可されます。</dd>
   <dt>--target-resource-type</dt>
   <dd>ターゲット・サービスのリソース・タイプ</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 ## ibmcloud iam authorization-policy-delete
@@ -1180,7 +1254,7 @@ ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 
 許可ポリシーの詳細を表示します。
 ```
-ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
+ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: ログイン、ターゲット
@@ -1189,6 +1263,8 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 <dl>
   <dt>AUTHORIZATION_POLICY_ID</dt>
   <dd>表示する許可ポリシーの ID。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 ## ibmcloud iam authorization-policies
@@ -1196,18 +1272,24 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 
 現行アカウントの許可ポリシーをリストします。
 ```
-ibmcloud iam authorization-policies
+ibmcloud iam authorization-policies [--output FORMAT]
 ```
 {: codeblock}
 
 <strong>前提条件</strong>: ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
+</dl>
 
 ## ibmcloud iam access-groups
 {: #ibmcloud_iam_access_groups}
 
 現行アカウントのアクセス・グループをリストします。
 ```
-ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
+ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1218,6 +1300,8 @@ ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
   <dd>ユーザーが所属するアクセス・グループをリストします。 このフラグと '-s' を同時に指定することはできません。</dd>
   <dt>-s</dt>
   <dd>サービス ID が所属するアクセス・グループをリストします。 このフラグと '-u' を同時に指定することはできません。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1233,7 +1317,7 @@ ibmcloud iam access-groups
 
 アクセス・グループの詳細を表示します。
 ```
-ibmcloud iam access-group GROUP_NAME [--id]
+ibmcloud iam access-group GROUP_NAME [--id] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1242,6 +1326,8 @@ ibmcloud iam access-group GROUP_NAME [--id]
 <dl>
   <dt>-id</dt>
   <dd>ID のみを表示します</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1256,7 +1342,7 @@ ibmcloud iam access-group example_group
 
 アクセス・グループを作成します。
 ```
-ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
+ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1265,6 +1351,8 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 <dl>
   <dt>-d, --description</dt>
   <dd>アクセス・グループの説明</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1279,7 +1367,7 @@ ibmcloud iam access-group-create example_group -d "example access group"
 
 アクセス・グループを更新します。
 ```
-ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
+ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [--output FORMAT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1290,6 +1378,8 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
   <dd>新規アクセス・グループ名</dd>
   <dt>-d, --description</dt>
   <dd>新規説明</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに更新を強制します</dd>
 </dl>
@@ -1332,13 +1422,15 @@ ibmcloud iam access-group-delete example_group --force
 
 アクセス・グループ内のユーザーをリストします。
 ```
-ibmcloud iam access-group-users GROUP_NAME
+ibmcloud iam access-group-users GROUP_NAME [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
+<dt>--output FORMAT</dt>
+<dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1418,13 +1510,15 @@ ibmcloud iam access-group-user-purge name@example.com -f
 
 アクセス・グループ内のサービス ID をリストします。
 ```
-ibmcloud iam access-group-service-ids GROUP_NAME
+ibmcloud iam access-group-service-ids GROUP_NAME [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
+<dt>--output FORMAT</dt>
+<dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1505,13 +1599,15 @@ ibmcloud iam access-group-service-id-purge example --force
 
 アクセス・グループのポリシーをリストします。
 ```
-ibmcloud iam access-group-policies GROUP_NAME
+ibmcloud iam access-group-policies GROUP_NAME [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1526,13 +1622,15 @@ ibmcloud iam access-group-policies example_group
 
 アクセス・グループ・ポリシーの詳細を表示します。
 ```
-ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
+ibmcloud iam access-group-policy GROUP_NAME POLICY_ID [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1547,7 +1645,7 @@ ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 
 アクセス・グループ・ポリシーを作成します。
 ```
-ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1572,6 +1670,8 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
   <dd>リソース・グループの名前。 `*` はすべてのリソース・グループを表します。 このオプションは、 `--file` および `--resource-group-id` と同時に指定することはできません。</dd>
   <dt>-resource-group-id</dt>
   <dd>リソース・グループの ID。 `*` はすべてのリソース・グループを表します。 このオプションは、`--file` および `--resource-group-name` と同時に指定することはできません。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1611,7 +1711,7 @@ ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-
 
 アクセス・グループ・ポリシーを更新します。
 ```
-ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1636,6 +1736,8 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
   <dd>リソース・グループの名前。 `*` はすべてのリソース・グループを表します。 このオプションは、 `--file` および `--resource-group-id` と同時に指定することはできません。</dd>
   <dt>-resource-group-id</dt>
   <dd>リソース・グループの ID。 `*` はすべてのリソース・グループを表します。 このオプションは、`--file` および `--resource-group-name` と同時に指定することはできません。</dd>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:

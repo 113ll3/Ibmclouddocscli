@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
 
@@ -39,8 +39,7 @@ subcollection: cloud-cli
   ```
   {: codeblock}
 
-  **bluemixRegion** パラメーターを使用して `BMSClient` を初期化する必要があります。 初期化指定子で、**bluemixRegion** 値は、使用している {{site.data.keyword.Bluemix_notm}} デプロイメント (例えば、`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK`、または `BMSClient.REGION_SYDNEY`) を指定します。
-
+  `bluemixRegion` パラメーターを使用して `BMSClient` を初期化する必要があります。 初期化指定子で、`bluemixRegion` 値は、使用している {{site.data.keyword.cloud_notm}} デプロイメント (例えば、`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK`、または `BMSClient.REGION_SYDNEY`) を指定します。
 
 ## iOS アプリの初期化
 {: #init-BMSClient-ios}
@@ -93,7 +92,7 @@ subcollection: cloud-cli
   ```
   {: codeblock}
 
-  **bluemixRegion** パラメーターを使用して `BMSClient` を初期化する必要があります。 初期化指定子で、**bluemixRegion** 値は、使用している {{site.data.keyword.Bluemix_notm}} デプロイメント (例えば、`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom`、または `BMSClient.Region.sydney`) を指定します。
+  **bluemixRegion** パラメーターを使用して `BMSClient` を初期化する必要があります。 初期化指定子で、**bluemixRegion** 値は、使用している {{site.data.keyword.cloud_notm}} デプロイメント (例えば、`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom`、または `BMSClient.Region.sydney`) を指定します。
 
 ## Cordova アプリの初期化
 {: #init-BMSClient-cordova}
@@ -112,7 +111,7 @@ subcollection: cloud-cli
   ```
   {: codeblock}
 
-  **bluemixRegion** パラメーターを使用して `BMSClient` を初期化する必要があります。 初期化指定子で、**bluemixRegion** 値は、使用している {{site.data.keyword.Bluemix_notm}} デプロイメント (例えば、`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK`、または `BMSClient.REGION_SYDNEY`) を指定します。
+  **bluemixRegion** パラメーターを使用して `BMSClient` を初期化する必要があります。 初期化指定子で、**bluemixRegion** 値は、使用している {{site.data.keyword.cloud_notm}} デプロイメント (例えば、`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK`、または `BMSClient.REGION_SYDNEY`) を指定します。
 
 ## 関連リンク
 {: #BMSClient-rellinks notoc}

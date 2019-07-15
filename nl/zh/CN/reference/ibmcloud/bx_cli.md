@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -61,7 +61,7 @@ ibmcloud help [COMMAND|NAMESPACE]
 
 <dl>
 <dt>COMMAND|NAMESPACE</dt>
-<dd>显示其帮助信息的命令或名称空间。如果未指定，将显示 {{site.data.keyword.Bluemix_notm}} CLI 的一般帮助。可选。</dd>
+<dd>显示其帮助信息的命令或名称空间。如果未指定，将显示 {{site.data.keyword.cloud_notm}} CLI 的一般帮助。可选。</dd>
 </dl>
 
 ### 示例
@@ -233,10 +233,10 @@ ibmcloud [-q, --quiet] cf COMMAND...
 {: #info-examples}
 
 列出 Cloud Foundry 应用程序：
+
 ```
 ibmcloud cf apps
 ```
-{: codeblock}
 
 列出 Cloud Foundry 服务，而不显示 `Invoking cf command...` 消息：
 ```
@@ -391,7 +391,7 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
 如果 API 密钥具有关联的帐户，那么不支持切换到其他帐户。
-{ :note}
+{: note}
 
 使用一次性密码：
 
@@ -427,7 +427,7 @@ ibmcloud logout
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
-查看 {{site.data.keyword.Bluemix_notm}} 上所有区域的信息。
+查看 {{site.data.keyword.cloud_notm}} 上所有区域的信息。
 
 ```
 ibmcloud regions
@@ -524,7 +524,7 @@ ibmcloud update [-f]
 </dl>
 
 ## 常规经典基础架构服务命令
-{: #softlayer_cli}
+{: #classic-service-commands}
 
 使用 {{site.data.keyword.cloud_notm}} CLI 中的经典基础架构命令可配置和管理基础架构服务。
 
@@ -534,23 +534,23 @@ ibmcloud update [-f]
    ibmcloud sl command [arguments...] [options...]
 
 命令：
-   block           Gen1 基础架构块存储器
-   cdn             Gen1 基础架构内容交付网络
-   file            Gen1 基础架构文件存储器
-   dns             Gen1 基础架构域名系统
-   globalip        Gen1 基础架构全局 IP 地址
-   hardware        Gen1 基础架构硬件服务器
-   image           Gen1 基础架构计算映像
-   ipsec           Gen1 基础架构 IPSEC VPN
-   loadbal         Gen1 基础架构负载均衡器
-   security        Gen1 基础架构 SSH 密钥和 SSL 证书
-   securitygroup   Gen1 基础架构网络安全组
-   subnet          Gen1 基础架构网络子网
-   ticket          Gen1 基础架构管理凭单
-   vlan            Gen1 基础架构网络 VLAN
-   vs              Gen1 基础架构虚拟服务器
-   order           Gen1 基础架构订单
-   user            Gen1 基础架构管理用户
+   block           经典基础架构块存储器
+   cdn             经典基础架构内容交付网络
+   file            经典基础架构文件存储器
+   dns             经典基础架构域名系统
+   globalip        经典基础架构全局 IP 地址
+   hardware        经典基础架构硬件服务器
+   image           经典基础架构计算映像
+   ipsec           经典基础架构 IPSEC VPN
+   loadbal         经典基础架构负载均衡器
+   security        经典基础架构 SSH 密钥和 SSL 证书
+   securitygroup   经典基础架构网络安全组
+   subnet          经典基础架构网络子网
+   ticket          经典基础架构管理凭单
+   vlan            经典基础架构网络 VLAN
+   vs              经典基础架构虚拟服务器
+   order           经典基础架构订单
+   user            经典基础架构管理用户
    call-api        调用任意 API 端点。
    help            显示命令用法消息
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-06"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -117,7 +117,7 @@ ibmcloud resource group-create example-group
 
 Mettre à jour un groupe de ressources existant
 ```
-ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] 
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion, Cible
@@ -128,8 +128,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
   <dd>Nom du groupe de ressources cible</dd>
   <dt>-n, --name</dt>
   <dd>Nouveau nom du groupe de ressources</dd>
-  <dt>-q, --quota</dt>
-  <dd>Nom de la nouvelle définition de quota.</dd>
   <dt>-f</dt>
   <dd>Forcer la mise à jour sans confirmation</dd>
 </dl>
@@ -139,12 +137,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 Renommer le groupe de ressources `example-group` en `trial-group` :
 ```
 ibmcloud resource group-update example-group -n trial-group
-```
-{: codeblock}
-
-Modifier le quota du groupe de ressources `example-group` et le remplacer par `free` :
-```
-ibmcloud resource group-update example-group -q free
 ```
 {: codeblock}
 
@@ -300,7 +292,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>NAME (obligatoire)</dt>
   <dd>Nom de l'instance de service</dd>
   <dt>SERVICE_NAME ou SERVICE_ID (obligatoire)</dt>
-  <dd>Nom ou ID du service. Pour répertorier les offres de service, utilisez la [commande](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace) `ibmcloud catalog service-marketplace`.</dd>
+  <dd>Nom ou ID du service. Pour répertorier les offres de service, utilisez la [commande](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace) `ibmcloud catalog service-marketplace`.</dd>
   <dt>SERVICE_PLAN_NAME ou SERVICE_PLAN_ID (obligatoire)</dt>
   <dd>Nom ou ID du plan de service</dd>
   <dt>LOCATION (obligatoire)</dt>
@@ -312,7 +304,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Nom du groupe de ressources</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>Types des noeuds finaux de service</dd>
+  <dd>Types des noeuds finaux de service. Les valeurs possibles sont 'public', 'private', 'public-and-private'.</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -348,7 +340,7 @@ ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Nom du groupe de ressources</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>Types des noeuds finaux de service</dd>
+  <dd>Types des noeuds finaux de service. Les valeurs possibles sont 'public', 'private', 'public-and-private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forcer la mise à jour sans confirmation</dd>
 </dl>
@@ -468,7 +460,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
   <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>Fichier JSON ou chaîne JSON de paramètres</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>Type du noeud final de service</dd>
+  <dd>Type de noeud final de service. Les valeurs possibles sont 'public', 'private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forcer la création sans confirmation</dd>
 </dl>
@@ -609,7 +601,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Nom du groupe de ressources</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>Type du noeud final de service</dd>
+  <dd>Type de noeud final de service. Les valeurs possibles sont 'public', 'private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forcer la création sans confirmation</dd>
 </dl>
@@ -977,7 +969,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
   <dt>--tag-names (obligatoire)</dt>
   <dd>Liste de noms d'étiquettes séparés par des virgules</dd>
   <dt>--resource-name</dt>
-  <dd>Nom de la ressource à laquelle les étiquettes doivent être associées. Cette option ne peut pas être utilisée avec des ressources d'infrastructure classique. </dd>
+  <dd>Nom de la ressource à laquelle les étiquettes doivent être associées. Cette option ne peut pas être utilisée avec des ressources d'infrastructure classique.</dd>
   <dt>--resource-id</dt>
   <dd>Nom CRN de la ressource à laquelle les étiquettes vont être associées. Pour les ressources de l'infrastructure classique, il s'agit de l'ID de la ressource. Vous pouvez obtenir ce nom ou l'ID de la ressource en utilisant la commande 'ibmcloud resource search'.</dd>
   <dt>--resource-type</dt>
@@ -1040,7 +1032,7 @@ ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --re
   <dt>--tag-names (obligatoire)</dt>
   <dd>Liste de noms d'étiquettes séparés par des virgules</dd>
   <dt>--resource-name</dt>
-  <dd>Nom de la ressource dont les étiquettes doivent être enlevées. Cette option ne peut pas être utilisée avec des ressources d'infrastructure classique. </dd>
+  <dd>Nom de la ressource dont les étiquettes doivent être enlevées. Cette option ne peut pas être utilisée avec des ressources d'infrastructure classique.</dd>
   <dt>--resource-id</dt>
   <dd>Nom CRN de la ressource dont les étiquettes vont être enlevées. Pour les ressources de l'infrastructure classique, il s'agit de l'ID de la ressource. Vous pouvez obtenir ce nom ou l'ID de la ressource en utilisant la commande 'ibmcloud resource search'.</dd>
   <dt>--resource-type</dt>

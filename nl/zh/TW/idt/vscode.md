@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -21,12 +21,12 @@ subcollection: cloud-cli
 Visual Studio Code 的 IBM Cloud Developer Tools 延伸規格可以直接存取 Visual Studio Code 編輯器之指令選用區內的 IBM Developer CLI 功能。您可以快速存取 Docker 及 Cloud Foundry 工作流程的部分 `ibmcloud dev` 指令，包括應用程式部署、在 {{site.data.keyword.cloud}} 上啟動/停止/重新啟動應用程式、檢視遠端應用程式日誌等，而這些都不需要離開編輯器的環境定義。
 {:shortdesc}
 
-![IBM Developer Tools 延伸規格下載畫面的畫面擷取。](vscode.png "Visual Studio Code 內的延伸規格下載畫面")
+![IBM Developer Tools 延伸下載畫面的畫面擷取。](../images/vscode.png "Visual Studio Code 內的延伸下載畫面"){: caption="圖 1. Visual Studio Code 內的延伸下載畫面。" caption-side="bottom"}
 
 ## 相依關係
 {: #vscode-dependencies}
 
-若要使用 Visual Studio Code 的 IBM Cloud Developer Tools 延伸規格，您需要 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) 以及安裝在系統上的 {{site.data.keyword.cloud_notm}} CLI 外掛程式。
+若要使用 Visual Studio Code 的 IBM Cloud Developer Tools 延伸規格，您需要 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) 以及安裝在系統上的 {{site.data.keyword.cloud_notm}} CLI 外掛程式。
 
 ## 安裝
 {: #vscode-installation}

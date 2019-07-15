@@ -35,7 +35,7 @@ Procédez comme suit pour désinstaller l'interface de ligne de commande {{site.
 ## Désinstallation sur Linux et macOS
 {: #uninstall-cli-linux-macos}
 
-Les étapes de désinstallation sont différentes selon la version de l'interface de ligne de commande qui est installée. 
+Les étapes de désinstallation sont différentes selon la version de l'interface de ligne de commande qui est installée.
 
 Pour déterminer votre version d'interface de ligne de commande {{site.data.keyword.cloud_notm}}, exécutez la commande suivante :
 ```
