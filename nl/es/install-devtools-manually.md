@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -21,7 +21,7 @@ subcollection: cloud-cli
 {: #install-devtools-manually}
 
 Puede instalar de forma manual el plugin de la interfaz de línea de mandatos (CLI) de herramientas de desarrollador de
-{{site.data.keyword.cloud}} si prefiere un control más preciso en la instalación de los componentes. De lo contrario, se instalarán automáticamente todos los requisitos previos para la mayoría de los usuarios utilizando los [instaladores de la plataforma](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt).
+{{site.data.keyword.cloud}} si prefiere un control más preciso en la instalación de los componentes. De lo contrario, se instalarán automáticamente todos los requisitos previos para la mayoría de los usuarios utilizando los [instaladores de la plataforma](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt).
 {: shortdesc}
 
 ## Antes de empezar
@@ -73,6 +73,18 @@ Para ver una versión local del panel de control de Kubernetes y para desplegar 
 El prefijo para ejecutar mandatos utilizando la herramienta de línea de mandatos de Kubernetes es
 `kubectl`. Para obtener más información, consulte [Configuración de la CLI y la API](/docs/containers?topic=containers-cs_cli_install#cs_cli_install).
 
+## Instalación del plugin de CLI de {{site.data.keyword.cos_full_notm}}
+
+El plug-in {{site.data.keyword.cos_full_notm}} amplía la interfaz de línea de mandatos (CLI) de {{site.data.keyword.cloud_notm}} con un derivador de API para trabajar con recursos de Object Storage.
+
+* Para instalar el plugin de {{site.data.keyword.cos_full_notm}}, ejecute el mandato siguiente:
+  ```
+  ibmcloud plugin install cloud-object-storage
+  ```
+  {: codeblock}
+
+Para obtener más información, consulte la [referencia de mandatos de {{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli).
+
 ## Instalación del plugin de CLI de {{site.data.keyword.registrylong_notm}}
 {: #idt-install-container-registry-cli-plugin}
 
@@ -84,8 +96,7 @@ Puede utilizar el plugin de la CLI `container-registry` para configurar su propi
   ```
   {: codeblock}
 
-Para obtener más información, consulte la
-[referencia de mandatos de {{site.data.keyword.registrylong}}](/docs/services/Registry?topic=registry-registry_cli_reference).
+Para obtener más información, consulte la [referencia de mandatos de {{site.data.keyword.registrylong}}](/docs/services/Registry?topic=container-registry-cli-plugin-containerregcli).
 
 ## Instalación del plugin de CLI de {{site.data.keyword.containerlong_notm}}
 {: #idt-install-kubernetes-cli-plugin}
@@ -128,17 +139,5 @@ ibmcloud plugin install cloud-functions
 ```
 {: codeblock}
 
-Para obtener más información, consulte [Configuración del plugin de CLI de {{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-cloudfunctions_cli#cloudfunctions_cli).
+Para obtener más información, consulte [Instalación del plugin de CLI de {{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-cli_install).
 
-## Instalación del plugin de CLI de SDK Generator
-{: #idt-install-sdk-gen}
-
-Como desarrollador de {{site.data.keyword.cloud_notm}}, puede utilizar el plugin para generar SDK desde su definición de la API REST compatible con la [Especificación de Open API](https://www.openapis.org/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). A medida que evoluciona la definición de la API REST, puede utilizar este plugin para volver a generar solo el SDK, en lugar de volver a generar todo el proyecto.
-
-Para instalar el plugin de CLI de SDK Generator, ejecute el mandato siguiente:
-```
-ibmcloud plugin install sdk-gen
-```
-{: codeblock}
-
-Para obtener más información, consulte [SDK Generator](/docs/cli/sdk?topic=cloud-cli-sdk-cli#sdk-cli).

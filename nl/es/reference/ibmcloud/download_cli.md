@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-10"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -22,7 +22,7 @@ subcollection: cloud-cli
 La CLI de {{site.data.keyword.cloud}} proporciona la interfaz de línea de mandatos para gestionar recursos en {{site.data.keyword.cloud_notm}}. Puede seguir utilizando la CLI `cf` para iniciar sesión en
 {{site.data.keyword.cloud_notm}}, pero funciona con un servicio de Cloud Foundry en {{site.data.keyword.cloud_notm}}. 
 
-Si desea instalar la CLI de {{site.data.keyword.cloud}} más reciente y otros plugins y herramientas recomendados para desarrollar aplicaciones para {{site.data.keyword.cloud_notm}}, consulte [Iniciación a la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+Si desea instalar la CLI de {{site.data.keyword.cloud}} más reciente y otros plugins y herramientas recomendados para desarrollar aplicaciones para {{site.data.keyword.cloud_notm}}, consulte [Iniciación a la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started).
 {: tip}
 
 ## Antes de empezar
@@ -35,11 +35,7 @@ Si necesita utilizar una versión de 32 bits, o una versión anterior que no sea
 
 Siga los pasos siguientes para instalar la CLI de {{site.data.keyword.cloud_notm}} autónoma más reciente:
 
-1. Seleccione el instalador de su SO para descargarlo:
-  *  macOS X de 64 bits: [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/checksum){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
-  * Windows de 64 bits: [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/checksum){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
-  * Linux x86 de 64 bits: [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/checksum){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
-  * Linux LE de 64 bits (ppc64le): [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/checksum){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
+1. Utilice un navegador para acceder al repositorio oficial de GitHub [`ibm-cloud-cli-releases`](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/) y **seleccione** el instalador de su sistema operativo para comenzar la descarga. Se admiten los siguientes sistemas operativos: macOS X 64-bit, Windows&trade; 64-bit, Linux&trade; x86 64-bit y Linux&trade; LE 64-bit (ppc64le).
 
 2. Ejecute el instalador:
   * Para Mac y Windows&trade;, ejecute el instalador.
@@ -84,13 +80,7 @@ Para instalar la CLI más reciente para el sistema operativo desde el shell manu
 
 Cuando se utilizan instaladores o un script de shell para instalar la CLI de {{site.data.keyword.cloud_notm}}, se instala en los directorios del sistema. Si desea especificar un directorio diferente, siga los pasos siguientes.
 
-1. Descargue el paquete binario correspondiente a su sistema operativo utilizando los enlaces siguientes:
-  * macOS: [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive/checksum){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
-  * linux32: [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive/checksum){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
-  * linux64: [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive/checksum){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
-  * ppc64le: [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive/checksum){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
-  * win32: [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") /[sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive/checksum){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
-  * win64: [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive/checksum){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
+1. Utilice un navegador para acceder al repositorio oficial de GitHub [`ibm-cloud-cli-releases`](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/) y **seleccione** el archivo binario correspondiente a su plataforma para comenzar la descarga. Se admiten las siguientes plataformas: macOS, linux32, linux64, ppc64le, win32 y win64.
 
 2. Extraiga el paquete en un directorio que especifique.
 
@@ -111,7 +101,7 @@ Cuando se utilizan instaladores o un script de shell para instalar la CLI de {{s
    ```
    {: screen}
 
-   Para Windows:
+   Para Windows&trade;:
    ```
    IBM_Cloud_CLI
    ├── LICENSE
@@ -125,7 +115,7 @@ Cuando se utilizan instaladores o un script de shell para instalar la CLI de {{s
 
 3. Añada a la variable de entorno `PATH` y habilite el rellenado automático de shell.
   * Añada `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` a la variable de entorno `PATH`.
-  * Para obtener soporte de rellenado automático de shell (solo Mac y Linux&trade;), consulte [esta guía](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
+  * Para obtener soporte de rellenado automático de shell (solo Mac y Linux&trade;), consulte [Habilitación del rellenado automático de shell para la CLI de IBM Cloud](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
 ## Actualización de la CLI de {{site.data.keyword.cloud_notm}}
 {: #update-ibmcloud-cli}

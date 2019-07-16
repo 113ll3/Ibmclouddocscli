@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -13,7 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 
@@ -23,7 +23,7 @@ subcollection: cloud-cli
 El desarrollo de aplicaciones nativas de nube con la CLI de {{site.data.keyword.dev_cli_notm}} sigue un flujo sencillo:
 
 1. [Crear o habilitar una app para el despliegue](#idt-create).
-2. [Codificar, compilar y ejecutar](#code-build-run) la app localmente utilizando contenedores.
+2. [Programar, compilar y ejecutar](#code-build-run) la app localmente utilizando contenedores.
 3. [Desplegar](#cli-deploy) la app en {{site.data.keyword.cloud_notm}}.
 
 ## Crear o habilitar una app para el despliegue en la nube
@@ -36,9 +36,9 @@ Existen varias maneras en las que crear una app.
 - El mandato de la CLI de {{site.data.keyword.dev_cli_notm}} [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) para crear una nueva app.
 - El mandato de la CLI de {{site.data.keyword.dev_cli_notm}} [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) para habilitar rápidamente la nube en una app existente del lado del servidor.
 
-Para cualquiera de los métodos de creación anteriores, el flujo es similar. Seleccione el tipo de proyecto, el idioma de implementación y el patrón de app que desea utilizar. También puede optar por añadir servicios a la app como, por ejemplo, autenticación o persistencia. Por último, puede añadir la funcionalidad de DevOps a la app, que proporciona una cadena de herramientas completa de control de origen y comunicaciones en equipo. Esto incluye un conducto que se activa en cada confirmación para validar, crear y desplegar la app en {{site.data.keyword.cloud_notm}}.
+Para cualquiera de los métodos de creación anteriores, el flujo es similar. Seleccione el tipo de proyecto, el lenguaje de implementación y el patrón de app que desea utilizar. También puede optar por añadir servicios a la app como, por ejemplo, autenticación o persistencia. Por último, puede configurar la entrega continua para la app, que proporciona una completa cadena de herramientas de control de origen y comunicaciones de equipo. Esto incluye un conducto que se activa en cada confirmación para validar, crear y desplegar la app en {{site.data.keyword.cloud_notm}}.
 
-![Ejemplo de creación de flujo mediante la CLI de {{site.data.keyword.dev_cli_notm}}](create_flow.png "Ejemplo de creación de flujo mediante la CLI de {{site.data.keyword.dev_cli_notm}}")
+![Ejemplo de creación de flujo mediante la CLI de {{site.data.keyword.dev_cli_notm}}](../images/create_flow.png "Ejemplo de creación de flujo mediante la CLI de {{site.data.keyword.dev_cli_notm}}")
 
 La CLI de {{site.data.keyword.dev_cli_notm}} funciona de forma integrada para proporcionar una experiencia sencilla durante el desarrollo. Los proyectos que se crean desde las consolas web proporcionan un botón **Descargar código** para descargar el código fuente generado en su estación de trabajo para su desarrollo.
 
@@ -63,14 +63,14 @@ Los proyectos que se crean o se habilitan para ser utilizados con las herramient
 {: #ref1}
 
 - Vídeo: [Instalación de herramientas de desarrollador de {{site.data.keyword.cloud_notm}} en Ubuntu Linux&trade;](https://www.youtube.com/watch?v=sr7KjHAKpEs){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
-- Blog: [Habilitación de proyectos existentes para IBM Cloud con la CLI de {{site.data.keyword.dev_cli_short}}](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+- Blog: [Habilitación de proyectos existentes para IBM Cloud con la CLI de {{site.data.keyword.dev_cli_short}}](https://www.ibm.com/blogs/cloud-archive/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli//){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 
-## Codificar, compilar y ejecutar
+## Programar, compilar y ejecutar
 {: #code-build-run}
 
 Una vez que el proyecto se haya creado, es el usuario quien lo debe transformar de modo que tenga una utilidad. El flujo general consiste en editar el código fuente, ejecutar un mandato [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) para compilar la app dentro de un contenedor local específico para su configuración y lenguaje de la app. Dependiendo del lenguaje y generador utilizados por la app, puede haber uno o varios contenedores de forma predeterminada para dar soporte a la compilación y la ejecución local. Normalmente, hay un contenedor de herramientas ("tools") para las compilaciones y la depuración local. Este contenedor normalmente tiene más herramientas y funcionalidades para ayudarle en el desarrollo. También hay un contenedor de ejecución ("run") que imita el entorno de tiempo de ejecución de la app cuando se despliega en la nube, ya sea en Cloud Foundry o en un entorno de contenedores basados en Kubernetes de IBM.
 
-Puede utilizar IDE o el editor que prefiera para codificar su app. {{site.data.keyword.IBM_notm}} ofrece una extensión para el editor Microsoft&trade; Visual Studio Code (VSCode) que le permite acceder a todos los mandatos IDE directamente desde dentro del editor.
+Puede utilizar IDE o el editor que prefiera para programar su app. {{site.data.keyword.IBM_notm}} ofrece una extensión para el editor Microsoft&trade; Visual Studio Code (VSCode) que le permite acceder a todos los mandatos IDE directamente desde dentro del editor.
 
 Cuando se compile el proyecto, ejecute la app mediante [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) o [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug). La app se ejecuta dentro del contenedor adecuado. Algunos patrones de apps dan soporte a varios contenedores externos para sus apps. Las apps se inician y se configuran automáticamente durante la ejecución o la depuración. También hay un mandato [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) que ejecuta casos de prueba asociados a la app.
 
@@ -114,5 +114,5 @@ Los siguientes mandatos de CLI ayudan a trabajar con su proyecto durante el proc
 ### Vídeos y blogs de referencia
 {: #ref3}
 
-- Blog: [Despliegue en {{site.data.keyword.cloud_notm}} privado con la CLI de herramientas de desarrollo de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
-- Blog: [Despliegue en Kubernetes en {{site.data.keyword.cloud_notm}} con la CLI de herramientas de desarrollador de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+- Blog: [Despliegue en {{site.data.keyword.cloud_notm}} privado con la CLI de Developer Tools de {{site.data.keyword.cloud_notm}} CLI](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+- Blog: [Despliegue en Kubernetes en {{site.data.keyword.cloud_notm}} con la CLI de Developer Tools de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/blogs/cloud-archive/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-03"
 
 keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
@@ -95,7 +95,7 @@ Para ver ejemplos de uso completos, consulte el archivo [README de `BMSCore` Git
 	```
 	{: codeblock}
 
-La clase `Request` ofrece un método sencillo para realizar una solicitud HTTP y obtener la respuesta una vez completada la solicitud. Si desea más flexibilidad y control del que puede obtener de la clase `Request`, puede utilizar la clase `BMSURLSession`. Algunas de las características de la clase `BMSURLSession` incluyen el progreso de supervisión de las cargas y la colocación en pausa o cancelación de solicitudes. Para obtener las respuestas, puede elegir manejadores de terminación o delegados.
+La clase `Request` ofrece un método sencillo para realizar una solicitud HTTP y obtener la respuesta una vez completada la solicitud. Si desea más flexibilidad y control del que puede obtener de la clase `Request`, puede utilizar la clase `BMSURLSession`. Algunas de las características de la clase `BMSURLSession` incluyen el progreso de supervisión de las cargas y la colocación en pausa o cancelación de solicitudes. Para obtener las respuestas, puede seleccionar manejadores de terminación o delegados.
 
 La clase `BMSURLSession` solo está disponible para iOS.
 

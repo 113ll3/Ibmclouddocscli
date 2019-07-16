@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -28,27 +28,7 @@ A partir de mayo de 2018, los mandatos de CLI de {{site.data.keyword.cloud}} `bl
 `bx` ahora son `ibmcloud`. Sin embargo, puede seguir utilizando los mandatos de CLI `bluemix` y `bx` hasta que se eliminen más adelante.
 {: tip}
 
-Utilice los siguientes mandatos de CLI de {{site.data.keyword.dev_cli_notm}} (`ibmcloud dev`) para crear una aplicación, gestionarla, desplegarla, depurarla y probarla.
-
-- [build](#build): Compilar la aplicación en un contenedor local.
-- [code](#code): Descargar el código para una aplicación.
-- [console](#console): Abre la consola de {{site.data.keyword.cloud_notm}} para una aplicación.
-- [create](#create): Crea una aplicación nueva y le ofrece la opción de añadir servicios.
-- [debug](#debug): Depura aplicaciones en un contenedor local.
-- [delete](#delete): Suprime una aplicación del espacio.
-- [deploy](#deploy): Despliega aplicaciones en {{site.data.keyword.cloud_notm}}.
-- [diag](#diag): Muestra información de versión sobre las dependencias instaladas.
-- [edit](#edit): Añadir o eliminar servicios desde una aplicación existente.
-- [enable](#enable): Actualizar una aplicación existente para utilizarla con {{site.data.keyword.cloud_notm}} Developer Tools.
-- [get-credentials](#get-credentials): Obtiene las credenciales que necesita la aplicación para habilitar el uso de los servicios de {{site.data.keyword.cloud_notm}} conectados.
-- [help](#help): Ayuda sobre la sintaxis y los argumentos de la CLI.
-- [list](#list): Listar todas las aplicaciones de {{site.data.keyword.cloud_notm}} en un grupo de recursos.
-- [run](#run): Ejecuta aplicaciones en un contenedor local.
-- [shell](#shell): Abre un shell en un contenedor local.
-- [status](#status): Comprueba el estado de contenedores utilizados por la interfaz de línea de mandatos (CLI).
-- [stop](#stop): Detiene un contenedor.
-- [test](#test): Prueba la aplicación en un contenedor local.
-- [view](#view): Ver el URL desplegado de la aplicación para pruebas y visualización.
+Utilice los mandatos de CLI de {{site.data.keyword.dev_cli_notm}} (`ibmcloud dev`) para crear una aplicación, gestionarla, desplegarla, depurarla y probarla.
 
 Ejecute varios mandatos en una única sentencia de línea de mandatos mediante [mandatos compuestos](#compound).
 {: tip}
@@ -97,7 +77,7 @@ ibmcloud dev console [appName]
 ## create
 {: #create}
 
-Cree una app que solicite toda la información, incluido el tipo de recurso, el idioma, el kit de inicio y las opciones de la cadena de herramientas de DevOps. Esto incluye IBM Cloud Foundry o Cloud Foundry Enterprise Environment y Kubernetes. La app se crea en el directorio actual.
+Cree una app que solicite toda la información, incluido el tipo de recurso, el lenguaje, el kit de inicio y las opciones de la cadena de herramientas de DevOps. Esto incluye IBM Cloud Foundry o Cloud Foundry Enterprise Environment y Kubernetes. La app se crea en el directorio actual.
 
 Para crear una app en el directorio actual y para asociar servicios con ella, ejecute el mandato siguiente:
 ```
@@ -131,7 +111,7 @@ Para salir de la sesión de depuración, utilice `Control-C`.
 ### Parámetros del mandato debug
 {: #debug-parameters}
 
-Los siguientes parámetros son exclusivos del mandato `debug` y ayudan a depurar una app. Hay [más parámetros](#command-parameters) compartidos con otros mandatos.
+Los siguientes parámetros son exclusivos del mandato `debug` y ayudan a depurar una app. Hay [más parámetros](#command-parameters) que se comparten con otros mandatos.
 
 #### `container-port-map-debug`
 {: #port-map-debug}
@@ -189,7 +169,7 @@ deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Nam
 ibm-cluster: "mycluster"
 ```
 
-En `cli-config.yml`, puede elegir definir la ubicación de un diagrama de Helm en la propiedad `chart-path` y configurar `deploy-image-target` tal como se muestra en el ejemplo. En `cli-config.yml` se utiliza el elemento `deploy-image-target` en lugar de los elementos `repository` y `tag` en el archivo `chart/values.yml`. Para desplegar en {{site.data.keyword.cloud_notm}} concretamente, establezca el elemento de configuración `ibm-cluster` en el nombre del clúster de Kubernetes que ha creado en {{site.data.keyword.cloud_notm}}.
+En `cli-config.yml`, puede definir la ubicación de un diagrama de Helm en la propiedad `chart-path` y configurar `deploy-image-target` tal como se muestra en el ejemplo. En `cli-config.yml` se utiliza el elemento `deploy-image-target` en lugar de los elementos `repository` y `tag` en el archivo `chart/values.yml`. Para desplegar en {{site.data.keyword.cloud_notm}} concretamente, establezca el elemento de configuración `ibm-cluster` en el nombre del clúster de Kubernetes que ha creado en {{site.data.keyword.cloud_notm}}.
 
 Ejecute el mandato siguiente en el directorio de app actual para crear la app:  
 ```
@@ -206,12 +186,12 @@ ibmcloud dev deploy
 ### deploy en {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment 
 {: #deploy-cfee}
 
-Puede desplegar en un entorno {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment. Para ello, configure el entorno local para este entorno utilizando `ibmcloud target --cf` y, a continuación, elija el entorno correcto en la lista. Luego puede utilizar el mandato `deploy` como lo haría para {{site.data.keyword.cloud_notm}} Public Cloud Foundry.
+Puede desplegar en un entorno {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment. Para ello, configure el entorno local para este entorno utilizando `ibmcloud target --cf` y, a continuación, seleccione el entorno correcto en la lista. Luego puede utilizar el mandato `deploy` como lo haría para {{site.data.keyword.cloud_notm}} Public Cloud Foundry.
 
 ### Parámetros del mandato deploy
 {: #deploy-parameters}
 
-Los siguientes parámetros se pueden utilizar con el mandato `deploy` o actualizando el archivo `cli-config.yml` de la app directamente. Hay [parámetros adicionales](#command-parameters) compartidos con otros mandatos.
+Los siguientes parámetros se pueden utilizar con el mandato `deploy` o actualizando el archivo `cli-config.yml` de la app directamente. Hay [más parámetros](#command-parameters) que se comparten con otros mandatos.
 
 #### `chart-path`
 {: #chart-path}
@@ -252,7 +232,7 @@ Los siguientes parámetros se pueden utilizar con el mandato `deploy` o actualiz
 ## diag
 {: #diag}
 
-Este mandato se utiliza como un diagnóstico para visualizar la información de versión de las dependencias instaladas para la CLI de {{site.data.keyword.dev_cli_notm}}. Esto resulta útil para determinar si faltan dependencias o para ayudar a depurar problemas.
+El mandato `diag` se utiliza como un diagnóstico para visualizar la información de versión de las dependencias instaladas para la CLI de {{site.data.keyword.dev_cli_notm}}. Esto resulta útil para determinar si faltan dependencias o para ayudar a depurar problemas.
 
 Ejecute el mandato siguiente para visualizar las versiones de las dependencias instaladas:
 ```
@@ -273,21 +253,21 @@ Si no dispone de servicios existentes en su cuenta, este mandato le muestra una 
 
 Sin embargo, si tiene algún servicio existente en su cuenta, este mandato le muestra una lista de estos servicios y si cada servicio está conectado a la app o no.
 
-* Un servicio conectado le proporciona opciones para desconectar el servicio de la app o para suprimir el servicio de su cuenta, desconectándola de todas las apps a las que está conectada.
+* Un servicio conectado le proporciona opciones para desconectar el servicio de la app o para suprimir el servicio de su cuenta, lo que la desconecta de todas las apps.
 
-* Un servicio desconectado le ofrece opciones para conectar ese servicio a su app o para suprimir el servicio de su cuenta. La conexión de un servicio existente también descarga archivos, como credenciales o código fuente, para comenzar a utilizar dicho servicio.
+* Un servicio desconectado le ofrece opciones para conectar ese servicio a su app o para suprimir el servicio de su cuenta. La conexión de un servicio existente también descarga archivos, como credenciales o código fuente.
 
-También puede añadir un nuevo servicio a la app, donde se le guiará a través de solicitudes de selección de servicios y se descargarán archivos adicionales como archivos de credenciales o código fuente para comenzar a utilizar el nuevo servicio.
+También puede añadir un servicio a la app, donde se le guiará a través de solicitudes de selección de servicios para descargar archivos adicionales como archivos de credenciales o código fuente.
 
 ## enable
 {: #enable}
 
-Habilite una app existente para el despliegue de {{site.data.keyword.cloud_notm}}. El mandato `enable` intenta detectar automáticamente el idioma de una app existente y, a continuación, solicitar la información adicional necesaria. Esto genera y añade archivos que se pueden utilizar para los contenedores Docker locales, el despliegue de Cloud Foundry, el despliegue de Cloud Foundry Enterprise Environment o el despliegue de contenedores Kubernetes. Todos los entornos de despliegue se pueden utilizar a través de un mandato
+Habilite una app existente para el despliegue de {{site.data.keyword.cloud_notm}}. El mandato `enable` intenta detectar automáticamente el lenguaje de una app existente y, a continuación, solicitar la información adicional necesaria. Los archivos se generan para ser utilizados para los contenedores Docker locales, el despliegue de Cloud Foundry, el despliegue de Cloud Foundry Enterprise Environment o el despliegue de contenedores Kubernetes. Todos los entornos de despliegue se pueden utilizar a través de un mandato
 `deploy` manual o utilizando una cadena de herramientas de DevOps.
 
-Cuando haya iniciado una sesión en {{site.data.keyword.cloud_notm}}, puede optar por conectar esta app local a una app que ya esté en {{site.data.keyword.cloud_notm}} o por crear una nueva app de {{site.data.keyword.cloud_notm}}. Para aprovechar las características de {{site.data.keyword.cloud_notm}}, como sus servicios y cadenas de herramientas de DevOps, se necesita una app en {{site.data.keyword.cloud_notm}}. Cuando se crea una app de {{site.data.keyword.cloud_notm}} para una app que se ha clonado de un repositorio Git, la app de {{site.data.keyword.cloud_notm}} incluirá este repositorio en su configuración. 
+Con la sesión iniciada en {{site.data.keyword.cloud_notm}}, puede conectar esta app local a una app que ya esté en {{site.data.keyword.cloud_notm}} o crear una nueva app de {{site.data.keyword.cloud_notm}}. Para aprovechar las características de {{site.data.keyword.cloud_notm}}, como sus servicios y cadenas de herramientas de DevOps, se necesita una app en {{site.data.keyword.cloud_notm}}. Cuando se crea una app de {{site.data.keyword.cloud_notm}} para una app que se ha clonado de un repositorio Git, la app de {{site.data.keyword.cloud_notm}} incluirá este repositorio en su configuración. 
 
-`Enable` es una característica de la versión Beta. Si tiene problemas para habilitar su app, consulte nuestra [página de resolución de problemas](/docs/cli/ts_createapps.html#troubleshoot) para obtener ayuda. En concreto, `enable` no está pensado para apps o entornos de trabajo móviles. Para apps complejas que generen varios activos desplegables, cada componente de la app se debe habilitar individualmente. 
+`Enable` es una característica de la versión Beta. Si tiene problemas para habilitar su app para la nube, consulte [resolución de problemas](/docs/cli?topic=cloud-cli-troubleshoot). En concreto, `enable` no está pensado para apps o entornos de trabajo móviles. Para apps complejas que generen varios activos desplegables, cada componente de la app se debe habilitar individualmente. 
 
 Ejecute el mandato siguiente para habilitar una app existente en el directorio actual:
 ```
@@ -295,16 +275,16 @@ ibmcloud dev enable
 ```
 {: codeblock}
 
-La presencia de los archivos necesarios proporciona la detección de idioma de app para una estructura de proyecto válida.  
+La presencia de los archivos necesarios proporciona la detección del lenguaje de la app para una estructura de proyecto válida.  
 
 * La presencia de un archivo `package.json` identifica una app Node.js.
 * La presencia de un archivo `package.swift` identifica una app Swift.
 * La presencia de un archivo `setup.py` o `requirements.txt` identifica una app Python.
-* La presencia de un archivo `pom.xml` o `build.gradle` identifica una app Java.
+* La presencia de un archivo `pom.xml` o `build.gradle` identifica una app Java&trade;.
 	* La presencia de un archivo `pom.xml` identifica una app Maven.
 	* La presencia de un archivo `build.gradle` identifica una app Gradle.
 
-Opcionalmente, también puede modificar el idioma de app detectado utilizando el argumento `--language`. Únicamente se da soporte a las apps válidas y completas. El mandato enable no modifica el código fuente.
+También puede modificar el lenguaje de la app detectado utilizando el argumento `--language`. Únicamente se da soporte a las apps válidas y completas. El mandato enable no modifica el código fuente.
 
 ### enable language options
 {: #enable-language-options}
@@ -317,17 +297,17 @@ Las opciones de lenguaje incluyen:
 * java-mp (interpretado como Java&trade; - Java&trade; MicroProfile)
 * java-spring (interpretado como Java&trade; - Spring Framework)
 
-Los archivos creados mediante el mandato `ibmcloud dev enable` y que tienen conflictos de denominación con archivos existentes en la carpeta de app se guardan con una extensión de archivo `.merge`.  
+Los archivos creados mediante el mandato `ibmcloud dev enable` y cuyo nombre entra en conflicto con el de otros archivos existentes en la carpeta de app se guardan con la extensión de archivo `.merge`.  
 
 ### Parámetros del mandato enable
 {: #enable-parameters}
 
-Los siguientes parámetros se pueden utilizar con el mandato `enable` o actualizando el archivo `cli-config.yml` de la app directamente. Hay [parámetros adicionales](#command-parameters) compartidos con otros mandatos.
+Los siguientes parámetros se pueden utilizar con el mandato `enable` o actualizando el archivo `cli-config.yml` de la app directamente. Hay [más parámetros](#command-parameters) que se comparten con otros mandatos.
 
 #### `language`
 {: #enable-language}
 
-* Parámetro utilizado para especificar el idioma de la app que se va a habilitar.
+* Parámetro utilizado para especificar el lenguaje de la app que se va a habilitar.
 * Uso `ibmcloud dev enable -l|--language [language]`
 
 #### `force`
@@ -339,7 +319,7 @@ Los siguientes parámetros se pueden utilizar con el mandato `enable` o actualiz
 #### `no-create`
 {: #enable-no-create}
 
-* Parámetro para evitar que se cree una app en {{site.data.keyword.cloud_notm}} mientras se crean los archivos de habilitación localmente.
+* Parámetro para evitar que se cree una app en {{site.data.keyword.cloud_notm}} y crear los archivos de habilitación localmente.
 * Uso: `ibmcloud dev enable --no-create`
 
 ## get-credentials
@@ -395,8 +375,7 @@ Para salir de la sesión, utilice `Control-C`.
 ### Parámetros del mandato run
 {: #run-parameters}
 
-Los siguientes parámetros son exclusivos del mandato `run` y ayudan a gestionar la app dentro del contenedor de ejecución.
-Hay [parámetros adicionales](#command-parameters) compartidos con otros mandatos.
+Los siguientes parámetros son exclusivos del mandato `run` y ayudan a gestionar la app dentro del contenedor de ejecución. Hay [parámetros](#command-parameters) que se comparten con otros mandatos.
 
 #### `container-name-run`
 {: #container-name-run2}
@@ -420,7 +399,7 @@ Hay [parámetros adicionales](#command-parameters) compartidos con otros mandato
 {: #dockerfile-run}
 
 * Dockerfile para el contenedor de ejecución.
-* Si tiene prevista la ejecución con varios contenedores, este archivo debería ser un archivo Compose.
+* Si desea ejecutar con varios contenedores, utilice un archivo Compose.
 * Para utilizar varios archivos Compose, delimite la lista de nombres con signos de comillas dobles.
 * Uso: `ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
 * Uso: `ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
@@ -452,7 +431,7 @@ ibmcloud dev shell
 
 La CLI de {{site.data.keyword.dev_cli_short}} abre un shell interactivo en el contenedor docker de la app. El contenedor de destino predeterminado para el mandato de shell se define por el valor `container-shell-target` en el `config.yml`, donde los valores válidos son `run` o `tools`. Si este valor no está definido o si se especifica un valor no válido, de forma predeterminada el mandato `shell` tiene como objetivo el contenedor `tools`. El mandato de shell abre el contenedor en el directorio especificado por la instrucción `WORKDIR` en el Dockerfile correspondiente. Si `WORKDIR` no está en el Dockerfile, Dockerfile se utiliza la raíz del contenedor como el directorio de trabajo. Consulte [esta referencia](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") para obtener más información.
 
-Como alternativa, puede decidir pasar `run` o `tools` como argumento para el mandato de forma que el shell se abra y sirva para dicho contenedor. Asimismo, puede utilizar el parámetro `container-name` para pasar el nombre del contenedor en el que desea el shell. Sin embargo, este distintivo debe reservarse para cuando no haya contenedores en ejecución. Los argumentos `run` y `tools` son más flexibles y permiten conmutar entre contenedores cuando haya alguno en ejecución. Por ejemplo, si el contenedor tools está en ejecución y ejecuta `ibmcloud dev shell run`, se detiene el contenedor `tools` y se inicia el contenedor `run`, y viceversa.
+Como alternativa, puede decidir pasar `run` o `tools` como argumento para el mandato de forma que el shell se abra y sirva para dicho contenedor. Asimismo, puede utilizar el parámetro `container-name` para pasar el nombre del contenedor en el que desea el shell. Sin embargo, este distintivo se reserva para cuando no haya contenedores en ejecución. Los argumentos `run` y `tools` son más flexibles y permiten conmutar entre contenedores cuando haya alguno en ejecución. Por ejemplo, si el contenedor tools está en ejecución y ejecuta `ibmcloud dev shell run`, se detiene el contenedor `tools` y se inicia el contenedor `run`, y viceversa.
 
 Si el contenedor `run` o `tools` de destino no está ya en ejecución al ejecutar el mandato `shell`, se inicia el contenedor de destino. Sin embargo, se cambiará el valor predeterminado `Cmd` o `Entrypoint` en el Dockerfile para iniciar directamente el shell en lugar de iniciar el proceso del servidor. Esto permite iniciar el contenedor `run` o `tools`, e iniciar manualmente el servidor con sus propios mandatos arbitrarios o personalizados.
 
@@ -460,7 +439,7 @@ También puede especificar el ejecutable del shell que desee abrir utilizando el
 
 Cualquier otro argumento adicional que pase al mandato más allá de los distintivos se analizará como si el mandato se ejecutase al abrir el shell. Si proporciona un mandato, el shell dentro del contenedor saldrá después de la ejecución del mandato y volverá al terminal.
 
-Por ejemplo, puede ejecutar el mandato Linux &trade; `ls` dentro del contenedor shell invocando `ibmcloud dev shell tools ls`. También puede especificar distintivos adicionales para pasar a la ejecución del mandato del shell delimitando los argumentos entre comillas como, por ejemplo, `ibmcloud dev shell "ls -la"`.
+Por ejemplo, puede ejecutar el mandato Linux &trade; `ls` dentro del contenedor shell invocando `ibmcloud dev shell tools ls`. También puede especificar distintivos para pasar a la ejecución del mandato shell delimitando los argumentos entre comillas como, por ejemplo, `ibmcloud dev shell "ls -la"`.
 
 ### Parámetros del mandato shell
 {: #shell-parameters}
@@ -510,7 +489,7 @@ Para detener un contenedor que no está definido en el archivo `cli-config.yml`,
 ### Parámetros del mandato stop
 {: #stop-parameters}
 
-Los parámetros siguientes se utilizan para el mandato `stop`. Hay [parámetros adicionales](#command-parameters) compartidos con otros mandatos.
+Los parámetros siguientes se utilizan para el mandato `stop`. Hay [parámetros](#command-parameters) que se comparten con otros mandatos.
 
 #### `container-name-run`
 {: #container-name-run}
@@ -546,7 +525,7 @@ ibmcloud dev test
 ### Parámetros del mandato test
 {: #test-parameters}
 
-El siguiente parámetro es exclusivo del mandato `test`. Hay [parámetros adicionales](#command-parameters) compartidos con otros mandatos.
+El siguiente parámetro es exclusivo del mandato `test`. Hay [parámetros](#command-parameters) que se comparten con otros mandatos.
 
 #### `test-cmd`
 {: #test-cmd}
@@ -561,7 +540,7 @@ Visualice el URL en el que se despliega su app a través del mandato `view`. Eje
 
 Para las apps desplegadas en Cloud Foundry, el URL consta del nombre de host y el dominio de la app.
 
-Para las apps desplegadas en Kubernetes, el URL consta de la dirección IP del nodo en que se despliega y el puerto público. Si el mandato determina que la app se ha desplegado en Kubernetes, la herramienta CLI solicita confirmación. Si especifica que la app no se ha desplegado en Kubernetes, se muestra el URL de Cloud Foundry. Si esperaba que el mandato mostrase el URL de una app desplegada en Kubernetes, asegúrese de que `cli-config.yml` contiene una entrada para `chart-path` o proporciónela a través de la línea de mandatos tal como se muestra [aquí](#chart-path).
+Para las apps desplegadas en Kubernetes, el URL consta de la dirección IP del nodo en el que se despliega y el puerto público. Si el mandato determina que la app se ha desplegado en Kubernetes, la herramienta CLI solicita confirmación. Si especifica que la app no se ha desplegado en Kubernetes, se muestra el URL de Cloud Foundry. Si esperaba que el mandato mostrase el URL de una app desplegada en Kubernetes, asegúrese de que `cli-config.yml` contiene una entrada para `chart-path` o proporciónela a través de la línea de mandatos tal como se muestra [aquí](#chart-path).
 
 Ejecute el siguiente mandato para ver su app:
 ```
@@ -610,8 +589,7 @@ ibmcloud dev build/deploy/view -t container --trace
 {: codeblock}
 
 Todos los distintivos deben estar al final del mandato y se aplicarán a todos los mandatos asociados a dicho distintivo. Utilizando
-`ibmcloud dev build/deploy/view -t container --trace` como ejemplo, se aplica el distintivo `--trace` a los tres mandatos, pero
-`-t` solo es aplicable a los dos últimos mandatos, y no se aplicará al mandato `build`.
+`ibmcloud dev build/deploy/view -t container --trace` como ejemplo, se aplica el distintivo `--trace` a los tres mandatos, pero `-t` solo es aplicable a los dos últimos mandatos, y no se aplica al mandato `build`.
 
 Los mandatos siguientes se pueden utilizar con esta característica:
 `build, debug, deploy, get-credentials, run, stop, test, view`

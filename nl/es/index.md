@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-19"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -17,8 +17,8 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:note: .note}
 
-# Iniciación a la CLI de {{site.data.keyword.cloud_notm}}
-{: #ibmcloud-cli}
+# Guía de aprendizaje de iniciación
+{: #getting-started}
 
 En esta guía de aprendizaje, instalará un conjunto de herramientas de desarrollador de {{site.data.keyword.cloud}}, verificará la instalación y configurará el entorno. La {{site.data.keyword.dev_cli_notm}} ofrece un enfoque de línea de mandatos para crear, desarrollar y desplegar aplicaciones de nube.
 {: shortdesc}
@@ -34,9 +34,9 @@ El mandato de instalación de esta guía de aprendizaje instala la versión más
 * `curl`
 * Plug-in de {{site.data.keyword.dev_cli_notm}}
 * Plug-in de {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
+* Plug-in de {{site.data.keyword.cos_full_notm}}
 * Plug-in de {{site.data.keyword.registrylong_notm}}
 * Plug-in de {{site.data.keyword.containerlong_notm}}
-* Plug-in `sdk-gen`
 
 ## Antes de empezar
 {: #idt-prereq}

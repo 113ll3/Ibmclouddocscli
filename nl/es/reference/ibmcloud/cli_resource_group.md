@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-06"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -117,7 +117,7 @@ ibmcloud resource group-create example-group
 
 Actualizar un grupo de recursos existente
 ```
-ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] 
 ```
 
 <strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
@@ -128,8 +128,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
   <dd>Nombre del grupo de recursos de destino</dd>
   <dt>-n, --name</dt>
   <dd>Nuevo nombre de grupo de recursos</dd>
-  <dt>-q, --quota</dt>
-  <dd>Nombre de la nueva definición de cuota</dd>
   <dt>-f</dt>
   <dd>Forzar actualización sin confirmación</dd>
 </dl>
@@ -139,12 +137,6 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 Cambie el nombre del grupo de recursos `example-group` a `trial-group`:
 ```
 ibmcloud resource group-update example-group -n trial-group
-```
-{: codeblock}
-
-Cambie la cuota del grupo de recursos `example-group` a `free`:
-```
-ibmcloud resource group-update example-group -q free
 ```
 {: codeblock}
 
@@ -300,7 +292,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>NAME (necesario)</dt>
   <dd>Nombre de la instancia de servicio</dd>
   <dt>SERVICE_NAME o SERVICE_ID (necesario)</dt>
-  <dd>Nombre o ID del servicio. Para mostrar una lista de ofertas de servicio, utilice el [mandato](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace) `ibmcloud catalog service-marketplace`.</dd>
+  <dd>Nombre o ID del servicio. Para mostrar una lista de ofertas de servicio, utilice el [mandato](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace) `ibmcloud catalog service-marketplace`.</dd>
   <dt>SERVICE_PLAN_NAME o SERVICE_PLAN_ID (necesario)</dt>
   <dd>Nombre o ID del plan de servicio</dd>
   <dt>LOCATION (obligatorio)</dt>
@@ -312,7 +304,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Nombre de grupo de recursos</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>Tipos de puntos finales de servicio</dd>
+  <dd>Tipos de puntos finales de servicio. Los valores posibles son 'public', 'private', 'public-and-private'.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -348,7 +340,7 @@ ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Nombre de grupo de recursos</dd>
   <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>Tipos de puntos finales de servicio</dd>
+  <dd>Tipos de puntos finales de servicio. Los valores posibles son 'public', 'private', 'public-and-private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forzar actualización sin confirmación</dd>
 </dl>
@@ -468,7 +460,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
   <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>Parámetros del archivo JSON o de la serie JSON</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>Tipo de punto final de servicio</dd>
+  <dd>Tipo de punto final de servicio. Los valores posibles son 'public', 'private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forzar la creación sin confirmación</dd>
 </dl>
@@ -610,7 +602,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Nombre de grupo de recursos</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>Tipo de punto final de servicio</dd>
+  <dd>Tipo de punto final de servicio. Los valores posibles son 'public', 'private'.</dd>
   <dt>-f, --force</dt>
   <dd>Forzar la creación sin confirmación</dd>
 </dl>
@@ -838,7 +830,7 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
   <dt>-s, --sort-by</dt>
   <dd>Propiedad por la que ordenar. Las entradas aceptadas son `name`, `family`, `region`, `type`, `crn`.</dd>
   <dt>-p, --provider</dt>
-  <dd>Mostrar recursos de infraestructura clásica. El único valor permitido es:classic-infrastructure</dd>
+  <dd>Mostrar recursos de infraestructura clásica. El único valor permitido es: classic-infrastructure</dd>
 </dl>
 
 <strong>Atributos que se pueden buscar</strong>:

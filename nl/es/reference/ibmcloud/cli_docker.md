@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-19"
 
 keywords: cli, docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
 
@@ -29,7 +29,6 @@ Con el contenedor de Docker de {{site.data.keyword.dev_cli_notm}}, obtiene la CL
 * Plug-in de {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
 * Plug-in de {{site.data.keyword.registrylong_notm}}
 * Plug-in de {{site.data.keyword.containerlong_notm}}
-* Plug-in `sdk-gen`
 
 ## Antes de empezar
 {: #idt-docker-prereq}

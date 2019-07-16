@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -69,7 +69,7 @@ ibmcloud login
 {: codeblock}
 {: tsResolve}
 
-## ¿Por qué no se reconoce la imagen de mi nueva app?
+## ¿Por qué no se reconoce la imagen de una nueva app?
 {: #ts-cli-nosuchimage}
 {: troubleshoot}
 
@@ -120,7 +120,7 @@ Este error se debe al servicio {{site.data.keyword.objectstorageshort}}, que sol
 Seleccione otro plan.
 {: tsResolve}
 
-## ¿Por qué no se recupera mi código cuando creo una app?
+## ¿Por qué no se recupera el código cuando creo una app?
 {: #retrieve-code-error}
 {: troubleshoot}
 
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-Este error se produce cuando el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos npm nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux&trade;.
+Este error se produce cuando el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos `npm` nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux&trade;.
 {: tsCauses}
 
 Suprima la carpeta `node_modules` y ejecute de nuevo el mandato `ibmcloud dev run`.
@@ -258,7 +258,7 @@ ibmcloud cr namespaces
 {: codeblock}
 {: tsResolve}
 
-## ¿Por qué no se puede determinar el idioma de mi app?
+## ¿Por qué no se puede determinar el lenguaje?
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
@@ -275,10 +275,10 @@ directly.
 
 Este error puede deberse a una de las causas siguientes:
 - Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) desde un directorio que no es el directorio de origen de la app.
-- Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) para una app de un idioma que no se reconoce.
+- Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) para una app de un lenguaje que no se reconoce.
 {: tsCauses}
 
-Asegúrese de ejecutar el mandato desde el directorio de la app que contiene el código fuente de la app. Si el problema no se soluciona y el idioma es uno de los [idiomas soportados](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), utilice el parámetro `--language` para especificar el idioma.
+Asegúrese de ejecutar el mandato desde el directorio de la app que contiene el código fuente de la app. Si el problema no se soluciona y el lenguaje es uno de los [lenguajes soportados](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), utilice el parámetro `--language` para especificar el lenguaje.
 {: tsResolve}
 
 ## ¿Por qué no puedo crear o ejecutar una app que está habilitada para el despliegue en la nube?
@@ -303,7 +303,7 @@ Para instalar manualmente los componentes de la CLI de {{site.data.keyword.dev_c
 [pasos](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
 
 ## ¿Por qué no puedo crear la imagen de Docker?
-{: $ts-cli-docker}
+{: #ts-cli-docker}
 {: troubleshoot}
 
 Si aparece el error siguiente: 
@@ -325,11 +325,11 @@ Asegúrese de que Docker está instalado y en ejecución:
 - Para instalar o iniciar [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
 {: tsResolve}
 
-## ¿Cómo resolver la incompatibilidad de versiones de Helm?
-{: ts-cli-helm}
+## La actualización de Helm está fallando con errores
+{: #ts-cli-helm-rbac}
 {: troubleshoot}
 
-Si las versiones de Helm de cliente y servidor no están sincronizadas, es posible que aparezcan los errores siguientes:
+Puede encontrar el siguiente error debido a problemas de control de acceso basado en roles (RBAC):
 ```
 FAILED
 Failed to execute the action:  exit status 1: Error: UPGRADE FAILED:
@@ -339,6 +339,19 @@ cannot list resource "configmaps" in API group "" in the namespace
 ```
 {: screen}
 
+Para resolver el problema, ejecute el mandato siguiente:
+{: tsResolve}
+
+```
+kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:default -n kube-system
+```
+{: codeblock}
+
+## ¿Cómo resolver la incompatibilidad de versiones de Helm?
+{: #ts-cli-helm}
+{: troubleshoot}
+
+Si las versiones de Helm de cliente y servidor no están sincronizadas, es posible que aparezcan los errores siguientes:
 ```
 FAILED
 The 'helm upgrade ' command failed to complete due to: exit status 1
@@ -367,7 +380,7 @@ Para resolver el problema, establezca la versión del cliente en la misma que la
   {: codeblock}
 
 ## ¿Por qué falla ibmcloud dev build con un nombre de usuario que incluye "@"?
-{: ts-cli-username}
+{: #ts-cli-username}
 {: troubleshoot}
 Durante el proceso de creación de la imagen, se utiliza su nombre de usuario para el usuario de la imagen de las herramientas de Docker. Si el nombre de usuario contiene caracteres especiales como '@' o '-', el proceso de creación de la imagen de Docker falla y con el error siguiente:
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -21,12 +21,12 @@ subcollection: cloud-cli
 La extensión de IBM Cloud Developer Tools para Visual Studio Code proporciona acceso a las funciones de la CLI de desarrollador de IBM directamente dentro de la paleta de mandatos del editor de Visual Studio Code. Puede acceder rápidamente a un subconjunto de mandatos de `ibmcloud dev` para ambos flujos de trabajo de Docker y Cloud Foundry, incluyendo despliegue de apps, iniciar/detener/reiniciar apps en {{site.data.keyword.cloud}}, visualización de los registros de app remoto, etc., todos sin la necesidad de dejar el contexto del editor.
 {:shortdesc}
 
-![Captura de pantalla de la pantalla de descarga de la extensión de IBM Developer Tools.](vscode.png "Pantalla de descarga de la extensión en Visual Studio Code")
+![Captura de pantalla de la pantalla de descarga de la extensión de IBM Developer Tools.](../images/vscode.png "Pantalla de descarga de la extensión en Visual Studio Code")
 
 ## Dependencias
 {: #vscode-dependencies}
 
-Para utilizar la extensión IBM Cloud Developer Tools para Visual Studio Code, necesita la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) y el plugin de CLI de {{site.data.keyword.cloud_notm}} que se instala en el sistema.
+Para utilizar la extensión IBM Cloud Developer Tools para Visual Studio Code, necesita la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started) y el plugin de CLI de {{site.data.keyword.cloud_notm}} que está instalado en el sistema.
 
 ## Instalación
 {: #vscode-installation}

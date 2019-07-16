@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-10"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -61,7 +61,7 @@ Ninguno.
 
 <dl>
 <dt>COMMAND|NAMESPACE</dt>
-<dd>Mandato o espacio de nombres para el que se visualiza ayuda. Si no se especifica, se mostrará la ayuda general de la CLI de {{site.data.keyword.Bluemix_notm}}. Opcional.</dd>
+<dd>Mandato o espacio de nombres para el que se visualiza ayuda. Si no se especifica, se mostrará la ayuda general de la CLI de {{site.data.keyword.cloud_notm}}. Opcional.</dd>
 </dl>
 
 ### Ejemplos
@@ -231,11 +231,11 @@ Ninguno.
 ### Ejemplos
 {: #info-examples}
 
-Listar las aplicaciones de Cloud Foundry:
+Listar las apps de Cloud Foundry:
+
 ```
 ibmcloud cf apps
 ```
-{: codeblock}
 
 Listar los servicios de Cloud Foundry sin mostrar el mensaje `Invocando el mandato cf...`:
 ```
@@ -389,7 +389,7 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
 Si la clave de API tiene asociada una cuenta, no se permite conmutar a otra cuenta.
-{ :note}
+{: note}
 
 Utilizar un código de acceso de un solo uso:
 
@@ -425,7 +425,7 @@ Ninguno.
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
-Visualiza la información para todas las regiones en {{site.data.keyword.Bluemix_notm}}.
+Visualiza la información para todas las regiones en {{site.data.keyword.cloud_notm}}.
 
 ```
 ibmcloud regions
@@ -522,7 +522,7 @@ ibmcloud update [-f]
 </dl>
 
 ## Mandatos generales de servicio de la infraestructura clásica
-{: #softlayer_cli}
+{: #classic-service-commands}
 
 Utilice los mandatos de la infraestructura clásica en la CLI de {{site.data.keyword.cloud_notm}} para configurar y gestionar los servicios de infraestructura.
 
@@ -532,24 +532,24 @@ USO:
    ibmcloud sl command [argumentos...] [opciones...]
 
 MANDATOS:
-   block           Infraestructura Gen1 Almacenamiento en bloque
-   cdn             Infraestructura Gen1 Red de entrega de contenido
-   file            Infraestructura Gen1 Almacenamiento de archivos
-   dns             Infraestructura Gen1 Sistema de nombres de dominio
-   globalip        Infraestructura Gen1 Direcciones IP globales
-   hardware        Infraestructura Gen1 Servidores de hardware
-   image           Infraestructura Gen1 Imágenes de cálculo
-   ipsec           Infraestructura Gen1 VPN IPSEC
-   loadbal         Infraestructura Gen1 Equilibradores de carga
-   security        Infraestructura Gen1 Claves SSH y certificados SSL
-   securitygroup   Infraestructura Gen1 Grupos de seguridad de red
-   subnet          Infraestructura Gen1 Subredes de la red
-   ticket          Infraestructura Gen1 Gestionar incidencias
-   vlan            Infraestructura Gen1 VLAN de la red
-   vs              Infraestructura Gen1 Servidores virtuales
-   order           Infraestructura Gen1 Pedidos
-   user            Infraestructura Gen1 Gestionar usuarios
-   call-api        Llamar puntos finales de API arbitrarios.
+   block           Infraestructura clásica Almacenamiento en bloques
+   cdn             Infraestructura clásica Red de entrega de contenido
+   file            Infraestructura clásica Almacenamiento de archivos
+   dns             Infraestructura clásica Sistema de nombres de dominio
+   globalip        Infraestructura clásica Direcciones IP globales
+   hardware        Infraestructura clásica Servidores de hardware
+   image           Infraestructura clásica Imágenes de cálculo
+   ipsec           Infraestructura clásica VPN IPSEC
+   loadbal         Infraestructura clásica Equilibradores de carga
+   security        Infraestructura clásica Claves SSH y certificados SSL
+   securitygroup   Infraestructura clásica Grupos de seguridad de red
+   subnet          Infraestructura clásica Subredes de la red
+   ticket          Infraestructura clásica Gestionar incidencias
+   vlan            Infraestructura clásica VLAN de la red
+   vs              Infraestructura clásica Servidores virtuales
+   order           Infraestructura clásica Pedidos
+   user            Infraestructura clásica Gestionar usuarios
+   call-api        Llamar a puntos finales de API arbitrarios.
    help            Imprimir mensaje de uso de mandato
 ```
 {: screen}

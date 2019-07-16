@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-21"
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -21,14 +21,12 @@ subcollection: cloud-cli
 La extensión de herramientas de desarrollador de {{site.data.keyword.cloud}} para IDE de JetBrains, que incluye `IntelliJ`, `WebStorm`, `Android Studio`, entre otros, proporciona nuevas entradas de menú para acceder directamente a mandatos {{site.data.keyword.dev_cli_notm}} CLI desde dentro del IDE. Puede acceder rápidamente a un subconjunto de mandatos de `ibmcloud dev` para ambos flujos de trabajo de Docker y Cloud Foundry, incluyendo despliegue de aplicaciones, iniciar/detener/reiniciar apps en {{site.data.keyword.cloud_notm}}, visualización de los registros de app remoto, etc. Todo ello sin tener que abandonar el contexto del editor.
 {: shortdesc}
 
-![Captura de pantalla de IBM Cloud Developer Tools ejecutándose dentro delIDE de WebStorm.](jetbrains.png "Ejemplo de menú de herramientas de desarrollador de {{site.data.keyword.cloud_notm}} que se ejecuta dentro del IDE de WebStorm")
-
-
+![Captura de pantalla de IBM Cloud Developer Tools ejecutándose dentro del IDE de WebStorm.](../images/jetbrains.png "Ejemplo de menú de herramientas de desarrollador de {{site.data.keyword.cloud_notm}} que se ejecuta dentro del IDE de WebStorm")
 
 ## Dependencias
 {: #jetbrains-dependencies}
 
-Para utilizar la extensión de herramientas del desarrollador de {{site.data.keyword.cloud_notm}} para los IDE basados en JetBrains, necesita tener la [CLI de {{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) instalada en el sistema.
+Para utilizar la extensión de herramientas de desarrollador de {{site.data.keyword.cloud_notm}} para los IDE basados en JetBrains, necesita tener la [CLI de {{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-getting-started) instalada en el sistema.
 
 ## Instalación
 {: #jetbrains-installation}
