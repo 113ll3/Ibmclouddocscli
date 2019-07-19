@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-02-26"
 
-keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
+keywords: manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas
 
 subcollection: cloud-cli
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # 리소스 및 리소스 그룹에 대한 작업
 {: #ibmcloud_commands_resource}
 
-리소스 그룹은 사용자 정의할 수 있는 그룹화에서 계정 리소스를 구성하기 위한 방법입니다. 다음 명령을 사용하여 리소스 그룹의 {{site.data.keyword.cloud}} 리소스를 관리하십시오.
+리소스 그룹은 사용자 정의할 수 있는 그룹화에서 계정 리소스를 구성하기 위한 방법입니다. 다음 명령을 사용하여 {{site.data.keyword.cloud}} 리소스 및 리소스 그룹의 리소스를 관리하십시오.
 {: shortdesc}
 
 ## ibmcloud resource groups
@@ -117,7 +117,7 @@ ibmcloud resource group-create example-group
 
 기존 리소스 그룹을 업데이트합니다.
 ```
-ibmcloud resource group-update NAME [-n, --name NEW_NAME] 
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -128,6 +128,8 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME]
   <dd>대상 리소스 그룹의 이름</dd>
   <dt>-n, --name</dt>
   <dd>리소스 그룹의 새 이름</dd>
+  <dt>-q, --quota</dt>
+  <dd>새 할당량 정의의 이름</dd>
   <dt>-f</dt>
   <dd>확인 없이 업데이트 강제 실행</dd>
 </dl>
@@ -137,6 +139,12 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME]
 리소스 그룹 이름 `example-group`을 `trial-group`으로 바꾸기:
 ```
 ibmcloud resource group-update example-group -n trial-group
+```
+{: codeblock}
+
+리소스 그룹 `example-group`의 할당량을 `free`로 변경:
+```
+ibmcloud resource group-update example-group -q free
 ```
 {: codeblock}
 
@@ -215,25 +223,21 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 
 서비스 인스턴스를 나열합니다.
 ```
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--type INSTANCE_TYPE] [-g RESOURCE_GROUP] [--long] [--output FORMAT]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>--service-name <i>SERVICE_NAME</i></dt>
+  <dt>--service-name</dt>
   <dd>소속된 서비스의 이름</dd>
-  <dt>--location <i>LOCATION</i></dt>
+  <dt>--location</dt>
   <dd>위치별 필터링</dd>
-  <dt>--type <i>INSTANCE_TYPE</i></dt>
-  <dd>인스턴스 유형. 지정하지 않으면 `service_instance` 유형이 사용됩니다. 모든 인스턴스 유형을 나열하려면 all을 사용하십시오.</dd>
-  <dt>-g <i>RESOURCE_GROUP</i></dt>
-  <dd>리소스 그룹 이름</dd>
   <dt>--long</dt>
   <dd>출력에 추가 필드 표시</dd>
-  <dt>--output <i>FORMAT</i></dt>
-  <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
 </dl>
 
 <strong>예제</strong>:
@@ -282,7 +286,7 @@ ibmcloud resource service-instance my-service-instance
 
 서비스 인스턴스를 작성합니다.
 ```
-ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVICE_PLAN_NAME LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE]
+ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -292,19 +296,15 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>NAME(필수)</dt>
   <dd>서비스 인스턴스의 이름</dd>
   <dt>SERVICE_NAME 또는 SERVICE_ID(필수)</dt>
-  <dd>서비스의 이름 또는 ID입니다. 서비스 오퍼링을 나열하려면 `ibmcloud catalog service-marketplace`[명령](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace)을 사용하십시오.</dd>
+  <dd>서비스의 이름 또는 ID입니다. 서비스 오퍼링을 나열하려면 `ibmcloud catalog service-marketplace` [명령](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace)을 사용하십시오.</dd>
   <dt>SERVICE_PLAN_NAME 또는 SERVICE_PLAN_ID(필수)</dt>
   <dd>서비스 플랜의 이름 또는 ID</dd>
-  <dt>LOCATION(필수)</dt>
+  <dt>LOCATION</dt>
   <dd>서비스 인스턴스를 작성하는 대상 위치 또는 환경</dd>
-  <dt>-d, --deployment <i>DEPLOYMENT_NAME</i></dt>
-  <dd>배치의 이름</dd>
-  <dt>-p, --parameters <i>@JSONFILE or JSON_STRING</i></dt>
+  <dt>-p, --parameters</dt>
   <dd>서비스 인스턴스를 작성하기 위한 매개변수의 JOSN 문자열 또는 JSON 파일</dd>
-  <dt>-g <i>RESOURCE_GROUP</i></dt>
-  <dd>리소스 그룹 이름</dd>
-  <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>서비스 엔드포인트의 유형. 가능한 값은 'public', 'private', 'public-and-private'입니다.</dd>
+  <dt>-d, --deployment</dt>
+  <dd>배치의 이름</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -320,7 +320,7 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 
 서비스 인스턴스를 업데이트합니다.
 ```
-ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [-f, --force]
+ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -331,16 +331,12 @@ ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE
   <dd>서비스 인스턴스의 이름(ID와 배타적)</dd>
   <dt>ID(필수)</dt>
   <dd>서비스 인스턴스의 ID(NAME과 배타적)</dd>
-  <dt>-n, --name <i>NEW_NAME</i></dt>
+  <dt>-n, --name</dt>
   <dd>새 서비스 인스턴스 이름</dd>
-  <dt>--service-plan-id <i>SERVICE_PLAN_ID</i></dt>
+  <dt>--service-plan-id</dt>
   <dd>새 서비스 플랜 ID</dd>
-  <dt>-p, --parameters <i>@JSON_FILE | JSON_STRING</i></dt>
+  <dt>--parameters @JSON_FILE | JSON_STRING</dt>
   <dd>서비스 인스턴스를 작성하기 위한 매개변수의 JOSN 문자열 또는 JSON 파일</dd>
-  <dt>-g <i>RESOURCE_GROUP</i></dt>
-  <dd>리소스 그룹 이름</dd>
-  <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
-  <dd>서비스 엔드포인트의 유형. 가능한 값은 'public', 'private', 'public-and-private'입니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 업데이트 강제 실행</dd>
 </dl>
@@ -442,7 +438,7 @@ ibmcloud resource bindings my-service-alias my-app
 
 서비스 바인딩을 작성합니다.
 ```
-ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-n BINDING_NAME] [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
+ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -451,16 +447,14 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 <dl>
   <dt>SERVICE_ALIAS_NAME(필수)</dt>
   <dd>서비스 별명 이름</dd>
-  <dt>APP_NAME(필수)</dt>
+  <dt>APP_NAME</dt>
   <dd>CloudFoundry 애플리케이션 이름</dd>
-  <dt>ROLE_NAME(필수)</dt>
+  <dt>ROLE_NAME</dt>
   <dd>사용자 역할의 이름</dd>
-  <dt>--service-id <i>SERVICE_ID</i></dt>
+  <dt>--service-id</dt>
   <dd>역할이 속한 서비스 ID의 UUID 또는 이름</dd>
-  <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
+  <dt>-p, --parameter</dt>
   <dd>매개변수 JSON 파일 또는 JSON 문자열</dd>
-  <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>서비스 엔드포인트의 유형. 가능한 값은 'public', 'private'입니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 작성 강제 실행</dd>
 </dl>
@@ -575,33 +569,29 @@ ibmcloud resource service-key crn:v1:bluemix:public:cloudantnosqldb:us-south:a/5
 
 서비스 키를 작성합니다.
 ```
-ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-g RESOURCE_GROUP] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
+ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>NAME(필수)</dt>
+  <dt>NAME</dt>
   <dd>키의 이름</dd>
-  <dt>ROLE_NAME(필수)</dt>
+  <dt>ROLE_NAME</dt>
   <dd>사용자 역할의 이름</dd>
-  <dt>--instance-id <i>SERVICE_INSTANCE_ID</i></dt>
+  <dt>--instance-id</dt>
   <dd>서비스 인스턴스 ID</dd>
-  <dt>--instance-name <i>SERVICE_INSTANCE_NAME</i></dt>
+  <dt>--instance-name</dt>
   <dd>서비스 인스턴스 이름</dd>
-  <dt>--alias-id <i>SERVICE_ALIAS_ID</i></dt>
+  <dt>--alias-id</dt>
   <dd>서비스 별명 ID</dd>
-  <dt>--alias-name <i>SERVICE_ALIAS_NAME</i></dt>
+  <dt>--alias-name</dt>
   <dd>서비스 별명 이름</dd>
-  <dt>--service-id <i>SERVICE_ID</i></dt>
+  <dt>--service-id</dt>
   <dd>역할이 속한 서비스 ID의 UUID 또는 이름</dd>
-  <dt>-p, --parameters <i>@JSON_FILE | JSON_TEXT</i></dt>
+  <dt>-p, --parameters</dt>
   <dd>매개변수 JSON 파일 또는 JSON 문자열</dd>
-  <dt>-g <i>RESOURCE_GROUP</i></dt>
-  <dd>리소스 그룹 이름</dd>
-  <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>서비스 엔드포인트의 유형. 가능한 값은 'public', 'private'입니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 작성 강제 실행</dd>
 </dl>
@@ -836,9 +826,9 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
 다음 속성을 검색할 수 있습니다.
 
 <dl>
-  <dt>name</dt>
+  <dt>이름</dt>
   <dd>리소스의 사용자 정의 이름입니다.</dd>
-  <dt>region</dt>
+  <dt>지역</dt>
   <dd>리소스가 프로비저닝된 지리적 위치입니다. 예: us-south, us-east, au-syd, eu-gb, eu-de 및 jp-tok.</dd>
   <dt>service_name</dt>
   <dd>'ibmcloud catalog service-marketplace' 출력의 이름 열에 표시되는 서비스의 이름입니다.</dd>
@@ -864,54 +854,54 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
 
 <strong>예제</strong>:
 
-이름이 지정된 텍스트로 시작하는 Cloud Foundry 앱 검색:
+이름이 지정된 텍스트로 시작하는 Cloud Foundry 애플리케이션 검색:
 ```
-ibmcloud resource search "name:my* AND type:cf-application"
+ibmcloud resource search 'name:my* AND type:cf-application'
 ```
 
 지정된 서비스 이름의 Cloud Foundry 서비스 인스턴스 검색:
 ```
-ibmcloud resource search "service_name:messagehub AND type:cf-service-instance"
+ibmcloud resource search 'service_name:messagehub AND type:cf-service-instance'
 ```
 
 지정된 ID의 조직에서 Cloud Foundry 서비스 바인딩 검색:
 ```
-ibmcloud resource search "organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding"
+ibmcloud resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
 ```
 
 지정된 두 지역 중 하나에 있으며 지정된 이름을 가진 Cloud Foundry 영역 검색:
 ```
-ibmcloud resource search "name:dev AND type:cf-space AND region:(us-south OR eu-gb)"
+ibmcloud resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
 ```
 
 지정된 ID를 가진 Cloud Foundry 영역에서 이름에 단어 dev가 포함된 리소스 검색:
 ```
-ibmcloud resource search "name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7"
+ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
 ```
 
 지정된 위치(즉, 미국 남부 지역)에서 리소스 제어기의 리소스 검색:
 ```
-ibmcloud resource search "region:us-south AND family:resource_controller"
+ibmcloud resource search 'region:us-south AND family:resource_controller'
 ```
 
 지정된 ID를 가진 리소스 그룹에서 리소스 또는 별명 검색:
 ```
-ibmcloud resource search "(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)"
+ibmcloud resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
 ```
 
 이름이 기본값인 리소스 그룹 검색:
 ```
-ibmcloud resource search "name:default AND type:resource-group"
+ibmcloud resource search 'name:default AND type:resource-group'
 ```
 
 지정된 서비스 이름에 대한 리소스 바인딩 검색:
 ```
-ibmcloud resource search "service_name:cloud-object-storage AND type:resource-binding"
+ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-binding'
 ```
 
 지정된 클라우드 리소스 이름(CRN)의 리소스 검색:
 ```
-ibmcloud resource search "crn:\"crn:v1:bluemix:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
+ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
 ```
 
 지정된 태그가 있는 리소스 검색:
@@ -922,13 +912,13 @@ ibmcloud resource search "tags:\"mykey:myvalue\""
 
 지정된 ID를 사용하여 클래식 인프라 가상 게스트 리소스 검색(-p classic-infrastructure만 해당됨):
 ```
-ibmcloud resource search "id:12345678 _objectType:SoftLayer_Virtual_Guest"
+ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
 ```
 {: codeblock}
 
 지정된 태그 이름을 사용하여 클래식 인프라 하드웨어 리소스 검색(-p classic-infrastructure만 해당됨):
 ```
-ibmcloud resource search "tagReferences.tag.name:name _objectType:SoftLayer_Hardware"
+ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hardware'
 ```
 {: codeblock}
 
@@ -947,7 +937,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
   <dt>-o, -offset</dt>
   <dd>시작 태그 위치 번호</dd>
   <dt>-l, -limit</dt>
-  <dd>리턴할 태그 수(최대 1000, 기본 100)</dd>
+  <dd>리턴할 태그의 수(최대 10000)</dd>
   <dt>-p; --provider</dt> 
   <dd>클래식 인프라 태그를 검색할 때 classic-infrastructure를 지정합니다.</dd>
   <dt>-d, --details</dt>
@@ -960,7 +950,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
 
 하나 이상의 태그를 리소스에 연결합니다.
 ```
-ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
 ```
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
@@ -968,61 +958,18 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
 <dl>
   <dt>--tag-names(필수)</dt>
   <dd>쉼표로 구분된 태그 이름 목록</dd>
-  <dt>--resource-name</dt>
-  <dd>태그를 연결해야 하는 리소스의 이름입니다. 이 옵션은 클래식 인프라 리소스와 함께 사용될 수 없습니다.</dd>
   <dt>--resource-id</dt>
-  <dd>태그를 연결해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다. 'ibmcloud resource search' 명령을 사용하여 리소스 ID 또는 CRN을 얻을 수 있습니다.</dd>
+  <dd>태그를 연결해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다.</dd>
   <dt>--resource-type</dt>
   <dd>태그를 연결해야 하는 클래식 인프라 리소스의 리소스 유형이며 클래식 인프라 리소스에 태그를 연결하는 경우, 이 매개변수는 필수입니다. --resource-type에 대해 가능한 값은 SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall 및 SoftLayer_Virtual_Guest입니다. </dd>
 </dl>
-
-<strong>예제</strong>:
-
-* `MyTag` 태그를 `MyCluster`라는 Kubernetes 클러스터에 연결하려면 먼저 태그 지정하려는 클러스터의 CRN을 찾으십시오.
-  ```
-  ibmcloud resource search 'type:k8\-cluster AND name:MyCluster'
-  ```
-  {: codeblock}
-
-  다음 예제와 유사한 문자열인 CRN을 적어 두십시오. 
-  ```
-  crn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
-  ```
-  {: screen}
-
-  태그를 연결하려면 다음 명령을 실행하십시오.
-  ```
-  ibmcloud resource tag-attach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a:: 
-  ```
-  {: codeblock}
-
-* `MyTag` 태그를 `MyResource` 리소스 이름에 연결하려면 다음을 수행하십시오.
-  ```
-  ibmcloud resource tag-attach --tag-name MyTag --resource-name  'MyResource'
-  ```
-  {: codeblock}
-  
-  
-* `MyTag` 태그를 `MyVM`이라는 클래식 인프라 가상 게스트에 연결하려면 먼저 태그 지정하려는 가상 게스트의 ID를 찾으십시오.
-  ```
-  ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
-  ```
-  {: codeblock}
-
-  `48373549`와 유사한 문자열인 ID을 적어 두십시오.
-
-  태그를 연결하려면 다음 명령을 실행하십시오.
-  ```
-  ibmcloud resource tag-attach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest  
-  ```
-  {: codeblock}
 
 ## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
 
 하나 이상의 태그를 리소스에서 분리합니다.
 ```
-ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1031,10 +978,8 @@ ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --re
 <dl>
   <dt>--tag-names(필수)</dt>
   <dd>쉼표로 구분된 태그 이름 목록</dd>
-  <dt>--resource-name</dt>
-  <dd>태그를 연결해야 하는 리소스의 이름입니다. 이 옵션은 클래식 인프라 리소스와 함께 사용될 수 없습니다.</dd>
   <dt>--resource-id</dt>
-  <dd>태그를 분리해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다. 'ibmcloud resource search' 명령을 사용하여 리소스 ID 또는 CRN을 얻을 수 있습니다.</dd>
+  <dd>태그를 분리해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다.</dd>
   <dt>--resource-type</dt>
   <dd>태그를 분리해야 하는 클래식 인프라 리소스의 리소스 유형이며 클래식 인프라 리소스에 태그를 연결하는 경우, 이 매개변수는 필수입니다. --resource-type에 대해 가능한 값은 SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall 및 SoftLayer_Virtual_Guest입니다. </dd>
 </dl>

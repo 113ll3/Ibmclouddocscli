@@ -1,10 +1,10 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-27"
 
-keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
+keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
 subcollection: cloud-cli
 
@@ -15,73 +15,57 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:new_window: target="_blank"}
 {:note: .note}
-{:important: .important}
 {:tip: .tip}
 
 # Interface de ligne de commande pour l'administration de {{site.data.keyword.cloud_notm}}
 {: #bluemixadmincli}
 
-Vous pouvez gérer votre environnement {{site.data.keyword.cloud_notm}} local ou {{site.data.keyword.cloud_notm}} dédié en utilisant l'interface de ligne de commande Cloud Foundry avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis un registre LDAP.
+Vous pouvez gérer votre environnement {{site.data.keyword.cloud_notm}} local ou {{site.data.keyword.cloud_notm}} dédié en utilisant l'interface de ligne de commande Cloud Foundry avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis un registre LDAP. Pour plus d'informations sur la gestion de votre compte {{site.data.keyword.cloud_notm}} public, voir [Administration](/docs/account?topic=account-accounts#accounts).
 
-Avant de commencer, installez l'interface de ligne de commande de Cloud Foundry. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}} requiert `cf` 6.11.2 ou version ultérieure. [Téléchargez l'interface de ligne de commande Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
+Avant de commencer, installez l'interface de ligne de commande Cloud Foundry. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}} requiert cf version 6.11.2 ou ultérieure. [Téléchargez l'interface de ligne de commande Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
 
-L'interface de ligne de commande Cloud Foundry n'est pas prise en charge par Cygwin. Utilisez l'interface de ligne de commande Cloud Foundry dans une fenêtre de ligne de commande autre que la fenêtre de ligne de commande Cygwin. 
+**Restriction :** l'interface de ligne de commande Cloud Foundry n'est pas prise en charge par Cygwin. Utilisez-la dans une fenêtre de ligne de commande autre que Cygwin.
 
 L'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}} est utilisée uniquement pour l'environnement {{site.data.keyword.cloud_notm}} local et l'environnement {{site.data.keyword.cloud_notm}} dédié. Elle n'est pas prise en charge par l'environnement {{site.data.keyword.cloud_notm}} public.
 {: note}
 
 ## Ajout du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}}
-{: #add-admin-cli}
 
-Une fois que vous avez installé l'interface de ligne de commande Cloud Foundry, vous pouvez ajouter le plug-in d'interface de ligne de commande d'administration
+Une fois l'interface de ligne de commande Cloud Foundry installée, vous pouvez ajouter
+le plug-in d'interface de ligne de commande d'administration
 {{site.data.keyword.cloud_notm}}.
 
-Si vous avez déjà installé le plug-in d'administration {{site.data.keyword.cloud_notm}}, il peut être nécessaire de le désinstaller, de supprimer le référentiel puis de réinstaller le plug-in pour obtenir les dernières mises à jour.
+Si vous avez déjà installé le plug-in d'administration {{site.data.keyword.cloud_notm}}, il peut être nécessaire de désinstaller le plug-in, de supprimer le référentiel puis de le réinstaller pour obtenir les dernières mises à jour.
 {: tip}
 
 Procédez comme suit pour ajouter le référentiel et installer le plug-in :
 
-1. Pour ajouter le plug-in d'administration {{site.data.keyword.cloud_notm}}, exécutez la commande suivante :
-  ```
-  cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
-  ```
-  {: codeblock}
+<ol>
+<li>Pour ajouter le plug-in d'administration {{site.data.keyword.cloud_notm}}, exécutez la commande suivante :<br/><br/>
+<code>
+cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
+</code><br/><br/>
+</li>
+<li>Pour installer le plug-in de l'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}}, exécutez la commande suivante :<br/><br/>
+<code>
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
+</code>
+</li>
+</ol>
 
-  Vous trouverez la même commande avec le noeud final réel sur la page de l'interface de ligne de commande de la console d'administration, `https://<customer_console_endpoint>.bluemix.net/cli`.
-  {: note}
+Si vous devez désinstaller le plug-in, vous pouvez utiliser les commandes suivantes, puis vous pouvez ajouter le référentiel mis à jour et installer la dernière version du plug-in :
 
-2. Pour installer le plug-in de l'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}}, exécutez la commande suivante :
-  ```
-  cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
-```
-  {: codeblock}
-
-## Désinstallation du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}}
-{: #remove-admin-cli}
-
-Procédez comme suit pour désinstaller le plug-in :
- 
-
-1. Désinstaller le plug-in :
-  ```
-  cf uninstall-plugin IBMCloudAdminCLI
-  ```
-  {: codeblock}
-
-2. Retirer le référentiel de plug-in :
-  ```
-  cf remove-plugin-repo IBMCloudAdmin
-  ```
-  {: codeblock}
-
-Vous pouvez ensuite ajouter le référentiel mis à jour et installer la dernière version du plug-in. 
+* Désinstallez le plug-in : `cf uninstall-plugin IBMCloudAdminCLI`
+* Retirez le référentiel de plug-in : `cf remove-plugin-repo IBMCloudAdmin`
 
 ## Utilisation du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}}
-{: #using-admin-cli}
 
-Vous pouvez utiliser le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.cloud_notm}} pour ajouter ou retirer des utilisateurs, affecter des utilisateurs à des organisations ou annuler leur affectation, et effectuer d'autres tâches de gestion.
+Vous pouvez utiliser le plug-in d'interface de ligne de commande d'administration
+{{site.data.keyword.cloud_notm}} pour ajouter ou retirer des utilisateurs, affecter des
+utilisateurs à des organisations ou annuler leur affectation, et effectuer d'autres tâches de gestion.
 
-Pour afficher la liste des commandes, exécutez la commande suivante :
+Pour afficher la liste des commandes, exécutez la
+commande suivante :
 ```
 cf plugins
 ```
@@ -90,29 +74,29 @@ cf plugins
 Pour obtenir de l'aide supplémentaire sur une commande, utilisez l'option `-help`.
 
 ### Connexion à {{site.data.keyword.cloud_notm}} et ouverture de session
-{: #connecting-ibm-cloud}
 
-1. Pour vous connecter au noeud final d'API {{site.data.keyword.cloud_notm}}, exécutez la commande suivante :
-  ```
-  cf api api.us-south.cf.cloud.ibm.com
-  ```
-  {: codeblock}
-  
-  Même si les noeuds finaux de l'API Cloud Foundry `api.*.bluemix.net` existants sont toujours disponibles, vous pouvez mettre à jour les scripts et l'automatisation d'infrastructure afin d'utiliser les noeuds finaux d'API Cloud Foundry mis à jour suivants pour votre région :
+Pour pouvoir utiliser le plug-in d'interface de ligne de commande d'administration, vous devez vous connecter et ouvrir une
+session, si ce n'est pas déjà fait.
 
-  * api.us-south.cf.cloud.ibm.com (auparavant api.ng.bluemix.net)
-  * api.eu-gb.cf.cloud.ibm.com (auparavant api.eu-gb.bluemix.net)
-  * api.us-east.cf.cloud.ibm.com (auparavant api.us-east.bluemix.net)
-  * api.eu-de.cf.cloud.ibm.com (auparavant api.eu-de.bluemix.net)
-  * api.au-syd.cf.cloud.ibm.com (auparavant api.au-syd.bluemix.net)
-
-  Vous trouverez l'adresse URL correcte dans la page des informations et des ressources de la console d'administration. L'adresse URL est affichée dans la section Informations sur l'API, dans la zone **URL de l'API**.
-
-2. Connectez-vous à {{site.data.keyword.cloud_notm}} en exécutant la commande suivante :
-  ```
-  cf login
-  ```
-  {: codeblock}
+<ol>
+<li>Pour vous connecter au noeud final d'API {{site.data.keyword.cloud_notm}}, exécutez la commande suivante :<br/><br/>
+<code>
+cf api api.ng.bluemix.net
+</code>
+<dl class="parml">
+<dt class="pt dlterm">&lt;sous-domaine&gt;</dt>
+<dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.cloud_notm}}.<br />
+</dd>
+</dl>
+<p>Vous trouverez l'adresse URL correcte dans la page des informations et des ressources de la console d'administration. L'adresse URL est affichée dans la section Informations sur
+l'API, dans la zone **URL de l'API**.</p>
+</li>
+<li>Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de la commande suivante :<br/><br/>
+<code>
+cf login
+</code>
+</li>
+</ol>
 
 ## Administration des utilisateurs
 {: #admin_users}
@@ -120,24 +104,28 @@ Pour obtenir de l'aide supplémentaire sur une commande, utilisez l'option `-hel
 ### Ajout d'un utilisateur
 {: #admin_add_user}
 
-Pour ajouter un utilisateur à votre environnement {{site.data.keyword.cloud_notm}} à partir du registre d'utilisateurs de votre environnement, utilisez la commande suivante :
+Pour ajouter un utilisateur à votre environnement {{site.data.keyword.cloud_notm}} à partir du registre d'utilisateurs
+de votre environnement, utilisez la commande suivante :
 ```
 cf ba add-user <user_name> <organisation> <prénom> <nom>
 ```
 {: codeblock}
 
-Pour ajouter un utilisateur à une organisation spécifique, vous devez être administrateur et disposer du droit users.write (ou Superuser). Si vous êtes responsable de l'organisation, un superutilisateur qui exécute la commande **`enable-managers-add-users`** peut également vous accorder la capacité d'ajouter des utilisateurs à votre organisation. Pour plus d'informations, voir [Permettre aux responsables d'ajouter des utilisateurs](#clius_emau).
+Pour ajouter un utilisateur à une organisation spécifique, vous devez être **administrateur** et disposer du droit **users.write** (ou **Superuser**). Si vous êtes responsable de l'organisation, un superutilisateur qui exécute la commande **enable-managers-add-users** peut également vous accorder la capacité d'ajouter des utilisateurs à votre organisation. Pour plus d'informations, voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau).
 
-| Option | Description | 
-| -------| ------------|
-| _userName_ | Nom de l'utilisateur dans le registre LDAP. |
-| _organization_ | Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}} à laquelle ajouter l'utilisateur. |
-| _firstName_ | Prénom de l'utilisateur à ajouter à l'organisation. | 
-| _lastName_ | Nom de l'utilisateur à ajouter à l'organisation. | 
-{: caption="Tableau 1. Options de la commande cf ba add-user" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dd class="pd">Nom de l'utilisateur dans le registre LDAP.</dd>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}}
+à laquelle ajouter l'utilisateur.</dd>
+<dt class="pt dlterm">&lt;first_name&gt;</dt>
+<dd class="pd">Prénom de l'utilisateur à ajouter à l'organisation.</dd>
+<dt class="pt dlterm">&lt;last_name&gt;</dt>
+<dd class="pd">Nom de l'utilisateur à ajouter à l'organisation.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba au`** comme alias pour le nom de commande plus long **`ba add-user`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba au** comme alias pour le nom de commande plus long **ba add-user**.
 
 ### Invitation d'un utilisateur depuis {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_invite_public}
@@ -148,31 +136,34 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 ```
 {: pre}
 
-Pour ajouter des utilisateurs d'environnement dédié à votre compte public {{site.data.keyword.cloud_notm}}, vous devez être administrateur du compte dédié.
+Pour ajouter des utilisateurs d'environnement dédié à votre compte public {{site.data.keyword.cloud_notm}}, vous devez être **administrateur** du compte dédié.
 
-| Option | Description | 
-| -------| ------------|
-| -userid | Si vous invitez un utilisateur unique, cette entrée contient l'e-mail de cet utilisateur. |
-| -organization | Si vous invitez tous les utilisateurs qui se trouvent actuellement dans une organisation de compte dédié, cette entrée contient l'ID de cette organisation. |
-| -apikey | Clé d'API pour inviter des utilisateurs dans le compte public. Doit être générée par l'administrateur du compte public.| 
-| -public_org_id | ID de l'organisation de compte public dans laquelle vous invitez des utilisateurs. | 
-{: caption="Tableau 2. Options de la commande cf ba invite-users-to-public" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_email&gt;</dt>
+<dd class="pd">Si vous invitez un utilisateur unique, cette entrée contient l'e-mail de cet utilisateur.</dd>
+<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
+<dd class="pd">Si vous invitez tous les utilisateurs qui se trouvent actuellement dans une organisation de compte dédié, cette entrée contient l'ID de cette organisation.</dd>
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">Clé d'API pour inviter des utilisateurs dans le compte public. Doit être générée par l'utilisateur <b>Admin</b> du compte public.</dd>
+<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
+<dd class="pd">ID de l'organisation de compte public dans laquelle vous invitez des utilisateurs.</dd>
+</dl>
 
 ### Etablissement de la liste des utilisateurs invités depuis {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-Si vous avez invité des utilisateurs d'un environnement dédié dans votre compte {{site.data.keyword.Bluemix_notm}} à l'aide de la [commande **`invite-users-to-public`**](#admin_dedicated_invite_public), vous pouvez répertorier les utilisateurs de votre compte pour voir leur statut d'invitation. Les utilisateurs invités qui ont un IBMid existant possèdent le statut ACTIF. Les utilisateurs invités ne disposant pas d'un IBMid existant possèdent le statut EN ATTENTE ou ACTIF selon qu'ils ont ou non déjà accepté l'invitation au compte. Pour répertorier les utilisateurs de votre compte {{site.data.keyword.Bluemix_notm}} :
+Si vous avez invité des utilisateurs d'un environnement dédié dans votre compte {{site.data.keyword.Bluemix_notm}} avec la [commande `invite-users-to-public`](#admin_dedicated_invite_public), vous pouvez répertorier les utilisateurs de votre compte pour voir leur statut d'invitation. Les utilisateurs invités qui ont un IBMid existant ont un statut `ACTIF`. Les utilisateurs invités ne disposant pas d'un IBMid existant ont le statut `EN ATTENTE` ou `ACTIF` selon qu'ils aient ou non déjà accepté l'invitation au compte. Pour répertorier les utilisateurs de votre compte {{site.data.keyword.Bluemix_notm}} :
 
 ```
 cf ba invite-users-status -apikey=<public_api_key>
 ```
 {: pre}
 
-Pour ajouter des utilisateurs d'environnement dédié à votre compte public {{site.data.keyword.Bluemix_notm}}, vous devez être administrateur du compte dédié.
+Pour ajouter des utilisateurs d'environnement dédié à votre compte public {{site.data.keyword.Bluemix_notm}}, vous devez être **administrateur** du compte dédié.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
-<dd class="pd">Clé d'API qui a été utilisée pour inviter les utilisateurs dans le compte. Doit être générée par l'administrateur du compte public.</dd>
+<dd class="pd">Clé d'API qui a été utilisée pour inviter les utilisateurs dans le compte. Doit être générée par l'utilisateur <b>Admin</b> du compte public.</dd>
 </dl>
 
 <!-- staging-only commands start. Live for interconnect -->
@@ -187,16 +178,20 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| -name | Nom de l'utilisateur. |
-| -permission | Droit accordé à l'utilisateur. Les droits d'accès disponibles sont : admin (ou superuser), login (ou basic), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans la même requête. |
-| -organization | Nom de l'organisation à laquelle appartient l'utilisateur. Vous ne pouvez pas utiliser ce paramètre avec le paramètre permission dans la même requête. | 
-| -role | Rôle de l'organisation affecté à l'utilisateur. Les rôles disponibles sont auditors, managers et billing_managers. Vous devez spécifier l'organisation avec ce paramètre. | 
-{: caption="Tableau 3. Options de la commande cf ba search-users" caption-side="top"}
+<dl class="parml">
 
-Vous pouvez aussi utiliser **`ba su`** comme alias pour le nom de commande plus long **`ba search-users`**.
-{: tip}
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
+<dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}. </dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">Droit accordé à l'utilisateur. Les droits d'accès disponibles sont : admin (ou superuser), login (ou basic), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans la même requête. </dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">Nom de l'organisation à laquelle appartient l'utilisateur. Vous ne pouvez pas utiliser ce paramètre avec le paramètre permission dans la même requête.</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">Rôle de l'organisation affecté à l'utilisateur. Les rôles disponibles sont : auditors, managers et billing_managers. Vous devez spécifier l'organisation avec ce paramètre.</dd>
+
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba su** comme alias pour le nom de commande plus long **ba search-users**.
 
 ### Définition des droits d'un utilisateur
 {: #admin_setperm_user}
@@ -207,17 +202,18 @@ cf ba set-permissions <user_name> <droit> <accès>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _userName_ | Nom de l'utilisateur. |
-| _permission_ | Permet de définir les droits qui sont affectés à l'utilisateur. Les droits d'accès disponibles sont : admin (ou superuser), login (ou basic), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans la même requête. |
-| _access_ | Pour les droits catalog, reports ou user, vous devez aussi définir le niveau d'accès `read` ou `write`. |  
-{: caption="Tableau 4. Options de la commande cf ba set-permissions" caption-side="top"}
-
 Vous ne pouvez définir qu'un droit à la fois.
 
-Vous pouvez aussi utiliser **`ba sp`** comme alias pour le nom de commande plus long **`ba set-permissions`**.
-{: tip}
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt class="pt dlterm">&lt;permission&gt;</dt>
+<dd class="pd">Définissez les droits pour l'utilisateur : Admin (l'alternative disponible est Superuser), Connexion (l'alternative disponible est De base), Catalogue (accès en lecture ou en écriture), Rapports (accès en lecture ou en écriture) ou Utilisateurs (accès en lecture ou en écriture).</dd>
+<dt class="pt dlterm">&lt;access&gt;</dt>
+<dd class="pd">Pour les droits Catalogue, Rapports ou Utilisateurs, vous devez aussi définir le niveau d'accès <code>read</code> (lecture) ou <code>write</code> (écriture).</dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba sp** comme alias pour le nom de commande plus long **ba set-permissions**.
 
 <!-- staging-only commands end -->
 
@@ -238,34 +234,31 @@ cf ba remove-user <user_name>
 
 </dl>
 
-Vous pouvez aussi utiliser **`ba ru`** comme alias pour le nom de commande plus long **`ba remove-user`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba ru** comme alias pour le nom de commande plus long **ba remove-user**.
 
-### Procédure visant à permettre aux responsables d'ajouter des utilisateurs
+### Permettre aux responsables d'ajouter des utilisateurs
 {: #clius_emau}
 
-Si vous disposez du droit Superuser dans votre environnement {{site.data.keyword.Bluemix_notm}}, vous pouvez permettre aux responsables de l'organisation d'ajouter des utilisateurs aux organisations qu'ils gèrent. Pour permettre aux responsables d'ajouter des utilisateurs, entrez la commande suivante :
+Si vous disposez du droit **Superuser** dans votre environnement {{site.data.keyword.Bluemix_notm}}, vous pouvez permettre aux responsables de l'organisation d'ajouter des utilisateurs aux organisations qu'ils gèrent. Pour permettre aux responsables d'ajouter des utilisateurs, entrez la commande suivante :
 
 ```
 cf ba enable-managers-add-users
 ```
 {: codeblock}
 
-Vous pouvez aussi utiliser **`ba emau`** comme alias pour le nom de commande plus long **`ba enable-managers-add-users`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba emau** comme alias pour le nom de commande plus long **ba enable-managers-add-users**.
 
-### Procédure visant à empêcher les responsables d'ajouter des utilisateurs
+### Empêcher les responsables d'ajouter des utilisateurs
 {: #clius_dmau}
 
-Si des responsables de l'organisation sont autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement {{site.data.keyword.Bluemix_notm}} via la commande **`enable-managers-add-users`** et que vous disposez du droit Superuser, vous pouvez retirer cette fonction. Pour empêcher les responsables d'ajouter des utilisateurs, utilisez la commande suivante :
+Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement {{site.data.keyword.Bluemix_notm}} avec la commande **enable-managers-add-users** et que vous disposez du droit **Superuser**, vous pouvez supprimer cette capacité. Pour empêcher les responsables d'ajouter des utilisateurs, utilisez la commande suivante :
 
 ```
 cf ba disable-managers-add-users
 ```
 {: codeblock}
 
-Vous pouvez aussi utiliser **`ba dmau`** comme alias pour le nom de commande plus long **`ba disable-managers-add-users`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba dmau** comme alias pour le nom de commande plus long **ba disable-managers-add-users**.
 
 ## Administration des organisations
 {: #admin_orgs}
@@ -280,14 +273,15 @@ cf ba create-org <organisation> <responsable>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _organization_ |Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}} à ajouter. |
-| _manager_ | Nom d'utilisateur du responsable de l'organisation. |
-{: caption="Tableau 5. Options de la commande cf ba create-org" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
+à ajouter.</dd>
+<dt class="pt dlterm">&lt;manager&gt;</dt>
+<dd class="pd">Nom d'utilisateur du responsable de l'organisation.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba co`** comme alias pour le nom de commande plus long **`ba create-org`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba co** comme alias pour le nom de commande plus long **ba create-org**.
 
 ### Suppression d'une organisation
 {: #admin_delete_org}
@@ -305,8 +299,7 @@ cf ba delete-org <organization>
 à supprimer.</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba do`** comme alias pour le nom de commande plus long **`ba delete-org`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba do** comme alias pour le nom de commande plus long **ba delete-org**.
 
 ### Affectation d'un utilisateur à une organisation
 {: #admin_ass_user_org}
@@ -318,15 +311,17 @@ cf ba set-org <user_name> <organisation> [<rôle>]
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _userName_ | Nom de l'utilisateur. |
-| _organization_ | Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}} à laquelle affecter l'utilisateur. |
-| _role_ | Rôle de l'utilisateur. Les valeurs valides sont `OrgManager`, `BillingManager`, `OrgAuditor`. Pour obtenir des descriptions de rôle, voir [Rôles](/docs/iam?topic=iam-userroles#userroles). |  
-{: caption="Tableau 6. Options de la commande cf ba set-org" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.cloud_notm}}.</dd>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}} à laquelle affecter l'utilisateur.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">Voir [Rôles](/docs/iam?topic=iam-userroles#userroles) pour prendre connaissance des rôles utilisateur
+{{site.data.keyword.cloud_notm}} et pour des descriptions.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba so`** comme alias pour le nom de commande plus long **`ba set-org`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba so** comme alias pour le nom de commande plus long **ba set-org**.
 
 ### Annulation de l'affectation d'un utilisateur à une organisation
 {: #admin_unass_user_org}
@@ -338,15 +333,33 @@ cf ba unset-org <user_name> <organisation> [<rôle>]
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _userName_ | Nom de l'utilisateur. |
-| _organization_ | Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}}. |
-| _role_ | Rôle de l'utilisateur. Les valeurs valides sont `OrgManager`, `BillingManager`, `OrgAuditor`. Pour obtenir des descriptions de rôle, voir [Rôles](/docs/iam?topic=iam-userroles#userroles). |  
-{: caption="Tableau 7. Options de la commande cf ba unset-org" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.cloud_notm}}.</dd>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}} à laquelle affecter l'utilisateur.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">Pour connaître les rôles utilisateur {{site.data.keyword.cloud_notm}} ainsi que leur description, voir [Affectation de rôles](/docs/iam?topic=iam-userroles#userroles).</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba uo`** comme alias pour le nom de commande plus long **`ba unset-org`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba uo** comme alias pour le nom de commande plus long **ba unset-org**.
+
+#### Affectation de rôles
+
+<dl class="parml">
+<dt class="pt dlterm">OrgManager</dt>
+<dd class="pd">Responsable de l'organisation. Un responsable de l'organisation peut effectuer les opérations suivantes :
+<ul>
+<li>Créer ou supprimer des espaces dans l'organisation.</li>
+<li>Inviter des utilisateurs dans l'organisation et gérer les utilisateurs.</li>
+<li>Gérer les domaines de l'organisation.</li>
+</ul>
+</dd>
+<dt class="pt dlterm">BillingManager</dt>
+<dd class="pd">Responsable de la facturation. Un responsable de la facturation peut afficher des informations sur l'utilisation des contextes d'exécution et des services pour l'organisation.</dd>
+<dt class="pt dlterm">OrgAuditor</dt>
+<dd class="pd">Auditeur de l'organisation. Un auditeur de l'organisation peut afficher le contenu des applications et des services dans l'espace.</dd>
+</dl>
 
 ### Définition d'un quota pour une organisation
 {: #admin_set_org_quota}
@@ -358,15 +371,15 @@ cf ba set-quota <organisation> <plan>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _organization_ | Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}}
-pour laquelle définir le quota. |
-| _plan_ | Plan d'établissement des quotas pour une organisation. |  
-{: caption="Tableau 8. Options de la commande cf ba set-quota" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
+pour laquelle définir le quota.</dd>
+<dt class="pt dlterm">&lt;plan&gt;</dt>
+<dd class="pd">Plan d'établissement des quotas pour une organisation.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba sq`** comme alias pour le nom de commande plus long **`ba set-quota`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba sq** comme alias pour le nom de commande plus long **ba set-quota**.
 
 
 ### Recherche des quotas de conteneur d'une organisation
@@ -384,8 +397,8 @@ cf ibmcloud-admin containers-quota <organisation>
 <dd class="pd">Nom ou ID de l'organisation dans IBM Cloud. Ce paramètre est obligatoire.</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba cq`** comme alias pour le nom de commande plus long **`ibmcloud-admin containers-quota`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba cq** comme alias pour le nom de commande
+plus long **ibmcloud-admin containers-quota**.
 
 ### Définition des quotas de conteneur pour une organisation
 {: #admin_set_containquotas}
@@ -397,16 +410,38 @@ cf ibmcloud-admin set-containers-quota <organisation> <options>
 ```
 {: codeblock}
 
-Vous pouvez inclure plusieurs options, mais vous devez en indiquer au moins une. 
-{: note}
+**Remarque** : Vous pouvez inclure plusieurs options, mais vous devez en indiquer au moins une.
 
-| Option | Description | 
-| -------| ------------|
-| _organization_ | Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}} pour laquelle définir le quota. |
-| _options_ |Les options sont **`floating-ips-max value`** (nom abrégé **`fim`**), **`floating-ips-space-default value`** (nom abrégé **`fisd`**), **`memory-max value`** (nom abrégé **`mm`**), **`memory-space-default value`** (nom abrégé **`msd`**) ou **`image-limit value`** (nom abrégé **`il`**). La valeur doit être un entier.  |  
-{: caption="Tableau 9. Options de la commande cf ibmcloud-admin set-containers-quota" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou ID de l'organisation dans IBM Cloud. Ce paramètre est obligatoire.</dd>
+<dt class="pt dlterm">&lt;options&gt;</dt>
+<dd class="pd">Incluez au moins l'une des options suivantes, dont la valeur doit être un entier :
+<ul>
+<li>floating-ips-max &lt;valeur&gt;</li>
+<li>floating-ips-space-default &lt;valeur&gt;</li>
+<li>memory-max &lt;valeur&gt;</li>
+<li>memory-space-default &lt;valeur&gt;</li>
+<li>image-limit &lt;valeur&gt;</li>
+</ul>
+</dd>
+</dl>
 
-Vous pouvez, si vous le souhaitez, fournir un fichier contenant des paramètres de configuration spécifiques dans un objet JSON valide. Si vous utilisez l'option **`-file`**, elle prévaut sur les autres options qui sont ignorées. Pour indiquer un fichier au lieu des options, entrez la commande suivante :
+**Astuce :** vous pouvez aussi utiliser les noms abrégés suivants comme alias des noms d'option plus longs :
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;valeur&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;valeur&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;valeur&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;valeur&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;valeur&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+Vous pouvez, si vous le souhaitez, fournir un fichier contenant des paramètres de configuration spécifiques dans un objet JSON valide. Si vous utilisez l'option **-file**, elle prévaut sur les autres options qui sont ignorées. Pour indiquer un fichier au lieu des options, entrez la commande suivante :
 
 ```
 cf ibmcloud-admin set-containers-quota <organisation> <-file file_path_JSON>
@@ -426,8 +461,8 @@ Le fichier JSON doit être au format indiqué dans l'exemple suivant :
 ```
 {: codeblock}
 
-Vous pouvez aussi utiliser **`ba scq`** comme alias pour le nom de commande plus long **`ibmcloud-admin set-containers-quota`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba scq** comme alias pour le nom de commande
+plus long **ibmcloud-admin set-containers-quota**.
 
 ## Administration d'espaces
 {: #admin_spaces}
@@ -442,14 +477,14 @@ cf ibmcloud-admin create-space <organization> <space_name>
 
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _organization_ | Nom ou identificateur global unique de l'organisation à laquelle ajouter l'espace. |
-| _spaceName_ | Nom de l'espace que vous ajoutez à l'organisation.|  
-{: caption="Tableau 10. Options de la commande cf ibmcloud-admin create-space" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'espace doit être ajouté.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">Nom de l'espace qui doit être créé dans l'organisation.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba cs`** comme alias pour le nom de commande plus long **`ba create-space`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba cs** comme alias pour le nom de commande plus long **ba create-space**.
 
 ### Suppression d'un espace dans l'organisation
 
@@ -461,14 +496,14 @@ cf ibmcloud-admin delete-space <organization> <space_name>
 
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _organization_ | Nom ou identificateur global unique (GUID) de l'organisation dont l'espace doit être retiré.|
-| _spaceName_ | Nom de l'espace que vous retirez de l'organisation.|  
-{: caption="Tableau 11. Options de la commande cf ibmcloud-admin delete-space" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation dont l'espace doit être retiré.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">Nom de l'espace qui doit être retiré de l'organisation.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba cs`** comme alias pour le nom de commande plus long **`ba delete-space`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba cs** comme alias pour le nom de commande plus long **ba delete-space**.
 
 ### Ajout d'un utilisateur à un espace avec un rôle
 
@@ -480,16 +515,18 @@ cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _organization_ |Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'utilisateur est ajouté.|
-| _spaceName_ |Nom de l'espace auquel l'utilisateur est ajouté.|
-| _userName_ | Nom de l'utilisateur. |
-| _role_ | Rôle de l'utilisateur. Les valeurs valides sont `Manager`, `Developer` ou `Auditor`. |  
-{: caption="Tableau 12. Options de la commande cf ibmcloud-admin set-space" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'utilisateur doit être ajouté.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">Nom de l'espace auquel l'utilisateur doit être ajouté.</dd>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dd class="pd">Nom de l'utilisateur qui doit être ajouté.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">Rôle de l'utilisateur qui doit être affecté. La valeur peut être Responsable, Développeur ou Auditeur. Pour connaître les rôles utilisateur et les descriptions {{site.data.keyword.Bluemix_notm}} dans un espace, voir [Affectation de rôles](/docs/iam?topic=iam-userroles#userroles).</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba ss`** comme alias pour le nom de commande plus long **`ba set-space`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba ss** comme alias pour le nom de commande plus long **ba set-space**.
 
 
 ### Retrait du rôle d'un utilisateur dans un espace
@@ -502,18 +539,20 @@ cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _organization_ |Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'utilisateur appartient. |
-| _spaceName_ |Nom de l'espace auquel l'utilisateur appartient. |
-| _userName_ | Nom de l'utilisateur. |
-| _role_ | Rôle de l'utilisateur. Les valeurs valides sont `Manager`, `Developer` ou `Auditor`. |  
-{: caption="Tableau 13. Options de la commande cf ibmcloud-admin unset-space" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'utilisateur doit être ajouté.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">Nom de l'espace auquel l'utilisateur doit être ajouté.</dd>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dd class="pd">Nom de l'utilisateur qui doit être ajouté.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">Rôle de l'utilisateur qui doit être affecté. La valeur peut être Responsable, Développeur ou Auditeur. Pour connaître les rôles utilisateur et les descriptions {{site.data.keyword.cloud_notm}} dans un espace, voir [Affectation de rôles](/docs/iam?topic=iam-userroles#userroles).</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba us`** comme alias pour le nom de commande plus long **`ba unset-space`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba us** comme alias pour le nom de commande plus long **ba unset-space**.
 
-## Administration du catalogue
+## Administration de catalogue
 {: #admin_catalog}
 
 ### Activation des services pour toutes les organisations
@@ -531,8 +570,7 @@ cf ba enable-service-plan <plan_identifier>
 <dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service sur la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba esp`** comme alias pour le nom de commande plus long **`ba enable-service-plan`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba esp** comme alias pour le nom de commande plus long **ba enable-service-plan**.
 
 ### Désactivation des services pour toutes les organisations
 {: #admin_dis_service_org}
@@ -549,46 +587,50 @@ cf ba disable-service-plan <plan_identifier>
 <dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba dsp`** comme alias pour le nom de commande plus long **`ba disable-service-plan`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba dsp** comme alias pour le nom de commande plus long **ba
+disable-service-plan**.
 
 ### Ajout de la visibilité d'un service pour les organisations
 {: #admin_addvis_service_org}
 
-Vous pouvez ajouter une organisation dans la liste des organisations pouvant voir un service spécifique dans le catalogue {{site.data.keyword.Bluemix_notm}}. Pour permettre à une organisation de voir un service spécifique dans le catalogue, entrez la commande suivante :
+Vous pouvez ajouter une organisation dans la liste des organisations pouvant voir un service spécifique dans le catalogue {{site.data.keyword.Bluemix_notm}}. Pour permettre à une organisation de voir un service spécifique dans le catalogue {{site.data.keyword.Bluemix_notm}}, entrez la commande suivante :
 
 ```
 cf ba add-service-plan-visibility <plan_identifier> <organisation>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _planIdentifier_ | Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. |
-| _organization_ | Nom ou identificateur global unique de l'organisation à ajouter à la liste de visibilité du service.|  
-{: caption="Tableau 14. Options de la commande cf ba add-service-plan-visibility" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
+à ajouter à la liste de visibilité du service.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba aspv`** comme alias pour le nom de commande plus long **`ba add-service-plan-visibility`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba aspv** comme alias pour le nom de commande plus long **ba
+add-service-plan-visibility**.
 
 ### Suppression de la visibilité d'un service pour les organisations
 {: #admin_remvis_service_org}
 
-Vous pouvez retirer une organisation de la liste des organisations pouvant voir un service spécifique dans le catalogue {{site.data.keyword.Bluemix_notm}}. Afin de supprimer la visibilité d'un service dans le catalogue pour une organisation, entrez la commande suivante :
+Vous pouvez retirer une organisation de la liste des organisations pouvant voir un service spécifique dans le catalogue {{site.data.keyword.Bluemix_notm}}. Afin de supprimer la visibilité d'un service dans le catalogue {{site.data.keyword.Bluemix_notm}} pour une organisation, entrez la commande suivante :
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organisation>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _planIdentifier_ | Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. |
-| _organization_ |Nom ou identificateur global unique de l'organisation à retirer de la liste de visibilité du service.|  
-{: caption="Tableau 15. Options de la commande cf ba remove-service-plan-visibility" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
+à retirer de la liste de visibilité du service.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba rspv`** comme alias pour le nom de commande plus long **`ba remove-service-plan-visibility`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba rspv** comme alias pour le nom de commande plus long **ba
+remove-service-plan-visibility**.
 
 ### Edition de la visibilité d'un service pour les organisations
 {: #admin_editvis_service_org}
@@ -602,14 +644,16 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 Cette commande remplace les services visibles existants pour les organisations spécifiées par le service que vous indiquez dans la commande.
 
-| Option | Description | 
-| -------| ------------|
-| _planIdentifier_ | Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. |
-| _organization_ | Nom ou identificateur global unique de l'organisation pour laquelle ajouter la visibilité. Vous pouvez activer la visibilité du service pour plusieurs organisations en entrant des noms ou des identificateurs globaux uniques supplémentaires dans la commande. |  
-{: caption="Tableau 16. Options de la commande cf ba edit-service-plan-visibilities" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
+pour laquelle ajouter la visibilité. Vous pouvez activer la visibilité du service pour plusieurs organisations en entrant des noms ou des identificateurs globaux uniques supplémentaires dans la commande.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba espv`** comme alias pour le nom de commande plus long **`ba edit-service-plan-visibility`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba espv** comme alias pour le nom de commande plus long **ba
+edit-service-plan-visibility**.
 
 ## Administration des rapports
 {: #admin_add_report}
@@ -625,18 +669,23 @@ cf ba add-report <catégorie> <date> <PDF|TXT|LOG> <RTF>
 {: codeblock}
 
 Si vous disposez de droits d'accès en écriture pour les rapports, vous pouvez créer une nouvelle catégorie et ajouter un rapport en utilisant l'un des formats admis pour vos utilisateurs. Entrez le nom de la nouvelle catégorie pour le paramètre
-**`catégorie`** ou ajoutez votre nouveau rapport à une catégorie existante.
+`catégorie` ou ajoutez votre nouveau rapport à une catégorie existante.
 
-| Option | Description | 
-| -------| ------------|
-| _category_ | Catégorie du rapport. Si le nom comporte un espace, placez-le entre guillemets.|
-| _date_ | Date du rapport au format AAAAMMJJ. |  
-| _filePath_ | Chemin d'accès au rapport au format PDF, au fichier texte ou au fichier journal à télécharger. |
-| _RTF_ | Option permettant d'inclure une version RTF (Rich Text Format) du document PDF. Elle ne s'applique que si vous avez inclus un chemin d'accès au rapport au format PDF. La version RTF est utilisée pour l'indexation et la recherche. |
-{: caption="Tableau 17. Options de la commande cf ba add-report" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;category&gt;</dt>
+<dd class="pd">Catégorie du rapport. Si le nom comporte un espace, placez-le
+entre guillemets.</dd>
+<dt class="pt dlterm">&lt;date&gt;</dt>
+<dd class="pd">Date du rapport au format <samp class="ph codeph">AAAAMMJJ</samp>.</dd>
+<dt class="pt dlterm">&lt;PDF|TXT|LOG&gt;</dt>
+<dd class="pd">Chemin d'accès au rapport au format PDF, au fichier texte ou au fichier journal à télécharger.</dd>
+<dt class="pt dlterm">&lt;RTF&gt;</dt>
+<dd class="pd">Option permettant d'inclure une version RTF (Rich Text Format) du document PDF. Elle ne s'applique que si vous avez inclus un chemin d'accès au rapport
+au format PDF. La version RTF est utilisée pour l'indexation et la recherche.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba ar`** comme alias pour le nom de commande plus long **`ba add-report`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba ar** comme alias pour le nom de commande plus long **ba
+add-report**.
 
 ### Suppression de rapports
 {: #admin_del_report}
@@ -648,15 +697,18 @@ cf ba delete-report <catégorie> <date> <nom>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _category_ | Catégorie du rapport. Si le nom comporte un espace, placez-le entre guillemets.|
-| _date_ | Date du rapport au format AAAAMMJJ. |  
-| _name_ | Nom du rapport. |
-{: caption="Tableau 18. Options de la commande cf ba delete-report" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;category&gt;</dt>
+<dd class="pd">Catégorie du rapport. Si le nom comporte un espace, placez-le
+entre guillemets.</dd>
+<dt class="pt dlterm">&lt;date&gt;</dt>
+<dd class="pd">Date du rapport au format <samp class="ph codeph">AAAAMMJJ</samp>.</dd>
+<dt class="pt dlterm">&lt;name&gt;</dt>
+<dd class="pd">Nom du rapport.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba d`r** comme alias pour le nom de commande plus long **`ba delete-report`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba dr** comme alias pour le nom de commande plus long **ba
+delete-report**.
 
 ### Extraction de rapports
 {: #admin_retr_report}
@@ -673,8 +725,7 @@ cf ba retrieve-report <search>
 <dd class="pd">Nom de fichier du rapport. Si le nom comporte un espace, placez-le entre guillemets.</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba rr`** comme alias pour le nom de commande plus long **`ba retrieve-report`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba rr** comme alias pour le nom de commande plus long **ba retrieve-report**.
 
 ## Affichage des informations relatives aux mesures des ressources
 {: #cliresourceusage}
@@ -687,8 +738,7 @@ pouvez consulter un récapitulatif des ressources physiques et réservées dispo
 cf ba resource-metrics
 ```
 
-Vous pouvez aussi utiliser **`ba rsm`** comme alias pour le nom de commande plus long **`ba resource-metrics`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba rsm** comme alias pour le nom de commande plus long **ba resource-metrics**.
 
 ## Affichage de l'historique relatif aux mesures des ressources
 {: #cliresourceusagehistory}
@@ -700,26 +750,33 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| --hourly | View the historical data for the last 48 hours. This is the default value. |
-| --daily | View the historical data daily average for the last 30 days. |  
-| --monthly | View the historical data monthly average for the last 6 months. |
-| --memory | View the used and total reserved and physical memory. |
-| --disk | View the used and total reserved and physical disk. | 
-| --start | Specify a start date for daily or monthly in the format of mm-dd-yyyy, or start date and time for hourly in the format of mm-dd-yyyy hh:mm:ss time zone. |
-| --end | Specify an end date for daily or monthly in the format of mm-dd-yyyy, or end date and time for hourly in the format of mm-dd-yyyy hh:mm:ss time zone. |
-{: caption="Tableau 19. Options de la commande cf ba resource-metrics-history" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">Affiche les données d'historique des dernières 48 heures. Il s'agit de la valeur par défaut.</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">Affiche les données d'historique de la moyenne des 30 derniers jours.</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">Affiche les données d'historique de la moyenne des 6 derniers mois. </dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">Affiche la valeur utilisée et la valeur totale de la mémoire physique et réservée. </dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">Affiche la valeur utilisée et la valeur totale du disque physique et réservé.</dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">Indique une date de début pour une base quotidienne ou mensuelle (format mm-jj-aaaa), ou pour une base horaire (format mm-jj-aaaa hh:mm:ss avec fuseau horaire) </dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">Indique une date de fin pour une base quotidienne ou mensuelle (format mm-jj-aaaa), ou pour une base horaire (format mm-jj-aaaa hh:mm:ss avec fuseau horaire) </dd>
+</dl>
 
-**Exemples**
-
-```
-cf ibmcloud-admin resource-metrics-history
-cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017
-cf ibmcloud-admin resource-metrics-history --monthly --memory
-cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT
-```
 {: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Examples&gt;</dt>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
 
 Vous pouvez afficher la liste précédente des paramètres de commande et des exemples en utilisant la commande suivante :
 
@@ -727,8 +784,7 @@ Vous pouvez afficher la liste précédente des paramètres de commande et des ex
 cf ba resource-metrics-history -help
 ```
 
-Vous pouvez aussi utiliser **`ba rsmh`** comme alias pour le nom de commande plus long **`ba resource-metrics-history`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba rsmh** comme alias pour le nom de commande plus long **ba resource-metrics-history**.
 
 ## Administration des courtiers de services
 {: #admin_servbro}
@@ -736,48 +792,50 @@ Vous pouvez aussi utiliser **`ba rsmh`** comme alias pour le nom de commande plu
 ### Liste des courtiers de services
 {: #clilistservbro}
 
-Pour dresser la liste des courtiers de services, utilisez la commande suivante :
+Pour dresser la liste de tous les courtiers de services, utilisez la
+commande suivante :
 
 ```
 cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
-Pour répertorier tous les courtiers de services, entrez la commande sans le paramètre **`broker_name`**.
+Pour répertorier tous les courtiers de services, entrez la commande sans le paramètre `broker_name`.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;broker_name&gt;</dt>
-<dd class="pd">Nom du courtier de services personnalisé. Utilisez ce paramètre pour obtenir des informations sur un courtier de services spécifique. Facultatif.</dd>
+<dd class="pd">Facultatif : nom du courtier de services personnalisé. Utilisez ce paramètre pour obtenir des informations sur un courtier de services spécifique.</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba sb`** comme alias pour le nom de commande plus long **`ba service-brokers`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba sb** comme alias pour le nom de commande plus long **ba service-brokers**.
 
 ### Ajout d'un courtier de services
 {: #cliaddservbro}
 
-Pour ajouter un courtier de services afin de pouvoir ajouter un service personnalisé au catalogue {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
+Pour ajouter un courtier de services afin de pouvoir ajouter un service personnalisé à votre catalogue {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
 
 ```
 cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _brokerName_ | Nom du courtier de services personnalisé. |
-| _userName_ | Nom d'utilisateur du compte ayant accès au courtier de services. |  
-| _password_ | Mot de passe du compte ayant accès au courtier de services. |
-| _brokerURL_ | Adresse URL du courtier de services. |
-{: caption="Tableau 20. Options de la commande cf ba add-service-broker" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;broker_name&gt;</dt>
+<dd class="pd">Nom du courtier de services personnalisé.</dd>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dd class="pd">Nom d'utilisateur du compte ayant accès au courtier de services.</dd>
+<dt class="pt dlterm">&lt;password&gt;</dt>
+<dd class="pd">Mot de passe du compte ayant accès au courtier de services.</dd>
+<dt class="pt dlterm">&lt;broker_url&gt;</dt>
+<dd class="pd">Adresse URL du courtier de services.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba asb`** comme alias pour le nom de commande plus long **`ba add-service-broker`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba asb** comme alias pour le nom de commande plus long **ba add-service-broker**.
 
 ### Suppression d'un courtier de services
 {: #clidelservbro}
 
-Pour supprimer un courtier de services qui retire le service personnalisé du catalogue {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
+Pour supprimer un courtier de services qui retire le service personnalisé de votre catalogue {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -789,8 +847,7 @@ cf ba delete-service-broker <service_broker>
 <dd class="pd">Nom ou identificateur global unique du courtier de services personnalisé.</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba dsb`** comme alias pour le nom de commande plus long **`ba delete-service-broker`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba dsb** comme alias pour le nom de commande plus long **ba delete-service-broker**.
 
 ### Mise à jour d'un courtier de services
 {: #cliupdservbro}
@@ -802,42 +859,46 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _brokerName_ | Nom du courtier de services personnalisé. |
-| _userName_ | Nom d'utilisateur du compte ayant accès au courtier de services. |  
-| _password_ | Mot de passe du compte ayant accès au courtier de services. |
-| _brokerURL_ | Adresse URL du courtier de services. |
-{: caption="Tableau 21. Options de la commande cf ba update-service-broker" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;broker_name&gt;</dt>
+<dd class="pd">Nom du courtier de services personnalisé.</dd>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dd class="pd">Nom d'utilisateur du compte ayant accès au courtier de services.</dd>
+<dt class="pt dlterm">&lt;password&gt;</dt>
+<dd class="pd">Mot de passe du compte ayant accès au courtier de services.</dd>
+<dt class="pt dlterm">&lt;broker_url&gt;</dt>
+<dd class="pd">Adresse URL du courtier de services.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba usb`** comme alias pour le nom de commande plus long **`ba update-service-broker`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba usb** comme alias pour le nom de commande plus long **ba update-service-broker**.
 
 ## Administration des groupes de sécurité d'application
 {: #admin_secgro}
 
 Pour utiliser des groupes de sécurité d'application, vous devez être un administrateur avec accès complet pour l'environnement local ou dédié. Tous les utilisateurs de l'environnement peuvent répertorier les groupes de sécurité d'application disponibles pour l'organisation ciblée par la commande. En revanche, pour créer, mettre à jour ou lier des groupes de sécurité d'application, vous devez être un administrateur de l'environnement {{site.data.keyword.Bluemix_notm}}.
 
-Les groupes de sécurité d'application fonctionnent comme des pare-feux virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.cloud_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes donné, par exemple, un ensemble de groupes utilisé pour l'application d'un accès global, ou vous pouvez effectuer une liaison à des espaces d'une organisation dans votre environnement {{site.data.keyword.Bluemix_notm}}.
+Les groupes de sécurité d'application fonctionnent comme des pare-feux virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.Bluemix_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes donné, par exemple, un ensemble de groupes utilisé pour l'application d'un accès global, ou vous pouvez effectuer une liaison à des espaces d'une organisation dans votre environnement {{site.data.keyword.Bluemix_notm}}.
 
-A l'origine, {{site.data.keyword.Bluemix_notm}} est configuré avec un accès global restreint au réseau externe. Deux groupes de sécurité créés par IBM, `public_networks` et `dns`, permettent un accès global au réseau externe lorsque vous liez ces deux groupes aux ensembles de groupes de sécurité Cloud Foundry. Les deux ensembles de groupes de sécurité Cloud Foundry qui sont utilisés pour appliquer un accès global sont **Default Staging** et **Default Running**. Ces ensembles de groupes appliquent les règles autorisant le trafic vers toutes les applications en cours d'exécution ou toutes les applications en cours de constitution. Si vous ne souhaitez pas établir de liaison à ces deux ensembles de groupes de sécurité, vous pouvez annuler la liaison à ces ensembles de groupes Cloud Foundry, puis lier le groupe de sécurité à un espace donné. Pour plus d'informations, voir [Binding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
+A l'origine, {{site.data.keyword.Bluemix_notm}} est configuré avec un accès global restreint au réseau externe. Deux groupes de sécurité créés par IBM, `public_networks` et `dns`, permettent un accès global au réseau externe lorsque vous liez ces deux groupes aux ensembles de groupes de sécurité Cloud Foundry. Les deux ensembles de groupes de sécurité Cloud Foundry qui sont utilisés pour appliquer un accès global sont **Default Staging** et **Default Running**. Ces ensembles de groupes appliquent les règles autorisant le trafic vers toutes les applications en cours d'exécution ou toutes les applications en cours de constitution. Si vous ne souhaitez pas établir de liaison à ces deux ensembles de groupes de sécurité, vous pouvez annuler la liaison à ces ensembles de groupes Cloud Foundry, puis lier le groupe de sécurité à un espace donné. Pour plus d'informations, voir [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
 
-Le fait de supprimer la liaison entre les ensembles de groupes **Default Staging** ou **Default Running** et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe. Tenez compte des répercussions possibles sur l'ensemble des applications en cours d'exécution ou de transfert dans votre environnement quand vous supprimez une liaison. 
-{: important}
+**AVERTISSEMENT** : le fait de supprimer la liaison entre les ensembles de groupes **Default Staging** ou **Default Running** et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe. Tenez compte des répercussions possibles sur l'ensemble des applications en cours d'exécution ou de transfert dans votre environnement quand vous supprimez une liaison.
 
-Les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. Pour plus d'informations, y compris sur les zones obligatoires et facultatives, reportez-vous aux informations Cloud Foundry concernant la [création de groupes de sécurité d'application](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
+Les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. Pour plus d'informations, y compris sur les zones obligatoires et facultatives, reportez-vous aux informations Cloud Foundry concernant la [création de groupes de sécurité d'application](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
+{: note}
 
 ### Liste des groupes de sécurité
 {: #clilissecgro}
 
-Pour dresser la liste de tous les groupes de sécurité, utilisez la commande suivante :
+* Pour dresser la liste de tous les groupes de sécurité, utilisez la commande suivante :
 
 ```
 cf ba security-groups
 ```
 {: codeblock}
 
-Pour afficher les détails d'un groupe de sécurité donné, utilisez la commande suivante :
+**Astuce :** vous pouvez aussi utiliser **ba sgs** comme alias pour le nom de commande plus long **ba security-groups**.
+
+* Pour afficher les détails d'un groupe de sécurité donné, utilisez la commande suivante :
 
 ```
 cf ba security-groups <security-group>
@@ -849,11 +910,12 @@ cf ba security-groups <security-group>
 <dd class="pd">Nom du groupe de sécurité</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba sg`** comme alias pour le nom de commande plus long **`ba security-groups`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba sg** comme alias pour le nom de commande plus long **ba security-groups** avec le paramètre `security-group`.
 
 ### Création d'un groupe de sécurité
 {: #clicreasecgro}
+
+Pour plus d'informations sur la création de groupes de sécurité et les règles qui définissent le trafic sortant, voir [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
 
 Pour créer un groupe de sécurité, utilisez la commande suivante :
 ```
@@ -863,16 +925,14 @@ cf ba create-security-group <security-group> <Path to rules file>
 
 Le préfixe `adminconsole_` est ajouté au nom de chaque groupe de sécurité que vous créez afin de le distinguer des groupes de sécurité créés par IBM.
 
-| Option | Description | 
-| -------| ------------|
-| _groupName_ | Nom du groupe de sécurité. |
-| _filePath_ | Chemin d'accès relatif ou absolu à un fichier de règles. |  
-{: caption="Tableau 22. Options de la commande cf ba create-security-group" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Nom de votre groupe de sécurité</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">Chemin d'accès relatif ou absolu à un fichier de règles</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba csg`** comme alias pour le nom de commande plus long **`ba create-security-group`**.
-{: tip}
-
-Pour plus d'informations sur la création de groupes de sécurité et les règles qui définissent le trafic sortant, voir [Creating Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
+**Astuce :** vous pouvez aussi utiliser **ba csg** comme alias pour le nom de commande plus long **ba create-security-group**.
 
 ### Mise à jour d'un groupe de sécurité
 {: #cliupdsecgro}
@@ -884,14 +944,14 @@ cf ba update-security-group <security-group> <Path to rules file>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _groupName_ | Nom du groupe de sécurité. |
-| _filePath_ | Chemin d'accès relatif ou absolu à un fichier de règles. |  
-{: caption="Tableau 23. Options de la commande cf ba update-security-group" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Nom de votre groupe de sécurité</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">Chemin d'accès relatif ou absolu à un fichier de règles</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba usg`** comme alias pour le nom de commande plus long **`ba update-security-group`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba usg** comme alias pour le nom de commande plus long **ba update-security-group**.
 
 ### Suppression d'un groupe de sécurité
 {: #clidelsecgro}
@@ -907,13 +967,14 @@ cf ba delete-security-group <security-group>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba dsg`** comme alias pour le nom de commande plus long **`ba delete-security-group`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba dsg** comme alias pour le nom de commande plus long **ba delete-security-group**.
 
 ### Liaison de groupes de sécurité
 {: #clibindsecgro}
 
-Pour établir une liaison vers l'ensemble de groupes de sécurité Default Staging, utilisez la commande suivante :
+Pour plus d'informations sur la liaison des groupes de sécurité, voir [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
+
+* Pour établir une liaison vers l'ensemble de groupes de sécurité Default Staging, utilisez la commande suivante :
 
 ```
 cf ba bind-staging-security-group <security-group>
@@ -925,10 +986,9 @@ cf ba bind-staging-security-group <security-group>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba bssg`** comme alias pour le nom de commande plus long **`ba bind-staging-security-group`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba bssg** comme alias pour le nom de commande plus long **ba bind-staging-security-group**.
 
-Pour établir une liaison vers l'ensemble de groupes de sécurité Default Running, utilisez la commande suivante :
+* Pour établir une liaison vers l'ensemble de groupes de sécurité Default Running, utilisez la commande suivante :
 
 ```
 cf ba bind-running-security-group <security-group>
@@ -940,32 +1000,32 @@ cf ba bind-running-security-group <security-group>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba brsg`** comme alias pour le nom de commande plus long **`ba bind-running-security-group`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba brsg** comme alias pour le nom de commande plus long **ba bind-running-security-group**.
 
-Pour lier un groupe de sécurité à un espace, utilisez la commande suivante :
+* Pour lier un groupe de sécurité à un espace, utilisez la commande suivante :
 
 ```
 cf ba bind-security-group <security-group> <org> <espace>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _groupName_ | Nom du groupe de sécurité. |
-| _org_ | Nom de l'organisation à laquelle associer le groupe de sécurité. |
-| _space_ | Nom de l'espace dans l'organisation à laquelle associer le groupe de sécurité. |
-{: caption="Tableau 24. Options de la commande cf ba bind-security-group" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Nom de votre groupe de sécurité</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">Nom de l'organisation à laquelle associer le groupe de sécurité</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">Nom de l'espace dans l'organisation à laquelle associer le groupe de sécurité</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba bsg`** comme alias pour le nom de commande plus long **`ba bind-security-group`**.
-{: tip}
-
-Pour plus d'informations sur la liaison des groupes de sécurité, voir [Binding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
+**Astuce :** vous pouvez aussi utiliser **ba bsg** comme alias pour le nom de commande plus long **ba bind-security-group**.
 
 ### Annulation de la liaison de groupes de sécurité
 {: #cliunbindsecgro}
 
-La suppression de la liaison entre l'ensemble de groupes Default Staging et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe et doit être utilisé avec prudence en tenant compte des répercussions possibles sur l'ensemble des applications en cours de transfert dans votre environnement. Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Staging, utilisez la commande suivante :
+Pour plus d'informations sur l'annulation de la liaison des groupes de sécurité, voir [Unbinding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
+
+* Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Staging, utilisez la commande suivante :
 
 ```
 cf ba unbind-staging-security-group <security-group>
@@ -977,10 +1037,11 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba ussg`** comme alias pour le nom de commande plus long **`ba unbind-staging-security-group`**.
-{: tip}
+**Avertissement**: la suppression de la liaison entre l'ensemble de groupes **Default Staging** et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe et doit être utilisé avec prudence en tenant compte des répercussions possibles sur l'ensemble des applications en cours de transfert dans votre environnement.
 
-La suppression de la liaison entre l'ensemble de groupes Default Running et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe et doit être utilisé avec prudence en tenant compte des répercussions possibles sur l'ensemble des applications en cours d'exécution dans votre environnement. Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Running, utilisez la commande suivante :
+**Astuce :** vous pouvez aussi utiliser **ba ussg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
+
+* Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Running, utilisez la commande suivante :
 
 ```
 cf ba unbind-running-security-group <security-group>
@@ -992,32 +1053,32 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba brsg`** comme alias pour le nom de commande plus long **`ba unbind-running-security-group`**.
-{: tip}
+**Avertissement** : la suppression de la liaison entre l'ensemble de groupes **Default Running** et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe et doit être utilisé avec prudence en tenant compte des répercussions possibles sur l'ensemble des applications en cours d'exécution dans votre environnement.
 
-Pour annuler la liaison d'un groupe de sécurité à un espace, utilisez la commande suivante :
+**Astuce :** vous pouvez aussi utiliser **ba brsg** comme alias pour le nom de commande plus long **ba unbind-running-security-group**.
+
+* Pour annuler la liaison d'un groupe de sécurité à un espace, utilisez la commande suivante :
 
 ```
 cf ba unbind-security-group <security-group> <org> <espace>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _groupName_ | Nom du groupe de sécurité. |
-| _org_ | Nom de l'organisation dont vous souhaitez annuler la liaison avec le groupe de sécurité. |
-| _space_ | Nom de l'espace dans l'organisation dont vous souhaitez annuler la liaison avec le groupe de sécurité. |
-{: caption="Tableau 25. Options de la commande cf ba unbind-security-group" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Nom de votre groupe de sécurité</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">Nom de l'organisation à laquelle associer le groupe de sécurité</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">Nom de l'espace dans l'organisation à laquelle associer le groupe de sécurité</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba usg`** comme alias pour le nom de commande plus long **`ba unbind-security-group`**.
-{: tip}
-
-Pour plus d'informations sur l'annulation de la liaison des groupes de sécurité, voir [Unbinding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
+**Astuce :** vous pouvez aussi utiliser **ba usg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
 
 ## Administration des packs de construction
 {: #admin_buildpack}
 
-### Affichage de la liste des packs de construction
+### Liste des packs de construction
 {: #clilistbuildpack}
 
 Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez répertorier les packs de construction. Pour répertorier tous les packs de construction ou visualiser un pack de construction spécifique, utilisez la commande suivante :
@@ -1032,28 +1093,28 @@ cf ba buildpacks <buildpack_name>
 <dd class="pd">Paramètre facultatif permettant de spécifier un pack de construction particulier à afficher.</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba lb`** comme alias pour le nom de commande plus long **`ba buildpacks`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba lb** comme alias pour le nom de commande plus long **ba buildpacks**.
 
 ### Création et téléchargement d'un pack de construction
 {: #clicreupbuildpack}
 
-Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez créer et télécharger un pack de construction. Vous pouvez télécharger tout fichier compressé dont le type est  `.zip`. Pour télécharger un pack de construction, utilisez la commande suivante :
+Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez créer et télécharger un pack de construction. Vous pouvez télécharger tout fichier compressé dont le type est .zip. Pour télécharger un pack de construction, utilisez la commande suivante :
 
 ```
 cf ba create-buildpack <buildpack_name> <file_path> <position>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _name_ | Nom du pack de construction à télécharger. |
-| _filePath_ | Chemin du fichier compressé du pack de construction. |
-| _position_ | Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction. |
-{: caption="Tableau 26. Options de la commande cf ba create-buildpack" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Nom du pack de construction à télécharger.</dd>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
+<dd class="pd">Chemin du fichier compressé du pack de construction.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba cb`** comme alias pour le nom de commande plus long **`ba create-buildpack`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba cb** comme alias pour le nom de commande plus long **ba create-buildpack**.
 
 ### Mise à jour d'un pack de construction
 {: #cliupdabuildpack}
@@ -1064,16 +1125,18 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ```
 {: codeblock}
 
-| Option | Description | 
-| -------| ------------|
-| _name_ | Nom du pack de construction à mettre à jour. |
-| _position_ | Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction. |
-| _enabled_ | Indique si le pack de construction est utilisé pour la constitution. |
-| _locked_ | Indique si le pack de construction est verrouillé pour empêcher les mises à jour. | 
-{: caption="Tableau 27. Options de la commande cf ba update-buildpack" caption-side="top"}
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Nom du pack de construction à mettre à jour.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction.</dd>
+<dt class="pt dlterm">&lt;enabled&gt;</dt>
+<dd class="pd">Indique si le pack de construction est utilisé pour la constitution.</dd>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
+<dd class="pd">Indique si le pack de construction est verrouillé pour empêcher les mises à jour.</dd>
+</dl>
 
-Vous pouvez aussi utiliser **`ba ub`** comme alias pour le nom de commande plus long **`ba update-buildpack`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba ub** comme alias pour le nom de commande plus long **ba update-buildpack**.
 
 ### Suppression d'un pack de construction
 {: #clidelbuildpack}
@@ -1089,5 +1152,4 @@ cf ba delete-buildpack <buildpack_name>
 <dd class="pd">Nom du pack de construction à supprimer.</dd>
 </dl>
 
-Vous pouvez aussi utiliser **`ba db`** comme alias pour le nom de commande plus long **`ba delete-buildpack`**.
-{: tip}
+**Astuce :** vous pouvez aussi utiliser **ba db** comme alias pour le nom de commande plus long **ba delete-buildpack**.

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-15"
 
-keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
+keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
 subcollection: cloud-cli
 
@@ -48,7 +48,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME（必要）</dt>
    <dd>要新增之儲存庫的名稱。您可以自行為每一個儲存庫定義名稱。</dd>
    <dt>REPO_URL（必要）</dt>
-   <dd>要新增之儲存庫的 URL。儲存庫 URL 必須包含通訊協定（例如，https://plugins.cloud.ibm.com，而非 plugins.cloud.ibm.com）。https://plugins.cloud.ibm.com 是 {{site.data.keyword.cloud_notm}} CLI 的正式外掛程式儲存庫。</dd>
+   <dd>要新增之儲存庫的 URL。儲存庫 URL 必須包含通訊協定（例如 `https://plugins.cloud.ibm.com` 而非 `https://plugins.cloud.ibm.com`）。https://plugins.cloud.ibm.com 是 {{site.data.keyword.cloud_notm}} CLI 的正式外掛程式儲存庫。</dd>
     </dl>
 
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-26"
 
-keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -13,7 +13,6 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:codeblock: .codeblock}
 
 # Katalogangebote durchsuchen und verwalten
 {: #ibmcloud_catalog}
@@ -58,6 +57,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 <strong>Beispiele</strong>:
 
 Service `Automation test` suchen:
+
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -65,7 +65,8 @@ ibmcloud catalog search -k service -q 'Automation test'
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
-Katalogeintrag abrufen:
+Katalogeintrag abrufen
+
 ```
 ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
@@ -256,7 +257,6 @@ Serviceangebote im globalen Bereich anzeigen:
 ```
 ibmcloud catalog service-marketplace --global
 ```
-{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
@@ -298,7 +298,6 @@ Details der Vorlage `mobileBackendStarter` anzeigen:
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
-{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
@@ -330,23 +329,20 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 
 <strong>Beispiele</strong>:
 
-Erstellen Sie eine `cf`-App mit dem Namen `my-app`, die auf der Vorlage `javaHelloWorld` basiert:
+cf-Anwendung `my-app` auf der Basis der Vorlage `javaHelloWorld` erstellen:
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
-{: codeblock}
 
-Erstellen Sie eine App `my-ruby-app` auf Basis der Vorlage `rubyHelloWorld` mit einer Beschreibung:
+Anwendung `my-ruby-app` auf der Basis der Vorlage `rubyHelloWorld` mit einer Beschreibung erstellen:
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
-{: codeblock}
 
-Erstellen Sie eine App `my-python-app` auf Basis der Vorlage `pythonHelloWorld` ohne automatischen Start:
+Anwendung `my-python-app` auf Basis der Vorlage `pythonHelloWorld` ohne automatischen Start erstellen:
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
-{: codeblock}
 
 ## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
@@ -387,7 +383,6 @@ Details der Laufzeit "nodejsHelloWorld" anzeigen:
 ```
 catalog runtime nodejsHelloWorld
 ```
-{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
@@ -410,4 +405,3 @@ Alle Laufzeiten und deren Beschreibung auflisten:
 ```
 ibmcloud catalog runtimes -d
 ```
-{: codeblock}

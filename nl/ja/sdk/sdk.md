@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-02-21"
 
-keywords: cli, mobile sdk, server sdk, client sdk, add sdk, android sdk, cordova
+keywords: mobile sdk, server sdk, client sdk, add sdk, android sdk, cordova
 
 subcollection: cloud-cli
 
@@ -36,7 +36,7 @@ Java、NodeJS、または Swift のサーバー・アプリケーションがあ
 ## Client SDK
 {: #client_sdk}
 
-モバイル・アプリで以下の SDK を使用して、それぞれの機能を使用することができます。
+モバイル・アプリケーションで以下の SDK を使用して、それぞれの機能を使用することができます。
 
 ### Android SDK
 {: #android_sdk}

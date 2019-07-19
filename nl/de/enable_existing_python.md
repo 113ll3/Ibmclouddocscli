@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-03-08"
 
-keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
 subcollection: cloud-cli
 
@@ -22,7 +22,7 @@ subcollection: cloud-cli
 
 Sie können die Dateien generieren, die benötigt werden, um Ihre Python-Anwendung für die Ausführung unter {{site.data.keyword.cloud}} zu aktivieren, indem Sie den [{{site.data.keyword.dev_cli_long}}-Befehlzeilenschnittstellenbefehl 'enable'](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) verwenden.
 
-## Python-App aktivieren
+## Python-Anwendung aktivieren
 {: #enable-app-python}
 
 Geben Sie im Stammverzeichnis Ihres Python-Projekts den folgenden Befehl ein:
@@ -32,17 +32,17 @@ ibmcloud dev enable
 {: codeblock}
 
 * Wenn Sie dazu aufgefordert werden, das erkannte Framework für das Projekt zu prüfen, **Python - Flask** oder **Python - Django**, antworten Sie mit `y` für 'Ja'. 
-* Sie werden dann zur **Herstellung einer Verbindung mit einer IBM Cloud-App** aufgefordert. Wählen Sie für Ihre App entweder die Option **Assets generieren, neue IBM Cloud-App erstellen und Verbindung herstellen** oder die Option **Assets generieren und keine Verbindung zu IBM Cloud-App herstellen** aus.
-* Mit dem Befehl `enable` können auch Services erstellt und an Ihre App gebunden werden. Antworten Sie im Falle dieses Basisbeispiels mit `n` für 'Nein'.
+* Sie werden dann zur **Herstellung einer Verbindung mit einer IBM Cloud-App** aufgefordert. Wählen Sie für Ihre Anwendung entweder die Option zum **Generieren von Assets, Erstellen einer neuen IBM Cloud-App und Herstellen einer Verbindung mit ihr** oder die Option zum **Generieren von Assets ohne Herstellung einer Verbindung mit einer IBM Cloud-App** aus.
+* Mit dem Befehl `enable` können auch Services erstellt und an Ihre Anwendung gebunden werden. Antworten Sie im Falle dieses Basisbeispiels mit `n` für 'Nein'.
 
-Sehen Sie sich die folgende Beispielausgabe an:
+Sehen Sie sich die folgene Beispielausgabe an:
 ```
 > ibmcloud dev enable
-Die Aktivierungsfunktion befindet sich momentan im Betamodus.
-Bitte beschreiben Sie Ihre Erfahrungen und geben Sie Ihr Feedback unter https://ibm-cloud-tech.slack.com/messages/developer-tools/.
-Die Aktivierungsfunktion unterstützt ausschließlich serverseitige Apps.
+The enable feature is currently in Beta.
+Please provide your experience and feedback at: https://ibm-cloud-tech.slack.com/messages/developer-tools/
+Only server-side applications are supported by the enable feature
 
-? Python - Flask app discovered. Do you want to proceed with this
+? Python - Flask application discovered. Do you want to proceed with this
 language choice? [y/n]> y
 
 
@@ -105,27 +105,26 @@ LICENSE
 The application, <appname>, has been successfully saved
 into the current directory.
 ```
-{: screen}
 
-## Cloudfähige Python-App erstellen und bereitstellen 
+## Cloud-fähige Python-Anwendung erstellen und bereitstellen
 {: #build-deploy-python}
 
-Erstellen Sie als Nächstes Ihre App mit dem Befehl [`build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build):
+Erstellen Sie als Nächstes Ihre Anwendung mit dem Befehl [`build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build):
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-Wenn der Buildprozess erfolgreich abgeschlossen ist, können Sie Ihre App in {{site.data.keyword.cloud_notm}} mit dem folgenden Befehl [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) bereitstellen:
+Wenn das Erstellen erfolgreich abgeschlossen ist, können Sie Ihre Anwendung mit dem folgenden Befehl [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) für {{site.data.keyword.cloud_notm}} bereitstellen:
 ```
 ibmcloud dev deploy
 ```
 {: codeblock}
 
-## Maßnahmen für den Fall, dass Ihre aktivierte App nicht erstellt oder bereitgestellt wird
+## Maßnahmen für den Fall, dass Ihre aktivierte Anwendung nicht erstellt oder bereitgestellt wird
 {: #build-failure-python}
 
-Nicht alle Apps werden durch den Befehl `enable` erfolgreich aktiviert. Der folgende Fehler kann beispielsweise auftreten, wenn sich der Projektname von dem Namen des Verzeichnisses unterscheidet, das die Dateien `wsgi.py` und `settings.py` enthält:
+Nicht alle Anwendungen werden durch den Befehl `enable` erfolgreich aktiviert. Der folgende Fehler kann beispielsweise auftreten, wenn sich der Projektname von dem Namen des Verzeichnisses unterscheidet, das die Dateien `wsgi.py` und `settings.py` enthält:
 ```
 ImportError: No module named <projectname>.wsgi
 ```
@@ -133,7 +132,7 @@ ImportError: No module named <projectname>.wsgi
 
 Der Dateiname `<projectname>.wsgi` ist der Name des Projekts, das aktiviert wird.
 
-Wenn Ihre App nach der Ausführung von `ibmcloud dev enable` nicht erstellt oder bereitgestellt wird, können Sie die generierten Dateien so ändern, dass die Cloud-Aktivierung abgeschlossen wird.
+Wenn Ihre Anwendung nach der Ausführung von `ibmcloud dev enable` nicht erstellt oder bereitgestellt wird, können Sie die generierten Dateien so ändern, dass die Cloud-Aktivierung abgeschlossen wird.
 
 ### Generierte Cloudaktivierungsdateien manuell konfigurieren
 {: #manual-enable-python}

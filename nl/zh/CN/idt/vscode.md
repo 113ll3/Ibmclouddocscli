@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-21"
+lastupdated: "2019-02-27"
 
-keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
+keywords: ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
 subcollection: cloud-cli
 
@@ -21,12 +21,12 @@ subcollection: cloud-cli
 Visual Studio Code 的 IBM Cloud Developer Tools 扩展可用于直接在 Visual Studio Code 编辑器的命令选用板内访问 IBM 开发者 CLI 中的功能。您可以快速访问适用于 Docker 和 Cloud Foundry 工作流程的 `ibmcloud dev` 命令子集，包括应用程序部署、在 {{site.data.keyword.cloud}} 上启动/停止/重新启动应用程序、查看远程应用程序日志等等，这一切操作都无需离开编辑器的上下文环境。
 {:shortdesc}
 
-![IBM Developer Tools 扩展下载屏幕的截屏。](../images/vscode.png "Visual Studio Code 中的扩展下载屏幕")
+![IBM Developer Tools 扩展下载屏幕的截屏。](vscode.png "Visual Studio Code 中的扩展下载屏幕")
 
 ## 依赖项
 {: #vscode-dependencies}
 
-要使用针对 Visual Studio Code 的 IBM Cloud Developer Tools 扩展，您需要 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) 以及系统上安装的 {{site.data.keyword.cloud_notm}} CLI 插件。
+要使用针对 Visual Studio Code 的 IBM Cloud Developer Tools 扩展，您需要 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) 以及系统上安装的 {{site.data.keyword.cloud_notm}} CLI 插件。
 
 ## 安装
 {: #vscode-installation}
@@ -69,7 +69,7 @@ Visual Studio Code 的 IBM Cloud Developer Tools 扩展可用于直接在 Visual
 * 在 Visual Studio Code 编辑器本地打开项目的文件夹
 * 使用 `ibmcloud dev build` 命令将应用程序构建到 Docker 映像中
 * 使用 `ibmcloud dev debug` 命令在本地 Docker 中运行应用程序以进行开发
-> 注：要调试在本地 Docker 容器内运行的 Node.js 应用程序，需要[为本地容器添加调试配置](https://github.com/IBM-Cloud/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
+> 注：要调试在本地 Docker 容器内运行的 Node.js 应用程序，需要[为本地容器添加调试配置](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
 * 使用 `ibmcloud dev run` 命令在本地 Docker 中以发布方式运行应用程序
 * 使用 `ibmcloud dev deploy` 命令将应用程序部署到 {{site.data.keyword.cloud_notm}} 上的 Cloud Foundry 运行时
 
@@ -85,6 +85,6 @@ Visual Studio Code 的 IBM Cloud Developer Tools 扩展可用于直接在 Visual
 * 在 Visual Studio Code 编辑器本地打开项目文件夹
 * 使用 `ibmcloud cf apps` 列出所有应用程序
 * 使用 `ibmcloud cf push` 将应用程序的构建推送到 Cloud Foundry 运行时
-* 使用 ibmcloud `cf <start/stop/restage/restart>` 更改应用程序的状态
+* 使用 `ibmcloud cf <start/stop/restage/restart>` 更改应用程序的状态
 * 使用 `ibmcloud cf logs` 查看应用程序的实时日志流
   * 使用 `ibmcloud cf logs` 停止日志流

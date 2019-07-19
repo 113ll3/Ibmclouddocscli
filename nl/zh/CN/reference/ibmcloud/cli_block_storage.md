@@ -61,7 +61,7 @@ ibmcloud sl block access-list VOLUME_ID [OPTIONS]
 <dl>
 <dt>--sortby</dt>
 <dd>要作为排序依据的列，选项为：id、name、type、private_ip_address、host_iqn、username 或 password。</dd>
-<dt>--column</dt>
+<dt>--columns</dt>
 <dd>要显示的列，选项为：id、name、type、private_ip_address、host_iqn、username 或 password。</dd>
 </dl>
 
@@ -454,7 +454,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dd>按购买了块存储器的订单的标识过滤。</dd>
 <dt>--sortby</dt>
 <dd>要按其排序的列，选项为：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions 或 created_by。</dd>
-<dt>--column</dt>
+<dt>--columns</dt>
 <dd>要显示的列，选项为：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、created_by 或 notes。</dd>
 </dl>
 

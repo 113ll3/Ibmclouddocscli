@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-26"
 
-keywords: cli, sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
+keywords: sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
 
 subcollection: cloud-cli
 
@@ -23,7 +23,7 @@ subcollection: cloud-cli
 
 {{site.data.keyword.cloud_notm}}에서 개발자는 이 플러그인을 사용하여 [Open API 스펙 ](https://www.openapis.org/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 준수 REST API 정의에서 SDK를 생성할 수 있습니다. REST API 정의를 변경하는 경우 이 플러그인을 사용하여 전체 프로젝트가 아닌 SDK만 재생성할 수 있습니다.
 
-또한 지정된 영역의 Cloud Foundry 애플리케이션이 SDK 생성에 유효한 REST API 정의를 포함하는지 여부를 확인할 수 있습니다. 마지막으로 SDK 생성기 요구사항에 부합하는지 REST API 정의를 유효성 검증하기 위해 {{site.data.keyword.IBM_notm}} SDK 생성기 플러그인을 사용할 수 있습니다.
+또한 지정된 영역의 Cloud Foundry 앱이 SDK 생성에 유효한 REST API 정의를 포함하는지 여부를 확인할 수 있습니다. 마지막으로 SDK 생성기 요구사항에 부합하는지 REST API 정의를 유효성 검증하기 위해 {{site.data.keyword.IBM_notm}} SDK 생성기 플러그인을 사용할 수 있습니다.
 
 이 {{site.data.keyword.IBM_notm}} SDK 생성기 플러그인을 사용하면 앱의 백엔드 서비스를 생성된 SDK와 쉽게 통합할 수 있습니다. REST API를 변경한 경우 SDK를 재생성하고 완벽한 SDK 업그레이드를 위해 이전 SDK를 대체할 수 있습니다. 또한 CLI를 DevOps 파이프라인과 통합하여 SDK가 앱이 빌드될 때마다 항상 API 스펙과 일치하도록 할 수도 있습니다.
 
@@ -34,7 +34,7 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
 
 다음 요구사항을 충족하는지 확인하십시오.
 
-* [{{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 계정이 있습니다.
+* [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 계정이 있습니다.
 * [Open API ](https://www.openapis.org/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 스펙에 부합하는 올바른 API 정의가 있습니다.
 
 ## 설치

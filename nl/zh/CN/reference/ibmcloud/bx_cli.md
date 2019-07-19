@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-03-15"
 
-keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
 subcollection: cloud-cli
 
@@ -20,26 +20,26 @@ subcollection: cloud-cli
 {: #ibmcloud_cli}
 
 {{site.data.keyword.cloud_notm}} 命令行界面 (CLI) 提供了一组按名称空间分组的命令，供用户用于与 {{site.data.keyword.cloud_notm}} 进行交互。
-{: shortdesc}
 
-{{site.data.keyword.cloud_notm}} 命令行客户机在其安装中捆绑了 Cloud Foundry 命令行客户机。如果您已安装 Cloud Foundry CLI，请勿在同一上下文中同时使用 {{site.data.keyword.cloud_notm}} CLI 命令和您自己安装的 Cloud Foundry CLI 命令。如果要在 {{site.data.keyword.cloud_notm}} CLI 上下文中使用 Cloud Foundry CLI 来管理 Cloud Foundry 资源，请改为使用 **`ibmcloud cf [command]`**。请注意，不允许使用 **`ibmcloud cf api/login/logout/target`**，必须改为使用 **`ibmcloud api/login/logout/target`**。
+{{site.data.keyword.cloud_notm}} 命令行客户机在其安装中捆绑了 Cloud Foundry 命令行客户机。如果您已安装 cf CLI，请勿在同一上下文中同时使用 {{site.data.keyword.cloud_notm}} CLI 命令 `ibmcloud [command]` 和您自己安装的 Cloud Foundry CLI 命令 `cf [command]`。如果要在 {{site.data.keyword.cloud_notm}} CLI 上下文中使用 cf CLI 来管理 Cloud Foundry 资源，请改为使用 `ibmcloud cf [command]`。请注意，不允许使用 `ibmcloud cf api/login/logout/target`，必须改为使用 `ibmcloud api/login/logout/target`。
 
-从 2018 年 5 月起，{{site.data.keyword.cloud_notm}} CLI 命令已从 **`bluemix`** 和 **`bx`** 更改为 **`ibmcloud`**。但是，您仍然可以使用 **`bluemix`** 和 **`bx`** CLI 命令，直到稍后这些命令被除去为止。
+从 2018 年 5 月起，{{site.data.keyword.cloud_notm}} CLI 命令已从 `bluemix` 和 `bx` 更改为 `ibmcloud`。但是，您仍然可以使用 `bluemix` 和 `bx` CLI 命令，直到稍后这些命令被除去为止。
 {: tip}
 
 下面列出了 {{site.data.keyword.cloud_notm}} CLI 支持的命令的详细用法，包括命令名称、自变量、选项、先决条件、描述和示例。
+{: shortdesc}
 
-先决条件列出使用命令前必须执行的操作，并且可能包含以下一个或多个操作：
+*先决条件*列出使用命令前必须执行的操作。没有任何先决条件操作的命令会列出**无**。否则，先决条件可能会包含以下一个或多个操作：
 
 <dl>
-<dt>Docker</dt>
-<dd>安装 Docker CLI。</dd>
 <dt>端点</dt>
-<dd>使用 **`ibmcloud api`** 命令来设置 API 端点。</dd>
+<dd>使用此命令之前，必须通过 <code>ibmcloud api</code> 设置 API 端点。</dd>
 <dt>登录</dt>
-<dd>使用 **`ibmcloud login`** 命令登录。如果使用联合标识登录，请使用 **`--sso`** 选项通过一次性密码进行认证，或者使用 **`--apikey`** 选项通过 API 密钥进行认证。</dd>
+<dd>使用此命令之前，必须通过 <code>ibmcloud login</code> 命令登录。如果使用联合标识登录，请使用“--sso”选项通过一次性密码进行认证，或者使用“--apikey”通过 API 密钥进行认证。</dd>
 <dt>目标</dt>
-<dd>使用 **`ibmcloud target`** 命令来设置组织和空间。</dd>
+<dd>使用此命令之前，必须使用 <code>ibmcloud target</code> 命令来设置组织和空间。</dd>
+<dt>Docker</dt>
+<dd>必须安装 Docker CLI (docker) 才能运行此命令。</dd>
 </dl>
 
 ## ibmcloud help
@@ -51,21 +51,16 @@ subcollection: cloud-cli
 ibmcloud help [COMMAND|NAMESPACE]
 ```
 
-### 先决条件
-{: #help-prereqs}
+<strong>先决条件</strong>：无
 
-无。
+<strong>命令选项</strong>：
 
-### 命令选项
-{: #help-options}
+   <dl>
+   <dt>COMMAND|NAMESPACE（可选）</dt>
+   <dd>显示其帮助信息的命令或名称空间。如果未指定，将显示 {{site.data.keyword.Bluemix_notm}} CLI 的一般帮助。</dd>
+   </dl>
 
-<dl>
-<dt>COMMAND|NAMESPACE</dt>
-<dd>显示其帮助信息的命令或名称空间。如果未指定，将显示 {{site.data.keyword.cloud_notm}} CLI 的一般帮助。可选。</dd>
-</dl>
-
-### 示例
-{: #help-examples}
+<strong>示例</strong>：
 
 显示 {{site.data.keyword.cloud_notm}} CLI 的一般帮助：
 ```
@@ -73,9 +68,9 @@ ibmcloud help
 ```
 {: codeblock}
 
-显示 **`dev`** 命令的帮助：
+显示 `info` 命令的帮助：
 ```
-ibmcloud help dev
+ibmcloud help info
 ```
 {: codeblock}
 
@@ -87,25 +82,18 @@ ibmcloud help dev
 ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 ```
 
-### 先决条件
-{: #api-prereqs}
+<strong>先决条件</strong>：无
 
-无。
-
-### 命令选项
-{: #api-options}
-
-<dl>
-<dt>API_ENDPOINT</dt>
-<dd>作为目标的 API 端点，例如 `https://cloud.ibm.com`。如果未指定 **`API_ENDPOINT`** 和 **`--unset`** 选项，将显示当前 API 端点。可选。</dd>
-<dt>--skip-ssl-validation</dt>
-<dd>绕过 HTTP 请求的 SSL 验证。可选。</dd>
-<dt>--unset</dt>
-<dd>除去 API 端点设置。</dd>
-</dl>
-
-### 示例
-{: #api-examples}
+<strong>命令选项</strong>：
+   <dl>
+   <dt>API_ENDPOINT（可选）</dt>
+   <dd>作为目标的 API 端点，例如 `https://cloud.ibm.com`。如果未指定 *API_ENDPOINT* 和 `--unset` 选项，将显示当前 API 端点。</dd>
+   <dt>--unset（可选）</dt>
+   <dd>除去 API 端点设置。</dd>
+   <dt>--skip-ssl-validation（可选）</dt>
+   <dd>绕过 HTTP 请求的 SSL 验证。</dd>
+   </dl>
+<strong>示例</strong>：
 
 将 API 端点设置为 cloud.ibm.com：
 ```
@@ -124,7 +112,7 @@ ibmcloud api
 ```
 {: codeblock}
 
-除去 API 端点：
+取消设置 API 端点：
 ```
 ibmcloud api --unset
 ```
@@ -139,32 +127,25 @@ ibmcloud api --unset
 ibmcloud config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/file) | --color (true|false) | --locale (LOCALE|CLEAR) | --check-version (true|false)
 ```
 
-### 先决条件
-{: #config-prereqs}
+<strong>先决条件</strong>：无
 
-无。
-
-### 命令选项
-{: #config-options}
-
-<dl>
-<dt>--check-version</dt>
-<dd>启用或禁用 CLI 版本检查。有效值为 `true` 或 `false`。</dd>
-<dt>--color</dt>
-<dd>启用或禁用颜色输出。缺省情况下，此选项处于禁用状态。有效值为 `true` 或 `false`。</dd>
-<dt>--http-timeout</dt>
-<dd>HTTP 请求的超时值（以秒为单位）。缺省值为 60 秒。</dd>
-<dt>--locale</dt>
-<dd>设置缺省语言环境。如果未指定值，将删除先前的语言环境。</dd>
-<dt>--trace </dt>
-<dd>跟踪对终端或指定文件的 HTTP 请求。有效值为 `true` 或 `false`。</dd>
-</dl>
+<strong>命令选项</strong>：
+   <dl>
+   <dt>--http-timeout <i>TIMEOUT_IN_SECONDS</i></dt>
+   <dd>HTTP 请求的超时值。缺省值为 60 秒。</dd>
+   <dt>--trace true|false|<i>path-to-file</i></dt>
+   <dd>跟踪对终端或指定文件的 HTTP 请求。</dd>
+   <dt>--color true|false</dt>
+   <dd>启用或禁用颜色输出。缺省情况下，会启用颜色输出。</dd>
+   <dt>--locale <i>LOCALE|CLEAR</i></dt>
+   <dd>设置缺省语言环境。如果 LOCALE 为 <i>CLEAR</i>，将删除先前的语言环境。</dd>
+   <dt>--check-version true|false</dt>
+   <dd>启用或禁用 CLI 版本检查。</dd>
+   </dl>
 
 一次只能指定其中一个选项。
-{: tip}
 
-### 示例
-{: #config-examples}
+<strong>示例</strong>：
 
 将 HTTP 请求超时设置为 30 秒：
 ```
@@ -178,7 +159,7 @@ ibmcloud config --trace true
 ```
 {: codeblock}
 
-跟踪对 `/home/usera/my_trace` 文件的 HTTP 请求：
+跟踪对指定文件 */home/usera/my_trace* 的 HTTP 请求：
 ```
 ibmcloud config --trace /home/usera/my_trace
 ```
@@ -205,141 +186,87 @@ ibmcloud config --locale CLEAR
 ## ibmcloud info
 {: #ibmcloud_info}
 
-从 CLI V0.14 开始，**`ibmcloud info`** 命令不再可用。要安装最新的 CLI 版本，请参阅[安装独立 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)。
-
+从 CLI V`0.14` 开始，`ibmcloud info` 命令不再可用。要安装最新的 CLI 版本，请参阅[安装独立 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)。
+{: note}
 
 ## ibmcloud cf
 {: #ibmcloud_cf}
 
-调用嵌入式 Cloud Foundry CLI。
+调用嵌入式 CF CLI
 ```
 ibmcloud [-q, --quiet] cf COMMAND...
 ```
 
-### 先决条件
-{: #info-prereqs}
+<strong>先决条件</strong>：无
 
-无。
-
-### 命令选项
-{: #info-options}
-
+<strong>命令选项</strong>：
 <dl>
   <dt>-q, --quiet</dt>
-  <dd>不显示调用消息。</dd>
+  <dd>关闭消息“正在调用 cf 命令...”</dd>
 </dl>
 
-### 示例
-{: #info-examples}
+<strong>示例</strong>：
 
-列出 Cloud Foundry 应用程序：
+列出 cf 应用程序：
 
 ```
 ibmcloud cf apps
 ```
 
-列出 Cloud Foundry 服务，而不显示 `Invoking cf command...` 消息：
+列出 cf 服务，而不显示消息“正在调用 cf 命令...”：
 ```
 ibmcloud -q cf services
 ```
 {: codeblock}
 
-## ibmcloud cf install
-{: #ibmcloud_cf_install}
-
-为 IBM Cloud CLI 安装 Cloud Foundry CLI
-```
-ibmcloud cf install [-v, --version VERSION] [--restore] [-f, --force]
-```
-
-### 先决条件
-{: #cfinstall-prereqs}
-
-无。
-
-### 命令选项
-{: #cfinstall-options}
-
-<dl>
-  <dt>-v, --version</dt>
-  <dd>指定要安装的 Cloud Foundry CLI 版本</dd>
-  <dt>--restore</dt>
-  <dd>复原到 Cloud Foundry CLI 的预捆绑版本</dd>
-  <dt>-f, --force</dt>
-  <dd>强制安装而不确认</dd>
-</dl>
-
-### 示例
-{: #cfinstall-examples}
-
-安装 Cloud Foundry CLI `6.44.1`：
-
-```
-ibmcloud cf install -v 6.44.1
-```
-
-安装最新版本的 Cloud Foundry CLI 而不确认：
-
-```
-ibmcloud cf install -f
-```
-
-恢复到缺省捆绑 Cloud Foundry CLI：
-
-```
-ibmcloud cf install --restore
-```
-
 ## ibmcloud login
 
 {: #ibmcloud_login}
 
-登录到 {{site.data.keyword.cloud_notm}} CLI。
-
+用户登录。
 ```
 ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-r REGION | --no-region] [-o ORG] [-s SPACE]
 ```
-### 先决条件
-{: #login-prereqs}
 
-无。
+<strong>先决条件</strong>：无
 
-### 命令选项
-{: #login-options}
+<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
 
+<strong>命令选项</strong>：
 <dl>
-<dt>-a API_ENDPOINT</dt>
-<dd>API 端点，例如 `cloud.ibm.com`。</dd>
-<dt>--apikey API_KEY 或 @API_KEY_FILE_PATH</dt>
-<dd>API 密钥内容或用 @ 符号指示的 API 密钥文件的路径。</dd>
-<dt>-u USER_NAME</dt>
-<dd>用户名。可选。</dd>
-<dt>-p PASS_WORD</dt>
-<dd>用户密码。可选。</dd>
-<dt>-c ACCOUNT_ID</dt>
-<dd>目标帐户的标识。此选项与 **`--no account`** 选项互斥。</dd>
-<dt>--no-account</dt>
-<dd>强制在没有帐户的情况下登录。建议不要使用此选项，此选项与 **`-c`** 选项互斥。</dd>
-<dt>-g RESOURCE_GROUP</dt>
-<dd>目标资源组的名称。可选。</dd>
-<dt>-r REGION</dt>
-<dd>目标区域的名称，例如，us-south 或 eu-gb。</dd>
-<dt>--no-region</dt>
-<dd>强制在不设置目标区域的情况下登录。</dd>
-<dt>-o ORG</dt>
-<dd>目标组织的名称。不推荐使用该选项。请改为使用 **`ibmcloud target -o org_name`**。可选。</dd>
-<dt>-s SPACE</dt>
-<dd>目标空间的名称。不推荐使用此选项。请改为使用 **`ibmcloud target -s space_name`**。可选。</dd>
-<dt>--no-iam</dt>
-<dd>强制向登录服务器（而不是公共 IAM）进行认证。</dd>
-<dt>--skip-ssl-validation</dt>
-<dd>绕过 HTTP 请求的 SSL 验证。不建议使用此选项。</dd>
+  <dt> -a <i>API_ENDPOINT</i>（可选）</dt>
+  <dd> API 端点（例如：cloud.ibm.com）</dd>
+  <dt> --apikey <i>API_KEY 或 @API_KEY_FILE_PATH</i>
+  <dd> API 密钥内容或用 @ 指示的 API 密钥文件路径</dd>
+  <dt> --sso（可选）</dt>
+  <dd> 使用一次性密码登录</dd>
+  <dt> -u <i>USERNAME</i>（可选）</dt>
+  <dd> 用户名</dd>
+  <dt> -p <i>PASSWORD</i>（可选）</dt>
+  <dd> 密码</dd>
+  <dt> -c <i>ACCOUNT_ID</i>（可选）</dt>
+  <dd> 目标帐户的标识。此选项与 --no-account 互斥</dd>
+  <dt> --no-account（可选）</dt>
+  <dd> 强制在不使用帐户的情况下登录。不建议使用此选项。此选项与 -c 互斥。</dd>
+  <dt> -g <i>RESOURCE_GROUP</i>（可选）</dt>
+  <dd> 目标资源组的名称</dd>
+  <dt> -r REGION</dt>
+  <dd> 区域的名称，例如“us-south”或“eu-gb”</dt>
+  <dt> --no-region</dt>
+  <dd> 强制在不设置目标区域的情况下登录。</dd>
+  <dt> -o <i>ORG</i>（可选）</dt>
+  <dd> 目标组织的名称（不推荐，请使用“ibmcloud target -o ORG”）</dd>
+  <dt> -s <i>SPACE</i>（可选）</dt>
+  <dd> 目标空间的名称（不推荐，请使用“ibmcloud target -s SPACE”）</dd>
+  <dt> --no-iam</dt>
+  <dd> 强制向登录服务器（而不是公共 IAM）进行认证</dd>
+  <dt> --skip-ssl-validation（可选）</dt>
+  <dd> 绕过 HTTP 请求的 SSL 验证。不建议使用此选项。</dd>
 </dl>
 
-### 示例
-{: #login-examples}
+<strong>示例</strong>：
 
-以交互方式登录。
+### 交互式登录
 
 ```
 ibmcloud login
@@ -351,26 +278,12 @@ ibmcloud login
 ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ```
 
-使用一次性密码登录，并设置目标帐户、组织和空间：
+使用一次性密码登录，并设置目标帐户、组织和空间
 ```
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
-设置 Cloud Found 组织和空间。您可以运行以下命令，通过交互方式确定组织和空间：
-
-```
-  ibmcloud target --cf
-  ```
-{: codeblock}
-
-或者，如果您知道服务所属的组织和空间，可以使用以下命令：
-
-```
-ibmcloud target -o <value> -s <value>
-	```
-{: codeblock}
-
-使用具有关联帐户的 API 密钥：
+### API 密钥具有关联的帐户
 
 ```
 ibmcloud login --apikey api-key-string -o MyOrg -s MySpace
@@ -380,7 +293,7 @@ ibmcloud login --apikey api-key-string -o MyOrg -s MySpace
 ibmcloud login --apikey @filename -o MyOrg -s MySpace
 ```
 
-使用没有关联帐户的 API 密钥：
+### API 密钥没有关联的帐户
 
 ```
 ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
@@ -390,101 +303,75 @@ ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
-如果 API 密钥具有关联的帐户，那么不支持切换到其他帐户。
-{: note}
+<strong>注：</strong>如果 API 密钥具有关联的帐户，那么不允许切换到其他帐户。
 
-使用一次性密码：
-
+### 使用一次性密码
 ```
 ibmcloud login -u UserID --sso
 ```
 {: codeblock}
 
 然后，CLI 会提供一个 URL 链接并要求输入密码：
-
 ```
 One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 ```
 {: screen}
 
-在浏览器中打开链接，以获取密码。在控制台中输入给定的密码进行登录。
+在浏览器中打开链接，以获取密码。在控制台中输入提供的密码，然后即可进行登录。
 
 ## ibmcloud logout
 {: #ibmcloud_logout}
 
-从 CLI 注销。
-
+注销用户。
 ```
 ibmcloud logout
 ```
 {: codeblock}
 
-### 先决条件
-{: #logout-prereqs}
-
-无。
+<strong>先决条件</strong>：无
 
 ## ibmcloud regions
 {: #ibmcloud_regions}
 
-查看 {{site.data.keyword.cloud_notm}} 上所有区域的信息。
-
+查看 {{site.data.keyword.Bluemix_notm}} 上所有区域的信息。
 ```
 ibmcloud regions
 ```
 {: codeblock}
 
-### 先决条件
-{: #regions-prereqs}
-
-使用 **`ibmcloud api`** 命令来设置 API 端点。
+<strong>先决条件</strong>：端点
 
 ## ibmcloud target
 {: #ibmcloud_target}
 
+
 设置或查看目标帐户、区域、组织或空间。
-
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
 
-### 先决条件
-{: #target-prereqs}
+<strong>先决条件</strong>：端点和登录
 
-* 使用 **`ibmcloud api`** 命令来设置 API 端点。
-* 使用 **`ibmcloud login`** 命令登录。如果使用联合标识登录，请使用 **`--sso`** 选项通过一次性密码进行认证，或者使用 **`--apikey`** 选项通过 API 密钥进行认证。
-
-### 命令选项
-{: #target-options}
-
-<dl>
-<dt>-c ACCOUNT_ID</dt>
-<dd>目标帐户的标识。可选。</dd>
-<dt>-r REGION</dt>
-<dd>目标区域的名称，例如，us-south 或 eu-gb。可选。</dd>
-<dt>-g RESOURCE_GROUP</dt>
-<dd>目标资源组的名称。可选。</dd>
-<dt>--cf</dt>
-<dd>交互指定目标组织和空间。</dd>
-<dt>--cf-api</dt>
-<dd>Cloud Foundry API 端点。</dd>
-<dt>-o ORG</dt>
-<dd>目标组织的名称。可选。</dd>
-<dt>-s SPACE</dt>
-<dd>目标空间的名称。可选。</dd>
-<dt>--unset-region</dt>
-<dd>清除目标区域。</dd>
-<dt>--unset-resource-group</dt>
-<dd>清除目标资源组。</dd>
-<dt>--output FORMAT</dt>
-<dd>指定的输出格式。JSON 是目前唯一受支持的格式。</dd>
-</dl>
-
+<strong>命令选项</strong>：
+   <dl>
+   <dt>-r <i>REGION_NAME</i>（可选）</dt>
+   <dd>要切换到的区域的名称，例如“us-south”或“eu-gb”。</dd>
+   <dt>--unset-region</dt>
+   <dd>取消设置目标区域</dd>
+   <dt>-c <i>ACCOUNT_ID</i>（可选）</dt>
+   <dd>要作为目标的帐户的标识。</dd>
+   <dt>-g <i>RESOURCE_GROUP</i>（可选）</dt>
+   <dd>资源组的名称</dd>
+   <dt>--cf</dt>
+   <dd>以交互方式选择目标组织和空间</dd>
+   <dt>-o <i>ORG_NAME</i>（可选）</dt>
+   <dd>要作为目标的组织的名称。</dd>
+   <dt>-s <i>SPACE_NAME</i>（可选）</dt>
+   <dd>要作为目标的空间的名称。</dd>
+   </dl>
 如果未指定任何选项，那么将显示当前帐户、区域、组织和空间。
-{: note}
 
-### 示例
-{: #target-examples}
+<strong>示例</strong>：
 
 设置当前帐户、组织和空间：
 ```
@@ -508,60 +395,58 @@ ibmcloud target
 {: #ibmcloud_update}
 
 将 CLI 更新到最新版本。
-
 ```
 ibmcloud update [-f]
 ```
-### 先决条件
-{: #update-prereqs}
 
-### 命令选项
-{: #update-options}
+<strong>先决条件</strong>：无
 
+<strong>命令选项</strong>：
 <dl>
   <dt>-f</dt>
   <dd>强制更新而不确认。需要具备 root 用户特权。</dd>
 </dl>
 
+
 ## 常规经典基础架构服务命令
-{: #classic-service-commands}
+{: #softlayer_cli}
 
-使用 {{site.data.keyword.cloud_notm}} CLI 中的经典基础架构命令可配置和管理基础架构服务。
+使用 {{site.data.keyword.cloud_notm}} 命令行界面 (CLI) 中的经典基础架构命令可配置和管理基础架构服务。
 
-运行 **`ibmcloud sl`** 命令可查看可用命令的列表：
+运行 `ibmcloud sl` 命令可查看可用命令的列表：
 ```
 用法：
    ibmcloud sl command [arguments...] [options...]
 
 命令：
-   block           经典基础架构块存储器
-   cdn             经典基础架构内容交付网络
-   file            经典基础架构文件存储器
-   dns             经典基础架构域名系统
-   globalip        经典基础架构全局 IP 地址
-   hardware        经典基础架构硬件服务器
-   image           经典基础架构计算映像
-   ipsec           经典基础架构 IPSEC VPN
-   loadbal         经典基础架构负载均衡器
-   security        经典基础架构 SSH 密钥和 SSL 证书
-   securitygroup   经典基础架构网络安全组
-   subnet          经典基础架构网络子网
-   ticket          经典基础架构管理凭单
-   vlan            经典基础架构网络 VLAN
-   vs              经典基础架构虚拟服务器
-   order           经典基础架构订单
-   user            经典基础架构管理用户
+   block           Gen1 基础架构块存储器
+   cdn             Gen1 基础架构内容交付网络
+   file            Gen1 基础架构文件存储器
+   dns             Gen1 基础架构域名系统
+   globalip        Gen1 基础架构全局 IP 地址
+   hardware        Gen1 基础架构硬件服务器
+   image           Gen1 基础架构计算映像
+   ipsec           Gen1 基础架构 IPSEC VPN
+   loadbal         Gen1 基础架构负载均衡器
+   security        Gen1 基础架构 SSH 密钥和 SSL 证书
+   securitygroup   Gen1 基础架构网络安全组
+   subnet          Gen1 基础架构网络子网
+   ticket          Gen1 基础架构管理凭单
+   vlan            Gen1 基础架构网络 VLAN
+   vs              Gen1 基础架构虚拟服务器
+   order           Gen1 基础架构订单
+   user            Gen1 基础架构管理用户
    call-api        调用任意 API 端点。
    help            显示命令用法消息
 ```
 {: screen}
 
-要查看有关命令的帮助信息，请运行以下命令：
+要查看有关命令的帮助信息，请运行：
 ```
 ibmcloud sl [command] -h
 ```
 
-从 CLI V**`0.14`** 开始，`ibmcloud sl init` 命令不再可用。要安装最新的 CLI 版本，请参阅[安装独立 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)。
+从 CLI V`0.14` 开始，`ibmcloud sl init` 命令不再可用。要安装最新的 CLI 版本，请参阅[安装独立 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)。
 {: note}
 
 ## ibmcloud sl help

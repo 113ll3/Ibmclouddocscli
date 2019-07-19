@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
+keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
 
 subcollection: cloud-cli
 
@@ -354,7 +354,7 @@ ibmcloud sl vs list [OPTIONS]
 <dd>인스턴스를 소유한 사용자 ID별 필터링.</dd>
 <dt>--sortby</dt>
 <dd>정렬 기준 열, 기본값: hostname, options are:id,hostname,domain,datacenter,cpu,memory,public_ip,private_ip.</dd>
-<dt>--column</dt>
+<dt>--columns</dt>
 <dd>표시할 열, 기본값: id,hostname,public_ip,private_ip,datacenter,action, options are: guid,power_state,created_by,tags.</dd>
 </dl>
 

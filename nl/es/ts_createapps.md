@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-02-21"
 
-keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
+keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
 
 subcollection: cloud-cli
 
@@ -24,14 +24,14 @@ subcollection: cloud-cli
 # Resolución de problemas del plugin de CLI de herramientas del desarrollador de {{site.data.keyword.cloud_notm}}
 {: #troubleshoot}
 
-Consulte las soluciones a problemas comunes con la interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_short}}. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
+Los problemas más habituales al utilizar la interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_short}} para crear apps pueden incluir anomalías en el despliegue o en el código que no es posible recuperar. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
 {: shortdesc}
 
-## ¿Por qué recibo un error de nombre de host cuando creo una aplicación con un patrón no móvil?
+## ¿Por qué recibo un error de nombre de host cuando creo una app con un patrón no móvil?
 {: #ts-cli-hostname-error}
 {: troubleshoot}
 
-Es posible que aparezca el siguiente error si utiliza la CLI de {{site.data.keyword.dev_cli_short}} para desplegar una aplicación en Cloud Foundry. Aunque especifique un nombre de host exclusivo, es posible que siga viendo el mensaje.
+Es posible que aparezca el siguiente error si utiliza la CLI de {{site.data.keyword.dev_cli_short}} para desplegar una app en Cloud Foundry. Aunque especifique un nombre de host exclusivo, es posible que siga viendo el mensaje.
 ```
 The hostname <myHostname> is taken.
 ```
@@ -54,7 +54,7 @@ ibmcloud login
 
 Es posible que se muestre el siguiente error si utiliza los mandatos `create`, `delete`, `list` o `code`:
 ```
-Failed to <command> app.
+Failed to <command> application.
 ```
 {: screen}
 {: tsSymptoms}
@@ -69,7 +69,7 @@ ibmcloud login
 {: codeblock}
 {: tsResolve}
 
-## ¿Por qué no se reconoce la imagen de una nueva app?
+## ¿Por qué no se reconoce la imagen de mi nueva app?
 {: #ts-cli-nosuchimage}
 {: troubleshoot}
 
@@ -120,14 +120,14 @@ Este error se debe al servicio {{site.data.keyword.objectstorageshort}}, que sol
 Seleccione otro plan.
 {: tsResolve}
 
-## ¿Por qué no se recupera el código cuando creo una app?
+## ¿Por qué no se recupera mi código cuando creo una app?
 {: #retrieve-code-error}
 {: troubleshoot}
 
 Es posible que se muestre el siguiente error cuando se utiliza la CLI para crear una app:
 ```
 FAILED
-App created, but could not get code
+Application created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: screen}
@@ -145,11 +145,11 @@ Utilice uno de los métodos siguientes para obtener el código:
    ```
    {: codeblock}
 
-   Sustituya `<your-app-name>` por el nombre de app que haya especificado durante la creación de la app.
+   Sustituya `<your-app-name>` por el nombre de la app que ha especificado durante la creación de la app.
 
 * Utilice la {{site.data.keyword.dev_console}}.
 
-	1. Seleccione la [app](https://cloud.ibm.com/resources){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") en la {{site.data.keyword.dev_console}}.
+	1. Seleccione la [app ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/resources) en la {{site.data.keyword.dev_console}}.
 
 	2. Pulse **Descargar código**.
 {: tsResolve}
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-Este error se produce cuando el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos `npm` nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux&trade;.
+Este error se produce cuando el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos npm nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux.
 {: tsCauses}
 
 Suprima la carpeta `node_modules` y ejecute de nuevo el mandato `ibmcloud dev run`.
@@ -218,7 +218,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 {: screen}
 {: tsSymptoms}
 
-La causa más probable del problema es que el nombre del clúster no sea válido. Lo puede confirmar ejecutando el mismo mandato con `--trace`. Los siguientes detalles podría incluirse en la salida del error:
+La causa más probable es que el nombre del clúster no sea válido. Lo puede confirmar ejecutando el mismo mandato con `--trace`. Los siguientes detalles podría incluirse en la salida del error:
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
@@ -236,168 +236,72 @@ ibmcloud cs cluster-config <cluster-name>
 {: #ts-deploy-image-target}
 {: troubleshoot}
 
-Se podría visualizar la siguiente anomalía después de que se le solicite el destino de imagen de despliegue:
+Se podría visualizar la siguiente anomalía después de que se le solicitase el destino de imagen de despliegue:
 ```
 FAILED
 Failed to execute the action:  exit status 1:denied: requested access to the resource is denied
 
 
 FAILED
-Failed to push the Run image tagged 'us.icr.io/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
+Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
 {: screen}
 {: tsSymptoms}
 
-La causa más probable del problema es que el destino de la imagen del despliegue no sea válido. Más concretamente, el espacio de nombres, que es el valor de en medio del destino de imagen de despliegue, podría no ser válido.
+La causa más probable es que la imagen de destino de despliegue no sea válida. Más concretamente, el espacio de nombres, que se encuentra en medio en el destino de imagen de despliegue, podría no ser válido.
 {: tsCauses}
 
-Asegúrese de que el espacio de nombres en el destino de la imagen de despliegue coincida con uno de los espacios de nombres que se muestran cuando ejecuta el siguiente mandato:
+Asegúrese de que el espacio de nombres en el destino de la imagen de despliegue coincide con uno de los espacios de nombres que se muestran cuando ejecuta el siguiente mandato:
 ```
 ibmcloud cr namespaces
 ```
 {: codeblock}
 {: tsResolve}
 
-## ¿Por qué no se puede determinar el lenguaje?
+## ¿Por qué no se puede determinar el idioma de mi app?
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
-Es posible que se muestre el siguiente error al iniciar la app:
+Es posible que se muestre el siguiente error al intentar iniciar la app:
 ```
 FAILED
-Could not determine the language of your app.
+Could not determine the language of your application.
 
-Try using the --language flag to specify the language of your app
+Try using the --language flag to specify the language of your application
 directly. 
 ```
 {: screen}
 {: tsSymptoms}
 
 Este error puede deberse a una de las causas siguientes:
-- Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) desde un directorio que no es el directorio de origen de la app.
-- Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) para una app de un lenguaje que no se reconoce.
+- Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) desde un directorio que no es el directorio de origen de la aplicación.
+- Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) para una app de un idioma que no se reconoce.
 {: tsCauses}
 
-Asegúrese de ejecutar el mandato desde el directorio de la app que contiene el código fuente de la app. Si el problema no se soluciona y el lenguaje es uno de los [lenguajes soportados](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), utilice el parámetro `--language` para especificar el lenguaje.
+Asegúrese de ejecutar el mandato desde el directorio de la app que contiene el código fuente de la app. Si esto no resuelve el problema y el idioma es uno de los [idiomas soportados](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), utilice el parámetro `--language` para especificar el idioma.
 {: tsResolve}
 
-## ¿Por qué no puedo crear o ejecutar una app que está habilitada para el despliegue en la nube?
+## ¿Por qué no puedo crear o ejecutar una app que se ha habilitado para el despliegue en la nube?
 {: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-Es posible que se produzcan varias anomalías al [crear](/docs/cli/idt?topic=cloud-cli-idt-cli#build) o [ejecutar](/docs/cli/idt?topic=cloud-cli-idt-cli#run) una app que se ha habilitado para el despliegue en la nube.
+Es posible que se produzcan varias anomalías al intentar [crear](/docs/cli/idt?topic=cloud-cli-idt-cli#build) o [ejecutar](/docs/cli/idt?topic=cloud-cli-idt-cli#run) una app que se ha habilitado.
 {: tsSymptoms}
 
 En los siguientes enlaces encontrará muchas de las posibles causas.
 {: tsCauses}
 
-- Para obtener más información sobre cómo resolver estos problemas con una app Spring, consulte [Habilitación de apps Spring Boot existentes para el despliegue en la nube](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
-- Para obtener más información sobre cómo resolver estos problemas con una app `Node.js`, consulte [Habilitación de apps Node.js existentes para el despliegue en la nube](/docs/node?topic=nodejs-enable_existing#enable_existing).
+- Para obtener más información sobre cómo resolver estos problemas con una app Spring, consulte [Habilitación de aplicaciones Spring Boot existentes para el despliegue en la nube](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
+- Para obtener más información sobre cómo resolver estos problemas con una app `Node.js`, consulte [Habilitación de aplicaciones Node.js existentes para el despliegue en la nube](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 
-## Cómo instalar manualmente los componentes de la CLI de {{site.data.keyword.dev_cli_notm}} de forma independiente
+<!--
+## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
 {: #ts-cli-install-devtools-manually}
 {: troubleshoot}
 
-Para instalar manualmente los componentes de la CLI de {{site.data.keyword.dev_cli_notm}} de manera independiente, puede seguir estos
-[pasos](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+-->
 
-## ¿Por qué no puedo crear la imagen de Docker?
-{: #ts-cli-docker}
-{: troubleshoot}
 
-Si aparece el error siguiente: 
-```
-FAILED
-An error exit status 1 was encountered while building the Docker
-image.
-```
-{: screen}
 
-Este error puede deberse a una de las causas siguientes:
-- Docker no está instalado.
-- El daemon de Docker no está en ejecución.
-{: tsCauses}
-
-Asegúrese de que Docker está instalado y en ejecución:
-- Para instalar o iniciar [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-- Para instalar o iniciar [Docker for Windows&trade;](https://docs.docker.com/docker-for-windows/install/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-- Para instalar o iniciar [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-{: tsResolve}
-
-## La actualización de Helm está fallando con errores
-{: #ts-cli-helm-rbac}
-{: troubleshoot}
-
-Puede encontrar el siguiente error debido a problemas de control de acceso basado en roles (RBAC):
-```
-FAILED
-Failed to execute the action:  exit status 1: Error: UPGRADE FAILED:
-configmaps is forbidden: User "system:serviceaccount:kube-system:default"
-cannot list resource "configmaps" in API group "" in the namespace
-"kube-system"
-```
-{: screen}
-
-Para resolver el problema, ejecute el mandato siguiente:
-{: tsResolve}
-
-```
-kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:default -n kube-system
-```
-{: codeblock}
-
-## ¿Cómo resolver la incompatibilidad de versiones de Helm?
-{: #ts-cli-helm}
-{: troubleshoot}
-
-Si las versiones de Helm de cliente y servidor no están sincronizadas, es posible que aparezcan los errores siguientes:
-```
-FAILED
-The 'helm upgrade ' command failed to complete due to: exit status 1
-```
-{: screen}
-
-Para resolver el problema, establezca la versión del cliente en la misma que la versión del clúster. Por ejemplo, para instalar la versión de Helm 2.8.1, ejecute los mandatos siguientes:
-{: tsResolve}
-
-* Para Mac y Linux&trade;, ejecute los mandatos siguientes:
-  ```
-  export DESIRED_VERSION=v2.8.1
-
-  curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
-
-  export HELM_HOME=~/.helm
-  ```
-
-* Para Windows&trade;: como administrador, descargue e instale el binario de `helm` de [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
-  
-  Desde el terminal PowerShell, utilice los mandatos siguientes:
-  ```
-  Set-Location Env:
-  Set-Item HELM_HOME C:\.helm\
-  ```
-  {: codeblock}
-
-## ¿Por qué falla ibmcloud dev build con un nombre de usuario que incluye "@"?
-{: #ts-cli-username}
-{: troubleshoot}
-Durante el proceso de creación de la imagen, se utiliza su nombre de usuario para el usuario de la imagen de las herramientas de Docker. Si el nombre de usuario contiene caracteres especiales como '@' o '-', el proceso de creación de la imagen de Docker falla y con el error siguiente:
-```
-Image will have user johnsmith@acme.com with id 501 added
-
-Executing docker image build  --file Dockerfile-tools --tag pythonmicroservicewithflaskfnzat-flask-tools --rm --pull --build-arg bx_dev_userid=501 --build-arg bx_dev_user=johnsmith@acme.com .
-
-FAILED
-An error exit status 1 was encountered while building the Docker image.
-
-Dumping output from the command:
-```
-{: screen}
-
-Para resolver el problema, cambie su nombre de usuario para que no incluya ningún carácter especial, o especifique el distintivo siguiente para utilizar el usuario root en su lugar:
-```
-ibmcloud dev build --use-root-user-tools
-```
-{: codeblock}
-{: tsResolve}

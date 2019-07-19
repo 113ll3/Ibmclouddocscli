@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-26"
 
-keywords: cli, sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
+keywords: sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
 
 subcollection: cloud-cli
 
@@ -19,7 +19,7 @@ subcollection: cloud-cli
 # SDK Generator
 {: #sdk-cli}
 
-Il plugin {{site.data.keyword.IBM}} SDK Generator può essere installato nella [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) {{site.data.keyword.cloud_notm}}. 
+Il plugin {{site.data.keyword.IBM}} SDK Generator può essere installato nella [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) {{site.data.keyword.cloud_notm}}.
 
 Come sviluppatore in {{site.data.keyword.cloud_notm}}, puoi utilizzare questo plugin per generare gli SDK dalla tua definizione API REST conforme con la [Open API Specification ](https://www.openapis.org/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno"). Quando apporti le modifiche alla tua definizione API REST, puoi utilizzare questo plugin per rigenerare solo il SDK anziché rigenerare l'intero progetto.
 
@@ -34,7 +34,7 @@ La definizione API REST deve essere valida e ospitata su un endpoint del server 
 
 Assicurati di soddisfare i seguenti requisiti.
 
-* Hai un account [{{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
+* Hai un account [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
 * Una definizione API valida conforme alla specifica [Open API ](https://www.openapis.org/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
 
 ## Installazione

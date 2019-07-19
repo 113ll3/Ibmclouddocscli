@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-02-21"
 
-keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
+keywords: bmscore, bmscore sdk, network request, ios, android, cordova
 
 subcollection: cloud-cli
 
@@ -49,7 +49,7 @@ Puoi utilizzare l'SDK `BMSCore` per effettuare richieste di rete a qualsiasi ris
 
 La classe `Request` rappresenta un metodo semplice per effettuare una richiesta HTTP e ottenere la risposta al completamento della richiesta. Se stai scaricando o caricando dei file o dei corpi di dati di grandi dimensioni, puoi utilizzare i metodi `Request` `download` o `upload`. Per monitorare l'avanzamento dello scaricamento o del caricamento, crea un `ProgressListener` personalizzato e trasmettilo ai metodi `download` o `upload`.
 
-Per degli esempi di utilizzo completi, vedi il `BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
+<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
 
 
 ## iOS
@@ -95,11 +95,12 @@ Per degli esempi di utilizzo completi, vedi il `BMSCore` GitHub [README ](https:
 	```
 	{: codeblock}
 
-La classe `Request` rappresenta un metodo semplice per effettuare una richiesta HTTP e ottenere la risposta al completamento della richiesta. Se vuoi più flessibilità e controllo rispetto a quello ottenuto con `Request`, puoi utilizzare la classe `BMSURLSession`. Alcune funzioni della classe `BMSURLSession` comprendono il monitoraggio dell'avanzamento dei caricamenti e la messa in pausa o l'annullamento delle richieste. Per ottenere le risposte, puoi selezionare i gestori o i delegati di completamento. 
+La classe `Request` rappresenta un metodo semplice per effettuare una richiesta HTTP e ottenere la risposta al completamento della richiesta. Se vuoi più flessibilità e controllo rispetto a quello ottenuto con `Request`, puoi utilizzare la classe `BMSURLSession`. Alcune funzioni della classe `BMSURLSession` comprendono il monitoraggio dell'avanzamento dei caricamenti e la messa in pausa o l'annullamento delle richieste. Per ottenere le risposte, puoi scegliere i gestori o i delegati di completamento.
 
 La classe `BMSURLSession` è disponibile solo per iOS.
 
 Per degli esempi di utilizzo completi, vedi il `BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
+
 
 ## Cordova
 {: #request-cordova}

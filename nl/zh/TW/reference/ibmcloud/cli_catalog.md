@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-26"
 
-keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -13,7 +13,6 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:codeblock: .codeblock}
 
 # 搜尋及管理型錄供應項目
 {: #ibmcloud_catalog}
@@ -58,6 +57,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 <strong>範例</strong>：
 
 搜尋服務 `Automation test`：
+
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -65,7 +65,8 @@ ibmcloud catalog search -k service -q 'Automation test'
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
-取得型錄項目：
+取得型錄項目
+
 ```
 ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
@@ -256,7 +257,6 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
 ibmcloud catalog service-marketplace --global
 ```
-{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
@@ -298,7 +298,6 @@ ibmcloud catalog template TEMPLATE_ID
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
-{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
@@ -330,23 +329,20 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 
 <strong>範例</strong>：
 
-根據 `javaHelloWorld` 範本建立一個名稱為 `my-app` 的 `cf` 應用程式：
+根據 `javaHelloWorld` 範本建立 cf 應用程式 `my-app`：
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
-{: codeblock}
 
 根據 `rubyHelloWorld` 範本建立應用程式 `my-ruby-app`，並具有說明：
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
-{: codeblock}
 
-根據 `pythonHelloWorld` 範本建立應用程式 `my-python-app`，且不自動啟動：
+根據 `pythonHelloWorld` 範本建立應用程式 `my-python-app`，不自動啟動：
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
-{: codeblock}
 
 ## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
@@ -387,7 +383,6 @@ ibmcloud catalog runtime RUNTIME_ID
 ```
 catalog runtime nodejsHelloWorld
 ```
-{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
@@ -410,4 +405,3 @@ ibmcloud catalog runtimes [-d]
 ```
 ibmcloud catalog runtimes -d
 ```
-{: codeblock}

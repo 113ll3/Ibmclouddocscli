@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
+keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
 
 subcollection: cloud-cli
 
@@ -17,7 +17,7 @@ subcollection: cloud-cli
 # Load Balancer サービスの操作
 {: #sl-load-balancer-service}
 
-{{site.data.keyword.cloud}} Load Balancer サービスは、複数のアプリ・サーバー・インスタンス間にトラフィックを分散し、正常なインスタンスのみにトラフィックを転送することにより、ビジネスに不可欠なアプリケーションの可用性の向上に役立ちます。
+{{site.data.keyword.cloud}} Load Balancer サービスは、複数のアプリケーション・サーバー・インスタンス間にトラフィックを分散し、正常なインスタンスのみにトラフィックを転送することにより、ビジネスに不可欠なアプリケーションの可用性の向上に役立ちます。
 
 以下のコマンドを使用して、{{site.data.keyword.cloud_notm}} クラシック・インフラストラクチャーのロード・バランサー・サービスでロード・バランサーを管理します。
 {: shortdesc}

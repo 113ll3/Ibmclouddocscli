@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
+keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
 
 subcollection: cloud-cli
 
@@ -273,7 +273,7 @@ Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf de
 Benutzer in der angegebenen Organisation nach Rolle anzeigen
 
 ```
-ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
+ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -282,10 +282,10 @@ ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 <dl>
 <dt>ORG_NAME (erforderlich)</dt>
 <dd>Der Name der Organisation.</dd>
-<dt>-a, -all (optional)</dt>
+<dt>-a (optional)</dt>
 <dd>Alle Benutzer in der angegebenen Organisation auflisten (nicht nach Rolle gruppiert).</dd>
-<dt>-r, --region REGION (optional)</dt>
-<dd>Regionsname. Standardmäßig wird die aktuelle Region verwendet, wenn keine Angabe gemacht wurde.</dd>
+<dt>--output FORMAT (optional)</dt>
+<dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -534,7 +534,7 @@ Kontodetails anzeigen
 ibmcloud account show
 ```
 
-<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
 
 <strong>Befehlsoptionen</strong>:
 <dl>
@@ -557,7 +557,7 @@ Bestimmtes Konto aktualisieren
 ibmcloud account update (--service-endpoint-enable true | false)
 ```
 
-<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
 
 <strong>Befehlsoptionen</strong>:
 <dl>
@@ -571,41 +571,6 @@ Konnektivität des Serviceendpunkts für aktuelles Konto aktivieren:
 
 ```
 ibmcloud account update --service-endpoint-enable true
-```
-
-## ibmcloud account audit-logs
-{: #ibmcloud_account_audit_logs}
-
-Auditprotokolle des Softlayer-Kontos auflisten
-
-```
-account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [-o, --object OBJECT] [-a, --action ACTION] [-s, --start-date START_DATE] [-e, --end-date END_DATE]
-```
-
-<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
-
-<strong>Befehlsoptionen</strong>:
-<dl>
-  <dt>-a, --action <i>ACTION</i></dt>
-  <dd>Aktion. Auditprotokolle mit der angegebenen Aktion auflisten.</dd>
-  <dt>-e, --end-date <i>END_DATE</i></dt>
-  <dd>Enddatum. Auditprotokolle vor dem Enddatum auflisten. Unterstützte Formate: jjjj-MM-ttTHH:mm:ss.</dd>
-  <dt>-o, --object <i>OBJECT</i></dt>
-  <dd>Objekt. Auditprotokolle mit dem angegebenen Objekt auflisten.</dd>
-  <dt>-t, --object-type <i>OBJECT_TYPE</i></dt>
-  <dd>Objekttyp. Auditprotokolle mit dem angegebenen Objekttyp auflisten.</dd>
-  <dt>-s, --start-date <i>START_DATE</i></dt>
-  <dd>Startdatum. Auditprotokolle nach dem Startdatum auflisten. Unterstützte Formate: jjjj-MM-ttTHH:mm:ss.</dd>
-  <dt>-u, --user-name <i>USER_NAME</i></dt>
-  <dd>Benutzername. Auditprotokolle mit dem angegebenen Benutzernamen auflisten.</dd>
-</dl>
-
-<strong>Beispiele</strong>:
-
-Auditprotokolle auflisten
-
-```
-ibmcloud account audit-logs
 ```
 
 ## ibmcloud account users

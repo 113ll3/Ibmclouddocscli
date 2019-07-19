@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
+keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
 
 subcollection: cloud-cli
 

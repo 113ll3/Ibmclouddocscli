@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-02-26"
 
-keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
+keywords: stand-alone cli, install cli, uninstall cli, cli, plugin, plug-in, command line, command-line, windows powershell, linux, macos, installer
 
 subcollection: cloud-cli
 
@@ -13,7 +13,6 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:screen: .screen}
 {:tip: .tip}
 
 # 安裝獨立式 {{site.data.keyword.cloud_notm}} CLI
@@ -21,71 +20,94 @@ subcollection: cloud-cli
 
 {{site.data.keyword.cloud}} CLI 提供指令行介面，以便在 {{site.data.keyword.cloud_notm}} 中管理資源。您仍可以使用 `cf` CLI 登入 {{site.data.keyword.cloud_notm}}，但它適用於 {{site.data.keyword.cloud_notm}} 中的 Cloud Foundry 服務。 
 
-如果您想要同時安裝最新的 {{site.data.keyword.cloud}} CLI 及其他建議外掛程式和工具，來開發 {{site.data.keyword.cloud_notm}} 的應用程式，請參閱[開始使用 {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)。
+如果您想要安裝 {{site.data.keyword.cloud}} CLI 及其他建議外掛程式和工具來開發 {{site.data.keyword.cloud_notm}} 的應用程式，請參閱[開始使用 {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)。
 {: tip}
 
-## 開始之前
-{: #before-download-cli}
+請使用下列步驟，以安裝獨立式 {{site.data.keyword.cloud_notm}} CLI：
 
-如果您需要使用 32 位元版本或舊版（而非 {{site.data.keyword.cloud_notm}} Dedicated 環境的最新版本），請參閱 [{{site.data.keyword.cloud_notm}} CLI 版本](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
+1. 選取要下載的 OS 安裝程式。
 
-## 使用安裝程式來安裝
-{: #ibmcloud-cli-installer}
+   Mac OS X 64 位元：[安裝程式](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx){: new_window}/[sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
+Windows 64 位元：[安裝程式](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64){: new_window}/[sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
+Linux X86 64 位元：[安裝程式](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64){: new_window}/[sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+Linux LE 64 位元 (ppc64le)：[安裝程式](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
-請使用下列步驟，以安裝最新的獨立式 {{site.data.keyword.cloud_notm}} CLI：
+   若為 32 位元及更早版本，請移至 [{{site.data.keyword.cloud_notm}} CLI 版本](/docs/cli/reference/ibmcloud?topic=cloud-cli-cli-releases#cli-releases)頁面進行下載。
 
-1. 使用瀏覽器來存取正式 [`ibm-cloud-cli-releases`](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/) GitHub 儲存庫，並**選取**您 OS 的安裝程式以開始下載。支援下列作業系統：macOS X 64 位元、Windows&trade; 64 位元、Linux&trade; x86 64 位元及 Linux&trade; LE 64 位元 (ppc64le)。
+2. 執行安裝程式
+   * 若為 MacOS 及 Windows&trade;，請執行安裝程式。
+   * 若為 Linux&trade;，請解壓縮套件並執行 `install` Script。
 
-2. 執行安裝程式：
-  * 若為 Mac 及 Windows&trade;，請執行安裝程式。
-  * 若為 Linux&trade;，請解壓縮套件並執行 `install` Script。
-
-3. 登入 {{site.data.keyword.cloud_notm}}：
-  ```
+3. 將目標設為 API 端點並登入 {{site.data.keyword.cloud_notm}}：
+   ```
    ibmcloud login
    ```
-  {: codeblock}
+   {: codeblock}
    
-  現在，您已準備好管理 {{site.data.keyword.cloud_notm}} 資源。輸入 `ibmcloud help` 以檢視指令說明。
+現在，您已準備好管理 {{site.data.keyword.cloud_notm}} 資源。鍵入 `ibmcloud help` 以查看指令說明。
 
-  如果您是使用聯合 ID，請[使用一次性密碼或 API 金鑰進行登入](/docs/iam?topic=iam-federated_id)。
-  {: tip}
+如果您使用聯合 ID，請遵循[這裡](/docs/iam?topic=iam-federated_id#federated_id)的指示，使用一次性密碼或 API 金鑰進行登入。  
+{: tip}
+
+除了安裝程式之外，您也有其他選項可以安裝 {{site.data.keyword.cloud_notm}} CLI：
+
+* 從 Shell 安裝
+* 下載二進位套件並安裝至自訂目錄
 
 ## 從 Shell 安裝
 {: #shell_install}
 
-若要從 Shell 為您的 OS 手動安裝最新 CLI，請針對您的 OS 使用下列指令：
+### macOS  
+{: #shell-install-macos}
 
-* 若為 **Mac**，請複製下列指令、將其貼至終端機，然後執行它：
-  ```
+複製下列指令，並將其貼入 Mac OS 的終端機，然後予以執行：
+```
 curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
 ```
-  {: codeblock}
+{: codeblock}
 
-* 若為 **Linux&trade;**，請複製下列指令、將其貼至終端機，然後執行它：
-  ```
+### Linux
+{: #shell-install-linux}
+
+複製下列指令，並將其貼入 Linux&trade; OS 的終端機，然後予以執行：
+```
 curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
 ```
-  {: codeblock}
+{: codeblock}
 
-* 若為 **Windows&trade;**，請複製下列指令、將其貼至 [Windows&trade; PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 終端機主控台，然後執行它：
-  ```
+### Windows PowerShell
+{: #shell-install-windows}
+
+複製下列指令，並將其貼入 [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 終端機主控台，然後予以執行：
+```
 iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
 ```
-  {: codeblock}
+{: codeblock}
 
 ## 安裝至自訂目錄
 {: #install-custom-dir}
 
-當您使用安裝程式或 Shell Script 來安裝 {{site.data.keyword.cloud_notm}} CLI 時，它會安裝在您的系統目錄中。如果您想要指定不同目錄，請使用下列步驟。
+當您使用安裝程式或 Shell Script 來安裝 {{site.data.keyword.Bluemix_notm}} CLI 時，二進位檔會移至您的系統目錄。如果您想要指定不同目錄，請使用下列步驟。
 
-1. 使用瀏覽器來存取正式 [`ibm-cloud-cli-releases`](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/) GitHub 儲存庫，並**選取**您平台的符合二進位檔以開始下載。支援下列平台：macOS、linux32、linux64、ppc64le、win32 及 win64。
+### 步驟 1：根據您的 OS 使用下列鏈結下載二進位套件。
+{: #step1-custom-dir}
 
-2. 將套件解壓縮到您指定的目錄。
+|平台|下載|總和檢查|
+|---------|----------|---------|
+|macOS  | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive/checksum) |
+| linux32 | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive/checksum) |
+| linux64 | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive/checksum) |
+| ppc64le | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive/checksum) |
+| win32 | [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive/checksum) |
+| win64 | [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive/checksum) |
 
-   您可以看到下列解壓縮的內容：
+### 步驟 2：將套件解壓縮到您指定的目錄。
+{: #step2-custom-dir}
 
-   若為 Linux&trade; 及 Mac：
+   解壓縮套件之後，您可以看到下列內容：
+
+   若為 Linux&trade; 及 macOS：
+
    ```
    IBM_Cloud_CLI
    ├── LICENSE
@@ -98,9 +120,10 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
    ├── ibmcloud
    └── ibmcloud-analytics
    ```
-   {: screen}
+   {: codeblock}
 
-   若為 Windows&trade;：
+   若為 Windows
+
    ```
    IBM_Cloud_CLI
    ├── LICENSE
@@ -110,33 +133,57 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
    ├── ibmcloud-analytics.exe
    └── ibmcloud.exe
    ```
-   {: screen}
+   {: codeblock}
 
-3. 新增至 `PATH` 環境變數並啟用 Shell 自動完成。
-  * 將 `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` 新增至 `PATH` 環境變數。
-  * 如需 Shell 自動完成支援（僅限 Mac 及 Linux&trade;），請參閱[啟用 IBM Cloud CLI 的 Shell 自動完成](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)。
+### 步驟 3：新增至 `PATH` 環境變數並啟用 Shell 自動完成。
+{: #step3-custom-dir}
 
-## 更新 {{site.data.keyword.cloud_notm}} CLI
-{: #update-ibmcloud-cli}
+   * 將 `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` 新增至 `PATH` 環境變數。
+   * 如需 Shell 自動完成支援（僅限 MacOS 及 Linux&trade;），請參閱[本手冊](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)。
 
-您必須使用最新版本的 CLI。如果不是使用最新版本，請執行下列指令來更新您的 CLI：
+## 解除安裝獨立式 {{site.data.keyword.cloud_notm}} CLI
+{: #uninstall-ibmcloud-cli}
 
-```
-ibmcloud update
-```
-{: codeblock}
+下節提供如何在特定平台上解除安裝獨立式 {{site.data.keyword.cloud_notm}} CLI 的詳細資料。
 
-若要判定您的 {{site.data.keyword.cloud_notm}} CLI 版本，請執行下列指令：
-```
-ibmcloud -v
-```
-{: codeblock}
+### 在 Windows 上解除安裝
+{: #uninstall-cli-windows}
 
-如果您是執行現行版本，則會顯示下列輸出：
-```
-Checking for updates...
-No update required. Your CLI is already up-to-date.
-```
-{: screen}
+1. 按一下`開始`按鈕，然後選取`控制台`。
+2. 在蹦現視窗中，按一下`解除安裝程式`。
+3. 在蹦現應用程式清單中，找到 `IBM Cloud Command Line Interface`。
+4. 在 `IBM Cloud Command Line Interface` 按一下滑鼠右鍵，然後選取`解除安裝`。
+5. 即會啟動解除安裝程式。遵循指示以完成解除安裝。
 
-若要收到關於 {{site.data.keyword.cloud_notm}} CLI 版本的通知，請訂閱 [{{site.data.keyword.cloud_notm}} CLI 版本儲存庫](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
+### 在 Linux 及 macOS 上解除安裝
+{: #uninstall-cli-linux-macos}
+
+#### `0.9.0` 之前的版本
+
+1. 開啟終端機，然後執行下列指令：
+  * `rm -rf /usr/local/ibmcloud`
+  * `rm -f /usr/local/bin/ibmcloud`
+  * `rm -f /usr/local/bin/bluemix`
+  * `rm -f /usr/local/bin/bx`
+  * `rm -f /usr/local/bin/ibmcloud-analytics`
+
+2. 清除已配置的自動完成 Script。如需詳細資料，請參閱[啟用 {{site.data.keyword.cloud_notm}} CLI 的 Shell 自動完成（僅限 Linux 及 macOS）](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)。
+
+#### `0.9.0` 版以及更新版本
+
+1. 開啟終端機，然後執行下列指令：
+  * `/usr/local/ibmcloud/bin/uninstall`
+2. 清除任何自訂自動完成 Script。如需詳細資料，請參閱[啟用 {{site.data.keyword.cloud_notm}} CLI 的 Shell 自動完成（僅限 Linux 及 macOS）](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)。
+
+## 可進一步探索 {{site.data.keyword.cloud_notm}} CLI 的其他鏈結
+{: #other-cli-links}
+
+* [使用外掛程式延伸 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-plug-ins#plug-ins)
+* [一般 CLI (ibmcloud) 指令](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_cli)
+
+## 報告問題及提交意見
+{: #issues}
+
+使用下列選項，以報告問題或提交新的特性要求：
+* 在 [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 中建立問題。
+* 在 [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools 頻道](https://ibm-cloud-tech.slack.com){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 留言 - 在[這裡](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 要求團隊存取。

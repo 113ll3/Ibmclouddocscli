@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-02-26"
 
-keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
 subcollection: cloud-cli
 
@@ -28,17 +28,17 @@ Siga estas directrices para contribuir al plugin de SDK de CLI de {{site.data.ke
 * [CLI](https://github.com/cloudfoundry/cli/releases){: new_window} de Cloud Foundry
 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
 
-   La CLI de Cloud Foundry no es necesaria, pero permite acceder a {{site.data.keyword.cloud_notm}} desde un terminal.
+   La CLI de Cloud Foundry no es necesaria, pero permite acceder a {{site.data.keyword.cloud_notm}} desde el terminal.
 
    Para obtener más información sobre la CLI de Cloud Foundry, consulte la [documentación](/docs/cli?topic=cloud-cli-cf#cf).
 
 * [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) de {{site.data.keyword.cloud_notm}}.
 
-   El plugin se añade a la CLI de {{site.data.keyword.cloud_notm}} y proporciona recursos útiles para acceder a {{site.data.keyword.cloud_notm}} desde la línea de mandatos.
+   Este plugin se instala en la CLI de {{site.data.keyword.cloud_notm}}. La CLI de {{site.data.keyword.cloud_notm}} también proporciona recursos útiles para acceder a {{site.data.keyword.cloud_notm}} desde el terminal.
 
 * [Entorno de desarrollo](https://golang.org/doc/code.html){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de Go
 
-   Go es un lenguaje estricto con ubicaciones de paquetes, por ello, el código fuente se debe definir dentro de la estructura de directorios `$GOPATH`. Debe definir las variables `$GOPATH` y `$GOROOT` e incluir `$GOPATH/bin` en la variable de entorno `$PATH`. Edite el archivo de configuración `~/.bash_profile` para realizar estos cambios.
+   Go es un lenguaje estricto con relación a ubicaciones de paquetes, por ello, el código fuente se debe definir dentro de la estructura de directorios `$GOPATH`. Asegúrese de definir las variables `$GOPATH` y `$GOROOT` y de incluir `$GOPATH/bin` en su variable de entorno `$PATH`. Si es necesario, edite su archivo de configuración `~/.bash_profile` (en Mac OS).
 
    ```
    ### SET Go's GOPATH and GOROOT                                                                                                                   
@@ -48,7 +48,7 @@ Siga estas directrices para contribuir al plugin de SDK de CLI de {{site.data.ke
    ```
    {: codeblock}
 
-* Gestor de dependencias: [`govendor`](https://github.com/kardianos/govendor){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+* Gestor de dependencias: [govendor](https://github.com/kardianos/govendor){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 
    La herramienta `govendor` crea y gestiona las dependencias de Go. No es necesaria a no ser que piense actualizar el directorio de proveedor.
 
@@ -75,9 +75,9 @@ Siga estas directrices para contribuir al plugin de SDK de CLI de {{site.data.ke
 
 * Infraestructura de prueba BDD: [Ginkgo](http://onsi.github.io/ginkgo/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 
-La infraestructura de prueba se basa en Ginkgo, una infraestructura de pruebas BDD para Go, y se utiliza con [`gomega`](http://onsi.github.io/gomega/){: new_window}![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"), que es una biblioteca de buscador y de aserciones para Ginkgo.
+La infraestructura de prueba se basa en Ginkgo, una infraestructura de pruebas BDD para Go. Se utiliza con [Gomega](http://onsi.github.io/gomega/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"), una biblioteca de aserciones y coincidencias para Ginko.
 
-   * Instale `ginkgo` utilizando el mandato siguiente.
+   * Instale `gingko` utilizando el mandato siguiente.
 
       ```
       go get -u github.com/onsi/ginkgo/ginkgo
@@ -100,18 +100,18 @@ La infraestructura de prueba se basa en Ginkgo, una infraestructura de pruebas B
 
       * Para añadir cobertura de código, añada `-cover` al mandato.
 
-   * Utilice el siguiente mandato para obtener un formato HTML preparado para la cobertura de código.
+   * Utilice el siguiente mandato para obtener HTML preparado para la cobertura de código.
 
       ```
       go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
-      * Irá al directorio en el que se encuentra el archivo `.coverprofile`.
+      * Vaya al directorio en el que se encuentra el archivo `.coverprofile`.
 
-* Globalización: [go-i18n](https://github.com/nicksnyder/go-i18n){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") y [go-bindata](https://github.com/jteeuwen/go-bindata){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+* Internacionalización: [go-i18n](https://github.com/nicksnyder/go-i18n){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") y [go-bindata](https://github.com/jteeuwen/go-bindata){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 
-La globalización se basa en `go-i18n`, un paquete y una herramienta de línea de mandatos que proporciona soporte para traducir una aplicación Go en distintos lenguajes. Los paquetes de traducción están procesados de forma previa mediante el mandato `go-bindata`, que convierte cualquier archivo de entrada en un código fuente Go gestionable.
+La internacionalización se basa en `go-i18n`, un paquete y una herramienta de línea de mandatos que proporciona soporte para traducir una aplicación Go en distintos lenguajes. Los paquetes de traducción están procesados de forma previa por `go-bindata`, un mandato que convierte cualquier archivo de entrada en un código fuente Go gestionable.
 
    * Instale `go-i18n` utilizando el siguiente mandato.
 
@@ -127,7 +127,7 @@ La globalización se basa en `go-i18n`, un paquete y una herramienta de línea d
       ```
       {: codeblock}
 
-* Depuración: [delve](https://github.com/go-delve/delve){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+* Depuración: [delve](https://github.com/derekparker/delve){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 
 Delve es un depurador para el lenguaje de programación Go que [Visual Studio Code](https://code.visualstudio.com/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") utiliza.
 
@@ -161,7 +161,7 @@ Las dependencias anidadas no están listadas.
 
 * [github.com/asaskevich/govalidator](https://github.com/asaskevich/govalidator){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 
-   Este paquete proporciona una serie de validadores y sanitizantes para series, estructuras y colecciones. Utilice este paquete en lugar de aplicar sus propios validadores.
+   Este paquete proporciona una serie de validadores y sanitizantes para series, estructuras y colecciones. Utilice este paquete en lugar de aplicar nuestros propios validadores.
 
 * [github.com/parnurzeal/gorequest](https://github.com/parnurzeal/gorequest){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 

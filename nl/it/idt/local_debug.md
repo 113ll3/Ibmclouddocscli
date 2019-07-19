@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-27"
 
-keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
+keywords: local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
 subcollection: cloud-cli
 
@@ -20,14 +20,14 @@ subcollection: cloud-cli
 # Debug dell'applicazione locale per la CLI {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
 
-Esistono degli strumenti per aiutarti ad eseguire il debug della tua applicazione in Java&trade; e Node.js in {{site.data.keyword.cloud_notm}}.
+Esistono degli strumenti per aiutarti ad eseguire il debug della tua applicazione in Java e Node.js in {{site.data.keyword.cloud_notm}}.
 
 ## Debug dell'applicazione Java
 {: #java}
 
-Procedura per abilitare lo strumento di debug per un'applicazione Java&trade;:
+Procedura per abilitare lo strumento di debug per un'applicazione Java:
 
-1. Dalla directory root del tuo progetto dell'applicazione esegui il seguente comando:
+1. Dalla directory root del tuo progetto dell'applicazione, esegui il seguente comando:
 
   ```
   ibmcloud dev debug
@@ -38,15 +38,15 @@ Procedura per abilitare lo strumento di debug per un'applicazione Java&trade;:
 
 	* Eclipse
       1. Importa il progetto **Existing maven project** in Eclipse.
-      2. Crea una configurazione di debug dell'[applicazione remota Java&trade; ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
-         1. Immetti l'indirizzo IP o `localhost:<port>`  
-         2. Immetti `7777` per il numero di porta.
-         3. Specifica il nome del progetto che hai importato.
+      2. Crea una configurazione di debug dell'[applicazione remota Java ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
+      		1. Immetti l'indirizzo IP o il `localhost<port>`  
+      		2. Immetti `7777` per il numero di porta.
+      		3. Specifica il nome del progetto Java che hai importato.
       6. Imposta un punto di interruzione nell'IDE.
       7. Esegui la configurazione di debug.
       8. Accedi all'endpoint con un browser per ricreare il problema.  
 	   
-	   La porta predefinita è `9080` per l'endpoint dei microservizi di base Java&trade;.
+	   La porta predefinita è 9080 per l'endpoint dei microservizi di base Java.
 	   {: note}
 
 	* [IntelliJ ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
@@ -58,7 +58,7 @@ Procedura per abilitare lo strumento di debug per un'applicazione Java&trade;:
 
 Procedura per abilitare lo strumento di debug per un'applicazione Node.js:
 
-1. Dalla directory root del tuo progetto dell'applicazione, esegui il seguente comando:
+1. Dalla tua directory root del progetto dell'applicazione, esegui il seguente comando:
   ```
   ibmcloud dev debug
   ```
@@ -70,17 +70,17 @@ Procedura per abilitare lo strumento di debug per un'applicazione Node.js:
 
 
 <!--
-## Swift app debugging - content from mike tunnicliffe
+## Swift application debugging - content from mike tunnicliffe
 {: #swift}
 
-Steps to enable debug for a Swift app:  
+Steps to enable debug for a Swift application:  
 
-1. On the App server (or system where the Swift app will execute), you should start the 'lldb server':
+1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
-2. On the App server, build the Kitura-based server app using the debug configuration:
+2. On the App server, build the Kitura-based server application using the debug configuration:
  - `swift build debug`
-3. On the App server, start the Kitura-based server app:
+3. On the App server, start the Kitura-based server application:
  - `./build/debug/Kitura-Starter`
 4. On the client system (also known as the host system), start the 'lldb client':
  - `lldb`

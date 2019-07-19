@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-02-26"
 
-keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
 subcollection: cloud-cli
 
@@ -27,20 +27,17 @@ Siga estas diretrizes para contribuir com o plug--in do SDK da CLI do {{site.dat
 
 * CLI do [ do Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
 
-   A CLI do Cloud Foundry não é requerida, mas ela ajuda a acessar {{site.data.keyword.cloud_notm}} em um terminal.
+   A CLI do Cloud Foundry não é necessária, mas ajuda a acessar o {{site.data.keyword.cloud_notm}} por meio do Terminal.
 
    Para obter mais informações sobre a CLI do Cloud Foundry, consulte a [documentação](/docs/cli?topic=cloud-cli-cf#cf).
 
 * {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
-   Esse plug-in é incluído na CLI do {{site.data.keyword.cloud_notm}} e fornece
-recursos úteis para acessar o {{site.data.keyword.cloud_notm}} na linha de comandos.
+   Esse plug-in é instalado na CLI do {{site.data.keyword.cloud_notm}}. A CLI do {{site.data.keyword.cloud_notm}} também fornece recursos úteis para acessar o {{site.data.keyword.cloud_notm}} por meio do Terminal.
 
 * [Ambiente de desenvolvimento ](https://golang.org/doc/code.html){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") do Go
 
-   O Go é rigoroso com os locais dos pacotes, portanto, sua origem deve ser definida dentro
-da estrutura de diretório `$GOPATH`. Deve-se definir suas variáveis `$GOPATH` e `$GOROOT` e incluir `$GOPATH/bin` em
-sua variável de ambiente `$PATH`. É possível editar o arquivo de configuração `~/.bash_profile` (no Mac) para fazer essas mudanças.
+   O Go é estrito com relação a locais de pacotes, então sua origem deve ser definida dentro da estrutura de diretório `$GOPATH`. Defina suas variáveis `$GOPATH` e `$GOROOT` e inclua `$GOPATH/bin` em sua variável de ambiente `$PATH`, o que pode ser feito editando seu arquivo de configuração `~/.bash_profile` (no Mac OS).
 
    ```
    ### SET Go's GOPATH and GOROOT                                                                                                                   
@@ -50,7 +47,7 @@ sua variável de ambiente `$PATH`. É possível editar o arquivo de configuraç�
    ```
    {: codeblock}
 
-* Gerenciador de dependência: [`govendor `](https://github.com/kardianos/govendor){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
+* Gerenciador de dependência: [govendor ](https://github.com/kardianos/govendor){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
 
    A ferramenta `govendor` cria e gerencia as dependências do Go. Você não precisa dela, a menos que planeje atualizar o diretório do fornecedor.
 
@@ -77,7 +74,7 @@ sua variável de ambiente `$PATH`. É possível editar o arquivo de configuraç�
 
 * Estrutura de teste BDD: [Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
 
-A estrutura de teste é baseada no Ginkgo, uma estrutura de teste BDD para Go e é usada com [`gomega`](http://onsi.github.io/gomega/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"), que é uma biblioteca de correspondência e asserção para o Ginkgo.
+A estrutura de teste é baseada no Ginkgo, uma estrutura de teste BDD para Go. Ela é usada com [Gomega](http://onsi.github.io/gomega/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"), que é uma biblioteca correspondente e de asserção para o Ginkgo.
 
    * Instale o `ginkgo` usando o comando a seguir.
 
@@ -102,19 +99,18 @@ A estrutura de teste é baseada no Ginkgo, uma estrutura de teste BDD para Go e 
 
       * Para incluir cobertura de código, anexe `-cover` ao comando.
 
-   * Para obter um formato HTML de cobertura de código propício, use o comando a seguir.
+   * Obtenha um formulário HTML simples da cobertura de código, use o comando a seguir.
 
       ```
       go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
-      * Você é levado para o diretório no qual o arquivo `.coverprofile` está localizado.
+      * Você acessará o diretório no qual o arquivo `.coverprofile` está localizado.
 
-* Globalização: [go-i18n](https://github.com/nicksnyder/go-i18n){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") e [go-bindata](https://github.com/jteeuwen/go-bindata){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
+* Internacionalização: [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") e [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
 
-A globalização é baseada em `go-i18n`, que é uma ferramenta de linha de comandos e pacote que fornece suporte para traduzir um aplicativo Go em vários idiomas. Os pacotes configuráveis
-de tradução são pré-processados pelo comando `go-bindata` que converte qualquer arquivo de entrada no código-fonte gerenciável do Go.
+A internacionalização é baseada em `go-i18n`, que é uma ferramenta de pacote e de linha de comandos que fornece suporte para converter um aplicativo do Go em múltiplas linguagens. Pacotes configuráveis de conversão são pré-processados por `go-bindata`, que é um comando que converte qualquer arquivo de entrada em código de origem gerenciável do Go.
 
    * Instale o `go-i18n` usando o comando a seguir.
 
@@ -130,7 +126,7 @@ de tradução são pré-processados pelo comando `go-bindata` que converte qualq
       ```
       {: codeblock}
 
-* Depuração: [delve ](https://github.com/go-delve/delve){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
+* Depuração: [delve ](https://github.com/derekparker/delve){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
 
 O delve é um depurador para a linguagem de programação Go e é usado pelo [Visual Studio Code ](https://code.visualstudio.com/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
 
@@ -160,13 +156,11 @@ As dependências aninhadas não são listadas.
 
 * [github.com/urfave/cli ](https://github.com/urfave/cli){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
 
-   Este pacote fornece a infraestrutura para construir apps de linha de comandos no Go. O
-plug-in da CLI do {{site.data.keyword.cloud_notm}} depende de uma versão mais antiga desta
-biblioteca (github.com/codegangsta/cli).
+   Este pacote fornece infraestrutura para construir apps de linha de comandos no Go. O plug-in da CLI do {{site.data.keyword.cloud_notm}} depende de uma versão mais antiga desta biblioteca (github.com/codegangsta/cli).
 
 * [github.com/asaskevich/govalidator ](https://github.com/asaskevich/govalidator){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
 
-   Esse pacote fornece um número de validadores e limpadores para sequências, estruturas e coleções. Use esse pacote em vez de implementar seus próprios validadores.
+   Esse pacote fornece um número de validadores e limpadores para sequências, estruturas e coleções. Use este pacote em vez de implementar nossos próprios validadores.
 
 * [github.com/parnurzeal/gorequest ](https://github.com/parnurzeal/gorequest){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-26"
 
-keywords: cli, sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
+keywords: sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
 
 subcollection: cloud-cli
 
@@ -23,7 +23,7 @@ subcollection: cloud-cli
 
 {{site.data.keyword.cloud_notm}} の開発者は、このプラグインを使用して [Open API 仕様 ](https://www.openapis.org/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") 準拠の REST API 定義から SDK を生成することができます。 REST API 定義を変更する際、このプラグインを使用することで、プロジェクト全体を再生成する代わりに SDK のみを再生成することができます。
 
-特定のスペースの Cloud Foundry アプリケーションに、SDK の生成に有効な REST API 定義が含まれているかどうかを確認することもできます。 最後に、{{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインを使用して、REST API 定義が SDK ジェネレーターの条件に準拠していることを確認することができます。
+特定のスペースの Cloud Foundry アプリに、SDK の生成に有効な REST API 定義が含まれているかどうかを確認することもできます。 最後に、{{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインを使用して、REST API 定義が SDK ジェネレーターの条件に準拠していることを確認することができます。
 
 この {{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインによって、開発者は、生成済みの SDK を使用してバックエンド・サービスをアプリに簡単に統合することができます。 REST API に変更が生じた場合、SDK を再生成して古い SDK と置き換えることによって、シームレスな SDK のアップグレードを行うことができます。 また、CLI を devops パイプラインに統合することによって、アプリをビルドするたびに、SDK が API スペックに常に整合していることを確認することができます。
 
@@ -34,7 +34,7 @@ REST API 定義は有効であり、かつ稼働中のサーバー・エンド�
 
 以下の要件を満たしていることを確認します。
 
-* [{{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") アカウントを持っている。
+* [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") アカウントを持っている。
 * [Open API ](https://www.openapis.org/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") 仕様に準拠した有効な API 定義。
 
 ## インストール

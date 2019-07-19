@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-03-08"
 
-keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
 subcollection: cloud-cli
 
@@ -32,7 +32,7 @@ ibmcloud dev enable
 {: codeblock}
 
 * 系统提示您验证检测到的项目框架 **Python - Flask** 或 **Python - Django** 时，请回复 `y`。 
-* 然后，将会提示您 **Connect to an IBM Cloud app**。选择 **Generate assets, create a new IBM Cloud app and connect to it** 或 **Generate assets without connecting to an IBM Cloud app** 选项以连接您的应用程序。
+* 然后，将会提示您 **Connect to an IBM Cloud app**。根据您的应用程序选择 **Generate assets, create a new IBM Cloud app and connect to it** 或 **Generate assets without connecting to an IBM Cloud app** 选项。
 * `enable` 命令还可以创建服务并将其绑定到应用程序。对于此基本示例，请回复 `n`。
 
 请参阅以下样本输出：
@@ -40,9 +40,9 @@ ibmcloud dev enable
 > ibmcloud dev enable
 The enable feature is currently in Beta.
 Please provide your experience and feedback at: https://ibm-cloud-tech.slack.com/messages/developer-tools/
-Only server-side apps are supported by the enable feature
+Only server-side applications are supported by the enable feature
 
-? Python - Flask app discovered. Do you want to proceed with this
+? Python - Flask application discovered. Do you want to proceed with this
 language choice? [y/n]> y
 
 
@@ -105,7 +105,6 @@ LICENSE
 The application, <appname>, has been successfully saved
 into the current directory.
 ```
-{: screen}
 
 ## 构建和部署云支持的 Python 应用程序
 {: #build-deploy-python}
@@ -125,7 +124,7 @@ ibmcloud dev deploy
 ## 如果已启用的应用程序未构建或部署，该怎么做
 {: #build-failure-python}
 
-`enable` 命令并不能成功启用所有应用程序。例如，当项目名称与包含 `wsgi.py` 和 `settings.py` 文件的目录名称不同时，可能会发生以下错误：
+`enable` 命令并不能成功启用所有应用程序。例如，当项目名称与包含 `wsgi.py` 和 `settings.py` 的文件目录名称不一致时，可能会发生以下错误：
 ```
 ImportError: No module named <projectname>.wsgi
 ```

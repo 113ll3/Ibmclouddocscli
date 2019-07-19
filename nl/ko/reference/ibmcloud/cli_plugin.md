@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-15"
 
-keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
+keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
 subcollection: cloud-cli
 
@@ -48,7 +48,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME(필수)</dt>
    <dd>추가되는 저장소의 이름입니다. 각 저장소의 고유 이름을 정의할 수 있습니다.</dd>
    <dt>REPO_URL(필수)</dt>
-   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: https://plugins.cloud.ibm.com instead of plugins.cloud.ibm.com). https://plugins.cloud.ibm.com이 {{site.data.keyword.cloud_notm}} CLI의 공식 플러그인 저장소입니다.</dd>
+   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어야 합니다(예: https://plugins.cloud.ibm.com이 아닌 https://plugins.cloud.ibm.com). https://plugins.cloud.ibm.com이 {{site.data.keyword.cloud_notm}} CLI의 공식 플러그인 저장소입니다.</dd>
     </dl>
 
 
@@ -192,7 +192,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
    <dt>PLUGIN_PATH|PLUGIN_NAME(필수)</dt>
    <dd>-r <i>REPO_NAME</i>이 지정되지 않은 경우 플러그인은 지정된 로컬 경로 또는 원격 URL에서 설치됩니다.</dd>
    <dt>-r <i>REPO_NAME</i>(선택사항)</dt>
-   <dd>플러그인 바이너리가 있는 저장소의 이름입니다. 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.</dd>
+   <dd>플러그인 2진이 있는 저장소의 이름입니다. 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.</dd>
    <dt>-v <i>VERSION</i>(선택사항)</dt>
    <dd>설치될 플러그인의 버전입니다. 제공되지 않은 경우 최신 버전의 플러그인이 설치됩니다. 이 옵션은 저장소에서 플러그인을 설치하는 경우에만 유효합니다.</dd>
    <dt>-f </dt>
@@ -253,7 +253,7 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
  <dt>PLUGIN NAME</dt>
  <dd>업데이트할 플러그인의 이름입니다. 지정되지 않은 경우, 이 명령은 설치된 모든 플러그인의 업그레이드를 확인합니다.</dd>
  <dt>-r REPO_NAME</dt>
- <dd>플러그인 바이너리가 있는 저장소의 이름입니다. 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.</dd>
+ <dd>플러그인 2진이 있는 저장소의 이름입니다. 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.</dd>
  <dt>-v <i>VERSION</i>(선택사항)</dt>
  <dd>업데이트되는 플러그인의 버전입니다. 제공되지 않은 경우 최신 사용 가능 버전으로 플러그인을 업데이트합니다.</dd>
  <dt>--all</dt>

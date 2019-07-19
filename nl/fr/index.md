@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-19"
+lastupdated: "2019-03-01"
 
-keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
+keywords: IBM Cloud Developer Tools CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools
 
 subcollection: cloud-cli
 
@@ -15,15 +15,14 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
-{:note: .note}
 
-# Tutoriel d'initiation
-{: #getting-started}
+# Initiation à l'interface de ligne de commande {{site.data.keyword.cloud_notm}}
+{: #ibmcloud-cli}
 
-En suivant ce tutoriel, vous allez installer un ensemble d'outils {{site.data.keyword.cloud}} Developer Tools, vérifier l'installation et configurer l'environnement. {{site.data.keyword.dev_cli_notm}} propose une approche de ligne de commande permettant de créer, développer et déployer des applications en cloud.
+En suivant ce tutoriel, vous allez installer un ensemble d'outils {{site.data.keyword.cloud}} Developer Tools, vérifier l'installation et configurer l'environnement. {{site.data.keyword.cloud_notm}} Developer Tools propose une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice.
 {: shortdesc}
 
-La commande d'installation présentée dans ce tutoriel installe la dernière version d'interface de ligne de commande {{site.data.keyword.cloud_notm}} autonome ainsi que les outils suivants :
+Avec cette installation, vous disposez de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} autonome et des outils suivants :
 
 * `Homebrew` (Mac uniquement)
 * `Git`
@@ -33,22 +32,20 @@ La commande d'installation présentée dans ce tutoriel installe la dernière ve
 * `curl`
 * Plug-in {{site.data.keyword.dev_cli_notm}}
 * Plug-in {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
-* Plug-in {{site.data.keyword.cos_full_notm}}
 * Plug-in {{site.data.keyword.registrylong_notm}}
 * Plug-in {{site.data.keyword.containerlong_notm}}
+* Plug-in `sdk-gen`
 
 ## Avant de commencer
 {: #idt-prereq}
 
 Vous devez avoir un compte [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et la configuration système suivante doit être respectée :
 
-* Sous Windows&trade;, certaines fonctions ne sont pas prises en charge sauf si vous exécutez Windows&trade; 10 Pro.
+* Sous Windows 10 Pro, certaines fonctions ne sont pas prises en charge (contrairement aux autres versions de Windows).
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
 
-## Etape 1. Lancer la commande d'installation
+## Etape 1. Lancez la commande d'installation
 {: #step1-install-idt}
-
-La dernière version de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} est installée lorsque vous exécutez la commande.
 
 * Pour Mac et Linux, exécutez la commande suivante :
   ```
@@ -56,19 +53,20 @@ La dernière version de l'interface de ligne de commande {{site.data.keyword.clo
   ```
   {: codeblock}
 
-* Pour Windows&trade; 10 Pro, exécutez la commande suivante en tant qu'administrateur :
+* Pour Windows 10 Pro, exécutez la commande suivante en tant qu'administrateur :
   ```
-  [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
+  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
 
-  Cliquez avec le bouton droit de la souris sur l'icône Windows&trade; PowerShell et sélectionnez **Exécuter en tant qu'administrateur**.
+  Cliquez avec le bouton droit de la souris sur l'icône Windows PowerShell et sélectionnez **Exécuter en tant qu'administrateur**.
   {: tip}
 
-Vous pouvez également télécharger le script du programme d'installation à partir de ce [référentiel GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+  Vous pouvez également télécharger le script du programme d'installation à partir de ce [référentiel GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
-Si vous avez besoin d'utiliser une version 32 bits de l'interface de ligne de commande ou une version antérieure autre que la dernière version pour les environnements dédiés {{site.data.keyword.cloud_notm}}, voir [{{site.data.keyword.cloud_notm}}Editions de l'interface CLI](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
-{: note}
+<!--Uncomment when this linked topic goes to prod.
+  For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+-->
 
 ## Etape 2. Vérifier l'installation
 {: #step2-verify-idt}
@@ -84,7 +82,7 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 ## Etape 3. Configurer votre environnement
 {: #step3-configure-idt-env}
 
-1. Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de votre IBMid. Si vous avez plusieurs comptes, vous êtes invité à sélectionner le compte à utiliser. Si vous n'indiquez pas de région avec l'option `-r`, vous devez également sélectionner une région.
+1. Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de votre IBMid. Si vous avez plusieurs comptes, vous êtes invité à sélectionner le compte à utiliser. Si vous n'indiquez pas de région avec l'option `-r`, vous devez également choisir une région.
   ```
   ibmcloud login
   ```
@@ -93,13 +91,13 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
   Si vos données d'identification sont rejetées, vous pouvez utiliser un ID fédéré. Pour vous connecter avec un ID fédéré, utilisez l'option `--sso`. Pour plus de détails, voir [Connexion à l'aide d'un ID fédéré](/docs/iam/federated_id?topic=iam-federated_id#federated_id).
   {: tip}
 
-2. Pour accéder aux services Cloud Foundry, vous devez spécifier un espace et une organisation Cloud Foundry. Vous pouvez exécuter la commande suivante pour identifier de manière interactive l'organisation et l'espace :
+2. Pour utiliser les services Cloud Foundry, ciblez une organisation et un espace.
   ```
   ibmcloud target --cf
   ```
   {: codeblock}
 
-  Si vous savez à quelle organisation et à quel espace le service appartient, vous pouvez utiliser la commande suivante :
+  Vous pouvez, si vous le souhaitez, utiliser la sortie de la commande précédente pour définir manuellement votre organisation et votre espace à l'aide de la commande suivante :
   ```
   ibmcloud target -o <value> -s <value>
   ```
@@ -108,6 +106,4 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 ## Etapes suivantes
 {: #next-steps}
 
-* Vous êtes maintenant prêt à développer et déployer votre première application. Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli).
-
-* Vous pouvez recevoir des notifications sur les nouvelles éditions CLI {{site.data.keyword.cloud_notm}}. Abonnez-vous au [référentiel d'éditions CLI {{site.data.keyword.cloud_notm}}](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+Vous êtes maintenant prêt à développer et déployer votre première application ! Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli).

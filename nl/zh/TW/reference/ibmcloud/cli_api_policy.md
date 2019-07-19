@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-02-26"
 
-keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
+keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids
 
 subcollection: cloud-cli
 
@@ -13,8 +13,6 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:codeblock: .codeblock}
-{:note: .note}
 
 # 管理 IAM 存取、API 金鑰、服務 ID 及存取群組
 {: #ibmcloud_commands_iam}
@@ -25,9 +23,10 @@ subcollection: cloud-cli
 ## ibmcloud iam service-ids
 {: #ibmcloud_iam_service_ids}
 
-列出所有服務 ID：
+列出所有服務 ID。
+
 ```
-ibmcloud iam service-ids [--uuid] [--output FORMAT]
+ibmcloud iam service-ids [--uuid]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -36,24 +35,21 @@ ibmcloud iam service-ids [--uuid] [--output FORMAT]
 <dl>
   <dt>--uuid</dt>
   <dd>僅顯示服務 ID 的 UUID</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
-<strong>範例</strong>：
+<strong>範例</strong>：列出現行帳戶下所有服務 ID 的 UUID：
 
-列出現行帳戶下所有服務 ID 的 UUID：
 ```
 ibmcloud iam service-ids --uuid
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id
 {: #ibmcloud_iam_service_id}
 
-顯示服務 ID 的詳細資料：
+顯示服務 ID 的詳細資料。
+
 ```
-ibmcloud iam service-id (NAME|UUID) [--uuid] [--output FORMAT]
+ibmcloud iam service-id (NAME|UUID) [--uuid]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -66,30 +62,28 @@ ibmcloud iam service-id (NAME|UUID) [--uuid] [--output FORMAT]
   <dd>服務的 UUID，與 NAME 不能同時使用</dd>
   <dt>--uuid</dt>
   <dd>顯示服務 ID 的 UUID</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
-顯示服務 ID `sample-test` 的詳細資料：
+顯示服務 ID `sample-test` 的詳細資料。
+
 ```
 ibmcloud iam service-id sample-test
 ```
-{: codeblock}
+顯示服務 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 的詳細資料。
 
-顯示服務 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 的詳細資料：
 ```
 ibmcloud iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id-create
 {: #ibmcloud_iam_service_id_create}
 
-建立服務 ID：
+建立服務 ID。
+
 ```
-ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock] [--output FORMAT]
+ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -102,31 +96,30 @@ ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock] [--
   <dd>服務 ID 的說明</dd>
   <dt>--lock</dt>
   <dd>建立時鎖定服務 ID</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
-建立服務名稱為 `sample-test` 且說明為 `hello, world!` 的服務 ID：
+建立服務名稱為 `sample-test` 且說明為 `hello, world!` 的服務 ID。
+
 ```
 ibmcloud iam service-id-create sample-test -d 'hello, world!'
 ```
-{: codeblock}
 
-建立服務名稱為 `sample-test` 且說明為 `hello, world!` 的鎖定服務 ID：
+建立服務名稱為 `sample-test` 且說明為 `hello, world!` 的鎖定服務 ID。
+
 ```
 ibmcloud iam service-id-create sample-test -d 'hello, world!'
 --lock
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id-update
-{: #ibmcloud_iam_service_id_update}
 
-更新服務 ID：
+{: #ibmcloud_iam_service_id_update}
+更新服務 ID。
+
 ```
-ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [--output FORMAT] [-f, --force]
+ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -141,36 +134,35 @@ ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --descript
   <dd>服務的新名稱</dd>
   <dt>-d, --description</dt>
   <dd>服務的新說明</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
   <dt>-f, --force</dt>
   <dd>更新而不進行確認</dd>
 </dl>
 
 <strong>範例</strong>：
 
-將服務 ID `sample-test` 重新命名為 `sample-test-2`，而不進行確認：
+將服務 ID `sample-test` 重新命名為 `sample-test-2`，而不進行確認。
+
 ```
 ibmcloud iam service-id-update sample-test -n sample-test-2 -f
 ```
-{: codeblock}
 
-更新服務 `sample-test` 的說明：
+更新服務 `sample-test` 的說明。
+
 ```
 ibmcloud iam service-id-update sample-test -d 'hello, friend!'
 ```
-{: codeblock}
 
-將服務 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 重新命名為 `sample-test-3`，並具有新的說明：
+將服務 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 重新命名為 `sample-test-3`，並具有新的說明。
+
 ```
 ibmcloud iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!'
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id-delete
 {: #ibmcloud_iam_service_id_delete}
 
-刪除服務 ID：
+刪除服務 ID。
+
 ```
 ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 ```
@@ -189,22 +181,23 @@ ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 
 <strong>範例</strong>：
 
-刪除服務 ID `sample-teset`，而不進行確認：
+刪除服務 ID `sample-teset`，而不進行確認。
+
 ```
 ibmcloud iam service-id-delete sample-teset -f
 ```
-{: codeblock}
 
-刪除服務 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`：
+刪除服務 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`。
+
 ```
 ibmcloud iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id-lock
 {: #ibmcloud_iam_service_id_lock}
 
-鎖定服務 ID：
+鎖定服務 ID。
+
 ```
 ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 ```
@@ -223,26 +216,26 @@ ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 
 <strong>範例</strong>：
 
-鎖定服務 ID `sample-teset`，而不進行確認：
+鎖定服務 ID `sample-teset`，而不進行確認。
+
 ```
 ibmcloud iam service-id-lock sample-teset -f
 ```
-{: codeblock}
 
-鎖定服務 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`：
+鎖定服務 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`。
+
 ```
 ibmcloud iam service-id-lock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id-unlock
 {: #ibmcloud_iam_service_id_unlock}
 
-解除鎖定服務 ID：
+解除鎖定服務 ID。
+
 ```
 ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 ```
-{: codeblock}
 
 <strong>必要條件</strong>：端點、登入、目標
 
@@ -258,45 +251,37 @@ ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 
 <strong>範例</strong>：
 
-解除鎖定服務 ID `sample-teset`，而不進行確認：
+解除鎖定服務 ID `sample-teset`，而不進行確認。
+
 ```
 ibmcloud iam service-id-unlock sample-teset -f
 ```
-{: codeblock}
 
-解除鎖定服務 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`：
+解除鎖定服務 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`。
+
 ```
 ibmcloud iam service-id-unlock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
-{: codeblock}
 
 ## ibmcloud iam api-keys
 {: #ibmcloud_iam_api_keys}
 
-列出所有 {{site.data.keyword.cloud_notm}} 平台 API 金鑰：
+列出所有 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰。
+
 ```
-ibmcloud iam api-keys [--output FORMAT]
+ibmcloud iam api-keys
 ```
-{: codeblock}
 
 <strong>必要條件</strong>：端點、登入
-
-<strong>指令選項</strong>：
-<dl>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
-</dl>
 
 ## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
 
-建立新的 {{site.data.keyword.cloud_notm}} 平台 API 金鑰：
-```
-ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock] [--output FORMAT]
-```
+建立新的 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰。
 
-搭配使用 {{site.data.keyword.cloud_notm}} CLI 登入與「API 金鑰」時，不會使用在 `control.softlayer.com` 上找到的舊式「SL API 金鑰」。搭配使用 {{site.data.keyword.cloud_notm}} CLI 登入與「API 金鑰」時，需要已升級的「{{site.data.keyword.cloud_notm}} 帳戶」，其「基礎架構」透過 [cloud.ibm.com](https://cloud.ibm.com/registration){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 來進行管理。
-{: note}
+```
+ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
+```
 
 <strong>必要條件</strong>：端點、登入
 
@@ -310,30 +295,29 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock] [--outp
 <dd>將 API 金鑰資訊儲存至指定的檔案。</dd>
 <dt>--lock</dt>
 <dd>建立時鎖定 API 金鑰</dd>
-<dt>--output FORMAT</dt>
-<dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
-建立 API 金鑰並儲存至檔案：
+建立 API 金鑰，並儲存至檔案。
+
 ```
 ibmcloud iam api-key-create MyKey -d "this is my API key" --file key_file
 ```
-{: codeblock}
 
-建立名稱為 "test-key" 的鎖定 API 金鑰：
+建立名稱為 "test-key" 的鎖定 API 金鑰。
+
 ```
 ibmcloud iam api-key-create test-key --lock
 ```
-{: codeblock}
 
 ## ibmcloud iam api-key-update
 {: #ibmcloud_iam_api_key_update}
 
-更新 {{site.data.keyword.cloud_notm}} 平台 API 金鑰：
+更新 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰。
+
 ```
-ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description] [--output FORMAT]
+ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -348,22 +332,21 @@ ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description] [--output FOR
 <dd>API 金鑰的新名稱</dd>
 <dt>-d <i>DESCRIPTION</i>（選用）</dt>
 <dd>API 金鑰的新說明</dd>
-<dt>--output FORMAT</dt>
-<dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 更新 API 金鑰的說明：
+
 ```
 ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ```
-{: codeblock}
 
 ## ibmcloud api-key-delete
 {: #ibmcloud_iam_api_key_delete}
 
-刪除 {{site.data.keyword.cloud_notm}} 平台 API 金鑰：
+刪除 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰。
+
 ```
 ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 ```
@@ -383,7 +366,8 @@ ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 ## ibmcloud api-key-lock
 {: #ibmcloud_iam_api_key_lock}
 
-鎖定平台 API 金鑰：
+鎖定平台 API 金鑰。
+
 ```
 ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
 ```
@@ -402,22 +386,23 @@ ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
 
 <strong>範例</strong>：
 
-鎖定 API 金鑰 test-api-key：
+鎖定 API 金鑰 test-api-key。
+
 ```
 ibmcloud iam api-key-lock test-api-key
 ```
-{: codeblock}
 
-鎖定具有給定 UUID 的 API 金鑰，而不進行確認：
+鎖定具有給定 UUID 的 API 金鑰，而不進行確認。
+
 ```
 ibmcloud iam api-key-lock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 ```
-{: codeblock}s
 
 ## ibmcloud api-key-unlock
 {: #ibmcloud_iam_api_key_unlock}
 
-解除鎖定平台 API 金鑰：
+解除鎖定平台 API 金鑰。
+
 ```
 ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 ```
@@ -436,24 +421,25 @@ ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 
 <strong>範例</strong>：
 
-解除鎖定 API 金鑰 test-api-key：
+解除鎖定 API 金鑰 test-api-key。
+
 ```
 ibmcloud iam api-key-unlock test-api-key
 ```
-{: codeblock}
 
-解除鎖定具有給定 UUID 的 API 金鑰，而不進行確認：
+解除鎖定具有給定 UUID 的 API 金鑰，而不進行確認。
+
 ```
 ibmcloud iam api-key-unlock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-keys
 {: #ibmcloud_iam_service_api_keys}
 
-列出服務的所有 API 金鑰：
+列出服務的所有 API 金鑰。
+
 ```
-ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [--output FORMAT] [-f, --force]
+ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -464,8 +450,6 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [--output FORMAT
   <dd>服務 ID 的名稱，與 SERVICE_ID_UUID 不能同時使用</dd>
   <dt>SERVICE_ID_UUID（必要）</dt>
   <dd>服務 ID 的 UUID，與 SERVICE_ID_NAME 不能同時使用</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
   <dt>-f, --force</dt>
   <dd>顯示服務 API 金鑰，而不進行確認</dd>
 </dl>
@@ -473,17 +457,18 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [--output FORMAT
 <strong>範例</strong>：
 
 列出服務 `sample-service` 的所有 API 金鑰：
+
 ```
 ibmcloud iam service-api-keys sample-service
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key
 {: #ibmcloud_iam_service_api_key}
 
-列出服務 API 金鑰的詳細資料：
+列出服務 API 金鑰的詳細資料。
+
 ```
-ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [--output FORMAT] [-f, --force]
+ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -500,8 +485,6 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
   <dd>服務 ID 的 UUID，與 SERVICE_ID_NAME 不能同時使用</dd>
   <dt>--uuid</dt>
   <dd>顯示服務 API 金鑰的 UUID</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
   <dt>-f, --force</dt>
   <dd>顯示服務 API 金鑰，而不進行確認</dd>
 </dl>
@@ -509,17 +492,18 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
 <strong>範例</strong>：
 
 顯示服務 `sample-service` 的服務 API 金鑰 `sample-key` 的詳細資料：
+
 ```
 ibmcloud iam service-api-key sample-key sample-service
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key-create
 {: #ibmcloud_iam_service_api_key_create}
 
-建立服務 API 金鑰：
+建立服務 API 金鑰。
+
 ```
-ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [--output FORMAT] [-f, --force] [--lock]
+ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [-f, --force] [--lock]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -536,8 +520,6 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dd>API 金鑰的說明</dd>
   <dt>--file</dt>
   <dd>將 API 金鑰資訊儲存至指定的檔案。</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
   <dt>-f, --force</dt>
   <dd>強制建立，而不進行確認</dd>
 </dl>
@@ -545,17 +527,18 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>範例</strong>：
 
 建立服務 `sample-service` 的服務 API 金鑰 `sample-key`，而不進行確認：
+
 ```
 ibmcloud iam service-api-key-create sample-key sample-service -f
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key-update
 {: #ibmcloud_iam_service_api_key_update}
 
-更新服務 API 金鑰：
+更新服務 API 金鑰。
+
 ```
-ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [--output FORMAT] [-f, --force]
+ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -574,8 +557,6 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
   <dd>服務 API 金鑰的新名稱</dd>
   <dt>-d, --description</dt>
   <dd>服務 API 金鑰的新說明</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
   <dt>-f, --force</dt>
   <dd>更新而不進行確認</dd>
 </dl>
@@ -583,15 +564,16 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>範例</strong>：
 
 將服務 API 金鑰 `sample-key` 重新命名為 `new-sample-key`：
+
 ```
 ibmcloud iam service-api-key-update sample-key sample-service -n new-sample-key
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key-delete
 {: #ibmcloud_iam_service_api_key_delete}
 
-刪除服務 API 金鑰：
+刪除服務 API 金鑰。
+
 ```
 ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
@@ -615,15 +597,16 @@ ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>範例</strong>：
 
 刪除服務 ID `sample-service` 的服務 API 金鑰 `sample-key`：
+
 ```
 ibmcloud iam service-api-key-delete sample-key sample-service
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key-lock
 {: #ibmcloud_iam_service_api_key_lock}
 
-鎖定服務 API 金鑰：
+鎖定服務 API 金鑰。
+
 ```
 ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
@@ -647,15 +630,16 @@ ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SER
 <strong>範例</strong>：
 
 服務 ID `sample-service` 的鎖定服務 API 金鑰 `sample-key`：
+
 ```
 ibmcloud iam service-api-key-lock sample-key sample-service
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key-unlock
 {: #ibmcloud_iam_service_api_key_unlock}
 
-解除鎖定服務 API 金鑰：
+解除鎖定服務 API 金鑰。
+
 ```
 ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
@@ -679,17 +663,18 @@ ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>範例</strong>：
 
 解除鎖定服務 ID `sample-service` 的服務 API 金鑰 `sample-key`：
+
 ```
 ibmcloud iam service-api-key-unlock sample-key sample-service
 ```
-{: codeblock}
 
 ## ibmcloud iam user-policies
 {: #ibmcloud_iam_user_policies}
 
-列出使用者的原則
+列出使用者 `name@example.com` 的原則：
+
 ```
-ibmcloud iam user-policies USER_NAME [--output FORMAT]
+ibmcloud iam user-policies name@example.com
 ```
 
 <strong>必要條件</strong>：端點、登入、設為目標的帳戶
@@ -698,13 +683,12 @@ ibmcloud iam user-policies USER_NAME [--output FORMAT]
 <dl>
 <dt>USER_NAME（必要）</dt>
 <dd>原則所屬的使用者名稱</dd>
-<dt>--output FORMAT</dt>
-<dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 列出使用者 `name@example.com` 的原則：
+
 ```
 ibmcloud iam user-policies name@example.com
 ```
@@ -712,9 +696,10 @@ ibmcloud iam user-policies name@example.com
 ## ibmcloud iam user-policy
 {: #ibmcloud_iam_user_policy}
 
-顯示使用者原則的詳細資料：
+顯示使用者原則的詳細資料
+
 ```
-ibmcloud iam user-policy USER_NAME POLICY_ID [--output FORMAT]
+ibmcloud iam user-policy USER_NAME POLICY_ID
 ```
 
 <strong>必要條件</strong>：端點、登入、設為目標的帳戶
@@ -725,13 +710,12 @@ ibmcloud iam user-policy USER_NAME POLICY_ID [--output FORMAT]
 <dd>原則所屬的使用者名稱</dd>
 <dt>POLICY_ID（必要）</dt>
 <dd>原則的 ID</dd>
-<dt>--output FORMAT</dt>
-<dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 列出使用者 `name@example.com` 的原則 `0bb730daa`：
+
 ```
 ibmcloud iam user-policy name@example.com 0bb730daa
 ```
@@ -739,9 +723,10 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 ## ibmcloud iam user-policy-create
 {: #ibmcloud_iam_user_policy_create}
 
-建立使用者原則：
+建立使用者原則。
+
 ```
-ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>必要條件</strong>：端點、登入、設為目標的帳戶
@@ -753,53 +738,57 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dt>--file <i>FILE</i>（選用）</dt>
 <dd>原則定義的 JSON 檔案</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i>（選用）</dt>
-<dd>原則定義的角色名稱。針對支援的特定服務角色，執行 `ibmcloud iam roles --service SERVICE_NAME`。此選項不能與 `--file` 同時使用。</dd>
+<dd>原則定義的角色名稱。針對特定服務所支援的角色，執行 'ibmcloud iam roles --service SERVICE_NAME'。此選項與 '--file' 不能同時使用。</dd>
 <dt>--service-name <i>SERVICE_NAME</i>（選用）</dt>
-<dd>原則定義的服務名稱，這不能與 `--file` 旗標同時使用。</dd>
+<dd>原則定義的服務名稱。這與 '--file' 旗標不能同時使用。</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i> (optional)</dt>
-<dd>原則定義的服務實例 GUID，這不能與 `--file` 旗標同時使用。</dd>
+<dd>原則定義之服務實例的 UUID。這與 '--file' 旗標不能同時使用。</dd>
 <dt>--region <i>REGION</i>（選用）</dt>
-<dd>原則定義的地區，這不能與 `--file` 旗標同時使用。</dd>
+<dd>原則定義的地區。這與 '--file' 旗標不能同時使用。</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i>（選用）</dt>
-<dd>原則定義的資源類型，這不能與 `--file` 旗標同時使用。</dd>
+<dd>原則定義的資源類型。這與 '--file' 旗標不能同時使用。</dd>
 <dt>--resource <i>RESOURCE</i>（選用）</dt>
-<dd>原則定義的資源，這不能與 `--file` 旗標同時使用。</dd>
+<dd>原則定義的資源。這與 '--file' 旗標不能同時使用。</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i>（選用）</dt>
-<dd>資源群組的名稱。`*` 表示所有資源群組。這不能與 `--file`、`--resource` 及 `--resource-group-id` 旗標同時使用。</dd>
+<dd>資源群組的名稱。這與 '--file'、'--resource' 及 '--resource-group-id' 旗標不能同時使用。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>（選用）</dt>
-<dd>資源群組的 ID。`*` 表示所有資源群組。這不能與 `--file`、`--resource` 及 `--resource-group-name` 旗標同時使用。</dd>
-<dt>--output FORMAT</dt>
-<dd>指定輸出格式，只支援 'JSON'。</dd>
+<dd>資源群組的 ID。這與 '--file'、'--resource' 及 '--resource-group-name' 旗標不能同時使用。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 從原則 JSON 檔案 `policy.json`，建立使用者 `name@example.com` 的使用者原則：
+
 ```
 ibmcloud iam user-policy-create name@example.com --file @policy.json
 ```
 
 針對所有 `sample-service` 資源，將 `Administrator` 角色授與給 `name@example.com`：
+
 ```
 ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name sample-service
 ```
 
 Give `name@example.com` `Editor` role for resource `key123` of sample service instance with GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` in `us-south` region:
+
 ```
 ibmcloud iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 針對 ID 為 `dda27e49d2a1efca58083a01dfde18f6` 的資源群組，將 `Operator` 角色授與給 `name@example.com`：
+
 ```
 ibmcloud iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 針對資源群組 `sample-resource-group` 的成員，將 `Viewer` 角色授與給 `name@example.com`：
+
 ```
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-name sample-resource-group
 ```
 
 針對 ID 為 `dda27e49d2a1efca58083a01dfde18f6` 之資源群組的成員，將 `Viewer` 角色授與給 `name@example.com`：
+
 ```
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
@@ -807,9 +796,10 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 ## ibmcloud iam user-policy-update
 {: #ibmcloud_iam_user_policy_update}
 
-更新使用者原則：
+更新使用者原則。
+
 ```
-ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>必要條件</strong>：端點、登入、設為目標的帳戶
@@ -822,53 +812,57 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dt>--file <i>FILE</i>（選用）</dt>
 <dd>原則定義的 JSON 檔案</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i>（選用）</dt>
-<dd>原則定義的角色名稱。針對支援的特定服務角色，執行 `ibmcloud iam roles --service SERVICE_NAME`。此選項不能與 `--file` 同時使用。</dd>
+<dd>原則定義的角色名稱。針對特定服務所支援的角色，執行 'ibmcloud iam roles --service SERVICE_NAME'。此選項與 '--file' 不能同時使用。</dd>
 <dt>--service-name <i>SERVICE_NAME</i>（選用）</dt>
-<dd>原則定義的服務名稱，這不能與 `--file` 旗標同時使用。</dd>
+<dd>原則定義的服務名稱。這與 '--file' 旗標不能同時使用。</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i> (optional)</dt>
-<dd>原則定義的服務實例 GUID，這不能與 `--file` 旗標同時使用。</dd>
+<dd>原則定義之服務實例的 UUID。這與 '--file' 旗標不能同時使用。</dd>
 <dt>--region <i>REGION</i>（選用）</dt>
-<dd>原則定義的地區，這不能與 `--file` 旗標同時使用。</dd>
+<dd>原則定義的地區。這與 '--file' 旗標不能同時使用。</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i>（選用）</dt>
-<dd>原則定義的資源類型，這不能與 `--file` 旗標同時使用。</dd>
+<dd>原則定義的資源類型。這與 '--file' 旗標不能同時使用。</dd>
 <dt>--resource <i>RESOURCE</i>（選用）</dt>
-<dd>原則定義的資源，這不能與 `--file` 旗標同時使用。</dd>
+<dd>原則定義的資源。這與 '--file' 旗標不能同時使用。</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i>（選用）</dt>
-<dd>資源群組的名稱。`*` 表示所有資源群組。這不能與 `--file`、`--resource` 及 `--resource-group-id` 旗標同時使用。</dd>
+<dd>資源群組的名稱。這與 '--file'、'--resource' 及 '--resource-group-id' 旗標不能同時使用。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>（選用）</dt>
-<dd>資源群組的 ID。`*` 表示所有資源群組。這不能與 `--file`、`--resource` 及 `--resource-group-name` 旗標同時使用。</dd>
-<dt>--output FORMAT</dt>
-<dd>指定輸出格式，只支援 'JSON'。</dd>
+<dd>資源群組的 ID。這與 '--file'、'--resource' 及 '--resource-group-name' 旗標不能同時使用。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 將使用者原則更新為 JSON 檔案中的使用者原則：
+
 ```
 ibmcloud iam user-policy-update name@example.com 0bb730daa --file @policy.json
 ```
 
 更新使用者原則，以針對所有 `sample-service` 資源，將 `Administrator` 角色授與給 `name@example.com`：
+
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Administrator --service-name sample-service
 ```
 
-更新使用者原則，以針對 `us-south` 地區中 GUID 為 `d161aeea-fd02-40f8-a487-df1998bd69a9` 之範例服務實例的資源 `key123`，將 `Editor` 角色授與給 `name@example.com`：
+ 更新使用者原則，以針對 `us-south` 地區中 GUID 為 `d161aeea-fd02-40f8-a487-df1998bd69a9` 之範例服務實例的資源 `key123`，將 `Editor` 角色授與給 `name@example.com`：
+
 ```
 ibmcloud iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 更新使用者原則，以針對 ID 為 `dda27e49d2a1efca58083a01dfde18f6` 的資源群組，將 `Operator` 角色授與給 `name@example.com`：
+
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 更新使用者原則，以針對資源群組 `sample-resource-group` 的成員，將 `Viewer` 角色授與給 `name@example.com`：
+
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-name sample-resource-group
 ```
 
 更新使用者原則，以針對 ID 為 `dda27e49d2a1efca58083a01dfde18f6` 之資源群組的成員，將 `Viewer` 角色授與給 `name@example.com`：
+
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
@@ -877,6 +871,7 @@ ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer -
 {: #ibmcloud_iam_user_policy_delete}
 
 刪除使用者原則。
+
 ```
 ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
 ```
@@ -889,14 +884,14 @@ ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
   <dd>刪除使用者原則，而不進行確認</dd>
 </dl>
 
-<strong>範例</strong>：
+<strong>範例</strong>：刪除使用者 `name@example.com` 的原則 `user-policy-id`：
 
-刪除使用者 `name@example.com` 的原則 `user-policy-id`：
 ```
 ibmcloud iam user-policy-delete name@example.com user-policy-id
 ```
 
 刪除使用者 `name@example.com` 的原則 `user-policy-id`，而不進行確認：
+
 ```
 ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 ```
@@ -904,7 +899,8 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 ## ibmcloud iam service-policies
 {: #ibmcloud_iam_service_policies}
 
-列出指定服務的所有服務原則：
+列出指定服務的所有服務原則。
+
 ```
 ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 ```
@@ -915,7 +911,7 @@ ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 <dl>
   <dt>SERVICE_ID（必要）</dt>
   <dd>服務 ID 的名稱或 UUID</dd>
-  <dt>--output FORMAT</dt>
+  <dt>--output FORMAT（選用）</dt>
   <dd>指定服務原則輸出格式，目前只支援 JSON。</dd>
   <dt>-f, --force（選用）</dt>
   <dd>顯示服務原則，而不進行確認</dd>
@@ -924,11 +920,12 @@ ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 <strong>範例</strong>：
 
 列出服務 `test` 的原則：
+
 ```
 ibmcloud iam service-policies test
 ```
-
 列出服務 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 的原則：
+
 ```
 ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
@@ -936,7 +933,8 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ## ibmcloud iam service-policy
 {: #ibmcloud_iam_service_policy}
 
-顯示服務原則的詳細資料：
+顯示服務原則的詳細資料
+
 ```
 ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
 ```
@@ -949,7 +947,7 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
   <dd>服務 ID 的名稱或 UUID</dd>
   <dt>POLICY_ID（必要）</dt>
   <dd>服務原則的 ID<dd>
-  <dt>--output FORMAT</dt>
+  <dt>--output FORMAT（選用）</dt>
   <dd>指定服務原則輸出格式，目前只支援 JSON。</dd>
   <dt>-f, --force（選用）</dt>
   <dd>顯示服務原則，而不進行確認</dd>
@@ -958,11 +956,12 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
 <strong>範例</strong>：
 
 顯示服務 `test` 的原則 `140798e2-8ea7db3`：
+
 ```
 ibmcloud iam service-policies test 140798e2-8ea7db3
 ```
-
 顯示服務 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 的原則 `140798e2-8ea7db3`：
+
 ```
 ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
@@ -970,9 +969,10 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 ## ibmcloud iam service-policy-create
 {: #ibmcloud_iam_service_policy_create}
 
-建立服務原則：
+建立服務原則。
+
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -982,27 +982,25 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dt>SERVICE_ID（必要）</dt>
   <dd>服務 ID 的名稱或 UUID</dd>
   <dt>--file</dt>
-  <dd>原則定義的 JSON 檔案。這不能與 `-r, --roles`、`--service-name`、`--service-instance`、`--region`、`--resource-type`、`--resource`、`--resource-group-name` 及 `--resource-group-id` 旗標同時使用。</dd>
+  <dd>原則定義的 JSON 檔案。這與 '-r, --roles'、'--service-name'、'--service-instance'、'--region'、'--resource-type'、'--resource'、'--resource-group-name' 及 '--resource-group-id' 旗標不能同時使用。</dd>
   <dt>-r, --roles</dt>
-  <dd>原則定義的角色名稱。針對支援的特定服務角色，執行 `ibmcloud iam roles --service SERVICE_NAME`。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的角色名稱。針對特定服務所支援的角色，執行 'ibmcloud iam roles --service SERVICE_NAME'。此選項與 '--file' 不能同時使用。</dd>
   <dt>--service-name</dt>
-  <dd>原則定義的服務名稱。這不能與 `--file` 旗標同時使用。</dd>
+  <dd>原則定義的服務名稱。這與 '--file' 旗標不能同時使用。</dd>
   <dt>--service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>原則定義之服務實例的 GUID。這不能與 `--file` 旗標同時使用。</dd>
+  <dd>原則定義之服務實例的 GUID。這與 '--file' 旗標不能同時使用。</dd>
   <dt>-region</dt>
-  <dd>原則定義的地區。這不能與 `--file` 旗標同時使用。</dd>
+  <dd>原則定義的地區。這與 '--file' 旗標不能同時使用。</dd>
   <dt>--resource-type</dt>
-  <dd>原則定義的資源類型。這不能與 `--file` 旗標同時使用。</dd>
+  <dd>原則定義的資源類型。這與 '--file' 旗標不能同時使用。</dd>
   <dt>--resource</dt>
-  <dd>原則定義的資源。這不能與 `--file` 旗標同時使用。</dd>
+  <dd>原則定義的資源。這與 '--file' 旗標不能同時使用。</dd>
   <dt>--resource-group-name</dt>
-  <dd>資源群組的名稱。`*` 表示所有資源群組。此選項不能與 `--file` 及 `--resource-group-id` 同時使用。</dd>
+  <dd>資源群組的名稱。此選項與 '--file' 及 '--resource-group-id' 不能同時使用。</dd>
   <dt>--resource-group-id </dt>
-  <dd>資源群組的 ID。`*` 表示所有資源群組。此選項不能與 `--file` 及 `--resource-group-name` 同時使用。</dd>
+  <dd>資源群組的 ID。此選項與 '--file' 及 '--resource-group-name' 不能同時使用。</dd>
   <dt>--account-management（選用）</dt>
   <dd>提供對所有帳戶管理服務的存取權</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
   <dt>-f, --force</dt>
   <dd>建立服務原則，而不進行確認</dd>
 </dl>
@@ -1010,21 +1008,24 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
 <strong>範例</strong>：
 
 從 JSON 檔案，建立服務 `test` 的服務原則：
+
 ```
 ibmcloud iam service-policy-create test --file @policy.json
 ```
-
 從 JSON 檔案，建立服務 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 的服務原則：
+
 ```
 ibmcloud iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
 ```
 
 將所有帳戶管理服務的 `Administrator` 角色授與服務 `test`：
+
 ```
 ibmcloud iam service-policy-create test --roles Administrator --account-management
 ```
 
 將帳戶中所有資源的 `Viewer` 角色授與服務 `test`：
+
 ```
 ibmcloud iam service-policy-create test --roles Viewer
 ```
@@ -1032,9 +1033,10 @@ ibmcloud iam service-policy-create test --roles Viewer
 ## ibmcloud iam service-policy-update
 {: #ibmcloud_iam_service_policy_update}
 
-更新服務原則：
+更新服務原則。
+
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -1046,27 +1048,25 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dt>POLICY_ID（必要）</dt>
   <dd>服務原則的 ID<dd>
   <dt>--file</dt>
-  <dd>原則定義的 JSON 檔案。這不能與 `-r, --roles`、`--service-name`、`--service-instance`、`--region`、`--resource-type`、`--resource`、`resource-group-name` 及 `resource-group-id` 旗標同時使用。</dd>
+  <dd>原則定義的 JSON 檔案。這與 '-r, --roles'、'--service-name'、'--service-instance'、'--region'、'--resource-type'、'--resource'、'resource-group-name' 及 'resource-group-id' 旗標不能同時使用。</dd>
   <dt>-r, --roles</dt>
-  <dd>原則定義的角色名稱。針對支援的特定服務角色，執行 `ibmcloud iam roles --service SERVICE_NAME`。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的角色名稱。針對特定服務所支援的角色，執行 'ibmcloud iam roles --service SERVICE_NAME'。此選項與 '--file' 不能同時使用。</dd>
   <dt>-service-name</dt>
-  <dd>原則定義的服務名稱。這不能與 `--file` 旗標同時使用。</dd>
+  <dd>原則定義的服務名稱。這與 '--file' 旗標不能同時使用。</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>原則定義之服務實例的 GUID。這不能與 `--file` 旗標同時使用。</dd>
+  <dd>原則定義之服務實例的 GUID。這與 '--file' 旗標不能同時使用。</dd>
   <dt>-region</dt>
-  <dd>原則定義的地區。這不能與 `--file` 旗標同時使用。</dd>
+  <dd>原則定義的地區。這與 '--file' 旗標不能同時使用。</dd>
   <dt>-resource-type</dt>
-  <dd>原則定義的資源類型。這不能與 `--file` 旗標同時使用。</dd>
+  <dd>原則定義的資源類型。這與 '--file' 旗標不能同時使用。</dd>
   <dt>-resource</dt>
-  <dd>原則定義的資源。這不能與 `--file` 旗標同時使用。</dd>
+  <dd>原則定義的資源。這與 '--file' 旗標不能同時使用。</dd>
   <dt>--resource-group-name</dt>
-  <dd>資源群組的名稱。`*` 表示所有資源群組。此選項不能與 `--file` 及 `--resource-group-id` 同時使用。</dd>
+  <dd>資源群組的名稱。此選項與 '--file' 及 '--resource-group-id' 不能同時使用。</dd>
   <dt>--resource-group-id </dt>
-  <dd>資源群組的 ID。`*` 表示所有資源群組。此選項不能與 `--file` 及 `--resource-group-name` 同時使用。</dd>
+  <dd>資源群組的 ID。此選項與 '--file' 及 '--resource-group-name' 不能同時使用。</dd>
   <dt>--account-management（選用）</dt>
   <dd>提供對所有帳戶管理服務的存取權</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
   <dt>-f, --force</dt>
   <dd>更新服務原則，而不進行確認</dd>
 </dl>
@@ -1074,21 +1074,25 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
 <strong>範例</strong>：
 
 從 JSON 檔案，更新服務 `test` 的服務原則 `140798e2-8ea7db3`：
+
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ```
 
 從 JSON 檔案，更新服務 `test` 的服務原則 `140798e2-8ea7db3`：
+
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ```
 
 更新服務原則 `140798e2-8ea7db3`，以將所有帳戶管理服務的 `Administrator` 角色授與服務 `test`：
+
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Administrator --account-management
 ```
 
 更新服務原則 `140798e2-8ea7db3`，以將帳戶中所有資源的 `Viewer` 角色授與服務 `test`：
+
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer
 ```
@@ -1096,7 +1100,8 @@ ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer
 ## ibmcloud iam service-policy-delete
 {: #ibmcloud_iam_service_policy_delete}
 
-刪除服務原則：
+刪除服務原則。
+
 ```
 ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 ```
@@ -1115,12 +1120,13 @@ ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 
 <strong>範例</strong>：
 
-刪除服務 `test` 的原則 `140798e2-8ea7db3`：
+刪除測試 `test` 的原則 `140798e2-8ea7db3`。
+
 ```
 ibmcloud iam service-policy-delete test 140798e2-8ea7db3
 ```
+刪除服務 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 的原則 `140798e2-8ea7db3`。
 
-刪除服務 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 的原則`140798e2-8ea7db3`：
 ```
 ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
@@ -1128,64 +1134,31 @@ ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac97
 ## ibmcloud iam oauth-tokens
 {: #ibmcloud_iam_oauth_tokens}
 
-擷取並顯示現行階段作業的 OAuth 記號：
-```
-ibmcloud iam oauth-tokens [--output FORMAT]
-```
-{: codeblock}
+擷取並顯示現行階段作業的 OAuth 記號。
 
-<strong>必要條件</strong>：登入、目標
-
-<strong>指令選項</strong>：
-<dl>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
-</dl>
-
-<strong>範例</strong>：
-
-重新整理並顯示 OAuth 記號：
 ```
 ibmcloud iam oauth-tokens
 ```
-{: codeblock}
-
-## ibmcloud iam roles
-{: #ibmcloud_iam_roles}
-
-列出平台和服務定義的角色：
-```
-ibmcloud iam roles [--service SERVICE_NAME] [--output FORMAT]
-```
-{: codeblock}
 
 <strong>必要條件</strong>：登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>--service SERVICE_NAME</dt>
-  <dd>服務的名稱，如果未指定則只會列出平台定義的角色。</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
-列出平台角色
-```
-ibmcloud iam roles
-```
+重新整理並顯示 OAuth 記號。
 
-以 JSON 列出服務 `cloudantnosql` 的角色：
 ```
-ibmcloud iam roles --service cloudantnosql --output JSON
+ibmcloud iam oauth-tokens
 ```
-{: codeblock}
 
 ## ibmcloud iam dedicated-id-disconnect
 {: #ibmcloud_iam_dedicated_id_disconnect}
 
-中斷公用 IBM ID 與專用非 IBM ID 的連線：
+中斷公用 IBM ID 與專用非 IBM ID 的連線。
+
 ```
 ibmcloud iam dedicated-id-disconnect [-f, --force]
 ```
@@ -1201,7 +1174,8 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 ## ibmcloud iam authorization-policy-create
 {: #ibmcloud_iam_authorization_policy_create}
 
-建立授權原則以容許某個服務實例存取另一個服務實例：
+建立授權原則以容許某個服務實例存取另一個服務實例。
+
 ```
 ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-type RESOURCE_TYPE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME] [--target-resource-type RESOURCE_TYPE | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--output FORMAT]
 ```
@@ -1228,14 +1202,13 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>目標服務實例 ID，與 `--target-service-instance-name` 互斥。如果未指定，則會授與所有目標服務實例的存取權。</dd>
   <dt>--target-resource-type</dt>
   <dd>目標服務的資源類型</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 ## ibmcloud iam authorization-policy-delete
 {: #ibmcloud_iam_authorization_policy_delete}
 
-刪除授權原則：
+刪除授權原則。
+
 ```
 ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 ```
@@ -1253,9 +1226,10 @@ ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 ## ibmcloud iam authorization-policy
 {: #ibmcloud_iam_authorization_policy}
 
-顯示授權原則的詳細資料：
+顯示授權原則的詳細資料。
+
 ```
-ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID [--output FORMAT]
+ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 ```
 
 <strong>必要條件</strong>：登入、目標
@@ -1264,33 +1238,26 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID [--output FORMAT]
 <dl>
   <dt>AUTHORIZATION_POLICY_ID</dt>
   <dd>要顯示的授權原則 ID。</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 ## ibmcloud iam authorization-policies
 {: #ibmcloud_iam_authorization_policies}
 
-列出現行帳戶下的授權原則：
+列出現行帳戶下的授權原則。
+
 ```
-ibmcloud iam authorization-policies [--output FORMAT]
+ibmcloud iam authorization-policies
 ```
-{: codeblock}
 
 <strong>必要條件</strong>：登入、目標
-
-<strong>指令選項</strong>：
-<dl>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
-</dl>
 
 ## ibmcloud iam access-groups
 {: #ibmcloud_iam_access_groups}
 
-列出現行帳戶下的存取群組：
+列出現行帳戶下的存取群組。
+
 ```
-ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME] [--output FORMAT]
+ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -1301,24 +1268,23 @@ ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME] [--output FORMAT]
   <dd>列出使用者所屬的存取群組。此旗標與 '-s' 互斥。</dd>
   <dt>-s</dt>
   <dd>列出服務 ID 所屬的存取群組。此旗標與 '-u' 互斥。</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 列出所有存取群組：
+
 ```
 ibmcloud iam access-groups
 ```
-{: codeblock}
 
 ## ibmcloud iam access-group
 {: #ibmcloud_iam_access_group}
 
-顯示存取群組的詳細資料：
+顯示存取群組的詳細資料。
+
 ```
-ibmcloud iam access-group GROUP_NAME [--id] [--output FORMAT]
+ibmcloud iam access-group GROUP_NAME [--id]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -1327,13 +1293,12 @@ ibmcloud iam access-group GROUP_NAME [--id] [--output FORMAT]
 <dl>
   <dt>-id</dt>
   <dd>僅顯示 ID</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 顯示存取群組 `example_group` 的詳細資料：
+
 ```
 ibmcloud iam access-group example_group
 ```
@@ -1341,9 +1306,10 @@ ibmcloud iam access-group example_group
 ## ibmcloud iam access-group-create
 {: #ibmcloud_iam_access_group_create}
 
-建立存取群組：
+建立存取群組。
+
 ```
-ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION] [--output FORMAT]
+ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -1352,13 +1318,12 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION] [--o
 <dl>
   <dt>-d, --description</dt>
   <dd>存取群組的說明</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 建立存取群組 `example_group`：
+
 ```
 ibmcloud iam access-group-create example_group -d "example access group"
 ```
@@ -1366,9 +1331,10 @@ ibmcloud iam access-group-create example_group -d "example access group"
 ## ibmcloud iam access-group-update
 {: #ibmcloud_iam_access_group_update}
 
-更新存取群組：
+更新存取群組。
+
 ```
-ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [--output FORMAT] [-f, --force]
+ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -1379,8 +1345,6 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
   <dd>新的存取群組名稱</dd>
   <dt>-d, --description</dt>
   <dd>新的說明</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
   <dt>-f, --force</dt>
   <dd>強制更新，而不進行確認</dd>
 </dl>
@@ -1388,6 +1352,7 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
 <strong>範例</strong>：
 
 將存取群組 `example_group` 重新命名為 `hello_world_group`：
+
 ```
 ibmcloud iam access-group-update example_group --name "hello_world_group"
 ```
@@ -1414,6 +1379,7 @@ ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
 <strong>範例</strong>：
 
 刪除存取群組 `example_group`：
+
 ```
 ibmcloud iam access-group-delete example_group --force
 ```
@@ -1421,22 +1387,22 @@ ibmcloud iam access-group-delete example_group --force
 ## ibmcloud iam access-group-users
 {: #ibmcloud_iam_access_group_users}
 
-列出存取群組中的使用者：
+列出存取群組中的使用者。
+
 ```
-ibmcloud iam access-group-users GROUP_NAME [--output FORMAT]
+ibmcloud iam access-group-users GROUP_NAME
 ```
 
 <strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
 <dl>
-<dt>--output FORMAT</dt>
-<dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 列出存取群組 `example_group` 中的所有使用者：
+
 ```
 ibmcloud iam access-group-users example_group
 ```
@@ -1444,7 +1410,8 @@ ibmcloud iam access-group-users example_group
 ## ibmcloud iam access-group-user-add
 {: #ibmcloud_iam_access_group_user_add}
 
-將使用者新增至存取群組：
+將使用者新增至存取群組。
+
 ```
 ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 ```
@@ -1458,6 +1425,7 @@ ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 <strong>範例</strong>：
 
 將使用者 `name@example.com` 新增至存取群組 `example_group`：
+
 ```
 ibmcloud iam access group-user-add example_group name@example.com
 ```
@@ -1465,7 +1433,8 @@ ibmcloud iam access group-user-add example_group name@example.com
 ## ibmcloud iam access-group-user-remove
 {: #ibmcloud_iam_access_group_user_remove}
 
-從存取群組移除使用者：
+從存取群組移除使用者。
+
 ```
 ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
 ```
@@ -1479,6 +1448,7 @@ ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
 <strong>範例</strong>：
 
 將使用者 `name@example.com` 從存取群組 `example_group` 移除：
+
 ```
 ibmcloud iam access-group-user-remove example_group name@example.com
 ```
@@ -1486,7 +1456,8 @@ ibmcloud iam access-group-user-remove example_group name@example.com
 ## ibmcloud iam access-group-user-purge
 {: #ibmcloud_iam_access_group_user_purge}
 
-從所有存取群組移除使用者：
+從所有存取群組移除使用者。
+
 ```
 ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
 ```
@@ -1502,6 +1473,7 @@ ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
 <strong>範例</strong>：
 
 從所有存取群組移除使用者 `name@example.com`：
+
 ```
 ibmcloud iam access-group-user-purge name@example.com -f
 ```
@@ -1509,22 +1481,22 @@ ibmcloud iam access-group-user-purge name@example.com -f
 ## ibmcloud iam access-group-service-ids
 {: #ibmcloud_iam_access_group_service_ids}
 
-列出存取群組中的服務 ID：
+列出存取群組中的服務 ID。
+
 ```
-ibmcloud iam access-group-service-ids GROUP_NAME [--output FORMAT]
+ibmcloud iam access-group-service-ids GROUP_NAME
 ```
 
 <strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
 <dl>
-<dt>--output FORMAT</dt>
-<dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 列出存取群組 `example_group` 中的所有服務 ID：
+
 ```
 ibmcloud iam access-group-service-ids example_group
 ```
@@ -1532,7 +1504,8 @@ ibmcloud iam access-group-service-ids example_group
 ## ibmcloud iam access-group-service-id-add
 {: #ibmcloud_iam_access_group_service_id_add}
 
-將服務 ID 新增至存取群組：
+將服務 ID 新增至存取群組。
+
 ```
 ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
 ```
@@ -1546,6 +1519,7 @@ ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_
 <strong>範例</strong>：
 
 將服務 ID `example-service` 新增至存取群組 `example_group`：
+
 ```
 ibmcloud iam access-group-service-id-add example_group example-service
 ```
@@ -1553,7 +1527,8 @@ ibmcloud iam access-group-service-id-add example_group example-service
 ## ibmcloud iam access-group-service-id-remove
 {: #ibmcloud_iam_access_group_service_id_remove}
 
-從存取群組移除服務 ID：
+從存取群組移除服務 ID。
+
 ```
 ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 ```
@@ -1567,6 +1542,7 @@ ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 <strong>範例</strong>：
 
 將服務 ID `example-service` 從存取群組 `example_group` 移除：
+
 ```
 ibmcloud iam access-group-service-id-remove example_group example-service
 ```
@@ -1574,7 +1550,8 @@ ibmcloud iam access-group-service-id-remove example_group example-service
 ## ibmcloud iam access-group-service-id-purge
 {: #ibmcloud_iam_access_group_service_id_purge}
 
-從所有存取群組移除服務 ID：
+從所有存取群組移除服務 ID。
+
 ```
 ibmcloud iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
 ```
@@ -1598,22 +1575,22 @@ ibmcloud iam access-group-service-id-purge example --force
 ## ibmcloud iam access-group-policies
 {: #ibmcloud_iam_access_group_policies}
 
-列出存取群組的原則：
+列出存取群組的原則。
+
 ```
-ibmcloud iam access-group-policies GROUP_NAME [--output FORMAT]
+ibmcloud iam access-group-policies GROUP_NAME
 ```
 
 <strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 列出存取群組 `example_group` 的所有原則：
+
 ```
 ibmcloud iam access-group-policies example_group
 ```
@@ -1621,22 +1598,22 @@ ibmcloud iam access-group-policies example_group
 ## ibmcloud iam access-group-policy
 {: #ibmcloud_iam_access_group_policy}
 
-顯示存取群組原則的詳細資料：
+顯示存取群組原則的詳細資料。
+
 ```
-ibmcloud iam access-group-policy GROUP_NAME POLICY_ID [--output FORMAT]
+ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
 ```
 
 <strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 顯示存取群組 `example_group` 之原則 `51b9717e-76b0-4f6a-bda7-b8132431f926` 的詳細資料：
+
 ```
 ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f926
 ```
@@ -1644,9 +1621,10 @@ ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 ## ibmcloud iam access-group-policy-create
 {: #ibmcloud_iam_access_group_policy_create}
 
-建立存取群組原則：
+建立存取群組原則。
+
 ```
-ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -1656,28 +1634,27 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
   <dt>--file</dt>
   <dd>原則定義的 JSON 檔案</dd>
   <dt>-roles</dt>
-  <dd>原則定義的角色名稱。針對支援的特定服務角色，執行 `ibmcloud iam roles --service SERVICE_NAME`。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的角色名稱。針對特定服務所支援的角色，執行 'ibmcloud iam roles --service SERVICE_NAME'。此選項與 '--file' 不能同時使用。</dd>
   <dt>-service-name</dt>
-  <dd>原則定義的服務名稱。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的服務名稱。此選項與 '--file' 不能同時使用。</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>原則定義之服務實例的 GUID。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義之服務實例的 GUID。此選項與 '--file' 不能同時使用。</dd>
   <dt>-region</dt>
-  <dd>原則定義的地區。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的地區。此選項與 '--file' 不能同時使用。</dd>
   <dt>-resource-type</dt>
-  <dd>原則定義的資源類型。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的資源類型。此選項與 '--file' 不能同時使用。</dd>
   <dt>-resource</dt>
-  <dd>原則定義的資源。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的資源。此選項與 '--file' 不能同時使用。</dd>
   <dt>-resource-group-name</dt>
-  <dd>資源群組的名稱。`*` 表示所有資源群組。此選項不能與 `--file` 及 `--resource-group-id` 同時使用。</dd>
+  <dd>資源群組的名稱。此選項與 '--file' 及 '--resource-group-id' 不能同時使用。</dd>
   <dt>-resource-group-id</dt>
-  <dd>資源群組的 ID。`*` 表示所有資源群組。此選項不能與 `--file` 及 `--resource-group-name` 同時使用。</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
+  <dd>資源群組的 ID。此選項與 '--file' 及 '--resource-group-name' 不能同時使用。</dd>
 </dl>
 
 <strong>範例</strong>：
 
 從 JSON 檔建立存取群組原則：
+
 ```
 ibmcloud iam access-group-policy-create example_group -f @policy.json
 ```
@@ -1710,9 +1687,10 @@ ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-
 ## ibmcloud iam access-group-policy-update
 {: #ibmcloud_iam_access_group_policy_update}
 
-更新存取群組原則：
+更新存取群組原則。
+
 ```
-ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -1722,23 +1700,21 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
   <dt>--file</dt>
   <dd>原則定義的 JSON 檔案</dd>
   <dt>--roles</dt>
-  <dd>原則定義的角色名稱。針對支援的特定服務角色，執行 `ibmcloud iam roles --service SERVICE_NAME`。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的角色名稱。針對特定服務所支援的角色，執行 'ibmcloud iam roles --service SERVICE_NAME'。此選項與 '--file' 不能同時使用。</dd>
   <dt>-service-name</dt>
-  <dd>原則定義的服務名稱。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的服務名稱。此選項與 '--file' 不能同時使用。</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>原則定義之服務實例的 GUID。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義之服務實例的 GUID。此選項與 '--file' 不能同時使用。</dd>
   <dt>-region</dt>
-  <dd>原則定義的地區。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的地區。此選項與 '--file' 不能同時使用。</dd>
   <dt>-resource-type</dt>
-  <dd>原則定義的資源類型。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的資源類型。此選項與 '--file' 不能同時使用。</dd>
   <dt>-resource</dt>
-  <dd>原則定義的資源。此選項不能與 `--file` 同時使用。</dd>
+  <dd>原則定義的資源。此選項與 '--file' 不能同時使用。</dd>
   <dt>-resource-group-name</dt>
-  <dd>資源群組的名稱。`*` 表示所有資源群組。此選項不能與 `--file` 及 `--resource-group-id` 同時使用。</dd>
+  <dd>資源群組的名稱。此選項與 '--file' 及 '--resource-group-id' 不能同時使用。</dd>
   <dt>-resource-group-id</dt>
-  <dd>資源群組的 ID。`*` 表示所有資源群組。此選項不能與 `--file` 及 `--resource-group-name` 同時使用。</dd>
-  <dt>--output FORMAT</dt>
-  <dd>指定輸出格式，只支援 'JSON'。</dd>
+  <dd>資源群組的 ID。此選項與 '--file' 及 '--resource-group-name' 不能同時使用。</dd>
 </dl>
 
 <strong>範例</strong>：
@@ -1776,7 +1752,8 @@ ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7a
 ## ibmcloud iam access-group-policy-delete
 {: #ibmcloud_iam_access_group_policy_delete}
 
-刪除存取群組原則：
+刪除存取群組原則。
+
 ```
 ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```

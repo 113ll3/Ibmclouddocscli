@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-26"
 
-keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -13,7 +13,6 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:codeblock: .codeblock}
 
 # Ricerca e gestione delle offerte di catalogo
 {: #ibmcloud_catalog}
@@ -48,7 +47,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGIONE] [-k, --kind TIPO] [-p, --
   <dt>--reverse</dt>
   <dd>Indica se invertire la sequenza di ordinamento</dd>
   <dt>--output TIPO (facoltativo)</dt>
-  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
+  <dd>--output valore  Specifica il TIPO di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
   <dt>--csv</dt>
   <dd>File CSV di output</dd>
   <dt>--global</dt>
@@ -58,6 +57,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGIONE] [-k, --kind TIPO] [-p, --
 <strong>Esempi</strong>:
 
 Cerca il servizio `Automation test`:
+
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -65,7 +65,8 @@ ibmcloud catalog search -k service -q 'Automation test'
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
-Ottiene una voce di catalogo:
+Ottiene una voce di catalogo
+
 ```
 ibmcloud catalog entry ID [--children] [--output TIPO] [--global]
 ```
@@ -77,7 +78,7 @@ ibmcloud catalog entry ID [--children] [--output TIPO] [--global]
   <dt>--children</dt>
   <dd>Ottieni tutti gli elementi secondari per la voce di catalogo</dd>
   <dt>--output TIPO (facoltativo)</dt>
-  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON.</dd>
+  <dd>--output valore  Specifica il TIPO di output, al momento è supportato solo JSON.</dd>
   <dt>--global</dt>
   <dd>Opera in ambito globale</dd>
 </dl>
@@ -178,7 +179,7 @@ ibmcloud catalog entry-visibility ID  [--output TIPO] [--global]
   <dt>-json</dt>
   <dd>Genera in output la risposta JSON originale</dd>
   <dt>--output TIPO (facoltativo)</dt>
-  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON.</dd>
+  <dd>--output valore  Specifica il TIPO di output, al momento è supportato solo JSON.</dd>
   <dt>-global</dt>
   <dd>Opera in ambito globale</dd>
 </dl>
@@ -256,12 +257,11 @@ Mostra le offerte del servizio in ambito globale:
 ```
 ibmcloud catalog service-marketplace --global
 ```
-{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
-Visualizza i modelli di contenitore tipo su {{site.data.keyword.cloud_notm}}.
+Visualizza i template di contenitore tipo su {{site.data.keyword.cloud_notm}}.
 ```
 ibmcloud catalog templates [-d]
 ```
@@ -272,38 +272,37 @@ ibmcloud catalog templates [-d]
 
    <dl>
    <dt>-d (facoltativo)</dt>
-   <dd>Se viene specificata l'opzione <i>-d</i>, viene visualizzata anche la descrizione di ciascun modello. Altrimenti, vengono visualizzati solo l'ID e il nome di ciascun modello.</dd>
+   <dd>Se viene specificata l'opzione <i>-d</i>, viene visualizzata anche la descrizione di ciascun template. Altrimenti, vengono visualizzati solo l'ID e il nome di ciascun template.</dd>
    </dl>
 
 ## ibmcloud catalog template
 {: #ibmcloud_catalog_template}
 
-Visualizza le informazioni dettagliate di un modello contenitore tipo specificato.
+Visualizza le informazioni dettagliate di un template di contenitore tipo specificato.
 ```
-ibmcloud catalog template ID_MODELLO
+ibmcloud catalog template TEMPLATE_ID
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
 <strong>Opzioni del comando</strong>:
    <dl>
-   <dt>ID_MODELLO (obbligatorio)</dt>
-   <dd>L'ID del modello contenitore tipo. Utilizza <i>ibmcloud templates</i> per visualizzare l'ID di tutti i modelli.</dd>
+   <dt>TEMPLATE_ID (obbligatorio)</dt>
+   <dd>L'ID del template di contenitore tipo. Utilizza <i>ibmcloud templates</i> per visualizzare l'ID di tutti i template.</dd>
    </dl>
 
 
 <strong>Esempi</strong>:
 
-Visualizza i dettagli del modello `mobileBackendStarter`:
+Visualizza i dettagli del template `mobileBackendStarter`:
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
-{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
 
-Crea un'applicazione cf basata sul modello specificato con l'URL e la descrizione specificati. Per impostazione predefinita, la nuova applicazione viene avviata automaticamente.
+Crea un'applicazione cf basata sul template specificato con l'URL e la descrizione specificati. Per impostazione predefinita, la nuova applicazione viene avviata automaticamente.
 
 ```
 ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNAME] [-desc DESCRIPTION] [--no-start]
@@ -313,14 +312,14 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 
 <strong>Opzioni del comando</strong>:
    <dl>
-   <dt>ID_MODELLO (obbligatorio)</dt>
-   <dd>Il template su cui è basata l'applicazione quando viene creata. Utilizza <i>ibmcloud templates</i> per visualizzare l'ID di tutti i modelli.</dd>
-   <dt>NOME_APPLICAZIONE_CF (obbligatorio)</dt>
+   <dt>TEMPLATE_ID (obbligatorio)</dt>
+   <dd>Il template su cui è basata l'applicazione quando viene creata. Utilizza <i>ibmcloud templates</i> per visualizzare l'ID di tutti i template.</dd>
+   <dt>CF_APP_NAME (obbligatorio)</dt>
    <dd>Il nome dell'applicazione cf da creare.</dd>
    <dt>-n<i>HOSTNAME</i></dt>
-   <dd>Il nome host dell'applicazione CF. Se non viene specificata, la rotta viene impostata da {{site.data.keyword.cloud_notm}} automaticamente in base ai tuoi nome applicazione e dominio predefinito.</dd>
+   <dd>Il nome host dell'applicazione CF. Se non specificata, la rotta viene impostata automaticamente da {{site.data.keyword.cloud_notm}} in base al nome della tua applicazione e al dominio predefinito.</dd>
    <dt>-d<i>DOMAINNAME</i></dt>
-   <dd>Il dominio dell'applicazione CF. Se non viene specificata, la rotta viene impostata da {{site.data.keyword.cloud_notm}} automaticamente in base ai tuoi nome applicazione e dominio predefinito.</dd>
+   <dd>Il dominio dell'applicazione CF. Se non specificata, la rotta viene impostata automaticamente da {{site.data.keyword.cloud_notm}} in base al nome della tua applicazione e al dominio predefinito.</dd>
    <dt>--desc <i>DESCRIPTION</i> (facoltativo)</dt>
    <dd>Descrizione dell'applicazione.</dd>
    <dt>--no-start (facoltativo)</dt>
@@ -330,23 +329,20 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 
 <strong>Esempi</strong>:
 
-Crea un'applicazione `cf` denominata `my-app` basata su un template `javaHelloWorld`:
+Crea un'applicazione `my-app` basata sul template `javaHelloWorld`:
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
-{: codeblock}
 
 Crea un'applicazione `my-ruby-app` basata sul template `rubyHelloWorld` con una descrizione:
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
-{: codeblock}
 
 Crea un'applicazione `my-python-app` basata sul template `pythonHelloWorld` senza l'avvio automatico:
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
-{: codeblock}
 
 ## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
@@ -366,7 +362,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind TIPO] [--col COLONNE] [--ou
   <dt>--col</dt>
   <dd>Specifica colonne aggiuntive per la tabella. Attualmente "group", "provider" e "tags".</dd>
   <dt>--output TIPO (facoltativo)</dt>
-  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
+  <dd>--output valore  Specifica il TIPO di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
   <dt>--global</dt>
   <dd>Opera in un ambito globale.</dd>
   <dt>--csv</dt>
@@ -387,7 +383,6 @@ Mostra i dettagli del runtime "nodejsHelloWorld":
 ```
 catalog runtime nodejsHelloWorld
 ```
-{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
@@ -410,4 +405,3 @@ Elenca tutti i runtime con le loro descrizioni:
 ```
 ibmcloud catalog runtimes -d
 ```
-{: codeblock}

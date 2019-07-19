@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-02-26"
 
-keywords: cli, sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
+keywords: sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
 
 subcollection: cloud-cli
 
@@ -23,7 +23,7 @@ O plug-in do {{site.data.keyword.IBM}} SDK Generator pode ser instalado na [CLI]
 
 Como um desenvolvedor no {{site.data.keyword.cloud_notm}}, é possível usar esse plug-in para gerar os SDKs de sua definição de API de REST compatível com a [Especificação da Open API ](https://www.openapis.org/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"). À medida que você faz mudanças na definição de API de REST, é possível usar esse plug-in para gerar novamente apenas o SDK, em vez de gerar novamente o projeto inteiro.
 
-Também será possível ver se os aplicativos do Cloud Foundry em um determinado espaço têm definições de API de REST válidas para geração de SDK. Finalmente, é possível usar o plug-in do {{site.data.keyword.IBM_notm}} SDK Generator para validar quaisquer definições de API de REST para assegurar-se de que obedeçam aos requisitos do gerador de SDK.
+Também será possível ver se os apps Cloud Foundry em um determinado espaço possuírem definições de API de REST que são válidas para geração de SDK. Finalmente, é possível usar o plug-in do {{site.data.keyword.IBM_notm}} SDK Generator para validar quaisquer definições de API de REST para assegurar-se de que obedeçam aos requisitos do gerador de SDK.
 
 Esse plug-in do {{site.data.keyword.IBM_notm}} SDK Generator permite integrar facilmente seus serviços de backend ao app com um SDK gerado. Quando ocorrer uma mudança em uma API de REST, será possível gerar novamente o SDK e substituir o antigo para um upgrade ininterrupto de SDK. Também será possível integrar a CLI a um pipeline devops e assegurar-se de que o SDK esteja sempre consistente com a especificação de API sempre que o app for construído.
 
@@ -34,7 +34,7 @@ A definição de API de REST deve ser válida e hospedada em um end point do ser
 
 Assegure-se de satisfazer os requisitos a seguir.
 
-* Você tem uma conta do [{{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
+* Você tem uma conta do [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
 * Uma definição de API válida que esteja em conformidade com a especificação [Open API ](https://www.openapis.org/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
 
 ## Instalação

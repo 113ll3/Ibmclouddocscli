@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli?topic=cloud-cli-ibmcloud-cli" path="cli"}
+{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html" path="cli"}
 IBM Cloud-Befehlszeilenschnittstelle und Entwicklertools
 
 	{: .navgroup id="learn"}
@@ -10,11 +10,9 @@ IBM Cloud-Befehlszeilenschnittstelle und Entwicklertools
 
 	{: .navgroup id="howto"}
 	reference/ibmcloud/download_cli.md
-	install-devtools-manually.md
 	reference/ibmcloud/extend_cli.md
 	reference/ibmcloud/cli_docker.md
 	reference/ibmcloud/enable_cli_autocompletion.md
-	reference/ibmcloud/uninstall_cli.md
 	idt/index.md
 
 	{: .topicgroup}
@@ -30,13 +28,14 @@ IBM Cloud-Befehlszeilenschnittstelle und Entwicklertools
 
 	{: .navgroup id="reference"}
 	{: .topicgroup}
-	Befehle der IBM Cloud-CLI (ibmcloud)
+	Befehle der IBM Cloud-Befehlszeilenschnittstelle (ibmcloud)
 		reference/ibmcloud/bx_cli.md
 		reference/ibmcloud/cli_acct_org_role.md
 		reference/ibmcloud/cli_billing.md
 		reference/ibmcloud/cli_block_storage.md
 		reference/ibmcloud/cli_catalog.md
 		reference/ibmcloud/cli_cdn.md
+		reference/ibmcloud/cf_index.md
 		reference/ibmcloud/cli_cf_apps.md
 		reference/ibmcloud/cli_cf_services.md
 		reference/ibmcloud/cli_cfee.md
@@ -54,29 +53,25 @@ IBM Cloud-Befehlszeilenschnittstelle und Entwicklertools
 		reference/ibmcloud/cli_security.md
 		reference/ibmcloud/cli_securitygroup.md
 		reference/ibmcloud/cli_subnet.md
-		reference/ibmcloud/cli_ticket.md
-		reference/ibmcloud/cli_user.md
 		reference/ibmcloud/cli_virtual_server.md
 		reference/ibmcloud/cli_vlan.md
 	idt/commands.md
+	reference/ibmcloud/all_versions.md
 
 	{: .topicgroup}
-	Plug-ins der IBM Cloud-CLI
+	Plug-ins der IBM Cloud-Befehlszeilenschnittstelle
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
-		/auto-scaling-cli-plugin/auto-scaling-cli-autoscalingcli
+		/auto-scaling-cli-plugin/auto-scaling-cli-plugin-autoscalingcli
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
-		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
+		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
-		/dbaas-cli-plugin/hyper-protect-dbaas-dbaas_cli_plugin
+		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
 		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
-		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
-		/hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
 
 	{: .topicgroup}
-	Plug-ins der Cloud Foundry-CLI
-		/cf-cli-plugin/cf-cli-plugin-cf-cli-plugin
+	Plug-ins der Cloud Foundry-Befehlszeilenschnittstelle
 		plugins/bluemix_admin/index.md
 		plugins/vpn/index.md
 
@@ -92,6 +87,5 @@ IBM Cloud-Befehlszeilenschnittstelle und Entwicklertools
 	{: .navgroup-end}
 
     {: .navgroup id="help"}
-    faq.md
-    ts_createapps.md
+	ts_createapps.md
     {: .navgroup-end}

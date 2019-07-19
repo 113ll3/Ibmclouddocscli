@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-02-26"
 
-keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
+keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids
 
 subcollection: cloud-cli
 
@@ -13,8 +13,6 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:codeblock: .codeblock}
-{:note: .note}
 
 # IAM 액세스, API 키, 서비스 ID 및 액세스 그룹 관리
 {: #ibmcloud_commands_iam}
@@ -26,8 +24,9 @@ subcollection: cloud-cli
 {: #ibmcloud_iam_service_ids}
 
 모든 서비스 ID 나열
+
 ```
-ibmcloud iam service-ids [--uuid] [--output FORMAT]
+ibmcloud iam service-ids [--uuid]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -36,24 +35,22 @@ ibmcloud iam service-ids [--uuid] [--output FORMAT]
 <dl>
   <dt>--uuid</dt>
   <dd>서비스 ID의 UUID만 표시</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
+현재 계정 아래에 모든 서비스 ID의 UUID 나열
 
-현재 계정 아래 모든 서비스 ID의 UUID 나열:
 ```
 ibmcloud iam service-ids --uuid
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id
 {: #ibmcloud_iam_service_id}
 
-서비스 ID의 세부사항 표시:
+서비스 ID의 세부사항 표시
+
 ```
-ibmcloud iam service-id (NAME|UUID) [--uuid] [--output FORMAT]
+ibmcloud iam service-id (NAME|UUID) [--uuid]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -66,30 +63,28 @@ ibmcloud iam service-id (NAME|UUID) [--uuid] [--output FORMAT]
   <dd>서비스의 UUID(NAME과 배타적)</dd>
   <dt>--uuid</dt>
   <dd>서비스 ID의 UUID 표시</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
-서비스 ID `sample-test`의 세부사항 표시:
+서비스 ID `sample-test`의 세부사항 표시
+
 ```
 ibmcloud iam service-id sample-test
 ```
-{: codeblock}
+서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 세부사항 표시
 
-서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 세부사항 표시:
 ```
 ibmcloud iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id-create
 {: #ibmcloud_iam_service_id_create}
 
-서비스 ID 작성:
+서비스 ID 작성
+
 ```
-ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock] [--output FORMAT]
+ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -102,30 +97,29 @@ ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock] [--
   <dd>서비스 ID의 설명</dd>
   <dt>--lock</dt>
   <dd>작성되는 동안 서비스 ID 잠금</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
-서비스 이름이 `sample-test`이고 해당 설명이 `hello, world!`인 서비스 ID 작성:
+서비스 이름이 `sample-test`이고 해당 설명이 `hello, world!`인 서비스 ID 작성
+
 ```
 ibmcloud iam service-id-create sample-test -d 'hello, world!'
 ```
-{: codeblock}
 
-서비스 이름이 `sample-test`이고 해당 설명이 `hello, world!`인 잠긴 서비스 ID 작성:
+서비스 이름이 `sample-test`이고 설명이 `hello, world!`인 잠긴 서비스 ID 작성
+
 ```
 ibmcloud iam service-id-create sample-test -d 'hello, world!' --lock
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id-update
-{: #ibmcloud_iam_service_id_update}
 
-서비스 ID 업데이트:
+{: #ibmcloud_iam_service_id_update}
+서비스 ID 업데이트
+
 ```
-ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [--output FORMAT] [-f, --force]
+ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -140,36 +134,35 @@ ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --descript
   <dd>서비스의 새 이름</dd>
   <dt>-d, --description</dt>
   <dd>서비스의 새 설명</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 업데이트</dd>
 </dl>
 
 <strong>예제</strong>:
 
-서비스 ID 이름 `sample-test`를 확인 없이 `sample-test-2`로 바꾸기:
+서비스 ID 이름 `sample-test`를 확인 없이 `sample-test-2`로 바꾸기
+
 ```
 ibmcloud iam service-id-update sample-test -n sample-test-2 -f
 ```
-{: codeblock}
 
-서비스 `sample-test`의 설명 업데이트:
+서비스 `sample-test`의 설명 업데이트
+
 ```
 ibmcloud iam service-id-update sample-test -d 'hello, friend!'
 ```
-{: codeblock}
 
-서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 이름을 설명이 새로 포함된 `sample-test-3`으로 바꾸기:
+서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 이름을 설명이 새로 포함된 `sample-test-3`으로 바꾸기
+
 ```
 ibmcloud iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!'
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id-delete
 {: #ibmcloud_iam_service_id_delete}
 
-서비스 ID 삭제:
+서비스 ID 삭제
+
 ```
 ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 ```
@@ -188,22 +181,23 @@ ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 
 <strong>예제</strong>:
 
-확인 없이 서비스 ID `sample-teset` 삭제:
+확인 없이 서비스 ID `sample-teset` 삭제
+
 ```
 ibmcloud iam service-id-delete sample-teset -f
 ```
-{: codeblock}
 
-서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 삭제:
+서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 삭제
+
 ```
 ibmcloud iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id-lock
 {: #ibmcloud_iam_service_id_lock}
 
-서비스 ID 잠금:
+서비스 ID 잠금
+
 ```
 ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 ```
@@ -222,26 +216,26 @@ ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 
 <strong>예제</strong>:
 
-확인 없이 서비스 ID `sample-teset` 잠금:
+확인 없이 서비스 ID `sample-teset` 잠금
+
 ```
 ibmcloud iam service-id-lock sample-teset -f
 ```
-{: codeblock}
 
-서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 잠금:
+서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 잠금
+
 ```
 ibmcloud iam service-id-lock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
-{: codeblock}
 
 ## ibmcloud iam service-id-unlock
 {: #ibmcloud_iam_service_id_unlock}
 
-서비스 ID 잠금 해제:
+서비스 ID 잠금 해제
+
 ```
 ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 ```
-{: codeblock}
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
@@ -257,45 +251,37 @@ ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 
 <strong>예제</strong>:
 
-확인 없이 서비스 ID `sample-teset` 잠금 해제:
+확인 없이 서비스 ID `sample-teset` 잠금 해제
+
 ```
 ibmcloud iam service-id-unlock sample-teset -f
 ```
-{: codeblock}
 
-서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 잠금 해제:
+서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 잠금 해제
+
 ```
 ibmcloud iam service-id-unlock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
-{: codeblock}
 
 ## ibmcloud iam api-keys
 {: #ibmcloud_iam_api_keys}
 
-{{site.data.keyword.cloud_notm}} 플랫폼 API 키 나열:
+{{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 나열
+
 ```
-ibmcloud iam api-keys [--output FORMAT]
+ibmcloud iam api-keys
 ```
-{: codeblock}
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
-
-<strong>명령 옵션</strong>:
-<dl>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
-</dl>
 
 ## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
 
-새 {{site.data.keyword.cloud_notm}} 플랫폼 API 키 작성:
-```
-ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock] [--output FORMAT]
-```
+새 {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 작성
 
-API 키와 함께 {{site.data.keyword.cloud_notm}} CLI 로그인을 사용하는 경우 `control.softlayer.com`에 있는 레거시 SL API 키와 함께 작동하지 않습니다. [cloud.ibm.com](https://cloud.ibm.com/registration){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 통해 인프라가 관리되는 업그레이드된 {{site.data.keyword.cloud_notm}} 계정이 API 키를 사용하는 {{site.data.keyword.cloud_notm}} CLI 로그인에 필요합니다.
-{: note}
+```
+ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
+```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
@@ -309,30 +295,29 @@ API 키와 함께 {{site.data.keyword.cloud_notm}} CLI 로그인을 사용하는
 <dd>지정된 파일에 API 키 정보를 저장합니다.</dd>
 <dt>--lock</dt>
 <dd>작성되는 동안 API 키 잠금</dd>
-<dt>--output FORMAT</dt>
-<dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
-API 키 작성 및 파일에 저장:
+API 키 작성 및 파일에 저장
+
 ```
 ibmcloud iam api-key-create MyKey -d "this is my API key" --file key_file
 ```
-{: codeblock}
 
-이름이 "test-key"인 잠긴 API 키 작성:
+이름이 "test-key"인 잠긴 API 키 작성
+
 ```
 ibmcloud iam api-key-create test-key --lock
 ```
-{: codeblock}
 
 ## ibmcloud iam api-key-update
 {: #ibmcloud_iam_api_key_update}
 
-{{site.data.keyword.cloud_notm}} 플랫폼 API 키 업데이트:
+{{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 업데이트
+
 ```
-ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description] [--output FORMAT]
+ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -347,22 +332,21 @@ ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description] [--output FOR
 <dd>API 키의 새 이름</dd>
 <dt>-d <i>DESCRIPTION</i>(선택사항)</dt>
 <dd>API 키의 새 설명</dd>
-<dt>--output FORMAT</dt>
-<dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 API 키의 설명 업데이트:
+
 ```
 ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ```
-{: codeblock}
 
 ## ibmcloud api-key-delete
 {: #ibmcloud_iam_api_key_delete}
 
-{{site.data.keyword.cloud_notm}} 플랫폼 API 키 삭제:
+{{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 삭제
+
 ```
 ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 ```
@@ -382,7 +366,8 @@ ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 ## ibmcloud api-key-lock
 {: #ibmcloud_iam_api_key_lock}
 
-플랫폼 API 키 잠금:
+플랫폼 API 키 잠금
+
 ```
 ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
 ```
@@ -401,22 +386,23 @@ ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
 
 <strong>예제</strong>:
 
-API 키 test-api-key 잠금:
+API 키 test-api-key 잠금
+
 ```
 ibmcloud iam api-key-lock test-api-key
 ```
-{: codeblock}
 
-확인 없이 UUID가 지정된 API 키 잠금:
+확인 없이 UUID가 지정된 API 키 잠금
+
 ```
 ibmcloud iam api-key-lock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 ```
-{: codeblock}s
 
 ## ibmcloud api-key-unlock
 {: #ibmcloud_iam_api_key_unlock}
 
-플랫폼 API 키 잠금 해제:
+플랫폼 API 키 잠금 해제
+
 ```
 ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 ```
@@ -435,24 +421,25 @@ ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 
 <strong>예제</strong>:
 
-API 키 test-api-key 잠금 해제:
+API 키 test-api-key 잠금 해제
+
 ```
 ibmcloud iam api-key-unlock test-api-key
 ```
-{: codeblock}
 
-확인 없이 UUID가 지정된 API 키 잠금 해제:
+확인 없이 UUID가 지정된 API 키 잠금 해제
+
 ```
 ibmcloud iam api-key-unlock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-keys
 {: #ibmcloud_iam_service_api_keys}
 
-서비스의 모든 API 키 나열:
+서비스의 모든 API 키 나열
+
 ```
-ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [--output FORMAT] [-f, --force]
+ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -463,8 +450,6 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [--output FORMAT
   <dd>서비스 ID의 이름(SERVICE_ID_UUID와 배타적)</dd>
   <dt>SERVICE_ID_UUID(필수)</dt>
   <dd>서비스 ID의 UUID(SERVICE_ID_NAME과 배타적)</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 서비스 API 키 표시</dd>
 </dl>
@@ -472,17 +457,18 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [--output FORMAT
 <strong>예제</strong>:
 
 서비스 `sample-service`의 모든 API 키 나열:
+
 ```
 ibmcloud iam service-api-keys sample-service
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key
 {: #ibmcloud_iam_service_api_key}
 
-서비스 API 키의 세부사항 나열:
+서비스 API 키의 세부사항 나열
+
 ```
-ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [--output FORMAT] [-f, --force]
+ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -499,8 +485,6 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
   <dd>서비스 ID의 UUID(SERVICE_ID_NAME과 배타적)</dd>
   <dt>--uuid</dt>
   <dd>서비스 API 키의 UUID 표시</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 서비스 API 키 표시</dd>
 </dl>
@@ -508,17 +492,18 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
 <strong>예제</strong>:
 
 서비스 `sample-service`의 서비스 API 키 `sample-key`의 세부사항 표시:
+
 ```
 ibmcloud iam service-api-key sample-key sample-service
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key-create
 {: #ibmcloud_iam_service_api_key_create}
 
-서비스 API 키 작성:
+서비스 API 키 작성
+
 ```
-ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [--output FORMAT] [-f, --force] [--lock]
+ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [-f, --force] [--lock]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -535,8 +520,6 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dd>API 키의 설명</dd>
   <dt>--file</dt>
   <dd>지정된 파일에 API 키 정보를 저장합니다.</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 작성 강제 실행</dd>
 </dl>
@@ -544,17 +527,18 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>예제</strong>:
 
 확인 없이 서비스 `sample-service`의 서비스 API 키 `sample-key` 작성:
+
 ```
 ibmcloud iam service-api-key-create sample-key sample-service -f
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key-update
 {: #ibmcloud_iam_service_api_key_update}
 
-서비스 API 키 업데이트:
+서비스 API 키 업데이트
+
 ```
-ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [--output FORMAT] [-f, --force]
+ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -573,8 +557,6 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
   <dd>서비스 API 키의 새 이름</dd>
   <dt>-d, --description</dt>
   <dd>서비스 API 키의 새 설명</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 업데이트</dd>
 </dl>
@@ -582,15 +564,16 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>예제</strong>:
 
 서비스 API 키 이름 `sample-key`를 `new-sample-key`로 바꾸기:
+
 ```
 ibmcloud iam service-api-key-update sample-key sample-service -n new-sample-key
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key-delete
 {: #ibmcloud_iam_service_api_key_delete}
 
-서비스 API 키 삭제:
+서비스 API 키 삭제
+
 ```
 ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
@@ -614,15 +597,16 @@ ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>예제</strong>:
 
 서비스 ID `sample-service`의 서비스 API 키 `sample-key` 삭제:
+
 ```
 ibmcloud iam service-api-key-delete sample-key sample-service
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key-lock
 {: #ibmcloud_iam_service_api_key_lock}
 
-서비스 API 키 잠금:
+서비스 API 키 잠금
+
 ```
 ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
@@ -646,15 +630,16 @@ ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SER
 <strong>예제</strong>:
 
 서비스 ID `sample-service`의 서비스 API 키 `sample-key` 잠금:
+
 ```
 ibmcloud iam service-api-key-lock sample-key sample-service
 ```
-{: codeblock}
 
 ## ibmcloud iam service-api-key-unlock
 {: #ibmcloud_iam_service_api_key_unlock}
 
-서비스 API 키 잠금 해제:
+서비스 API 키 잠금 해제
+
 ```
 ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
@@ -678,17 +663,18 @@ ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>예제</strong>:
 
 서비스 ID `sample-service`의 서비스 API 키 `sample-key` 잠금 해제:
+
 ```
 ibmcloud iam service-api-key-unlock sample-key sample-service
 ```
-{: codeblock}
 
 ## ibmcloud iam user-policies
 {: #ibmcloud_iam_user_policies}
 
-사용자의 정책 나열
+사용자 `name@example.com`의 정책 나열:
+
 ```
-ibmcloud iam user-policies USER_NAME [--output FORMAT]
+ibmcloud iam user-policies name@example.com
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
@@ -697,13 +683,12 @@ ibmcloud iam user-policies USER_NAME [--output FORMAT]
 <dl>
 <dt>USER_NAME(필수)</dt>
 <dd>정책이 속한 사용자 이름</dd>
-<dt>--output FORMAT</dt>
-<dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 사용자 `name@example.com`의 정책 나열:
+
 ```
 ibmcloud iam user-policies name@example.com
 ```
@@ -711,9 +696,10 @@ ibmcloud iam user-policies name@example.com
 ## ibmcloud iam user-policy
 {: #ibmcloud_iam_user_policy}
 
-사용자 정책의 세부사항 표시:
+사용자 정책의 세부사항 표시
+
 ```
-ibmcloud iam user-policy USER_NAME POLICY_ID [--output FORMAT]
+ibmcloud iam user-policy USER_NAME POLICY_ID
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
@@ -724,13 +710,12 @@ ibmcloud iam user-policy USER_NAME POLICY_ID [--output FORMAT]
 <dd>정책이 속한 사용자 이름</dd>
 <dt>POLICY_ID(필수)</dt>
 <dd>정책 ID</dd>
-<dt>--output FORMAT</dt>
-<dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 사용자 `name@example.com`의 정책 `0bb730daa` 나열:
+
 ```
 ibmcloud iam user-policy name@example.com 0bb730daa
 ```
@@ -738,9 +723,10 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 ## ibmcloud iam user-policy-create
 {: #ibmcloud_iam_user_policy_create}
 
-사용자 정책 작성:
+사용자 정책 작성
+
 ```
-ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
@@ -752,53 +738,57 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dt>--file <i>FILE</i>(선택사항)</dt>
 <dd>정책 정의의 JSON 파일</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (선택사항)</dt>
-<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 `ibmcloud iam roles --service SERVICE_NAME`을 실행하십시오. 이 옵션은 `--file`과 배타적입니다.</dd>
+<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
 <dt>--service-name <i>SERVICE_NAME</i>(선택사항)</dt>
-<dd>정책 정의의 서비스 이름. 이는 `--file` 플래그와 배타적입니다.</dd>
+<dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i>(선택사항)</dt>
-<dd>정책 정의의 서비스 인스턴스의 GUID. 이는 `--file` 플래그와 배타적입니다.</dd>
+<dd>정책 정의의 서비스 인스턴스의 GUID. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--region <i>REGION</i>(선택사항)</dt>
-<dd>정책 정의의 지역. 이는 `--file` 플래그와 배타적입니다.</dd>
+<dd>정책 정의의 지역. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i>(선택사항)</dt>
-<dd>정책 정의의 리소스 유형. 이는 `--file` 플래그와 배타적입니다.</dd>
+<dd>정책 정의의 리소스 유형. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource <i>RESOURCE</i>(선택사항)</dt>
-<dd>정책 정의의 리소스. 이는 `--file` 플래그와 배타적입니다.</dd>
+<dd>정책 정의의 리소스. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i>(선택사항)</dt>
-<dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-id` 플래그와 배타적입니다.</dd>
+<dd>리소스 그룹의 이름. 이는 '--file', '--resource' 및 '--resource-group-id' 플래그와 배타적입니다.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>(선택사항)</dt>
-<dd>리소스 그룹의 ID. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-name` 플래그와 배타적입니다.</dd>
-<dt>--output FORMAT</dt>
-<dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
+<dd>리소스 그룹의 ID. 이는 '--file', '--resource' 및 '--resource-group-name' 플래그와 배타적입니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 정책 JSON 파일 `policy.json`에서 사용자 `name@example.com`의 사용자 정책 작성:
+
 ```
 ibmcloud iam user-policy-create name@example.com --file @policy.json
 ```
 
 모든 `sample-service` 리소스에 `name@example.com` `Administrator` 역할 제공:
+
 ```
 ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name sample-service
 ```
 
 `us-south` 지역에 있는 GUID가 `d161aeea-fd02-40f8-a487-df1998bd69a9`인 샘플 서비스 인스턴스의 리소스 `key123`에 `name@example.com` `Editor` 역할 제공:
+
 ```
 ibmcloud iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 ID `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹에 `name@example.com` `Operator` 역할 제공:
+
 ```
 ibmcloud iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 리소스 그룹 `sample-resource-group`의 멤버에 `name@example.com` `Viewer` 역할 제공:
+
 ```
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-name sample-resource-group
 ```
 
 ID `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹의 멤버에 `name@example.com` `Viewer` 역할 제공:
+
 ```
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
@@ -806,9 +796,10 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 ## ibmcloud iam user-policy-update
 {: #ibmcloud_iam_user_policy_update}
 
-사용자 정책 업데이트:
+사용자 정책 업데이트
+
 ```
-ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
@@ -821,53 +812,57 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dt>--file <i>FILE</i>(선택사항)</dt>
 <dd>정책 정의의 JSON 파일</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (선택사항)</dt>
-<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 `ibmcloud iam roles --service SERVICE_NAME`을 실행하십시오. 이 옵션은 `--file`과 배타적입니다.</dd>
+<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
 <dt>--service-name <i>SERVICE_NAME</i>(선택사항)</dt>
-<dd>정책 정의의 서비스 이름. 이는 `--file` 플래그와 배타적입니다.</dd>
+<dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i>(선택사항)</dt>
-<dd>정책 정의의 서비스 인스턴스의 GUID. 이는 `--file` 플래그와 배타적입니다.</dd>
+<dd>정책 정의의 서비스 인스턴스의 GUID. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--region <i>REGION</i>(선택사항)</dt>
-<dd>정책 정의의 지역. 이는 `--file` 플래그와 배타적입니다.</dd>
+<dd>정책 정의의 지역. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i>(선택사항)</dt>
-<dd>정책 정의의 리소스 유형. 이는 `--file` 플래그와 배타적입니다.</dd>
+<dd>정책 정의의 리소스 유형. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource <i>RESOURCE</i>(선택사항)</dt>
-<dd>정책 정의의 리소스. 이는 `--file` 플래그와 배타적입니다.</dd>
+<dd>정책 정의의 리소스. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i>(선택사항)</dt>
-<dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-id` 플래그와 배타적입니다.</dd>
+<dd>리소스 그룹의 이름. 이는 '--file', '--resource' 및 '--resource-group-id' 플래그와 배타적입니다.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>(선택사항)</dt>
-<dd>리소스 그룹의 ID. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-name` 플래그와 배타적입니다.</dd>
-<dt>--output FORMAT</dt>
-<dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
+<dd>리소스 그룹의 ID. 이는 '--file', '--resource' 및 '--resource-group-name' 플래그와 배타적입니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 사용자 정책을 JSON 파일로 된 정책으로 업데이트:
+
 ```
 ibmcloud iam user-policy-update name@example.com 0bb730daa --file @policy.json
 ```
 
 모든 `sample-service` 리소스에 `name@example.com` `Administrator` 역할을 제공하도록 사용자 정책 업데이트:
+
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Administrator --service-name sample-service
 ```
 
-`us-south` 지역에 있는 GUID가 `d161aeea-fd02-40f8-a487-df1998bd69a9`인 샘플 서비스 인스턴스의 리소스 `key123`에 `name@example.com` `Editor` 역할을 제공하도록 사용자 정책 업데이트:
+ `us-south` 지역에 있는 GUID가 `d161aeea-fd02-40f8-a487-df1998bd69a9`인 샘플 서비스 인스턴스의 리소스 `key123`에 `name@example.com` `Editor` 역할을 제공하도록 사용자 정책 업데이트:
+
 ```
 ibmcloud iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 ID `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹에 `name@example.com` `Operator` 역할을 제공하도록 사용자 정책 업데이트:
+
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 리소스 그룹 `sample-resource-group`의 멤버에 `name@example.com` `Viewer` 역할을 제공하도록 사용자 정책 업데이트:
+
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-name sample-resource-group
 ```
 
 ID `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹의 멤버에 `name@example.com` `Viewer` 역할을 제공하도록 사용자 정책 업데이트:
+
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
@@ -876,6 +871,7 @@ ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer -
 {: #ibmcloud_iam_user_policy_delete}
 
 사용자 정책 삭제
+
 ```
 ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
 ```
@@ -889,13 +885,14 @@ ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
 </dl>
 
 <strong>예제</strong>:
-
 사용자 `name@example.com`의 정책 `user-policy-id` 삭제:
+
 ```
 ibmcloud iam user-policy-delete name@example.com user-policy-id
 ```
 
 확인 없이 사용자 `name@example.com`의 정책 `user-policy-id` 삭제:
+
 ```
 ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 ```
@@ -903,7 +900,8 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 ## ibmcloud iam service-policies
 {: #ibmcloud_iam_service_policies}
 
-지정된 서비스의 모든 서비스 정책 나열:
+지정된 서비스의 모든 서비스 정책 나열
+
 ```
 ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 ```
@@ -914,7 +912,7 @@ ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 <dl>
   <dt>SERVICE_ID(필수)</dt>
   <dd>서비스 ID의 UUID 또는 이름</dd>
-  <dt>--output FORMAT</dt>
+  <dt>--output FORMAT(선택사항)</dt>
   <dd>서비스 정책 출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
   <dt>-f, --force(선택사항)</dt>
   <dd>확인 없이 서비스 정책 표시</dd>
@@ -923,11 +921,12 @@ ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 <strong>예제</strong>:
 
 서비스 `test`의 정책 나열:
+
 ```
 ibmcloud iam service-policies test
 ```
-
 서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 정책 나열:
+
 ```
 ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
@@ -935,7 +934,8 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ## ibmcloud iam service-policy
 {: #ibmcloud_iam_service_policy}
 
-서비스 정책의 세부사항 표시:
+서비스 정책의 세부사항 표시
+
 ```
 ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
 ```
@@ -948,7 +948,7 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
   <dd>서비스 ID의 UUID 또는 이름</dd>
   <dt>POLICY_ID(필수)</dt>
   <dd>서비스 정책의 ID<dd>
-  <dt>--output FORMAT</dt>
+  <dt>--output FORMAT(선택사항)</dt>
   <dd>서비스 정책 출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
   <dt>-f, --force(선택사항)</dt>
   <dd>확인 없이 서비스 정책 표시</dd>
@@ -957,11 +957,12 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
 <strong>예제</strong>:
 
 서비스 `test`의 정책 `140798e2-8ea7db3` 표시:
+
 ```
 ibmcloud iam service-policies test 140798e2-8ea7db3
 ```
-
 서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 정책 `140798e2-8ea7db3` 표시:
+
 ```
 ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
@@ -969,9 +970,10 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 ## ibmcloud iam service-policy-create
 {: #ibmcloud_iam_service_policy_create}
 
-서비스 정책 작성:
+서비스 정책 작성
+
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -981,27 +983,25 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dt>SERVICE_ID(필수)</dt>
   <dd>서비스 ID의 UUID 또는 이름</dd>
   <dt>--file</dt>
-  <dd>정책 정의의 JSON 파일. 이 옵션은 `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `--resource-group-name` 및 `--resource-group-id` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의의 JSON 파일. 이는 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' 및 '--resource-group-id' 플래그와 배타적입니다.</dd>
   <dt>-r, --roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 `ibmcloud iam roles --service SERVICE_NAME`을 실행하십시오. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>--service-name</dt>
-  <dd>정책 정의의 서비스 이름. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>정책 정의의 서비스 인스턴스의 GUID. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의의 서비스 인스턴스의 GUID. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-region</dt>
-  <dd>정책 정의 지역. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의 지역. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--resource-type</dt>
-  <dd>정책 정의의 리소스 유형. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의의 리소스 유형. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--resource</dt>
-  <dd>정책 정의의 리소스. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의의 리소스. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--resource-group-name</dt>
-  <dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file` 및 `--resource-group-id`와 배타적입니다.</dd>
+  <dd>리소스 그룹의 이름. 이 옵션은 '--file' 및 '--resource-group-id'와 배타적입니다.</dd>
   <dt>--resource-group-id </dt>
-  <dd>리소스 그룹의 ID. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file` 및 `--resource-group-name`과 배타적입니다.</dd>
+  <dd>리소스 그룹의 ID. 이 옵션은 '--file' 및 '--resource-group-name'과 배타적입니다.</dd>
   <dt>--account-management(선택사항)</dt>
   <dd>모든 계정 관리 서비스에 대해 액세스 부여</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 서비스 정책 작성</dd>
 </dl>
@@ -1009,21 +1009,24 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
 <strong>예제</strong>:
 
 서비스 `test`에 대해 JSON 파일에서 서비스 정책 작성:
+
 ```
 ibmcloud iam service-policy-create test --file @policy.json
 ```
-
 서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`에 대해 JSON 파일에서 서비스 정책 작성:
+
 ```
 ibmcloud iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
 ```
 
 모든 계정 관리 서비스에 대해 `Administrator` 역할에 서비스 `test` 부여:
+
 ```
 ibmcloud iam service-policy-create test --roles Administrator --account-management
 ```
 
 계정 내의 모든 리소스에 대해 `Viewer` 역할에 서비스 `test` 부여:
+
 ```
 ibmcloud iam service-policy-create test --roles Viewer
 ```
@@ -1031,9 +1034,10 @@ ibmcloud iam service-policy-create test --roles Viewer
 ## ibmcloud iam service-policy-update
 {: #ibmcloud_iam_service_policy_update}
 
-서비스 정책 업데이트:
+서비스 정책 업데이트
+
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -1045,27 +1049,25 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dt>POLICY_ID(필수)</dt>
   <dd>서비스 정책의 ID<dd>
   <dt>--file</dt>
-  <dd>정책 정의의 JSON 파일. 이 옵션은 `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `resource-group-name` 및 `resource-group-id` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의의 JSON 파일. 이는 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' 및 'resource-group-id' 플래그와 배타적입니다.</dd>
   <dt>-r, --roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 `ibmcloud iam roles --service SERVICE_NAME`을 실행하십시오. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-service-name</dt>
-  <dd>정책 정의의 서비스 이름. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>정책 정의의 서비스 인스턴스의 GUID. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의의 서비스 인스턴스의 GUID. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-region</dt>
-  <dd>정책 정의 지역. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의 지역. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-resource-type</dt>
-  <dd>정책 정의의 리소스 유형. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의의 리소스 유형. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-resource</dt>
-  <dd>정책 정의의 리소스. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
+  <dd>정책 정의의 리소스. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--resource-group-name</dt>
-  <dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file` 및 `--resource-group-id`와 배타적입니다.</dd>
+  <dd>리소스 그룹의 이름. 이 옵션은 '--file' 및 '--resource-group-id'와 배타적입니다.</dd>
   <dt>--resource-group-id </dt>
-  <dd>리소스 그룹의 ID. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file` 및 `--resource-group-name`과 배타적입니다.</dd>
+  <dd>리소스 그룹의 ID. 이 옵션은 '--file' 및 '--resource-group-name'과 배타적입니다.</dd>
   <dt>--account-management(선택사항)</dt>
   <dd>모든 계정 관리 서비스에 대해 액세스 부여</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 서비스 정책 업데이트</dd>
 </dl>
@@ -1073,21 +1075,25 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
 <strong>예제</strong>:
 
 서비스 `test`에 대해 JSON 파일에서 서비스 정책 `140798e2-8ea7db3` 업데이트:
+
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ```
 
 서비스 `test`에 대해 JSON 파일에서 서비스 정책 `140798e2-8ea7db3` 업데이트:
+
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ```
 
 모든 계정 관리 서비스에 대해 `Administrator` 역할에 서비스 `test`를 부여하도록 서비스 정책 `140798e2-8ea7db3`을 업데이트합니다.
+
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Administrator --account-management
 ```
 
 계정 내의 모든 리소스에 대해 `Viewer` 역할에 서비스 `test`를 부여하도록 서비스 정책 `140798e2-8ea7db3`을 업데이트합니다.
+
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer
 ```
@@ -1095,7 +1101,8 @@ ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer
 ## ibmcloud iam service-policy-delete
 {: #ibmcloud_iam_service_policy_delete}
 
-서비스 정책 삭제:
+서비스 정책 삭제
+
 ```
 ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 ```
@@ -1114,12 +1121,13 @@ ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 
 <strong>예제</strong>:
 
-서비스 `test`의 정책 `140798e2-8ea7db3` 삭제:
+서비스 `test`의 정책 `140798e2-8ea7db3` 삭제
+
 ```
 ibmcloud iam service-policy-delete test 140798e2-8ea7db3
 ```
+서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 정책 `140798e2-8ea7db3` 삭제
 
-서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 정책 `140798e2-8ea7db3` 삭제:
 ```
 ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
@@ -1127,64 +1135,31 @@ ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac97
 ## ibmcloud iam oauth-tokens
 {: #ibmcloud_iam_oauth_tokens}
 
-현재 세션에 대한 OAuth 토큰 검색 및 표시:
-```
-ibmcloud iam oauth-tokens [--output FORMAT]
-```
-{: codeblock}
+현재 세션에 대한 OAuth 토큰 검색 및 표시
 
-<strong>전제조건</strong>: 로그인, 대상
-
-<strong>명령 옵션</strong>:
-<dl>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
-</dl>
-
-<strong>예제</strong>:
-
-OAuth 토큰 새로 고치기 및 표시:
 ```
 ibmcloud iam oauth-tokens
 ```
-{: codeblock}
-
-## ibmcloud iam roles
-{: #ibmcloud_iam_roles}
-
-플랫폼 및 서비스 정의 역할 나열:
-```
-ibmcloud iam roles [--service SERVICE_NAME] [--output FORMAT]
-```
-{: codeblock}
 
 <strong>전제조건</strong>: 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>--service SERVICE_NAME</dt>
-  <dd>서비스의 이름입니다. 지정되지 않은 경우 플랫폼 정의 역할만 나열합니다.</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
-플랫폼 역할 나열
-```
-ibmcloud iam roles
-```
+OAuth 토큰 새로 고치기 및 표시
 
-JSON으로 서비스 `cloudantnosql`의 역할을 나열합니다.
 ```
-ibmcloud iam roles --service cloudantnosql --output JSON
+ibmcloud iam oauth-tokens
 ```
-{: codeblock}
 
 ## ibmcloud iam dedicated-id-disconnect
 {: #ibmcloud_iam_dedicated_id_disconnect}
 
-공용 IBM ID와 전용 비IBM ID의 연결 끊기:
+공용 IBM ID와 전용 비IBM ID의 연결 끊기
+
 ```
 ibmcloud iam dedicated-id-disconnect [-f, --force]
 ```
@@ -1200,7 +1175,8 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 ## ibmcloud iam authorization-policy-create
 {: #ibmcloud_iam_authorization_policy_create}
 
-다른 서비스 인스턴스에 대한 서비스 인스턴스 액세스를 허용할 권한 정책 작성:
+다른 서비스 인스턴스에 대한 서비스 인스턴스 액세스를 허용할 권한 정책을 작성합니다.
+
 ```
 ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-type RESOURCE_TYPE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME] [--target-resource-type RESOURCE_TYPE | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--output FORMAT]
 ```
@@ -1227,14 +1203,13 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>대상 서비스 인스턴스 ID이며 `--target-service-instance-name`과 상호 배타적입니다. 지정되지 않은 경우에는 대상 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다.</dd>
   <dt>--target-resource-type</dt>
   <dd>대상 서비스의 리소스 유형입니다.</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 ## ibmcloud iam authorization-policy-delete
 {: #ibmcloud_iam_authorization_policy_delete}
 
-권한 정책 삭제:
+권한 부여 정책을 삭제합니다.
+
 ```
 ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 ```
@@ -1252,9 +1227,10 @@ ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 ## ibmcloud iam authorization-policy
 {: #ibmcloud_iam_authorization_policy}
 
-권한 정책의 세부사항 표시:
+권한 정책의 세부사항을 표시합니다.
+
 ```
-ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID [--output FORMAT]
+ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 ```
 
 <strong>전제조건</strong>: 로그인, 대상
@@ -1263,33 +1239,26 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID [--output FORMAT]
 <dl>
   <dt>AUTHORIZATION_POLICY_ID</dt>
   <dd>표시할 권한 정책의 ID입니다.</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 ## ibmcloud iam authorization-policies
 {: #ibmcloud_iam_authorization_policies}
 
-현재 계정의 권한 정책 나열:
+현재 계정의 권한 부여 정책을 나열합니다.
+
 ```
-ibmcloud iam authorization-policies [--output FORMAT]
+ibmcloud iam authorization-policies
 ```
-{: codeblock}
 
 <strong>전제조건</strong>: 로그인, 대상
-
-<strong>명령 옵션</strong>:
-<dl>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
-</dl>
 
 ## ibmcloud iam access-groups
 {: #ibmcloud_iam_access_groups}
 
-현재 계정에서 액세스 그룹 나열:
+현재 계정에서 액세스 그룹 나열
+
 ```
-ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME] [--output FORMAT]
+ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1300,24 +1269,23 @@ ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME] [--output FORMAT]
   <dd>사용자가 속한 액세스 그룹을 나열합니다. 이 플래그는 '-s'와 배타적입니다.</dd>
   <dt>-s</dt>
   <dd>서비스 ID가 속한 액세스 그룹을 나열합니다. 이 플래그는 '-u'와 배타적입니다.</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 모든 액세스 그룹 나열:
+
 ```
 ibmcloud iam access-groups
 ```
-{: codeblock}
 
 ## ibmcloud iam access-group
 {: #ibmcloud_iam_access_group}
 
-액세스 그룹의 세부사항 표시:
+액세스 그룹의 세부사항 표시
+
 ```
-ibmcloud iam access-group GROUP_NAME [--id] [--output FORMAT]
+ibmcloud iam access-group GROUP_NAME [--id]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1326,13 +1294,12 @@ ibmcloud iam access-group GROUP_NAME [--id] [--output FORMAT]
 <dl>
   <dt>-id</dt>
   <dd>ID만 표시</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 액세스 그룹 `example_group`의 세부사항 표시:
+
 ```
 ibmcloud iam access-group example_group
 ```
@@ -1340,9 +1307,10 @@ ibmcloud iam access-group example_group
 ## ibmcloud iam access-group-create
 {: #ibmcloud_iam_access_group_create}
 
-액세스 그룹 작성:
+액세스 그룹 작성
+
 ```
-ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION] [--output FORMAT]
+ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1351,13 +1319,12 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION] [--o
 <dl>
   <dt>-d, --description</dt>
   <dd>액세스 그룹에 대한 설명</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 액세스 그룹 `example_group` 작성:
+
 ```
 ibmcloud iam access-group-create example_group -d "example access group"
 ```
@@ -1365,9 +1332,10 @@ ibmcloud iam access-group-create example_group -d "example access group"
 ## ibmcloud iam access-group-update
 {: #ibmcloud_iam_access_group_update}
 
-액세스 그룹 업데이트:
+액세스 그룹 업데이트
+
 ```
-ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [--output FORMAT] [-f, --force]
+ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1378,8 +1346,6 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
   <dd>새 액세스 그룹 이름</dd>
   <dt>-d, --description</dt>
   <dd>새 설명</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 업데이트 강제 실행</dd>
 </dl>
@@ -1387,6 +1353,7 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
 <strong>예제</strong>:
 
 액세스 그룹 `example_group`의 이름을 `hello_world_group`으로 바꾸기:
+
 ```
 ibmcloud iam access-group-update example_group --name "hello_world_group"
 ```
@@ -1413,6 +1380,7 @@ ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
 <strong>예제</strong>:
 
 액세스 그룹 `example_group` 삭제:
+
 ```
 ibmcloud iam access-group-delete example_group --force
 ```
@@ -1420,22 +1388,22 @@ ibmcloud iam access-group-delete example_group --force
 ## ibmcloud iam access-group-users
 {: #ibmcloud_iam_access_group_users}
 
-액세스 그룹의 사용자 나열:
+액세스 그룹의 사용자 나열
+
 ```
-ibmcloud iam access-group-users GROUP_NAME [--output FORMAT]
+ibmcloud iam access-group-users GROUP_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
 <strong>명령 옵션</strong>:
 <dl>
-<dt>--output FORMAT</dt>
-<dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 액세스 그룹 `example_group`의 모든 사용자 나열:
+
 ```
 ibmcloud iam access-group-users example_group
 ```
@@ -1443,7 +1411,8 @@ ibmcloud iam access-group-users example_group
 ## ibmcloud iam access-group-user-add
 {: #ibmcloud_iam_access_group_user_add}
 
-액세스 그룹에 사용자 추가:
+액세스 그룹에 사용자 추가
+
 ```
 ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 ```
@@ -1457,6 +1426,7 @@ ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 <strong>예제</strong>:
 
 액세스 그룹 `example_group`에 사용자 `name@example.com` 추가:
+
 ```
 ibmcloud iam access group-user-add example_group name@example.com
 ```
@@ -1464,7 +1434,8 @@ ibmcloud iam access group-user-add example_group name@example.com
 ## ibmcloud iam access-group-user-remove
 {: #ibmcloud_iam_access_group_user_remove}
 
-액세스 그룹에서 사용자 제거:
+액세스 그룹에서 사용자 제거
+
 ```
 ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
 ```
@@ -1478,6 +1449,7 @@ ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
 <strong>예제</strong>:
 
 액세스 그룹 `example_group`에서 사용자 `name@example.com` 제거:
+
 ```
 ibmcloud iam access-group-user-remove example_group name@example.com
 ```
@@ -1485,7 +1457,8 @@ ibmcloud iam access-group-user-remove example_group name@example.com
 ## ibmcloud iam access-group-user-purge
 {: #ibmcloud_iam_access_group_user_purge}
 
-모든 액세스 그룹에서 사용자 제거:
+모든 액세스 그룹에서 사용자 제거
+
 ```
 ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
 ```
@@ -1501,6 +1474,7 @@ ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
 <strong>예제</strong>:
 
 모든 액세스 그룹에서 사용자 `name@example.com` 제거:
+
 ```
 ibmcloud iam access-group-user-purge name@example.com -f
 ```
@@ -1508,22 +1482,22 @@ ibmcloud iam access-group-user-purge name@example.com -f
 ## ibmcloud iam access-group-service-ids
 {: #ibmcloud_iam_access_group_service_ids}
 
-액세스 그룹에 서비스 ID 나열:
+액세스 그룹에 서비스 ID 나열
+
 ```
-ibmcloud iam access-group-service-ids GROUP_NAME [--output FORMAT]
+ibmcloud iam access-group-service-ids GROUP_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
 <strong>명령 옵션</strong>:
 <dl>
-<dt>--output FORMAT</dt>
-<dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 액세스 그룹 `example_group`에 모든 서비스 ID 나열:
+
 ```
 ibmcloud iam access-group-service-ids example_group
 ```
@@ -1531,7 +1505,8 @@ ibmcloud iam access-group-service-ids example_group
 ## ibmcloud iam access-group-service-id-add
 {: #ibmcloud_iam_access_group_service_id_add}
 
-액세스 그룹에 서비스 ID 추가:
+액세스 그룹에 서비스 ID 추가
+
 ```
 ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
 ```
@@ -1545,6 +1520,7 @@ ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_
 <strong>예제</strong>:
 
 액세스 그룹 `example_group`에 서비스 ID `example-service` 추가:
+
 ```
 ibmcloud iam access-group-service-id-add example_group example-service
 ```
@@ -1552,7 +1528,8 @@ ibmcloud iam access-group-service-id-add example_group example-service
 ## ibmcloud iam access-group-service-id-remove
 {: #ibmcloud_iam_access_group_service_id_remove}
 
-액세스 그룹에서 서비스 ID 제거:
+액세스 그룹에서 서비스 ID 제거
+
 ```
 ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 ```
@@ -1566,6 +1543,7 @@ ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 <strong>예제</strong>:
 
 액세스 그룹 `example_group`에서 서비스 ID `example-service` 제거:
+
 ```
 ibmcloud iam access-group-service-id-remove example_group example-service
 ```
@@ -1573,7 +1551,8 @@ ibmcloud iam access-group-service-id-remove example_group example-service
 ## ibmcloud iam access-group-service-id-purge
 {: #ibmcloud_iam_access_group_service_id_purge}
 
-모든 액세스 그룹에서 서비스 ID 제거:
+모든 액세스 그룹에서 서비스 ID 제거
+
 ```
 ibmcloud iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
 ```
@@ -1597,22 +1576,22 @@ ibmcloud iam access-group-service-id-purge example --force
 ## ibmcloud iam access-group-policies
 {: #ibmcloud_iam_access_group_policies}
 
-액세스 그룹의 정책 나열:
+액세스 그룹의 정책 나열
+
 ```
-ibmcloud iam access-group-policies GROUP_NAME [--output FORMAT]
+ibmcloud iam access-group-policies GROUP_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 액세스 그룹 `example_group`의 모든 정책 나열:
+
 ```
 ibmcloud iam access-group-policies example_group
 ```
@@ -1620,22 +1599,22 @@ ibmcloud iam access-group-policies example_group
 ## ibmcloud iam access-group-policy
 {: #ibmcloud_iam_access_group_policy}
 
-액세스 그룹 정책의 세부사항 표시:
+액세스 그룹 정책의 세부사항 표시
+
 ```
-ibmcloud iam access-group-policy GROUP_NAME POLICY_ID [--output FORMAT]
+ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 액세스 그룹 `example_group`의 정책 `51b9717e-76b0-4f6a-bda7-b8132431f926`에 대한 세부사항 표시:
+
 ```
 ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f926
 ```
@@ -1643,9 +1622,10 @@ ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 ## ibmcloud iam access-group-policy-create
 {: #ibmcloud_iam_access_group_policy_create}
 
-액세스 그룹 정책 작성:
+액세스 그룹 정책 작성
+
 ```
-ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1655,28 +1635,27 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
   <dt>--file</dt>
   <dd>정책 정의의 JSON 파일</dd>
   <dt>-roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 `ibmcloud iam roles --service SERVICE_NAME`을 실행하십시오. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-service-name</dt>
-  <dd>정책 정의의 서비스 이름. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 서비스 이름. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>정책 정의의 서비스 인스턴스의 GUID. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 서비스 인스턴스의 GUID. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-region</dt>
-  <dd>정책 정의 지역. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의 지역. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-resource-type</dt>
-  <dd>정책 정의의 리소스 유형. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 리소스 유형. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-resource</dt>
-  <dd>정책 정의의 리소스. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 리소스. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-resource-group-name</dt>
-  <dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file` 및 `--resource-group-id`와 배타적입니다.</dd>
+  <dd>리소스 그룹의 이름. 이 옵션은 '--file' 및 '--resource-group-id'와 배타적입니다.</dd>
   <dt>-resource-group-id</dt>
-  <dd>리소스 그룹의 ID. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file` 및 `--resource-group-name`과 배타적입니다.</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
+  <dd>리소스 그룹의 ID. 이 옵션은 '--file' 및 '--resource-group-name'과 배타적입니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
 JSON 파일에서 액세스 그룹 정책 작성:
+
 ```
 ibmcloud iam access-group-policy-create example_group -f @policy.json
 ```
@@ -1709,9 +1688,10 @@ ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-
 ## ibmcloud iam access-group-policy-update
 {: #ibmcloud_iam_access_group_policy_update}
 
-액세스 그룹 정책 업데이트:
+액세스 그룹 정책 업데이트
+
 ```
-ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1721,23 +1701,21 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
   <dt>--file</dt>
   <dd>정책 정의의 JSON 파일</dd>
   <dt>--roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 `ibmcloud iam roles --service SERVICE_NAME`을 실행하십시오. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-service-name</dt>
-  <dd>정책 정의의 서비스 이름. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 서비스 이름. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>정책 정의의 서비스 인스턴스의 GUID. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 서비스 인스턴스의 GUID. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-region</dt>
-  <dd>정책 정의 지역. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의 지역. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-resource-type</dt>
-  <dd>정책 정의의 리소스 유형. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 리소스 유형. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-resource</dt>
-  <dd>정책 정의의 리소스. 이 옵션은 `--file`과 배타적입니다.</dd>
+  <dd>정책 정의의 리소스. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-resource-group-name</dt>
-  <dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file` 및 `--resource-group-id`와 배타적입니다.</dd>
+  <dd>리소스 그룹의 이름. 이 옵션은 '--file' 및 '--resource-group-id'와 배타적입니다.</dd>
   <dt>-resource-group-id</dt>
-  <dd>리소스 그룹의 ID. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file` 및 `--resource-group-name`과 배타적입니다.</dd>
-  <dt>--output FORMAT</dt>
-  <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
+  <dd>리소스 그룹의 ID. 이 옵션은 '--file' 및 '--resource-group-name'과 배타적입니다.</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -1775,7 +1753,8 @@ ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7a
 ## ibmcloud iam access-group-policy-delete
 {: #ibmcloud_iam_access_group_policy_delete}
 
-액세스 그룹 정책 삭제:
+액세스 그룹 정책 삭제
+
 ```
 ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```

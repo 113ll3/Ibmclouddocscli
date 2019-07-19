@@ -2,11 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-05-21"
-
-keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
-
-subcollection: cloud-cli
+lastupdated: "2019-02-14"
 
 ---
 
@@ -21,8 +17,8 @@ subcollection: cloud-cli
 # Befehle des CLI-Plug-ins von {{site.data.keyword.dev_cli_notm}} (ibmcloud dev)
 {: #idt-cli}
 
-Version: 2.1.18
-Freigegeben: 28. März 2019
+Version: 2.1.4
+Freigegeben: 31. August 2018
 
 Ab Mai 2018 wird an Stelle der {{site.data.keyword.cloud}}-CLI-Befehle `bluemix` und `bx` der Befehl `ibmcloud` verwendet. Sie können die CLI-Befehle `bluemix` und `bx` jedoch weiterhin verwenden, bis sie zu einem späteren Zeitpunkt entfernt werden.
 {: tip}
@@ -39,7 +35,7 @@ Verwenden Sie die folgenden Befehle der {{site.data.keyword.dev_cli_notm}}-Befeh
 - [diag](#diag): Zeigt Versionsinformationen zu installierten Abhängigkeiten an.
 - [edit](#edit): Fügt Services in einer vorhandenen Anwendung hinzu oder entfernt Services.
 - [enable](#enable): Aktualisiert eine vorhandene Anwendung für die Verwendung mit {{site.data.keyword.cloud_notm}} Developer Tools.
-- [get-credentials](#get-credentials): Ruft Berechtigungsnachweise ab, die die Anwendung benötigt, um die Verwendung gebundener{{site.data.keyword.cloud_notm}}-Services zu aktivieren.
+- [get-credentials](#get-credentials): Ruft Berechtigungsnachweise ab, die die Anwendung benötigt, um die Verwendung verbundener {{site.data.keyword.cloud_notm}}-Services zu ermöglichen.
 - [help](#help): Zeigt Hilfe für die Syntax und die Argumente der Befehlszeilenschnittstelle an.
 - [list](#list): Listet alle {{site.data.keyword.cloud_notm}}-Anwendungen in einer Ressourcengruppe auf.
 - [run](#run): Führt die Anwendung in einem lokalen Container aus.
@@ -48,22 +44,20 @@ Verwenden Sie die folgenden Befehle der {{site.data.keyword.dev_cli_notm}}-Befeh
 - [stop](#stop): Stoppt einen Container.
 - [test](#test): Testet die Anwendung in einem lokalen Container.
 - [view](#view): Zeigt die bereitgestellte URL der Anwendung zum Testen und Anzeigen an.
-
-Führen Sie mehrere Befehle in einer einzigen Befehlszeilenanweisung mit [zusammengesetzten Befehlen](#compound) aus.
-{: tip}
+- [compound commands](#compound): Führt mehrere Befehle in einer einzigen Befehlszeilenanweisung aus.
 
 ## build
 {: #build}
 
 Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen.
 
-Sie können Ihre App mithilfe des Befehls `build` erstellen. Die Befehl `test`, `debug` und `run` setzen eine kompilierte App voraus, daher müssen Sie zuvor eine Operation `build` durchführen.
+Sie können Ihre Anwendung mithilfe des Befehls `build` erstellen. Die Befehle `test`, `debug` und `run` setzen eine kompilierte Anwendung voraus, daher müssen Sie zuvor eine `build`-Operation durchführen.
 
-Das Konfigurationselement `build-cmd-debug` wird zum Erstellen der Anwendung für alle Verwendungszwecke, mit Ausnahme von `run` verwendet. Sie erstellen Ihre App für das Debuggen, indem Sie die Befehlszeilenoption `--debug` angeben. Das Konfigurationselement `build-cmd-run` wird beim Erstellen der App für den Einsatz mit dem Befehl `run` verwendet.
+Das Konfigurationselement `build-cmd-debug` wird zum Erstellen der Anwendung für alle Verwendungszwecke, mit Ausnahme von `run`, verwendet. Sie erstellen Ihre Anwendung für das Debuggen, indem Sie die Befehlszeilenoption `--debug` angeben. Das Konfigurationselement `build-cmd-run` wird beim Erstellen der Anwendung für den Einsatz mit dem Befehl `run` verwendet.
 
-Für den Build mit mehreren Containern muss die Anwendung entweder eine [Compose-Datei](https://docs.docker.com/compose/overview/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") enthalten, die in der Datei `cli-config.yml` angegeben ist, oder Sie können mit dem Befehlsparameter `dockerfile-tools` eine solche Datei angeben.
+Für den Build mit mehreren Containern muss die Anwendung entweder eine [Compose-Datei](https://docs.docker.com/compose/overview/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") enthalten, die in der Datei `cli-config.yml` angegeben ist, oder Sie können mithilfe des Befehlsparameters `dockerfile-tools` eine solche Datei angeben.
 
-Führen Sie den folgenden Befehl in Ihrem aktuellen App-Verzeichnis aus, um den Build zu starten:  
+Führen Sie den folgenden Befehl in Ihrem aktuellen Anwendungsverzeichnis aus, um die Anwendung zu erstellen:  
 ```
 ibmcloud dev build [--debug]
 ```
@@ -72,33 +66,34 @@ ibmcloud dev build [--debug]
 ## code
 {: #code}
 
-Verwenden Sie den Befehl `code`, um eine zuvor erstellte App mit App-Vorlagencode und Konfigurationsdateien für {{site.data.keyword.cloud_notm}} herunterzuladen. Sie können diesen Befehl verwenden, wenn Sie eine zweite Kopie einer App extrahieren müssen.
+Verwenden Sie den Befehl `code`, um eine zuvor erstellte Anwendung mit Anwendungsvorlagencode und Konfigurationsdateien für {{site.data.keyword.cloud_notm}} herunterzuladen. Sie können diesen Befehl verwenden, wenn Sie eine zweite Kopie einer Anwendung extrahieren müssen.
 
-Führen Sie den folgenden Befehl aus, um den Code aus einer angegebenen App herunterzuladen.
+Führen Sie den folgenden Befehl aus, um den Code aus einer angegebenen Anwendung herunterzuladen.
 ```
-ibmcloud dev code <appName>
+ibmcloud dev code <applicationName>
 ```
 {: codeblock}
 
 ## console
 {: #console}
 
-Verwenden Sie den Befehl `console`, um in einem Web-Browser die Webkonsole Ihrer App unter {{site.data.keyword.cloud_notm}} zu öffnen. Sie können den Befehl `ibmcloud dev console` vom Ordner Ihrer App aus ausführen. Die CLI versucht dann, eine entsprechende App in {{site.data.keyword.cloud_notm}} zu finden, die über dieselbe App-ID verfügt wie das aktuelle Verzeichnis. Falls das System keinen übereinstimmenden Namen findet, wird anstelle der spezifischen App das Dashboard für **Webanwendungen und mobile Anwendungen** in {{site.data.keyword.cloud_notm}} geöffnet.
+Verwenden Sie den Befehl `console`, um in einem Web-Browser die Webkonsole Ihrer Anwendung unter {{site.data.keyword.cloud_notm}} zu öffnen. Sie können den Befehl `ibmcloud dev console` vom Ordner Ihrer Anwendung aus ausführen. Die Befehlszeilenschnittstelle versucht dann, eine entsprechende Anwendung in {{site.data.keyword.cloud_notm}} zu finden, deren Anwendungs-ID mit dem aktuellen Verzeichnis übereinstimmt. Falls das System keinen übereinstimmenden Namen findet, wird anstelle der spezifischen Anwendung das Dashboard für Webanwendungen und mobile Anwendungen in {{site.data.keyword.cloud_notm}} geöffnet.
 
-Wenn Sie einen App-Namen angeben, überspringt die Befehlszeilenschnittstelle den Abgleich des Ordner- oder App-Namens. In diesem Fall öffnet die CLI die Konsole der angegebenen App in einem Web-Browser.  
+Wenn Sie einen Anwendungsnamen angeben, überspringt die Befehlszeilenschnittstelle den Abgleich des Ordner- oder Anwendungsnamens. In diesem Fall öffnet die Befehlszeilenschnittstelle die Konsole der angegebenen Anwendung in einem Web-Browser.  
 
-Führen Sie den folgenden Befehl aus, um die Webkonsole Ihrer App in einem Web-Browser zu öffnen.
+Führen Sie den folgenden Befehl aus, um einen Web-Browser in der Webkonsole Ihrer Anwendung zu öffnen.
 ```
-ibmcloud dev console [appName]
+ibmcloud dev console [applicationName]
 ```
 {: codeblock}
 
 ## create
 {: #create}
 
-Erstellen Sie eine App, in der zur Eingabe aller Informationen (z. B. Ressourcentyp, Sprache, Starter-Kitt und DevOps-Toolchain-Optionen) aufgefordert wird. Dies schließt IBM Cloud Foundry oder Cloud Foundry Enterprise Environment und Kubernetes ein. Die App wird im aktuellen Verzeichnis erstellt.
+Mit diesem Befehl wird eine Anwendung erstellt, wobei zur Eingabe aller Informationen aufgefordert wird (z. B. Ressourcentyp, Sprache, Starter-Kit und DevOps-Toolchain-Optionen, einschließlich
+IBM Cloud Foundry oder Cloud Foundry Enterprise Environment und Kubernetes). Die Anwendung wird im aktuellen Verzeichnis erstellt.
 
-Führen Sie den folgenden Befehl aus, um eine App im aktuellen Verzeichnis zu erstellen und ihr Services zuzuordnen:
+Führen Sie den folgenden Befehl aus, um eine Anwendung im aktuellen Verzeichnis zu erstellen und ihr Services zuzuordnen:
 ```
 ibmcloud dev create
 ```
@@ -109,15 +104,15 @@ ibmcloud dev create
 
 Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen.
 
-Sie können Ihre App mithilfe des Befehls `debug` debuggen. Zuerst muss für die App ein Build erstellt werden, indem der Befehl 'build' mit dem Argument `--debug` verwendet wird. Wenn Sie den Befehl `debug` starten, wird ein Container gestartet, der einen oder mehrere Debugports bereitstellt, wie im Wert `container-port-map-debug` in der cli-config.yml definiert bzw. wie in der Befehlszeile angegeben. Verbinden Sie Ihr bevorzugtes Debugging-Tool mit dem Port oder den Ports und Sie können Ihre App wie üblich debuggen.
+Sie können Ihre Anwendung mithilfe des Befehls `debug` debuggen. Zuerst muss für die Anwendung ein Build durchgeführt werden, indem der Befehl 'build' mit dem Argument `--debug` verwendet wird. Wenn Sie den Befehl `debug` starten, wird ein Container gestartet, der einen oder mehrere Debugports bereitstellt, wie im Wert `container-port-map-debug` in der cli-config.yml definiert bzw. wie in der Befehlszeile angegeben. Verbinden Sie Ihr bevorzugtes Debugging-Tool mit dem Port oder den Ports und Sie können Ihre Anwendung wie üblich debuggen.
 
-Kompilieren Sie zuerst Ihre App:
+Kompilieren Sie zuerst Ihre Anwendung:
 ```
 ibmcloud dev build --debug
 ```
 {: codeblock}
 
-Führen Sie zuerst den folgenden Befehl in Ihrem aktuellen App-Verzeichnis aus, um mit dem Debugging zu beginnen:
+Führen Sie zuerst den folgenden Befehl im aktuellen Anwendungsverzeichnis aus, um die Anwendung zu debuggen:
 ```
 ibmcloud dev debug
 ```
@@ -130,12 +125,13 @@ Geben Sie `STRG-C` ein, um die Debugsitzung zu beenden.
 ### Debugbefehlsparameter
 {: #debug-parameters}
 
-Die folgenden Parameter stehen ausschließlich für den Befehl `debug` zur Verfügung und unterstützen das Debugging für eine App. Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen gemeinsam genutzt werden.
+Die folgenden Parameter stehen ausschließlich dem Befehl `debug` zur Verfügung und
+unterstützen Sie beim Debugging einer Anwendung. Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen gemeinsam genutzt werden.
 
 #### `container-port-map-debug`
 {: #port-map-debug}
 
-* Portzuordnungen für den Debugport. Der erste Wert ist der Port, der im Hostbetriebssystem verwendet werden soll, der zweite Wert ist der Port im Container [`host-port:container-port`].
+* Portzuordnungen für den Debugport. Der erste Wert ist der Port, der im Hostbetriebssystem verwendet werden soll, der zweite Wert ist der Port im Container [host-port:container-port].
 * Syntax: `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
@@ -147,18 +143,17 @@ Die folgenden Parameter stehen ausschließlich für den Befehl `debug` zur Verf�
 #### `debug-cmd`
 {: #debug-cmd}
 
-* Parameter zum Angeben eines Befehls zum Starten des Debuggers im Container 'tools'. Verwenden Sie diesen Parameter, wenn
-`build-cmd-debug` Ihre App im Debugger startet.
+* Parameter zum Angeben eines Befehls zum Starten des Debuggers im Container 'tools'. Verwenden Sie diesen Parameter, wenn `build-cmd-debug` Ihre Anwendung im Debugger startet.
 * Syntax: `ibmcloud dev debug --debug-cmd /the/debug/command`
 
 ## delete
 {: #delete}
 
-Mit dem Befehl `delete` können Sie Apps aus Ihrem {{site.data.keyword.cloud_notm}}-Bereich entfernen. Sie können den Befehl ohne Parameter ausführen, um verfügbare Apps aufzulisten und die zu löschende App in der nummerierten Liste auszuwählen. Der App-Code und die App-Verzeichnisse werden nicht aus dem lokalen Plattenspeicher entfernt.
+Mit dem Befehl `delete` können Sie Anwendungen aus Ihrem {{site.data.keyword.cloud_notm}}-Bereich entfernen. Sie können den Befehl ohne Parameter ausführen, um verfügbare Anwendungen aufzulisten, und die zu löschende Anwendung in der nummerierten Liste auswählen. Der Anwendungscode und die Anwendungsverzeichnisse werden nicht aus dem lokalen Plattenspeicher entfernt.
 
-Führen Sie den folgenden Befehl aus, um Ihre App aus {{site.data.keyword.cloud_notm}} zu löschen:
+Führen Sie den folgenden Befehl aus, um die Anwendung aus {{site.data.keyword.cloud_notm}} zu löschen:
 ```
-ibmcloud dev delete <appName>
+ibmcloud dev delete <applicationName>
 ```
 {: codeblock}
 
@@ -168,35 +163,35 @@ ibmcloud dev delete <appName>
 ## deploy
 {: #deploy}
 
-Sie können eine App als Cloud Foundry-App oder als einen Container bereitstellen.
+Sie können eine Anwendung als Cloud Foundry-Anwendung oder als Container bereitstellen.
 
-Bevor Sie eine App als Cloud Foundry-App in {{site.data.keyword.cloud_notm}} bereitstellen, muss eine Datei `manifest.yml` im Stammverzeichnis Ihrer Anwendung vorhanden sein.
+Bevor Sie eine Anwendung als Cloud Foundry-Anwendung in {{site.data.keyword.cloud_notm}} bereitstellen, muss eine Datei `manifest.yml` im Stammverzeichnis Ihrer Anwendung vorhanden sein.
 
-Bevor Sie eine App als Container bereitstellen, müssen Sie [Kubernetes](https://kubernetes.io/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") und [Helm](https://github.com/helm/helm){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") lokal installieren. Die Version des Helm-Clients darf nicht neuer als die Version des Helms-Servers sein. Beide Angaben erhalten Sie, indem Sie `helm version` ausführen. Für die Clientversion wird Version 2.4.2 empfohlen.
+Bevor Sie eine Anwendung als Container bereitstellen, müssen Sie [Kubernetes](https://kubernetes.io/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") und [Helm](https://github.com/kubernetes/helm){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") lokal installieren. Die Version des Helm-Clients darf nicht neuer als die Version des Helms-Servers sein. Beide Angaben erhalten Sie, indem Sie `helm version` ausführen. Für die Clientversion wird Version 2.4.2 empfohlen.
 
-Für die Bereitstellung der App in Kubernetes müssen Sie entweder für `deploy-target` den Wert `container` in `cli-config.yml` angeben oder den Parameter `-t container` verwenden.
+Für die Bereitstellung der Anwendung in Kubernetes müssen Sie entweder für `deploy-target` den Wert `container` in `cli-config.yml` angeben oder den Parameter `-t container` verwenden.
 
 Weitere Parameter, die für die Konfiguration der Kubernetes-Bereitstellung erforderlich sind, können ebenfalls in der Datei `cli-config.yml` mithilfe von Befehlszeilenargumenten angegeben werden. Wenn Sie diese Parameter nicht in der Datei `cli-config.yml` definieren, müssen Sie die Bereitstellung mit dem Parameter `-t container` durchführen und werden zur Eingabe aller anderen Werte aufgefordert.
 
 ```yaml
-chart-path: "chart/myapp"
+    chart-path: "chart/myapplication"
 
-deploy-target: "container"
+    deploy-target: "container"
 
-deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
+    deploy-image-target: "registry.<IBM Cloud-Region>.bluemix.net/<Containerregistry-Namensbereich>/<App-Name>"
 
-ibm-cluster: "mycluster"
+    ibm-cluster: "mycluster"
 ```
 
 In `cli-config.yml` können Sie die Position eines Helm-Diagramms in der Eigenschaft `chart-path` definieren und `deploy-image-target` konfigurieren, wie im Beispiel dargestellt. Das Element `deploy-image-target` in der `cli-config.yml` wird statt der Elemente `repository` und `tag` in der Datei `chart/values.yml` verwendet. Um gezielt in {{site.data.keyword.cloud_notm}} bereitzustellen, legen Sie das Konfigurationselement `ibm-cluster` auf den Namen des Kubernetes-Clusters fest, den Sie in {{site.data.keyword.cloud_notm}} erstellt haben.
 
-Führen Sie den folgenden Befehl in Ihrem aktuellen App-Verzeichnis aus, um Ihre App zu erstellen:  
+Führen Sie den folgenden Befehl in Ihrem aktuellen Anwendungsverzeichnis aus, um die Anwendung zu erstellen:  
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-Führen Sie den folgenden Befehl in Ihrem aktuellen App-Verzeichnis aus, um Ihre App bereitzustellen:
+Führen Sie den folgenden Befehl in Ihrem aktuellen Anwendungsverzeichnis aus, um die Anwendung bereitzustellen:
 ```
 ibmcloud dev deploy
 ```
@@ -210,7 +205,7 @@ Sie können Ihre Anwendung in {{site.data.keyword.cloud_notm}} Foundry Enterpris
 ### Bereitstellungsbefehlsparameter
 {: #deploy-parameters}
 
-Die folgenden Parameter können mit dem Befehl `deploy` oder unmittelbar durch die Aktualisierung der Datei `cli-config.yml` der App angegeben werden. Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen gemeinsam genutzt werden.
+Die folgenden Parameter können mit dem Befehl `deploy` oder unmittelbar durch die Aktualisierung der Datei `cli-config.yml` der Anwendung angegeben werden. Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen gemeinsam genutzt werden.
 
 #### `chart-path`
 {: #chart-path}
@@ -233,19 +228,19 @@ Die folgenden Parameter können mit dem Befehl `deploy` oder unmittelbar durch d
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* Optionaler Parameter zum Definieren des Namens des Kubernetes-Clusters für eine Containerbereitstellung in {{site.data.keyword.cloud_notm}}.
+* Optionaler Parameter zum Definieren des Namens des Kubernetes-Clusters für eine Containerbereitstellung in {{site.data.keyword.Bluemix_notm}}.
 * Syntax: `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `host`
 {: #host}
 
-* Parameter, der optional verwendet wird, um den Hostnamen der App zu definieren, wenn die Bereitstellung in Cloud Foundry erfolgt.
+* Parameter, der optional verwendet wird, um den Hostnamen der Anwendung zu definieren, wenn die Bereitstellung in Cloud Foundry erfolgt.
 * Syntax: `ibmcloud dev deploy --host [hostname]`
 
 #### `domain`
 {: #domain}
 
-* Parameter, der optional verwendet wird, um die Domäne der App zu definieren, wenn die Bereitstellung in Cloud Foundry erfolgt.
+* Parameter, der optional verwendet wird, um die Domäne der Anwendung zu definieren, wenn die Bereitstellung in Cloud Foundry erfolgt.
 * Syntax: `ibmcloud dev deploy --domain [domain]`
 
 ## diag
@@ -262,47 +257,47 @@ ibmcloud dev diag
 ## edit
 {: #edit}
 
-Bearbeiten Sie Ihre App mit Optionen wie dem Verbindung der App mit einer bereits in {{site.data.keyword.cloud_notm}} vorhandenen App und dem Verwalten der {{site.data.keyword.cloud_notm}}-Services der App und der zugehörigen {{site.data.keyword.cloud_notm}}-Toolchain, die in IBM Cloud Kubernetes, Cloud Foundry oder Cloud Foundry Enterprise Environment bereitgestellt wird. Verwenden Sie bei einer lokalen App, die mit einer App in {{site.data.keyword.cloud_notm}} verbunden ist, den Befehl `edit` zum Hinzufügen neuer Services, zum Herstellen und Trennen von Verbindungen zu vorhandenen Services sowie zum Entfernen vorhandener Services in Ihrem Konto. Darüber hinaus können Sie eine {{site.data.keyword.cloud_notm}}-Toolchain für die App erstellen oder anzeigen. Führen Sie den folgenden Befehl im Stammverzeichnis Ihres App-Verzeichnisses aus:
+Bearbeiten Sie Ihre Anwendung mit Optionen wie dem Verbinden der Anwendung mit einer bereits in {{site.data.keyword.cloud_notm}} vorhandenen Anwendung und dem Verwalten von {{site.data.keyword.cloud_notm}}-Services der Anwendung und der zugehörigen {{site.data.keyword.cloud_notm}} Toolchain, die in IBM Cloud Kubernetes, Cloud Foundry oder Cloud Foundry Enterprise Environment bereitgestellt wird. Verwenden Sie bei einer lokalen Anwendung, die mit einer Anwendung in {{site.data.keyword.cloud_notm}} verbunden ist, den Befehl `edit` zum Hinzufügen neuer Services, zum Herstellen und Trennen von Verbindungen zu vorhandenen Services sowie zum Entfernen von vorhandenen Services in Ihrem Konto. Darüber hinaus können Sie eine {{site.data.keyword.cloud_notm}}-Toolchain für die Anwendung erstellen oder anzeigen. Führen Sie den folgenden Befehl im Stammverzeichnis Ihres Anwendungsverzeichnisses aus:
 ```
 ibmcloud dev edit
 ```
 {: codeblock}
 
-Wenn in Ihrem Konto keine Services vorhanden sind, wird mit diesem Befehl eine Liste der Servicegruppen angezeigt, in der Sie einen Service auswählen, der mit Ihrer App verbunden werden soll.
+Wenn Ihr Konto keine vorhandenen Services enthält, wird mit diesem Befehl eine Liste mit Servicegruppen angezeigt, in der Sie einen Service auswählen können, der mit Ihrer Anwendung verbunden werden soll.
 
-Wenn in Ihrem Konto jedoch Services vorhanden sind, wird mit diesem Befehl eine Liste dieser Services angezeigt und angegeben, ob die einzelnen Services mit der App verbunden sind.
+Wenn Ihr Konto jedoch vorhandene Services enthält, wird mit diesem Befehl eine Liste dieser Services angezeigt und angegeben, ob die einzelnen Services mit der Anwendung verbunden sind.
 
-* Wenn Sie einen verbundenen Service auswählen, können Sie entweder die Verbindung dieses Service zu Ihrer App trennen oder den Service aus Ihrem Konto löschen, wodurch die Verbindungen des betreffenden Service zu allen Apps, mit denen er verbunden ist, getrennt werden.
+* Wenn Sie einen verbundenen Service auswählen, können Sie entweder die Verbindung dieses Service zu Ihrer Anwendung trennen oder den Service aus Ihrem Konto löschen, wodurch die Verbindungen des betreffenden Service zu allen Anwendungen, mit denen er verbunden ist, getrennt werden.
 
-* Wenn Sie einen nicht verbundenen Service auswählen, können Sie entweder diesen Service mit Ihrer App verbinden oder den Service aus Ihrem Konto löschen. Durch das Verbinden eines vorhandenen Service werden auch Dateien (z. B. Berechtigungsnachweise oder Quellcode) heruntergeladen, damit mit der Verwendung dieses Service begonnen werden kann.
+* Wenn Sie einen nicht verbundenen Service auswählen, können Sie entweder diesen Service mit Ihrer Anwendung verbinden oder den Service aus Ihrem Konto löschen. Durch das Verbinden eines vorhandenen Service werden auch Dateien (z. B. Berechtigungsnachweise oder Quellcode) heruntergeladen, damit mit der Verwendung dieses Service begonnen werden kann.
 
-Sie können auch einen neuen Service zu Ihrer App hinzufügen. In diesem Fall wird eine Abfolge von Eingabeaufforderungen für die Serviceauswahl angezeigt und es werden zusätzliche Daten (z. B. Berechtigungsnachweisdateien oder Quellcode) heruntergeladen, damit mit der Verwendung des neuen Service begonnen werden kann.
+Wenn Sie einen neuen Service zu Ihrer Anwendung hinzufügen, wird eine Abfolge von Eingabeaufforderungen für die Serviceauswahl angezeigt und es werden zusätzliche Dateien (z. B. Berechtigungsnachweisdateien oder Quellcode) heruntergeladen, damit mit der Verwendung des neuen Service begonnen werden kann.
 
 ## enable
 {: #enable}
 
-Vorhandene App für die {{site.data.keyword.cloud_notm}}-Bereitstellung aktivieren. Der Befehl `enable` versucht, die Sprache einer vorhandenen App automatisch zu erkennen und dann zur Angabe zusätzlicher, erforderlicher Informationen aufzufordern. Dadurch werden Dateien generiert und hinzugefügt, die für lokale Docker-Container, für die Cloud Foundry-Bereitstellung bzw. für die Cloud Foundry Enterprise Environment- oder die Kubernetes Container-Bereitstellung verwendet werden können. Alle Bereitstellungsumgebungen können über einen manuellen Befehl `deploy` oder mithilfe einer DevOps-Toolchain verwendet werden.
+Vorhandene Anwendung für die {{site.data.keyword.cloud_notm}}-Bereitstellung aktivieren. Der Befehl `enable` versucht, die Sprache einer vorhandenen Anwendung automatisch zu erkennen und dann zur Angabe zusätzlicher, erforderlicher Informationen aufzufordern. Dadurch werden Dateien generiert und hinzugefügt, die für lokale Docker-Container, für die Cloud Foundry-Bereitstellung bzw. für die Cloud Foundry Enterprise Environment- oder die Kubernetes Container-Bereitstellung verwendet werden können. Alle Bereitstellungsumgebungen können über einen manuellen Befehl `deploy` oder mithilfe einer DevOps-Toolchain verwendet werden.
 
-Wenn Sie bei {{site.data.keyword.cloud_notm}} angemeldet sind, können Sie die lokale App mit einer bereits in {{site.data.keyword.cloud_notm}} vorhandenen App verbinden oder eine neue {{site.data.keyword.cloud_notm}}-App erstellen. Die Vorteile von {{site.data.keyword.cloud_notm}}-Features wie Services und DevOps-Toolchains können Sie nur mit einer App in {{site.data.keyword.cloud_notm}} nutzen. Wird eine {{site.data.keyword.cloud_notm}}-App für eine vom Git-Repository geklonte App erstellt, enthält die {{site.data.keyword.cloud_notm}}-App das Repository in der zugehörigen Konfiguration. 
+Wenn Sie bei {{site.data.keyword.cloud_notm}} angemeldet sind, können Sie die lokale Anwendung mit einer bereits in {{site.data.keyword.cloud_notm}} vorhandenen Anwendung verbinden oder eine neue {{site.data.keyword.cloud_notm}}-Anwendung erstellen. Die Vorteile von {{site.data.keyword.cloud_notm}}-Features wie Services und DevOps-Toolchains können Sie nur mit einer Anwendung in {{site.data.keyword.cloud_notm}} nutzen. Wird eine {{site.data.keyword.cloud_notm}}-App für eine vom Git-Repository geklonte App erstellt, enthält die {{site.data.keyword.cloud_notm}}-App das Repository in der zugehörigen Konfiguration. 
 
-`Enable` ist ein Beta-Feature. Ziehen Sie bei Problemen Ihrer App die [Seite für Fehlerbehebung](/docs/cli/ts_createapps.html#troubleshoot) zu Rate. Insbesondere ist zu beachten, dass `enable` nicht für mobile Apps oder Frameworks konzipiert ist. Bei komplexeren Apps, die mehrere bereitstellbare Assets erzeugen, muss jede Komponente der App einzeln aktiviert werden. 
+`Enable` ist ein Beta-Feature. Ziehen Sie bei Problemen beim Aktivieren Ihrer Anwendung die [Fehlerbehebungsseite](/docs/cli/ts_createapps.html#troubleshoot) zu Rate. Insbesondere ist zu beachten, dass `enable` nicht für mobile Anwendungen oder Frameworks konzipiert ist. Bei komplexeren Anwendungen, die mehrere bereitstellbare Assets erzeugen, muss jede Komponente der Anwendung einzeln aktiviert werden. 
 
-Führen Sie den folgenden Befehl aus, um eine vorhandene App im aktuellen Verzeichnis zu aktivieren:
+Führen Sie den folgenden Befehl aus, um eine vorhandene Anwendung im aktuellen Verzeichnis zu aktivieren:
 ```
 ibmcloud dev enable
 ```
 {: codeblock}
 
-Das Vorhandensein erforderlicher Dateien macht eine Erkennung der App-Sprache für eine gültige Projektstruktur möglich.  
+Das Vorhandensein erforderlicher Dateien macht eine Erkennung der Anwendungssprache für eine gültige Anwendungsstruktur möglich.  
 
-* Das Vorhandensein der Datei `package.json` gibt eine Node.js-App an.
-* Das Vorhandensein einer Datei `package.swift` gibt eine Swift-App an.
-* Das Vorhandensein einer Datei `setup.py` oder `requirements.txt` gibt eine Python-App an.
-* Das Vorhandensein einer Datei `pom.xml` oder `build.gradle` gibt eine Java-App an.
-	* Das Vorhandensein einer Datei `pom.xml` gibt eine Maven-App an.
-	* Das Vorhandensein einer Datei `build.gradle` gibt eine Gradle-App an.
+* Das Vorhandensein der Datei `package.json` gibt eine Node.js-Anwendung an.
+* Das Vorhandensein der Datei `package.swift` gibt eine Swift-Anwendung an.
+* Das Vorhandensein der Datei `setup.py` oder `requirements.txt` gibt eine Python-Anwendung an.
+* Das Vorhandensein der Datei `pom.xml` oder `build.gradle` gibt eine Java-Anwendung an.
+	* Das Vorhandensein der Datei `pom.xml` gibt eine Maven-Anwendung an.
+	* Das Vorhandensein der Datei `build.gradle` gibt eine Gradle-Anwendung an.
 
-Optional können Sie die erkannte App-Sprache mithilfe des Arguments `--language` überschreiben. Nur gültige und vollständige Apps werden unterstützt. Der Befehl 'enable' ändert Ihren Quellcode nicht.
+Optional können Sie die erkannte Anwendungssprache mithilfe des Arguments `--language` überschreiben. Allerdings werden nur gültige und abgeschlossene Anwendungen unterstützt. Der Befehl 'enable' ändert Ihren Quellcode nicht.
 
 ### enable language options
 {: #enable-language-options}
@@ -315,35 +310,35 @@ Sprachenoptionen sind unter anderem:
 * java-mp (interpretiert als Java&trade; - Java&trade; MicroProfile)
 * java-spring (interpretiert als Java&trade; - Spring Framework)
 
-Mit dem Befehl `ibmcloud dev enable` erstellte Dateien, die Namenskonflikte mit vorhandenen Dateien im App-Ordner aufweisen, werden mit der Dateierweiterung `.merge` gespeichert.  
+Mit dem Befehl `ibmcloud dev enable` erstellte Dateien, die Namenskonflikte mit vorhandenen Dateien im Anwendungsordner aufweisen, werden mit der Dateierweiterung `.merge` gespeichert.  
 
 ### Aktivierungsbefehlsparameter
 {: #enable-parameters}
 
-Die folgenden Parameter können mit dem Befehl `enable` oder unmittelbar durch die Aktualisierung der Datei `cli-config.yml` der App angegeben werden. Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen gemeinsam genutzt werden.
+Die folgenden Parameter können mit dem Befehl `enable` oder unmittelbar durch die Aktualisierung der Datei `cli-config.yml` der Anwendung angegeben werden. Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen gemeinsam genutzt werden.
 
 #### `language`
 {: #enable-language}
 
-* Parameter zum Angeben der Sprache der zu aktivierenden App.
+* Parameter zum Angeben der Sprache der aktivierenden Anwendung.
 * Syntax: `ibmcloud dev enable -l|--language [language]`
 
 #### `force`
 {: #enable-force}
 
-* Parameter zum Erzwingen der erneuten Aktivierung einer bereits aktivierten App.
+* Parameter, der zum Erzwingen der erneuten Aktivierung einer bereits aktivierten Anwendung verwendet wird.
 * Syntax: `ibmcloud dev enable -f|--force`
 
 #### `no-create`
 {: #enable-no-create}
 
-* Parameter zum Verhindern des Erstellens einer App in {{site.data.keyword.cloud_notm}}, während Aktivierungsdateien lokal erstellt werden.
+* Parameter zum Verhindern des Erstellens einer App in {{site.data.keyword.Bluemix_notm}}, während Aktivierungsdateien lokal erstellt werden.
 * Syntax: `ibmcloud dev enable --no-create`
 
 ## get-credentials
 {: #get-credentials}
 
-Für die App erforderliche Berechtigungsnachweise zum Aktivieren der Verwendung von gebundenen Services abrufen.
+Für das Projekt erforderliche Berechtigungsnachweise zum Aktivieren der Verwendung von gebundenen Services abrufen.
 
 ## help
 {: #help}
@@ -359,9 +354,9 @@ ibmcloud dev help
 ## list
 {: #list}
 
-Sie können alle {{site.data.keyword.cloud_notm}}-Apps in einer Ressourcengruppe auflisten.
+Es können alle {{site.data.keyword.cloud_notm}}-Anwendungen in einer Ressourcengruppe aufgelistet werden.
 
-Führen Sie den folgenden Befehl aus, um Ihre Apps aufzulisten:
+Führen Sie den folgenden Befehl aus, um Ihre Anwendungen aufzulisten:
 ```
 ibmcloud dev list
 ```
@@ -372,17 +367,17 @@ ibmcloud dev list
 
 Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen.
 
-Sie können Ihre App mithilfe des Befehls `run` ausführen. Zuerst muss für die App ein Build durchgeführt werden, indem der Befehl `build` verwendet wird. Wenn Sie den Befehl `run` ausführen, wird der Ausführungscontainer gestartet und stellt die Ports bereit, wie durch den Parameter `container-port-map` definiert werden. Der Parameter `run-cmd` kann verwendet werden, um die App aufzurufen, falls die `Dockerfile` des Containers 'run' keinen Eingangspunkt enthält, um diesen Schritt abzuschließen.
+Sie können Ihre Anwendung mithilfe des Befehls `run` ausführen. Zuerst muss für die Anwendung ein Build durchgeführt werden, indem der Befehl `build` verwendet wird. Wenn Sie den Befehl `run` ausführen, wird der Ausführungscontainer gestartet und stellt die Ports bereit, wie durch den Parameter `container-port-map` definiert werden. Der Parameter `run-cmd` kann verwendet werden, um die Anwendung aufzurufen, falls die `Dockerfile` des Containers 'run' keinen Eingangspunkt umfasst, um diesen Schritt abzuschließen.
 
-Für die Ausführung mit mehreren Containern muss die App entweder eine [Compose-Datei](https://docs.docker.com/compose/overview/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") enthalten, die in der Datei `cli-config.yml` angegeben ist, oder Sie können mithilfe des Befehlsparameters `dockerfile-run` eine solche Datei angeben.
+Für die Ausführung mit mehreren Containern muss die Anwendung entweder eine [Compose-Datei](https://docs.docker.com/compose/overview/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") enthalten, die in der Datei `cli-config.yml` angegeben ist, oder Sie können mithilfe des Befehlsparameters `dockerfile-run` eine solche Datei angeben.
 
-Kompilieren Sie zuerst Ihre App:
+Kompilieren Sie zuerst Ihre Anwendung:
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-Führen Sie den folgenden Befehl in Ihrem aktuellen App-Verzeichnis aus, um Ihre App zu starten:
+Führen Sie den folgenden Befehl in Ihrem aktuellen Anwendungsverzeichnis aus, um die Anwendung zu starten:
 ```
 ibmcloud dev run
 ```
@@ -393,15 +388,15 @@ Geben Sie `STRG-C` ein, um die Sitzung zu beenden.
 ### Ausführungsbefehlsparameter
 {: #run-parameters}
 
-Die folgenden Parameter stehen ausschließlich für den Befehl `run` zur Verfügung
-und unterstützen Sie beim Verwalten Ihrer App im Ausführungscontainer.
+Die folgenden Parameter stehen ausschließlich dem Befehl `run` zur Verfügung und
+unterstützen Sie beim Verwalten Ihrer Anwendung im Ausführungscontainer.
 Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen gemeinsam genutzt werden.
 
 #### `container-name-run`
 {: #container-name-run2}
 
 * Containername für den Ausführungscontainer.
-* Syntax: `ibmcloud dev run --container-name-run [<appName>]`
+* Syntax: `ibmcloud dev run --container-name-run [<applicationName>]`
 
 #### `container-path-run`
 {: #container-path-run}
@@ -449,7 +444,7 @@ ibmcloud dev shell
 ```
 {: codeblock}
 
-Die {{site.data.keyword.dev_cli_short}}-CLI öffnet eine interaktive Shell für den Docker-Container der App. Der Standardzielcontainer für den Shell-Befehl wird durch den Wert `container-shell-target` in der Datei `cli-config.yml` definiert, wobei die gültigen Werte `run` oder `tools` lauten. Ist dieser Wert nicht definiert oder wird ein ungültiger Wert angegeben, verwendet der Befehl `shell` standardmäßig den Container `tools`. Der Shellbefehl öffnet den Container zum dem in der Anweisung `WORKDIR` in der entsprechenden Dockerfile angegebenen Verzeichnis. Wenn `WORKDIR` nicht in der Dockerfile aufgelistet ist, wird das Containerstammverzeichnis als Arbeitsverzeichnis verwendet. Weitere Informationen finden Sie in [dieser Referenz](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link").
+Die {{site.data.keyword.dev_cli_short}}-Befehlszeilenschnittstelle öffnet eine interaktive Shell für den Docker-Container der Anwendung. Der Standardzielcontainer für den Shell-Befehl wird durch den Wert `container-shell-target` in der Datei `cli-config.yml` definiert, wobei die gültigen Werte `run` oder `tools` lauten. Ist dieser Wert nicht definiert oder wird ein ungültiger Wert angegeben, verwendet der Befehl `shell` standardmäßig den Container `tools`. Der Shellbefehl öffnet den Container zum dem in der Anweisung `WORKDIR` in der entsprechenden Dockerfile angegebenen Verzeichnis. Wenn `WORKDIR` nicht in der Dockerfile aufgelistet ist, wird das Containerstammverzeichnis als Arbeitsverzeichnis verwendet. Weitere Informationen finden Sie in [dieser Referenz](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link").
 
 Alternativ können Sie entweder `run` oder `tools` als Argument an den Befehl übergeben und der jeweilige Container wird aufgerufen und die Shell wird für diesen Container geöffnet. Entsprechend können Sie den Parameter `container-name` verwenden, um den Namen des Containers anzugeben, für den die Shell geöffnet werden soll. Allerdings sollte dieses Flag für den Fall reserviert sein, wenn keine Container ausgeführt werden. Die Argumente `run` und `tools` sind flexibler und ermöglichen Ihnen, zwischen Containern zu wechseln, wenn ein Container aktiv ist. Wenn beispielsweise der Container 'tools' ausgeführt wird und Sie `ibmcloud dev shell run` absetzen, wird der Container `tools` gestoppt und der Container `run` gestartet (bzw. umgekehrt).
 
@@ -483,7 +478,7 @@ Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder hö
 
 Sie können den Status der Container abfragen, die von der {{site.data.keyword.dev_cli_short}}-CLI verwendet werden, wie durch `container-name-run` und `container-name-tools` definiert.
 
-Führen Sie den folgenden Befehl im aktuellen App-Verzeichnis aus, um den Containerstatus zu überprüfen:
+Führen Sie den folgenden Befehl im aktuellen Anwendungsverzeichnis aus, um den Containerstatus zu überprüfen:
 ```
 ibmcloud dev status
 ```
@@ -515,28 +510,28 @@ Die folgenden Parameter werden für den Befehl `stop` verwendet. Es gibt [zusät
 {: #container-name-run}
 
 * Containername für den Ausführungscontainer.
-* Syntax: `ibmcloud dev stop --container-name-run [<appName>]`
+* Syntax: `ibmcloud dev stop --container-name-run [<applicationName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * Containername für den Container 'tools'.
-* Syntax: `ibmcloud dev stop --container-name-tools [<appName>]`
+* Syntax: `ibmcloud dev stop --container-name-tools [<applicationName>]`
 
 ## test
 {: #test}
 
 Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen.
 
-Sie können Ihre App mithilfe des Befehls `test` testen. Zuerst muss für die App ein Build durchgeführt werden, indem der Befehl `build --debug` verwendet wird. Anschließend wird der Container 'tools' verwendet, um `test-cmd` für die App zu starten.
+Sie können Ihre Anwendung mithilfe des Befehls `test` stoppen. Zuerst muss für die Anwendung ein Build durchgeführt werden, indem der Befehl `build --debug` verwendet wird. Der Container 'tools' wird dann verwendet, um `test-cmd` für die Anwendung aufzurufen.
 
-Kompilieren Sie zuerst Ihre App:
+Kompilieren Sie zuerst Ihre Anwendung:
 ```
 ibmcloud dev build --debug
 ```
 {: codeblock}
 
-Führen Sie den folgenden Befehl aus, um Ihre App zu testen:
+Führen Sie den folgenden Befehl aus, um Ihre Anwendung zu testen:
 ```
 ibmcloud dev test
 ```
@@ -556,13 +551,13 @@ Der folgende Parameter wird ausschließlich mit dem Befehl `test` verwendet. Es 
 ## view
 {: #view}
 
-Mit dem Befehl `view` können Sie die URL anzeigen, unter der Ihre App bereitgestellt wird. Führen Sie diesen Befehl im Stammverzeichnis der App aus, die Sie anzeigen möchten. Der Befehl `view` öffnet die URL auch in Ihrem Standardbrowser.
+Mit dem Befehl `view` können Sie die URL anzeigen, unter der Ihre Anwendung bereitgestellt wird. Führen Sie diesen Befehl im Stammverzeichnis der Anwendung aus, die Sie anzeigen möchten. Der Befehl `view` öffnet die URL auch in Ihrem Standardbrowser.
 
-Bei Apps, die in Cloud Foundry bereitgestellt werden, besteht die URL aus dem Hostnamen und der Domäne der App.
+Bei Anwendungen, die in Cloud Foundry bereitgestellt werden, besteht die URL aus dem Hostnamen und der Domäne der Anwendung.
 
-Bei Apps, die in Kubernetes bereitgestellt werden, besteht die URL aus der IP-Adresse des Knotens, unter dem sie bereitgestellt wird, und dem öffentlichen Port. Wenn der Befehl feststellt, dass die App in Kubernetes bereitgestellt wurde, fordert das CLI-Tool eine Bestätigung an. Wenn Sie angeben, dass die App nicht in Kubernetes bereitgestellt wurde, wird die Cloud Foundry-URL angezeigt. Falls Sie erwartet haben, dass der Befehl die URL für eine in Kubernetes bereitgestellte App anzeigt, dies jedoch nicht der Fall ist, müssen Sie entweder sicherstellen, dass die Datei `cli-config.yml` einen Eingangspunkt für `chart-path` enthält, oder Sie müssen diesen über die Befehlszeile angeben, wie [hier](#chart-path) gezeigt.
+Bei Anwendungen, die in Kubernetes bereitgestellt werden, besteht die URL aus der IP-Adresse des Knotens, unter dem sie bereitgestellt wird, und dem öffentlichen Port. Wenn der Befehl feststellt, dass die Anwendung in Kubernetes bereitgestellt wurde, fordert das CLI-Tool eine Bestätigung an. Wenn Sie angeben, dass die Anwendung nicht in Kubernetes bereitgestellt wurde, wird die Cloud Foundry-URL angezeigt. Falls Sie erwartet haben, dass der Befehl die URL für eine in Kubernetes bereitgestellte Anwendung anzeigt, dies aber nicht der Fall ist, müssen Sie entweder sicherstellen, dass die Datei `cli-config.yml` einen Eingangspunkt für `chart-path` enthält, oder Sie müssen diesen über die Befehlszeile angeben, wie [hier](#chart-path) gezeigt.
 
-Führen Sie den folgenden Befehl aus, um Ihre App anzuzeigen:
+Führen Sie den folgenden Befehl aus, um Ihre Anwendung anzuzeigen:
 ```
 ibmcloud dev view
 ```
@@ -587,7 +582,7 @@ Die folgenden Parameter werden ausschließlich mit dem Befehl `view` verwendet.
 #### `web-app-root`
 {: #web-app-root}
 
-* Stammverzeichnis des Projekts, das an die URL der Cloud Foundry- und Kubernetes-App angehängt werden soll.
+* Stammverzeichnis des Projekts, das an die URL der Cloud Foundry- und Kubernetes-Anwendung angehängt werden soll.
 * Syntax: `ibmcloud dev view --web-app-root [root]`
 
 #### `ibm-cluster`
@@ -615,12 +610,12 @@ Dies sind die Befehle, die mit diesem Feature verwendet werden können:
 
 Falls ein Befehl fehlschlägt, werden die nachfolgenden Befehle nicht ausgeführt.
 
-Falls Befehle auf `debug` oder `run` folgen, wird die Ausführung nur fortgesetzt, wenn `debug` oder `run` auf andere Weise als durch Beenden des Prozesses im aktuellen Terminalfenster abgebrochen wird. Geben Sie `STRG+C` ein, um den Prozess zu beenden, und führen Sie die nachfolgenden Befehle nicht aus. Sie können `ibmcloud dev stop` beispielsweise in einem anderen Terminalfenster ausführen, um den laufenden Container zu stoppen und die Ausführung des nachfolgenden Befehls fortzusetzen.
+Falls Befehle auf `debug` oder `run` folgen, wird die Ausführung nur fortgesetzt, wenn `debug` oder `run` auf andere Weise als durch Beenden des Prozesses im aktuellen Terminalfenster abgebrochen wird. `CTRL+C` beendet den Prozess, ohne die nachfolgenden Befehle auszuführen.. Sie können `ibmcloud dev stop` beispielsweise in einem anderen Terminalfenster ausführen, um den laufenden Container zu stoppen und die Ausführung des nachfolgenden Befehls fortzusetzen.
 
 ## Parameter für 'build', 'debug', 'run' und 'test'
 {: #command-parameters}
 
-Die folgenden Parameter können mit den Befehlen `build|debug|run|test` oder unmittelbar durch die Aktualisierung der Datei `cli-config.yml` der App angegeben werden. Zusätzliche Parameter sind für die Befehle [`debug`](#debug-parameters) und [`run`](#run-parameters) verfügbar.
+Die folgenden Parameter können mit den Befehlen `build|debug|run|test` oder unmittelbar durch die Aktualisierung der Datei `cli-config.yml` der Anwendung angegeben werden. Zusätzliche Parameter sind für die Befehle [`debug`](#debug-parameters) und [`run`](#run-parameters) verfügbar.
 
 Befehlsparameter, die in der Befehlszeile eingegeben werden, haben Vorrang vor der `cli-config.yml`-Konfiguration.
 {: note}
@@ -635,13 +630,13 @@ Befehlsparameter, die in der Befehlszeile eingegeben werden, haben Vorrang vor d
 {: #container-name-run1}
 
 * Containername für den Ausführungscontainer.
-* Syntax: `ibmcloud dev <run|status|stop> --container-name-run [<appName>]`
+* Syntax: `ibmcloud dev <run|status|stop> --container-name-run [<applicationName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * Containername für den Container 'tools'.
-* Syntax: `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<appName>]`
+* Syntax: `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<applicationName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}

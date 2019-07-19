@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
+keywords: cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
 subcollection: cloud-cli
 
@@ -719,7 +719,7 @@ Crear una instancia denominada `test-cfee` en `dal10`:
 ibmcloud cfee create test-cfee dal10
 ```
 
-Crear una instancia `dedicated` denominada `test-cfee` en `dal10` con `4` células:
+Crear una instancia `dedicate` denominada `test-cfee` en `dal10` con `4` células:
 
 ```
 ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated

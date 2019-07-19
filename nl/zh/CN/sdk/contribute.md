@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-02-26"
 
-keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
 subcollection: cloud-cli
 
@@ -33,11 +33,11 @@ subcollection: cloud-cli
 
 * {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)。
 
-   此插件已添加到 {{site.data.keyword.cloud_notm}} CLI，提供用于通过命令行访问 {{site.data.keyword.cloud_notm}} 的有用资源。
+   此插件会安装到 {{site.data.keyword.cloud_notm}} CLI 中。{{site.data.keyword.cloud_notm}} CLI 还提供了用于通过终端访问 {{site.data.keyword.cloud_notm}} 的有用资源。
 
 * Go 的[开发环境 ](https://golang.org/doc/code.html){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
 
-   Go 对软件包位置有严格限制，因此必须在 `$GOPATH` 目录结构内定义源。必须定义 `$GOPATH` 和 `$GOROOT` 变量，并在 `$PATH` 环境变量中包含 `$GOPATH/bin`。可以通过编辑 `~/.bash_profile` 配置文件（在 Mac 上）来进行这些更改。
+   Go 对软件包位置有严格限制，因此必须在 `$GOPATH` 目录结构内定义源。确保定义 `$GOPATH` 和 `$GOROOT` 变量，并确保在 `$PATH` 环境变量中包含 `$GOPATH/bin`，这可通过编辑 `~/.bash_profile` 配置文件（在 Mac OS 上）来完成。
 
    ```
    ### SET Go's GOPATH and GOROOT                                                                                                                   
@@ -47,7 +47,7 @@ subcollection: cloud-cli
    ```
    {: codeblock}
 
-* 依赖关系管理器：[`govendor `](https://github.com/kardianos/govendor){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
+* 依赖关系管理器：[govendor ](https://github.com/kardianos/govendor){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
 
    `govendor` 工具用于创建和管理 Go 依赖关系。除非您计划更新供应商目录，否则无需此工具。
 
@@ -74,7 +74,7 @@ subcollection: cloud-cli
 
 * BDD 测试框架：[Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
 
-测试框架基于 Ginkgo，这是用于 Go 的 BDD 测试框架。与 [`gomega `](http://onsi.github.io/gomega/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 配合使用，gomega 是 Ginkgo 的匹配器和断言库。
+测试框架基于 Ginkgo，这是用于 Go 的 BDD 测试框架。它与 [Gomega ](http://onsi.github.io/gomega/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 配合使用，Gomega 是 Ginkgo 的匹配器和断言库。
 
    * 使用以下命令安装 `ginkgo`。
 
@@ -108,9 +108,9 @@ subcollection: cloud-cli
 
       * 您将转至 `.coverprofile` 文件所在的目录。
 
-* 全球化：[go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 和 [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
+* 国际化：[go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 和 [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
 
-全球化基于 `go-i18n`，这是一个软件包和命令行工具，支持将 Go 应用程序翻译成多种语言。翻译捆绑软件由 `go-bindata` 命令进行预处理，此命令用于将任何输入文件转换为可管理 Go 源代码。
+国际化基于 `go-i18n`，这是一个软件包和命令行工具，支持将 Go 应用程序翻译成多种语言。翻译捆绑软件由 `go-bindata` 进行预处理，这是用于将任何输入文件转换为可管理 Go 源代码的命令。
 
    * 使用以下命令安装 `go-i18n`。
 
@@ -126,7 +126,7 @@ subcollection: cloud-cli
       ```
       {: codeblock}
 
-* 调试：[delve ](https://github.com/go-delve/delve){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
+* 调试：[delve ](https://github.com/derekparker/delve){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
 
 Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ](https://code.visualstudio.com/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 使用。
 
@@ -160,7 +160,7 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ](https
 
 * [github.com/asaskevich/govalidator ](https://github.com/asaskevich/govalidator){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
 
-   此软件包提供了用于字符串、结构和集合的多个验证器和杀毒器。请使用此软件包，而不要实现您自己的验证器。
+   此软件包提供了用于字符串、结构和集合的多个验证器和杀毒器。请使用此软件包，而不要实现自己的验证器。
 
 * [github.com/parnurzeal/gorequest ](https://github.com/parnurzeal/gorequest){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
 
