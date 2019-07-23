@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-07-18"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -47,14 +47,12 @@ ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID
 
 <strong>Examples</strong>:
 
-List all the organizations in region: `us-south` with the GUID displayed
-
+List all the organizations in region `us-south` with the GUID displayed:
 ```
 ibmcloud account orgs -r us-south --guid
 ```
 
-List all the organizations in JSON format
-
+List all the organizations in JSON format:
 ```
 ibmcloud account orgs --output JSON
 ```
@@ -76,7 +74,7 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
    <dt>-r REGION</dt>
    <dd>Region name. If not specified, the default is current region. If set to `all`, orgs with the given name in all regions are listed.</dd>
    <dt>--guid</dt>
-   <dd>Retrieve and display the given org's guid. All other output for the org is suppressed. This option is exclusive with `--output`.</dd>
+   <dd>Retrieve and display the org's guid. All other output for the org is suppressed. This option is exclusive with `--output`.</dd>
    <dt>--output REGION</dt>
    <dd>Specify output format, only JSON is supported now. This option is exclusive with `--guid`.</dd>
    </dl>
@@ -93,7 +91,7 @@ ibmcloud account org IBM --guid
 
 Create an organization. This operation can be run only by account owner.
 ```
-ibmcloud account org-create ORG_NAME [-f]
+ibmcloud account org-create ORG_NAME [-r, --region REGION]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -101,16 +99,16 @@ ibmcloud account org-create ORG_NAME [-f]
 <strong>Command options</strong>:
    <dl>
    <dt>ORG_NAME (required)</dt>
-   <dd>The name of the organization being created.</dd>
-   <dt>-f</dt>
-   <dd>Force creation without confirmation.</dd>
+   <dd>The name of the organization to be created.</dd>
+   <dt>-r, --region REGION (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
    </dl>
 
 <strong>Examples</strong>:
 
 Create an organization named `IBM`.
 ```
-ibmcloud account org-create IBM
+ibmcloud account org-create IBM 
 ```
 
 ## ibmcloud account org-replicate
@@ -118,7 +116,7 @@ ibmcloud account org-create IBM
 
 Replicate an org from the current region to another region.
 ```
-ibmcloud account org-replicate ORG_NAME REGION_NAME
+ibmcloud account org-replicate ORG_NAME REGION_NAME [-r, --region SOURCE_REGION]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -129,6 +127,8 @@ ibmcloud account org-replicate ORG_NAME REGION_NAME
    <dd>The name of the existing org that is to be replicated.</dd>
    <dt>REGION_NAME (required)</dt>
    <dd>The name of the region that hosts the replicated org.</dd>
+   <dt>-r, --region REGION (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
    </dl>
 
 <strong>Examples</strong>:
@@ -143,7 +143,7 @@ ibmcloud account org-replicate myorg eu-gb
 
 Rename an organization. This operation can be done only by an org manager.
 ```
-ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
+ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME [-r, --region REGION]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -153,7 +153,9 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
    <dt>OLD_ORG_NAME (required)</dt>
    <dd>The old name of the org that is to be renamed.</dd>
    <dt>NEW_ORG_NAME (required)</dt>
-   <dd>The new name of the org that it's renamed to.</dd>
+   <dd>The new name of the org that is to be renamed.</dd>
+   <dt>-r, --region REGION (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
    </dl>
 
 ## ibmcloud account spaces
@@ -168,11 +170,11 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 
 <strong>Command options</strong>:
    <dl>
-   <dt>-o ORG_NAME</dt>
+   <dt>-o ORG_NAME (optional)</dt>
    <dd>Organization name. List the spaces under the organization specified. Default to current organization if not specified.</dd>
-   <dt>-r REGION-NAM</dt>
+   <dt>-r REGION-NAME (optional)</dt>
    <dd>Region name. List the spaces under the region specified. Default to current region if not specified.</dd>
-   <dt>--output FORMAT</dt>
+   <dt>--output FORMAT (optional)</dt>
    <dd>Specify output format, only JSON is supported now.</dd>
    </dl>
 
@@ -205,7 +207,7 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
    <dt>-o ORG_NAME</dt>
    <dd>Organization name. Default to current organization if not specified.</dd>
    <dt>--guid</dt>
-   <dd>Retrieve and display the given space's guid. All other output for the space is suppressed. This option is exclusive with `--output`.</dd>
+   <dd>Retrieve and display the space's guid. All other output for the space is suppressed. This option is exclusive with `--output`.</dd>
    <dt>--output FORMAT</dt>
    <dd>Specify output format, only JSON is supported now. All other output for the space is suppressed. This option is exclusive with `--guid`.</dd>
    <dt>--security-group-rules</dt>
@@ -253,6 +255,7 @@ This command has the same function and options as the [`cf delete-space`](http:/
 {: #ibmcloud_account_org_users}
 
 Display users in the specified organization by role.
+
 ```
 ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 ```
@@ -267,15 +270,25 @@ ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 <dd>List all the users in the specified organization, not grouped by role.</dd>
 <dt>-r, --region REGION (optional)</dt>
 <dd>Region name. Default to current region if not specified.</dd>
-</dl>
+</dl> 
 
 ## ibmcloud account org-user-add
 {: #ibmcloud_account_org_user_add}
 
 Add a user into org (org manager required).
 ```
- ibmcloud account org-user-add USER_NAME ORG
+ ibmcloud account org-user-add USER_NAME ORG [-r, --region REGION]
 ```
+
+<strong>Command options</strong>:
+<dl>
+<dt>USER_NAME (required)</dt>
+<dd>The name of the user.</dd>
+<dt>ORG (required)</dt>
+<dd>The name of the organization.</dd>
+<dt>-r, --region REGION (optional)</dt>
+<dd>Region name. Default to current region if not specified.</dd>
+</dl>  
 
 ## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
@@ -296,7 +309,7 @@ ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
 
 Get all organization roles of the current user.
 ```
-ibmcloud account org-roles [-u USER_ID]
+ibmcloud account org-roles [-r, --region REGION] [-u USER_ID] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -305,14 +318,18 @@ ibmcloud account org-roles [-u USER_ID]
   <dl>
    <dt>-u</dt>
    <dd>User ID. If not specified, default to current user.</dd>
+   <dt>-r, --region REGION (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
   </dl>
 
 ## ibmcloud account org-role-set
 {: #ibmcloud_account_org_role_set}
 
-Assign an organization role to a user. This operation can only be run by an organization manager.
+Assign an organization role to a user. This operation must be run by an organization manager.
 ```
-ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
+ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE [-r, --region REGION]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -331,6 +348,8 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
    <li>OrgAuditor: This role has read-only access to org information and reports.</li>
    </ul>
    </dd>
+   <dt>-r, --region REGION (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -349,7 +368,7 @@ You can set org and space roles by using the CLI, but if you want to set the oth
 
 Remove an organization role from a user. This operation can be performed only by an organization manager.
 ```
-ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
+ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE [-r, --region REGION]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -357,7 +376,7 @@ ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
 <strong>Command options</strong>:
    <dl>
    <dt>USER_NAME (required)</dt>
-   <dd>The name of the user being removed.</dd>
+   <dd>The name of the user to be removed.</dd>
    <dt>ORG_NAME (required)</dt>
    <dd>The name of the organization this user is removed from.</dd>
    <dt>ORG_ROLE (required)</dt>
@@ -368,7 +387,9 @@ ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <li>OrgAuditor: This role has read-only access to org information and reports.</li>
    </ul>
    </dd>
-    </dl>
+   <dt>-r, --region REGION (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
+   </dl>
 
 <strong>Examples</strong>:
 
@@ -382,7 +403,7 @@ ibmcloud account org-role-unset Mary IBM OrgManager
 
 Display users in the specified space by role.
 ```
-ibmcloud account space-users ORG_NAME SPACE_NAME
+ibmcloud account space-users ORG_NAME SPACE_NAME [-r, --region REGION]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -393,6 +414,29 @@ ibmcloud account space-users ORG_NAME SPACE_NAME
    <dd>The name of the organization.</dd>
    <dt>SPACE_NAME (required)</dt>
    <dd>The name of the space.</dd>
+   <dt>-r, --region REGION (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
+   </dl>
+
+## ibmcloud account space-roles
+{: #ibmcloud_account_space_roles}
+
+Get all space roles of current user under specific org
+
+```
+ibmcloud account space-roles ORG [-r, --region REGION] [--output FORMAT]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+   <dl>
+   <dt>ORG (required)</dt>
+   <dd>The name of the organization.</dd>
+   <dt>-r (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
    </dl>
 
 ## ibmcloud account space-role-set
@@ -400,7 +444,7 @@ ibmcloud account space-users ORG_NAME SPACE_NAME
 
 Assign a space role to a user. This operation can be run only by a space manager.
 ```
-ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE [-r, --region REGION]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -420,8 +464,11 @@ ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <li>SpaceManager: This role can invite and manage users, and enable features.</li>
    <li>SpaceDeveloper: This role can create and manage apps and services, and see logs and reports.</li>
    <li>SpaceAuditor: This role can view logs, reports, and settings for the space.</li>
-   </ul></dd>
-    </dl>
+   </ul>
+   </dd>
+   <dt>-r, --region REGION (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
+   </dl>
 
 <strong>Examples</strong>:
 
@@ -435,7 +482,7 @@ ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 
 Remove a space role from a user. This operation can be run only by a space manager.
 ```
-ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE [-r, --region REGION]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -456,6 +503,8 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <li>SpaceDeveloper: This role can create and manage apps and services, and see logs and reports.</li>
    <li>SpaceAuditor: This role can view logs, reports, and settings for the space.</li>
    </ul></dd>
+   <dt>-r, --region REGION (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
     </dl>
 
 
@@ -471,25 +520,35 @@ ibmcloud account space-role-unset Mary IBM Cloud SpaceManager
 
 List all accounts of the current user:
 ```
-ibmcloud account list
-```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
-
-## ibmcloud account org-account
-{: #ibmcloud_account_org_account}
-
-Display the account of specified organization(org user required).
-```
-ibmcloud account org-account ORG_NAME [--guid]
+ibmcloud account list [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
+</dl>
+
+## ibmcloud account org-account
+{: #ibmcloud_account_org_account}
+
+Display the account of specified organization(org user required).
+```
+ibmcloud account org-account ORG_NAME [-r, --region REGION] [--guid | --output FORMAT]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+  <dt>-r (optional)</dt>
+  <dd>Region name. Default to current region if not specified.</dd>
   <dt>--guid (optional)</dt>
   <dd>Display account ID only</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 ## ibmcloud account show
@@ -572,10 +631,20 @@ ibmcloud account audit-logs
 ## ibmcloud account users
 {: #ibmcloud_account_users}
 
-Displays users that are associated with the account. This operation can only be run by the account owner.
+Displays users that are associated with the account. This operation must be run by the account owner.
 ```
-ibmcloud account users
+ibmcloud account users [-c, --account-id ACCOUNT_ID] [--output FORMAT]
 ```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+<dt>-c (optional)</dt>
+<dd>Account ID. If not specified, default to current account.</dd>
+<dt>--output FORMAT (optional)</dt>
+<dd>Specify output format, only JSON is supported now.</dd>
+</dl>
 
 ## ibmcloud account user-remove
 {: #ibmcloud_account_user_remove}
@@ -610,7 +679,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
 <strong>Command options</strong>:
 <dl>
    <dt>USER_EMAIL (required)</dt>
-   <dd>The email of the user being invited.</dd>
+   <dd>The email of the user to be invited.</dd>
    <dt>-o ORG</dt>
    <dd>Organization to invite user to</dd>
    <dt>--org-role ORG_ROLE</dt>
@@ -621,7 +690,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dd>Space role. Valid inputs are: SpaceManager, SpaceDeveloper, and SpaceAuditor.</dd>
 </dl>
 
-If you aren't ready to assign access or want to assign an IAM policy instead of Cloud Foundry access, you can invite a user with no access and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser#assign_new_access).
+If you aren't ready to assign access, or want to assign an IAM policy instead of Cloud Foundry access, you can invite a user with no access and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser#assign_new_access).
 {: tip}
 
 ## ibmcloud account user-reinvite
@@ -636,15 +705,107 @@ ibmcloud account user-reinvite USER_EMAIL
 <strong>Command options</strong>:
 <dl>
    <dt>USER_EMAIL (required)</dt>
-   <dd>The email of the user being invited again.</dd>
+   <dd>The email of the user to be invited again.</dd>
 </dl>
 
-## ibmcloud app domain-cert
-{: #accounts-list-domain-cert}
+## ibmcloud account audit-logs
+{: #ibmcloud_account_audit_logs}
 
-List the certificate information of a domain.
+List account audit logs
+
 ```
-ibmcloud app domain-cert DOMAIN_NAME
+ibmcloud account audit-logs [--user-name USER_NAME] [--object-type OBJECT_TYPE] [--object OBJECT] [--action ACTION] [--start-date START_DATE] [--end-date END_DATE] [--output FORMAT]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+   <dt>--user-name <i>USER_NAME</i> (optional)</dt>
+   <dd>List audit logs with the user name.</dd>
+   <dt>--object-type <i>OBJECT_TYPE</i> (optional)</dt>
+   <dd>List audit logs with the object type.</dd>
+   <dt>--object <i>OBJECT</i> (optional)</dt>
+   <dd>List audit logs with the object.</dd>
+   <dt>--action <i>ACTION</i> (optional)</dt>
+   <dd>List audit logs with the action.</dd>
+   <dt>--start-date <i>START_DATE</i> (optional)</dt>
+   <dd>List audit logs after the start date. Supported formats are yyyy-MM-ddTHH:mm:ss.</dd>
+   <dt>--end-date <i>END_DATE</i> (optional)</dt>
+   <dd>List audit logs before the end date. Supported formats are yyyy-MM-ddTHH:mm:ss.</dd>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
+</dl>
+
+## ibmcloud account user-preference
+{: #ibmcloud_account_user_preference}
+
+Show details of user preference
+
+```
+ibmcloud account user-preference [--output FORMAT]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
+</dl>
+
+## ibmcloud account user-preference-update
+{: #ibmcloud_account_user_preference_update}
+
+Update user preference
+
+```
+ibmcloud account user-preference-update (--position NEW_POSITION) [--output FORMAT]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+   <dt>--position <i>NEW_POSITION</i> (optional)</dt>
+   <dd>Set a user's position, such as 'manager' or 'student'.</dd>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
+</dl>
+
+## ibmcloud account platform-notification-subscribe
+{: #ibmcloud_account_platform_notification_subscribe}
+
+Subscribe platform notification:
+```
+ibmcloud account platform-notification-subscribe (--type TYPE)
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+   <dt>--type <i>TYPE</i> (optional)</dt>
+   <dd>Notification type, one of 'unplanned_events', 'planned_maintenance'.</dd>
+</dl>
+
+## ibmcloud account platform-notification-unsubscribe
+{: #ibmcloud_account_platform_notification_unsubscribe}
+
+Unsubscribe platform notification:
+```
+ibmcloud account platform-notification-unsubscribe (--type TYPE)
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+   <dt>--type <i>TYPE</i> (optional)</dt>
+   <dd>Notification type, one of 'unplanned_events', 'planned_maintenance'.</dd>
+</dl>
+
+## ibmcloud account domain-cert
+{: #ibmcloud_account_domain_cert}
+
+List the certificate information of a domain:
+```
+ibmcloud account domain-cert DOMAIN_NAME
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -660,15 +821,15 @@ ibmcloud app domain-cert DOMAIN_NAME
 
 View the certificate information of the domain `ibmcxo-eventconnect.com`:
 ```
-ibmcloud app domain-cert ibmcxo-eventconnect.com
+ibmcloud account domain-cert ibmcxo-eventconnect.com
 ```
 
-## ibmcloud app domain-cert-add
-{: #accounts-add-domain-cert}
+## ibmcloud account domain-cert-add
+{: #ibmcloud_account_domain_cert_add}
 
 Add a certificate to the specified domain in the current org.
 ```
-ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+ibmcloud account domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login, Target
@@ -694,15 +855,15 @@ ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWOR
 
 Add a certificate to the domain `ibmcxo-eventconnect.com`:
 ```
-ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+ibmcloud account domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
 
-## ibmcloud app domain-cert-remove
-{: #accounts-remove-domain-cert}
+## ibmcloud account domain-cert-remove
+{: #ibmcloud_account_domain_cert_remove}
 
 Remove a certificate from the specified domain in current org.
 ```
-ibmcloud app domain-cert-remove DOMAIN [-f]
+ibmcloud account domain-cert-remove DOMAIN [-f]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login, Target

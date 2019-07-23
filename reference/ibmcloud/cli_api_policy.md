@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-09"
+lastupdated: "2019-07-18"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -19,7 +19,7 @@ subcollection: cloud-cli
 # Managing IAM access, API keys, service IDs, and access groups
 {: #ibmcloud_commands_iam}
 
-Use the following commands to manage API keys, service IDs, access groups, and authorization policies for users, services and access groups.
+Use the following commands to manage API keys, service IDs, access groups, and authorization policies for users, services, and access groups.
 {: shortdesc}
 
 ## ibmcloud iam service-ids
@@ -289,12 +289,12 @@ ibmcloud iam api-keys [--output FORMAT]
 ## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
 
-Create a new {{site.data.keyword.cloud_notm}} platform API key:
+Create an {{site.data.keyword.cloud_notm}} platform API key:
 ```
 ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock] [--output FORMAT]
 ```
 
-Using the {{site.data.keyword.cloud_notm}} CLI login with an API Key does not work with the legacy SL API Key found on `control.softlayer.com`. An upgraded {{site.data.keyword.cloud_notm}} Account where Infrastructure is managed through [cloud.ibm.com](https://cloud.ibm.com/registration){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") is required for the {{site.data.keyword.cloud_notm}} CLI login with an API Key.
+Using the {{site.data.keyword.cloud_notm}} CLI login with an API Key does not work with the legacy SL API Key that is found on `control.softlayer.com`. An upgraded {{site.data.keyword.cloud_notm}} Account where Infrastructure is managed through [cloud.ibm.com](https://cloud.ibm.com/registration){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") is required for the {{site.data.keyword.cloud_notm}} CLI login with an API Key.
 {: note}
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -308,7 +308,7 @@ Using the {{site.data.keyword.cloud_notm}} CLI login with an API Key does not wo
 <dt>--file <i>FILE</i></dt>
 <dd>Save API key information to the specified file.</dd>
 <dt>--lock</dt>
-<dd>Lock the API key when being created</dd>
+<dd>Lock the API key when it is created.</dd>
 <dt>--output FORMAT</dt>
 <dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
@@ -702,7 +702,7 @@ ibmcloud iam user-policies USER_NAME [--output FORMAT]
 </dl>
 
 <strong>Examples</strong>:
-
+ 
 List policies of user `name@example.com`:
 ```
 ibmcloud iam user-policies name@example.com
@@ -740,7 +740,7 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 
 Create a user policy:
 ```
-ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login, Account Targeted
@@ -764,11 +764,13 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dt>--resource <i>RESOURCE</i> (optional)</dt>
 <dd>Resource of the policy definition, This is exclusive with `--file` flag.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (optional)</dt>
-<dd>Name of the resource group. `*` means all resource groups. This is exclusive with `--file`, `--resource` and `--resource-group-id` flags.</dd>
+<dd>Name of the resource group. `*` means all resource groups. This option is exclusive with `--file`, `--resource` and `--resource-group-id` flags.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (optional)</dt>
-<dd>ID of the resource group. `*` means all resource groups. This is exclusive with `--file`, `--resource` and `--resource-group-name` flags.</dd>
-<dt>--output FORMAT</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
+<dd>ID of the resource group. `*` means all resource groups. This option is exclusive with `--file`, `--resource` and `--resource-group-name` flags.</dd>
+<dt>--account-management (optional)</dt>
+<dd>Give access to all account management services.</dd>
+<dt>--output FORMAT (optional)</dt>
+<dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -808,7 +810,7 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 
 Update a user policy:
 ```
-ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login, Account Targeted
@@ -833,11 +835,13 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dt>--resource <i>RESOURCE</i> (optional)</dt>
 <dd>Resource of the policy definition, This is exclusive with `--file` flag.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (optional)</dt>
-<dd>Name of the resource group. `*` means all resource groups. This is exclusive with `--file`, `--resource` and `--resource-group-id` flags.</dd>
+<dd>Name of the resource group. `*` means all resource groups. This option is exclusive with `--file`, `--resource` and `--resource-group-id` flags.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (optional)</dt>
-<dd>ID of the resource group. `*` means all resource groups. This is exclusive with `--file`, `--resource` and `--resource-group-name` flags.</dd>
-<dt>--output FORMAT</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
+<dd>ID of the resource group. `*` means all resource groups. This option is exclusive with `--file`, `--resource` and `--resource-group-name` flags.</dd>
+<dt>--account-management (optional)</dt>
+<dd>Give access to all account management services.</dd>
+<dt>--output FORMAT (optional)</dt>
+<dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -981,19 +985,19 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dt>SERVICE_ID (required)</dt>
   <dd>Name or UUID of service ID</dd>
   <dt>--file</dt>
-  <dd>JSON file of policy definition. This is exclusive with `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `--resource-group-name` and `--resource-group-id` flags.</dd>
+  <dd>JSON file of policy definition. This option is exclusive with `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `--resource-group-name` and `--resource-group-id` flags.</dd>
   <dt>-r, --roles</dt>
   <dd>Role names of the policy definition. For supported roles of a specific service, run `ibmcloud iam roles --service SERVICE_NAME`. This option is exclusive with `--file`.</dd>
   <dt>--service-name</dt>
-  <dd>Service name of the policy definition. This is exclusive with `--file` flag.</dd>
+  <dd>Service name of the policy definition. This option is exclusive with the `--file` flag.</dd>
   <dt>--service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>GUID of service instance of the policy definition. This is exclusive with `--file` flag.</dd>
+  <dd>GUID of service instance of the policy definition. This option is exclusive with the `--file` flag.</dd>
   <dt>-region</dt>
-  <dd>Region of the policy definition. This is exclusive with `--file` flag.</dd>
+  <dd>Region of the policy definition. This option is exclusive with the `--file` flag.</dd>
   <dt>--resource-type</dt>
-  <dd>Resource type of the policy definition. This is exclusive with `--file` flag.</dd>
+  <dd>Resource type of the policy definition. This option is exclusive with the `--file` flag.</dd>
   <dt>--resource</dt>
-  <dd>Resource of the policy definition. This is exclusive with `--file` flag.</dd>
+  <dd>Resource of the policy definition. This option is exclusive with the `--file` flag.</dd>
   <dt>--resource-group-name</dt>
   <dd>Name of the resource group. `*` means all resource groups. This option is exclusive with `--file` and `--resource-group-id`.</dd>
   <dt>--resource-group-id </dt>
@@ -1045,19 +1049,19 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dt>POLICY_ID (required)</dt>
   <dd>ID of the service policy<dd>
   <dt>--file</dt>
-  <dd>JSON file of policy definition. This is exclusive with `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `resource-group-name` and `resource-group-id` flags.</dd>
+  <dd>JSON file of policy definition. This option is exclusive with the `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `resource-group-name` and `resource-group-id` flags.</dd>
   <dt>-r, --roles</dt>
   <dd>Role names of the policy definition. For supported roles of a specific service, run `ibmcloud iam roles --service SERVICE_NAME`. This option is exclusive with `--file`.</dd>
   <dt>-service-name</dt>
-  <dd>Service name of the policy definition. This is exclusive with `--file` flag.</dd>
+  <dd>Service name of the policy definition. This option is exclusive with the `--file` flag.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>GUID of service instance of the policy definition. This is exclusive with `--file` flag.</dd>
+  <dd>GUID of service instance of the policy definition. This option is exclusive with the `--file` flag.</dd>
   <dt>-region</dt>
-  <dd>Region of the policy definition. This is exclusive with `--file` flag.</dd>
+  <dd>Region of the policy definition. This option is exclusive with the `--file` flag.</dd>
   <dt>-resource-type</dt>
-  <dd>Resource type of the policy definition. This is exclusive with `--file` flag.</dd>
+  <dd>Resource type of the policy definition. This option is exclusive with the `--file` flag.</dd>
   <dt>-resource</dt>
-  <dd>Resource of the policy definition. This is exclusive with `--file` flag.</dd>
+  <dd>Resource of the policy definition. This option is exclusive with the `--file` flag.</dd>
   <dt>--resource-group-name</dt>
   <dd>Name of the resource group. `*` means all resource groups. This option is exclusive with `--file` and `--resource-group-id`.</dd>
   <dt>--resource-group-id </dt>
@@ -1201,6 +1205,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 {: #ibmcloud_iam_authorization_policy_create}
 
 Create an authorization policy to allow a service instance access to another service instance:
+
 ```
 ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-type RESOURCE_TYPE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME] [--target-resource-type RESOURCE_TYPE | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--output FORMAT]
 ```
@@ -1216,15 +1221,15 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
   <dd>The roles that provide access for the source service.</dd>  
   <dt>--source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>Source service instance name, mutually exclusive with `--source-service-instance-id`. If not specified, all instances of the source service will be authorized to access.</dd>
+  <dd>Source service instance name, mutually exclusive with `--source-service-instance-id`. If not specified, all instances of the source service are authorized to access.</dd>
   <dt>--source-service-instance-id SOURCE_SERVICE_INSTANCE_ID</dt>
-  <dd>Source service instanceid, mutually exclusive with `--source-service-instance-name`. If not specified, all instances of the source service will be authorized to access.</dd>
+  <dd>Source service instanceid, mutually exclusive with `--source-service-instance-name`. If not specified, all instances of the source service are authorized to access.</dd>
   <dt>--source-resource-type</dt>
   <dd>Resource type of source service</dd>
   <dt>--target-service-instance-name TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>Target service instance name, mutually exclusive with `--target-service-instance-id`. If not specified, all instances of the target service will be authorized to access.</dd>
+  <dd>Target service instance name, mutually exclusive with `--target-service-instance-id`. If not specified, all instances of the target service are authorized to access.</dd>
   <dt>--target-service-instance-id TARGET_SERVICE_INSTANCE_ID</dt>
-  <dd>Target service instance id, mutually exclusive with `--target-service-instance-name`. If not specified, all instances of the target service will be authorized to access.</dd>
+  <dd>Target service instance id, mutually exclusive with `--target-service-instance-name`. If not specified, all instances of the target service are authorized to access.</dd>
   <dt>--target-resource-type</dt>
   <dd>Resource type of target service</dd>
   <dt>--output FORMAT</dt>
@@ -1263,9 +1268,9 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID [--output FORMAT]
 <dl>
   <dt>AUTHORIZATION_POLICY_ID</dt>
   <dd>ID of authorization policy to show.</dd>
-  <dt>--output FORMAT</dt>
-  <dd>Specify output format, only 'JSON' is supported.</dd>
-</dl>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format, only JSON is supported now.</dd>
+</dl> 
 
 ## ibmcloud iam authorization-policies
 {: #ibmcloud_iam_authorization_policies}
@@ -1278,11 +1283,11 @@ ibmcloud iam authorization-policies [--output FORMAT]
 
 <strong>Prerequisites</strong>: Login, Target
 
-<strong>Command Options</strong>:
-<dl>
-  <dt>--output FORMAT</dt>
-  <dd>Specify output format, only 'JSON' is supported.</dd>
-</dl>
+<strong>Command options</strong>:
+   <dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
+   </dl>
 
 ## ibmcloud iam access-groups
 {: #ibmcloud_iam_access_groups}
@@ -1443,7 +1448,7 @@ ibmcloud iam access-group-users example_group
 ## ibmcloud iam access-group-user-add
 {: #ibmcloud_iam_access_group_user_add}
 
-Add user(s) to an access group:
+Add users to an access group:
 ```
 ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 ```

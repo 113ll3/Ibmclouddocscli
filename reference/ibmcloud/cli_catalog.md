@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-07-19"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -92,7 +92,7 @@ ibmcloud catalog entry 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 
-Create a new catalog entry(catalog admin of an account only):
+Create a catalog entry (catalog admin of an account only):
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -104,7 +104,7 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
   <dt>-p, --parent</dt>
   <dd>Parent ID of the object</dd>
   <dt>-c</dt>
-  <dd>Valid JSON object containing catalog-specific configuration parameters, provided either in-line or in a file. For a list of supported configuration parameters, see documentation for the particular catalog entry.</dd>
+  <dd>Valid JSON object that contains catalog-specific configuration parameters, provided either inline or in a file. For a list of supported configuration parameters, see documentation for the particular catalog entry.</dd>
   <dt>--global</dt>
   <dd>Operate in global scope</dd>
 </dl>
@@ -129,7 +129,7 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 <strong>Command Options</strong>:
 <dl>
   <dt>-c</dt>
-  <dd>Valid JSON object containing catalog-specific configuration parameters, provided either in-line or in a file. For a list of supported configuration parameters, see documentation for the particular catalog entry.</dd>
+  <dd>Valid JSON object that contains catalog-specific configuration parameters, provided either inline or in a file. For a list of supported configuration parameters, see documentation for the particular catalog entry.</dd>
   <dt>--global</dt>
   <dd>Operate in global scope</dd>
 </dl>
@@ -204,21 +204,21 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 <dl>
 
   <dt>--includes-add</dt>
-  <dd>Adding an account (or list of comma separated accounts) to the includes list, granting visibility to the entry. Email or Account GUIDs are acceptable</dd>
+  <dd>Adding an account (or list of comma-separated accounts) to the includes list, granting visibility to the entry. Email or Account GUIDs are acceptable.</dd>
   <dt>--includes-remove</dt>
-  <dd>Removing an account (or list of comma separated accounts) from the includes list, revoking visibility to the entry. Email or Account GUIDs are acceptable</dd>  
+  <dd>Removing an account (or list of comma-separated accounts) from the includes list, revoking visibility to the entry. Email or Account GUIDs are acceptable.</dd>  
   <dt>--excludes-add</dt>
-  <dd>Adding an account (or list of comma separated accounts) to the excludes list. Email or Account GUIDs are acceptable</dd>
+  <dd>Adding an account (or list of comma-separated accounts) to the excludes list. Email or Account GUIDs are acceptable.</dd>
   <dt>--excludes-remove</dt>
-  <dd>Removing an account (or list of comma separated accounts) from the excludes list, revoking visibility to the entry. If the account was set by global admins, the account admins can't remove the account. Email or Account GUIDs are acceptable</dd>
+  <dd>Removing an account (or list of comma-separated accounts) from the excludes list, revoking visibility to the entry. If the account was set by global admins, the account admins can't remove the account. Email or Account GUIDs are acceptable.</dd>
   <dt>--owner</dt>
   <dd>Changing the owner of an object. Email or Account GUIDs are acceptable.</dd>
   <dt>--restrict</dt>
-  <dd>Changing the restriction of the visibility object to 'Private'</dd>
+  <dd>Changing the restriction of the visibility object to 'Private'.</dd>
   <dt>--unrestrict</dt>
-  <dd>Changing the restriction of the visibility object to 'Public'</dd>  
+  <dd>Changing the restriction of the visibility object to 'Public'.</dd>  
   <dt>-c</dt>
-  <dd>Valid JSON object containing catalog-specific configuration parameters, provided either in-line or in a file. For a list of supported configuration parameters, see documentation for the particular catalog entry.</dd>
+  <dd>Valid JSON object that contains catalog-specific configuration parameters, provided either inline or in a file. For a list of supported configuration parameters, see documentation for the particular catalog entry.</dd>
   <dt>--global</dt>
   <dd>Operate in global scope</dd>
 </dl>
@@ -263,7 +263,7 @@ ibmcloud catalog service-marketplace --global
 
 View the boilerplate templates on {{site.data.keyword.cloud_notm}}.
 ```
-ibmcloud catalog templates [-d]
+ibmcloud catalog templates [-d] [--output json]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -273,6 +273,8 @@ ibmcloud catalog templates [-d]
    <dl>
    <dt>-d (optional)</dt>
    <dd>If the <i>-d</i> option is specified, the description of each template is also displayed. Otherwise, only the ID and name of each template is shown.</dd>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
    </dl>
 
 ## ibmcloud catalog template
@@ -280,7 +282,7 @@ ibmcloud catalog templates [-d]
 
 View the detailed information of a specified boilerplate template.
 ```
-ibmcloud catalog template TEMPLATE_ID
+ibmcloud catalog template TEMPLATE_ID [--output json]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -289,6 +291,8 @@ ibmcloud catalog template TEMPLATE_ID
    <dl>
    <dt>TEMPLATE_ID (required)</dt>
    <dd>The ID of the boilerplate template. Use <i>ibmcloud templates</i> to view all templates' IDs.</dd>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
    </dl>
 
 
@@ -314,17 +318,17 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 <strong>Command options</strong>:
    <dl>
    <dt>TEMPLATE_ID (required)</dt>
-   <dd>The template that the application is based on when it's created. Use <i>ibmcloud templates</i> to see all templates' ID.</dd>
+   <dd>The template that the application is based on during creation. Use <i>ibmcloud templates</i> to see all templates' ID.</dd>
    <dt>CF_APP_NAME (required)</dt>
    <dd>The name of the cf application to be created.</dd>
    <dt>-n<i>HOSTNAME</i></dt>
-   <dd>The hostname of the CF application. If not specified, the route is set by {{site.data.keyword.cloud_notm}} automatically based on your app name and default domain.</dd>
+   <dd>The host name of the CF application. If not specified, the route is set by {{site.data.keyword.cloud_notm}} automatically based on your app name and default domain.</dd>
    <dt>-d<i>DOMAINNAME</i></dt>
    <dd>The domain of the CF application. If not specified, the route is set by {{site.data.keyword.cloud_notm}} automatically based on your app name and default domain.</dd>
    <dt>--desc <i>DESCRIPTION</i> (optional)</dt>
    <dd>Description of the application.</dd>
    <dt>--no-start (optional)</dt>
-   <dd>Don't start the application automatically after it's created. If not specified, the application is started automatically after it's created.</dd>
+   <dd>Don't start the application automatically after creation. If not specified, the application is started automatically after creation.</dd>
    </dl>
 
 
@@ -364,7 +368,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
   <dt>-k, --kind</dt>
   <dd>Get a list of entries for the specified kind.</dd>
   <dt>--col</dt>
-  <dd>Specify additional columns for the table. Currently "group", "provider", and "tags".</dd>
+  <dd>Specify additional columns for the table. Currently, "group", "provider", and "tags".</dd>
   <dt>--output TYPE (optional)</dt>
   <dd>--output value  Specify output TYPE, only JSON is supported now. This option is exclusive with '--id'.</dd>
   <dt>--global</dt>
@@ -378,8 +382,14 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
 
 View the details of a runtime. This command is only available for public cloud.
 ```
-ibmcloud catalog runtime RUNTIME_ID
+ibmcloud catalog runtime RUNTIME_ID [--output json]
 ```
+
+<strong>Command options</strong>:
+<dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
+</dl>
 
 <strong>Examples</strong>:
 
@@ -394,7 +404,7 @@ catalog runtime nodejsHelloWorld
 
 List all runtimes. This command is only available for public cloud.
 ```
-ibmcloud catalog runtimes [-d]
+ibmcloud catalog runtimes [-d] [--output json]
 ```
 
 <strong>Command options</strong>:
@@ -402,6 +412,8 @@ ibmcloud catalog runtimes [-d]
 <dl>
   <dt>-d</dt>
   <dd>Show the description of each runtime</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 <strong>Examples</strong>:
