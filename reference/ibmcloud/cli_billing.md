@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-07-25"
 
 keywords: cli, ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
@@ -108,6 +108,36 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>Filter instance by resource group.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for month and date specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format, only JSON is supported now.</dd>
+</dl>
+
+## ibmcloud billing enterprise-usage
+{: #ibmcloud_billing_enterprise_usage}
+
+Get enterprise usage reports:
+
+```
+ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --account-group-id ACCOUNT_GROUP_ID | --account ACCOUNT_NAME | --account-id ACCOUNT_ID] [--month MONTH] [--children] [--output FORMAT]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+
+<dl>
+  <dt>--account ACCOUNT_NAME (optional)</dt>
+  <dd>Name of target account.</dd>
+  <dt>--account-id ACCOUNT_ID (optional)</dt>
+  <dd>ID of target account.</dd>
+  <dt>--account-group ACCOUNT_GROUP_NAME (optional)</dt>
+  <dd>Name of target account group.</dd>
+  <dt>--account-group-id ACCOUNT_GROUP_ID (optional)</dt>
+  <dd>ID of target account group.</dd>
+  <dt>--children (optional)</dt>
+  <dd>Show children usage reports.</dd>
+  <dt>--month MONTH (optional)</dt>
+  <dd>Target month. Default to current month.</dd>
   <dt>--output FORMAT (optional)</dt>
   <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
