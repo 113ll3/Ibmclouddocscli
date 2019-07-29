@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-25"
+lastupdated: "2019-07-29"
 
-keywords: cli, ibmcloud enterprise, view enterprise, view enterprise account, view enterprise account group.
+keywords: cli, ibmcloud enterprise, view enterprise, view enterprise account, view enterprise account group., enterprise, account-group, account-group-create, account-group-update, 
 
 subcollection: cloud-cli
 
@@ -102,7 +102,6 @@ ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GR
 <dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
 
-
 ## ibmcloud enterprise account-group-update
 {: #ibmcloud_enterprise_account_group_update} 
 
@@ -193,7 +192,6 @@ ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NA
 <dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
 
-
 ## ibmcloud enterprise account-move
 {: #ibmcloud_enterprise_account_move} 
 
@@ -266,7 +264,7 @@ ibmcloud enterprise accounts [--parent-account-group ACCOUNT_GROUP_NAME | --pare
 ## ibmcloud enterprise account-import
 {: #ibmcloud_enterprise_account_import} 
 
-Import a standalone account.
+Import a stand-alone account.
 ```
 ibmcloud enterprise account-import (--account-id ID) [--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID]
 ```
