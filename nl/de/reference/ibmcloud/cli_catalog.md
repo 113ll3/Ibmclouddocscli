@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-19"
 
-keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # Katalogangebote durchsuchen und verwalten
 {: #ibmcloud_catalog}
@@ -57,7 +58,6 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 <strong>Beispiele</strong>:
 
 Service `Automation test` suchen:
-
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -65,8 +65,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
-Katalogeintrag abrufen
-
+Katalogeintrag abrufen:
 ```
 ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
@@ -93,7 +92,7 @@ ibmcloud catalog entry 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 
-Neuen Katalogeintrag erstellen (nur Katalogadministrator eines Kontos):
+Einen Katalogeintrag erstellen (nur Katalogadministrator eines Kontos):
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -257,13 +256,14 @@ Serviceangebote im globalen Bereich anzeigen:
 ```
 ibmcloud catalog service-marketplace --global
 ```
+{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 Boilerplate-Vorlagen in {{site.data.keyword.cloud_notm}} anzeigen
 ```
-ibmcloud catalog templates [-d]
+ibmcloud catalog templates [-d] [--output json]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -273,6 +273,8 @@ ibmcloud catalog templates [-d]
    <dl>
    <dt>-d (optional)</dt>
    <dd>Wenn die Option <i>-d</i> angegeben wird, wird auch die Beschreibung jeder Vorlage angezeigt. Andernfalls werden nur die ID und der Name jeder Vorlage angezeigt.</dd>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
    </dl>
 
 ## ibmcloud catalog template
@@ -280,7 +282,7 @@ ibmcloud catalog templates [-d]
 
 Zeigt die detaillierten Informationen einer angegebenen Boilerplate-Vorlage an.
 ```
-ibmcloud catalog template TEMPLATE_ID
+ibmcloud catalog template TEMPLATE_ID [--output json]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -289,6 +291,8 @@ ibmcloud catalog template TEMPLATE_ID
    <dl>
    <dt>TEMPLATE_ID (erforderlich)</dt>
    <dd>Die ID der Boilerplate-Vorlage. Verwenden Sie <i>ibmcloud templates</i>, um die IDs aller Vorlagen anzuzeigen.</dd>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
    </dl>
 
 
@@ -298,6 +302,7 @@ Details der Vorlage `mobileBackendStarter` anzeigen:
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
+{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
@@ -329,20 +334,23 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 
 <strong>Beispiele</strong>:
 
-cf-Anwendung `my-app` auf der Basis der Vorlage `javaHelloWorld` erstellen:
+Erstellen Sie eine `cf`-App mit dem Namen `my-app`, die auf der Vorlage `javaHelloWorld` basiert:
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
+{: codeblock}
 
-Anwendung `my-ruby-app` auf der Basis der Vorlage `rubyHelloWorld` mit einer Beschreibung erstellen:
+Erstellen Sie eine App `my-ruby-app` auf Basis der Vorlage `rubyHelloWorld` mit einer Beschreibung:
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
+{: codeblock}
 
-Anwendung `my-python-app` auf Basis der Vorlage `pythonHelloWorld` ohne automatischen Start erstellen:
+Erstellen Sie eine App `my-python-app` auf Basis der Vorlage `pythonHelloWorld` ohne automatischen Start:
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
+{: codeblock}
 
 ## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
@@ -360,7 +368,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
   <dt>-k, --kind</dt>
   <dd>Liste mit Einträgen für die angegebene Art abrufen.</dd>
   <dt>--col</dt>
-  <dd>Zusätzliche Spalten für die Tabelle angeben. Momentan "group", "provider" und "tags".</dd>
+  <dd>Zusätzliche Spalten für die Tabelle angeben. Derzeit werden 'group', 'provider' und 'tags' unterstützt.</dd>
   <dt>--output TYPE (optional)</dt>
   <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt. Diese Option ist gegenseitig ausschließend mit '--id'.</dd>
   <dt>--global</dt>
@@ -374,8 +382,14 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
 
 Details einer Laufzeit anzeigen. Dieser Befehl steht nur für die öffentliche Cloud zur Verfügung.
 ```
-ibmcloud catalog runtime RUNTIME_ID
+ibmcloud catalog runtime RUNTIME_ID [--output json]
 ```
+
+<strong>Befehlsoptionen</strong>:
+<dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
+</dl>
 
 <strong>Beispiele</strong>:
 
@@ -383,13 +397,14 @@ Details der Laufzeit "nodejsHelloWorld" anzeigen:
 ```
 catalog runtime nodejsHelloWorld
 ```
+{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 Alle Laufzeiten auflisten. Dieser Befehl steht nur für die öffentliche Cloud zur Verfügung.
 ```
-ibmcloud catalog runtimes [-d]
+ibmcloud catalog runtimes [-d] [--output json]
 ```
 
 <strong>Befehlsoptionen</strong>:
@@ -397,6 +412,8 @@ ibmcloud catalog runtimes [-d]
 <dl>
   <dt>-d</dt>
   <dd>Beschreibung der einzelnen Laufzeiten anzeigen</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -405,3 +422,4 @@ Alle Laufzeiten und deren Beschreibung auflisten:
 ```
 ibmcloud catalog runtimes -d
 ```
+{: codeblock}

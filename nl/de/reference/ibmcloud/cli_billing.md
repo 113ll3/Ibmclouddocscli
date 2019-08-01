@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-29"
 
-keywords: ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
+keywords: cli, ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
 subcollection: cloud-cli
 
@@ -42,7 +42,6 @@ ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 <strong>Beispiele</strong>:
 
 Nutzungs- und Kostenbericht des aktuellen Kontos für 06/2016 anzeigen:
-
 ```
 ibmcloud billing account-usage -d 2016-06
 ```
@@ -107,7 +106,36 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dt>-g GROUP_NAME</dt>
   <dd>Filterinstanzen nach Ressourcengruppe.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
-  <dd>Daten für Monat und Datum durch Angeben des Formats JJJJ-MM anzeigen. Wird keine Angabe gemacht, wird die Nutzung des aktuellen Monats angezeigt.</dd>
+  <dd>Daten für den angegebenen Monat und das angegebene Datum unter Verwendung des Formats JJJJ-MM anzeigen. Wird keine Angabe gemacht, wird die Nutzung des aktuellen Monats angezeigt.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
+</dl>
+
+## ibmcloud billing enterprise-usage
+{: #ibmcloud_billing_enterprise_usage}
+
+Nutzungsberichte für Unternehmen anzeigen:
+```
+ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --account-group-id ACCOUNT_GROUP_ID | --account ACCOUNT_NAME | --account-id ACCOUNT_ID] [--month MONTH] [--children] [--output FORMAT]
+```
+
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
+
+<strong>Befehlsoptionen</strong>:
+
+<dl>
+  <dt>--account ACCOUNT_NAME (optional)</dt>
+  <dd>Name des Zielkontos.</dd>
+  <dt>--account-id ACCOUNT_ID (optional)</dt>
+  <dd>ID des Zielkontos.</dd>
+  <dt>--account-group ACCOUNT_GROUP_NAME (optional)</dt>
+  <dd>Name der Zielkontogruppe.</dd>
+  <dt>--account-group-id ACCOUNT_GROUP_ID (optional)</dt>
+  <dd>ID der Zielkontogruppe.</dd>
+  <dt>--children (optional)</dt>
+  <dd>Untergeordnete Nutzungsberichte anzeigen.</dd>
+  <dt>--month MONTH (optional)</dt>
+  <dd>Zielmonat. Standardmäßig auf den aktuellen Monat eingestellt.</dd>
   <dt>--output FORMAT (optional)</dt>
   <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>

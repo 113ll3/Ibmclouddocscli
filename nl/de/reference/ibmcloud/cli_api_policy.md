@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-18"
 
-keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids
+keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
 subcollection: cloud-cli
 
@@ -13,6 +13,8 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
+{:note: .note}
 
 # IAM-Zugriff, API-Schlüssel, Service-IDs und Zugriffsgruppen verwalten
 {: #ibmcloud_commands_iam}
@@ -23,10 +25,9 @@ Verwenden Sie die folgenden Befehle, um API-Schlüssel, Service-IDs, Zugriffsgru
 ## ibmcloud iam service-ids
 {: #ibmcloud_iam_service_ids}
 
-Alle Service-IDs auflisten
-
+Alle Service-IDs auflisten:
 ```
-ibmcloud iam service-ids [--uuid]
+ibmcloud iam service-ids [--uuid] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -35,22 +36,24 @@ ibmcloud iam service-ids [--uuid]
 <dl>
   <dt>--uuid</dt>
   <dd>Nur UUID der Service-IDs anzeigen</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-UUID aller Service-IDs des aktuellen Kontos auflisten
 
+UUID aller Service-IDs des aktuellen Kontos auflisten:
 ```
 ibmcloud iam service-ids --uuid
 ```
+{: codeblock}
 
 ## ibmcloud iam service-id
 {: #ibmcloud_iam_service_id}
 
-Details einer Service-ID anzeigen
-
+Details einer Service-ID anzeigen:
 ```
-ibmcloud iam service-id (NAME|UUID) [--uuid]
+ibmcloud iam service-id (NAME|UUID) [--uuid] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -63,28 +66,30 @@ ibmcloud iam service-id (NAME|UUID) [--uuid]
   <dd>Die UUID des Service, gegenseitig ausschließend mit NAME</dd>
   <dt>--uuid</dt>
   <dd>Die UUID der Service-ID anzeigen</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-Details der Service-ID `sample-test` anzeigen
-
+Details der Service-ID `sample-test` anzeigen:
 ```
 ibmcloud iam service-id sample-test
 ```
-Details der Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` anzeigen
+{: codeblock}
 
+Details der Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` anzeigen:
 ```
 ibmcloud iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
+{: codeblock}
 
 ## ibmcloud iam service-id-create
 {: #ibmcloud_iam_service_id_create}
 
-Service-ID erstellen
-
+Service-ID erstellen:
 ```
-ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
+ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -97,29 +102,30 @@ ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
   <dd>Die Beschreibung der Service-ID</dd>
   <dt>--lock</dt>
   <dd>Die Service-ID bei der Erstellung sperren</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-Service-ID mit dem Servicenamen `sample-test` und der Beschreibung `hello, world!` erstellen
-
+Service-ID mit dem Servicenamen `sample-test` und der Beschreibung `hello, world!` erstellen:
 ```
 ibmcloud iam service-id-create sample-test -d 'hello, world!'
 ```
+{: codeblock}
 
-Gesperrte Service-ID mit dem Servicenamen `sample-test` und der Beschreibung `hello, world!` erstellen
-
+Gesperrte Service-ID mit dem Servicenamen `sample-test` und der Beschreibung `hello, world!` erstellen:
 ```
 ibmcloud iam service-id-create sample-test -d 'hello, world!' --lock
 ```
+{: codeblock}
 
 ## ibmcloud iam service-id-update
-
 {: #ibmcloud_iam_service_id_update}
-Service-ID aktualisieren
 
+Service-ID aktualisieren:
 ```
-ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
+ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [--output FORMAT] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -134,35 +140,36 @@ ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --descript
   <dd>Der neue Name des Service</dd>
   <dt>-d, --description</dt>
   <dd>Die neue Beschreibung des Service</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
   <dt>-f, --force</dt>
   <dd>Aktualisierung ohne Bestätigung</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-Service-ID `sample-test` ohne Bestätigung in `sample-test-2` umbenennen
-
+Service-ID `sample-test` ohne Bestätigung in `sample-test-2` umbenennen:
 ```
 ibmcloud iam service-id-update sample-test -n sample-test-2 -f
 ```
+{: codeblock}
 
-Beschreibung des Service `sample-test` aktualisieren
-
+Beschreibung des Service `sample-test` aktualisieren:
 ```
 ibmcloud iam service-id-update sample-test -d 'hello, friend!'
 ```
+{: codeblock}
 
-Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` mit neuer Beschreibung in `sample-test-3` umbenennen
-
+Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` mit neuer Beschreibung in `sample-test-3` umbenennen:
 ```
 ibmcloud iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!'
 ```
+{: codeblock}
 
 ## ibmcloud iam service-id-delete
 {: #ibmcloud_iam_service_id_delete}
 
-Service-ID löschen
-
+Service-ID löschen:
 ```
 ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 ```
@@ -181,23 +188,22 @@ ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 
 <strong>Beispiele</strong>:
 
-Service-ID `sample-teset` ohne Bestätigung löschen
-
+Service-ID in `sample-teset` ohne Bestätigung löschen:
 ```
 ibmcloud iam service-id-delete sample-teset -f
 ```
+{: codeblock}
 
-Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` löschen
-
+Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` löschen:
 ```
 ibmcloud iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
+{: codeblock}
 
 ## ibmcloud iam service-id-lock
 {: #ibmcloud_iam_service_id_lock}
 
-Service-ID sperren
-
+Service-ID sperren:
 ```
 ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 ```
@@ -216,26 +222,26 @@ ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 
 <strong>Beispiele</strong>:
 
-Service-ID `sample-teset` ohne Bestätigung sperren
-
+Service-ID in `sample-teset` ohne Bestätigung sperren:
 ```
 ibmcloud iam service-id-lock sample-teset -f
 ```
+{: codeblock}
 
-Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` sperren
-
+Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` sperren:
 ```
 ibmcloud iam service-id-lock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
+{: codeblock}
 
 ## ibmcloud iam service-id-unlock
 {: #ibmcloud_iam_service_id_unlock}
 
-Service-ID entsperren
-
+Service-ID entsperren:
 ```
 ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 ```
+{: codeblock}
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
@@ -251,37 +257,45 @@ ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 
 <strong>Beispiele</strong>:
 
-Service-ID `sample-teset` ohne Bestätigung entsperren
-
+Service-ID in `sample-teset` ohne Bestätigung entsperren:
 ```
 ibmcloud iam service-id-unlock sample-teset -f
 ```
+{: codeblock}
 
-Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` entsperren
-
+Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` entsperren:
 ```
 ibmcloud iam service-id-unlock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
+{: codeblock}
 
 ## ibmcloud iam api-keys
 {: #ibmcloud_iam_api_keys}
 
-Alle API-Schlüssel der {{site.data.keyword.Bluemix_notm}}-Plattform auflisten
-
+Alle API-Schlüssel der {{site.data.keyword.cloud_notm}}-Plattform auflisten:
 ```
-ibmcloud iam api-keys
+ibmcloud iam api-keys [--output FORMAT]
 ```
+{: codeblock}
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
+
+<strong>Befehlsoptionen</strong>:
+<dl>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
+</dl>
 
 ## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
 
-Neuen API-Schlüssel für {{site.data.keyword.Bluemix_notm}}-Plattform erstellen
+Einen API-Schlüssel für die {{site.data.keyword.cloud_notm}}-Plattform erstellen:
+```
+ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock] [--output FORMAT]
+```
 
-```
-ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
-```
+Die Verwendung der {{site.data.keyword.cloud_notm}}-CLI-Anmeldung mit einem API-Schlüssel funktioniert nicht mit dem traditionellen SL-API-Schlüssel, der sich unter `control.softlayer.com` befindet. Für die Anmeldung bei der {{site.data.keyword.cloud_notm}}-CLI mit einem API-Schlüssel ist ein aktualisiertes {{site.data.keyword.cloud_notm}}-Konto erforderlich, bei dem die Infrastruktur über [cloud.ibm.com](https://cloud.ibm.com/registration){: new_window}![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link") verwaltet wird.
+{: note}
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
 
@@ -294,30 +308,31 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dt>--file <i>FILE</i></dt>
 <dd>Informationen zu API-Schlüssel in der angegebenen Datei speichern.</dd>
 <dt>--lock</dt>
-<dd>API-Schlüssel bei der Erstellung sperren</dd>
+<dd>API-Schlüssel bei seiner Erstellung sperren.</dd>
+<dt>--output FORMAT</dt>
+<dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-API-Schlüssel erstellen und in einer Datei speichern
-
+API-Schlüssel erstellen und in einer Datei speichern:
 ```
 ibmcloud iam api-key-create MyKey -d "this is my API key" --file key_file
 ```
+{: codeblock}
 
-Gesperrten API-Schlüssel mit dem Namen "test-key" erstellen
-
+Gesperrten API-Schlüssel mit dem Namen "test-key" erstellen:
 ```
 ibmcloud iam api-key-create test-key --lock
 ```
+{: codeblock}
 
 ## ibmcloud iam api-key-update
 {: #ibmcloud_iam_api_key_update}
 
-API-Schlüssel der {{site.data.keyword.Bluemix_notm}}-Plattform aktualisieren
-
+API-Schlüssel der {{site.data.keyword.cloud_notm}}-Plattform aktualisieren:
 ```
-ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
+ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -332,21 +347,22 @@ ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 <dd>Der neue Name des API-Schlüssels</dd>
 <dt>-d <i>DESCRIPTION</i> (optional)</dt>
 <dd>Die neue Beschreibung des API-Schlüssels</dd>
+<dt>--output FORMAT</dt>
+<dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Beschreibung eines API-Schlüssels aktualisieren:
-
 ```
 ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ```
+{: codeblock}
 
-## ibmcloud api-key-delete
+## ibmcloud iam api-key-delete
 {: #ibmcloud_iam_api_key_delete}
 
-API-Schlüssel der {{site.data.keyword.Bluemix_notm}}-Plattform löschen
-
+API-Schlüssel der {{site.data.keyword.cloud_notm}}-Plattform löschen:
 ```
 ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 ```
@@ -363,11 +379,10 @@ ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 <dd>Löschung ohne Bestätigung erzwingen.</dd>
 </dl>
 
-## ibmcloud api-key-lock
+## ibmcloud iam api-key-lock
 {: #ibmcloud_iam_api_key_lock}
 
-API-Schlüssel der Plattform sperren
-
+Plattform-API-Schlüssel sperren:
 ```
 ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
 ```
@@ -386,23 +401,22 @@ ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
 
 <strong>Beispiele</strong>:
 
-API-Schlüssel "test-api-key" sperren
-
+API-Schlüssel "test-api-key" sperren:
 ```
 ibmcloud iam api-key-lock test-api-key
 ```
+{: codeblock}
 
-API-Schlüssel mit der angegebenen UUID ohne Bestätigung sperren
-
+API-Schlüssel mit der angegebenen UUID ohne Bestätigung sperren:
 ```
 ibmcloud iam api-key-lock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 ```
+{: codeblock}s
 
-## ibmcloud api-key-unlock
+## ibmcloud iam api-key-unlock
 {: #ibmcloud_iam_api_key_unlock}
 
-API-Schlüssel der Plattform entsperren
-
+Plattform-API-Schlüssel entsperren:
 ```
 ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 ```
@@ -421,25 +435,24 @@ ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 
 <strong>Beispiele</strong>:
 
-API-Schlüssel "test-api-key" entsperren
-
+API-Schlüssel "test-api-key" entsperren:
 ```
 ibmcloud iam api-key-unlock test-api-key
 ```
+{: codeblock}
 
-API-Schlüssel mit der angegebenen UUID ohne Bestätigung entsperren
-
+API-Schlüssel mit der angegebenen UUID ohne Bestätigung entsperren:
 ```
 ibmcloud iam api-key-unlock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 ```
+{: codeblock}
 
 ## ibmcloud iam service-api-keys
 {: #ibmcloud_iam_service_api_keys}
 
-Alle API-Schlüssel eines Service auflisten
-
+Alle API-Schlüssel eines Service auflisten:
 ```
-ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
+ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [--output FORMAT] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -450,6 +463,8 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
   <dd>Der Name der Service-ID, gegenseitig ausschließend mit SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (erforderlich)</dt>
   <dd>Die UUID der Service-ID, gegenseitig ausschließend mit SERVICE_ID_NAME</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
   <dt>-f, --force</dt>
   <dd>Die Service-API-Schlüssel ohne Bestätigung anzeigen</dd>
 </dl>
@@ -457,18 +472,17 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 <strong>Beispiele</strong>:
 
 Alle API-Schlüssel des Service `sample-service` auflisten
-
 ```
 ibmcloud iam service-api-keys sample-service
 ```
+{: codeblock}
 
 ## ibmcloud iam service-api-key
 {: #ibmcloud_iam_service_api_key}
 
-Details eines Service-API-Schlüssels auflisten
-
+Details eines Service-API-Schlüssels auflisten:
 ```
-ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [-f, --force]
+ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [--output FORMAT] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -485,6 +499,8 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
   <dd>Die UUID der Service-ID, gegenseitig ausschließend mit SERVICE_ID_NAME</dd>
   <dt>--uuid</dt>
   <dd>UUID des Service-API-Schlüssels anzeigen</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
   <dt>-f, --force</dt>
   <dd>Den Service-API-Schlüssel ohne Bestätigung anzeigen</dd>
 </dl>
@@ -492,18 +508,17 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
 <strong>Beispiele</strong>:
 
 Details des Service-API-Schlüssels `sample-key` des Service `sample-service` anzeigen:
-
 ```
 ibmcloud iam service-api-key sample-key sample-service
 ```
+{: codeblock}
 
 ## ibmcloud iam service-api-key-create
 {: #ibmcloud_iam_service_api_key_create}
 
-Service-API-Schlüssel erstellen
-
+Service-API-Schlüssel erstellen:
 ```
-ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [-f, --force] [--lock]
+ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [--output FORMAT] [-f, --force] [--lock]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -520,6 +535,8 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dd>Die Beschreibung des API-Schlüssels</dd>
   <dt>--file</dt>
   <dd>Informationen zu API-Schlüssel in der angegebenen Datei speichern.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
   <dt>-f, --force</dt>
   <dd>Erstellung ohne Bestätigung erzwingen</dd>
 </dl>
@@ -527,18 +544,17 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>Beispiele</strong>:
 
 Service-API-Schlüssel `sample-key` für Service `sample-service` ohne Bestätigung erstellen:
-
 ```
 ibmcloud iam service-api-key-create sample-key sample-service -f
 ```
+{: codeblock}
 
 ## ibmcloud iam service-api-key-update
 {: #ibmcloud_iam_service_api_key_update}
 
-Service-API-Schlüssel aktualisieren
-
+Service-API-Schlüssel aktualisieren:
 ```
-ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
+ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [--output FORMAT] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -557,6 +573,8 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
   <dd>Der neue Name des Service-API-Schlüssels</dd>
   <dt>-d, --description</dt>
   <dd>Die neue Beschreibung des Service-API-Schlüssels</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
   <dt>-f, --force</dt>
   <dd>Aktualisierung ohne Bestätigung</dd>
 </dl>
@@ -564,16 +582,15 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>Beispiele</strong>:
 
 Service-API-Schlüssel `sample-key` in `new-sample-key` umbenennen:
-
 ```
 ibmcloud iam service-api-key-update sample-key sample-service -n new-sample-key
 ```
+{: codeblock}
 
 ## ibmcloud iam service-api-key-delete
 {: #ibmcloud_iam_service_api_key_delete}
 
-Service-API-Schlüssel löschen
-
+Service-API-Schlüssel löschen:
 ```
 ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
@@ -597,16 +614,15 @@ ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>Beispiele</strong>:
 
 Service-API-Schlüssel `sample-key` der Service-ID `sample-service` löschen:
-
 ```
 ibmcloud iam service-api-key-delete sample-key sample-service
 ```
+{: codeblock}
 
 ## ibmcloud iam service-api-key-lock
 {: #ibmcloud_iam_service_api_key_lock}
 
-Service-API-Schlüssel sperren
-
+Service-API-Schlüssel sperren:
 ```
 ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
@@ -630,16 +646,15 @@ ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SER
 <strong>Beispiele</strong>:
 
 Service-API-Schlüssel `sample-key` der Service-ID `sample-service` sperren:
-
 ```
 ibmcloud iam service-api-key-lock sample-key sample-service
 ```
+{: codeblock}
 
 ## ibmcloud iam service-api-key-unlock
 {: #ibmcloud_iam_service_api_key_unlock}
 
-Service-API-Schlüssel entsperren
-
+Service-API-Schlüssel entsperren:
 ```
 ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
@@ -663,18 +678,17 @@ ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>Beispiele</strong>:
 
 Service-API-Schlüssel `sample-key` der Service-ID `sample-service` entsperren:
-
 ```
 ibmcloud iam service-api-key-unlock sample-key sample-service
 ```
+{: codeblock}
 
 ## ibmcloud iam user-policies
 {: #ibmcloud_iam_user_policies}
 
-Richtlinien von Benutzer `name@example.com` auflisten:
-
+Richtlinien eines Benutzers auflisten.
 ```
-ibmcloud iam user-policies name@example.com
+ibmcloud iam user-policies USER_NAME [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Zielkonto
@@ -683,12 +697,13 @@ ibmcloud iam user-policies name@example.com
 <dl>
 <dt>USER_NAME (erforderlich)</dt>
 <dd>Benutzername, zu dem die Richtlinien gehören</dd>
+<dt>--output FORMAT</dt>
+<dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-
+ 
 Richtlinien von Benutzer `name@example.com` auflisten:
-
 ```
 ibmcloud iam user-policies name@example.com
 ```
@@ -696,10 +711,9 @@ ibmcloud iam user-policies name@example.com
 ## ibmcloud iam user-policy
 {: #ibmcloud_iam_user_policy}
 
-Details zu einer Benutzerrichtlinie anzeigen
-
+Details einer Benutzerrichtlinie anzeigen:
 ```
-ibmcloud iam user-policy USER_NAME POLICY_ID
+ibmcloud iam user-policy USER_NAME POLICY_ID [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Zielkonto
@@ -710,12 +724,13 @@ ibmcloud iam user-policy USER_NAME POLICY_ID
 <dd>Benutzername, zu dem die Richtlinie gehört</dd>
 <dt>POLICY_ID (erforderlich)</dt>
 <dd>Die ID der Richtlinie</dd>
+<dt>--output FORMAT</dt>
+<dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Richtlinie `0bb730daa` des Benutzers `name@example.com` auflisten:
-
 ```
 ibmcloud iam user-policy name@example.com 0bb730daa
 ```
@@ -723,10 +738,9 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 ## ibmcloud iam user-policy-create
 {: #ibmcloud_iam_user_policy_create}
 
-Benutzerrichtlinie erstellen
-
+Benutzerrichtlinie erstellen:
 ```
-ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Zielkonto
@@ -738,57 +752,55 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dt>--file <i>FILE</i> (optional)</dt>
 <dd>Die JSON-Datei der Richtliniendefinition</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (optional)</dt>
-<dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'ibmcloud iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+<dd>Die Rollennamen der Richtliniendefinition. Für unterstützte Rollen eines bestimmten Service führen Sie `ibmcloud iam roles --service SERVICE_NAME` aus. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (optional)</dt>
-<dd>Der Servicename der Richtliniendefinition. Dieser kann nur mit dem Flag '--file' verwendet werden.</dd>
+<dd>Der Servicename der Richtliniendefinition. Gegenseitig ausschließend mit dem Flag `--file`.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i> (optional)</dt>
-<dd>Die GUID der Serviceinstanz der Richtliniendefinition. Diese kann nur mit dem Flag '--file' verwendet werden.</dd>
+<dd>Die GUID der Serviceinstanz der Richtliniendefinition. Gegenseitig ausschließend mit dem Flag `--file`.</dd>
 <dt>--region <i>REGION</i> (optional)</dt>
-<dd>Die Region der Richtliniendefinition. Diese kann nur mit dem Flag '--file' verwendet werden.</dd>
+<dd>Die Region der Richtliniendefinition. Gegenseitig ausschließend mit dem Flag `--file`.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (optional)</dt>
-<dd>Der Ressourcentyp der Richtliniendefinition. Dieser kann nur mit dem Flag '--file' verwendet werden.</dd>
+<dd>Der Ressourcentyp der Richtliniendefinition. Gegenseitig ausschließend mit dem Flag `--file`.</dd>
 <dt>--resource <i>RESOURCE</i> (optional)</dt>
-<dd>Die Ressource der Richtliniendefinition. Diese kann nur mit dem Flag '--file' verwendet werden.</dd>
+<dd>Die Ressource der Richtliniendefinition. Gegenseitig ausschließend mit dem Flag `--file`.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (optional)</dt>
-<dd>Der Name der Ressourcengruppe. Dieser kann nur mit den Flags '--file', '--resource' und '--resource-group-id' verwendet werden.</dd>
+<dd>Der Name der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit den Flags `--file`, `--resource` und `--resource-group-id`.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (optional)</dt>
-<dd>Die ID der Ressourcengruppe. Diese kann nur mit den Flags '--file', '--resource' und '--resource-group-name' verwendet werden.</dd>
+<dd>Die ID der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit den Flags `--file`, `--resource` und `--resource-group-name`.</dd>
+<dt>--account-management (optional)</dt>
+<dd>Zugriff auf alle Kontoverwaltungsservices erteilen.</dd>
+<dt>--output FORMAT (optional)</dt>
+<dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Benutzerrichtlinie für Benutzer `name@example.com` aus Richtlinien-JSON-Datei `policy.json` erstellen:
-
 ```
 ibmcloud iam user-policy-create name@example.com --file @policy.json
 ```
 
 `name@example.com` die Rolle `Administrator` für alle Ressourcen von `sample-service` zuweisen:
-
 ```
 ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name sample-service
 ```
 
 `name@example.com` die Rolle `Editor` für die Ressource `key123` der Beispielserviceinstanz mit der GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` in der Region `us-south` zuweisen:
-
 ```
 ibmcloud iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 `name@example.com` die Rolle `Operator` für die Ressourcengruppe mit der ID `dda27e49d2a1efca58083a01dfde18f6` zuweisen:
-
 ```
 ibmcloud iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 `name@example.com` die Rolle `Anzeigeberechtigter` für die Mitglieder der Ressourcengruppe `sample-resource-group` zuweisen:
-
 ```
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-name sample-resource-group
 ```
 
 `name@example.com` die Rolle `Anzeigeberechtigter` für die Mitglieder der Ressourcengruppe mit der ID `dda27e49d2a1efca58083a01dfde18f6` zuweisen:
-
 ```
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
@@ -796,10 +808,9 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 ## ibmcloud iam user-policy-update
 {: #ibmcloud_iam_user_policy_update}
 
-Benutzerrichtlinie aktualisieren
-
+Benutzerrichtlinie aktualisieren:
 ```
-ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Zielkonto
@@ -812,57 +823,55 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dt>--file <i>FILE</i> (optional)</dt>
 <dd>Die JSON-Datei der Richtliniendefinition</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (optional)</dt>
-<dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'ibmcloud iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+<dd>Die Rollennamen der Richtliniendefinition. Für unterstützte Rollen eines bestimmten Service führen Sie `ibmcloud iam roles --service SERVICE_NAME` aus. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (optional)</dt>
-<dd>Der Servicename der Richtliniendefinition. Dieser kann nur mit dem Flag '--file' verwendet werden.</dd>
+<dd>Der Servicename der Richtliniendefinition. Gegenseitig ausschließend mit dem Flag `--file`.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i> (optional)</dt>
-<dd>Die GUID der Serviceinstanz der Richtliniendefinition. Diese kann nur mit dem Flag '--file' verwendet werden.</dd>
+<dd>Die GUID der Serviceinstanz der Richtliniendefinition. Gegenseitig ausschließend mit dem Flag `--file`.</dd>
 <dt>--region <i>REGION</i> (optional)</dt>
-<dd>Die Region der Richtliniendefinition. Diese kann nur mit dem Flag '--file' verwendet werden.</dd>
+<dd>Die Region der Richtliniendefinition. Gegenseitig ausschließend mit dem Flag `--file`.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (optional)</dt>
-<dd>Der Ressourcentyp der Richtliniendefinition. Dieser kann nur mit dem Flag '--file' verwendet werden.</dd>
+<dd>Der Ressourcentyp der Richtliniendefinition. Gegenseitig ausschließend mit dem Flag `--file`.</dd>
 <dt>--resource <i>RESOURCE</i> (optional)</dt>
-<dd>Die Ressource der Richtliniendefinition. Diese kann nur mit dem Flag '--file' verwendet werden.</dd>
+<dd>Die Ressource der Richtliniendefinition. Gegenseitig ausschließend mit dem Flag `--file`.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (optional)</dt>
-<dd>Der Name der Ressourcengruppe. Dieser kann nur mit den Flags '--file', '--resource' und '--resource-group-id' verwendet werden.</dd>
+<dd>Der Name der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit den Flags `--file`, `--resource` und `--resource-group-id`.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (optional)</dt>
-<dd>Die ID der Ressourcengruppe. Diese kann nur mit den Flags '--file', '--resource' und '--resource-group-name' verwendet werden.</dd>
+<dd>Die ID der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit den Flags `--file`, `--resource` und `--resource-group-name`.</dd>
+<dt>--account-management (optional)</dt>
+<dd>Zugriff auf alle Kontoverwaltungsservices erteilen.</dd>
+<dt>--output FORMAT (optional)</dt>
+<dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Benutzerrichtlinie mit der Benutzerrichtlinie in der JSON-Datei aktualisieren
-
 ```
 ibmcloud iam user-policy-update name@example.com 0bb730daa --file @policy.json
 ```
 
 Benutzerrichtlinie aktualisieren, um `name@example.com` die Rolle `Administrator` für alle Ressourcen von `sample-service` zu erteilen
-
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Administrator --service-name sample-service
 ```
 
- Benutzerrichtlinie aktualisieren, um `name@example.com` die Rolle `Editor` für die Ressource `key123` der Beispielserviceinstanz mit der GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` in der Region `us-south` zuzuweisen:
-
+Benutzerrichtlinie aktualisieren, um `name@example.com` die Rolle `Editor` für die Ressource `key123` der Beispielserviceinstanz mit der GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` in der Region `us-south` zuzuweisen:
 ```
 ibmcloud iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 Benutzerrichtlinie aktualisieren, um `name@example.com` die Rolle `Operator` für die Ressourcengruppe mit der ID `dda27e49d2a1efca58083a01dfde18f6` zuzuweisen:
-
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 Benutzerrichtlinie aktualisieren, um `name@example.com` die Rolle `Anzeigeberechtigter` für die Mitglieder der Ressourcengruppe `sample-resource-group` zuzuweisen:
-
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-name sample-resource-group
 ```
 
 Benutzerrichtlinie aktualisieren, um `name@example.com` die Rolle `Anzeigeberechtigter` für die Mitglieder der Ressourcengruppe mit der ID `dda27e49d2a1efca58083a01dfde18f6` zuzuweisen:
-
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
@@ -871,7 +880,6 @@ ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer -
 {: #ibmcloud_iam_user_policy_delete}
 
 Benutzerrichtlinie löschen
-
 ```
 ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
 ```
@@ -885,14 +893,13 @@ ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
 </dl>
 
 <strong>Beispiele</strong>:
-Richtlinie `user-policy-id` des Benutzers `name@example.com` löschen:
 
+Die Richtlinie `user-policy-id` des Benutzers `name@example.com` löschen:
 ```
 ibmcloud iam user-policy-delete name@example.com user-policy-id
 ```
 
 Richtlinie `user-policy-id` des Benutzers `name@example.com` ohne Bestätigung löschen:
-
 ```
 ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 ```
@@ -900,8 +907,7 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 ## ibmcloud iam service-policies
 {: #ibmcloud_iam_service_policies}
 
-Alle Servicerichtlinien des angegebenen Service auflisten
-
+Alle Servicerichtlinien des angegebenen Service auflisten:
 ```
 ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 ```
@@ -912,7 +918,7 @@ ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 <dl>
   <dt>SERVICE_ID (erforderlich)</dt>
   <dd>Der Name oder die UUID der Service-ID</dd>
-  <dt>--output FORMAT (optional)</dt>
+  <dt>--output FORMAT</dt>
   <dd>Ausgabeformat für Servicerichtlinien angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt</dd>
   <dt>-f, --force (optional)</dt>
   <dd>Die Servicerichtlinien ohne Bestätigung anzeigen</dd>
@@ -921,12 +927,11 @@ ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 <strong>Beispiele</strong>:
 
 Richtlinien des Service `test` auflisten:
-
 ```
 ibmcloud iam service-policies test
 ```
-Richtlinien des Service `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` auflisten:
 
+Richtlinien des Service `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` auflisten:
 ```
 ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
@@ -934,8 +939,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ## ibmcloud iam service-policy
 {: #ibmcloud_iam_service_policy}
 
-Details zu einer Servicerichtlinie anzeigen
-
+Details einer Servicerichtlinie anzeigen:
 ```
 ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
 ```
@@ -948,7 +952,7 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
   <dd>Der Name oder die UUID der Service-ID</dd>
   <dt>POLICY_ID (erforderlich)</dt>
   <dd>Die ID der Servicerichtlinie<dd>
-  <dt>--output FORMAT (optional)</dt>
+  <dt>--output FORMAT</dt>
   <dd>Ausgabeformat für Servicerichtlinie angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt</dd>
   <dt>-f, --force (optional)</dt>
   <dd>Die Servicerichtlinie ohne Bestätigung anzeigen</dd>
@@ -957,12 +961,11 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
 <strong>Beispiele</strong>:
 
 Richtlinie `140798e2-8ea7db3` des Service `test` anzeigen:
-
 ```
 ibmcloud iam service-policies test 140798e2-8ea7db3
 ```
-Richtlinie `140798e2-8ea7db3` des Service `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` anzeigen:
 
+Richtlinie `140798e2-8ea7db3` des Service `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` anzeigen:
 ```
 ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
@@ -970,10 +973,9 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 ## ibmcloud iam service-policy-create
 {: #ibmcloud_iam_service_policy_create}
 
-Servicerichtlinie erstellen
-
+Servicerichtlinie erstellen:
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -983,25 +985,27 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dt>SERVICE_ID (erforderlich)</dt>
   <dd>Der Name oder die UUID der Service-ID</dd>
   <dt>--file</dt>
-  <dd>Die JSON-Datei der Richtliniendefinition. Dies kann nur mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' und '--resource-group-id' verwendet werden.</dd>
+  <dd>Die JSON-Datei der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit den Flags `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `--resource-group-name` und `--resource-group-id`.</dd>
   <dt>-r, --roles</dt>
-  <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'ibmcloud iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Rollennamen der Richtliniendefinition. Für unterstützte Rollen eines bestimmten Service führen Sie `ibmcloud iam roles --service SERVICE_NAME` aus. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>--service-name</dt>
-  <dd>Der Servicename der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Der Servicename der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag `--file`.</dd>
   <dt>--service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>Die GUID der Serviceinstanz der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die GUID der Serviceinstanz der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag `--file`.</dd>
   <dt>-region</dt>
-  <dd>Die Region der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Region der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag `--file`.</dd>
   <dt>--resource-type</dt>
-  <dd>Der Ressourcentyp der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Der Ressourcentyp der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag `--file`.</dd>
   <dt>--resource</dt>
-  <dd>Die Ressource der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Ressource der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag `--file`.</dd>
   <dt>--resource-group-name</dt>
-  <dd>Der Name der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '--file' und '--resource-group-id'.</dd>
+  <dd>Der Name der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit `--file` und `--resource-group-id`.</dd>
   <dt>--resource-group-id </dt>
-  <dd>Die ID der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '--file' und '--resource-group-name'.</dd>
+  <dd>Die ID der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit `--file` und `--resource-group-name`.</dd>
   <dt>--account-management (optional)</dt>
   <dd>Zugriff auf alle Kontoverwaltungsservices erteilen</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
   <dt>-f, --force</dt>
   <dd>Die Servicerichtlinie ohne Bestätigung erstellen</dd>
 </dl>
@@ -1009,24 +1013,21 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
 <strong>Beispiele</strong>:
 
 Servicerichtlinie aus JSON-Datei für Service `test` erstellen:
-
 ```
 ibmcloud iam service-policy-create test --file @policy.json
 ```
-Servicerichtlinie aus JSON-Datei für Service `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` erstellen:
 
+Servicerichtlinie aus JSON-Datei für Service `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` erstellen:
 ```
 ibmcloud iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
 ```
 
 Service `test` die Rolle `Administrator` für alle Kontoverwaltungsservices zuweisen:
-
 ```
 ibmcloud iam service-policy-create test --roles Administrator --account-management
 ```
 
 Service `test` die Rolle `Viewer` für alle Ressourcen im Konto zuweisen:
-
 ```
 ibmcloud iam service-policy-create test --roles Viewer
 ```
@@ -1034,10 +1035,9 @@ ibmcloud iam service-policy-create test --roles Viewer
 ## ibmcloud iam service-policy-update
 {: #ibmcloud_iam_service_policy_update}
 
-Servicerichtlinie aktualisieren
-
+Servicerichtlinie aktualisieren:
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -1049,25 +1049,27 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dt>POLICY_ID (erforderlich)</dt>
   <dd>Die ID der Servicerichtlinie<dd>
   <dt>--file</dt>
-  <dd>Die JSON-Datei der Richtliniendefinition. Diese kann nur mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' und 'resource-group-id' verwendet werden.</dd>
+  <dd>Die JSON-Datei der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit den Flags `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `resource-group-name` und `resource-group-id`.</dd>
   <dt>-r, --roles</dt>
-  <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'ibmcloud iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Rollennamen der Richtliniendefinition. Für unterstützte Rollen eines bestimmten Service führen Sie `ibmcloud iam roles --service SERVICE_NAME` aus. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-service-name</dt>
-  <dd>Der Servicename der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Der Servicename der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag `--file`.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>Die GUID der Serviceinstanz der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die GUID der Serviceinstanz der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag `--file`.</dd>
   <dt>-region</dt>
-  <dd>Die Region der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Region der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag `--file`.</dd>
   <dt>-resource-type</dt>
-  <dd>Der Ressourcentyp der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Der Ressourcentyp der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag `--file`.</dd>
   <dt>-resource</dt>
-  <dd>Die Ressource der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Ressource der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag `--file`.</dd>
   <dt>--resource-group-name</dt>
-  <dd>Der Name der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '--file' und '--resource-group-id'.</dd>
+  <dd>Der Name der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit `--file` und `--resource-group-id`.</dd>
   <dt>--resource-group-id </dt>
-  <dd>Die ID der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '--file' und '--resource-group-name'.</dd>
+  <dd>Die ID der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit `--file` und `--resource-group-name`.</dd>
   <dt>--account-management (optional)</dt>
   <dd>Zugriff auf alle Kontoverwaltungsservices erteilen</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
   <dt>-f, --force</dt>
   <dd>Die Servicerichtlinie ohne Bestätigung aktualisieren</dd>
 </dl>
@@ -1075,25 +1077,21 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
 <strong>Beispiele</strong>:
 
 Servicerichtlinie `140798e2-8ea7db3` aus JSON-Datei für Service `test` aktualisieren:
-
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ```
 
 Servicerichtlinie `140798e2-8ea7db3` aus JSON-Datei für Service `test` aktualisieren:
-
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ```
 
 Servicerichtlinie `140798e2-8ea7db3` aktualisieren, um dem Service `test` die Rolle `Administrator` für alle Kontoverwaltungsservices zuzuweisen:
-
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Administrator --account-management
 ```
 
 Servicerichtlinie `140798e2-8ea7db3` aktualisieren, um dem Service `test` die Rolle `Viewer` für alle Ressourcen im Konto zuzuweisen:
-
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer
 ```
@@ -1101,8 +1099,7 @@ ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer
 ## ibmcloud iam service-policy-delete
 {: #ibmcloud_iam_service_policy_delete}
 
-Servicerichtlinie löschen
-
+Servicerichtlinie löschen:
 ```
 ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 ```
@@ -1121,13 +1118,12 @@ ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 
 <strong>Beispiele</strong>:
 
-Richtlinie `140798e2-8ea7db3` des Service `test` löschen
-
+Richtlinie `140798e2-8ea7db3` des Service `test` löschen:
 ```
 ibmcloud iam service-policy-delete test 140798e2-8ea7db3
 ```
-Richtlinie `140798e2-8ea7db3` des Service `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` löschen
 
+Richtlinie `140798e2-8ea7db3` des Service `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` löschen:
 ```
 ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
@@ -1135,31 +1131,64 @@ ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac97
 ## ibmcloud iam oauth-tokens
 {: #ibmcloud_iam_oauth_tokens}
 
-OAuth-Tokens für die aktuelle Sitzung abrufen und anzeigen
-
+OAuth-Tokens für die aktuelle Sitzung abrufen und anzeigen:
 ```
-ibmcloud iam oauth-tokens
+ibmcloud iam oauth-tokens [--output FORMAT]
 ```
+{: codeblock}
 
 <strong>Voraussetzungen</strong>: Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-OAuth-Tokens aktualisieren und anzeigen
-
+OAuth-Tokens aktualisieren und anzeigen:
 ```
 ibmcloud iam oauth-tokens
 ```
+{: codeblock}
+
+## ibmcloud iam roles
+{: #ibmcloud_iam_roles}
+
+Plattformdefinierte und servicedefinierte Rollen auflisten:
+```
+ibmcloud iam roles [--service SERVICE_NAME] [--output FORMAT]
+```
+{: codeblock}
+
+<strong>Voraussetzungen</strong>: Anmeldung, Ziel
+
+<strong>Befehlsoptionen</strong>:
+<dl>
+  <dt>--service SERVICE_NAME</dt>
+  <dd>Der Name des Service. Wenn nicht angegeben, werden nur die plattformdefinierten Rollen definiert.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
+</dl>
+
+<strong>Beispiele</strong>:
+
+Plattformrollen auflisten
+```
+ibmcloud iam roles
+```
+
+Rollen für den Service `cloudantnosql` in JSON auflisten:
+```
+ibmcloud iam roles --service cloudantnosql --output JSON
+```
+{: codeblock}
 
 ## ibmcloud iam dedicated-id-disconnect
 {: #ibmcloud_iam_dedicated_id_disconnect}
 
-Verbindung zwischen öffentlicher IBMid und dedizierter, von IBM unabhängiger ID trennen
-
+Öffentliche IBMid mit dedizierter Nicht-IBMid trennen:
 ```
 ibmcloud iam dedicated-id-disconnect [-f, --force]
 ```
@@ -1175,7 +1204,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 ## ibmcloud iam authorization-policy-create
 {: #ibmcloud_iam_authorization_policy_create}
 
-Berechtigungsrichtlinie erstellen, um den Zugriff einer Serviceinstanz auf eine andere Serviceinstanz zu ermöglichen.
+Berechtigungsrichtlinie erstellen, um den Zugriff einer Serviceinstanz auf eine andere Serviceinstanz zu ermöglichen:
 
 ```
 ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-type RESOURCE_TYPE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME] [--target-resource-type RESOURCE_TYPE | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--output FORMAT]
@@ -1203,13 +1232,14 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>Die ID der Zielserviceinstanz, die sich mit `--target-service-instance-name` gegenseitig ausschließt. Wenn keine Angabe gemacht wird, erhalten alle Instanzen des Zielservice Zugriffsberechtigung.</dd>
   <dt>--target-resource-type</dt>
   <dd>Der Ressourcentyp des Zielservice.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 ## ibmcloud iam authorization-policy-delete
 {: #ibmcloud_iam_authorization_policy_delete}
 
-Berechtigungsrichtlinie löschen.
-
+Berechtigungsrichtlinie löschen:
 ```
 ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 ```
@@ -1227,10 +1257,9 @@ ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 ## ibmcloud iam authorization-policy
 {: #ibmcloud_iam_authorization_policy}
 
-Details zu einer Berechtigungsrichtlinie anzeigen.
-
+Details zu einer Berechtigungsrichtlinie anzeigen:
 ```
-ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
+ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Anmeldung, Ziel
@@ -1239,26 +1268,33 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 <dl>
   <dt>AUTHORIZATION_POLICY_ID</dt>
   <dd>Die ID der anzuzeigenden Berechtigungsrichtlinie.</dd>
-</dl>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
+</dl> 
 
 ## ibmcloud iam authorization-policies
 {: #ibmcloud_iam_authorization_policies}
 
-Berechtigungsrichtlinien unter dem aktuellen Konto auflisten.
-
+Berechtigungsrichtlinien unter dem aktuellen Konto auflisten:
 ```
-ibmcloud iam authorization-policies
+ibmcloud iam authorization-policies [--output FORMAT]
 ```
+{: codeblock}
 
 <strong>Voraussetzungen</strong>: Anmeldung, Ziel
+
+<strong>Befehlsoptionen</strong>:
+   <dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
+   </dl>
 
 ## ibmcloud iam access-groups
 {: #ibmcloud_iam_access_groups}
 
-Zugriffsgruppen unter dem aktuellen Konto auflisten
-
+Zugriffsgruppen unter dem aktuellen Konto auflisten:
 ```
-ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
+ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -1269,23 +1305,24 @@ ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
   <dd>Listet die Zugriffsgruppen auf, zu denen der Benutzer gehört. Dieses Flag wird ausschließlich mit '-s' verwendet.</dd>
   <dt>-s</dt>
   <dd>Listet die Zugriffsgruppen auf, zu denen die Service-ID gehört. Dieses Flag wird ausschließlich mit '-u' verwendet.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Alle Zugriffsgruppen auflisten:
-
 ```
 ibmcloud iam access-groups
 ```
+{: codeblock}
 
 ## ibmcloud iam access-group
 {: #ibmcloud_iam_access_group}
 
-Details einer Zugriffsgruppe anzeigen
-
+Details einer Zugriffsgruppe anzeigen:
 ```
-ibmcloud iam access-group GROUP_NAME [--id]
+ibmcloud iam access-group GROUP_NAME [--id] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -1294,12 +1331,13 @@ ibmcloud iam access-group GROUP_NAME [--id]
 <dl>
   <dt>-id</dt>
   <dd>Nur ID anzeigen</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Details der Zugriffsgruppe `example_group` anzeigen:
-
 ```
 ibmcloud iam access-group example_group
 ```
@@ -1307,10 +1345,9 @@ ibmcloud iam access-group example_group
 ## ibmcloud iam access-group-create
 {: #ibmcloud_iam_access_group_create}
 
-Zugriffsgruppe erstellen
-
+Zugriffsgruppe erstellen:
 ```
-ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
+ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -1319,12 +1356,13 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 <dl>
   <dt>-d, --description</dt>
   <dd>Beschreibung der Zugriffsgruppe</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Eine Zugriffsgruppe namens `example_group` erstellen:
-
 ```
 ibmcloud iam access-group-create example_group -d "example access group"
 ```
@@ -1332,10 +1370,9 @@ ibmcloud iam access-group-create example_group -d "example access group"
 ## ibmcloud iam access-group-update
 {: #ibmcloud_iam_access_group_update}
 
-Zugriffsgruppe aktualisieren
-
+Zugriffsgruppe aktualisieren:
 ```
-ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
+ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [--output FORMAT] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -1346,6 +1383,8 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
   <dd>Name der neuen Zugriffsgruppe</dd>
   <dt>-d, --description</dt>
   <dd>Neue Beschreibung</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
   <dt>-f, --force</dt>
   <dd>Aktualisierung ohne Bestätigung erzwingen</dd>
 </dl>
@@ -1353,7 +1392,6 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
 <strong>Beispiele</strong>:
 
 Zugriffsgruppe `example_group` in `hello_world_group` umbenennen:
-
 ```
 ibmcloud iam access-group-update example_group --name "hello_world_group"
 ```
@@ -1380,7 +1418,6 @@ ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
 <strong>Beispiele</strong>:
 
 Zugriffsgruppe `example_group` löschen:
-
 ```
 ibmcloud iam access-group-delete example_group --force
 ```
@@ -1388,22 +1425,22 @@ ibmcloud iam access-group-delete example_group --force
 ## ibmcloud iam access-group-users
 {: #ibmcloud_iam_access_group_users}
 
-Benutzer in einer Zugriffsgruppe auflisten
-
+Mehrere Benutzer in einer Zugriffsgruppe auflisten:
 ```
-ibmcloud iam access-group-users GROUP_NAME
+ibmcloud iam access-group-users GROUP_NAME [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
 
 <strong>Befehlsoptionen</strong>:
 <dl>
+<dt>--output FORMAT</dt>
+<dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Alle Benutzer in der Zugriffsgruppe `example_group` auflisten:
-
 ```
 ibmcloud iam access-group-users example_group
 ```
@@ -1411,8 +1448,7 @@ ibmcloud iam access-group-users example_group
 ## ibmcloud iam access-group-user-add
 {: #ibmcloud_iam_access_group_user_add}
 
-Benutzer zu einer Zugriffsgruppe hinzufügen
-
+Benutzer zu einer Zugriffsgruppe hinzufügen:
 ```
 ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 ```
@@ -1426,7 +1462,6 @@ ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 <strong>Beispiele</strong>:
 
 Benutzer `name@example.com` zur Zugriffsgruppe `example_group` hinzufügen:
-
 ```
 ibmcloud iam access group-user-add example_group name@example.com
 ```
@@ -1434,8 +1469,7 @@ ibmcloud iam access group-user-add example_group name@example.com
 ## ibmcloud iam access-group-user-remove
 {: #ibmcloud_iam_access_group_user_remove}
 
-Benutzer aus einer Zugriffsgruppe entfernen
-
+Einen Benutzer aus einer Zugriffsgruppe entfernen:
 ```
 ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
 ```
@@ -1449,7 +1483,6 @@ ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
 <strong>Beispiele</strong>:
 
 Benutzer `name@example.com` aus der Zugriffsgruppe `example_group` entfernen:
-
 ```
 ibmcloud iam access-group-user-remove example_group name@example.com
 ```
@@ -1457,8 +1490,7 @@ ibmcloud iam access-group-user-remove example_group name@example.com
 ## ibmcloud iam access-group-user-purge
 {: #ibmcloud_iam_access_group_user_purge}
 
-Benutzer aus allen Zugriffsgruppen entfernen
-
+Einen Benutzer aus allen Zugriffsgruppen entfernen:
 ```
 ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
 ```
@@ -1474,7 +1506,6 @@ ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
 <strong>Beispiele</strong>:
 
 Benutzer `name@example.com` aus allen Zugriffsgruppen entfernen:
-
 ```
 ibmcloud iam access-group-user-purge name@example.com -f
 ```
@@ -1482,22 +1513,22 @@ ibmcloud iam access-group-user-purge name@example.com -f
 ## ibmcloud iam access-group-service-ids
 {: #ibmcloud_iam_access_group_service_ids}
 
-Service-IDs in einer Zugriffsgruppe auflisten
-
+Service-IDs in einer Zugriffsgruppe auflisten:
 ```
-ibmcloud iam access-group-service-ids GROUP_NAME
+ibmcloud iam access-group-service-ids GROUP_NAME [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
 
 <strong>Befehlsoptionen</strong>:
 <dl>
+<dt>--output FORMAT</dt>
+<dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Alle Service-IDs in der Zugriffsgruppe `example_group` auflisten:
-
 ```
 ibmcloud iam access-group-service-ids example_group
 ```
@@ -1505,8 +1536,7 @@ ibmcloud iam access-group-service-ids example_group
 ## ibmcloud iam access-group-service-id-add
 {: #ibmcloud_iam_access_group_service_id_add}
 
-Service-ID zu einer Zugriffsgruppe hinzufügen
-
+Service-ID zu einer Zugriffsgruppe hinzufügen:
 ```
 ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
 ```
@@ -1520,7 +1550,6 @@ ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_
 <strong>Beispiele</strong>:
 
 Service-ID `example-service` zur Zugriffsgruppe `example_group` hinzufügen:
-
 ```
 ibmcloud iam access-group-service-id-add example_group example-service
 ```
@@ -1528,8 +1557,7 @@ ibmcloud iam access-group-service-id-add example_group example-service
 ## ibmcloud iam access-group-service-id-remove
 {: #ibmcloud_iam_access_group_service_id_remove}
 
-Service-ID aus einer Zugriffsgruppe entfernen
-
+Service-ID aus Zugriffsgruppe entfernen:
 ```
 ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 ```
@@ -1543,7 +1571,6 @@ ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 <strong>Beispiele</strong>:
 
 Service-ID `example-service` aus der Zugriffsgruppe `example_group` entfernen:
-
 ```
 ibmcloud iam access-group-service-id-remove example_group example-service
 ```
@@ -1551,8 +1578,7 @@ ibmcloud iam access-group-service-id-remove example_group example-service
 ## ibmcloud iam access-group-service-id-purge
 {: #ibmcloud_iam_access_group_service_id_purge}
 
-Service-ID aus allen Zugriffsgruppen entfernen
-
+Service-ID aus allen Zugriffsgruppen entfernen:
 ```
 ibmcloud iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
 ```
@@ -1576,22 +1602,22 @@ ibmcloud iam access-group-service-id-purge example --force
 ## ibmcloud iam access-group-policies
 {: #ibmcloud_iam_access_group_policies}
 
-Richtlinien einer Zugriffsgruppe auflisten
-
+Richtlinien einer Zugriffsgruppe auflisten:
 ```
-ibmcloud iam access-group-policies GROUP_NAME
+ibmcloud iam access-group-policies GROUP_NAME [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
 
 <strong>Befehlsoptionen</strong>:
 <dl>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Alle Richtlinien der Zugriffsgruppe `example_group` auflisten:
-
 ```
 ibmcloud iam access-group-policies example_group
 ```
@@ -1599,22 +1625,22 @@ ibmcloud iam access-group-policies example_group
 ## ibmcloud iam access-group-policy
 {: #ibmcloud_iam_access_group_policy}
 
-Details einer Zugriffsgruppenrichtlinie anzeigen
-
+Details einer Zugriffsgruppenrichtlinie anzeigen:
 ```
-ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
+ibmcloud iam access-group-policy GROUP_NAME POLICY_ID [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
 
 <strong>Befehlsoptionen</strong>:
 <dl>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Details der Richtlinie `51b9717e-76b0-4f6a-bda7-b8132431f926` der Zugriffsgruppe `example_group` anzeigen:
-
 ```
 ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f926
 ```
@@ -1622,10 +1648,9 @@ ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 ## ibmcloud iam access-group-policy-create
 {: #ibmcloud_iam_access_group_policy_create}
 
-Zugriffsgruppenrichtlinie erstellen
-
+Zugriffsgruppenrichtlinie erstellen:
 ```
-ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -1635,27 +1660,28 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
   <dt>--file</dt>
   <dd>Die JSON-Datei der Richtliniendefinition</dd>
   <dt>-roles</dt>
-  <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'ibmcloud iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Rollennamen der Richtliniendefinition. Für unterstützte Rollen eines bestimmten Service führen Sie `ibmcloud iam roles --service SERVICE_NAME` aus. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-service-name</dt>
-  <dd>Der Servicename der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Der Servicename der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>Die GUID der Serviceinstanz der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die GUID der Serviceinstanz der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-region</dt>
-  <dd>Die Region der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Region der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-resource-type</dt>
-  <dd>Der Ressourcentyp der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Der Ressourcentyp der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-resource</dt>
-  <dd>Die Ressource der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Ressource der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-resource-group-name</dt>
-  <dd>Der Name der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '--file' und '--resource-group-id'.</dd>
+  <dd>Der Name der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit `--file` und `--resource-group-id`.</dd>
   <dt>-resource-group-id</dt>
-  <dd>Die ID der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '--file' und '--resource-group-name'.</dd>
+  <dd>Die ID der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit `--file` und `--resource-group-name`.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
 Zugriffsgruppenrichtlinie aus einer JSON-Datei erstellen:
-
 ```
 ibmcloud iam access-group-policy-create example_group -f @policy.json
 ```
@@ -1688,10 +1714,9 @@ ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-
 ## ibmcloud iam access-group-policy-update
 {: #ibmcloud_iam_access_group_policy_update}
 
-Zugriffsgruppenrichtlinie aktualisieren
-
+Zugriffsgruppenrichtlinie aktualisieren:
 ```
-ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -1701,21 +1726,23 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
   <dt>--file</dt>
   <dd>Die JSON-Datei der Richtliniendefinition</dd>
   <dt>--roles</dt>
-  <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'ibmcloud iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Rollennamen der Richtliniendefinition. Für unterstützte Rollen eines bestimmten Service führen Sie `ibmcloud iam roles --service SERVICE_NAME` aus. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-service-name</dt>
-  <dd>Der Servicename der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Der Servicename der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>Die GUID der Serviceinstanz der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die GUID der Serviceinstanz der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-region</dt>
-  <dd>Die Region der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Region der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-resource-type</dt>
-  <dd>Der Ressourcentyp der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Der Ressourcentyp der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-resource</dt>
-  <dd>Die Ressource der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit dem Flag '--file'.</dd>
+  <dd>Die Ressource der Richtliniendefinition. Diese Option ist gegenseitig ausschließend mit `--file`.</dd>
   <dt>-resource-group-name</dt>
-  <dd>Der Name der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '--file' und '--resource-group-id'.</dd>
+  <dd>Der Name der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit `--file` und `--resource-group-id`.</dd>
   <dt>-resource-group-id</dt>
-  <dd>Die ID der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '--file' und '--resource-group-name'.</dd>
+  <dd>Die ID der Ressourcengruppe. `*` bedeutet 'alle Ressourcengruppen'. Diese Option ist gegenseitig ausschließend mit `--file` und `--resource-group-name`.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -1753,8 +1780,7 @@ ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7a
 ## ibmcloud iam access-group-policy-delete
 {: #ibmcloud_iam_access_group_policy_delete}
 
-Zugriffsgruppenrichtlinie löschen
-
+Zugriffsgruppenrichtlinie löschen:
 ```
 ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```
