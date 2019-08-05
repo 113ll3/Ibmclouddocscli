@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-18"
 
-keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
+keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
 subcollection: cloud-cli
 
@@ -25,7 +25,6 @@ subcollection: cloud-cli
 {: #ibmcloud_account_orgs}
 
 列出所有組織。
-
 ```
 ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID] [-u ACCOUNT_OWNER]
 ```
@@ -37,25 +36,23 @@ ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID
    <dt>-r REGION_NAME</dt>
    <dd>地區名稱。列出指定地區中的組織。如果未指定，則預設為現行地區。如果設為 'all'，則列出所有地區中的組織。</dd>
    <dt>--guid</dt>
-   <dd>顯示組織的 GUID。此選項與 '--output' 不能同時使用。</dd>
+   <dd>顯示組織的 GUID。此選項不能與 `--output` 同時使用。</dd>
    <dt>--output FORMAT</dt>
-   <dd>指定輸出格式，目前只支援 JSON。此選項與 '--guid' 不能同時使用。</dd>
+   <dd>指定輸出格式，目前只支援 JSON。此選項不能與 `--guid` 同時使用。</dd>
    <dt>-c ACCOUNT_ID</dt>
-   <dd>帳戶 ID。列出給定帳戶下的組織。如果未指定，則預設為現行帳戶。如果設為 'all'，則列出所有帳戶下的組織。此選項與 '-u' 不能同時使用。</dd>
+   <dd>帳戶 ID。列出帳戶下的組織。如果未指定，則預設為現行帳戶。如果設定為 `all`，將列出所有帳戶下的組織。此選項與 `-u` 互斥。</dd>
    <dt>-u ACCOUNT_OWNER</dt>
-   <dd>帳戶擁有者名稱。列出給定使用者所擁有之帳戶下的組織。如果未指定，則預設為現行帳戶。如果設為 'all'，則列出所有帳戶下的組織。此選項與 '-c' 不能同時使用。</dd>
+   <dd>帳戶擁有者名稱。列出使用者所擁有之帳戶下的組織。如果未指定，則預設為現行帳戶。如果設為 'all'，則列出所有帳戶下的組織。此選項與 `-c` 互斥。</dd>
    </dl>
 
 <strong>範例</strong>：
 
-列出 `us-south` 地區中的所有組織，並顯示 GUID。
-
+列出 `us-south` 地區中的所有組織，並顯示 GUID：
 ```
 ibmcloud account orgs -r us-south --guid
 ```
 
-以 JSON 格式列出所有組織。
-
+以 JSON 格式列出所有組織：
 ```
 ibmcloud account orgs --output JSON
 ```
@@ -64,7 +61,6 @@ ibmcloud account orgs --output JSON
 {: #ibmcloud_account_org}
 
 顯示所指定組織的資訊。
-
 ```
 ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
 ```
@@ -76,17 +72,16 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
    <dt>ORG_NAME（必要）</dt>
    <dd>組織的名稱。</dd>
    <dt>-r REGION</dt>
-   <dd>地區名稱。如果未指定，預設值為現行地區。如果設為 'all'，則會列出所有地區中具有給定名稱的組織。</dd>
+   <dd>地區名稱。如果未指定，預設值為現行地區。如果設定為 `all`，將列出所有地區中給定名稱的組織。</dd>
    <dt>--guid</dt>
-   <dd>擷取並顯示給定組織的 GUID。會抑制組織的所有其他輸出。此選項與 '--output' 不能同時使用。</dd>
+   <dd>擷取並顯示組織的 GUID。會抑制組織的所有其他輸出。此選項不能與 `--output` 同時使用。</dd>
    <dt>--output REGION</dt>
-   <dd>指定輸出格式，目前只支援 JSON。此選項與 '--guid' 不能同時使用。</dd>
+   <dd>指定輸出格式，目前只支援 JSON。此選項不能與 `--guid` 同時使用。</dd>
    </dl>
 
 <strong>範例</strong>：
 
 顯示 `IBM` 組織的資訊，並顯示 GUID。
-
 ```
 ibmcloud account org IBM --guid
 ```
@@ -94,10 +89,9 @@ ibmcloud account org IBM --guid
 ## ibmcloud account org-create
 {: #ibmcloud_account_org_create}
 
-建立新的組織。只有帳戶擁有者才能執行此作業。
-
+建立一個組織。此作業只能由帳戶擁有者執行。
 ```
-ibmcloud account org-create ORG_NAME [-f]
+ibmcloud account org-create ORG_NAME [-r, --region REGION]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -105,15 +99,14 @@ ibmcloud account org-create ORG_NAME [-f]
 <strong>指令選項</strong>：
    <dl>
    <dt>ORG_NAME（必要）</dt>
-   <dd>所要建立之組織的名稱。</dd>
-   <dt>-f</dt>
-   <dd>強制建立，而不進行確認。</dd>
+   <dd>要建立的組織的名稱。</dd>
+   <dt>-r, --region REGION（選用）</dt>
+   <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
    </dl>
 
 <strong>範例</strong>：
 
 建立名稱為 `IBM` 的組織。
-
 ```
 ibmcloud account org-create IBM
 ```
@@ -122,9 +115,8 @@ ibmcloud account org-create IBM
 {: #ibmcloud_account_org_replicate}
 
 將組織從現行地區抄寫到另一個地區。
-
 ```
-ibmcloud account org-replicate ORG_NAME REGION_NAME
+ibmcloud account org-replicate ORG_NAME REGION_NAME [-r, --region SOURCE_REGION]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -135,12 +127,13 @@ ibmcloud account org-replicate ORG_NAME REGION_NAME
    <dd>要抄寫之現有組織的名稱。</dd>
    <dt>REGION_NAME（必要）</dt>
    <dd>管理所抄寫組織的地區名稱。</dd>
+   <dt>-r, --region REGION（選用）</dt>
+   <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
    </dl>
 
 <strong>範例</strong>：
 
 將組織 `myorg` 抄寫到地區 `eu-gb`：
-
 ```
 ibmcloud account org-replicate myorg eu-gb
 ```
@@ -149,9 +142,8 @@ ibmcloud account org-replicate myorg eu-gb
 {: #ibmcloud_account_org_rename}
 
 重新命名組織。只有組織管理員才能執行此作業。
-
 ```
-ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
+ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME [-r, --region REGION]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -161,14 +153,15 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
    <dt>OLD_ORG_NAME（必要）</dt>
    <dd>要重新命名之組織的舊名稱。</dd>
    <dt>NEW_ORG_NAME（必要）</dt>
-   <dd>組織重新命名後的新名稱。</dd>
+   <dd>要重新命名的組織的新名稱。</dd>
+   <dt>-r, --region REGION（選用）</dt>
+   <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
    </dl>
 
 ## ibmcloud account spaces
 {: #ibmcloud_account_spaces}
 
 列出所有帳戶空間。
-
 ```
 ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 ```
@@ -177,24 +170,22 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 
 <strong>指令選項</strong>：
    <dl>
-   <dt>-o ORG_NAME</dt>
+   <dt>-o ORG_NAME（選用）</dt>
    <dd>組織名稱。列出所指定組織下的空間。如果未指定，則預設為現行組織。</dd>
-   <dt>-r REGION-NAM</dt>
+   <dt>-r REGION-NAME（選用）</dt>
    <dd>地區名稱。列出所指定地區下的空間。如果未指定，則預設為現行地區。</dd>
-   <dt>--output FORMAT</dt>
+   <dt>--output FORMAT（選用）</dt>
    <dd>指定輸出格式，目前只支援 JSON。</dd>
    </dl>
 
 <strong>範例</strong>：
 
 列出所有空間：
-
 ```
 ibmcloud account spaces
 ```
 
 以 JSON 格式列出組織 `org_example` 的所有空間：
-
 ```
 ibmcloud account spaces -o org_example --output JSON
 ```
@@ -203,7 +194,6 @@ ibmcloud account spaces -o org_example --output JSON
 {: #ibmcloud_account_space}
 
 顯示特定空間的資訊。
-
 ```
 ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--security-group-rules]
 ```
@@ -217,9 +207,9 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
    <dt>-o ORG_NAME</dt>
    <dd>組織名稱。如果未指定，則預設為現行組織。</dd>
    <dt>--guid</dt>
-   <dd>擷取並顯示給定空間的 GUID。會抑制空間的所有其他輸出。此選項與 '--output' 不能同時使用。</dd>
+   <dd>擷取並顯示空間的 GUID。會抑制空間的所有其他輸出。此選項不能與 `--output` 同時使用。</dd>
    <dt>--output FORMAT</dt>
-   <dd>指定輸出格式，目前只支援 JSON。會抑制空間的所有其他輸出。此選項與 '--guid' 不能同時使用。</dd>
+   <dd>指定輸出格式，目前只支援 JSON。會抑制空間的所有其他輸出。此選項不能與 `--guid` 同時使用。</dd>
    <dt>--security-group-rules</dt>
    <dd>擷取所有與空間相關聯的安全群組的規則。</dd>
    </dl>
@@ -227,25 +217,21 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
 <strong>範例</strong>：
 
 顯示空間 `space_example` 的資訊：
-
 ```
 ibmcloud account space space_example
 ```
 
 顯示空間 `space_example` 的 GUID：
-
 ```
 ibmcloud account space space_example --guid
 ```
 
 以 JSON 格式顯示空間 `space_example` 的資訊：
-
 ```
 ibmcloud account space space_example --output JSON
 ```
 
 顯示空間 `space_example` 的安全群組規則：
-
 ```
 ibmcloud account space space_example --security-group-rules
 ```
@@ -253,19 +239,17 @@ ibmcloud account space space_example --security-group-rules
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
 
-這個指令的功能及選項與 [cf create-space](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 指令相同。
+這個指令的功能及選項與 [`cf create-space`](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 指令相同。
 
 ## ibmcloud account space-rename
 {: #ibmcloud_account_space_rename}
 
-
-這個指令的功能及選項與 [cf rename-space](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 指令相同。
+這個指令的功能及選項與 [`cf rename-space`](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 指令相同。
 
 ## ibmcloud account space-delete
 {: #ibmcloud_account_space_delete}
 
-
-這個指令的功能及選項與 [cf delete-space](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 指令相同。
+這個指令的功能及選項與 [`cf delete-space`](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 指令相同。
 
 ## ibmcloud account org-users
 {: #ibmcloud_account_org_users}
@@ -273,7 +257,7 @@ ibmcloud account space space_example --security-group-rules
 依角色顯示指定組織中的使用者。
 
 ```
-ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
+ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -282,28 +266,36 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 <dl>
 <dt>ORG_NAME（必要）</dt>
 <dd>組織的名稱。</dd>
-<dt>-a（選用）</dt>
+<dt>-a, -all（選用）</dt>
 <dd>列出指定組織中的所有使用者，而不依角色分組。</dd>
-<dt>--output FORMAT（選用）</dt>
-<dd>--output value  指定輸出格式，目前只支援 JSON。</dd>
-</dl>
+<dt>-r, --region REGION（選用）</dt>
+<dd>地區名稱。如果未指定，則預設為現行地區。</dd>
+</dl> 
 
 ## ibmcloud account org-user-add
 {: #ibmcloud_account_org_user_add}
 
 將使用者新增至組織（需要組織管理員）。
+```
+ ibmcloud account org-user-add USER_NAME ORG [-r, --region REGION]
+```
 
-```
- ibmcloud account org-user-add USER_NAME ORG
-```
+<strong>指令選項</strong>：
+<dl>
+<dt>USER_NAME（必要）</dt>
+<dd>使用者的名稱。</dd>
+<dt>ORG（必要）</dt>
+<dd>組織的名稱。</dd>
+<dt>-r, --region REGION（選用）</dt>
+<dd>地區名稱。如果未指定，則預設為現行地區。</dd>
+</dl>  
 
 ## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
 
 從組織移除使用者（僅限組織管理員或使用者自己）。
-
 ```
-   ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
+ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
 ```
 
 <strong>指令選項</strong>：
@@ -316,9 +308,8 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 {: #ibmcloud_account_org_roles}
 
 取得現行使用者的所有組織角色。
-
 ```
-ibmcloud account org-roles [-u USER_ID]
+ibmcloud account org-roles [-r, --region REGION] [-u USER_ID] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -327,15 +318,18 @@ ibmcloud account org-roles [-u USER_ID]
   <dl>
    <dt>-u</dt>
    <dd>使用者 ID。如果未指定，則預設為現行使用者。</dd>
+   <dt>-r, --region REGION（選用）</dt>
+   <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
+   <dt>--output FORMAT（選用）</dt>
+   <dd>指定輸出格式，目前只支援 JSON。</dd>
   </dl>
 
 ## ibmcloud account org-role-set
 {: #ibmcloud_account_org_role_set}
 
-將組織角色指派給使用者。只有組織管理員才能執行此作業。
-
+將組織角色指派給使用者。此作業必須由組織管理員執行。
 ```
-ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
+ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE [-r, --region REGION]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -343,7 +337,7 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
 <strong>指令選項</strong>：
   <dl>
    <dt>USER_NAME（必要）</dt>
-   <dd>所指派之使用者的名稱。</dd>
+   <dd>要指派之使用者的名稱。</dd>
    <dt>ORG_NAME（必要）</dt>
    <dd>獲指派此使用者之組織的名稱。</dd>
    <dt>ORG_ROLE（必要）</dt>
@@ -354,17 +348,18 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
    <li>OrgAuditor：此角色具有組織資訊和報告的唯讀權。</li>
    </ul>
    </dd>
+   <dt>-r, --region REGION（選用）</dt>
+   <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
   </dl>
 
 <strong>範例</strong>：
 
 以 `OrgManager` 角色，將使用者 `Mary` 指派給組織 `IBM`：
-
 ```
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-您可以使用 CLI 來設定組織/空間角色，但如果要設定其他許可權，則必須利用使用者介面。如需進一步詳細資料，請參閱[管理對資源的存取權](/docs/iam/mngiam.html#iammanidaccser)。
+您可以使用 CLI 設定組織和空間角色，但是如果您想要設定其他許可權，則必須使用使用者介面。如需相關資訊，請參閱[管理對資源的存取權](/docs/iam?topic=iam-iammanidaccser)。
 {: note}
 <!-- Begin Staging URL vs Prod URL -->
 
@@ -372,9 +367,8 @@ ibmcloud account org-role-set Mary IBM OrgManager
 {: #ibmcloud_account_org_role_unset}
 
 移除使用者的組織角色。只有組織管理員才能執行此作業。
-
 ```
-ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
+ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE [-r, --region REGION]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -382,7 +376,7 @@ ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
 <strong>指令選項</strong>：
    <dl>
    <dt>USER_NAME（必要）</dt>
-   <dd>所要移除之使用者的名稱。</dd>
+   <dd>要移除之使用者的名稱。</dd>
    <dt>ORG_NAME（必要）</dt>
    <dd>從中移除此使用者之組織的名稱。</dd>
    <dt>ORG_ROLE（必要）</dt>
@@ -393,12 +387,13 @@ ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <li>OrgAuditor：此角色具有組織資訊和報告的唯讀權。</li>
    </ul>
    </dd>
-    </dl>
+   <dt>-r, --region REGION（選用）</dt>
+   <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
+   </dl>
 
 <strong>範例</strong>：
 
 以 `OrgManager` 角色，從組織 `IBM` 移除使用者 `Mary`：
-
 ```
 ibmcloud account org-role-unset Mary IBM OrgManager
 ```
@@ -407,9 +402,8 @@ ibmcloud account org-role-unset Mary IBM OrgManager
 {: #ibmcloud_account_space_users}
 
 依角色顯示指定空間中的使用者。
-
 ```
-ibmcloud account space-users ORG_NAME SPACE_NAME
+ibmcloud account space-users ORG_NAME SPACE_NAME [-r, --region REGION]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -420,15 +414,37 @@ ibmcloud account space-users ORG_NAME SPACE_NAME
    <dd>組織的名稱。</dd>
    <dt>SPACE_NAME（必要）</dt>
    <dd>空間的名稱。</dd>
+   <dt>-r, --region REGION（選用）</dt>
+   <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
+   </dl>
+
+## ibmcloud account space-roles
+{: #ibmcloud_account_space_roles}
+
+取得現行使用者在特定組織下的所有空間角色。
+
+```
+ibmcloud account space-roles ORG [-r, --region REGION] [--output FORMAT]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+   <dl>
+   <dt>ORG（必要）</dt>
+   <dd>組織的名稱。</dd>
+   <dt>-r（選用）</dt>
+   <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
+   <dt>--output FORMAT（選用）</dt>
+   <dd>指定輸出格式，目前只支援 JSON。</dd>
    </dl>
 
 ## ibmcloud account space-role-set
 {: #ibmcloud_account_space_role_set}
 
 將空間角色指派給使用者。只有空間管理員才能執行此作業。
-
 ```
-ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE [-r, --region REGION]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -437,7 +453,7 @@ ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
    <dl>
    <dt>USER_NAME（必要）</dt>
-   <dd>所指派之使用者的名稱。</dd>
+   <dd>要指派之使用者的名稱。</dd>
    <dt>ORG_NAME（必要）</dt>
    <dd>獲指派此使用者之組織的名稱。</dd>
    <dt>SPACE_NAME（必要）</dt>
@@ -445,16 +461,18 @@ ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_ROLE（必要）</dt>
    <dd>獲指派此使用者之空間角色的名稱。例如：
    <ul>
-   <li>SpaceManager：此角色可以邀請和管理使用者，以及啟用給定空間的特性。</li>
+   <li>SpaceManager：此角色可以邀請和管理使用者，以及啟用特性。</li>
    <li>SpaceDeveloper：此角色可以建立和管理應用程式及服務，以及查看日誌和報告。</li>
    <li>SpaceAuditor：此角色可以檢視空間的日誌、報告和設定。</li>
-   </ul></dd>
-    </dl>
+   </ul>
+   </dd>
+   <dt>-r, --region REGION（選用）</dt>
+   <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
+   </dl>
 
 <strong>範例</strong>：
 
 以 `SpaceManager` 角色，將使用者 `Mary` 指派給組織 `IBM` 及空間 `Cloud`：
-
 ```
 ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 ```
@@ -463,9 +481,8 @@ ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 {: #ibmcloud_account_space_role_unset}
 
 移除使用者的空間角色。只有空間管理員才能執行此作業。
-
 ```
-ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE [-r, --region REGION]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -474,7 +491,7 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
    <dl>
    <dt>USER_NAME（必要）</dt>
-   <dd>所要移除之使用者的名稱。</dd>
+   <dd>要移除之使用者的名稱。</dd>
    <dt>ORG_NAME（必要）</dt>
    <dd>從中移除此使用者之組織的名稱。</dd>
    <dt>SPACE_NAME（必要）</dt>
@@ -482,17 +499,18 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_ROLE（必要）</dt>
    <dd>從中移除此使用者之空間角色的名稱。例如：
    <ul>
-   <li>SpaceManager：此角色可以邀請和管理使用者，以及啟用給定空間的特性。</li>
+   <li>SpaceManager：此角色可以邀請和管理使用者，以及啟用特性。</li>
    <li>SpaceDeveloper：此角色可以建立和管理應用程式及服務，以及查看日誌和報告。</li>
    <li>SpaceAuditor：此角色可以檢視空間的日誌、報告和設定。</li>
    </ul></dd>
+   <dt>-r, --region REGION（選用）</dt>
+   <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
     </dl>
 
 
 <strong>範例</strong>：
 
 以 `SpaceManager` 角色，從組織 `IBM` 及空間 `Cloud` 移除使用者 `Mary`：
-
 ```
 ibmcloud account space-role-unset Mary IBM Cloud SpaceManager
 ```
@@ -500,41 +518,48 @@ ibmcloud account space-role-unset Mary IBM Cloud SpaceManager
 ## ibmcloud account list
 {: #ibmcloud_account_list}
 
-列出現行使用者的所有帳戶。
-
+列出現行使用者的所有帳戶：
 ```
-ibmcloud account list
-```
-
-<strong>必要條件</strong>：端點、登入
-
-## ibmcloud account org-account
-{: #ibmcloud_account_org_account}
-
-顯示所指定組織的帳戶（需要組織使用者）。
-
-```
-ibmcloud account org-account ORG_NAME [--guid]
+ibmcloud account list [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
 <dl>
+   <dt>--output FORMAT（選用）</dt>
+   <dd>指定輸出格式，目前只支援 JSON。</dd>
+</dl>
+
+## ibmcloud account org-account
+{: #ibmcloud_account_org_account}
+
+顯示所指定組織的帳戶（需要組織使用者）。
+```
+ibmcloud account org-account ORG_NAME [-r, --region REGION] [--guid | --output FORMAT]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>-r（選用）</dt>
+  <dd>地區名稱。如果未指定，則預設為現行地區。</dd>
   <dt>--guid（選用）</dt>
   <dd>僅顯示帳戶 ID</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 ## ibmcloud account show
 {: #ibmcloud_account_show}
 
-顯示帳戶詳細資料
-
+顯示帳戶詳細資料。
 ```
 ibmcloud account show
 ```
 
-<strong>必要條件</strong>：端點、登入
+<strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
@@ -543,7 +568,6 @@ ibmcloud account show
 <strong>範例</strong>：
 
 顯示目前設為目標之帳戶的詳細資料：
-
 ```
 ibmcloud account show
 ```
@@ -551,42 +575,81 @@ ibmcloud account show
 ## ibmcloud account update
 {: #ibmcloud_account_update}
 
-更新特定帳戶。
-
+更新特定帳戶：
 ```
 ibmcloud account update (--service-endpoint-enable true | false)
+```
+
+<strong>必要條件</strong>：端點、登入、目標
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>--service-endpoint-enable true | false</dt>
+  <dd>啟用或停用 SoftLayer 帳戶的服務端點連線功能。</dd>
+</dl>
+
+<strong>範例</strong>：
+
+啟用現行帳戶的服務端點連線功能：
+```
+ibmcloud account update --service-endpoint-enable true
+```
+
+## ibmcloud account audit-logs
+{: #ibmcloud_account_audit_logs}
+
+列出 SoftLayer 帳戶審核日誌：
+```
+account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [-o, --object OBJECT] [-a, --action ACTION] [-s, --start-date START_DATE] [-e, --end-date END_DATE]
+```
+
+<strong>必要條件</strong>：端點、登入、目標
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>-a, --action <i>ACTION</i></dt>
+  <dd>動作。列出含有動作的審核日誌。</dd>
+  <dt>-e, --end-date <i>END_DATE</i></dt>
+  <dd>結束日期。列出結束日期之前的審核日誌。支援的格式為 yyyy-MM-ddTHH:mm:ss。</dd>
+  <dt>-o, --object <i>OBJECT</i></dt>
+  <dd>物件。列出含有物件的審核日誌。</dd>
+  <dt>-t, --object-type <i>OBJECT_TYPE</i></dt>
+  <dd>物件類型。列出含有物件類型的審核日誌。</dd>
+  <dt>-s, --start-date <i>START_DATE</i></dt>
+  <dd>開始日期。列出開始日期之後的審核日誌。支援的格式為 yyyy-MM-ddTHH:mm:ss。</dd>
+  <dt>-u, --user-name <i>USER_NAME</i></dt>
+  <dd>使用者名稱。列出含有使用者名稱的審核日誌。</dd>
+</dl>
+
+<strong>範例</strong>：
+
+列出審核日誌：
+```
+ibmcloud account audit-logs
+```
+
+## ibmcloud account users
+{: #ibmcloud_account_users}
+
+顯示與帳戶相關聯的使用者。必須由帳戶擁有者執行此作業。
+```
+ibmcloud account users [-c, --account-id ACCOUNT_ID] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>--service-endpoint-enable true | false</dt>
-  <dd>啟用或停用 Softlayer 帳戶的服務端點連線功能。</dd>
+<dt>-c（選用）</dt>
+<dd>帳戶 ID。如果未指定，則預設為現行帳戶。</dd>
+<dt>--output FORMAT（選用）</dt>
+<dd>指定輸出格式，目前只支援 JSON。</dd>
 </dl>
-
-<strong>範例</strong>：
-
-啟用現行帳戶的服務端點連線功能：
-
-```
-ibmcloud account update --service-endpoint-enable true
-```
-
-## ibmcloud account users
-{: #ibmcloud_account_users}
-
-顯示與帳戶相關聯的使用者。只有帳戶擁有者才能執行此作業。
-
-```
-ibmcloud account users
-```
 
 ## ibmcloud account user-remove
 {: #ibmcloud_account_user_remove}
 
 從帳戶移除使用者（僅限帳戶擁有者）。
-
 ```
 ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 ```
@@ -606,8 +669,7 @@ ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 ## ibmcloud account user-invite
 {: #ibmcloud_account_user_invite}
 
-邀請使用者加入帳戶。
-
+邀請使用者加入帳戶：
 ```
 ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE, --space-role SPACE_ROLE]]
 ```
@@ -617,7 +679,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
 <strong>指令選項</strong>：
 <dl>
    <dt>USER_EMAIL（必要）</dt>
-   <dd>所邀請之使用者的電子郵件。</dd>
+   <dd>要邀請的使用者的電子郵件。</dd>
    <dt>-o ORG</dt>
    <dd>邀請使用者加入的組織</dd>
    <dt>--org-role ORG_ROLE</dt>
@@ -628,11 +690,13 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dd>空間角色。有效輸入為：SpaceManager、SpaceDeveloper 及 SpaceAuditor。</dd>
 </dl>
 
+如果您尚未準備好指派存取權或要指派 IAM 原則而不是 Cloud Foundry 存取權，則您可以邀請不可存取的使用者，並在以後指派存取權。如需指派使用者存取權的相關資訊，請參閱[管理對資源的存取權](/docs/iam?topic=iam-iammanidaccser#assign_new_access)。
+{: tip}
+
 ## ibmcloud account user-reinvite
 {: #ibmcloud_account_user_reinvite}
 
 將邀請重新傳送給使用者（帳戶管理者）。
-
 ```
 ibmcloud account user-reinvite USER_EMAIL
 ```
@@ -641,16 +705,107 @@ ibmcloud account user-reinvite USER_EMAIL
 <strong>指令選項</strong>：
 <dl>
    <dt>USER_EMAIL（必要）</dt>
-   <dd>所重新邀請之使用者的電子郵件。</dd>
+   <dd>要再次邀請的使用者的電子郵件。</dd>
 </dl>
 
-## ibmcloud app domain-cert
-{: #accounts-list-domain-cert}
+## ibmcloud account audit-logs
+{: #ibmcloud_account_audit_logs}
 
-列出網域的憑證資訊。
+列出帳戶審核日誌
 
 ```
-ibmcloud app domain-cert DOMAIN_NAME
+ibmcloud account audit-logs [--user-name USER_NAME] [--object-type OBJECT_TYPE] [--object OBJECT] [--action ACTION] [--start-date START_DATE] [--end-date END_DATE] [--output FORMAT]
+```
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+   <dt>--user-name <i>USER_NAME</i>（選用）</dt>
+   <dd>列出含有使用者名稱的審核日誌。</dd>
+   <dt>--object-type <i>OBJECT_TYPE</i>（選用）</dt>
+   <dd>列出含有物件類型的審核日誌。</dd>
+   <dt>--object <i>OBJECT</i>（選用）</dt>
+   <dd>列出含有物件的審核日誌。</dd>
+   <dt>--action <i>ACTION</i>（選用）</dt>
+   <dd>列出含有動作的審核日誌。</dd>
+   <dt>--start-date <i>START_DATE</i>（選用）</dt>
+   <dd>列出開始日期之後的審核日誌。支援的格式為 yyyy-MM-ddTHH:mm:ss。</dd>
+   <dt>--end-date <i>END_DATE</i>（選用）</dt>
+   <dd>列出結束日期之前的審核日誌。支援的格式為 yyyy-MM-ddTHH:mm:ss。</dd>
+   <dt>--output FORMAT（選用）</dt>
+   <dd>指定輸出格式，目前只支援 JSON。</dd>
+</dl>
+
+## ibmcloud account user-preference
+{: #ibmcloud_account_user_preference}
+
+顯示使用者喜好設定的詳細資料
+
+```
+ibmcloud account user-preference [--output FORMAT]
+```
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+   <dt>--output FORMAT（選用）</dt>
+   <dd>指定輸出格式，目前只支援 JSON。</dd>
+</dl>
+
+## ibmcloud account user-preference-update
+{: #ibmcloud_account_user_preference_update}
+
+更新使用者喜好設定
+
+```
+ibmcloud account user-preference-update (--position NEW_POSITION) [--output FORMAT]
+```
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+   <dt>--position <i>NEW_POSITION</i>（選用）</dt>
+   <dd>設定使用者的職位，例如 "manager" 或 "student"。</dd>
+   <dt>--output FORMAT（選用）</dt>
+   <dd>指定輸出格式，目前只支援 JSON。</dd>
+</dl>
+
+## ibmcloud account platform-notification-subscribe
+{: #ibmcloud_account_platform_notification_subscribe}
+
+訂閱平台通知：
+```
+ibmcloud account platform-notification-subscribe (--type TYPE)
+```
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+   <dt>--type <i>TYPE</i>（選用）</dt>
+   <dd>通知類型，'unplanned_events'、'planned_maintenance' 其中一個。</dd>
+</dl>
+
+## ibmcloud account platform-notification-unsubscribe
+{: #ibmcloud_account_platform_notification_unsubscribe}
+
+取消訂閱平台通知：
+```
+ibmcloud account platform-notification-unsubscribe (--type TYPE)
+```
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+   <dt>--type <i>TYPE</i>（選用）</dt>
+   <dd>通知類型，'unplanned_events'、'planned_maintenance' 其中一個。</dd>
+</dl>
+
+## ibmcloud account domain-cert
+{: #ibmcloud_account_domain_cert}
+
+列出網域憑證資訊：
+```
+ibmcloud account domain-cert DOMAIN_NAME
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -665,18 +820,16 @@ ibmcloud app domain-cert DOMAIN_NAME
 <strong>範例</strong>：
 
 檢視網域 `ibmcxo-eventconnect.com` 的憑證資訊：
-
 ```
-ibmcloud app domain-cert ibmcxo-eventconnect.com
+ibmcloud account domain-cert ibmcxo-eventconnect.com
 ```
 
-## ibmcloud app domain-cert-add
-{: #accounts-add-domain-cert}
+## ibmcloud account domain-cert-add
+{: #ibmcloud_account_domain_cert_add}
 
 將憑證新增到現行組織中的指定網域。
-
 ```
-ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+ibmcloud account domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -701,18 +854,16 @@ ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWOR
 <strong>範例</strong>：
 
 將憑證新增到網域 `ibmcxo-eventconnect.com`：
-
 ```
-ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+ibmcloud account domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
 
-## ibmcloud app domain-cert-remove
-{: #accounts-remove-domain-cert}
+## ibmcloud account domain-cert-remove
+{: #ibmcloud_account_domain_cert_remove}
 
 從現行組織中的指定網域移除憑證。
-
 ```
-ibmcloud app domain-cert-remove DOMAIN [-f]
+ibmcloud account domain-cert-remove DOMAIN [-f]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-19"
 
-keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # 搜索和管理目录产品
 {: #ibmcloud_catalog}
@@ -57,7 +58,6 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 <strong>示例</strong>：
 
 搜索服务 `Automation test`：
-
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -65,8 +65,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
-获取目录条目
-
+获取目录条目：
 ```
 ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
@@ -93,7 +92,7 @@ ibmcloud catalog entry 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 
-创建新的目录条目（仅限帐户的目录管理员）：
+创建目录条目（仅限帐户的目录管理员）：
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -205,19 +204,19 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 <dl>
 
   <dt>--includes-add</dt>
-  <dd>将帐户（或逗号分隔帐户列表）添加到“包含”列表，授予该条目可视性。可接受电子邮件或帐户 GUID</dd>
+  <dd>将帐户（或逗号分隔帐户列表）添加到“包含”列表，授予该条目的可视性。可接受电子邮件或帐户 GUID。</dd>
   <dt>--includes-remove</dt>
-  <dd>从“包含”列表中除去帐户（或逗号分隔帐户列表），撤销该条目的可视性。可接受电子邮件或帐户 GUID</dd>  
+  <dd>从“包含”列表中除去帐户（或逗号分隔帐户列表），撤销该条目的可视性。可接受电子邮件或帐户 GUID。</dd>  
   <dt>--excludes-add </dt>
-  <dd>将帐户（或逗号分隔帐户列表）添加到“排除”列表。可接受电子邮件或帐户 GUID</dd>
+  <dd>将帐户（或逗号分隔帐户列表）添加到“排除”列表。可接受电子邮件或帐户 GUID。</dd>
   <dt>--excludes-remove</dt>
-  <dd>从“排除”列表中除去帐户（或逗号分隔帐户列表），撤销该条目的可视性。如果帐户是由全局管理员设置的，那么帐户管理员无法除去该帐户。可接受电子邮件或帐户 GUID</dd>
+  <dd>从“排除”列表中除去帐户（或逗号分隔帐户列表），撤销该条目的可视性。如果帐户是由全局管理员设置的，那么帐户管理员无法除去该帐户。可接受电子邮件或帐户 GUID。</dd>
   <dt>--owner</dt>
   <dd>更改对象的所有者。可接受电子邮件或帐户 GUID。</dd>
   <dt>--restrict</dt>
-  <dd>将可视性对象的限制更改为“专用”</dd>
+  <dd>将可视性对象的限制更改为“专用”。</dd>
   <dt>--unrestrict</dt>
-  <dd>将可视性对象的限制更改为“公共”</dd>  
+  <dd>将可视性对象的限制更改为“公共”。</dd>  
   <dt>-c</dt>
   <dd>包含特定于目录的配置参数的有效 JSON 对象，以内联方式或文件形式提供。要获取受支持的配置参数的列表，请参阅特定目录条目的文档。</dd>
   <dt>--global</dt>
@@ -257,13 +256,14 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
 ibmcloud catalog service-marketplace --global
 ```
+{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 查看 {{site.data.keyword.cloud_notm}} 上的样板模板。
 ```
-ibmcloud catalog templates [-d]
+ibmcloud catalog templates [-d] [--output json]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -273,6 +273,8 @@ ibmcloud catalog templates [-d]
    <dl>
    <dt>-d（可选）</dt>
    <dd>如果指定了 <i>-d</i> 选项，那么还会显示每个模板的描述。否则，只显示每个模板的标识和名称。</dd>
+   <dt>--output FORMAT（可选）</dt>
+   <dd>指定输出格式，目前仅支持 JSON。</dd>
    </dl>
 
 ## ibmcloud catalog template
@@ -280,7 +282,7 @@ ibmcloud catalog templates [-d]
 
 查看指定样板模板的详细信息。
 ```
-ibmcloud catalog template TEMPLATE_ID
+ibmcloud catalog template TEMPLATE_ID [--output json]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -289,6 +291,8 @@ ibmcloud catalog template TEMPLATE_ID
    <dl>
    <dt>TEMPLATE_ID（必需）</dt>
    <dd>样板模板的标识。使用 <i>ibmcloud templates</i> 可查看所有模板的标识。</dd>
+   <dt>--output FORMAT（可选）</dt>
+   <dd>指定输出格式，目前仅支持 JSON。</dd>
    </dl>
 
 
@@ -298,6 +302,7 @@ ibmcloud catalog template TEMPLATE_ID
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
+{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
@@ -329,20 +334,23 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 
 <strong>示例</strong>：
 
-基于 `javaHelloWorld` 模板创建 cf 应用程序 `my-app`：
+基于 `javaHelloWorld` 模板创建名为 `my-app` 的 `cf` 应用程序：
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
+{: codeblock}
 
 基于 `rubyHelloWorld` 模板，创建具有以下描述的应用程序 `my-ruby-app`：
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
+{: codeblock}
 
 基于 `pythonHelloWorld` 模板创建应用程序 `my-python-app`，不带自动启动：
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
+{: codeblock}
 
 ## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
@@ -374,8 +382,14 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
 
 查看运行时的详细信息。此命令仅可用于公共云。
 ```
-ibmcloud catalog runtime RUNTIME_ID
+ibmcloud catalog runtime RUNTIME_ID [--output json]
 ```
+
+<strong>命令选项</strong>：
+<dl>
+   <dt>--output FORMAT（可选）</dt>
+   <dd>指定输出格式，目前仅支持 JSON。</dd>
+</dl>
 
 <strong>示例</strong>：
 
@@ -383,13 +397,14 @@ ibmcloud catalog runtime RUNTIME_ID
 ```
 catalog runtime nodejsHelloWorld
 ```
+{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 列出所有运行时。此命令仅可用于公共云。
 ```
-ibmcloud catalog runtimes [-d]
+ibmcloud catalog runtimes [-d] [--output json]
 ```
 
 <strong>命令选项</strong>：
@@ -397,6 +412,8 @@ ibmcloud catalog runtimes [-d]
 <dl>
   <dt>-d</dt>
   <dd>显示每个运行时的描述</dd>
+  <dt>--output FORMAT（可选）</dt>
+  <dd>指定输出格式，目前仅支持 JSON。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -405,3 +422,4 @@ ibmcloud catalog runtimes [-d]
 ```
 ibmcloud catalog runtimes -d
 ```
+{: codeblock}

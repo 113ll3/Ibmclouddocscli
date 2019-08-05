@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html" path="cli"}
+{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli?topic=cloud-cli-getting-started" path="cli"}
 IBM Cloud CLI y Developer Tools
 
 	{: .navgroup id="learn"}
@@ -10,10 +10,13 @@ IBM Cloud CLI y Developer Tools
 
 	{: .navgroup id="howto"}
 	reference/ibmcloud/download_cli.md
+	install-devtools-manually.md
 	reference/ibmcloud/extend_cli.md
 	reference/ibmcloud/cli_docker.md
 	reference/ibmcloud/enable_cli_autocompletion.md
+	reference/ibmcloud/uninstall_cli.md
 	idt/index.md
+	idt/manage_devops_resources.md
 
 	{: .topicgroup}
 	IBM Cloud Developer Tools IDE Extensions
@@ -28,18 +31,17 @@ IBM Cloud CLI y Developer Tools
 
 	{: .navgroup id="reference"}
 	{: .topicgroup}
-	Mandatos de CLI de IBM Cloud (ibmcloud)
+	Mandatos de la CLI de IBM Cloud (ibmcloud)
 		reference/ibmcloud/bx_cli.md
 		reference/ibmcloud/cli_acct_org_role.md
 		reference/ibmcloud/cli_billing.md
 		reference/ibmcloud/cli_block_storage.md
 		reference/ibmcloud/cli_catalog.md
-		reference/ibmcloud/cli_cdn.md
-		reference/ibmcloud/cf_index.md
 		reference/ibmcloud/cli_cf_apps.md
 		reference/ibmcloud/cli_cf_services.md
 		reference/ibmcloud/cli_cfee.md
 		reference/ibmcloud/cli_dns.md
+		reference/ibmcloud/cli_enterprise.md
 		reference/ibmcloud/cli_file_storage.md
 		reference/ibmcloud/cli_global_ip.md
 		reference/ibmcloud/cli_hardware.md
@@ -53,39 +55,44 @@ IBM Cloud CLI y Developer Tools
 		reference/ibmcloud/cli_security.md
 		reference/ibmcloud/cli_securitygroup.md
 		reference/ibmcloud/cli_subnet.md
+		reference/ibmcloud/cli_ticket.md
+		reference/ibmcloud/cli_user.md
 		reference/ibmcloud/cli_virtual_server.md
 		reference/ibmcloud/cli_vlan.md
 	idt/commands.md
-	reference/ibmcloud/all_versions.md
 
 	{: .topicgroup}
-	Plugins de CLI de IBM Cloud
+	Plugins de la CLI de IBM Cloud
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
-		/auto-scaling-cli-plugin/auto-scaling-cli-plugin-autoscalingcli
+		/auto-scaling-cli-plugin/auto-scaling-cli-autoscalingcli
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
-		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
+		/databases-cli-plugin/cloud-databases-cli-cdb-reference
+		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
+		/cloud-object-storage-cli-plugin/cloud-object-storage-cli-ic-cos-cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
-		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
+		/containers-cli-plugin/containers-cli-plugin-kubernetes-service-cli
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
-		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
+		/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
+		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
+		/hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
 
 	{: .topicgroup}
 	Plugins de la CLI de Cloud Foundry
-		plugins/bluemix_admin/index.md
+		/cf-cli-plugin/cf-cli-plugin-cf-cli-plugin
+		plugins/admin/index.md
 		plugins/vpn/index.md
 
 	monitoring_logging.md
 
 	{: .topicgroup}
 	SDK para móvil
-		sdk/index.md
-		sdk/contribute.md
 		sdk/sdk.md
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md
 	{: .navgroup-end}
 
     {: .navgroup id="help"}
-	ts_createapps.md
+    faq.md
+    ts_createapps.md
     {: .navgroup-end}

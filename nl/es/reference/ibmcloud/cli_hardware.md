@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
+keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
 subcollection: cloud-cli
 
@@ -75,7 +75,7 @@ ibmcloud sl hardware create [OPTIONS]
 <dt>-b, --billing</dt>
 <dd>Tasa de facturación, por hora o mensual. El valor predeterminado es por hora si no se especifica.</dd>
 <dt>-i, --post-install</dt>
-<dd>Publicar-instalar script para descargar.</dd>
+<dd>Script posterior a la instalación para descargar.</dd>
 <dt>-k, --key</dt>
 <dd>Las claves SSH para añadir al usuario root, se permiten varias apariciones.</dd>
 <dt>-n, --no-public</dt>
@@ -184,8 +184,8 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>Filtrar por ID del propietario.</dd>
 <dt>--sortby</dt>
 <dd>Columna por la que se debe ordenar. Valor predeterminado:hostname, Opciones: id,guid,hostname,domain,public_ip,private_ip,datacenter,status,ipmi_ip,created,created_by.</dd>
-<dt>--columns</dt>
-<dd>Columnas que se deben visualizar. Valor predeterminado: id,hostname,domain,public_ip,private_ip,datacenter,status, Opciones: guid,cpu,memory,os,ipmi_ip,created,created_by,tags.</dd>
+<dt>--column</dt>
+<dd>Columna que se debe visualizar. Valor predeterminado: id,hostname,domain,public_ip,private_ip,datacenter,status, Opciones: guid,cpu,memory,os,ipmi_ip,created,created_by,tags.</dd>
 </dl>
 
 ## ibmcloud sl hardware power-cycle
@@ -253,7 +253,7 @@ ibmcloud sl hardware reload IDENTIFIER [OPTIONS]
 <strong>Opciones de mandato</strong>:
 <dl>
 <dt>-i, --postinstall</dt>
-<dd>Script de instalación posterior para descargar, sólo se ejecuta HTTPS, HTTP deja el archivo en /root.</dd>
+<dd>Script posterior a la instalación para descargar, sólo se ejecuta HTTPS, HTTP deja el archivo en /root.</dd>
 <dt>-k, --key</dt>
 <dd>ID de la clave SSH para añadir al usuario root, se permiten varias apariciones.</dd>
 <dt>-b, --upgrade-bios</dt>

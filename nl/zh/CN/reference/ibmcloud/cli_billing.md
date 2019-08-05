@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-29"
 
-keywords: ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
+keywords: cli, ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
 subcollection: cloud-cli
 
@@ -42,7 +42,6 @@ ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 <strong>示例</strong>：
 
 显示当前帐户 2016 年 6 月的使用情况和成本报告：
-
 ```
 ibmcloud billing account-usage -d 2016-06
 ```
@@ -108,6 +107,35 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>按资源组过滤实例。</dd>
   <dt>-d MONTH_DATE（可选）</dt>
   <dd>显示使用 YYYY-MM 格式指定的月份和日期的数据。如果未指定，那么会显示当月的使用情况。</dd>
+  <dt>--output FORMAT（可选）</dt>
+  <dd>指定输出格式，目前仅支持 JSON。</dd>
+</dl>
+
+## ibmcloud billing enterprise-usage
+{: #ibmcloud_billing_enterprise_usage}
+
+显示企业使用情况报告：
+```
+ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --account-group-id ACCOUNT_GROUP_ID | --account ACCOUNT_NAME | --account-id ACCOUNT_ID] [--month MONTH] [--children] [--output FORMAT]
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+
+<dl>
+  <dt>--account ACCOUNT_NAME（可选）</dt>
+  <dd>目标帐户的名称。</dd>
+  <dt>--account-id ACCOUNT_ID（可选）</dt>
+  <dd>目标帐户的标识。</dd>
+  <dt>--account-group ACCOUNT_GROUP_NAME（可选）</dt>
+  <dd>目标帐户组的名称。</dd>
+  <dt>--account-group-id ACCOUNT_GROUP_ID（可选）</dt>
+  <dd>目标帐户组的标识。</dd>
+  <dt>--children（可选）</dt>
+  <dd>显示子代使用情况报告。</dd>
+  <dt>--month MONTH（可选）</dt>
+  <dd>目标月份。缺省为当前月份。</dd>
   <dt>--output FORMAT（可选）</dt>
   <dd>指定输出格式，目前仅支持 JSON。</dd>
 </dl>

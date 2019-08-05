@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-18"
 
-keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
+keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
 subcollection: cloud-cli
 
@@ -25,7 +25,6 @@ subcollection: cloud-cli
 {: #ibmcloud_account_orgs}
 
 すべての組織をリストします。
-
 ```
 ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID] [-u ACCOUNT_OWNER]
 ```
@@ -37,26 +36,23 @@ ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID
    <dt>-r REGION_NAME</dt>
    <dd>地域名。 指定された地域内の組織をリストします。 未指定の場合、デフォルトは現行地域です。 「all」に設定された場合は、すべての地域の組織をリストします。</dd>
    <dt>--guid</dt>
-   <dd>組織の GUID を表示します。 このオプションは、「--output」と同時に指定することはできません。</dd>
+   <dd>組織の GUID を表示します。 このオプションは、`--output` と同時に指定することはできません。</dd>
    <dt>--output FORMAT</dt>
-   <dd>出力形式を指定します。現在、JSON のみがサポートされています。 このオプションは、「--guid」と同時に指定することはできません。</dd>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。 このオプションは、`--guid` と同時に指定することはできません。</dd>
    <dt>-c ACCOUNT_ID</dt>
-   <dd>アカウント ID。 特定アカウントの下の組織をリストします。 未指定の場合、デフォルトは現行アカウントです。 「all」に設定された場合、すべてのアカウントの下の組織をリストします。 このオプションは、「-u」と同時に指定することはできません。</dd>
+   <dd>アカウント ID。 アカウントの下の組織をリストします。 未指定の場合、デフォルトは現行アカウントです。 `all` に設定された場合、すべてのアカウントの下の組織をリストします。 このオプションは、`-u` と同時に指定することはできません。</dd>
    <dt>-u ACCOUNT_OWNER</dt>
-   <dd>アカウント所有者名。 特定ユーザーが所有するアカウントの下の組織をリストします。 未指定の場合、デフォルトは現行アカウントです。 「all」に設定された場合、すべてのアカウントの下の組織をリストします。 このオプションは、「-c」と同時に指定することはできません。</dd>
+   <dd>アカウント所有者名。 ユーザーが所有するアカウントの下の組織をリストします。 未指定の場合、デフォルトは現行アカウントです。 「all」に設定された場合、すべてのアカウントの下の組織をリストします。 このオプションは、`-c` と同時に指定することはできません。</dd>
    </dl>
 
 <strong>例</strong>:
 
-地域 `us-south` 内のすべての組織を、GUID の
-出力と共にリストします。
-
+地域 `us-south` 内のすべての組織を、GUID の出力と共にリストします。
 ```
 ibmcloud account orgs -r us-south --guid
 ```
 
 すべての組織を JSON 形式でリストします。
-
 ```
 ibmcloud account orgs --output JSON
 ```
@@ -65,7 +61,6 @@ ibmcloud account orgs --output JSON
 {: #ibmcloud_account_org}
 
 指定された組織の情報を表示します。
-
 ```
 ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
 ```
@@ -77,17 +72,16 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
    <dt>ORG_NAME (必須)</dt>
    <dd>組織の名前。</dd>
    <dt>-r REGION</dt>
-   <dd>地域名。 指定しない場合、デフォルトは現行地域です。 「all」に設定された場合は、すべての地域の指定された名前の組織がリストされます。</dd>
+   <dd>地域名。 指定しない場合、デフォルトは現行地域です。 `all` に設定された場合は、すべての地域の指定された名前の組織がリストされます。</dd>
    <dt>--guid</dt>
-   <dd>指定された組織の GUID を取得して表示します。 この組織の他の出力はすべて抑制されます。 このオプションは、「--output」と同時に指定することはできません。</dd>
+   <dd>組織の GUID を取得して表示します。この組織の他の出力はすべて抑制されます。 このオプションは、`--output` と同時に指定することはできません。</dd>
    <dt>--output REGION</dt>
-   <dd>出力形式を指定します。現在、JSON のみがサポートされています。 このオプションは、「--guid」と同時に指定することはできません。</dd>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。 このオプションは、`--guid` と同時に指定することはできません。</dd>
    </dl>
 
 <strong>例</strong>:
 
 組織 `IBM` の情報を、GUID の出力と共に表示します。
-
 ```
 ibmcloud account org IBM --guid
 ```
@@ -95,10 +89,9 @@ ibmcloud account org IBM --guid
 ## ibmcloud account org-create
 {: #ibmcloud_account_org_create}
 
-新しい組織を作成します。 この操作は、アカウントの所有者のみが実行できます。
-
+組織を作成します。この操作は、アカウントの所有者のみが実行できます。
 ```
-ibmcloud account org-create ORG_NAME [-f]
+ibmcloud account org-create ORG_NAME [-r, --region REGION]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -107,25 +100,23 @@ ibmcloud account org-create ORG_NAME [-f]
    <dl>
    <dt>ORG_NAME (必須)</dt>
    <dd>作成される組織の名前。</dd>
-   <dt>-f</dt>
-   <dd>確認を求めずに作成を強制します。</dd>
+   <dt>-r, --region REGION (オプション)</dt>
+   <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
    </dl>
 
 <strong>例</strong>:
 
 名前が `IBM` という組織を作成します。
-
 ```
-ibmcloud account org-create IBM
+ibmcloud account org-create IBM 
 ```
 
 ## ibmcloud account org-replicate
 {: #ibmcloud_account_org_replicate}
 
 現在の地域から別の地域に組織を複製します。
-
 ```
-ibmcloud account org-replicate ORG_NAME REGION_NAME
+ibmcloud account org-replicate ORG_NAME REGION_NAME [-r, --region SOURCE_REGION]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -136,12 +127,13 @@ ibmcloud account org-replicate ORG_NAME REGION_NAME
    <dd>複製する既存の組織の名前。</dd>
    <dt>REGION_NAME (必須)</dt>
    <dd>複製された組織をホストする地域の名前。</dd>
+   <dt>-r, --region REGION (オプション)</dt>
+   <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
    </dl>
 
 <strong>例</strong>:
 
 組織 `myorg` を地域 `eu-gb` に複製します。
-
 ```
 ibmcloud account org-replicate myorg eu-gb
 ```
@@ -150,9 +142,8 @@ ibmcloud account org-replicate myorg eu-gb
 {: #ibmcloud_account_org_rename}
 
 組織の名前を変更します。 この操作は、組織の管理者のみが実行できます。
-
 ```
-ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
+ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME [-r, --region REGION]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -163,13 +154,14 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
    <dd>名前を変更する組織の古い名前。</dd>
    <dt>NEW_ORG_NAME (必須)</dt>
    <dd>名前を変更する組織の新しい名前。</dd>
+   <dt>-r, --region REGION (オプション)</dt>
+   <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
    </dl>
 
 ## ibmcloud account spaces
 {: #ibmcloud_account_spaces}
 
 すべてのアカウント・スペースをリストします。
-
 ```
 ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 ```
@@ -178,24 +170,22 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 
 <strong>コマンド・オプション</strong>:
    <dl>
-   <dt>-o ORG_NAME</dt>
+   <dt>-o ORG_NAME (オプション)</dt>
    <dd>組織名。 指定された組織の下のスペースをリストします。 未指定の場合、デフォルトは現行組織です。</dd>
-   <dt>-r REGION-NAM</dt>
+   <dt>-r REGION-NAME (オプション)</dt>
    <dd>地域名。 指定した地域の下のスペースをリストします。 未指定の場合、デフォルトは現行地域です。</dd>
-   <dt>--output FORMAT</dt>
+   <dt>--output FORMAT (オプション)</dt>
    <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
    </dl>
 
 <strong>例</strong>:
 
 すべてのスペースをリストします
-
 ```
 ibmcloud account spaces
 ```
 
 組織 `org_example` のすべてのスペースを JSON 形式でリストします。
-
 ```
 ibmcloud account spaces -o org_example --output JSON
 ```
@@ -204,7 +194,6 @@ ibmcloud account spaces -o org_example --output JSON
 {: #ibmcloud_account_space}
 
 特定のスペースの情報を表示します。
-
 ```
 ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--security-group-rules]
 ```
@@ -218,9 +207,9 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
    <dt>-o ORG_NAME</dt>
    <dd>組織名。 未指定の場合、デフォルトは現行組織です。</dd>
    <dt>--guid</dt>
-   <dd>指定されたスペースの GUID を取得して表示します。 このスペースの他の出力はすべて抑制されます。 このオプションは、「--output」と同時に指定することはできません。</dd>
+   <dd>スペースの GUID を取得して表示します。このスペースの他の出力はすべて抑制されます。 このオプションは、`--output` と同時に指定することはできません。</dd>
    <dt>--output FORMAT</dt>
-   <dd>出力形式を指定します。現在、JSON のみがサポートされています。 このスペースの他の出力はすべて抑制されます。 このオプションは、「--guid」と同時に指定することはできません。</dd>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。 このスペースの他の出力はすべて抑制されます。 このオプションは、`--guid` と同時に指定することはできません。</dd>
    <dt>--security-group-rules</dt>
    <dd>このスペースに関連付けられているすべてのセキュリティー・グループのルールを取得します。</dd>
    </dl>
@@ -228,25 +217,21 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
 <strong>例</strong>:
 
 スペース `space_example` の情報を表示します。
-
 ```
 ibmcloud account space space_example
 ```
 
 スペース `space_example` の GUID を表示します。
-
 ```
 ibmcloud account space space_example --guid
 ```
 
 スペース `space_example` の情報を JSON 形式で表示します。
-
 ```
 ibmcloud account space space_example --output JSON
 ```
 
 スペース `space_example` のセキュリティー・グループ・ルールを表示します。
-
 ```
 ibmcloud account space space_example --security-group-rules
 ```
@@ -254,19 +239,17 @@ ibmcloud account space space_example --security-group-rules
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
 
-このコマンドの機能とオプションは [cf create-space](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") コマンドと同じです。
+このコマンドの機能とオプションは [`cf create-space`](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") コマンドと同じです。
 
 ## ibmcloud account space-rename
 {: #ibmcloud_account_space_rename}
 
-
-このコマンドの機能とオプションは [cf rename-space](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") コマンドと同じです。
+このコマンドの機能とオプションは [`cf rename-space`](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") コマンドと同じです。
 
 ## ibmcloud account space-delete
 {: #ibmcloud_account_space_delete}
 
-
-このコマンドの機能とオプションは [cf delete-space](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") コマンドと同じです。
+このコマンドの機能とオプションは [`cf delete-space`](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") コマンドと同じです。
 
 ## ibmcloud account org-users
 {: #ibmcloud_account_org_users}
@@ -274,7 +257,7 @@ ibmcloud account space space_example --security-group-rules
 指定された組織内のユーザーを役割別に表示します
 
 ```
-ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
+ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -283,26 +266,34 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 <dl>
 <dt>ORG_NAME (必須)</dt>
 <dd>組織の名前。</dd>
-<dt>-a (オプション)</dt>
+<dt>-a, -all (オプション)</dt>
 <dd>指定された組織内のすべてのユーザーを、役割別にグループ化せずにリストします。</dd>
-<dt>--output FORMAT (オプション)</dt>
-<dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。</dd>
-</dl>
+<dt>-r, --region REGION (オプション)</dt>
+<dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
+</dl> 
 
 ## ibmcloud account org-user-add
 {: #ibmcloud_account_org_user_add}
 
 組織にユーザーを追加します (組織管理者が必要)。
+```
+ ibmcloud account org-user-add USER_NAME ORG [-r, --region REGION]
+```
 
-```
- ibmcloud account org-user-add USER_NAME ORG
-```
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>USER_NAME (必須)</dt>
+<dd>ユーザーの名前。</dd>
+<dt>ORG (必須)</dt>
+<dd>組織の名前。</dd>
+<dt>-r, --region REGION (オプション)</dt>
+<dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
+</dl>  
 
 ## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
 
-組織からユーザーを削除します (組織管理者またはユーザー本人のみ)。
-
+組織からユーザーを削除します (組織管理者またはユーザーのみ)。
 ```
 ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
 ```
@@ -317,9 +308,8 @@ ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
 {: #ibmcloud_account_org_roles}
 
 現行ユーザーのすべての組織の役割を取得します。
-
 ```
-ibmcloud account org-roles [-u USER_ID]
+ibmcloud account org-roles [-r, --region REGION] [-u USER_ID] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -328,15 +318,18 @@ ibmcloud account org-roles [-u USER_ID]
   <dl>
    <dt>-u</dt>
    <dd>ユーザー ID。 指定しない場合、現行ユーザーがデフォルトで使用されます。</dd>
+   <dt>-r, --region REGION (オプション)</dt>
+   <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
+   <dt>--output FORMAT (オプション)</dt>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
   </dl>
 
 ## ibmcloud account org-role-set
 {: #ibmcloud_account_org_role_set}
 
-組織の役割をユーザーに割り当てます。 この操作は、組織の管理者のみが実行できます。
-
+組織の役割をユーザーに割り当てます。 この操作は、組織の管理者が実行する必要があります。
 ```
-ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
+ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE [-r, --region REGION]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -355,17 +348,18 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
    <li>OrgAuditor: この役割は、組織の情報とレポートに読み取りアクセスだけが可能です。</li>
    </ul>
    </dd>
+   <dt>-r, --region REGION (オプション)</dt>
+   <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
   </dl>
 
 <strong>例</strong>:
 
 ユーザー `Mary` を組織 `IBM` に役割 `OrgManager` として割り当てるには、次のように指定します。
-
 ```
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-組織/スペースの役割は CLI を使用して設定できますが、その他の許可を設定したい場合は、UI を使用する必要があります。 詳しくは、[リソースに対するアクセス権限の管理](/docs/iam/mngiam.html#iammanidaccser)を参照してください。
+組織およびスペースの役割は CLI を使用して設定できますが、その他の許可を設定したい場合は UI を使用する必要があります。詳しくは、[リソースに対するアクセス権限の管理](/docs/iam?topic=iam-iammanidaccser)を参照してください。
 {: note}
 <!-- Begin Staging URL vs Prod URL -->
 
@@ -373,9 +367,8 @@ ibmcloud account org-role-set Mary IBM OrgManager
 {: #ibmcloud_account_org_role_unset}
 
 組織の役割をユーザーから削除します。 この操作は、組織の管理者のみが実行できます。
-
 ```
-ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
+ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE [-r, --region REGION]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -383,7 +376,7 @@ ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
 <strong>コマンド・オプション</strong>:
    <dl>
    <dt>USER_NAME (必須)</dt>
-   <dd>削除されるユーザーの名前。</dd>
+   <dd>削除するユーザーの名前。</dd>
    <dt>ORG_NAME (必須)</dt>
    <dd>このユーザーの削除元の組織の名前。</dd>
    <dt>ORG_ROLE (必須)</dt>
@@ -394,12 +387,13 @@ ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <li>OrgAuditor: この役割は、組織の情報とレポートに読み取りアクセスだけが可能です。</li>
    </ul>
    </dd>
-    </dl>
+   <dt>-r, --region REGION (オプション)</dt>
+   <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
+   </dl>
 
 <strong>例</strong>:
 
 ユーザー `Mary` を組織 `IBM` の役割 `OrgManager` から削除するには、次のように指定します。
-
 ```
 ibmcloud account org-role-unset Mary IBM OrgManager
 ```
@@ -408,9 +402,8 @@ ibmcloud account org-role-unset Mary IBM OrgManager
 {: #ibmcloud_account_space_users}
 
 指定されたスペース内のユーザーを役割別に表示します
-
 ```
-ibmcloud account space-users ORG_NAME SPACE_NAME
+ibmcloud account space-users ORG_NAME SPACE_NAME [-r, --region REGION]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -421,15 +414,37 @@ ibmcloud account space-users ORG_NAME SPACE_NAME
    <dd>組織の名前。</dd>
    <dt>SPACE_NAME (必須)</dt>
    <dd>スペースの名前。</dd>
+   <dt>-r, --region REGION (オプション)</dt>
+   <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
+   </dl>
+
+## ibmcloud account space-roles
+{: #ibmcloud_account_space_roles}
+
+特定の組織の現行のユーザーの、すべてのスペースの役割を取得します
+
+```
+ibmcloud account space-roles ORG [-r, --region REGION] [--output FORMAT]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+   <dl>
+   <dt>ORG (必須)</dt>
+   <dd>組織の名前。</dd>
+   <dt>-r (オプション)</dt>
+   <dd>地域名。未指定の場合、デフォルトは現行地域です。</dd>
+   <dt>--output FORMAT (オプション)</dt>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
    </dl>
 
 ## ibmcloud account space-role-set
 {: #ibmcloud_account_space_role_set}
 
 スペースの役割をユーザーに割り当てます。 この操作は、スペースの管理者のみが実行できます。
-
 ```
-ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE [-r, --region REGION]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -446,16 +461,18 @@ ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_ROLE (必須)</dt>
    <dd>このユーザーの割り当て先のスペース内での役割の名前。 以下に例を示します。
    <ul>
-   <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、特定のスペースに対してフィーチャーを有効にします。</li>
+   <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、フィーチャーを有効にします。</li>
    <li>SpaceDeveloper: この役割は、アプリとサービスを作成して管理し、ログとレポートを表示します。</li>
    <li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。</li>
-   </ul></dd>
-    </dl>
+   </ul>
+   </dd>
+   <dt>-r, --region REGION (オプション)</dt>
+   <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
+   </dl>
 
 <strong>例</strong>:
 
 ユーザー `Mary` を組織 `IBM` およびスペース `Cloud` に役割 `SpaceManager` として割り当てるには、次のように指定します。
-
 ```
 ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 ```
@@ -464,9 +481,8 @@ ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 {: #ibmcloud_account_space_role_unset}
 
 スペースの役割をユーザーから削除します。 この操作は、スペースの管理者のみが実行できます。
-
 ```
-ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE [-r, --region REGION]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -475,7 +491,7 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
    <dl>
    <dt>USER_NAME (必須)</dt>
-   <dd>削除されるユーザーの名前。</dd>
+   <dd>削除するユーザーの名前。</dd>
    <dt>ORG_NAME (必須)</dt>
    <dd>このユーザーの削除元の組織の名前。</dd>
    <dt>SPACE_NAME (必須)</dt>
@@ -483,17 +499,18 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_ROLE (必須)</dt>
    <dd>このユーザーの削除元のスペース内での役割の名前。 以下に例を示します。
    <ul>
-   <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、特定のスペースに対してフィーチャーを有効にします。</li>
+   <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、フィーチャーを有効にします。</li>
    <li>SpaceDeveloper: この役割は、アプリとサービスを作成して管理し、ログとレポートを表示します。</li>
    <li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。</li>
    </ul></dd>
+   <dt>-r, --region REGION (オプション)</dt>
+   <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
     </dl>
 
 
 <strong>例</strong>:
 
 ユーザー `Mary` を組織 `IBM` と、役割 `SpaceManager` としてのスペース `Cloud` から削除するには、次のように指定します。
-
 ```
 ibmcloud account space-role-unset Mary IBM Cloud SpaceManager
 ```
@@ -501,41 +518,48 @@ ibmcloud account space-role-unset Mary IBM Cloud SpaceManager
 ## ibmcloud account list
 {: #ibmcloud_account_list}
 
-現行ユーザーのすべてのアカウントをリストします
-
+現行ユーザーのすべてのアカウントをリストします。
 ```
-ibmcloud account list
-```
-
-<strong>前提条件</strong>: エンドポイント、ログイン
-
-## ibmcloud account org-account
-{: #ibmcloud_account_org_account}
-
-指定された組織のアカウントを表示します (組織のユーザーが必要)。
-
-```
-ibmcloud account org-account ORG_NAME [--guid]
+ibmcloud account list [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
+   <dt>--output FORMAT (オプション)</dt>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
+</dl>
+
+## ibmcloud account org-account
+{: #ibmcloud_account_org_account}
+
+指定された組織のアカウントを表示します (組織のユーザーが必要)。
+```
+ibmcloud account org-account ORG_NAME [-r, --region REGION] [--guid | --output FORMAT]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-r (オプション)</dt>
+  <dd>地域名。未指定の場合、デフォルトは現行地域です。</dd>
   <dt>--guid (オプション)</dt>
   <dd>アカウント ID のみを表示します</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 ## ibmcloud account show
 {: #ibmcloud_account_show}
 
 アカウントの詳細を表示します。
-
 ```
 ibmcloud account show
 ```
 
-<strong>前提条件</strong>: エンドポイント、ログイン
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
@@ -544,7 +568,6 @@ ibmcloud account show
 <strong>例</strong>:
 
 現在のターゲット・アカウントの詳細を表示します
-
 ```
 ibmcloud account show
 ```
@@ -553,12 +576,11 @@ ibmcloud account show
 {: #ibmcloud_account_update}
 
 特定のアカウントを更新します。
-
 ```
 ibmcloud account update (--service-endpoint-enable true | false)
 ```
 
-<strong>前提条件</strong>: エンドポイント、ログイン
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
@@ -569,25 +591,65 @@ ibmcloud account update (--service-endpoint-enable true | false)
 <strong>例</strong>:
 
 現行アカウントのサービス・エンドポイント接続を有効にします。
-
 ```
 ibmcloud account update --service-endpoint-enable true
+```
+
+## ibmcloud account audit-logs
+{: #ibmcloud_account_audit_logs}
+
+SoftLayer アカウント監査ログをリストします。
+```
+account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [-o, --object OBJECT] [-a, --action ACTION] [-s, --start-date START_DATE] [-e, --end-date END_DATE]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-a, --action <i>ACTION</i></dt>
+  <dd>アクション。 アクションの監査ログをリストします。</dd>
+  <dt>-e, --end-date <i>END_DATE</i></dt>
+  <dd>終了日。 終了日より前の監査ログをリストします。 サポートされる形式は、yyyy-MM-ddTHH:mm:ss です。</dd>
+  <dt>-o, --object <i>OBJECT</i></dt>
+  <dd>オブジェクト。 オブジェクトの監査ログをリストします。</dd>
+  <dt>-t, --object-type <i>OBJECT_TYPE</i></dt>
+  <dd>オブジェクト・タイプ。 オブジェクト・タイプの監査ログをリストします。</dd>
+  <dt>-s, --start-date <i>START_DATE</i></dt>
+  <dd>開始日。 開始日より後の監査ログをリストします。 サポートされる形式は、yyyy-MM-ddTHH:mm:ss です。</dd>
+  <dt>-u, --user-name <i>USER_NAME</i></dt>
+  <dd>ユーザー名。 ユーザー名の監査ログをリストします。</dd>
+</dl>
+
+<strong>例</strong>:
+
+監査ログをリストします。
+```
+ibmcloud account audit-logs
 ```
 
 ## ibmcloud account users
 {: #ibmcloud_account_users}
 
-アカウントに関連付けられているユーザーを表示します。 この操作は、アカウントの所有者のみが実行できます。
+アカウントに関連付けられているユーザーを表示します。 この操作は、アカウント所有者が実行する必要があります。
+```
+ibmcloud account users [-c, --account-id ACCOUNT_ID] [--output FORMAT]
+```
 
-```
-ibmcloud account users
-```
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>-c (オプション)</dt>
+<dd>アカウント ID。 指定しない場合、現行アカウントがデフォルトで使用されます。</dd>
+<dt>--output FORMAT (オプション)</dt>
+<dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
+</dl>
 
 ## ibmcloud account user-remove
 {: #ibmcloud_account_user_remove}
 
 アカウントからユーザーを削除します (アカウント所有者のみ)。
-
 ```
 ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 ```
@@ -607,8 +669,7 @@ ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 ## ibmcloud account user-invite
 {: #ibmcloud_account_user_invite}
 
-ユーザーをアカウントに招待します
-
+ユーザーをアカウントに招待します。
 ```
 ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE, --space-role SPACE_ROLE]]
 ```
@@ -618,7 +679,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
 <strong>コマンド・オプション</strong>:
 <dl>
    <dt>USER_EMAIL (必須)</dt>
-   <dd>招待されるユーザーの E メール。</dd>
+   <dd>招待するユーザーの E メール。</dd>
    <dt>-o ORG</dt>
    <dd>ユーザーを招待する先の組織</dd>
    <dt>--org-role ORG_ROLE</dt>
@@ -629,11 +690,13 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dd>スペースの役割。 有効な入力は、SpaceManager、SpaceDeveloper、および SpaceAuditor です。</dd>
 </dl>
 
+アクセス権限を割り当てる準備ができていない場合、または Cloud Foundry アクセス権限の代わりに IAM ポリシーを割り当てる場合は、アクセス権限なしでユーザーを招待し、後でアクセス権限を割り当てることができます。ユーザーへのアクセス権限の割り当てについて詳しくは、[リソースに対するアクセス権限の管理](/docs/iam?topic=iam-iammanidaccser#assign_new_access)を参照してください。
+{: tip}
+
 ## ibmcloud account user-reinvite
 {: #ibmcloud_account_user_reinvite}
 
 ユーザーに招待を再送信します (アカウント管理者)。
-
 ```
 ibmcloud account user-reinvite USER_EMAIL
 ```
@@ -642,16 +705,107 @@ ibmcloud account user-reinvite USER_EMAIL
 <strong>コマンド・オプション</strong>:
 <dl>
    <dt>USER_EMAIL (必須)</dt>
-   <dd>再度招待されるユーザーの E メール。</dd>
+   <dd>再度招待するユーザーの E メール。</dd>
 </dl>
 
-## ibmcloud app domain-cert
-{: #accounts-list-domain-cert}
+## ibmcloud account audit-logs
+{: #ibmcloud_account_audit_logs}
 
-ドメインの証明書情報をリストします。
+アカウント監査ログをリストします
 
 ```
-ibmcloud app domain-cert DOMAIN_NAME
+ibmcloud account audit-logs [--user-name USER_NAME] [--object-type OBJECT_TYPE] [--object OBJECT] [--action ACTION] [--start-date START_DATE] [--end-date END_DATE] [--output FORMAT]
+```
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+   <dt>--user-name <i>USER_NAME</i> (オプション)</dt>
+   <dd>ユーザー名の監査ログをリストします。</dd>
+   <dt>--object-type <i>OBJECT_TYPE</i> (オプション)</dt>
+   <dd>オブジェクト・タイプの監査ログをリストします。</dd>
+   <dt>--object <i>OBJECT</i> (オプション)</dt>
+   <dd>オブジェクトの監査ログをリストします。</dd>
+   <dt>--action <i>ACTION</i> (オプション)</dt>
+   <dd>アクションの監査ログをリストします。</dd>
+   <dt>--start-date <i>START_DATE</i> (オプション)</dt>
+   <dd>開始日より後の監査ログをリストします。 サポートされる形式は、yyyy-MM-ddTHH:mm:ss です。</dd>
+   <dt>--end-date <i>END_DATE</i> (オプション)</dt>
+   <dd>終了日より前の監査ログをリストします。 サポートされる形式は、yyyy-MM-ddTHH:mm:ss です。</dd>
+   <dt>--output FORMAT (オプション)</dt>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
+</dl>
+
+## ibmcloud account user-preference
+{: #ibmcloud_account_user_preference}
+
+ユーザー設定の詳細を表示します
+
+```
+ibmcloud account user-preference [--output FORMAT]
+```
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+   <dt>--output FORMAT (オプション)</dt>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
+</dl>
+
+## ibmcloud account user-preference-update
+{: #ibmcloud_account_user_preference_update}
+
+ユーザー設定を更新します
+
+```
+ibmcloud account user-preference-update (--position NEW_POSITION) [--output FORMAT]
+```
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+   <dt>--position <i>NEW_POSITION</i> (オプション)</dt>
+   <dd>ユーザーのポジションを設定します ('manager' や 'student'など)。</dd>
+   <dt>--output FORMAT (オプション)</dt>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
+</dl>
+
+## ibmcloud account platform-notification-subscribe
+{: #ibmcloud_account_platform_notification_subscribe}
+
+プラットフォーム通知をサブスクライブします。
+```
+ibmcloud account platform-notification-subscribe (--type TYPE)
+```
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+   <dt>--type <i>TYPE</i> (オプション)</dt>
+   <dd>通知タイプ ('unplanned_events' と 'planned_maintenance' のいずれか)。</dd>
+</dl>
+
+## ibmcloud account platform-notification-unsubscribe
+{: #ibmcloud_account_platform_notification_unsubscribe}
+
+プラットフォーム通知をアンサブスクライブします。
+```
+ibmcloud account platform-notification-unsubscribe (--type TYPE)
+```
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+   <dt>--type <i>TYPE</i> (オプション)</dt>
+   <dd>通知タイプ ('unplanned_events' と 'planned_maintenance' のいずれか)。</dd>
+</dl>
+
+## ibmcloud account domain-cert
+{: #ibmcloud_account_domain_cert}
+
+ドメインの証明書情報をリストします。
+```
+ibmcloud account domain-cert DOMAIN_NAME
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -666,18 +820,16 @@ ibmcloud app domain-cert DOMAIN_NAME
 <strong>例</strong>:
 
 ドメイン `ibmcxo-eventconnect.com` の証明書情報を表示するには、次のように指定します。
-
 ```
-ibmcloud app domain-cert ibmcxo-eventconnect.com
+ibmcloud account domain-cert ibmcxo-eventconnect.com
 ```
 
-## ibmcloud app domain-cert-add
-{: #accounts-add-domain-cert}
+## ibmcloud account domain-cert-add
+{: #ibmcloud_account_domain_cert_add}
 
 現在の組織内の、指定したドメインに証明書を追加します。
-
 ```
-ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+ibmcloud account domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -702,18 +854,16 @@ ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWOR
 <strong>例</strong>:
 
 ドメイン `ibmcxo-eventconnect.com` に証明書を追加するには、以下のように指定します。
-
 ```
-ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+ibmcloud account domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
 
-## ibmcloud app domain-cert-remove
-{: #accounts-remove-domain-cert}
+## ibmcloud account domain-cert-remove
+{: #ibmcloud_account_domain_cert_remove}
 
 現在の組織内の、指定したドメインから証明書を削除します。
-
 ```
-ibmcloud app domain-cert-remove DOMAIN [-f]
+ibmcloud account domain-cert-remove DOMAIN [-f]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット

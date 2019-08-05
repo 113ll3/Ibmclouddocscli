@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-19"
 
-keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # 카탈로그 오퍼링 검색 및 관리
 {: #ibmcloud_catalog}
@@ -57,7 +58,6 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 <strong>예제</strong>:
 
 서비스 `Automation test` 검색:
-
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -65,8 +65,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
-카탈로그 항목을 가져옵니다.
-
+카탈로그 항목 가져오기:
 ```
 ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
@@ -93,7 +92,7 @@ ibmcloud catalog entry 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 
-새 카탈로그 항목을 작성합니다(계정의 카탈로그 관리자 전용).
+카탈로그 항목 작성(계정의 카탈로그 관리자 전용): 
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -105,7 +104,7 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
   <dt>-p, --parent</dt>
   <dd>오브젝트의 상위 ID</dd>
   <dt>-c</dt>
-  <dd>인라인 또는 파일로 제공되는 카탈로그 특정 구성 매개변수를 포함하는 올바른 JSON 오브젝트입니다. 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
+  <dd>인라인 또는 파일로 제공된 카탈로그 특정 구성 매개변수가 포함된 유효한 JSON 오브젝트입니다. 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
   <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
@@ -130,7 +129,7 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>-c</dt>
-  <dd>인라인 또는 파일로 제공되는 카탈로그 특정 구성 매개변수를 포함하는 올바른 JSON 오브젝트입니다. 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
+  <dd>인라인 또는 파일로 제공된 카탈로그 특정 구성 매개변수가 포함된 유효한 JSON 오브젝트입니다. 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
   <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
@@ -207,19 +206,19 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
   <dt>--includes-add</dt>
   <dd>계정(또는 쉼표로 구분된 계정의 목록)을 포함 목록에 추가하고 항목에 대한 가시성을 부여합니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--includes-remove</dt>
-  <dd>포함 목록에서 계정(또는 쉼표로 구분된 계정)을 제거하여 항목에 대한 가시성을 제거합니다. 이메일 또는 계정 GUID 허용</dd>  
+  <dd>계정(또는 쉼표로 구분된 계정의 목록)을 포함 목록에서 제거하고 항목에 대한 가시성을 취소합니다. 이메일 또는 계정 GUID 허용</dd>  
   <dt>--excludes-add</dt>
   <dd>계정(또는 쉼표로 구분된 계정의 목록)을 제외 목록에 추가합니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--excludes-remove</dt>
-  <dd>제외 목록에서 계정(또는 쉼표로 구분된 계정)을 제거하여 항목에 대한 가시성을 제거합니다. 글로벌 관리자가 계정을 설정한 경우, 계정 관리자는 계정을 제거할 수 없습니다. 이메일 또는 계정 GUID 허용</dd>
+  <dd>계정(또는 쉼표로 구분된 계정의 목록)을 제외 목록에서 제거하고 항목에 대한 가시성을 취소합니다. 글로벌 관리자가 계정을 설정한 경우, 계정 관리자는 계정을 제거할 수 없습니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--owner</dt>
   <dd>오브젝트의 소유자를 변경합니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--restrict</dt>
-  <dd>가시성 오브젝트의 제한을 '개인용'으로 변경</dd>
+  <dd>가시성 오브젝트의 제한을 '개인용'으로 변경합니다. </dd>
   <dt>--unrestrict</dt>
-  <dd>가시성 오브젝트의 제한을 '공용'으로 변경</dd>  
+  <dd>가시성 오브젝트의 제한을 '공용'으로 변경합니다. </dd>  
   <dt>-c</dt>
-  <dd>인라인 또는 파일로 제공되는 카탈로그 특정 구성 매개변수를 포함하는 올바른 JSON 오브젝트입니다. 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
+  <dd>인라인 또는 파일로 제공된 카탈로그 특정 구성 매개변수가 포함된 유효한 JSON 오브젝트입니다. 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
   <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
@@ -257,13 +256,14 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
 ibmcloud catalog service-marketplace --global
 ```
+{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 {{site.data.keyword.cloud_notm}}에서 표준 유형 템플리트를 확인합니다.
 ```
-ibmcloud catalog templates [-d]
+ibmcloud catalog templates [-d] [--output json]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -273,6 +273,8 @@ ibmcloud catalog templates [-d]
    <dl>
    <dt>-d(선택사항)</dt>
    <dd><i>-d</i> 옵션을 지정하면 각 템플리트의 설명도 표시됩니다. 그렇지 않으면 각 템플리트의 ID와 이름만 표시됩니다.</dd>
+   <dt>--output FORMAT(선택사항)</dt>
+   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
    </dl>
 
 ## ibmcloud catalog template
@@ -280,7 +282,7 @@ ibmcloud catalog templates [-d]
 
 지정된 표준 유형 템플리트의 자세한 정보를 봅니다.
 ```
-ibmcloud catalog template TEMPLATE_ID
+ibmcloud catalog template TEMPLATE_ID [--output json]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -289,6 +291,8 @@ ibmcloud catalog template TEMPLATE_ID
    <dl>
    <dt>TEMPLATE_ID(필수)</dt>
    <dd>표준 유형 템플리트의 ID입니다. 모든 템플리트의 ID를 보려면 <i>ibmcloud templates</i>를 사용하십시오.</dd>
+   <dt>--output FORMAT(선택사항)</dt>
+   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
    </dl>
 
 
@@ -298,6 +302,7 @@ ibmcloud catalog template TEMPLATE_ID
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
+{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
@@ -313,7 +318,7 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 <strong>명령 옵션</strong>:
    <dl>
    <dt>TEMPLATE_ID(필수)</dt>
-   <dd>애플리케이션이 작성될 때 기반으로 하는 템플리트입니다. 모든 템플리트의 ID를 보려면 <i>ibmcloud templates</i>를 사용하십시오.</dd>
+   <dd>작성 중에 애플리케이션의 기반이 되는 템플리트입니다. 모든 템플리트의 ID를 보려면 <i>ibmcloud templates</i>를 사용하십시오.</dd>
    <dt>CF_APP_NAME(필수)</dt>
    <dd>작성되는 cf 애플리케이션의 이름입니다.</dd>
    <dt>-n<i>HOSTNAME</i></dt>
@@ -323,26 +328,29 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
    <dt>--desc <i>DESCRIPTION</i>(선택사항)</dt>
    <dd>애플리케이션에 대한 설명입니다.</dd>
    <dt>--no-start(선택사항)</dt>
-   <dd>애플리케이션이 작성된 후에 자동으로 시작되지 않습니다. 지정하지 않으면 애플리케이션이 작성된 후 자동으로 시작됩니다.</dd>
+   <dd>작성 이후 자동으로 애플리케이션을 시작하지 않습니다. 이를 지정하지 않으면 작성 이후 자동으로 애플리케이션이 시작됩니다. </dd>
    </dl>
 
 
 <strong>예제</strong>:
 
-`javaHelloWorld` 템플리트를 기반으로 cf 애플리케이션 `my-app`을 작성합니다.
+`javaHelloWorld` 템플리트 기반으로 이름이 `my-app`인 `cf` 앱을 작성합니다.
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
+{: codeblock}
 
-`rubyHelloWorld` 템플리트를 기반으로 설명이 있는 `my-ruby-app` 애플리케이션을 작성합니다.
+`rubyHelloWorld` 템플리트를 기반으로 설명이 있는 `my-ruby-app` 앱을 작성합니다.
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
+{: codeblock}
 
-자동 시작 없이 `pythonHelloWorld` 템플리트를 기반으로 `my-python-app` 애플리케이션을 작성합니다.
+자동 시작 없이 `pythonHelloWorld` 템플리트를 기반으로 `my-python-app` 앱을 작성합니다.
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
+{: codeblock}
 
 ## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
@@ -360,7 +368,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
   <dt>-k, --kind</dt>
   <dd>지정된 유형에 대한 항목의 목록을 가져옵니다.</dd>
   <dt>--col</dt>
-  <dd>테이블의 추가 컬럼을 지정합니다. 현재는 "group", "provider" 및 "tags"입니다.</dd>
+  <dd>테이블의 추가 컬럼을 지정합니다. 현재는 "group", "provider" 및 "tags"입니다. </dd>
   <dt>--output TYPE(선택사항)</dt>
   <dd>--output value  출력 유형을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 '--id'와 배타적입니다.</dd>
   <dt>--global</dt>
@@ -374,8 +382,14 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
 
 런타임의 세부사항을 봅니다. 이 명령은 퍼블릭 클라우드에서만 사용할 수 있습니다.
 ```
-ibmcloud catalog runtime RUNTIME_ID
+ibmcloud catalog runtime RUNTIME_ID [--output json]
 ```
+
+<strong>명령 옵션</strong>:
+<dl>
+   <dt>--output FORMAT(선택사항)</dt>
+   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
+</dl>
 
 <strong>예제</strong>:
 
@@ -383,13 +397,14 @@ ibmcloud catalog runtime RUNTIME_ID
 ```
 catalog runtime nodejsHelloWorld
 ```
+{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 모든 런타임을 나열합니다. 이 명령은 퍼블릭 클라우드에서만 사용할 수 있습니다.
 ```
-ibmcloud catalog runtimes [-d]
+ibmcloud catalog runtimes [-d] [--output json]
 ```
 
 <strong>명령 옵션</strong>:
@@ -397,6 +412,8 @@ ibmcloud catalog runtimes [-d]
 <dl>
   <dt>-d</dt>
   <dd>각 런타임의 설명 표시</dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -405,3 +422,4 @@ ibmcloud catalog runtimes [-d]
 ```
 ibmcloud catalog runtimes -d
 ```
+{: codeblock}

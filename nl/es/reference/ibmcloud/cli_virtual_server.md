@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 
@@ -110,7 +110,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>--export</dt>
 <dd>Exporta opciones a un archivo de plantilla.</dd>
 <dt>-i, --postinstall</dt>
-<dd>Publicar-instalar script para descargar.</dd>
+<dd>Script posterior a la instalación para descargar.</dd>
 <dt>-k, --key</dt>
 <dd>ID de las claves SSH para añadir al usuario root (se permiten varios).</dd>
 <dt>--disk</dt>
@@ -354,8 +354,8 @@ ibmcloud sl vs list [OPTIONS]
 <dd>Filtrado por ID de usuario propietario de las instancias.</dd>
 <dt>--sortby</dt>
 <dd>Columna por la que ordenar, el valor predeterminado es:hostname; las opciones son:id,hostname,domain,datacenter,cpu,memory,public_ip,private_ip.</dd>
-<dt>--columns</dt>
-<dd>Columnas que se deben visualizar, el valor predeterminado es:id,hostname,public_ip,private_ip,datacenter,action; las opciones son: guid,power_state,created_by,tags.</dd>
+<dt>--column</dt>
+<dd>Columna a visualizar. El valor predeterminado es: id,hostname,public_ip,private_ip,datacenter,action; las opciones son: guid,power_state,created_by,tags.</dd>
 </dl>
 
 **Ejemplos**:
@@ -487,7 +487,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <strong>Opciones de mandato</strong>:
 <dl>
 <dt>-i, --postinstall</dt>
-<dd>Publicar-instalar script para descargar.</dd>
+<dd>Script posterior a la instalación para descargar.</dd>
 <dt>--image</dt>
 <dd>ID de imagen. El valor predeterminado es utilizar el sistema operativo actual.</dd>
 <dt>Consulte:</dt>

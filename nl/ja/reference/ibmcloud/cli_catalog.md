@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-19"
 
-keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # カタログ・オファリングの検索と管理
 {: #ibmcloud_catalog}
@@ -57,7 +58,6 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 <strong>例</strong>:
 
 サービス `Automation test` を検索します
-
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -66,7 +66,6 @@ ibmcloud catalog search -k service -q 'Automation test'
 {: #ibmcloud_catalog_entry}
 
 カタログ・エントリーを取得します
-
 ```
 ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
@@ -93,7 +92,7 @@ ibmcloud catalog entry 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 
-新規カタログ・エントリーを作成します (アカウントのカタログ管理者のみ)。
+カタログ・エントリーを作成します (アカウントのカタログ管理者のみ)。
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -105,7 +104,7 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
   <dt>-p, --parent</dt>
   <dd>オブジェクトの親 ID</dd>
   <dt>-c</dt>
-  <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。 サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
+  <dd>インラインまたはファイルのいずれかで提供されるカタログ固有の構成パラメーターを含む、有効な JSON オブジェクト。サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
   <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
@@ -130,7 +129,7 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>-c</dt>
-  <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。 サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
+  <dd>インラインまたはファイルのいずれかで提供されるカタログ固有の構成パラメーターを含む有効な JSON オブジェクト。サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
   <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
@@ -205,21 +204,21 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 <dl>
 
   <dt>--includes-add</dt>
-  <dd>アカウント (またはコンマ区切りの一連のアカウント) を組み込みリストに追加し、項目の可視性を付与します。 E メールまたはアカウント GUID を指定可能です</dd>
+  <dd>組み込みリストにアカウント (またはアカウントのコンマ区切りリスト) を追加して、エントリーに可視性を付与しています。E メールまたはアカウント GUID を指定可能です。</dd>
   <dt>--includes-remove</dt>
-  <dd>アカウント (またはコンマ区切りの一連のアカウント) を組み込みリストから削除し、項目の可視性を取り消します。 E メールまたはアカウント GUID を指定可能です</dd>  
+  <dd>組み込みリストからアカウント (またはアカウントのコンマ区切りリスト) を削除して、エントリーへの可視性を取り消しています。E メールまたはアカウント GUID を指定可能です。</dd>  
   <dt>--excludes-add</dt>
-  <dd>アカウント (またはコンマ区切りの一連のアカウント) を除外リストに追加します。 E メールまたはアカウント GUID を指定可能です</dd>
+  <dd>除外リストにアカウント (またはアカウントのコンマ区切りリスト) を追加しています。E メールまたはアカウント GUID を指定可能です。</dd>
   <dt>--excludes-remove</dt>
-  <dd>アカウント (またはコンマ区切りの一連のアカウント) を除外リストから削除し、項目の可視性を取り消します。 アカウントがグローバル管理者によって設定されていた場合は、アカウント管理者がそのアカウントを削除することはできません。 E メールまたはアカウント GUID を指定可能です</dd>
+  <dd>除外リストからアカウント (またはアカウントのコンマ区切りリスト) を削除して、エントリーへの可視性を取り消しています。アカウントがグローバル管理者によって設定されていた場合は、アカウント管理者がそのアカウントを削除することはできません。 E メールまたはアカウント GUID を指定可能です。</dd>
   <dt>--owner</dt>
   <dd>オブジェクトの所有者を変更します。 E メールまたはアカウント GUID を指定可能です。</dd>
   <dt>--restrict</dt>
-  <dd>表示可能オブジェクトの制限を「プライベート」に変更します</dd>
+  <dd>可視性オブジェクトの制限を「プライベート」に変更しています。</dd>
   <dt>--unrestrict</dt>
-  <dd>表示可能オブジェクトの制限を「パブリック」に変更します</dd>  
+  <dd>可視性オブジェクトの制限を「パブリック」に変更しています。</dd>  
   <dt>-c</dt>
-  <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。 サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
+  <dd>インラインまたはファイルのいずれかで提供されるカタログ固有の構成パラメーターを含む有効な JSON オブジェクト。サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
   <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
@@ -257,13 +256,14 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
 ibmcloud catalog service-marketplace --global
 ```
+{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 {{site.data.keyword.cloud_notm}} のボイラープレート・テンプレートを表示します。
 ```
-ibmcloud catalog templates [-d]
+ibmcloud catalog templates [-d] [--output json]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -274,6 +274,8 @@ ibmcloud catalog templates [-d]
    <dt>-d (オプション)</dt>
    <dd><i>-d</i> オプションが指定されている場合、各テンプレートの説明
 も表示されます。 それ以外の場合、各テンプレートの ID および名前のみが表示されます。</dd>
+   <dt>--output FORMAT (オプション)</dt>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
    </dl>
 
 ## ibmcloud catalog template
@@ -281,7 +283,7 @@ ibmcloud catalog templates [-d]
 
 指定されたボイラープレート・テンプレートの詳細情報を表示します。
 ```
-ibmcloud catalog template TEMPLATE_ID
+ibmcloud catalog template TEMPLATE_ID [--output json]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -291,6 +293,8 @@ ibmcloud catalog template TEMPLATE_ID
    <dt>TEMPLATE_ID (必須)</dt>
    <dd>ボイラープレート・テンプレートの ID。 すべてのテンプレートの ID を表示するには、
 <i>ibmcloud templates</i> を使用します。</dd>
+   <dt>--output FORMAT (オプション)</dt>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
    </dl>
 
 
@@ -300,6 +304,7 @@ ibmcloud catalog template TEMPLATE_ID
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
+{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
@@ -315,34 +320,39 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 <strong>コマンド・オプション</strong>:
    <dl>
    <dt>TEMPLATE_ID (必須)</dt>
-   <dd>アプリケーションの作成時にアプリケーションの基となるテンプレート。 すべてのテンプレートの ID を表示するには、<i>ibmcloud templates</i> を使用します。</dd>
+   <dd>作成時にアプリケーションの基となるテンプレート。すべてのテンプレートの ID を表示するには、<i>ibmcloud templates</i> を使用します。</dd>
    <dt>CF_APP_NAME (必須)</dt>
    <dd>作成される cf アプリケーションの名前。</dd>
    <dt>-n<i>HOSTNAME</i></dt>
-   <dd>CF アプリケーションのホスト名。 指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.cloud_notm}} によって自動的に設定されます。</dd>
+   <dd>CF アプリケーションのホスト名。指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.cloud_notm}} によって自動的に設定されます。</dd>
    <dt>-d<i>DOMAINNAME</i></dt>
-   <dd>CF アプリケーションのドメイン。指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.cloud_notm}} によって自動的に設定されます。</dd>
+   <dd>CF アプリケーションのドメイン。 指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.cloud_notm}} によって自動的に設定されます。</dd>
    <dt>--desc <i>DESCRIPTION</i> (オプション)</dt>
    <dd>アプリケーションの説明。</dd>
    <dt>--no-start (オプション)</dt>
-   <dd>アプリケーションが作成された後、アプリケーションを自動的に開始しません。 指定されない場合、アプリケーションは作成された後で自動的に開始されます。</dd>
+   <dd>アプリケーションが作成された後、アプリケーションを自動的に開始しません。指定されない場合、アプリケーションは作成された後で自動的に開始されます。</dd>
    </dl>
 
 
 <strong>例</strong>:
 
-`javaHelloWorld` テンプレートをベースにして cf アプリケーション `my-app` を作成します。
+`javaHelloWorld` テンプレートに基づいて、`my-app` という名前の `cf` アプリを作成します。
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
+{: codeblock}
 
-`rubyHelloWorld` テンプレートに基づき、
-```ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud"
-``` という記述を使用して、アプリケーション `my-ruby-app` を作成します。
-`pythonHelloWorld` テンプレートをベースにして、自動開始なしでアプリケーション `my-python-app` を作成します。
+`rubyHelloWorld` テンプレートに基づいて、説明付きのアプリ `my-ruby-app` を作成します。
+```
+ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
+```
+{: codeblock}
+
+`pythonHelloWorld` テンプレートをベースにして、自動開始なしでアプリ `my-python-app` を作成します。
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
+{: codeblock}
 
 ## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
@@ -374,8 +384,14 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
 
 ランタイムの詳細を表示します。 このコマンドは、パブリック・クラウドにのみ使用可能です。
 ```
-ibmcloud catalog runtime RUNTIME_ID
+ibmcloud catalog runtime RUNTIME_ID [--output json]
 ```
+
+<strong>コマンド・オプション</strong>:
+<dl>
+   <dt>--output FORMAT (オプション)</dt>
+   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
+</dl>
 
 <strong>例</strong>:
 
@@ -383,13 +399,14 @@ ibmcloud catalog runtime RUNTIME_ID
 ```
 catalog runtime nodejsHelloWorld
 ```
+{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 すべてのランタイムをリストします。 このコマンドは、パブリック・クラウドにのみ使用可能です。
 ```
-ibmcloud catalog runtimes [-d]
+ibmcloud catalog runtimes [-d] [--output json]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -397,6 +414,8 @@ ibmcloud catalog runtimes [-d]
 <dl>
   <dt>-d</dt>
   <dd>各ランタイムの説明を表示します</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -405,3 +424,4 @@ ibmcloud catalog runtimes [-d]
 ```
 ibmcloud catalog runtimes -d
 ```
+{: codeblock}

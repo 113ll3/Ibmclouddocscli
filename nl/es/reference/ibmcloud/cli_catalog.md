@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-19"
 
-keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # Búsqueda y gestión de ofertas del catálogo
 {: #ibmcloud_catalog}
@@ -57,7 +58,6 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 <strong>Ejemplos</strong>:
 
 Busque el servicio `Prueba de automatización`:
-
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -65,8 +65,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
-Obtener una entrada de catálogo
-
+Obtener una entrada de catálogo:
 ```
 ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
@@ -93,7 +92,7 @@ ibmcloud catalog entry 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 
-Crear una nueva entrada de catálogo (sólo administrador del catálogo de una cuenta):
+Crear una entrada de catálogo (sólo administrador del catálogo de una cuenta):
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -205,19 +204,19 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 <dl>
 
   <dt>--includes-add</dt>
-  <dd>Añadir una cuenta (o lista de cuentas separadas por comas) a la lista de inclusiones, concediendo visibilidad a la entrada. Las GUID de correo electrónico o cuenta son aceptables</dd>
+  <dd>Añadir una cuenta (o lista de cuentas separadas por comas) a la lista de inclusiones, concediendo visibilidad a la entrada. Las GUID de correo electrónico o cuenta son aceptables.</dd>
   <dt>--includes-remove</dt>
-  <dd>Eliminar una cuenta (o lista de cuentas separadas por comas) de la lista de inclusiones, revocando la visibilidad a la entrada. Las GUID de correo electrónico o cuenta son aceptables</dd>  
+  <dd>Eliminar una cuenta (o lista de cuentas separadas por comas) de la lista de inclusiones, revocando la visibilidad a la entrada. Las GUID de correo electrónico o cuenta son aceptables.</dd>  
   <dt>--excludes-add</dt>
-  <dd>Añadir una cuenta (o lista de cuentas separadas por comas) a la lista de exclusiones. Las GUID de correo electrónico o cuenta son aceptables</dd>
+  <dd>Añadir una cuenta (o lista de cuentas separadas por comas) a la lista de exclusiones. Las GUID de correo electrónico o cuenta son aceptables.</dd>
   <dt>--excludes-remove</dt>
-  <dd>Eliminar una cuenta (o lista de cuentas separadas por comas) de la lista de exclusiones, revocando la visibilidad a la entrada. Si la cuenta la definieron administradores globales, los administradores de cuenta no pueden eliminarla. Las GUID de correo electrónico o cuenta son aceptables</dd>
+  <dd>Eliminar una cuenta (o lista de cuentas separadas por comas) de la lista de exclusiones, revocando la visibilidad a la entrada. Si la cuenta la definieron administradores globales, los administradores de cuenta no pueden eliminarla. Las GUID de correo electrónico o cuenta son aceptables.</dd>
   <dt>--owner</dt>
   <dd>Cambiar el propietario de un objeto. Las GUID de correo electrónico o cuenta son aceptables.</dd>
   <dt>--restrict</dt>
-  <dd>Cambiar la restricción del objeto de visibilidad a 'Privada'</dd>
+  <dd>Cambiar la restricción del objeto de visibilidad a 'Privada'.</dd>
   <dt>--unrestrict</dt>
-  <dd>Cambiar la restricción del objeto de visibilidad a 'Pública'</dd>  
+  <dd>Cambiar la restricción del objeto de visibilidad a 'Pública'.</dd>  
   <dt>-c</dt>
   <dd>Objeto JSON válido que contiene parámetros de configuración específicos del catálogo, proporcionados en línea o en un archivo. Para obtener una lista de parámetros de configuración soportados, consulte la documentación para la entrada de catálogo concreta.</dd>
   <dt>--global</dt>
@@ -257,13 +256,14 @@ Mostrar ofertas de servicio en el ámbito global:
 ```
 ibmcloud catalog service-marketplace --global
 ```
+{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 Visualizar las plantillas de contenedor modelo en {{site.data.keyword.cloud_notm}}.
 ```
-ibmcloud catalog templates [-d]
+ibmcloud catalog templates [-d] [--output json]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
@@ -273,6 +273,8 @@ ibmcloud catalog templates [-d]
    <dl>
    <dt>-d (opcional)</dt>
    <dd>Si se especifica la opción <i>-d</i>, también se mostrará la descripción de cada plantilla. De lo contrario, sólo se mostrará el ID y el nombre de cada plantilla.</dd>
+   <dt>--output FORMAT (opcional)</dt>
+   <dd>Especificar el formato de salida; actualmente solo se admite JSON.</dd>
    </dl>
 
 ## ibmcloud catalog template
@@ -280,7 +282,7 @@ ibmcloud catalog templates [-d]
 
 Ver la información detallada de una plantilla de contenedor modelo especificada.
 ```
-ibmcloud catalog template TEMPLATE_ID
+ibmcloud catalog template TEMPLATE_ID [--output json]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
@@ -289,6 +291,8 @@ ibmcloud catalog template TEMPLATE_ID
    <dl>
    <dt>TEMPLATE_ID (necesario)</dt>
    <dd>ID de la plantilla de contenedor modelo. Utilice <i>ibmcloud templates</i> para ver los ID de todas las plantillas.</dd>
+   <dt>--output FORMAT (opcional)</dt>
+   <dd>Especificar el formato de salida; actualmente solo se admite JSON.</dd>
    </dl>
 
 
@@ -298,6 +302,7 @@ Ver detalles de la plantilla `mobileBackendStarter`:
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
+{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
@@ -313,11 +318,11 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 <strong>Opciones de mandato</strong>:
    <dl>
    <dt>TEMPLATE_ID (necesario)</dt>
-   <dd>Plantilla en la que se basa la aplicación cuando se crea. Utilice <i>ibmcloud templates</i> para ver el ID de todas las plantillas.</dd>
+   <dd>La plantilla en la que se basa la aplicación cuando se crea. Utilice <i>ibmcloud templates</i> para ver el ID de todas las plantillas.</dd>
    <dt>CF_APP_NAME (necesario)</dt>
    <dd>Nombre de la aplicación cf que se debe crear.</dd>
    <dt>-n<i>HOSTNAME</i></dt>
-   <dd>Nombre de host de la aplicación CF. Si no se especifica, la ruta se establece mediante {{site.data.keyword.cloud_notm}} que se basa automáticamente en el nombre de la app y en el dominio predeterminado.</dd>
+   <dd>El nombre de host de la aplicación CF. Si no se especifica, la ruta se establece mediante {{site.data.keyword.cloud_notm}} que se basa automáticamente en el nombre de la app y en el dominio predeterminado.</dd>
    <dt>-d<i>DOMAINNAME</i></dt>
    <dd>Nombre de dominio de la aplicación CF. Si no se especifica, la ruta se establece mediante {{site.data.keyword.cloud_notm}} que se basa automáticamente en el nombre de la app y en el dominio predeterminado.</dd>
    <dt>--desc <i>DESCRIPTION</i> (opcional)</dt>
@@ -329,20 +334,23 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 
 <strong>Ejemplos</strong>:
 
-Crear una aplicación cf `my-app` basada en la plantilla `javaHelloWorld`:
+Crear una app `cf` denominada `my-app` basada en la plantilla `javaHelloWorld`:
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
+{: codeblock}
 
-Crear una aplicación `my-ruby-app` basada en la plantilla `rubyHelloWorld` con una descripción:
+Crear una app `my-ruby-app` basada en la plantilla `rubyHelloWorld` con una descripción:
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
+{: codeblock}
 
-Crear una aplicación `my-python-app` basada en la plantilla `pythonHelloWorld` sin inicio automático:
+Crear una app `my-python-app` basada en la plantilla `pythonHelloWorld` sin inicio automático:
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
+{: codeblock}
 
 ## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
@@ -360,7 +368,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
   <dt>-k, --kind</dt>
   <dd>Obtener una lista de entradas del tipo especificado.</dd>
   <dt>--col</dt>
-  <dd>Especifica columnas adicionales para la tabla. Actualmente "group", "provider" y "tags".</dd>
+  <dd>Especifica columnas adicionales para la tabla. Actualmente, "group", "provider" y "tags".</dd>
   <dt>--output TYPE (opcional)</dt>
   <dd>--output value  Especifique el tipo de salida, ahora solo se da soporte a JSON. Esta opción es exclusiva con '--id'.</dd>
   <dt>--global</dt>
@@ -374,8 +382,14 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
 
 Visualice los detalles de un tiempo de ejecución. Este mandato solo está disponible para nube pública.
 ```
-ibmcloud catalog runtime RUNTIME_ID
+ibmcloud catalog runtime RUNTIME_ID [--output json]
 ```
+
+<strong>Opciones de mandato</strong>:
+<dl>
+   <dt>--output FORMAT (opcional)</dt>
+   <dd>Especificar el formato de salida; actualmente solo se admite JSON.</dd>
+</dl>
 
 <strong>Ejemplos</strong>:
 
@@ -383,13 +397,14 @@ Mostrar los detalles del tiempo de ejecución "nodejsHelloWorld":
 ```
 catalog runtime nodejsHelloWorld
 ```
+{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 Listar todos los tiempos de ejecución. Este mandato solo está disponible para nube pública.
 ```
-ibmcloud catalog runtimes [-d]
+ibmcloud catalog runtimes [-d] [--output json]
 ```
 
 <strong>Opciones de mandato</strong>:
@@ -397,6 +412,8 @@ ibmcloud catalog runtimes [-d]
 <dl>
   <dt>-d</dt>
   <dd>Mostrar la descripción de cada tiempo de ejecución</dd>
+  <dt>--output FORMAT (opcional)</dt>
+  <dd>Especificar el formato de salida; actualmente solo se admite JSON.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -405,3 +422,4 @@ Listar todos los tiempos de ejecución junto con sus descripciones:
 ```
 ibmcloud catalog runtimes -d
 ```
+{: codeblock}

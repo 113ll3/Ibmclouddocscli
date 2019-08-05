@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-19"
 
-keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # 搜尋及管理型錄供應項目
 {: #ibmcloud_catalog}
@@ -57,7 +58,6 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 <strong>範例</strong>：
 
 搜尋服務 `Automation test`：
-
 ```
 ibmcloud catalog search -k service -q 'Automation test'
 ```
@@ -65,8 +65,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
-取得型錄項目
-
+取得型錄項目：
 ```
 ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
@@ -93,7 +92,7 @@ ibmcloud catalog entry 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 
-建立新型錄項目（僅限帳戶的型錄管理者）：
+建立型錄項目（僅限帳戶的型錄管理者）：
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -205,19 +204,19 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 <dl>
 
   <dt>--includes-add</dt>
-  <dd>將帳戶（或逗點區隔的帳戶清單）新增至 includes 清單，並授與項目的可見性。可接受電子郵件或帳戶 GUID</dd>
+  <dd>將帳戶（或逗號分隔帳戶清單）新增到「包含」清單，授權該項目的可見性。可接受電子郵件或帳戶 GUID。</dd>
   <dt>--includes-remove</dt>
-  <dd>將帳戶（或逗點區隔的帳戶清單）從 includes 清單移除，並撤銷項目的可見性。可接受電子郵件或帳戶 GUID</dd>  
+  <dd>從「包含」清單中移除帳戶（或逗號分隔帳戶清單），撤銷該項目的可見性。可接受電子郵件或帳戶 GUID。</dd>  
   <dt>--excludes-add</dt>
-  <dd>將帳戶（或逗點區隔的帳戶清單）新增至 excludes 清單。可接受電子郵件或帳戶 GUID</dd>
+  <dd>將帳戶（或逗號分隔帳戶清單）新增到「排除」清單。可接受電子郵件或帳戶 GUID。</dd>
   <dt>--excludes-remove</dt>
-  <dd>將帳戶（或逗點區隔的帳戶清單）從 excludes 清單移除，並撤銷項目的可見性。如果帳戶是由廣域管理者所設定，則帳戶管理者無法移除該帳戶。可接受電子郵件或帳戶 GUID</dd>
+  <dd>從「排除」清單中移除帳戶（或逗號分隔帳戶清單），撤銷該項目的可見性。如果帳戶是由廣域管理者所設定，則帳戶管理者無法移除該帳戶。可接受電子郵件或帳戶 GUID。</dd>
   <dt>--owner</dt>
   <dd>變更物件的擁有者。可接受電子郵件或帳戶 GUID。</dd>
   <dt>--restrict</dt>
-  <dd>將可見性物件的限制變更為 'Private'</dd>
+  <dd>將可見性物件的限制變更為「專用」。</dd>
   <dt>--unrestrict</dt>
-  <dd>將可見性物件的限制變更為 'Public'</dd>  
+  <dd>將可見性物件的限制變更為「公用」。</dd>  
   <dt>-c</dt>
   <dd>包含型錄特定配置參數的有效 JSON 物件（透過行內或檔案所提供）。如需所支援配置參數的清單，請參閱特定型錄項目的文件。</dd>
   <dt>--global</dt>
@@ -257,13 +256,14 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
 ibmcloud catalog service-marketplace --global
 ```
+{: codeblock}
 
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 檢視 {{site.data.keyword.cloud_notm}} 上的樣板範本。
 ```
-ibmcloud catalog templates [-d]
+ibmcloud catalog templates [-d] [--output json]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -273,6 +273,8 @@ ibmcloud catalog templates [-d]
    <dl>
    <dt>-d（選用）</dt>
    <dd>如果指定 <i>-d</i> 選項，也會顯示每個範本的說明。否則，只會顯示每一個範本的 ID 及名稱。</dd>
+   <dt>--output FORMAT（選用）</dt>
+   <dd>指定輸出格式，目前只支援 JSON。</dd>
    </dl>
 
 ## ibmcloud catalog template
@@ -280,7 +282,7 @@ ibmcloud catalog templates [-d]
 
 檢視所指定樣板範本的詳細資訊。
 ```
-ibmcloud catalog template TEMPLATE_ID
+ibmcloud catalog template TEMPLATE_ID [--output json]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -289,6 +291,8 @@ ibmcloud catalog template TEMPLATE_ID
    <dl>
    <dt>TEMPLATE_ID（必要）</dt>
    <dd>樣板範本的 ID。請使用 <i>ibmcloud templates</i> 來檢視所有範本的 ID。</dd>
+   <dt>--output FORMAT（選用）</dt>
+   <dd>指定輸出格式，目前只支援 JSON。</dd>
    </dl>
 
 
@@ -298,6 +302,7 @@ ibmcloud catalog template TEMPLATE_ID
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
+{: codeblock}
 
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
@@ -323,26 +328,29 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
    <dt>--desc <i>DESCRIPTION</i>（選用）</dt>
    <dd>應用程式的說明。</dd>
    <dt>--no-start（選用）</dt>
-   <dd>不要在建立應用程式後自動啟動該應用程式。如果未指定，會在建立應用程式之後自動啟動該應用程式。</dd>
+   <dd>建立應用程式後，不自動啟動應用程式。如果未指定，應用程式在建立後將自動啟動。</dd>
    </dl>
 
 
 <strong>範例</strong>：
 
-根據 `javaHelloWorld` 範本建立 cf 應用程式 `my-app`：
+根據 `javaHelloWorld` 範本建立一個名稱為 `my-app` 的 `cf` 應用程式：
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
+{: codeblock}
 
 根據 `rubyHelloWorld` 範本建立應用程式 `my-ruby-app`，並具有說明：
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
+{: codeblock}
 
-根據 `pythonHelloWorld` 範本建立應用程式 `my-python-app`，不自動啟動：
+根據 `pythonHelloWorld` 範本建立應用程式 `my-python-app`，且不自動啟動：
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
+{: codeblock}
 
 ## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
@@ -360,7 +368,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
   <dt>-k, --kind</dt>
   <dd>取得指定類型的項目清單。</dd>
   <dt>--col</dt>
-  <dd>指定表格的其他直欄。目前為 "group"、"provider" 及 "tags"。</dd>
+  <dd>指定表格的其他直欄。目前有 "group"、"provider" 和 "tags"。</dd>
   <dt>--output TYPE（選用）</dt>
   <dd>--output value  指定輸出 TYPE，目前只支援 JSON。此選項與 '--id' 不能同時使用。</dd>
   <dt>--global</dt>
@@ -374,8 +382,14 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
 
 檢視運行環境的詳細資料。這個指令僅適用於公用雲端。
 ```
-ibmcloud catalog runtime RUNTIME_ID
+ibmcloud catalog runtime RUNTIME_ID [--output json]
 ```
+
+<strong>指令選項</strong>：
+<dl>
+   <dt>--output FORMAT（選用）</dt>
+   <dd>指定輸出格式，目前只支援 JSON。</dd>
+</dl>
 
 <strong>範例</strong>：
 
@@ -383,13 +397,14 @@ ibmcloud catalog runtime RUNTIME_ID
 ```
 catalog runtime nodejsHelloWorld
 ```
+{: codeblock}
 
 ## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 列出所有運行環境。這個指令僅適用於公用雲端。
 ```
-ibmcloud catalog runtimes [-d]
+ibmcloud catalog runtimes [-d] [--output json]
 ```
 
 <strong>指令選項</strong>：
@@ -397,6 +412,8 @@ ibmcloud catalog runtimes [-d]
 <dl>
   <dt>-d</dt>
   <dd>顯示每個運行環境的說明</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 <strong>範例</strong>：
@@ -405,3 +422,4 @@ ibmcloud catalog runtimes [-d]
 ```
 ibmcloud catalog runtimes -d
 ```
+{: codeblock}
