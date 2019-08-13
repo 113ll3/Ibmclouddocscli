@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-13"
 
 keywords: cli, ibmcloud dev toolchains, ibmcloud dev toolchain-get, ibmcloud dev toolchain-delete, ibmcloud dev toolchain-open, ibmcloud dev pipeline-get, ibmcloud dev pipeline-invoke, ibmcloud dev pipeline-log, ibmcloud dev pipeline-open, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -114,4 +114,4 @@ Use the following `ibmcloud dev` commands to manage DevOps resources.
 - [`pipeline-open`](/docs/cli/idt?topic=cloud-cli-idt-cli#pipeline-open) Open the pipeline in the browser.
 - [`pipeline-log`](/docs/cli/idt?topic=cloud-cli-idt-cli#pipeline-log) View the logs of a pipeline's execution.
 
-For more information, see the full `ibmcloud dev` [command reference](/docs/cli/idt?topic=idt-cli).
+For more information, see the full `ibmcloud dev` [command reference](/docs/cli?topic=cloud-cli-idt-cli).
