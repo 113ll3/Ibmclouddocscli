@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-15"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -112,7 +112,7 @@ The following CLI commands help in working with your project during the deployme
 - [`view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) View the URL of your project.
 
 ### Reference Blogs and Videos
-{: #ref3}
+{: #idt-reference}
 
 - Blog: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 - Blog: [Deploying to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/blogs/cloud-archive/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
