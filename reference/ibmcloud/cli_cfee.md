@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-15"
+lastupdated: "2019-08-16"
 
 keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
@@ -14,6 +14,7 @@ subcollection: cloud-cli
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # Working with the Cloud Foundry Enterprise Environment service
 {: #ibmcloud_commands_cfee}
@@ -51,7 +52,7 @@ ibmcloud cfee environment NAME [--id]
    <dt>NAME (required)</dt>
    <dd>The name of the environment to be shown.</dd>
    <dt>--id</dt>
-   <dd>Show ID only</dd>
+   <dd>Show ID only.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -115,7 +116,7 @@ ibmcloud cfee org ORG [--guid] [--env ENV]
    <dt>--env ENV</dt>
    <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
    <dt>--guid</dt>
-   <dd>Display org GUID only, all other output for the org is suppressed</dd>
+   <dd>Display org GUID only, all other output for the org is suppressed.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -155,7 +156,7 @@ ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
    <dt>--env ENV</dt>
    <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
    <dt>-q, --quota QUOTA</dt>
-   <dd>Quota to assign to the newly created org (use default quota if not specified)</dd>
+   <dd>Quota to assign to the newly created org (use default quota if not specified).</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -195,7 +196,7 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
    <dt>--env ENV</dt>
    <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
    <dt>-f, --force</dt>
-   <dd>Force deletion without confirmation</dd>
+   <dd>Force deletion without confirmation.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -233,7 +234,7 @@ ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
    <dt>ORG (required)</dt>
    <dd>The name of the organization.</dd>
    <dt>-a, --all</dt>
-   <dd>List all users in the specified org</dd>
+   <dd>List all users in the specified org.</dd>
    <dt>--env ENV</dt>
    <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
   </dl>
@@ -261,7 +262,7 @@ ibmcloud cfee org-users org_example -a
 ## ibmcloud cfee org-role-set
 {: #ibmcloud_cfee_org_role_set}
 
-Assign an org role to a user (org manager required)
+Assign an org role to a user (org manager required):
 ```
 ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
 ```
@@ -377,7 +378,7 @@ ibmcloud cfee spaces -o org_example --env env_example
 ## ibmcloud cfee space
 {: #ibmcloud_cfee_space}
 
-Show the info of specified space
+Show the info of specified space:
 ```
 ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--env ENV]
 ```
@@ -533,7 +534,7 @@ ibmcloud cfee space-delete space_example new_pace_example -f -o org_example --en
 ## ibmcloud cfee space-role-set
 {: #ibmcloud_cfee_space_role_set}
 
-Assign a space role to a user
+Assign a space role to a user:
 ```
 ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
 ```
@@ -576,7 +577,7 @@ ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceMana
 ## ibmcloud cfee space-role-unset
 {: #ibmcloud_cfee_space_role_unset}
 
-Remove a space role from a user
+Remove a space role from a user:
 ```
 ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
 ```
@@ -619,8 +620,7 @@ ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceMa
 ## ibmcloud cfee space-roles
 {: #ibmcloud_cfee_space_roles}
 
-Get all space roles of current user under specific org
-
+Get all space roles of current user under specific org:
 ```
 ibmcloud cfee space-roles ORG [--env ENV]
 ```
@@ -652,7 +652,7 @@ ibmcloud cfee space-roles org_example --env env_example
 ## ibmcloud cfee space-users
 {: #ibmcloud_cfee_space_users}
 
-Display users in specified space by role
+Display users in specified space by role:
 ```
 ibmcloud cfee space-users ORG SPACE [--env ENV]
 ```
@@ -732,7 +732,7 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 ## ibmcloud cfee create-locations
 {: #ibmcloud_cfee_create_locations}
 
-Make request to get a list of available data centers for the targeted regions
+Make request to get a list of available data centers for the targeted regions:
 ```
 ibmcloud cfee create-locations [--output FORMAT]
 ```
@@ -743,7 +743,7 @@ ibmcloud cfee create-locations [--output FORMAT]
 <strong>Command options</strong>:
 <dl>
   <dt>--output FORMAT</dt>
-  <dd>Specify output format, only JSON is supported now.</dd>
+  <dd>Specify output format. Only JSON is supported.</dd>
 </dl>
 
 ## ibmcloud cfee create-permission-get
@@ -764,7 +764,7 @@ ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [
    <dt>--access-group GROUP_NAME</dt>
    <dd>The name of the access group to check. The default access group is `cfee-provision-access-group`.</dd>
    <dt>--output FORMAT</dt>
-   <dd>Specify permissions output format, only JSON is supported now.</dd>
+   <dd>Specify permissions output format. Only JSON is supported.</dd>
   </dl>
   
 <strong>Examples</strong>:
