@@ -17,6 +17,7 @@ IBM Cloud CLI and Developer Tools
 	reference/ibmcloud/uninstall_cli.md
 	idt/index.md
 	idt/manage_devops_resources.md
+	idt/deploy_to_icp.md
 
 	{: .topicgroup}
 	IBM Cloud Developer Tools IDE Extensions
