@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-15"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -21,7 +21,7 @@ subcollection: cloud-cli
 # {{site.data.keyword.cloud_notm}} admin CLI
 {: #ibmcloud-admincli}
 
-You can manage your {{site.data.keyword.cloud_notm}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command-line interface (CLI) with the {{site.data.keyword.cloud_notm}} admin CLI plug-in. For example, you can add users from an LDAP registry.
+You can manage your {{site.data.keyword.cloud_notm}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command line interface (CLI) with the {{site.data.keyword.cloud_notm}} admin CLI plug-in. For example, you can add users from an LDAP registry.
 
 Before you begin, install the Cloud Foundry CLI. The {{site.data.keyword.cloud_notm}} admin CLI plug-in
 requires `cf` version 6.11.2 or later. [Download Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
@@ -75,46 +75,8 @@ Complete the following steps to uninstall the plug-in.
 
 Then, you can add the updated repository and install the latest plug-in.
 
-## Using the {{site.data.keyword.cloud_notm}} admin CLI Plug-in
-{: #using-admin-cli}
-
-You can use the {{site.data.keyword.cloud_notm}} admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks.
-
-To see a list of commands, run the following command:
-```
-cf plugins
-```
-{: codeblock}
-
-For more help for a command, use the `-help` option.
-
-### Connecting and logging in to {{site.data.keyword.cloud_notm}}
-{: #connecting-ibm-cloud}
-
-1. To connect to the {{site.data.keyword.cloud_notm}} API endpoint, run the following command:
-  ```
-  cf api api.us-south.cf.cloud.ibm.com
-  ```
-  {: codeblock}
-  
-  Even though the legacy `api.*.bluemix.net` Cloud Foundry API endpoints are still available, you can update scripts and infrastructure automation to use the following updated Cloud Foundry API endpoints for your region:
-
-  * api.us-south.cf.cloud.ibm.com (previously api.ng.bluemix.net)
-  * api.eu-gb.cf.cloud.ibm.com (previously api.eu-gb.bluemix.net)
-  * api.us-east.cf.cloud.ibm.com (previously api.us-east.bluemix.net)
-  * api.eu-de.cf.cloud.ibm.com (previously api.eu-de.bluemix.net)
-  * api.au-syd.cf.cloud.ibm.com (previously api.au-syd.bluemix.net)
-
-  You can check the admin console Resources and information page for the correct URL. The URL is shown in the API information section in the **API URL** field.
-
-2. Log in to {{site.data.keyword.cloud_notm}} by running the following command:
-  ```
-  cf login
-  ```
-  {: codeblock}
-
-## Administering users
-{: #admin_users}
+## Managing users
+{: #managing_users_cli}
 
 ### Adding a user
 {: #admin_add_user}
@@ -145,7 +107,9 @@ You can also use **`ba au`** as an alias for the longer **`ba add-user`** comman
 ### Inviting a user from {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_invite_public}
 
-Each {{site.data.keyword.Bluemix_dedicated_notm}} environment has a public, client-owned, corporate account in {{site.data.keyword.cloud_notm}}. In order for users in the Dedicated environment to create clusters with the {{site.data.keyword.containershort}}, the administrator must add the users to this public corporate account. When the users are added to the public corporate account, their Dedicated and public accounts are linked together. Users can then use their IBMid to log in to both Dedicated and public simultaneously, and can create resources in the public account from the Dedicated interface. For more information, see [Setting up IBM Cloud Container Service on Dedicated](/docs/containers?topic=containers-dedicated#dedicated_setup). To invite Dedicated users to the public account:
+Each {{site.data.keyword.Bluemix_dedicated_notm}} environment has a public, client-owned, corporate account in {{site.data.keyword.cloud_notm}}. In order for users in the Dedicated environment to create clusters with the {{site.data.keyword.containershort}}, the administrator must add the users to this public corporate account. When the users are added to the public corporate account, their Dedicated and public accounts are linked together. Users can then use their IBMid to log in to both Dedicated and public simultaneously, and can create resources in the public account from the Dedicated interface. For more information, see [Setting up IBM Cloud Container Service on Dedicated](/docs/containers?topic=containers-dedicated#dedicated_setup).
+
+To invite Dedicated users to the public account:
 ```
 cf ba invite-users-to-public -userid=user_email -organization=dedicated_org_id -apikey=public_api_key -public_org_id=public_org_id
 ```
@@ -159,7 +123,7 @@ To add Dedicated environment users to your {{site.data.keyword.cloud_notm}} publ
 <dt>dedicated_org_id</dt>
 <dd>If you are inviting all users currently in a Dedicated account organization, the Dedicated account organization ID.</dd>
 <dt>public_api_key</dt>
-<dd>An API key for inviting users to the public account. This must be generated by the admin of the public account.</dd>
+<dd>An API key for inviting users to the public account. The key must be generated by the admin of the public account.</dd>
 <dt>public_org_id</dt>
 <dd>The ID of the public account organization you are inviting users to.</dd>
 </dl>
@@ -167,8 +131,9 @@ To add Dedicated environment users to your {{site.data.keyword.cloud_notm}} publ
 ### Listing users who are invited from {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-If you invite Dedicated environment users to your {{site.data.keyword.cloud_notm}} account with the [**`invite-users-to-public`** command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users with an existing IBMid have an ACTIVE status. Invited users that didn't have an existing IBMid have a status of either PENDING or ACTIVE, depending on whether the invitation was accepted. To list the users in your {{site.data.keyword.cloud_notm}} account:
+If you invite Dedicated environment users to your {{site.data.keyword.cloud_notm}} account with the [**`invite-users-to-public`** command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users with an existing IBMid have an ACTIVE status. Invited users that didn't have an existing IBMid have a status of either PENDING or ACTIVE, depending on whether the invitation was accepted.
 
+To list the users in your {{site.data.keyword.cloud_notm}} account:
 ```
 cf ba invite-users-status -apikey=public_api_key
 ```
@@ -178,7 +143,7 @@ To add Dedicated environment users to your {{site.data.keyword.cloud_notm}} publ
 
 <dl>
 <dt>public_api_key</dt>
-<dd>The API key that was used to invite the users to the account. This must be generated by the admin of the public account.</dd>
+<dd>The API key that was used to invite the users to the account. The key must be generated by the admin of the public account.</dd>
 </dl>
 
 <!-- staging-only commands start. Live for interconnect -->
@@ -186,9 +151,7 @@ To add Dedicated environment users to your {{site.data.keyword.cloud_notm}} publ
 ### Searching for a user
 {: #admin_search_user}
 
-To search for a user, use the following command with the optional search filter parameters
-(name, permission, organization, and role):
-
+To search for a user, use the following command with the optional search filter parameters (name, permission, organization, and role):
 ```
 cf ba search-users -name=user_name -permission=permission_value -organization=organization_value -role=role_value
 ```
@@ -235,7 +198,6 @@ You can also use **`ba sp`** as an alias for the longer **`ba set-permissions`**
 {: #admin_remov_user}
 
 To remove a user from your {{site.data.keyword.cloud_notm}} environment, use the following command:
-
 ```
 cf ba remove-user user_name
 ```
@@ -252,8 +214,9 @@ You can also use the **`ba ru`** as an alias for the longer **`ba remove-user`**
 ### Enabling managers to add users
 {: #clius_emau}
 
-If you have the Superuser permission in your {{site.data.keyword.cloud_notm}} environment, you can enable organization managers to add users to the organizations they manage. To enable managers to add users, use the following command:
+If you have the Superuser permission in your {{site.data.keyword.cloud_notm}} environment, you can enable organization managers to add users to the organizations they manage.
 
+To enable managers to add users, use the following command:
 ```
 cf ba enable-managers-add-users
 ```
@@ -266,7 +229,6 @@ You can also use the **`ba emau`** as an alias for the longer **`ba enable-manag
 {: #clius_dmau}
 
 To disable managers from adding users, use the following command:
-
 ```
 cf ba disable-managers-add-users
 ```
@@ -282,7 +244,6 @@ You can also use the **`ba dmau`** command as an alias for the longer **`ba disa
 {: #admin_add_org}
 
 To add an organization, use the following command:
-
 ```
 cf ba create-org organization manager
 ```
@@ -302,7 +263,6 @@ You can also use **`ba co`** as an alias for the longer **`ba create-org`** comm
 {: #admin_delete_org}
 
 To delete an organization, use the following command:
-
 ```
 cf ba delete-org organization
 ```
@@ -320,7 +280,6 @@ You can also use **`ba do`** as an alias for the longer **`ba delete-org`** comm
 {: #admin_ass_user_org}
 
 To assign a user in your {{site.data.keyword.cloud_notm}} environment to a particular organization, use the following command:
-
 ```
 cf ba set-org user_name organization [role]
 ```
@@ -341,9 +300,7 @@ You can also use **`ba so`** as an alias for the longer **`ba set-org`** command
 ### Unassigning a user from an organization
 {: #admin_unass_user_org}
 
-To unassign a user in your {{site.data.keyword.cloud_notm}} environment from a
-particular organization, use the following command:
-
+To unassign a user in your {{site.data.keyword.cloud_notm}} environment from a particular organization, use the following command:
 ```
 cf ba unset-org user_name organization [role]
 ```
@@ -365,7 +322,6 @@ You can also use **`ba uo`** as an alias for the longer **`ba unset-org`** comma
 {: #admin_set_org_quota}
 
 To set the usage quota for a particular organization, use the following command:
-
 ```
 cf ba set-quota organization plan
 ```
@@ -386,7 +342,6 @@ You can also use **`ba sq`** as an alias for the longer **`ba set-quota`** comma
 {: #admin_find_containquotas}
 
 To find the quota for containers for an organization, use the following command:
-
 ```
 cf ibmcloud-admin containers-quota organization
 ```
@@ -404,7 +359,6 @@ You can also use **`ba cq`** as an alias for the longer **`ibmcloud-admin contai
 {: #admin_set_containquotas}
 
 To set the quota for containers in an organization, use the following command with at least one of the options included:
-
 ```
 cf ibmcloud-admin set-containers-quota organization options
 ```
@@ -420,16 +374,16 @@ You can include multiple options, but you must include at least one.
 <dd>The choices are floating-ips-max value (short name fim), memory-max value (short name mm), memory-space-default value (short name msd), or image-limit value (short name il). The value must be an integer.</dd>
 </dl>
 
-Optionally, you can provide a file that contains specific configuration parameters in a valid JSON object. If you use the **`-file`** option, it takes precedence and the other options are ignored. To provide a file instead of setting the options, use the following command:
+Optionally, you can provide a file that contains specific configuration parameters in a valid JSON object. If you use the **`-file`** option, it takes precedence and the other options are ignored.
 
+To provide a file instead of setting the options, use the following command:
 ```
 cf ibmcloud-admin set-containers-quota organization -file path_to_JSON_file
 ```
 {: codeblock}
 
-The JSON file should have the format that is shown in the following example:
-
-```
+See the following JSON example:
+```json
 {
   "floating_ips_max": 10,
   "floating_ips_space_default": 0,
@@ -438,7 +392,7 @@ The JSON file should have the format that is shown in the following example:
   "image_limit": 10
 }
 ```
-{: codeblock}
+{: pre}
 
 You can also use **`ba scq`** as an alias for the longer **`ibmcloud-admin set-containers-quota`** command name.
 {: tip}
@@ -449,11 +403,9 @@ You can also use **`ba scq`** as an alias for the longer **`ibmcloud-admin set-c
 ### Adding a space to the organization
 
 To add a space in the organization, use the following command:
-
 ```
 cf ibmcloud-admin create-space organization space_name
 ```
-
 {: codeblock}
 
 <dl>
@@ -469,11 +421,9 @@ You can also use **`ba cs`** as an alias for the longer **`ba create-space`** co
 ### Deleting a space from the organization
 
 To remove a space from the organization, use the following command:
-
 ```
 cf ibmcloud-admin delete-space organization space_name
 ```
-
 {: codeblock}
 
 <dl>
@@ -489,11 +439,9 @@ You can also use **`ba cs`** as an alias for the longer **`ba delete-space`** co
 ### Adding a user to a space with a role
 
 To create a user in a space with a specified role, use the following command:
-
 ```
 cf ibmcloud-admin set-space organization space_name user_name role
 ```
-
 {: codeblock}
 
 <dl>
@@ -514,11 +462,9 @@ You can also use **`ba ss`** as an alias for the longer **`ba set-space`** comma
 ### Removing the role of a user in a space
 
 To remove the role of a user in a space, use the following command:
-
 ```
 cf ibmcloud-admin unset-space organization space_name user_name role
 ```
-
 {: codeblock}
 
 <dl>
@@ -542,9 +488,7 @@ You can also use **`ba us`** as an alias for the longer **`ba unset-space`** com
 {: #admin_ena_service_org}
 
 To enable a service to be displayed in the
-{{site.data.keyword.cloud_notm}} catalog for all
-organizations, use the following command:
-
+{{site.data.keyword.cloud_notm}} catalog for all organizations, use the following command:
 ```
 cf ba enable-service-plan plan_identifier
 ```
@@ -561,9 +505,7 @@ You can also use **`ba esp`** as an alias for the longer **`ba enable-service-pl
 ### Disabling services for all organizations
 {: #admin_dis_service_org}
 
-To disable a service from being visible in the {{site.data.keyword.cloud_notm}} catalog for all
-organizations, use the following command:
-
+To disable a service from being visible in the {{site.data.keyword.cloud_notm}} catalog for all organizations, use the following command:
 ```
 cf ba disable-service-plan plan_identifier
 ```
@@ -580,8 +522,9 @@ You can also use **`ba dsp`** as an alias for the longer **`ba disable-service-p
 ### Adding service visibility for organizations
 {: #admin_addvis_service_org}
 
-You can add an organization from the list of organizations that can see a specific service in the {{site.data.keyword.cloud_notm}} catalog. To allow an organization to view a specific service in the catalog, use the following command:
+You can add an organization from the list of organizations that can see a specific service in the {{site.data.keyword.cloud_notm}} catalog.
 
+To allow an organization to view a specific service in the catalog, use the following command:
 ```
 cf ba add-service-plan-visibility plan_identifier organization
 ```
@@ -601,8 +544,9 @@ You can also use **`ba aspv`** as an alias for the longer **`ba add-service-plan
 {: #admin_remvis_service_org}
 
 You can remove an organization from the list of organizations that can see a
-specific service in the {{site.data.keyword.cloud_notm}} catalog. To remove the visibility of a service in the catalog for an organization, use the following command:
+specific service in the {{site.data.keyword.cloud_notm}} catalog.
 
+To remove the visibility of a service in the catalog for an organization, use the following command:
 ```
 cf ba remove-service-plan-visibility plan_identifier organization
 ```
@@ -622,9 +566,9 @@ You can also use **`ba rspv`** as an alias for the longer **`ba remove-service-p
 {: #admin_editvis_service_org}
 
 You can edit and replace the list of services that specific
-organizations can see in the {{site.data.keyword.cloud_notm}} catalog. To replace all existing visible services for an organization or multiple organizations, use the
-following command:
+organizations can see in the {{site.data.keyword.cloud_notm}} catalog.
 
+To replace all existing visible services for an organization or multiple organizations, use the following command:
 ```
 cf ba edit-service-plan-visibilities plan_identifier organization_1 optional_organization_2
 ```
@@ -649,7 +593,6 @@ You can also use **`ba espv`** as an alias for the longer **`ba edit-service-pla
 {: #admin_adding_report}
 
 To add a security report, use the following command:
-
 ```
 cf ba add-report category date PDF|TXT|LOG RTF
 ```
@@ -675,7 +618,6 @@ You can also use **`ba ar`** as an alias for the longer **`ba add-report`** comm
 {: #admin_del_report}
 
 To delete a security report, use the following command:
-
 ```
 cf ba delete-report category date name
 ```
@@ -697,7 +639,6 @@ You can also use **`ba d`r** as an alias for the longer **`ba delete-report`** c
 {: #admin_retr_report}
 
 To retrieve a security report, use the following command:
-
 ```
 cf ba retrieve-report search
 ```
@@ -705,7 +646,7 @@ cf ba retrieve-report search
 
 <dl>
 <dt>search</dt>
-<dd>The filename of the report. If there is a space in the name, use quotation marks around the
+<dd>The file name of the report. If there is a space in the name, use quotation marks around the
 name.</dd>
 </dl>
 
@@ -715,11 +656,13 @@ You can also use **`ba rr`** as an alias for the longer **`ba retrieve-report`**
 ## Viewing resource metric information
 {: #cliresourceusage}
 
-You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources and the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) and cells (Diego architecture) usage data. To view the resource metric information, use the following command:
+You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources and the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) and cells (Diego architecture) usage data.
 
+To view the resource metric information, use the following command:
 ```
 cf ba resource-metrics
 ```
+{: codeblock}
 
 You can also use **`ba rsm`** as an alias for the longer **`ba resource-metrics`** command name.
 {: tip}
@@ -727,8 +670,9 @@ You can also use **`ba rsm`** as an alias for the longer **`ba resource-metrics`
 ## Viewing resource metric history
 {: #cliresourceusagehistory}
 
-You can retrieve resource metric history for memory and disk usage. The metrics returned include the amount of resources that are used out of the total available, for both physical and reserved resources. Historical data for memory and disk usage can be displayed hourly, daily, or monthly. You can specify start and end dates to retrieve data within a specific date range. The default historical data, when no dates are specified, are hourly memory data for the latest 48 hours. Data is displayed in descending order, with more recent dates shown first. To view the resource metric history information, use the following command:
+You can retrieve resource metric history for memory and disk usage. The metrics that are returned include the amount of resources that are used out of the total available, for both physical and reserved resources. Historical data for memory and disk usage can be displayed hourly, daily, or monthly. You can specify start and end dates to retrieve data within a specific date range. The default historical data, when no dates are specified, are hourly memory data for the latest 48 hours. Data is displayed in descending order, with more recent dates shown first.
 
+To view the resource metric history information, use the following command:
 ```
 cf ba resource-metrics-history hourly|daily|monthly  memory|disk   start|end
 ```
@@ -736,7 +680,7 @@ cf ba resource-metrics-history hourly|daily|monthly  memory|disk   start|end
 
 <dl>
 <dt>--hourly</dt>
-<dd>View the historical data for the last 48 hours. This is the default value.</dd>
+<dd>View the historical data for the last 48 hours. 48 hours is the default value.</dd>
 <dt>--daily</dt>
 <dd>View the historical data daily average for the last 30 days.</dd>
 <dt>--monthly</dt>
@@ -763,7 +707,6 @@ cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00
 {: codeblock}
 
 You can view the previous list of command parameters and examples by using the following command:
-
 ```
 cf ba resource-metrics-history -help
 ```
@@ -778,7 +721,6 @@ You can also use **`ba rsmh`** as an alias for the longer **`ba resource-metrics
 {: #clilistservbro}
 
 To list service brokers, use the following command:
-
 ```
 cf ba service-brokers broker_name
 ```
@@ -798,7 +740,6 @@ You can also use **`ba sb`** as an alias for the longer **`ba service-brokers`**
 {: #cliaddservbro}
 
 To add a service broker so that you can add a custom service to the {{site.data.keyword.cloud_notm}} catalog, use the following command:
-
 ```
 cf ba add-service-broker broker_name user_name password broker_url
 ```
@@ -823,7 +764,6 @@ You can also use **`ba asb`** as an alias for the longer **`ba add-service-broke
 
 To delete a service broker that removes the custom service from the
 {{site.data.keyword.cloud_notm}} catalog, use the following command:
-
 ```
 cf ba delete-service-broker service_broker
 ```
@@ -841,7 +781,6 @@ You can also use **`ba dsb`** as an alias for the longer **`ba delete-service-br
 {: #cliupdservbro}
 
 To update a service broker, use the following command:
-
 ```
 cf ba update-service-broker broker_name user_name password broker_url
 ```
@@ -873,20 +812,18 @@ ASGs function as virtual firewalls that control outbound traffic from the apps i
 Unbinding the **Default Staging** or **Default Running** group sets from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network. Use unbinding with caution and awareness of its potential impact on the running and staging apps in your environment.
 {: important}
 
-The following commands enable you to work with security groups are based on the Cloud Foundry 1.6 version. For more information, including required and optional fields, see the Cloud Foundry information about [Creating Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+Use the following commands to work with security groups that are based on the Cloud Foundry 1.6 version. For more information, including required and optional fields, see [Creating Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 ### Listing security groups
 {: #clilissecgro}
 
 To list all security groups, use the following command:
-
 ```
 cf ba security-groups
 ```
 {: codeblock}
 
 To display details for a specific security group, use the following command:
-
 ```
 cf ba security-groups security-group
 ```
@@ -927,7 +864,6 @@ For more information about creating security groups and the rules that define ou
 {: #cliupdsecgro}
 
 To update a security group, use the following command:
-
 ```
 cf ba update-security-group security-group path-to-rules-file
 ```
@@ -964,7 +900,6 @@ You can also use **`ba dsg`** as an alias for the longer **`ba delete-security-g
 {: #clibindsecgro}
 
 To bind to the Default Staging security group set, use the following command:
-
 ```
 cf ba bind-staging-security-group security-group
 ```
@@ -979,7 +914,6 @@ You can also use **`ba bssg`** as an alias for the longer **`ba bind-staging-sec
 {: tip}
 
 To bind to the Default Running security group set, use the following command:
-
 ```
 cf ba bind-running-security-group security-group
 ```
@@ -994,7 +928,6 @@ You can also use **`ba brsg`** as an alias for the longer **`ba bind-running-sec
 {: tip}
 
 To bind a security group to a space, use the following command:
-
 ```
 cf ba bind-security-group security-group org space
 ```
@@ -1017,8 +950,9 @@ For more information about binding security groups, see [Binding Application Sec
 ### Unbinding security groups
 {: #cliunbindsecgro}
 
-Unbinding the Default Staging group set from the two IBM-created security groups, `public_networks` and `dns`, disables global access to the outside network and must be used with caution and understanding of the ramifications it has on all staging apps in your environment. To unbind from a Default Staging security group set, use the following command:
+Unbinding the Default Staging group set from the two IBM-created security groups, `public_networks` and `dns`, disables global access to the outside network. Use caution and understand the ramifications it has on all staging apps in your environment.
 
+To unbind from a Default Staging security group set, use the following command:
 ```
 cf ba unbind-staging-security-group security-group
 ```
@@ -1032,8 +966,9 @@ cf ba unbind-staging-security-group security-group
 You can also use **`ba ussg`** as an alias for the longer **`ba unbind-staging-security-group`** command name.
 {: tip}
 
-Unbinding the Default Running group set from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network and must be used with caution and understanding of the ramifications it has on all running apps in your environment. To unbind from a Default Running security group set, use the following command:
+Unbinding the Default Running group set from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network and must be used with caution and understanding of the ramifications it has on all running apps in your environment.
 
+To unbind from a Default Running security group set, use the following command:
 ```
 cf ba unbind-running-security-group security-group
 ```
@@ -1048,7 +983,6 @@ You can also use **`ba brsg`** as an alias for the longer **`ba unbind-running-s
 {: tip}
 
 To unbind a security group to a space, use the following command:
-
 ```
 cf ba unbind-security-group security-group org space
 ```
@@ -1074,8 +1008,9 @@ For more information about unbinding security groups, see [Unbinding Application
 ### Listing buildpacks
 {: #clilistbuildpack}
 
-If you have the apps catalog write permissions, you can list buildpacks. To list all buildpacks or view a specific buildpack, use the following command:
+If you have the apps catalog write permissions, you can list buildpacks.
 
+To list all buildpacks or view a specific buildpack, use the following command:
 ```
 cf ba buildpacks buildpack_name
 ```
@@ -1092,8 +1027,9 @@ You can also use **`ba lb`** as an alias for the longer **`ba buildpacks`** comm
 ### Creating and uploading a buildpack
 {: #clicreupbuildpack}
 
-If you have the apps catalog write permissions, you can create and upload a buildpack. You can upload any compressed file that has a `.zip` file type. To upload a buildpack, use the following command:
+If you have the apps catalog write permissions, you can create and upload a buildpack. You can upload any compressed file that has a `.zip` file type.
 
+To upload a buildpack, use the following command:
 ```
 cf ba create-buildpack buildpack_name file_path position
 ```
@@ -1114,7 +1050,9 @@ You can also use **`ba cb`** as an alias for the longer **`ba create-buildpack`*
 ### Updating a buildpack
 {: #cliupdabuildpack}
 
-If you have the apps catalog write permissions, you can update an existing buildpack. To update a buildpack, use the following command:
+If you have the apps catalog write permissions, you can update an existing buildpack.
+
+To update a buildpack, use the following command:
 ```
 cf ba update-buildpack buildpack_name position enabled locked
 ```
@@ -1137,7 +1075,9 @@ You can also use **`ba ub`** as an alias for the longer **`ba update-buildpack`*
 ### Deleting a buildpack
 {: #clidelbuildpack}
 
-If you have the apps catalog write permissions, you can delete an existing buildpack. To delete a buildpack, use the following command:
+If you have the apps catalog write permissions, you can delete an existing buildpack.
+
+To delete a buildpack, use the following command:
 ```
 cf ba delete-buildpack buildpack_name
 ```

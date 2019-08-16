@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-08-15"
 
 keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
@@ -99,22 +99,22 @@ ibmcloud plugin repo-plugins [-r REPO_NAME]
 
    <dl>
    <dt>-r <i>REPO_NAME</i> (optional)</dt>
-   <dd>List only the plugins in specified repository.</dd>
+   <dd>List only the plug-ins in the specified repository.</dd>
    </dl>
 
 <strong>Examples</strong>:
 
-List all plugins in all added repositories:
-
+List all plug-ins in all added repositories:
 ```
 ibmcloud plugin repo-plugins
 ```
+{: codeblock}
 
 List all plug-ins in the `ibmcloud-repo` repository:
-
 ```
 ibmcloud plugin repo-plugins -r ibmcloud-repo
 ```
+{: codeblock}
 
 ## ibmcloud plugin repo-plugin
 {: #ibmcloud_plugin_repo_plugin}
@@ -181,8 +181,7 @@ ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
-If no repository is specified, the command uses the default plug-in repository 'Bluemix'.
-If no version is specified, the command selects the latest available version to install.
+If no repository is specified, the command uses the default plug-in repository `IBM Cloud`. If no version is specified, the command selects the most recent version to install.
 
 <strong>Prerequisites</strong>:  None
 
@@ -192,59 +191,55 @@ If no version is specified, the command selects the latest available version to 
    <dt>PLUGIN_PATH|PLUGIN_NAME (required)</dt>
    <dd>If -r <i>REPO_NAME</i> is not specified, plug-in is installed from the specified local path or remote URL.</dd>
    <dt>-r <i>REPO_NAME</i> (optional)</dt>
-   <dd>The name of the repository where the plug-in binary is located. If no repository is specified, the command uses the default plug-in repository 'Bluemix'.</dd>
+   <dd>The name of the repository where the plug-in binary is located. If no repository is specified, the command uses the default plug-in repository `IBM Cloud`.</dd>
    <dt>-v <i>VERSION</i> (optional)</dt>
-   <dd>The version of the plug-in to be installed. If not provided, the latest version of the plug-in is installed. This option is valid only when you install the plug-in from the repository.</dd>
+   <dd>The version of the plug-in to be installed. If not provided, the most recent version of the plug-in is installed. This option is valid only when you install the plug-in from the repository.</dd>
    <dt>-f </dt>
-   <dd>Force install of plug-in without confirmation.</dd>
-    </dl>
+   <dd>Force installs the plug-in without confirmation.</dd>
+   </dl>
 
 
-The {{site.data.keyword.cloud_notm}} CLI has the official repository name of `Bluemix`.
+The {{site.data.keyword.cloud_notm}} CLI has the official repository name of `IBM Cloud`.
 
 <strong>Examples</strong>:
 
 Install a plug-in from the local file:
-
 ```
 ibmcloud plugin install /downloads/new_plugin
 ```
 
 Install a plug-in from the remote URL:
-
 ```
 ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/new_plugin
 ```
 
-Install the 'container-service' plug-in of the latest version from the 'Bluemix' repository:
-
+Install the 'container-service' plug-in of the newest version from the `IBM Cloud` repository:
 ```
-ibmcloud plugin install container-service -r Bluemix
+ibmcloud plugin install container-service -r "IBM Cloud"
 ```
+{: codeblock}
 
-or simply:
-
+or you can run:
 ```
 ibmcloud plugin install container-service
 ```
+{: codeblock}
 
-Install the 'container-service' plug-in with the  version '0.1.425' from the official plugin repository:
-
+Install the 'container-service' plug-in with the version '0.1.425' from the official plug-in repository:
 ```
 ibmcloud plugin install container-service -v 0.1.425
 ```
+{: codeblock}s
 
 ## ibmcloud plugin update
 {: #ibmcloud_plugin_update}
 
 Upgrade the plug-in from a repository.
-
 ```
 ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
-If no repository is specified, the command uses the default plug-in repository 'Bluemix'.
-If no version is specified, the command selects the latest available version to install.
+If no repository is specified, the command uses the default plug-in repository `IBM Cloud`. If no version is specified, the command selects the latest available version to install.
 
 <strong>Prerequisites</strong>:  None
 
@@ -253,44 +248,43 @@ If no version is specified, the command selects the latest available version to 
  <dt>PLUGIN NAME</dt>
  <dd>Name of the plug-in to update. If not specified, the command checks upgrades for all plug-ins installed.</dd>
  <dt>-r REPO_NAME</dt>
- <dd>The name of the repository where the plug-in binary is located. If not specified, the command uses the default plug-in repository 'Bluemix'.</dd>
+ <dd>The name of the repository where the plug-in binary is located. If not specified, the command uses the default plug-in repository `IBM Cloud`.</dd>
  <dt>-v <i>VERSION</i> (optional)</dt>
- <dd>The version of the plug-in to be updated to. If not provided, update the plug-in to the the latest available version.</dd>
+ <dd>The version of the plug-in to be updated to. If not provided, update the plug-in to the most recent version.</dd>
  <dt>--all</dt>
  <dd>Update all available plug-ins</dd>
 </dl>
 
 <strong>Examples</strong>:
 
-check for all available upgrade in the official plug-in repository 'Bluemix':
-
+Check for all available upgrades in the official plug-in repository `IBM Cloud`:
 ```
-ibmcloud plugin update -r Bluemix
+ibmcloud plugin update -r "IBM Cloud"
 ```
+{: codeblock}
 
-or simply:
-
+or you can run:
 ```
 ibmcloud plugin update
 ```
+{: codeblock}
 
-Upgrade plug-in 'container-service' in the official plug-in repository to the latest:
-
+Upgrade the plug-in 'container-service' in the official plug-in repository to the most recent:
 ```
 ibmcloud plugin update container-service
 ```
+{: codeblock}
 
-Update plug-in 'container-service' in the official plug-in repository to version '0.1.440':
-
+Update the plug-in 'container-service' in the official plug-in repository to version '0.1.440':
 ```
 ibmcloud plugin update container-service -v 0.1.440
 ```
+{: codeblock}
 
 ## ibmcloud plugin uninstall
 {: #ibmcloud_plugin_uninstall}
 
 Uninstall the specified plug-in from {{site.data.keyword.cloud_notm}} CLI.
-
 ```
 ibmcloud plugin uninstall PLUGIN_NAME
 ```
@@ -307,7 +301,7 @@ ibmcloud plugin uninstall PLUGIN_NAME
 <strong>Examples</strong>:
 
 Uninstall the 'container-service' plug-in that was previously installed:
-
 ```
 ibmcloud plugin uninstall container-service
 ```
+{: codeblock}

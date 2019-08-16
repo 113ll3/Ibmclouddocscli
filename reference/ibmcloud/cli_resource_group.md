@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-15"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -191,7 +191,7 @@ ibmcloud resource quota free
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
-Migrate a Cloud foundry service instance into resource group
+Migrate a Cloud Foundry service instance into resource group:
 ```
 ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
 ```
@@ -207,7 +207,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
   <dt>--resource-group-id</dt>
   <dd>ID of the resource group. This option is exclusive with'--resource-group-name'. If none of them is specified, default to currently targeted resource group.</dd>
   <dt>-f, --force</dt>
-  <dd>Migrate without confirmation</dd>
+  <dd>Migrate without confirmation.</dd>
 </dl>
 
 ## ibmcloud resource service-instances
@@ -231,7 +231,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Resource group name</dd>
   <dt>--long</dt>
-  <dd>Show additional fields in output</dd>
+  <dd>Show more fields in output.</dd>
   <dt>--output <i>FORMAT</i></dt>
   <dd>Specify output format, only JSON is supported now. </dd>
 </dl>
@@ -309,7 +309,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
 
 <strong>Examples</strong>:
 
-Create a service instance that is named `my-service-instance` using service plan `test-service-plan` of service `test-service` on location `eu-gb`:
+Create a service instance that is named `my-service-instance`, that uses service plan `test-service-plan` of service `test-service` on location `eu-gb`:
 ```
 ibmcloud resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
@@ -424,7 +424,7 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
   <dt>APP_NAME</dt>
   <dd>CloudFoundry application name</dd>
   <dt>--id</dt>
-  <dd>Only display the ID. All other output for the service binding is suppressed. This option is exclusive with '--output'.</dd>
+  <dd>Display the ID. All other output for the service binding is suppressed. This option is exclusive with '--output'.</dd>
   <dt>--output FORMAT (optional)</dt>
   <dd>--output value  Specify output format, only JSON is supported now. This option is exclusive with '--id'.</dd>
 </dl>
@@ -709,7 +709,7 @@ ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
   <dt>ALIAS_NAME (required)</dt>
   <dd>Name of the service alias</dd>
   <dt>--id</dt>
-  <dd>Only display the given service alias's ID. All other output for the alias is suppressed. This option is exclusive with '--output'.</dd>
+  <dd>Display the service alias's ID. All other output for the alias is suppressed. This option is exclusive with '--output'.</dd>
   <dt>--output FORMAT (optional)</dt>
   <dd>--output value  Specify output format, only JSON is supported now. This option is exclusive with '--id'.</dd>
 </dl>
@@ -829,7 +829,7 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
   <dt>-s, --sort-by</dt>
   <dd>Property to sort by. Accepted inputs are `name`, `family`, `region`, `type`, `crn`.</dd>
   <dt>-p, --provider</dt>
-  <dd>Display Classic Infrastructure resources, only value allowed is: classic-infrastructure</dd>
+  <dd>Display Classic Infrastructure resources. The only value allowed is: classic-infrastructure</dd>
 </dl>
 
 <strong>Searcheable attributes</strong>:
@@ -945,11 +945,11 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
 <strong>Command options</strong>:
 <dl>
   <dt>-o, -offset</dt>
-  <dd>Starting tag position number</dd>
+  <dd>Starting tag position number.</dd>
   <dt>-l, -limit</dt>
-  <dd>Number of tags to return (maximum 1000, deafult 100 )</dd>
+  <dd>Number of tags to return (maximum 1000, default 100).</dd>
   <dt>-p; --provider</dt> 
-  <dd>Specify classic-infrastructure when searching for classic infrastructure tags</dd>
+  <dd>Specify classic-infrastructure when you search for classic infrastructure tags.</dd>
   <dt>-d, --details</dt>
   <dd>Show the number of tagged resources.</dd>
 </dl>
@@ -967,13 +967,13 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
 <strong>Command options</strong>:
 <dl>
   <dt>--tag-names(required)</dt>
-  <dd>Comma separated list of tag names</dd>
+  <dd>Comma-separated list of tag names</dd>
   <dt>--resource-name</dt>
-  <dd>The name of the resource to which the tags should be attached. This option cannot be used with classic infrastructure resources.</dd>
+  <dd>The name of the resource to which the tags are to be attached. This option cannot be used with classic infrastructure resources.</dd>
   <dt>--resource-id</dt>
-  <dd>The CRN of the resource to which the tags are going to be attached; for classic infrastructure resources, it is the ID of the resource. You can obtain the CRN or the ID of the resource using `ibmcloud resource search` command.</dd>
+  <dd>The CRN of the resource to which the tags are going to be attached; for classic infrastructure resources, it is the ID of the resource. You can obtain the CRN or the ID of the resource by using the `ibmcloud resource search` command.</dd>
   <dt>--resource-type</dt>
-  <dd>The resource type of the classic infrastructure resource to which the tags are going to be attached; this parameter is required if attaching a tag to a classic infrastructure resource. ossible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
+  <dd>The resource type of the classic infrastructure resource to which the tags are going to be attached. This parameter is required if you are attaching a tag to a classic infrastructure resource. Possible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1009,7 +1009,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
   ```
   {: codeblock}
 
-  Take a note of the ID, which is a a string similar to `48373549`.
+  Take a note of the ID, which is a string similar to `48373549`.
 
   To attach the tag, run the following command:
   ```
@@ -1030,13 +1030,13 @@ ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --re
 <strong>Command options</strong>:
 <dl>
   <dt>--tag-names(required)</dt>
-  <dd>Comma separated list of tag names</dd>
+  <dd>Comma-separated list of tag names</dd>
   <dt>--resource-name</dt>
-  <dd>The name of the resource from which the tags should be detached. This option cannot be used with classic infrastructure resources.</dd>
+  <dd>The name of the resource from which the tags are to be detached. This option cannot be used with classic infrastructure resources.</dd>
   <dt>--resource-id</dt>
-  <dd>The CRN of the resource from which the tags are going to be detached; for classic infrastructure resources, it is the ID of the resource. You can obtain the CRN or the ID of the resource using `ibmcloud resource search` command.</dd>
+  <dd>The CRN of the resource from which the tags are going to be detached; for classic infrastructure resources, it is the ID of the resource. You can obtain the CRN or the ID of the resource by using `ibmcloud resource search` command.</dd>
   <dt>--resource-type</dt>
-  <dd>The resource type of the classic infrastructure resource from which the tags are going to be detached; this parameter is required if attaching a tag to a classic infrastructure resource. Possible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
+  <dd>The resource type of the classic infrastructure resource from which the tags are going to be detached; this parameter is required if you are attaching a tag to a classic infrastructure resource. Possible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
 </dl>
 
 
@@ -1055,7 +1055,7 @@ ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
   <dt>--tag-name(required)</dt>
   <dd>The name of the tag to be deleted.</dd>
   <dt>-p; --provider</dt> 
-  <dd>Specify classic-infrastructure when deleting a classic infrastructure tag</dd>
+  <dd>Specify classic-infrastructure when you delete a classic infrastructure tag.</dd>
 </dl>
 
 A tag can be deleted only if it is not attached to any resource.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-15"
 
 keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
@@ -56,9 +56,9 @@ ibmcloud sl vs capture IDENTIFIER [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-n, --name</dt>
-<dd>Required. Name of the image .</dd>
+<dd>Required. Name of the image.</dd>
 <dt>--all</dt>
-<dd>Capture all disks belonging to the VS.</dd>
+<dd>Capture all disks that belong to the virtual server.</dd>
 <dt>--note</dt>
 <dd>Add a note to be associated with the image.</dd>
 </dl>
@@ -82,19 +82,19 @@ ibmcloud sl vs create [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-H, --hostname</dt>
-<dd>Required. Host portion of the FQDN .</dd>
+<dd>Required. Host portion of the FQDN.</dd>
 <dt>-D, --domain</dt>
-<dd>Required. Domain portion of the FQDN .</dd>
+<dd>Required. Domain portion of the FQDN.</dd>
 <dt>-c, --cpu</dt>
-<dd>Required. Number of CPU cores .</dd>
+<dd>Required. Number of CPU cores.</dd>
 <dt>-m, --memory</dt>
-<dd>Required. Memory in megabytes .</dd>
+<dd>Required. Memory in megabytes.</dd>
 <dt>--flavor</dt>
 <dd>Public Virtual Server flavor key name.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Required. Datacenter shortname .</dd>
+<dd>Required. Datacenter shortname.</dd>
 <dt>-o, --os</dt>
-<dd>OS install code. Tip: you can specify <OS>_LATEST.</dd>
+<dd>OS installation code. Tip: you can specify <OS>_LATEST.</dd>
 <dt>--image</dt>
 <dd>Image ID. See: `ibmcloud sl image list` for reference.</dd>
 <dt>--billing</dt>
@@ -102,43 +102,43 @@ ibmcloud sl vs create [OPTIONS]
 <dt>--dedicated</dt>
 <dd>Create a dedicated Virtual Server (Private Node).</dd>
 <dt>--host-id</dt>
-<dd>Host Id to provision a Dedicated Virtual Server onto.</dd>
+<dd>Host ID to provision a Dedicated Virtual Server onto.</dd>
 <dt>--san</dt>
 <dd>Use SAN storage instead of local disk.</dd>
 <dt>--test</dt>
-<dd>Do not actually create the virtual server.</dd>
+<dd>Does not create the virtual server.</dd>
 <dt>--export</dt>
 <dd>Exports options to a template file.</dd>
 <dt>-i, --postinstall</dt>
 <dd>Post-install script to download.</dd>
 <dt>-k, --key</dt>
-<dd>The IDs of the SSH keys to add to the root user (multiple occurrence permitted).</dd>
+<dd>The IDs of the SSH keys to add to the root user. You can specify more than one.</dd>
 <dt>--disk</dt>
-<dd>Disk sizes (multiple occurrence permitted).</dd>
+<dd>Disk sizes. You can specify more than one.</dd>
 <dt>--private</dt>
-<dd>Forces the virtual server to only have access the private network.</dd>
+<dd>Forces the virtual server to access the private network only.</dd>
 <dt>--like</dt>
 <dd>Use the configuration from an existing virtual server.</dd>
 <dt>-n, --network</dt>
 <dd>Network port speed in Mbps.</dd>
 <dt>-g, --tag</dt>
-<dd>Tags to add to the instance (multiple occurrence permitted).</dd>
+<dd>Tags to add to the instance. You can specify more than one.</dd>
 <dt>-t, --template</dt>
-<dd>A template file that defaults the command-line options.</dd>
+<dd>A template file that defaults the command line options.</dd>
 <dt>-u, --userdata</dt>
-<dd>User defined metadata string.</dd>
+<dd>User-defined metadata string.</dd>
 <dt>-F, --userfile</dt>
-<dd>Read userdata from file.</dd>
+<dd>Read user data from file.</dd>
 <dt>--vlan-public</dt>
 <dd>The ID of the public VLAN on which you want the virtual server placed.</dd>
 <dt>--vlan-private</dt>
 <dd>The ID of the private VLAN on which you want the virtual server placed.</dd>
 <dt>-S, --public-security-group</dt>
-<dd>Security group ID to associate with the public interface (multiple occurrence permitted).</dd>
+<dd>Security group ID to associate with the public interface. You can specify more than one.</dd>
 <dt>-s, --private-security-group</dt>
-<dd>Security group ID to associate with the private interface (multiple occurrence permitted).</dd>
+<dd>Security group ID to associate with the private interface. You can specify more than one.</dd>
 <dt>--wait</dt>
-<dd>Wait until the virtual server is finished provisioning for up to X seconds before returning.</dd>
+<dd>Wait until the virtual server is finished provisioning for up to X seconds.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
@@ -149,7 +149,7 @@ ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 
 ```
 {: codeblock}
 
-This command orders a virtual server instance with hostname is myvsi, domain is ibm.com, 4 cpu cores, 4096M memory, located at datacenter `dal10`,
+This command orders a virtual server instance with host name `myvsi`, domain `ibm.com`, 4 cpu cores, 4096 M memory, and at datacenter `dal10`,
 
 ## ibmcloud sl vs options
 {: #sl_vs_options}
@@ -224,7 +224,7 @@ ibmcloud sl vs dns-sync IDENTIFIER [OPTIONS]
 <dt>--ptr</dt>
 <dd>Sync the PTR record for the host.</dd>
 <dt>--ttl</dt>
-<dd>Sets the TTL for the A and/or PTR records, default is: 7200.</dd>
+<dd>Sets the TTL for the A and PTR records. The default value is 7200.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
@@ -235,7 +235,7 @@ ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 {: codeblock}
 
-This command synchronizes A record(IP V4 address) of virtual server instance with ID `12345678` to DNS server and sets TTL of this A record to 3600.
+This command synchronizes an A record (IP V4 address) of virtual server instance with ID `12345678` to DNS server and sets the `TTL` of this A record to 3600.
 
 ## ibmcloud sl vs edit
 {: #sl_vs_edit}
@@ -254,9 +254,9 @@ ibmcloud sl vs edit IDENTIFIER [OPTIONS]
 <dt>-g, --tag</dt>
 <dd>Tags to set or empty string to remove all.</dd>
 <dt>-u, --userdata</dt>
-<dd>User defined metadata string.</dd>
+<dd>User-defined metadata string.</dd>
 <dt>-F, --userfile</dt>
-<dd>Read userdata from file.</dd>
+<dd>Read user data from file.</dd>
 <dt>--public-speed</dt>
 <dd>Public port speed, options are: 0,10,100,1000,10000.</dd>
 <dt>--private-speed</dt>
@@ -267,7 +267,7 @@ ibmcloud sl vs edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 1000
 ```
-This command updates virtual server instance with ID `12345678` and set its domain to be "ibm.com", hostname to "myapp", and tag to "testcli".
+This command updates the virtual server instance with ID `12345678`, and sets its domain to "ibm.com", host name to "myapp", and tag to "testcli".
 
 ## ibmcloud sl vs host-create
 {: #sl_vs_host_create}
@@ -280,11 +280,11 @@ ibmcloud sl vs host-create [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-H, --hostname</dt>
-<dd>Required. Host portion of the FQDN .</dd>
+<dd>Required. Host portion of the FQDN.</dd>
 <dt>-D, --domain</dt>
-<dd>Required. Domain portion of the FQDN .</dd>
+<dd>Required. Domain portion of the FQDN.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Required. Datacenter shortname .</dd>
+<dd>Required. Datacenter shortname.</dd>
 <dt>-s, --size</dt>
 <dd>Size of the dedicated host, currently only one size is avaiable: 56_CORES_X_242_RAM_X_1_4_TB.</dd>
 <dt>-b, --billing</dt>
@@ -303,7 +303,6 @@ List dedicated hosts on your account.
 ibmcloud sl vs host-list [OPTIONS]
 ```
 
-
 <strong>Command options</strong>:
 <dl>
 <dt>-n, --name</dt>
@@ -313,7 +312,7 @@ ibmcloud sl vs host-list [OPTIONS]
 <dt>--owner</dt>
 <dd>Filter by owner of the dedicated host.</dd>
 <dt>--order</dt>
-<dd>Filter by ID of the order which purchased this dedicated host.</dd>
+<dd>Filter by ID of the order that purchased this dedicated host.</dd>
 </dl>
 
 ## ibmcloud sl vs list
@@ -347,15 +346,15 @@ ibmcloud sl vs list [OPTIONS]
 <dt>--monthly</dt>
 <dd>Show only monthly instances.</dd>
 <dt>-g, --tag</dt>
-<dd>Filter by tags (multiple occurrence permitted).</dd>
+<dd>Filter by tags. You can specify more than one.</dd>
 <dt>-o, --order</dt>
-<dd>Filter by ID of the order which purchased this instance.</dd>
+<dd>Filter by ID of the order that purchased this instance.</dd>
 <dt>--owner</dt>
-<dd>Filtered by Id of user who owns the instances.</dd>
+<dd>Filtered by ID of user who owns the instances.</dd>
 <dt>--sortby</dt>
-<dd>Column to sort by, default is:hostname, options are:id,hostname,domain,datacenter,cpu,memory,public_ip,private_ip.</dd>
+<dd>Column to sort by, default is: hostname, options are: id,hostname,domain,datacenter,cpu,memory,public_ip,private_ip.</dd>
 <dt>--column</dt>
-<dd>Column to display, default is:id,hostname,public_ip,private_ip,datacenter,action, options are: guid,power_state,created_by,tags.</dd>
+<dd>Column to display, default is: id,hostname,public_ip,private_ip,datacenter,action, options are: guid,power_state,created_by,tags.</dd>
 </dl>
 
 **Examples**:
@@ -406,7 +405,7 @@ ibmcloud sl vs power-off IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs power-off 12345678 --soft
 ```
-This command performs a soft power off for virtual server instance with ID `12345678`.
+This command gracefully powers off a virtual server instance with ID `12345678`.
 
 ## ibmcloud sl vs power-on
 {: #sl_vs_power_on}
@@ -428,12 +427,12 @@ ibmcloud sl vs power-on 12345678
 ```
 {: codeblock}
 
-This command performs a power on for virtual server instance with ID `12345678`.
+This command powers on a virtual server instance with ID `12345678`.
 
 ## ibmcloud sl vs ready
 {: #sl_vs_ready}
 
-Check if a virtual server instance is ready for use.
+Check whether a virtual server instance is ready for use.
 ```
 ibmcloud sl vs ready IDENTIFIER [OPTIONS]
 ```
@@ -441,14 +440,16 @@ ibmcloud sl vs ready IDENTIFIER [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>--wait</dt>
-<dd>Wait until the virtual server is finished provisioning for up to X seconds before returning.</dd>
+<dd>Wait until the virtual server is finished provisioning for up to X seconds.</dd>
 </dl>
 
 **Examples**:
 ```
 ibmcloud sl vs ready 12345678 --wait 30
 ```
-This command checks virtual server instance with ID `12345678` status to see if it is ready for use continuously and waits up to 30 seconds.
+{: codeblock}
+
+This command checks virtual server instance with ID `12345678` status to see whether it is ready for use continuously and waits up to 30 seconds.
 
 ## ibmcloud sl vs reboot
 {: #sl_vs_reboot}
@@ -474,7 +475,7 @@ ibmcloud sl vs reboot 12345678 --hard
 ```
 {: codeblock}
 
-This command performs a hard reboot for virtual server instance with ID `12345678`.
+This command hard reboots a virtual server instance with ID `12345678`.
 
 ## ibmcloud sl vs reload
 {: #sl_vs_reload}
@@ -493,7 +494,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <dt>See:</dt>
 <dd>`ibmcloud sl image list` for reference.</dd>
 <dt>-k, --key</dt>
-<dd>The IDs of the SSH keys to add to the root user (multiple occurrence permitted).</dd>
+<dd>The IDs of the SSH keys to add to the root user.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
@@ -557,7 +558,7 @@ ibmcloud sl vs upgrade IDENTIFIER [OPTIONS]
 <dt>-c, --cpu</dt>
 <dd>Number of CPU cores.</dd>
 <dt>--private</dt>
-<dd>CPU core will be on a dedicated host server.</dd>
+<dd>CPU core is on a dedicated host server.</dd>
 <dt>-m, --memory</dt>
 <dd>Memory in megabytes.</dd>
 <dt>--network</dt>
@@ -572,4 +573,4 @@ ibmcloud sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
 {: codeblock}
 
-This commands upgrades virtual server instance with ID `12345678` and set number of CPU cores to 8, memory to 8192M, network port speed to 1000 Mbps.
+This command upgrades the virtual server instance with ID `12345678` and sets the number of CPU cores to 8, memory to 8192 M, network port speed to 1000 Mbps.

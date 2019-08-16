@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-15"
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -21,7 +21,7 @@ subcollection: cloud-cli
 The {{site.data.keyword.cloud}} developer tools extension for JetBrains IDEs, which include `IntelliJ`, `WebStorm`, `Android Studio`, and more, provides new menu entries to directly access {{site.data.keyword.dev_cli_notm}} CLI commands from within the IDE. You can quickly access a subset of `ibmcloud dev` commands for both Docker and Cloud Foundry workflows, including application deployment, starting/stopping/restarting apps on {{site.data.keyword.cloud_notm}}, viewing remote app logs, and more. All without the need to leave the editor’s context.
 {: shortdesc}
 
-![Screen capture of the IBM Cloud Developer Tools running within WebStorm IDE.](../images/jetbrains.png "{{site.data.keyword.cloud_notm}} developer tools menu example running within WebStorm IDE"){: caption="Figure 1. IBM Cloud Developer Tools running within WebStorm IDE." caption-side="bottom"}
+![The IBM Cloud Developer Tools running within WebStorm IDE.](../images/jetbrains.png "{{site.data.keyword.cloud_notm}} The IBM Cloud Developer Tools running within WebStorm IDE"){: caption="Figure 1. The IBM Cloud Developer Tools running within WebStorm IDE." caption-side="bottom"}
 
 ## Dependencies
 {: #jetbrains-dependencies}

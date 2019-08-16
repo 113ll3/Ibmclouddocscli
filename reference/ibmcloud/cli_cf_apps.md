@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-08-15"
 
 keywords: cli, cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
@@ -13,11 +13,12 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # Managing Cloud Foundry applications
 {: #ibmcloud_commands_apps}
 
-Use the following commands to manage Cloud Foundry applications, domains and routes.
+Use the following commands to manage Cloud Foundry applications, domains, and routes.
 {: shortdesc}
 
 ## ibmcloud app push
@@ -164,7 +165,7 @@ ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWOR
    <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (optional)</dt>
    <dd>The intermediate certificate file path.</dd>
    <dt>-t <i>TRUST_STORE_FILE</i> (optional)</dt>
-   <dd>The trust store file.</dd>
+   <dd>The truststore file.</dd>
    </dl>
 
 
@@ -234,11 +235,13 @@ Map a route to `my-app` with specified domain:
 ```
 ibmcloud app route-map my-app mybluemix.net
 ```
+{: codeblock}
 
 Map a route to 'my-container-group' with specified domain and host name:
 ```
 ibmcloud app route-map my-container-group bluemix.net -n abc
 ```
+{: codeblock}
 
 The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
@@ -270,11 +273,13 @@ Unmap `my-app.mybluemix.net` from `my-app`:
 ```
 ibmcloud app route-unmap my-app mybluemix.net
 ```
+{: codeblock}
 
 Unmap `abc.bluexmix.net` from `my-container-group`:
 ```
 ibmcloud app route-unmap my-container-group bluemix.net -n abc
 ```
+{: codeblock}
 
 The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-31"
+lastupdated: "2019-08-15"
 
 keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
@@ -696,15 +696,15 @@ ibmcloud cfee create [-n, --name NAME] [--location LOCATION] [--cells CELLS] [--
 <strong>Command options</strong>:
 <dl>
   <dt>-n, --name NAME (required)</dt>
-  <dd>Specify the name of the CFEE. The name must be 24 or fewer characters, begin with a letter, and contain only alphanumeric characters, '-', '_' and '.'.</dd>
+  <dd>Specify the name of the CFEE. The name must be 24 or fewer characters, begin with a letter, and contain only alphanumeric characters, `-`, `_` and `.`.</dd>
   <dt>--location LOCATION (required)</dt>
-  <dd>Specify the data center to provision this CFEE into (for example, dal10). To find available data centers, run "ibmcloud cfee create-locations".</dd>
+  <dd>Specify the data center to provision this CFEE into (for example, dal10). To find available data centers, run `ibmcloud cfee create-locations`.</dd>
   <dt>--cells CELLS</dt>
   <dd>Specify the number of cells for this CFEE. The default is 2, and minimum is 1. In a one cell CFEE, there can't be high availability.</dd>
   <dt>--private-access</dt>
   <dd>Specific the network access type for the PostgreSQL database that is provisioned as part of CFEE. Only set flag if account is VRF and Service Endpoint enabled. If this flag is set, the private access endpoint is used.</dd>
   <dt>--virtual-dedicated-hardware</dt>
-  <dd>With dedicated hardware, your worker nodes are hosted on infrastructure that is devoted to your account. With shared hardware, infrastructure resources, such as the hypervisor and physical hardware, are shared with other IBM customers, but each worker node is single-tenant to you. "Shared" is the default if the flag is NOT set. Using a "dedicated" worker has extra costs.</dd>
+  <dd>With dedicated hardware, your worker nodes are hosted on infrastructure that is devoted to your account. With shared hardware, infrastructure resources, such as the hypervisor and physical hardware, are shared with other IBM customers, but each worker node is single-tenant to you. `Shared` is the default if the flag is NOT set. Using a `dedicated` worker has extra costs.</dd>
   <dt>--private-vlan ID</dt>
   <dd>Specify ID of private VLAN. By default, an available set of VLANs is used or a pair is created for you.</dd>
   <dt>--public-vlan ID</dt>
@@ -712,7 +712,7 @@ ibmcloud cfee create [-n, --name NAME] [--location LOCATION] [--cells CELLS] [--
   <dt>--plan ID</dt>
   <dd>Specify ID of plan. By default, a Standard plan is used.</dd>
   <dt>-c PARAMETERS_AS_JSON</dt>
-  <dd>Valid JSON object that contains api-specific configuration parameters, provided either inline or in a file. For a list of supported configuration parameters, see https://cloud.ibm.com/apidocs/cfaas#provision-new-cfee-environment for the particular catalog entry. This is necessary for provisioning multi-zone CFEEs. Note: All other flags are ignored, and the fields resource_group_id, access_token, and refresh_token are handled by the CLI command.</dd>
+  <dd>Valid JSON object that contains api-specific configuration parameters, provided either inline or in a file. For a list of supported configuration parameters, see https://cloud.ibm.com/apidocs/cfaas#provision-new-cfee-environment for the particular catalog entry. This optoin is necessary for provisioning multi-zone CFEEs. Note: All other flags are ignored, and the fields resource_group_id, access_token, and refresh_token are handled by the CLI command.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -721,11 +721,13 @@ Create an instance named `test-cfee` in `dal10`:
 ```
 ibmcloud cfee create test-cfee dal10
 ```
+{: codeblock}
 
 Create a `dedicated` instance named `test-cfee` in `dal10` with `4` cells:
 ```
 ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 ```
+{: codeblock}
 
 ## ibmcloud cfee create-locations
 {: #ibmcloud_cfee_create_locations}
@@ -760,20 +762,20 @@ ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [
    <dt>USER_NAME (required)</dt>
    <dd>The name of the user.</dd>
    <dt>--access-group GROUP_NAME</dt>
-   <dd>The name of the access group to check permissions in. The default access group is "cfee-provision-access-group".</dd>
+   <dd>The name of the access group to check. The default access group is `cfee-provision-access-group`.</dd>
    <dt>--output FORMAT</dt>
    <dd>Specify permissions output format, only JSON is supported now.</dd>
   </dl>
   
 <strong>Examples</strong>:
 
-Check CFEE create permissions for user `name@example.com`:
+Check that CFEE creates permissions for the user `name@example.com`:
 ```
 ibmcloud cfee create-permission-get name@example.com
 ```
 {: codeblock}
 
-Check CFEE create permissions for user `name@example.com` and in access group `test-access-group`:
+Check that CFEE creates permissions for the user `name@example.com`, and in access group `test-access-group`:
 ```
 ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ```
@@ -795,7 +797,7 @@ ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
    <dt>USER_NAME (required)</dt>
    <dd>The name of the user.</dd>
    <dt>--access-group GROUP_NAME</dt>
-   <dd>The name of the access group to give permissions in. The default access group is "cfee-provision-access-group".</dd>
+   <dd>The name of the access group to give permissions in. The default access group is `cfee-provision-access-group`.</dd>
   </dl>
   
 <strong>Examples</strong>:
@@ -839,6 +841,7 @@ Enable monitoring on the targeted CFEE environment:
 ```
 ibmcloud cfee monitoring-enable
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
@@ -864,7 +867,7 @@ ibmcloud cfee monitoring-disable
 ## ibmcloud cfee monitoring-status
 {: #ibmcloud_cfee_monitoring-status}
 
-Check the status of the most recent monitoring enablement/disablement operation in the targeted CFEE environment:
+Check the status of the most recent monitoring (enablement or disablement) operation in the targeted CFEE environment:
 ```
 ibmcloud cfee monitoring-status [--poll]
 ```
@@ -874,5 +877,5 @@ ibmcloud cfee monitoring-status [--poll]
 <strong>Command options</strong>:
   <dl>
    <dt>--poll</dt>
-   <dd>Specify if you'd like to make this call recurring, to poll until in stable state</dd>
+   <dd>Specify whether you'd like to make this call recurring, to poll until in stable state</dd>
   </dl>

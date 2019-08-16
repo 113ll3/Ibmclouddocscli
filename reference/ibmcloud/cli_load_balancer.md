@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-15"
 
 keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
@@ -39,7 +39,7 @@ ibmcloud sl loadbal cancel LOADBAL_ID [OPTIONS]
 ## ibmcloud sl loadbal create
 {: #sl_loadbal_create}
 
-Adds a load balancer given the id returned from create-options.
+Adds a load balancer with the ID returned from create-options.
 ```
 ibmcloud sl loadbal create PRICE_ID LOCATION [OPTIONS]
 ```
@@ -53,15 +53,16 @@ ibmcloud sl loadbal create PRICE_ID LOCATION [OPTIONS]
 ## ibmcloud sl loadbal create-options
 {: #sl_loadbal_create_options}
 
-Get price options to create a load balancer with.
+Get price options to create a load balancer with:
 ```
 ibmcloud sl loadbal create-options
 ```
+{: codeblock}
 
 ## ibmcloud sl loadbal detail
 {: #sl_loadbal_detail}
 
-Get Load balancer details.
+Get Load balancer details:
 ```
 ibmcloud sl loadbal detail LOADBAL_ID
 ```
@@ -69,7 +70,7 @@ ibmcloud sl loadbal detail LOADBAL_ID
 ## ibmcloud sl loadbal group-add
 {: #sl_loadbal_group_add}
 
-Adds a new load_balancer service.
+Add a new `load_balancer` service:
 ```
 ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
 ```
@@ -77,13 +78,13 @@ ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-a, --allocation</dt>
-<dd>Required. The allocated percent of connections .</dd>
+<dd>Required. The allocated percent of connections.</dd>
 <dt>-p, --port</dt>
-<dd>Required. The port number .</dd>
+<dd>Required. The port number.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Required. The ID of routing type . Run `ibmcloud sl loadbal routing-types` to find an ID.</dd>
+<dd>Required. The ID of routing type. Run `ibmcloud sl loadbal routing-types` to find an ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Required. The ID of routing method . Run `ibmcloud sl loadbal routing-methods` to find an ID.</dd>
+<dd>Required. The ID of routing method. Run `ibmcloud sl loadbal routing-methods` to find an ID.</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-delete
@@ -143,6 +144,7 @@ List active load balancers.
 ```
 ibmcloud sl loadbal list
 ```
+{: codeblock}
 
 <strong>Command options</strong>:
 <dl>
@@ -157,23 +159,25 @@ ibmcloud sl loadbal list
 ## ibmcloud sl loadbal routing-methods
 {: #sl_loadbal_routing_methods}
 
-List routing methods.
+List routing methods:
 ```
 ibmcloud sl loadbal routing-methods
 ```
+{: codeblock}
 
 ## ibmcloud sl loadbal routing-types
 {: #sl_loadbal_routing_types}
 
-List routing types.
+List routing types:
 ```
 ibmcloud sl loadbal routing-types
 ```
+{: codeblock}
 
 ## ibmcloud sl loadbal service-add
 {: #sl_loadbal_service_add}
 
-Adds a new load balancer service.
+Add a load balancer service:
 ```
 ibmcloud sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 ```
@@ -181,15 +185,15 @@ ibmcloud sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>--disabled</dt>
-<dd>Optional. Create the service as disabled,default is enabled if not specified .</dd>
+<dd>Optional. Create the service as disabled. The default is enabled if not specified.</dd>
 <dt>-p, --port</dt>
-<dd>Required. The port number for the service .</dd>
+<dd>Required. The port number for the service.</dd>
 <dt>-w, --weight</dt>
-<dd>Required. The weight of the service .</dd>
+<dd>Required. The weight of the service.</dd>
 <dt>-t, --healthcheck-type</dt>
-<dd>Required. The health check type .</dd>
+<dd>Required. The health check type.</dd>
 <dt>-i, --ip-address</dt>
-<dd>Required. The IP address of the service .</dd>
+<dd>Required. The IP address of the service.</dd>
 </dl>
 
 ## ibmcloud sl loadbal service-delete

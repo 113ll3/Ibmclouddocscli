@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-08-15"
 
 keywords: cli, security cli, ssh keys cli, ssl cli, ibmcloud sl security, certificate cli, ibmcloud sl, sshkey-add, manage security cli
 
@@ -28,7 +28,7 @@ Use the following commands to manage {{site.data.keyword.cloud}} classic infrast
 ## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
-Add a new SSH key.
+Add an SSH key.
 ```
 ibmcloud sl security sshkey-add LABEL [OPTIONS]
 ```
@@ -40,7 +40,7 @@ ibmcloud sl security sshkey-add LABEL [OPTIONS]
 <dt>-k, --key</dt>
 <dd>The actual SSH key.</dd>
 <dt>--note</dt>
-<dd>Extra note that will be associated with key.</dd>
+<dd>Extra note to be associated with the key.</dd>
 </dl>
 
 **Examples**:
@@ -49,7 +49,7 @@ ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
 {: codeblock}
 
-This command adds a SSH key from file: ~/.ssh/id_rsa.pub with a note "mykey".
+This command adds an SSH key from file `~/.ssh/id_rsa.pub` with a note `mykey`.
 
 ## ibmcloud sl security sshkey-edit
 {: #sl_security_sshkey_edit}
@@ -100,7 +100,7 @@ This command lists all SSH keys on current account and sorts them by label.
 ## ibmcloud sl security sshkey-print
 {: #sl_security_sshkey_print}
 
-Prints out an SSH key to the screen.
+Print out an SSH key to the screen.
 ```
 ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
@@ -108,7 +108,7 @@ ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-f, --out-file</dt>
-<dd>The public SSH key will be written to this file.</dd>
+<dd>The public SSH key is written to this file.</dd>
 </dl>
 
 **Examples**:
@@ -160,7 +160,7 @@ ibmcloud sl security cert-add [OPTIONS]
 <dt>--key</dt>
 <dd>Private Key file.</dd>
 <dt>--notes</dt>
-<dd>Additional notes.</dd>
+<dd>Add extra notes.</dd>
 </dl>
 
 **Examples**:
@@ -188,7 +188,7 @@ ibmcloud sl security cert-edit IDENTIFIER [OPTIONS]
 <dt>--key</dt>
 <dd>Private Key file.</dd>
 <dt>--notes</dt>
-<dd>Additional notes.</dd>
+<dd>Add extra notes.</dd>
 </dl>
 
 **Examples**:
@@ -210,7 +210,7 @@ ibmcloud sl security cert-download IDENTIFIER
 ```
 ibmcloud sl security cert-download 12345678
 ```
-This command downloads 4 files to current directory for certificate with ID 12345678. The 4 files are: certificate file, certificate signing request file, intermediate certificate file and private key file.
+This command downloads four files to current directory for certificate with ID 12345678. The four files are: certificate file, certificate signing request file, intermediate certificate file, and private key file.
 
 ## ibmcloud sl security cert-list
 {: #sl_security_cert_list}

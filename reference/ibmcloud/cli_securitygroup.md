@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-08-15"
 
 keywords: cli, manage security groups, ingress, egress, traffic, virtual server cli, classic infrastructure cli, securitygroup, ibmcloud sl securitygroup, security group cli
 
@@ -17,9 +17,9 @@ subcollection: cloud-cli
 # Managing security groups for virtual server traffic
 {: #sl-manage-securitygroups}
 
-A security group is a set of IP filter rules that define how to handle incoming (ingress) and outgoing (egress) traffic to both the public and private interfaces of a virtual server instance. The rules that you add to a security group are known as security group rules.
+A security group is a set of IP filter rules that define how to handle incoming (ingress) and outgoing (egress) traffic from the public and private interfaces of a virtual server instance. The rules that you add to a security group are known as security group rules.
 
-Use the following commands to manage a security group using the {{site.data.keyword.cloud}} classic infrastructure Security Group service.
+Use the following commands to manage a security group by using the {{site.data.keyword.cloud}} classic infrastructure Security Group service.
 {: shortdesc}
 
 ## ibmcloud sl securitygroup create
@@ -41,7 +41,7 @@ ibmcloud sl securitygroup create [OPTIONS]
 ## ibmcloud sl securitygroup delete
 {: #sl_securitygroup_delete}
 
-Delete the given security group.
+Delete the security group.
 ```
 ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 ```
@@ -91,7 +91,7 @@ ibmcloud sl securitygroup interface-add SECURITYGROUP_ID [OPTIONS]
 <dt>-s, --server</dt>
 <dd>The server ID to associate with the security group.</dd>
 <dt>-i, --interface</dt>
-<dd>The interface of the server to associate (public/private).</dd>
+<dd>The interface of the server to associate (public or private).</dd>
 </dl>
 
 ## ibmcloud sl securitygroup interface-list
@@ -123,7 +123,7 @@ ibmcloud sl securitygroup interface-remove SECURITYGROUP_ID [OPTIONS]
 <dt>-s, --server</dt>
 <dd>The server ID to remove from the security group.</dd>
 <dt>-i, --interface</dt>
-<dd>The interface of the server to remove (public/private).</dd>
+<dd>The interface of the server to remove (public or private).</dd>
 </dl>
 
 ## ibmcloud sl securitygroup list
@@ -155,7 +155,7 @@ ibmcloud sl securitygroup rule-add SECURITYGROUP_ID [OPTIONS]
 <dt>-s, --remote-group</dt>
 <dd>The ID of the remote security group to enforce.</dd>
 <dt>-d, --direction</dt>
-<dd>The direction of traffic to enforce (ingress,egress), required.</dd>
+<dd>The direction of traffic to enforce (ingress or egress), required.</dd>
 <dt>-e, --ether-type</dt>
 <dd>The ethertype (IPv4 or IPv6) to enforce, default is IPv4 if not specified.</dd>
 <dt>-M, --port-max</dt>
@@ -181,15 +181,15 @@ ibmcloud sl securitygroup rule-edit SECURITYGROUP_ID RULE_ID [OPTIONS]
 <dt>-s, --remote-group</dt>
 <dd>The ID of the remote security group to enforce.</dd>
 <dt>-d, --direction</dt>
-<dd>The direction of traffic to enforce (ingress,egress), required.</dd>
+<dd>The direction of traffic to enforce (ingress or egress), required.</dd>
 <dt>-e, --ether-type</dt>
-<dd>The ethertype (IPv4 or IPv6) to enforce, default is IPv4 if not specified.</dd>
+<dd>The ethertype (IPV4 or IPV6) to enforce, default is IPV4 if not specified.</dd>
 <dt>-M, --port-max</dt>
 <dd>The upper port bound to enforce.</dd>
 <dt>-m, --port-min</dt>
 <dd>The lower port bound to enforce.</dd>
 <dt>-p, --protocol</dt>
-<dd>The protocol (icmp, tcp, udp) to enforce.</dd>
+<dd>The protocol (icmp, tcp, or udp) to enforce.</dd>
 </dl>
 
 ## ibmcloud sl securitygroup rule-list

@@ -33,12 +33,12 @@ There are several ways that you can create an app.
 - [App Services web console](https://cloud.ibm.com/developer/appservice/dashboard) for generic web apps and microservices
 - [Watson Dashboard](https://cloud.ibm.com/developer/watson/dashboard) for creating Watson based capability enabled starter apps.
     - Other industry and technology-based dashboards are available from the "Hamburger" menu on the {{site.data.keyword.cloud_notm}} home page. All take a similar approach of using starter kits to create new apps.
-- {{site.data.keyword.dev_cli_notm}} CLIs [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) command to create a new app.
-- {{site.data.keyword.dev_cli_notm}} CLIs [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) command to quickly enable the cloud on an existing server-side app.
+- {{site.data.keyword.dev_cli_notm}} [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) command to create a new app.
+- {{site.data.keyword.dev_cli_notm}} [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) command to quickly enable the cloud on an existing server-side app.
 
-For any of the previous creation methods, the flow is similar. Select the project type, implementation language, and app pattern to use. You can also opt to add services to your app, such as authentication or persistence. Finally, you can configure continuous devlivery for the app, which provides a complete toolchain of source control and team communications. Including a pipeline that is triggered on each commit to validate, build, and deploy your app to the {{site.data.keyword.cloud_notm}}.
+For any of the previous creation methods, the flow is similar. Select the project type, implementation language, and app pattern to use. You can also opt to add services to your app, such as authentication or persistence. Finally, you can configure continuous delivery for the app, which provides a complete toolchain of source control and team communications. Including a pipeline that is triggered on each commit to validate, build, and deploy your app to the {{site.data.keyword.cloud_notm}}.
 
-![Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI](../images/create_flow.png "Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI"){: caption="Figure 1. Sample create flow that uses {{site.data.keyword.dev_cli_notm}} CLI" caption-side="bottom"}
+![A create app flow that uses {{site.data.keyword.dev_cli_notm}} CLI](../images/create_flow.png "A create app flow that uses {{site.data.keyword.dev_cli_notm}} CLI"){: caption="Figure 1. A create app flow that uses {{site.data.keyword.dev_cli_notm}} CLI" caption-side="bottom"}
 
 The {{site.data.keyword.dev_cli_notm}} CLI works closely together to provide a smooth experience during development. Projects that are created from the web consoles provide a **Download code** button to download the generated source code to your workstation for further development.
 
@@ -68,7 +68,7 @@ Projects that are created or enabled for use with the developer tools come with 
 ## Code, build, and run
 {: #code-build-run}
 
-Once your project is created, it's up to you to craft it into something useful. The general flow consists of editing the source code, then running [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) to compile the app within a local container specific to your app's language and configuration. Depending on your apps language and generator that is used, there are one or more containers that default to support building and running locally. Typically, there's a "tools" container for builds and local debugging. This container has extra tools and capabilities to aid you in development. There's also a "run" container that mimics the runtime environment of your app when its deployed to the cloud, either in Cloud Foundry or IBM's Kubernetes based container environment.
+After you create your project, it's up to you to craft it into something useful. The general flow consists of editing the source code, then running [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) to compile the app within a local container specific to your app's language and configuration. Depending on your apps language and generator that is used, there are one or more containers that default to support building and running locally. Typically, there's a "tools" container for builds and local debugging. This container has extra tools and capabilities to aid you in development. There's also a "run" container that mimics the runtime environment of your app after deployment, either in Cloud Foundry or IBM's Kubernetes based container environment.
 
 You're free to use whatever IDE or editor you prefer to code your app. {{site.data.keyword.IBM_notm}} offers an extension for the Microsoft&trade; Visual Studio Code (VSCode) editor that enables you to access all the IDE commands from directly within the editor.
 

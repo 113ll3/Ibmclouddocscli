@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-24"
+lastupdated: "2019-08-15"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -65,7 +65,7 @@ The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when
   Right-click the Windows&trade; PowerShell icon, and select **Run as administrator**.
   {: tip}
 
-You can also download the installer script from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+* For automating DevOps installations, you can also access the installer script directly from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 If you need to use a 32-bit version of the CLI, or a previous version other than the latest for {{site.data.keyword.cloud_notm}} Dedicated environments, see [{{site.data.keyword.cloud_notm}} CLI releases](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 {: note}

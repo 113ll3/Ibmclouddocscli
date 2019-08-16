@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-08-15"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -32,7 +32,7 @@ ibmcloud dev enable
 {: codeblock}
 
 * When you're prompted to verify the detected framework for the project, **Python - Flask** or **Python - Django**, reply `y`. 
-* You are then prompted to **Connect to an IBM Cloud app**. Select either the **Generate assets, create a new IBM Cloud app and connect to it** or **Generate assets without connecting to an IBM Cloud app** options to connect your app.
+* You are then prompted to **Connect to an IBM Cloud app**. Select either the **Generate assets, create a new IBM Cloud app and connect to it** or **Generate assets without connecting to an IBM Cloud app** option to connect your app.
 * The `enable` command can also create services and bind them to your app. For this basic example, reply `n`.
 
 See the following sample output:

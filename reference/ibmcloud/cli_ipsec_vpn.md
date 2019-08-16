@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-08-15"
 
 keywords: cli, classic infrastructure, ipsec, vpn, ibmcloud sl ipsec, tunnel, vpn access, encryption, vpn tunnel cli, ipsec vpn tunnel
 
@@ -59,7 +59,7 @@ ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-i, --include</dt>
-<dd>Include additional resources, options are: at,is,rs,sr,ss.</dd>
+<dd>Include extra resources, options are: at,is,rs,sr,ss.</dd>
 </dl>
 
 ## ibmcloud sl ipsec list
@@ -73,7 +73,7 @@ ibmcloud sl ipsec list [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>--order</dt>
-<dd>Filter by ID of the order that purchased the IPSEC.</dd>
+<dd>Filter by ID of the order that purchased the IPSec.</dd>
 </dl>
 
 ## ibmcloud sl ipsec order
@@ -87,7 +87,7 @@ ibmcloud sl ipsec order [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-d, --datacenter</dt>
-<dd>Required. Short name of the datacenter for the IPSEC, eg. dal09 .</dd>
+<dd>Required. Short name of the datacenter for the IPSec. For example, `dal09`.</dd>
 </dl>
 
 ## ibmcloud sl ipsec subnet-add
@@ -177,21 +177,21 @@ ibmcloud sl ipsec update CONTEXT_ID [OPTIONS]
 <dt>-k, --preshared-key</dt>
 <dd>Preshared key.</dd>
 <dt>-a, --phase1-auth</dt>
-<dd>Phase 1 authentication,options are: MD5,SHA1,SHA256.</dd>
+<dd>Phase 1 authentication. Options are: MD5,SHA1,SHA256.</dd>
 <dt>-c, --phase1-crypto</dt>
-<dd>Phase 1 encryption,options are: DES,3DES,AES128,AES192,AES256.</dd>
+<dd>Phase 1 encryption. Options are: DES,3DES,AES128,AES192,AES256.</dd>
 <dt>-d, --phase1-dh</dt>
-<dd>Phase 1 diffie hellman group,options are: 0,1,2,5.</dd>
+<dd>Phase 1 Diffie-Hellman group. Options are: 0,1,2,5.</dd>
 <dt>-t, --phase1-key-ttl</dt>
-<dd>Phase 1 key life,range is 120-172800.</dd>
+<dd>Phase 1 key life. Range is `120-172800`.</dd>
 <dt>-u, --phase2-auth</dt>
-<dd>Phase 2 authentication,options are: MD5,SHA1,SHA256.</dd>
+<dd>Phase 2 authentication. Options are: MD5,SHA1,SHA256.</dd>
 <dt>-y, --phase2-crypto</dt>
-<dd>Phase 2 encryption,options are: DES,3DES,AES128,AES192,AES256.</dd>
+<dd>Phase 2 encryption. Options are: DES,3DES,AES128,AES192,AES256.</dd>
 <dt>-e, --phase2-dh</dt>
-<dd>Phase 2 diffie hellman group,options are: 0,1,2,5.</dd>
+<dd>Phase 2 Diffie-Hellman group. Options are: 0,1,2,5.</dd>
 <dt>-f, --phase2-forward-secrecy</dt>
-<dd>Phase 2 perfect forward secrecy,range is 0-1.</dd>
+<dd>Phase 2 perfect forward secrecy. Range is `0-1`.</dd>
 <dt>-l, --phase2-key-ttl</dt>
-<dd>Phase 2 key life,range is 120-172800.</dd>
+<dd>Phase 2 key life. Range is `120-172800`.</dd>
 </dl>

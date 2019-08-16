@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-15"
 
 keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # Creating and working with bare metal servers
 {: #sl-manage-bare-metal}
@@ -49,11 +50,12 @@ Display a list of cancellation reasons.
 ```
 ibmcloud sl hardware cancel-reasons
 ```
+{: codeblock}
 
 ## ibmcloud sl hardware create
 {: #sl_hardware_create}
 
-Order/create a hardware server.
+Order or create a hardware server.
 ```
 ibmcloud sl hardware create [OPTIONS]
 ```
@@ -67,7 +69,7 @@ ibmcloud sl hardware create [OPTIONS]
 <dt>-s, --size</dt>
 <dd>Hardware size, required.</dd>
 <dt>-o, --os</dt>
-<dd>OS install code, required.</dd>
+<dd>OS installation code, required.</dd>
 <dt>-d, --datacenter</dt>
 <dd>Datacenter shortname, required.</dd>
 <dt>-p, --port-speed</dt>
@@ -77,15 +79,15 @@ ibmcloud sl hardware create [OPTIONS]
 <dt>-i, --post-install</dt>
 <dd>Post-install script to download.</dd>
 <dt>-k, --key</dt>
-<dd>SSH keys to add to the root user, multiple occurrence allowed.</dd>
+<dd>SSH keys to add to the root user. You can specify more than one.</dd>
 <dt>-n, --no-public</dt>
 <dd>Private network only.</dd>
 <dt>-e, --extra</dt>
-<dd>Extra options, multiple occurrence allowed.</dd>
+<dd>Extra options. You can specify more than one.</dd>
 <dt>-t, --test</dt>
-<dd>Do not actually create the virtual server.</dd>
+<dd>Do not create the virtual server.</dd>
 <dt>-m, --template</dt>
-<dd>A template file that defaults the command-line options.</dd>
+<dd>A template file that defaults the command line options.</dd>
 <dt>-x, --export</dt>
 <dd>Exports options to a template file.</dd>
 <dt>-f, --force</dt>
@@ -95,15 +97,16 @@ ibmcloud sl hardware create [OPTIONS]
 ## ibmcloud sl hardware create-options
 {: #sl_hardware_create_options}
 
-Server order options for a given chassis.
+View the server order options for a chassis:
 ```
 ibmcloud sl hardware create-options
 ```
+{: codeblock}
 
 ## ibmcloud sl hardware credentials
 {: #sl_hardware_credentials}
 
-List hardware server credentials.
+List hardware server credentials:
 ```
 ibmcloud sl hardware credentials IDENTIFIER
 ```
@@ -141,9 +144,9 @@ ibmcloud sl hardware edit IDENTIFIER [OPTIONS]
 <dt>-g, --tag</dt>
 <dd>Tags to set or empty string to remove all.</dd>
 <dt>-F, --userfile</dt>
-<dd>Read userdata from file.</dd>
+<dd>Read user data from a file.</dd>
 <dt>-u, --userdata</dt>
-<dd>User defined metadata string.</dd>
+<dd>User-defined metadata string.</dd>
 <dt>-p, --public-speed</dt>
 <dd>Public port speed, options are: 0,10,100,1000,10000.</dd>
 <dt>-v, --private-speed</dt>
@@ -165,7 +168,7 @@ ibmcloud sl hardware list [OPTIONS]
 <dt>-D, --domain</dt>
 <dd>Filter by domain.</dd>
 <dt>-H, --hostname</dt>
-<dd>Filter by hostname.</dd>
+<dd>Filter by host name.</dd>
 <dt>-d, --datacenter</dt>
 <dd>Filter by datacenter.</dd>
 <dt>-m, --memory</dt>
@@ -173,13 +176,13 @@ ibmcloud sl hardware list [OPTIONS]
 <dt>-n, --network</dt>
 <dd>Filter by network port speed in Mbps.</dd>
 <dt>-g, --tag</dt>
-<dd>Filter by tags, multiple occurrence allowed.</dd>
+<dd>Filter by tags. You can specify more than one.</dd>
 <dt>-p, --public-ip</dt>
 <dd>Filter by public IP address.</dd>
 <dt>-v, --private-ip</dt>
 <dd>Filter by private IP address.</dd>
 <dt>-o, --order</dt>
-<dd>Filter by ID of the order which purchased hardware server.</dd>
+<dd>Filter by the ID of the order that purchased the hardware server.</dd>
 <dt>--owner</dt>
 <dd>Filter by ID of the owner.</dd>
 <dt>--sortby</dt>
@@ -255,11 +258,11 @@ ibmcloud sl hardware reload IDENTIFIER [OPTIONS]
 <dt>-i, --postinstall</dt>
 <dd>Post-install script to download, only HTTPS executes, HTTP leaves file in /root.</dd>
 <dt>-k, --key</dt>
-<dd>IDs of SSH key to add to the root user, multiple occurrence allowed.</dd>
+<dd>IDs of SSH key to add to the root user. You can specify more than one.</dd>
 <dt>-b, --upgrade-bios</dt>
 <dd>Upgrade BIOS.</dd>
 <dt>-w, --upgrade-firmware</dt>
-<dd>Upgrade all hard drives' firmware.</dd>
+<dd>Upgrade all hard disk drive firmware.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>

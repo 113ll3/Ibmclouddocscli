@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-15"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -73,7 +73,7 @@ ibmcloud sl user detail [OPTIONS] IDENTIFIER
 <dt>--keys</dt>
 <dd>Show the users API key.</dd>
 <dt>--permissions</dt>
-<dd>Display permissions assigned to this user. Master users will show no permissions.</dd>
+<dd>Display permissions that are assigned to this user. Master users do not show permissions.</dd>
 <dt>--hardware</dt>
 <dd>Display hardware this user has access to.</dd>
 <dt>--virtual</dt>

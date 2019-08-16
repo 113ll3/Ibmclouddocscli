@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-15"
 
 keywords: cli, content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
 
@@ -13,11 +13,12 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
-# Working with the CDN service
+# Working with the Content Delivery Service (CDN) service
 {: #sl-cdn-service}
 
-The Content Delivery Network (CDN) service distributes content where it's needed. The first time content is requested, it’s pulled from the host server to the network and stays there for other users to access it.
+The Content Delivery Network (CDN) service distributes content where its needed. A CDN is a system of distributed servers that deliver web content based on the geographic locations of the user, the origin of the webpage, and the content delivery server.
 
 Use the following commands to manage the {{site.data.keyword.cloud_notm}} classic infrastructure CDN service.
 {: shortdesc}
@@ -79,9 +80,9 @@ ibmcloud sl cdn order [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-b, --bandwidth</dt>
-<dd>CDN bandwidth, Pay as You Go price will be used if not specified.</dd>
+<dd>CDN bandwidth. Pay as You Go price is used if not specified.</dd>
 <dt>-s, --storage</dt>
-<dd>CDN storage, Pay as You Go price will be used if not specified.</dd>
+<dd>CDN storage. Pay as You Go price is used if not specified.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
@@ -89,10 +90,11 @@ ibmcloud sl cdn order [OPTIONS]
 ## ibmcloud sl cdn options
 {: #sl_cdn_options}
 
-Bandwidth and storage options for ordering CDN account.
+Show bandwidth and storage options for ordering CDN account:
 ```
 ibmcloud sl cdn options
 ```
+{: codeblock}
 
 ## ibmcloud sl cdn origin-add
 {: #sl_cdn_origin_add}
@@ -113,7 +115,7 @@ ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ## ibmcloud sl cdn origin-list
 {: #sl_cdn_origin_list}
 
-List origin pull mappings.
+List origin pull mappings:
 ```
 ibmcloud sl cdn origin-list ACCOUNT_ID
 ```
@@ -121,7 +123,7 @@ ibmcloud sl cdn origin-list ACCOUNT_ID
 ## ibmcloud sl cdn origin-remove
 {: #sl_cdn_origin_remove}
 
-Remove an origin pull mapping.
+Remove an origin pull mapping:
 ```
 ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 ```
@@ -135,7 +137,7 @@ ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 ## ibmcloud sl cdn purge
 {: #sl_cdn_purge}
 
-Purge cached files from all edge nodes.
+Purge cached files from all edge nodes:
 ```
 ibmcloud sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
 ```

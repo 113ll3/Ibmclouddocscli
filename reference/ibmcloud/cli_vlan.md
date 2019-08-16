@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-08-15"
 
 keywords: cli, classic infrastructure cli, vlan cli, classic vlan cli, ibmcloud sl vlan, manage virtual network cli
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Managing classic infrastructure VLANs
 {: #manage-classic-vlans}
 
-Virtual Local Area Networks (VLANs) are used by {{site.data.keyword.cloud}} to isolate broadcast traffic on the public and private networks. VLANs are assigned as needed to fulfill other offerings.
+Virtual local area networks (VLANs) are used by {{site.data.keyword.cloud}} to isolate broadcast traffic on the public and private networks. VLANs are assigned as needed to fulfill other offerings.
 
 Use the following commands to manage classic infrastructure VLANs.
 {: shortdesc}
@@ -26,7 +26,7 @@ Use the following commands to manage classic infrastructure VLANs.
 ## ibmcloud sl vlan create
 {: #sl_vlan_create}
 
-Create a new VLAN.
+Create a VLAN:
 ```
 ibmcloud sl vlan create [OPTIONS]
 ```
@@ -36,7 +36,7 @@ ibmcloud sl vlan create [OPTIONS]
 <dt>-t, --vlan-type</dt>
 <dd>The type of the VLAN, either public or private.</dd>
 <dt>-r, --router</dt>
-<dd>The hostname of the router.</dd>
+<dd>The host name of the router.</dd>
 <dt>-d, --datacenter</dt>
 <dd>The short name of the datacenter.</dd>
 <dt>-n, --name</dt>
@@ -51,7 +51,7 @@ ibmcloud sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
 {: codeblock}
 
-This command creates a public vlan located at datacenter `dal09` with 16 IP addresses and name is `myvlan`.
+This command creates a public VLAN that is located in datacenter `dal09` with 16 IP addresses and name is `myvlan`.
 
 ## ibmcloud sl vlan cancel
 {: #sl_vlan_cancel}
@@ -73,12 +73,12 @@ ibmcloud sl vlan cancel 12345678 -f
 ```
 {: codeblock}
 
-This command cancels vlan with ID `12345678` without asking for confirmation.
+This command cancels VLAN with ID `12345678` without asking for confirmation.
 
 ## ibmcloud sl vlan detail
 {: #sl_vlan_detail}
 
-Get details about a VLAN.
+Get details about a VLAN:
 ```
 ibmcloud sl vlan detail IDENTIFIER [OPTIONS]
 ```
@@ -97,12 +97,12 @@ ibmcloud sl vlan detail 12345678  --no-vs --no-hardware
 ```
 {: codeblock}
 
-This command shows details of vlan with ID `12345678`, and not list virtual server or hardware server.
+This command shows details of VLAN with ID `12345678`, and not list virtual server or hardware server.
 
 ## ibmcloud sl vlan edit
 {: #sl_vlan_edit}
 
-Edit the details about a VLAN.
+Edit the details about a VLAN:
 ```
 ibmcloud sl vlan edit IDENTIFIER [OPTIONS]
 ```
@@ -124,7 +124,7 @@ This command updates vlan with `ID 12345678` and gives it a new name `myvlan-ren
 ## ibmcloud sl vlan list
 {: #sl_vlan_list}
 
-List all the VLANs on your account.
+List all the VLANs on your account:
 ```
 ibmcloud sl vlan list [OPTIONS]
 ```
@@ -147,7 +147,9 @@ ibmcloud sl vlan list [OPTIONS]
 ```
 ibmcloud sl vlan list -d dal09 --sortby number
 ```
-This commands lists all vlans on current account filtering by datacenter equals to `dal09`, and sort them by vlan number.
+{: codeblock}
+
+This commands lists all VLANs on current account, and filtering by datacenter that equals to `dal09`, and sorts them by VLAN number.
 
 ## ibmcloud sl vlan options
 {: #sl_vlan_options}
@@ -164,4 +166,4 @@ ibmcloud sl vlan options
 ```
 {: codeblock}
 
-This command lists all options for creating a vlan, eg. vlan type, datacenters, subnet size, routers, etc.
+This command lists all options for creating a VLAN, eg.  type, datacenters, subnet size, routers, etc.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-18"
+lastupdated: "2019-08-16"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -14,6 +14,7 @@ subcollection: cloud-cli
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:note: .note}
+{:codeblock: .codeblock}
 
 # Managing accounts, users, and Cloud Foundry orgs
 {: #ibmcloud_commands_account}
@@ -24,7 +25,7 @@ Use the following commands to manage accounts, users in an account, and the org,
 ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
 
-List all organizations.
+List all organizations:
 ```
 ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID] [-u ACCOUNT_OWNER]
 ```
@@ -56,11 +57,12 @@ List all the organizations in JSON format:
 ```
 ibmcloud account orgs --output JSON
 ```
+{: codeblock}
 
 ## ibmcloud account org
 {: #ibmcloud_account_org}
 
-Show the information of the specified organization.
+Show the information of the specified organization:
 ```
 ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
 ```
@@ -76,20 +78,21 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
    <dt>--guid</dt>
    <dd>Retrieve and display the org's guid. All other output for the org is suppressed. This option is exclusive with `--output`.</dd>
    <dt>--output REGION</dt>
-   <dd>Specify output format, only JSON is supported now. This option is exclusive with `--guid`.</dd>
+   <dd>Specify output format. Only JSON is supported. This option is exclusive with `--guid`.</dd>
    </dl>
 
 <strong>Examples</strong>:
 
-Show the information of organization `IBM` with the GUID displayed.
+Show the information of organization `IBM` with the GUID displayed:
 ```
 ibmcloud account org IBM --guid
 ```
+{: codeblock}
 
 ## ibmcloud account org-create
 {: #ibmcloud_account_org_create}
 
-Create an organization. This operation can be run only by account owner.
+Create an organization. This operation can be run only by the account owner.
 ```
 ibmcloud account org-create ORG_NAME [-r, --region REGION]
 ```
@@ -106,15 +109,16 @@ ibmcloud account org-create ORG_NAME [-r, --region REGION]
 
 <strong>Examples</strong>:
 
-Create an organization named `IBM`.
+Create an organization named `IBM`:
 ```
 ibmcloud account org-create IBM 
 ```
+{: codeblock}
 
 ## ibmcloud account org-replicate
 {: #ibmcloud_account_org_replicate}
 
-Replicate an org from the current region to another region.
+Replicate an org from the current region to another region:
 ```
 ibmcloud account org-replicate ORG_NAME REGION_NAME [-r, --region SOURCE_REGION]
 ```
@@ -137,6 +141,7 @@ Replicate the org `myorg` to the region `eu-gb`:
 ```
 ibmcloud account org-replicate myorg eu-gb
 ```
+{: codeblock}
 
 ## ibmcloud account org-rename
 {: #ibmcloud_account_org_rename}
@@ -161,7 +166,7 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME [-r, --region REGION]
 ## ibmcloud account spaces
 {: #ibmcloud_account_spaces}
 
-List all account spaces.
+List all account spaces:
 ```
 ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 ```
@@ -175,7 +180,7 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
    <dt>-r REGION-NAME (optional)</dt>
    <dd>Region name. List the spaces under the region specified. Default to current region if not specified.</dd>
    <dt>--output FORMAT (optional)</dt>
-   <dd>Specify output format, only JSON is supported now.</dd>
+   <dd>Specify output format. Only JSON is supported.</dd>
    </dl>
 
 <strong>Examples</strong>:
@@ -184,16 +189,18 @@ List all spaces:
 ```
 ibmcloud account spaces
 ```
+{: codeblock}
 
 List all spaces of org `org_example` in JSON format:
 ```
 ibmcloud account spaces -o org_example --output JSON
 ```
+{: codeblock}
 
 ## ibmcloud account space
 {: #ibmcloud_account_space}
 
-Show the information of a specific space.
+Show the information of a specific space:
 ```
 ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--security-group-rules]
 ```
@@ -209,7 +216,7 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
    <dt>--guid</dt>
    <dd>Retrieve and display the space's guid. All other output for the space is suppressed. This option is exclusive with `--output`.</dd>
    <dt>--output FORMAT</dt>
-   <dd>Specify output format, only JSON is supported now. All other output for the space is suppressed. This option is exclusive with `--guid`.</dd>
+   <dd>Specify output format. Only JSON is supported. All other output for the space is suppressed. This option is exclusive with `--guid`.</dd>
    <dt>--security-group-rules</dt>
    <dd>Retrieve the rules for all the security groups associated with the space.</dd>
    </dl>
@@ -220,21 +227,25 @@ Show the information of space `space_example`:
 ```
 ibmcloud account space space_example
 ```
+{: codeblock}
 
 Show the GUID of space `space_example`:
 ```
 ibmcloud account space space_example --guid
 ```
+{: codeblock}
 
 Show the information of space `space_example` in JSON format:
 ```
 ibmcloud account space space_example --output JSON
 ```
+{: codeblock}
 
 Show the security group rules of space `space_example`:
 ```
 ibmcloud account space space_example --security-group-rules
 ```
+{: codeblock}
 
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
@@ -254,8 +265,7 @@ This command has the same function and options as the [`cf delete-space`](http:/
 ## ibmcloud account org-users
 {: #ibmcloud_account_org_users}
 
-Display users in the specified organization by role.
-
+Display users in the specified organization by role:
 ```
 ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 ```
@@ -275,9 +285,9 @@ ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 ## ibmcloud account org-user-add
 {: #ibmcloud_account_org_user_add}
 
-Add a user into org (org manager required).
+Add a user into org (org manager required):
 ```
- ibmcloud account org-user-add USER_NAME ORG [-r, --region REGION]
+ibmcloud account org-user-add USER_NAME ORG [-r, --region REGION]
 ```
 
 <strong>Command options</strong>:
@@ -293,7 +303,7 @@ Add a user into org (org manager required).
 ## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
 
-Remove a user from org (org manager or user only).
+Remove a user from org (org manager or user only):
 ```
 ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
 ```
@@ -307,7 +317,7 @@ ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
 ## ibmcloud account org-roles
 {: #ibmcloud_account_org_roles}
 
-Get all organization roles of the current user.
+Get all organization roles of the current user:
 ```
 ibmcloud account org-roles [-r, --region REGION] [-u USER_ID] [--output FORMAT]
 ```
@@ -321,7 +331,7 @@ ibmcloud account org-roles [-r, --region REGION] [-u USER_ID] [--output FORMAT]
    <dt>-r, --region REGION (optional)</dt>
    <dd>Region name. Default to current region if not specified.</dd>
    <dt>--output FORMAT (optional)</dt>
-   <dd>Specify output format, only JSON is supported now.</dd>
+   <dd>Specify output format. Only JSON is supported.</dd>
   </dl>
 
 ## ibmcloud account org-role-set
@@ -366,7 +376,7 @@ You can set org and space roles by using the CLI, but if you want to set the oth
 ## ibmcloud account org-role-unset
 {: #ibmcloud_account_org_role_unset}
 
-Remove an organization role from a user. This operation can be performed only by an organization manager.
+Remove an organization role from a user. This operation can be run by an organization manager.
 ```
 ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE [-r, --region REGION]
 ```
@@ -397,11 +407,12 @@ Remove user `Mary` from the organization `IBM` as `OrgManager` role:
 ```
 ibmcloud account org-role-unset Mary IBM OrgManager
 ```
+{: codeblock}
 
 ## ibmcloud account space-users
 {: #ibmcloud_account_space_users}
 
-Display users in the specified space by role.
+Display users in the specified space by role:
 ```
 ibmcloud account space-users ORG_NAME SPACE_NAME [-r, --region REGION]
 ```
@@ -421,8 +432,7 @@ ibmcloud account space-users ORG_NAME SPACE_NAME [-r, --region REGION]
 ## ibmcloud account space-roles
 {: #ibmcloud_account_space_roles}
 
-Get all space roles of current user under specific org
-
+Get all space roles of current user under specific org:
 ```
 ibmcloud account space-roles ORG [-r, --region REGION] [--output FORMAT]
 ```
@@ -436,7 +446,7 @@ ibmcloud account space-roles ORG [-r, --region REGION] [--output FORMAT]
    <dt>-r (optional)</dt>
    <dd>Region name. Default to current region if not specified.</dd>
    <dt>--output FORMAT (optional)</dt>
-   <dd>Specify output format, only JSON is supported now.</dd>
+   <dd>Specify output format. Only JSON is supported.</dd>
    </dl>
 
 ## ibmcloud account space-role-set
@@ -476,6 +486,7 @@ Assign user `Mary` to the organization `IBM` and space `Cloud` as `SpaceManager`
 ```
 ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 ```
+{: codeblock}
 
 ## ibmcloud account space-role-unset
 {: #ibmcloud_account_space_role_unset}
@@ -507,13 +518,13 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE [-r, 
    <dd>Region name. Default to current region if not specified.</dd>
     </dl>
 
-
 <strong>Examples</strong>:
 
 Remove user `Mary` from the organization `IBM` and space `Cloud` as `SpaceManager` role:
 ```
 ibmcloud account space-role-unset Mary IBM Cloud SpaceManager
 ```
+{: codeblock}
 
 ## ibmcloud account list
 {: #ibmcloud_account_list}
@@ -548,16 +559,17 @@ ibmcloud account org-account ORG_NAME [-r, --region REGION] [--guid | --output F
   <dt>--guid (optional)</dt>
   <dd>Display account ID only</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format, only JSON is supported now.</dd>
+  <dd>Specify output format. Only JSON is supported.</dd>
 </dl>
 
 ## ibmcloud account show
 {: #ibmcloud_account_show}
 
-Show account details.
+Show account details:
 ```
 ibmcloud account show
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>:  Endpoint, Login, Target
 
@@ -571,6 +583,7 @@ Show details of currently targeted account:
 ```
 ibmcloud account show
 ```
+{: codeblock}
 
 ## ibmcloud account update
 {: #ibmcloud_account_update}
@@ -594,9 +607,10 @@ Enable service endpoint connectivity for current account:
 ```
 ibmcloud account update --service-endpoint-enable true
 ```
+{: codeblock}
 
-## ibmcloud account audit-logs
-{: #ibmcloud_account_audit_logs}
+## Classic infrastructure account audit-logs
+{: #classic_account_audit_logs}
 
 List SoftLayer account audit logs:
 ```
@@ -627,6 +641,34 @@ List audit logs:
 ```
 ibmcloud account audit-logs
 ```
+{: codeblock}
+
+## ibmcloud account audit-logs
+{: #ibmcloud_account_audit_logs}
+
+List account audit logs:
+```
+ibmcloud account audit-logs [--user-name USER_NAME] [--object-type OBJECT_TYPE] [--object OBJECT] [--action ACTION] [--start-date START_DATE] [--end-date END_DATE] [--output FORMAT]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+   <dt>--user-name <i>USER_NAME</i> (optional)</dt>
+   <dd>List audit logs with the user name.</dd>
+   <dt>--object-type <i>OBJECT_TYPE</i> (optional)</dt>
+   <dd>List audit logs with the object type.</dd>
+   <dt>--object <i>OBJECT</i> (optional)</dt>
+   <dd>List audit logs with the object.</dd>
+   <dt>--action <i>ACTION</i> (optional)</dt>
+   <dd>List audit logs with the action.</dd>
+   <dt>--start-date <i>START_DATE</i> (optional)</dt>
+   <dd>List audit logs after the start date. Supported formats are yyyy-MM-ddTHH:mm:ss.</dd>
+   <dt>--end-date <i>END_DATE</i> (optional)</dt>
+   <dd>List audit logs before the end date. Supported formats are yyyy-MM-ddTHH:mm:ss.</dd>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
+</dl>
 
 ## ibmcloud account users
 {: #ibmcloud_account_users}
@@ -681,25 +723,26 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dt>USER_EMAIL (required)</dt>
    <dd>The email of the user to be invited.</dd>
    <dt>-o ORG</dt>
-   <dd>Organization to invite user to</dd>
+   <dd>Organization to invite user to.</dd>
    <dt>--org-role ORG_ROLE</dt>
    <dd>Organization role. Valid inputs are: OrgManager, BillingManager, OrgAuditor, and OrgUser. If omitted, the OrgUser role is set.</dd>
    <dt>-s SPACE</dt>
-   <dd>Space to invite user to</dd>
+   <dd>Space to invite user to.</dd>
    <dt>--space-role SPACE_ROLE</dt>
    <dd>Space role. Valid inputs are: SpaceManager, SpaceDeveloper, and SpaceAuditor.</dd>
 </dl>
 
-If you aren't ready to assign access, or want to assign an IAM policy instead of Cloud Foundry access, you can invite a user with no access and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser#assign_new_access).
+If you aren't ready to assign access, or want to assign an IAM policy instead of Cloud Foundry access, you can invite a user and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser#assign_new_access).
 {: tip}
 
 ## ibmcloud account user-reinvite
 {: #ibmcloud_account_user_reinvite}
 
-Resend invitation to a user (account admin).
+Resend invitation to a user (account admin):
 ```
 ibmcloud account user-reinvite USER_EMAIL
 ```
+
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
@@ -708,66 +751,39 @@ ibmcloud account user-reinvite USER_EMAIL
    <dd>The email of the user to be invited again.</dd>
 </dl>
 
-## ibmcloud account audit-logs
-{: #ibmcloud_account_audit_logs}
-
-List account audit logs
-
-```
-ibmcloud account audit-logs [--user-name USER_NAME] [--object-type OBJECT_TYPE] [--object OBJECT] [--action ACTION] [--start-date START_DATE] [--end-date END_DATE] [--output FORMAT]
-```
-<strong>Prerequisites</strong>:  Endpoint, Login
-
-<strong>Command options</strong>:
-<dl>
-   <dt>--user-name <i>USER_NAME</i> (optional)</dt>
-   <dd>List audit logs with the user name.</dd>
-   <dt>--object-type <i>OBJECT_TYPE</i> (optional)</dt>
-   <dd>List audit logs with the object type.</dd>
-   <dt>--object <i>OBJECT</i> (optional)</dt>
-   <dd>List audit logs with the object.</dd>
-   <dt>--action <i>ACTION</i> (optional)</dt>
-   <dd>List audit logs with the action.</dd>
-   <dt>--start-date <i>START_DATE</i> (optional)</dt>
-   <dd>List audit logs after the start date. Supported formats are yyyy-MM-ddTHH:mm:ss.</dd>
-   <dt>--end-date <i>END_DATE</i> (optional)</dt>
-   <dd>List audit logs before the end date. Supported formats are yyyy-MM-ddTHH:mm:ss.</dd>
-   <dt>--output FORMAT (optional)</dt>
-   <dd>Specify output format, only JSON is supported now.</dd>
-</dl>
-
 ## ibmcloud account user-preference
 {: #ibmcloud_account_user_preference}
 
-Show details of user preference
-
+Show user preference details:
 ```
 ibmcloud account user-preference [--output FORMAT]
 ```
+{: codeblock}
+
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
    <dt>--output FORMAT (optional)</dt>
-   <dd>Specify output format, only JSON is supported now.</dd>
+   <dd>Specify output format. Only JSON is supported.</dd>
 </dl>
 
 ## ibmcloud account user-preference-update
 {: #ibmcloud_account_user_preference_update}
 
-Update user preference
-
+Update user preferences:
 ```
 ibmcloud account user-preference-update (--position NEW_POSITION) [--output FORMAT]
 ```
+
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
    <dt>--position <i>NEW_POSITION</i> (optional)</dt>
-   <dd>Set a user's position, such as 'manager' or 'student'.</dd>
+   <dd>Set a user's position, such as `manager` or `student`.</dd>
    <dt>--output FORMAT (optional)</dt>
-   <dd>Specify output format, only JSON is supported now.</dd>
+   <dd>Specify output format. Only JSON is supported.</dd>
 </dl>
 
 ## ibmcloud account platform-notification-subscribe
@@ -777,12 +793,13 @@ Subscribe platform notification:
 ```
 ibmcloud account platform-notification-subscribe (--type TYPE)
 ```
+
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
    <dt>--type <i>TYPE</i> (optional)</dt>
-   <dd>Notification type, one of 'unplanned_events', 'planned_maintenance'.</dd>
+   <dd>Notification type, one of `unplanned_events`, `planned_maintenance`.</dd>
 </dl>
 
 ## ibmcloud account platform-notification-unsubscribe
@@ -797,7 +814,7 @@ ibmcloud account platform-notification-unsubscribe (--type TYPE)
 <strong>Command options</strong>:
 <dl>
    <dt>--type <i>TYPE</i> (optional)</dt>
-   <dd>Notification type, one of 'unplanned_events', 'planned_maintenance'.</dd>
+   <dd>Notification type, one of `unplanned_events`, `planned_maintenance`.</dd>
 </dl>
 
 ## ibmcloud account domain-cert
@@ -816,18 +833,18 @@ ibmcloud account domain-cert DOMAIN_NAME
 <dd>The domain that hosts the certificate.</dd>
 </dl>
 
-
 <strong>Examples</strong>:
 
 View the certificate information of the domain `ibmcxo-eventconnect.com`:
 ```
 ibmcloud account domain-cert ibmcxo-eventconnect.com
 ```
+{: codeblock}
 
 ## ibmcloud account domain-cert-add
 {: #ibmcloud_account_domain_cert_add}
 
-Add a certificate to the specified domain in the current org.
+Add a certificate to the specified domain in the current org:
 ```
 ibmcloud account domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
@@ -850,18 +867,18 @@ ibmcloud account domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PAS
    <dd>The truststore file.</dd>
    </dl>
 
-
 <strong>Examples</strong>:
 
 Add a certificate to the domain `ibmcxo-eventconnect.com`:
 ```
 ibmcloud account domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
+{: codeblock}
 
 ## ibmcloud account domain-cert-remove
 {: #ibmcloud_account_domain_cert_remove}
 
-Remove a certificate from the specified domain in current org.
+Remove a certificate from the specified domain in current org:
 ```
 ibmcloud account domain-cert-remove DOMAIN [-f]
 ```

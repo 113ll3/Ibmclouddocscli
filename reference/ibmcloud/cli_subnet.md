@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-08-15"
 
 keywords: cli, manage subnet cli, classic infrastructure cli, subnet cli, ibmcloud sl subnet, subnet cli, newtork cli
 
@@ -44,7 +44,7 @@ This command cancels subnet with ID `12345678` without asking for confirmation.
 ## ibmcloud sl subnet create
 {: #sl_subnet_create}
 
-Add a new subnet to your account.
+Add a subnet to your account.
 ```
 ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
@@ -52,7 +52,7 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>--v6, --ipv6</dt>
-<dd>Order IPv6 Addresses.</dd>
+<dd>Order IPV6 Addresses.</dd>
 <dt>--test</dt>
 <dd>Do not order the subnet; just get a quote.</dd>
 <dt>-f, --force</dt>
@@ -65,7 +65,7 @@ ibmcloud sl subnet create public 16 567
 ```
 {: codeblock}
 
-This command creates a public subnet with 16 IP v4 addresses and places it on vlan with ID `567`.
+This command creates a public subnet with 16 IPV4 addresses and places it on VLAN with ID `567`.
 
 ## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
@@ -114,7 +114,7 @@ ibmcloud sl subnet list [OPTIONS]
 <dt>--v4, --ipv4</dt>
 <dd>Display only IPv4 subnets.</dd>
 <dt>--v6, --ipv6</dt>
-<dd>Display only IPv6 subnets.</dd>
+<dd>Display only IPV6 subnets.</dd>
 <dt>--order</dt>
 <dd>Filter by the ID of order that purchased the subnets.</dd>
 </dl>
@@ -125,7 +125,7 @@ ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 {: codeblock}
 
-This command lists IP V4 subnets on current account filtering by datacenter is `dal09`, subnet type is `PRIMARY`, and network space is `PUBLIC`.
+This command lists IPV4 subnets on the current account, and filters by datacenter `dal09`, subnet type `PRIMARY`, and network space `PUBLIC`.
 
 ## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
@@ -141,4 +141,4 @@ ibmcloud sl subnet lookup 9.125.235.255
 ```
 {: codeblock}
 
-This command finds the IP address record with IP address `9.125.235.255` and display its subnet and device information.
+This command finds the IP address record with IP address `9.125.235.255` and displays its subnet and device information.

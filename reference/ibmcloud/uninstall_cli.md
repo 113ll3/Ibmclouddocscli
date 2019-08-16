@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-08-15"
 
 keywords: uninstall, stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -29,7 +29,7 @@ Use the following steps to uninstall the stand-alone {{site.data.keyword.cloud_n
 1. Click the **Start** button, and then select **Control Panel**.
 2. In the pop-up window, click **Uninstall a program**.
 3. In the pop-up application list, locate **IBM Cloud Command Line Interface**.
-4. Right click **IBM Cloud Command Line Interface**, and select **Uninstall**.
+4. Right-click **IBM Cloud Command Line Interface**, and select **Uninstall**.
 5. The uninstaller is started. Follow the instructions to finish the uninstallation.
 
 ## Uninstalling on Linux and macOS
@@ -53,7 +53,7 @@ To uninstall versions earlier than `0.9.0`, run the following commands:
   ```
   {: codeblock}
 
-Clean up the autocompletion scripts, if you configured them. For more details, see [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux and Mac only)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
+Clean up the autocompletion scripts, if you configured them. For more information, see [Enabling shell autocompletion](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
 To uninstall versions `0.9.0` and later, run the following command:
   ```
@@ -61,4 +61,4 @@ To uninstall versions `0.9.0` and later, run the following command:
   ```
   {: codeblock}
 
-Clean up any custom autocompletion scripts. For more details, see [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux and Mac only)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
+Clean up any custom autocompletion scripts, if you configured them. For more information, see [Enabling shell autocompletion](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).

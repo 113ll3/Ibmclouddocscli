@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-15"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -19,8 +19,8 @@ subcollection: cloud-cli
 # IBM Cloud Developer Tools for Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-The IBM Cloud Developer Tools extension for Visual Studio Code provides access to capabilities from the IBM developer CLI directly within the Visual Studio Code editor’s command palette. You can quickly access a subset of `ibmcloud dev` commands for both Docker and Cloud Foundry workflows, including app deployment, starting/stopping/restarting apps on {{site.data.keyword.cloud}}, viewing remote app logs, and more – all without the need to leave the editor’s context.
-{:shortdesc}
+The IBM Cloud Developer Tools extension for Visual Studio Code provides access to capabilities from the IBM developer CLI directly within the Visual Studio Code editor’s command palette. You can quickly access a subset of `ibmcloud dev` commands for both Docker and Cloud Foundry workflows. The commands can be used for app deployment, starting/stopping/restarting apps on {{site.data.keyword.cloud}}, viewing remote app logs, and more – all without the need to leave the editor’s context.
+{: shortdesc}
 
 ![Screen capture of the IBM Developer Tools extension download screen.](../images/vscode.png "Extension download screen within Visual Studio Code"){: caption="Figure 1. Extension download screen within Visual Studio Code." caption-side="bottom"}
 
@@ -37,7 +37,7 @@ The simplest way to install the {{site.data.keyword.dev_cli_notm}} extension is 
 1. Open the 'quick open' command palette by using the following key combinations from within the editor:
 
   * **Mac:** `cmd + p`
-  * **Windows / Linux:** `ctrl + p`
+  * **Windows&trade; / Linux&trade;:** `ctrl + p`
 
 2. Enter the `ext install ibm-developer` command and press enter to install the {{site.data.keyword.dev_cli_notm}} extension inside the Visual Studio Code editor.
 
@@ -56,7 +56,7 @@ You start the extension commands by using Visual Studio Code’s command palette
 First, open the command palette by using the following key combination:
 
 * **Mac:** `cmd + shift + p`
-* **Windows / Linux:** `ctrl + shift + p`
+* **Windows&trade; / Linux&trade;:** `ctrl + shift + p`
 
 Next, you enter or select the command that you want to start. You can type ‘ibmcloud’ within the command palette to see the list of all available commands.
 
@@ -66,7 +66,7 @@ Next, you enter or select the command that you want to start. You can type ‘ib
 You can get started with `ibmcloud dev` workflows in just a few steps:
 * Create a project by using one of the two following methods:
   * Use the [{{site.data.keyword.cloud_notm}} web console](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and download the generated code
-  * Use the {{site.data.keyword.cloud_notm}} Developer Tools CLI Plug-in and generate a project by using the [ibmcloud dev create](/docs/cli/idt?topic=cloud-cli-idt-cli#create) command.
+  * Use the {{site.data.keyword.cloud_notm}} Developer Tools CLI plug-in and generate a project by using the [ibmcloud dev create](/docs/cli/idt?topic=cloud-cli-idt-cli#create) command.
 * Open the project’s folder locally in the Visual Studio Code editor
 * Use the `ibmcloud dev build` command to build the app into a Docker image
 * Use the `ibmcloud dev debug` command to run the app in local Docker for development
@@ -81,9 +81,9 @@ You can get started with `ibmcloud dev` workflows in just a few steps:
 For users that are currently deploying apps to Cloud Foundry runtimes on {{site.data.keyword.cloud_notm}}, there's also support for the `cf` set of operations.
 
 You can get started with Cloud Foundry workflows in just a few steps:
-* Create a new Cloud Foundry app
+* Create a Cloud Foundry app
   * Use the [{{site.data.keyword.cloud_notm}} web console](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and download the starter code
-  * Create a new Cloud Foundry app manually
+  * Create a Cloud Foundry app manually
 * Open the project folder locally in the Visual Studio Code editor
 * Use `ibmcloud cf apps` to list all of your apps
 * Use `ibmcloud cf push` to push a build of your app to the Cloud Foundry runtime

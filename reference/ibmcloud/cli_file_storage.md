@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-08-15"
 
 keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
 
@@ -20,13 +20,13 @@ subcollection: cloud-cli
 
 {{site.data.keyword.filestorage_full}} is a persistent, fast, and flexible network-attached, NFS-based {{site.data.keyword.filestorage_short}}. In this network-attached storage (NAS) environment, you have total control over your file shares function and performance.
 
-Use the following commands to manage a given volume in the {{site.data.keyword.cloud_notm}} classic infrastructure File Storage service.
+Use the following commands to manage a volume in the {{site.data.keyword.cloud_notm}} classic infrastructure File Storage service.
 {: shortdesc}
  
 ## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
-Authorize hosts to access a given volume.
+Authorize hosts to access a volume:
 ```
 ibmcloud sl file access-authorize VOLUME_ID [OPTIONS]
 ```
@@ -55,7 +55,7 @@ This command authorizes virtual server with ID `87654321` to access volume with 
 ## ibmcloud sl file access-list
 {: #sl_file_access_list}
 
-List ACLs.
+List ACLs:
 ```
 ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 ```
@@ -72,13 +72,14 @@ ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file access-list 12345678 --sortby id
 ```
+{: codeblock}
 
 This command lists all hosts that are authorized to access volume with ID `12345678` and sorts them by ID.
 
 ## ibmcloud sl file access-revoke
 {: #sl_file_access_revoke}
 
-Revoke authorization for hosts accessing a given volume.
+Revoke authorization for hosts that access a specific volume:
 ```
 ibmcloud sl file access-revoke VOLUME_ID [OPTIONS]
 ```
@@ -101,6 +102,7 @@ ibmcloud sl file access-revoke VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 ```
+{: codeblock}
 
 This command revokes access of virtual server with ID `87654321` to volume with ID `12345678`.
 
@@ -116,42 +118,46 @@ ibmcloud sl file replica-failback VOLUME_ID
 ```
 ibmcloud sl file replica-failback 12345678
 ```
+{: codeblock}
+
 This command performs failback operation for volume with ID `12345678`.
 
 ## ibmcloud sl file replica-failover
 {: #sl_file_replica_failover}
 
-Failover a file volume to the given replica volume.
+Fail over a file volume to the specified replica volume:
 ```
 ibmcloud sl file replica-failover VOLUME_ID REPLICA_ID
 ```
-
 
 **Examples**:
 ```
 ibmcloud sl file replica-failover 12345678 87654321
 ```
-This command performs failover operation for volume with ID `12345678` to replica volume with ID `87654321`.
+{: codeblock}
+
+This command performs a failover operation for a volume with ID `12345678` to replica volume with ID `87654321`.
 
 ## ibmcloud sl file replica-locations
 {: #sl_file_replica_locations}
 
-List suitable replication datacenters for the given volume.
+List suitable replication datacenters for the specified volume:
 ```
 ibmcloud sl file replica-locations VOLUME_ID
 ```
-
 
 **Examples**:
 ```
 ibmcloud sl file replica-locations 12345678
 ```
-This command lists suitable replication data centers for file volume with ID `12345678`.
+{: codeblock}
+
+This command lists suitable replication data centers for a file volume with ID `12345678`.
 
 ## ibmcloud sl file replica-order
 {: #sl_file_replica_order}
 
-Order a file storage replica volume.
+Order a file storage replica volume:
 ```
 ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
 ```
@@ -159,13 +165,13 @@ ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-s, --snapshot-schedule</dt>
-<dd>Required. Snapshot schedule to use for replication, , options are: HOURLY,DAILY,WEEKLY.</dd>
+<dd>Required. Snapshot schedule to use for replication. Options are: HOURLY,DAILY,WEEKLY.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Required. Short name of the datacenter for the replica, eg. dal09 .</dd>
+<dd>Required. Short name of the datacenter for the replica. For example, `dal09`.</dd>
 <dt>-t, --tier</dt>
-<dd>Optional. Endurance Storage Tier (IOPS per GB) of the primary volume for which a replica is ordered , options are: 0.25,2,4,10,if no tier is specified, the tier of the original volume will be used.</dd>
+<dd>Optional. Endurance Storage Tier (IOPS per GB) of the primary volume for which a replica is ordered. Options are: [0.25,2,4,10]. If no tier is specified, the tier of the original volume is used.</dd>
 <dt>-i, --iops</dt>
-<dd>Performance Storage IOPs, between 100 and 6000 in multiples of 100,if no IOPS  is specified, the IOPS  of the original volume will be used.</dd>
+<dd>Performance Storage IOPs. Range `100-6000`, and in multiples of 100. If no IOPS are specified, the IOPS value of the original volume is used.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
@@ -174,6 +180,7 @@ ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
+{: codeblock}
 
 This command orders a replica for volume with ID `12345678`, which performs DAILY replication, is located at `dal09`, tier level is 4.
 
@@ -185,11 +192,11 @@ List existing replicant volumes for a file volume.
 ibmcloud sl file replica-partners VOLUME_ID [OPTIONS]
 ```
 
-
 **Examples**:
 ```
 ibmcloud sl file replica-partners 12345678
 ```
+{: codeblock}
 
 This command lists existing replicant volumes for file volume with ID `12345678`.
 
@@ -291,7 +298,7 @@ This command enables snapshot for volume with ID `12345678`, snapshot is taken w
 ## ibmcloud sl file snapshot-delete
 {: #sl_file_snapshot_delete}
 
-Delete a snapshot on a given volume.
+Delete a snapshot on a given volume:
 ```
 ibmcloud sl file snapshot-delete SNAPSHOT_ID
 ```
@@ -306,7 +313,7 @@ This command deletes snapshot with ID `12345678`.
 ## ibmcloud sl file snapshot-list
 {: #sl_file_snapshot_list}
 
-List file storage snapshots.
+List file storage snapshots:
 ```
 ibmcloud sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
@@ -339,7 +346,7 @@ ibmcloud sl file snapshot-order VOLUME_ID [OPTIONS]
 <dt>-t, --tier</dt>
 <dd>Optional. Endurance Storage Tier (IOPS per GB) of the file volume for which space is ordered , options are: 0.25,2,4,10.</dd>
 <dt>-i, --iops</dt>
-<dd>Performance Storage IOPs, between 100 and 6000 in multiples of 100.</dd>
+<dd>Performance Storage IOPs. Range `100-6000`, and in multiples of 100.</dd>
 <dt>-u, --upgrade</dt>
 <dd>Flag to indicate that the order is an upgrade.</dd>
 <dt>-f, --force</dt>
@@ -350,12 +357,14 @@ ibmcloud sl file snapshot-order VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
 ```
-This commands order snapshot space for volume with ID `12345678`, the size is 1000GB, the tier level is 4 IOPS per GB.
+{: codeblock}
+
+This commands orders a snapshot space for the volume with ID `12345678`. The size is 1000 GB, and the tier level is 4 IOPS per GB.
 
 ## ibmcloud sl file snapshot-restore
 {: #sl_file_snapshot_restore}
 
-Restore file volume using a given snapshot.
+Restore a file volume by using a specified snapshot:
 ```
 ibmcloud sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
@@ -364,13 +373,14 @@ ibmcloud sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 ibmcloud sl file snapshot-restore 12345678 87654321
 ```
+{: codeblock}
 
 This command restores volume with ID `12345678` from snapshot with ID `87654321`.
 
 ## ibmcloud sl snapshot-schedule-list
 {: #sl_snapshot_schedule_list}
 
-List snapshot schedules for a given volume
+List snapshot schedules for a volume:
 ```
 ibmcloud sl snapshot-schedule-list VOLUME_ID
 ```
@@ -379,13 +389,14 @@ ibmcloud sl snapshot-schedule-list VOLUME_ID
 ```
 ibmcloud sl file snapshot-schedule-list 12345678
 ```
+{: codeblock}
 
 This command list snapshot schedules for volume with ID `12345678`.
 
 ## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
 
-Cancel an existing file storage volume.
+Cancel an existing file storage volume:
 ```
 ibmcloud sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
@@ -404,6 +415,7 @@ ibmcloud sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file volume-cancel 12345678 --immediate -f
 ```
+{: codeblock}
 
 This command cancels volume with ID `12345678` immediately and without asking for confirmation.
 
@@ -424,7 +436,7 @@ ibmcloud sl file volume-count [OPTIONS]
 ## ibmcloud sl file volume-list
 {: #sl_file_volume_list}
 
-List file storage.
+List file storage:
 ```
 ibmcloud sl file volume-list [OPTIONS]
 ```
@@ -440,38 +452,39 @@ ibmcloud sl file volume-list [OPTIONS]
 <dt>-o, --order</dt>
 <dd>Filter by ID of the order that purchased the file storage.</dd>
 <dt>--sortby</dt>
-<dd>Column to sort by, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,active_transactions,mount_addr.</dd>
+<dd>Column to sort by. Options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,active_transactions,mount_addr.</dd>
 <dt>--column</dt>
-<dd>Column to display, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,mount_addr,notes.</dd>
+<dd>Column to display. Options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,mount_addr,notes.</dd>
 </dl>
 
 **Examples**:
 ```
 ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
+{: codeblock}
 
-This command lists all endurance volumes on current account that are located at `dal09`, and sorts them by capacity.
+This command lists all endurance volumes on the current account that are located in datacenter `dal09`, and sorts them by capacity.
 
 ## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
 
-Display details for a specified volume.
+Display details for a specified volume:
 ```
 ibmcloud sl file volume-detail VOLUME_ID
 ```
-
 
 **Examples**:
 ```
 ibmcloud sl file volume-detail 12345678
 ```
+{: codeblock}
 
 This command shows details of volume with ID `12345678`.
 
 ## ibmcloud sl file volume-duplicate
 {: #sl_file_volume_duplicate}
 
-Order a file volume by duplicating an existing volume.
+Order a file volume by duplicating an existing volume:
 ```
 ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
@@ -481,13 +494,13 @@ ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
 <dt>-o, --origin-snapshot-id</dt>
 <dd>ID of an original volume snapshot to use for duplication.</dd>
 <dt>-s, --duplicate-size</dt>
-<dd>Size of duplicate file volume in GB, if no size is specified, the size of the original volume will be used.</dd>
+<dd>Size of duplicate file volume in GB. If no size is specified, the size of the original volume is used.</dd>
 <dt>-i, --duplicate-iops</dt>
-<dd>Performance Storage IOPS, between 100 and 6000 in multiples of 100, if no IOPS  is specified, the IOPS  of the original volume will be used.</dd>
+<dd>Performance Storage IOPS. Range `100-6000`, and in multiples of 100. If no IOPS is specified, the IOPS  of the original volume is used.</dd>
 <dt>-t, --duplicate-tier</dt>
-<dd>Endurance Storage Tier, if no tier is specified, the tier of the original volume will be used.</dd>
+<dd>Endurance Storage Tier. If no tier is specified, the tier of the original volume is used.</dd>
 <dt>-n, --duplicate-snapshot-size</dt>
-<dd>The size of snapshot space to order for the duplicate, if no snapshot space size is specified, the snapshot space size of the original volume will be used.</dd>
+<dd>The size of snapshot space to order for the duplicate. If no snapshot space size is specified, the snapshot space size of the original volume is used.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
@@ -496,13 +509,14 @@ ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file volume-duplicate 12345678
 ```
+{: codeblock}
 
 This command shows order a new volume by duplicating the volume with ID `12345678`.
 
 ## ibmcloud sl file volume-order
 {: #sl_file_volume_order}
 
-Order a file storage volume.
+Order a file storage volume:
 ```
 ibmcloud sl file volume-order [OPTIONS]
 ```
@@ -512,13 +526,13 @@ ibmcloud sl file volume-order [OPTIONS]
 <dt>-t, --storage-type</dt>
 <dd>Required. Type of storage volume, options are: performance, endurance.</dd>
 <dt>-s, --size</dt>
-<dd>Required. Size of storage volume in GB .</dd>
+<dd>Required. Size of storage volume in GB.</dd>
 <dt>-i, --iops</dt>
-<dd>Performance Storage IOPs, between 100 and 6000 in multiples of 100 [required for storage-type performance].</dd>
+<dd>Performance Storage IOPs. Range `100-6000`, and in multiples of 100 [required for storage-type performance].</dd>
 <dt>-e, --tier</dt>
-<dd>Endurance Storage Tier (IOP per GB) [required for storage-type endurance], options are: 0.25,2,4,10.</dd>
+<dd>Endurance Storage Tier (IOP per GB) [required for storage-type endurance]. Options are: 0.25,2,4,10.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Required. Datacenter short name .</dd>
+<dd>Required. Datacenter short name.</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Optional parameter for ordering snapshot space along with the volume.</dd>
 <dt>-b, --billing</dt>
@@ -531,8 +545,9 @@ ibmcloud sl file volume-order [OPTIONS]
 ```
 ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
+{: codeblock}
 
-This command orders a performance volume with size is 1000GB, IOPS is 4000, located at `dal09`.
+This command orders a performance volume with size is 1000 GB, IOPS is 4000, and in datacenter `dal09`.
 
 ## ibmcloud sl file volume-modify
 {: #sl_file_volume_modify}
@@ -547,39 +562,42 @@ ibmcloud sl file volume-modify VOLUME_ID [OPTIONS]
 <dt>-c, --new-size</dt>
 <dd>New Size of file volume in GB. ***If no size is given, the original size of volume is used.*** Potential Sizes: [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] Minimum: [the original size of the volume]</dd>
 <dt>-i, --new-iops</dt>
-<dd>Performance Storage IOPS, between 100 and 6000 in multiples of 100 [only for performance volumes] ***If no IOPS value is specified, the original IOPS value of the volume will be used.*** Requirements: [If original IOPS/GB for the volume is less than 0.3, new IOPS/GB must also be less than 0.3. If original IOPS/GB for the volume is greater than or equal to 0.3, new IOPS/GB for the volume must also be greater than or equal to 0.3.]</dd>
+<dd>Performance Storage IOPS. Range [100-6000], and in multiples of 100 [only for performance volumes]. ***If no IOPS value is specified, the original IOPS value of the volume is used.*** Requirements: [If original IOPS/GB for the volume is less than 0.3, new IOPS/GB must also be less than 0.3. If original IOPS/GB for the volume is greater than or equal to 0.3, new IOPS/GB for the volume must also be greater than or equal to 0.3.]</dd>
 <dt>-t, --new-tier</dt>
-<dd>Endurance Storage Tier (IOPS per GB) [only for endurance volumes] ***If no tier is specified, the original tier of the volume will be used.***
+<dd>Endurance Storage Tier (IOPS per GB) [only for endurance volumes] ***If no tier is specified, the original tier of the volume is used.***
 Requirements: [If original IOPS/GB for the volume is 0.25, new IOPS/GB for the volume must also be 0.25. If original IOPS/GB for the volume is greater than 0.25, new IOPS/GB for the volume must also be greater than 0.25.]</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
 
 **Examples**:
-
 ```
 ibmcloud sl file volume-modify 12345678 --new-size 1000 --new-iops 4000
 ```
+{: codeblock}
 
-This command modify a volume `12345678` with size is 1000GB, IOPS is 4000.
+This command modifies volume `12345678` with size 1000 GB, and IOPS 4000.
 
 ```
 ibmcloud sl file volume-modify 12345678 --new-size 500 --new-tier 4
 ```
+{: codeblock}
 
-This command modify a volume `12345678` with size is 500GB, tier level is 4 IOPS per GB.
-
+This command modifies volume `12345678` with size 500 GB, and tier level 4 IOPS per GB.
 
 ## ibmcloud sl file volume-options
 {: #sl_file_volume_options}
 
-List all options for ordering a file storage.
+List all options for ordering a file storage:
 ```
 ibmcloud sl file volume-options
 ```
+{: codeblock}
 
 **Examples**:
 ```
 ibmcloud sl file volume-options
 ```
+{: codeblock}
+
 This command lists all options for creating a file storage volume, including storage type, volume size, IOPS, tier level, datacenter, and snapshot size.

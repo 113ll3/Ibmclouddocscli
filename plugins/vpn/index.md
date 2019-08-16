@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-15"
 
 keywords: cli, vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
@@ -19,9 +19,9 @@ subcollection: cloud-cli
 {: #vpn_cli_for_cf}
 
 You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.cloud}} CLI plug-in. Both versions of the plug-in provide the same functions.
-{:shortdesc}
+{: shortdesc}
 
-The {{site.data.keyword.vpn_short}} plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
+The {{site.data.keyword.vpn_short}} plug-in is available for Windows&trade;, Mac, and Linux&trade; operating systems. Ensure that you use the one that is applicable to you.
 
 ## Install the cf CLI plug-in
 {: #install-cf-cli-plugin}
@@ -48,19 +48,19 @@ cf uninstall-plugin vpn
 	Either switch to the location of the {{site.data.keyword.vpn_short}} plug-in or specify the path to the plug-in location.
 	{: note}
 
-	- For MS Windows OS:
+	- For Windows&trade;:
 	```
 	cf install-plugin vpn_windows64.exe
 	```
 	{: codeblock}
 
-	- For Apple MAC OS:
+	- For macOS:
 	```
 	cf install-plugin vpn_mac_os_amd64
 	```
 	{: codeblock}
 
-	- For Linux OS:
+	- For Linux&trade;:
 	```
 	cf install-plugin vpn_linuxamd64
 	```
@@ -119,15 +119,15 @@ Remote endpoint IP address of the VPN tunnel.
 
 **-admin_state:** Status of the VPN connection. Values: UP or DOWN.
 
-**-dpd-action:** Action taken when the peer is detected as dead. Values: hold; clear; disabled; restart; restart-by-peer. Default value: hold
+**-dpd-action:** Action taken when the peer is detected as dead. Values: hold; clear; disabled; restart; restart-by-peer. Default value: hold.
 
 **-gateway_ip:** IP address of the local VPN tunnel endpoint.
 
 **-i:** State of the initiator. Default value: bi-directional.
 
-**-dpd-timeout:** Time out value in seconds after which the session is terminated. Range: 6 - 86400 seconds. Default value: 120 seconds. The keep alive time out value must be higher than the keep alive interval value.
+**-dpd-timeout:** Timeout value in seconds after which the session is terminated. Range: 6 - 86400 seconds. Default value: 120 seconds. The keep alive timeout value must be higher than the keep alive interval value.
 
-**-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 5-86399 seconds. Default value: 15 seconds
+**-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: `5-86399` seconds. Default value: 15 seconds.
 
 **-ike:** Name of the IKE policy.
 
@@ -349,15 +349,15 @@ Preshared key.
 
 **-admin_state:** Status of the VPN connection. Values: UP or DOWN.
 
-**-dpd-action:** Action taken when the peer is detected as dead. Values: hold; clear; disabled; restart; restart-by-peer. Default value: hold
+**-dpd-action:** Action taken when the peer is detected as dead. Values: hold; clear; disabled; restart; restart-by-peer. Default value: hold.
 
 **-gateway_ip:** IP address of the local VPN tunnel endpoint.
 
 **-i:** State of the initiator. Default value: bi-directional.
 
-**-dpd-timeout:** Time out value in seconds after which the session is terminated. Range: 6 - 86400 seconds. Default value: 120 seconds
+**-dpd-timeout:** Timeout value in seconds after which the session is terminated. Range: 6 - 86400 seconds. Default value: 120 seconds.
 
-**-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 5-86399 seconds. Default value: 15 seconds
+**-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: `5-86399` seconds. Default value: 15 seconds.
 
 **-ike:** Name of the IKE policy.
 
@@ -384,13 +384,13 @@ Name of the IKE policy.
 
 **-d:** Description of the parameters specified.
 
-**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2
+**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2.
 
-**-e:** Encryption algorithm. Values: aes-128; aes-192; aes-256; 3des. Default value: aes-128
+**-e:** Encryption algorithm. Values: aes-128; aes-192; aes-256; 3des. Default value: aes-128.
 
-**-lv:** Lifetime value of the IKE security association. Range: 60 - 86400 seconds. Default value: 86400 seconds
+**-lv:** Lifetime value of the IKE security association. Range: 60 - 86400 seconds. Default value: 86400 seconds.
 
-**-auth:** Authorization algorithm. Values: sha1 or sha256
+**-auth:** Authorization algorithm. Values: sha1 or sha256.
 
 ### cf vpn-update ipsec
 {: #cf-vpn-update-ipsec}

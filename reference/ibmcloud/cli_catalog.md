@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-19"
+lastupdated: "2019-08-15"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -44,7 +44,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>--sort-by</dt>
   <dd>Property to sort by</dd>
   <dt>--col</dt>
-  <dd>Specify additional columns for the table. Currently, "group", "provider", and "tags"</dd>
+  <dd>Specify more columns for the table. Currently, "group", "provider", and "tags"</dd>
   <dt>--reverse</dt>
   <dd>Whether to reverse the sorting order</dd>
   <dt>--output TYPE (optional)</dt>
@@ -368,7 +368,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
   <dt>-k, --kind</dt>
   <dd>Get a list of entries for the specified kind.</dd>
   <dt>--col</dt>
-  <dd>Specify additional columns for the table. Currently, "group", "provider", and "tags".</dd>
+  <dd>Specify more columns for the table. Currently, "group", "provider", and "tags".</dd>
   <dt>--output TYPE (optional)</dt>
   <dd>--output value  Specify output TYPE, only JSON is supported now. This option is exclusive with '--id'.</dd>
   <dt>--global</dt>
