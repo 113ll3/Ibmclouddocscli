@@ -294,7 +294,7 @@ ibmcloud iam api-keys [--output FORMAT]
 ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock] [--output FORMAT]
 ```
 
-API キーを使用した {{site.data.keyword.cloud_notm}} CLI ログインの使用時には、`control.softlayer.com` 上にある従来の SL API キーを処理しません。API キーを使用した {{site.data.keyword.cloud_notm}} CLI ログインには、[cloud.ibm.com](https://cloud.ibm.com/registration){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") でインフラストラクチャーが管理されている、アップグレード済みの {{site.data.keyword.cloud_notm}} アカウントが必要です。
+API キーを使用した {{site.data.keyword.cloud_notm}} CLI ログインの使用時には、`control.softlayer.com` 上にある従来の SL API キーを処理しません。 API キーを使用した {{site.data.keyword.cloud_notm}} CLI ログインには、[cloud.ibm.com](https://cloud.ibm.com/registration){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") でインフラストラクチャーが管理されている、アップグレード済みの {{site.data.keyword.cloud_notm}} アカウントが必要です。
 {: note}
 
 <strong>前提条件</strong>: エンドポイント、ログイン

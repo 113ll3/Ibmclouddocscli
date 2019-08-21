@@ -92,7 +92,7 @@ ibmcloud catalog entry 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 
-카탈로그 항목 작성(계정의 카탈로그 관리자 전용): 
+카탈로그 항목 작성(계정의 카탈로그 관리자 전용):
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -214,9 +214,9 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
   <dt>--owner</dt>
   <dd>오브젝트의 소유자를 변경합니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--restrict</dt>
-  <dd>가시성 오브젝트의 제한을 '개인용'으로 변경합니다. </dd>
+  <dd>가시성 오브젝트의 제한을 '개인용'으로 변경합니다.</dd>
   <dt>--unrestrict</dt>
-  <dd>가시성 오브젝트의 제한을 '공용'으로 변경합니다. </dd>  
+  <dd>가시성 오브젝트의 제한을 '공용'으로 변경합니다.</dd>  
   <dt>-c</dt>
   <dd>인라인 또는 파일로 제공된 카탈로그 특정 구성 매개변수가 포함된 유효한 JSON 오브젝트입니다. 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
   <dt>--global</dt>
@@ -328,7 +328,7 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
    <dt>--desc <i>DESCRIPTION</i>(선택사항)</dt>
    <dd>애플리케이션에 대한 설명입니다.</dd>
    <dt>--no-start(선택사항)</dt>
-   <dd>작성 이후 자동으로 애플리케이션을 시작하지 않습니다. 이를 지정하지 않으면 작성 이후 자동으로 애플리케이션이 시작됩니다. </dd>
+   <dd>작성 이후 자동으로 애플리케이션을 시작하지 않습니다. 이를 지정하지 않으면 작성 이후 자동으로 애플리케이션이 시작됩니다.</dd>
    </dl>
 
 
@@ -368,7 +368,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
   <dt>-k, --kind</dt>
   <dd>지정된 유형에 대한 항목의 목록을 가져옵니다.</dd>
   <dt>--col</dt>
-  <dd>테이블의 추가 컬럼을 지정합니다. 현재는 "group", "provider" 및 "tags"입니다. </dd>
+  <dd>테이블의 추가 컬럼을 지정합니다. 현재는 "group", "provider" 및 "tags"입니다.</dd>
   <dt>--output TYPE(선택사항)</dt>
   <dd>--output value  출력 유형을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 '--id'와 배타적입니다.</dd>
   <dt>--global</dt>

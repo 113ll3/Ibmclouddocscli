@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-07-12"
 
-keywords: vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
+keywords: cli, vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
 subcollection: cloud-cli
 
@@ -23,12 +23,12 @@ Puede utilizar la interfaz de línea de mandatos (CLI) para configurar y gestion
 
 El plug-in de {{site.data.keyword.vpn_short}} está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el aplicable a su caso.
 
-## Instalar el plug-in de la CLI cf
+## Instalar el plug-in de CLI cf
 {: #install-cf-cli-plugin}
 
 Antes de empezar, instale la CLI cf. Consulte [Interfaz de línea de mandatos de Cloud Foundry](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli) para obtener detalles.
 
-## Instalar el plug-in de la CLI de VPN
+## Instalar el plug-in de CLI de VPN
 {: #install-vpn-cli-plugin}
 
 Si tiene una versión anterior del plug-in de CLI de {{site.data.keyword.vpn_short}} instalada, primero debe desinstalarla. Utilice el mandato:
@@ -115,7 +115,7 @@ cf vpn-create connection <nombre de conexión> -g <nombre de pasarela> -k <clave
 
 **-admin_state:** estado de la conexión VPN. Valores: UP o DOWN.
 
-**-dpd-action:** acción a realizar cuando el igual se detecta como inactivo. Valores: hold; clear; disabled; restart; restart-by-peer. Valor predeterminado: hold
+**-dpd-action:** acción que se realiza cuando el igual se detecta como inactivo. Valores: hold; clear; disabled; restart; restart-by-peer. Valor predeterminado: hold
 
 **-gateway_ip:** dirección IP del punto final de túnel de VPN local.
 
@@ -335,7 +335,7 @@ cf vpn-update connection <nombre de conexión> -g <nombre de pasarela> -cip <dir
 
 **-admin_state:** estado de la conexión VPN. Valores: UP o DOWN.
 
-**-dpd-action:** acción a realizar cuando el igual se detecta como inactivo. Valores: hold; clear; disabled; restart; restart-by-peer. Valor predeterminado: hold
+**-dpd-action:** acción que se realiza cuando el igual se detecta como inactivo. Valores: hold; clear; disabled; restart; restart-by-peer. Valor predeterminado: hold
 
 **-gateway_ip:** dirección IP del punto final de túnel de VPN local.
 

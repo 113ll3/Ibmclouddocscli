@@ -2,13 +2,21 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-08-07"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
 subcollection: cloud-cli
 
 ---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:external: target="_blank" .external}
 
 # Domande frequenti
 {: #ibm-cli-faq}
@@ -36,7 +44,7 @@ ibmcloud update
 ## Come ricevo notifiche sulle nuove release della CLI?
 {: #cli-get-notified}
 
-Sì, puoi essere informato sulle nuove release della CLI come sono disponibili. Esegui la sottoscrizione al [repository delle release della CLI {{site.data.keyword.cloud_notm}}](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")
+Sì, puoi essere informato sulle nuove release della CLI come sono disponibili. Esegui la sottoscrizione al [repository delle release della CLI {{site.data.keyword.cloud_notm}}](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}
 
 ## Qual è la struttura dei file per le applicazioni {{site.data.keyword.cloud_notm}}?
 {: #cli-file-structure}

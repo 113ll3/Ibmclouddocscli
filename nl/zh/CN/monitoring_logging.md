@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
-keywords: monitoring, logging, cloud logging, metrics
+keywords: cli, monitoring, logging, cloud logging, metrics, monitor cpu, monitor usage, memory utilization, runtime logging
 
 subcollection: cloud-cli
 
@@ -34,4 +34,4 @@ subcollection: cloud-cli
 
 {{site.data.keyword.loganalysisfull_notm}} 服务会为 {{site.data.keyword.cloud_notm}} 平台提供日志收集和日志搜索服务，并且会自动从所选服务中收集应用程序和 {{site.data.keyword.cloud_notm}} 服务的数据。{{site.data.keyword.loganalysisshort}} 服务可帮助您在使用日志时扩展日志收集、日志保留和日志搜索的功能。
 
-有关更多信息，请参阅[在 {{site.data.keyword.cloud_notm}} 中进行日志记录](/docs/services/CloudLogAnalysis?topic=cloudloganalysis-log_analysis_ov#log_analysis_ov)。
+有关更多信息，请参阅[在 {{site.data.keyword.cloud_notm}} 中进行日志记录](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started#getting-started)。

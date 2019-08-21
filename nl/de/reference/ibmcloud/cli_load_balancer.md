@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
+keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
 subcollection: cloud-cli
 
@@ -17,7 +17,7 @@ subcollection: cloud-cli
 # Mit dem Service für den Lastausgleich arbeiten
 {: #sl-load-balancer-service}
 
-Der {{site.data.keyword.cloud}}-Service für den Lastausgleich unterstützt die Verbesserung der Verfügbarkeit Ihrer geschäftskritischen Anwendungen. Dazu wird der Datenverkehr auf mehrere Anwendungsserverinstanzen verteilt und ausschließlich an ordnungsgemäß funktionierende Instanzen weitergeleitet.
+Der {{site.data.keyword.cloud}}-Service für den Lastausgleich unterstützt die Verbesserung der Verfügbarkeit Ihrer geschäftskritischen Anwendungen. Dazu wird der Datenverkehr auf mehrere App-Serverinstanzen verteilt und ausschließlich an funktionierende Instanzen weitergeleitet.
 
 Verwenden Sie die folgenden Befehle, um den Lastausgleich über den Lastausgleichsservice der klassischen {{site.data.keyword.cloud_notm}}-Infrastruktur zu verwalten.
 {: shortdesc}
@@ -81,9 +81,9 @@ ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONEN]
 <dt>-p, --port</dt>
 <dd>Erforderlich. Die Portnummer.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Erforderlich. Die ID des Routing-Typs. Führen Sie 'ibmcloud sl loadbal routing-types' aus, um eine ID zu suchen.</dd>
+<dd>Erforderlich. Die ID des Routing-Typs. Führen Sie `ibmcloud sl loadbal routing-types` aus, um eine ID zu suchen.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Erforderlich. Die ID der Routing-Methode. Führen Sie 'ibmcloud sl loadbal routing-methods' aus, um eine ID zu suchen.</dd>
+<dd>Erforderlich. Die ID der Routing-Methode. Führen Sie `ibmcloud sl loadbal routing-methods` aus, um eine ID zu suchen.</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-delete
@@ -115,9 +115,9 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONEN]
 <dt>-p, --port</dt>
 <dd>Ändert die Portnummer.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Ändert die ID des Routing-Typs. Führen Sie 'ibmcloud sl loadbal routing-types' aus, um eine ID zu suchen.</dd>
+<dd>Ändert die ID des Routing-Typs. Führen Sie `ibmcloud sl loadbal routing-types` aus, um eine ID zu suchen.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Ändert die ID der Routing-Methode. Führen Sie 'ibmcloud sl loadbal routing-methods' aus, um eine ID zu suchen.</dd>
+<dd>Ändert die ID der Routing-Methode. Führen Sie `ibmcloud sl loadbal routing-methods` aus, um eine ID zu suchen.</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-reset

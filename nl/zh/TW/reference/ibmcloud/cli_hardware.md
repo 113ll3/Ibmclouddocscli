@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
+keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
 subcollection: cloud-cli
 
@@ -35,7 +35,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 <dt>-i, --immediate</dt>
 <dd>立即取消伺服器，而不是在計費週年日取消。</dd>
 <dt>-r, --reason</dt>
-<dd>選用的取消原因。如需可用的選項清單，請參閱 'ibmcloud sl hardware cancel-reasons'。</dd>
+<dd>選用的取消原因。請參閱 `ibmcloud sl hardware cancel-reasons` 以獲取可用選項的清單。</dd>
 <dt>-c, --comment</dt>
 <dd>要新增至取消問題單的選用註解。</dd>
 <dt>-f, --force</dt>
@@ -119,7 +119,7 @@ ibmcloud sl hardware detail IDENTIFIER [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>-p, --passwords</dt>
-<dd>顯示密碼（小心背後有人偷窺！）。</dd>
+<dd>顯示密碼（小心有人在您背後偷看！）.</dd>
 <dt>-c, --price</dt>
 <dd>顯示關聯的價格。</dd>
 </dl>
@@ -184,8 +184,8 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>依擁有者的 ID 進行過濾。</dd>
 <dt>--sortby</dt>
 <dd>直欄排序方式，預設值為：hostname，選項包含：id、guid、hostname、domain、public_ip、private_ip、datacenter、status、ipmi_ip、created、created_by。</dd>
-<dt>--columns</dt>
-<dd>要顯示的直欄，預設值為：id、hostname、domain、public_ip、private_ip、datacenter、status，選項包含：guid、cpu、memory、os、ipmi_ip、created、created_by、tags。</dd>
+<dt>--column</dt>
+<dd>要顯示的直欄，預設值為：id、hostname、domain、public_ip、private_ip、datacenter、status， 選項包含：guid、cpu、memory、os、ipmi_ip、created、created_by、tags。</dd>
 </dl>
 
 ## ibmcloud sl hardware power-cycle

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -165,7 +165,7 @@ cf ba invite-users-to-public -userid=user_email -organization=dedicated_org_id -
 ### 列出邀请的 {{site.data.keyword.Bluemix_dedicated_notm}} 用户
 {: #admin_dedicated_list}
 
-如果已使用 [**`invite-users-to-public`** 命令](#admin_dedicated_invite_public)邀请 Dedicated 环境用户加入 {{site.data.keyword.cloud_notm}} 帐户，那么可以列出帐户中的用户以查看他们的邀请状态。具有现有 IBM 标识的受邀用户的状态为“活动”。没有现有 IBM 标识的受邀用户的状态为“暂挂”或“活动”，具体取决于他们是否已接受加入帐户的邀请。要列出 {{site.data.keyword.cloud_notm}} 帐户中的用户，请运行以下命令：
+如果已使用 [**`invite-users-to-public`** 命令](#admin_dedicated_invite_public)邀请 Dedicated 环境用户加入 {{site.data.keyword.cloud_notm}} 帐户，那么可以列出帐户中的用户以查看他们的邀请状态。具有现有 IBM 标识的受邀用户的状态为 ACTIVE。没有现有 IBM 标识的受邀用户的状态为 PENDING 或 ACTIVE，具体取决于是否已接受邀请。要列出 {{site.data.keyword.cloud_notm}} 帐户中的用户，请运行以下命令：
 
 ```
 cf ba invite-users-status -apikey=public_api_key
@@ -195,7 +195,7 @@ cf ba search-users -name=user_name -permission=permission_value -organization=or
 <dt>user_name</dt>
 <dd>用户的名称。</dd>
 <dt>permission_value</dt>
-<dd>分配给用户的许可权。可用的许可权为 admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。不能将此参数与 organization 参数用于同一查询中。</dd>
+<dd>分配给用户的许可权。可用的许可权为 admin（或 superuser）、log in（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。不能将此参数与 organization 参数用于同一查询中。</dd>
 <dt>organization_value</dt>
 <dd>用户所属的组织名称。不能将此参数与 permission 参数用于同一查询中。</dd>
 <dt>role_value</dt>
@@ -218,7 +218,7 @@ cf ba set-permissions user_name permission access
 <dt>user_name</dt>
 <dd>用户的名称。</dd>
 <dt>permission</dt>
-<dd>设置分配给用户的许可权。可用的许可权为 admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。不能将此参数与 organization 参数用于同一查询中。</dd>
+<dd>设置分配给用户的许可权。可用的许可权为 admin（或 superuser）、log in（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。不能将此参数与 organization 参数用于同一查询中。</dd>
 <dt>access</dt>
 <dd>对于 catalog、reports 或 user 许可权，还必须将访问级别设置为 `read` 或 `write`。</dd>
 </dl>
@@ -262,7 +262,7 @@ cf ba enable-managers-add-users
 ### 禁止管理者添加用户
 {: #clius_dmau}
 
-如果在 {{site.data.keyword.cloud_notm}} 环境中已允许组织管理者通过 **`enable-managers-add-users`** 命令向其管理的组织添加用户，并且您有 Superuser 许可权，那么可以除去此设置。要禁止管理者添加用户，请使用以下命令：
+要禁止管理者添加用户，请使用以下命令：
 
 ```
 cf ba disable-managers-add-users
@@ -329,7 +329,7 @@ cf ba set-org user_name organization [role]
 <dt>organization</dt>
 <dd>要向其分配用户的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。</dd>
 <dt>role</dt>
-<dd>用户的角色。有效值为 OrgManager、BillingManager 和 OrgAuditor。有关角色描述，请参阅 [角色](/docs/iam?topic=iam-userroles#userroles)。</dd>
+<dd>用户的角色。有效值为 OrgManager、BillingManager 和 OrgAuditor。有关角色描述，请参阅[角色](/docs/iam?topic=iam-userroles#userroles)。</dd>
 </dl>
 
 **`ba set-org`** 命令名较长，您还可以使用 **`ba so`** 作为其别名。
@@ -854,14 +854,14 @@ cf ba update-service-broker broker_name user_name password broker_url
 
 要使用应用程序安全组 (ASG)，您必须是具有本地或专用环境完全访问权的管理员。对于命令的目标组织，环境的所有用户都可以列出可用的 ASG。但是，要创建、更新或绑定 ASG，您必须是 {{site.data.keyword.cloud_notm}} 环境的管理员。
 
-ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.cloud_notm}} 环境中应用程序的出站流量。每一个 ASG 都包含一个规则列表，允许与外部网络相互进行特定流量传输和通信。您可以将一个或多个 ASG 绑定到特定安全组集（例如，用于应用全局访问的组集），或者绑定到 {{site.data.keyword.cloud_notm}} 环境中某个组织内的空间。
+ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.cloud_notm}} 环境中应用程序的出站流量。每一个 ASG 都包含一个规则列表，允许与外部网络相互进行特定流量传输和通信。您可以将一个或多个 ASG 绑定到特定安全组集。例如，将全局访问权应用于组集，或者绑定到 {{site.data.keyword.cloud_notm}} 环境中某个组织内的空间。
 
 {{site.data.keyword.cloud_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 如果取消**缺省编译打包**或**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问。请慎用取消绑定，应了解取消绑定对环境中正在运行和编译打包的应用程序的潜在影响。
 {: important}
 
-您可以使用以下命令来处理安全组，这些命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标") 的 Cloud Foundry 信息。
+以下命令支持使用安全组，这些命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标") 的 Cloud Foundry 信息。
 
 
 ### 列出安全组

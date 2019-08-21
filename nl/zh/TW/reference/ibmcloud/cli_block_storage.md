@@ -61,7 +61,7 @@ ibmcloud sl block access-list VOLUME_ID [OPTIONS]
 <dl>
 <dt>--sortby</dt>
 <dd>直欄排序方式，選項包含：id、name、type、private_ip_address、host_iqn、username、password。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>要顯示的直欄，選項包含：id、name、type、private_ip_address、host_iqn、username、password。</dd>
 </dl>
 
@@ -450,7 +450,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dd>依購買區塊儲存空間的訂單 ID 進行過濾。</dd>
 <dt>--sortby</dt>
 <dd>直欄排序方式，選項包含：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions、created_by。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>要顯示的直欄，選項包含：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、created_by、notes。</dd>
 </dl>
 

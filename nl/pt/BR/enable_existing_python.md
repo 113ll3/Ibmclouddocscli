@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-08"
+lastupdated: "2019-06-10"
 
-keywords: ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
 subcollection: cloud-cli
 
@@ -22,7 +22,7 @@ subcollection: cloud-cli
 
 É possível gerar os arquivos que são necessários para permitir que o aplicativo Python seja executado no {{site.data.keyword.cloud}} usando o [comando enable da CLI do {{site.data.keyword.dev_cli_long}}](/docs/cli/idt?topic=cloud-cli-idt-cli#enable).
 
-## Ativando seu aplicativo Python
+## Ativando seu app Python
 {: #enable-app-python}
 
 Insira o comando a seguir por meio do diretório raiz de seu projeto Python:
@@ -32,17 +32,17 @@ Ibmcloud dev enable
 {: codeblock}
 
 * Quando for solicitado que você verifique a estrutura detectada para o projeto, **Python - Flask** ou **Python - Django**, responda `y`. 
-* Então, será solicitado: **Conectar a um app IBM Cloud**. Selecione as opções **Gerar ativos, criar um novo app do IBM Cloud e conectar-se a ele** ou **Gerar ativos sem se conectar a um app do IBM Cloud** para seu aplicativo.
-* O comando `enable` também pode criar serviços e ligá-los ao seu aplicativo. Para esse exemplo básico, responda `n`.
+* Então, será solicitado: **Conectar a um app IBM Cloud**. Selecione as opções **Gerar ativos, crir um novo app IBM Cloud e conectar-se a ele** ou **Gerar ativos sem conectar-se a um app IBM Cloud** para conectar seu app.
+* O comando `enable` também pode criar serviços e ligá-los a seu app. Para esse exemplo básico, responda `n`.
 
 Consulte a seguinte saída de amostra:
 ```
 > ibmcloud dev enable
 The enable feature is currently in Beta.
 Please provide your experience and feedback at: https://ibm-cloud-tech.slack.com/messages/developer-tools/
-Only server-side applications are supported by the enable feature
+Only server-side apps are supported by the enable feature
 
-? Python - Flask application discovered. Do you want to proceed with this language choice? [ y/n ] > y
+? Python - Flask app discovered. Do you want to proceed with this language choice? [ y/n ] > y
 
 
 Using the resource group default (default) of your account
@@ -104,26 +104,27 @@ LICENSE
 The application, <appname>, has been successfully saved
 into the current directory.
 ```
+{: screen}
 
-## Construa e implemente um aplicativo Python ativado para nuvem
+## Construa e implemente um app Python ativado para a nuvem
 {: #build-deploy-python}
 
-Em seguida, construa seu aplicativo com o comando [`build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build):
+Em seguida, construa seu app com o comando [`build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build):
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-Se a construção for concluída com êxito, será possível implementar seu aplicativo no {{site.data.keyword.cloud_notm}} com o comando [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) a seguir:
+Se a construção for concluída com êxito, será possível implementar seu app no {{site.data.keyword.cloud_notm}} com o comando [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) a seguir:
 ```
 ibmcloud dev deploy
 ```
 {: codeblock}
 
-## O que fazer se o aplicativo ativado não construir nem implementar
+## O que fazer se seu app ativado não for construído nem implementado?
 {: #build-failure-python}
 
-Nem todos os aplicativos são ativados com êxito pelo comando `enable`. Por exemplo, o erro a seguir pode ocorrer quando o nome do projeto é diferente do nome de diretório que contém os arquivos `wsgi.py` e `settings.py`:
+Nem todos os apps são ativados com êxito pelo comando `enable`. Por exemplo, o erro a seguir poderá ocorrer quando o nome do projeto for diferente do nome de diretório que contém os arquivos `wsgi.py` e `settings.py`:
 ```
 ImportError: No module named <projectname>.wsgi
 ```
@@ -131,7 +132,7 @@ ImportError: No module named <projectname>.wsgi
 
 O nome do arquivo `<projectname>.wsgi` é o nome do projeto que está sendo ativado.
 
-Se o seu aplicativo não for construído nem implementado depois de você executar `ibmcloud dev enable`, será possível modificar os arquivos gerados para concluir a ativação da nuvem.
+Se o app não for construído nem implementado após a execução de `ibmcloud dev enable`, será possível modificar os arquivos gerados para concluir a ativação da nuvem.
 
 ### Configurando manualmente os arquivos de ativação de nuvem gerados
 {: #manual-enable-python}

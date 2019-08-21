@@ -289,7 +289,7 @@ ibmcloud iam api-keys [--output FORMAT]
 ## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
 
-{{site.data.keyword.cloud_notm}} 플랫폼 API 키 작성: 
+{{site.data.keyword.cloud_notm}} 플랫폼 API 키 작성:
 ```
 ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock] [--output FORMAT]
 ```
@@ -308,7 +308,7 @@ API 키를 사용하는 {{site.data.keyword.cloud_notm}} CLI 로그인 사용은
 <dt>--file <i>FILE</i></dt>
 <dd>지정된 파일에 API 키 정보를 저장합니다.</dd>
 <dt>--lock</dt>
-<dd>작성 시에 API 키의 잠금을 수행합니다. </dd>
+<dd>작성 시에 API 키의 잠금을 수행합니다.</dd>
 <dt>--output FORMAT</dt>
 <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
@@ -764,11 +764,11 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dt>--resource <i>RESOURCE</i>(선택사항)</dt>
 <dd>정책 정의의 리소스. 이는 `--file` 플래그와 배타적입니다.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i>(선택사항)</dt>
-<dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-id` 플래그와 배타적입니다. </dd>
+<dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-id` 플래그와 배타적입니다.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>(선택사항)</dt>
-<dd>리소스 그룹의 ID. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-name` 플래그와 배타적입니다. </dd>
+<dd>리소스 그룹의 ID. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-name` 플래그와 배타적입니다.</dd>
 <dt>--account-management(선택사항)</dt>
-<dd>모든 계정 관리 서비스에 대해 액세스 권한을 부여합니다. </dd>
+<dd>모든 계정 관리 서비스에 대해 액세스 권한을 부여합니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
 <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
@@ -835,11 +835,11 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dt>--resource <i>RESOURCE</i>(선택사항)</dt>
 <dd>정책 정의의 리소스. 이는 `--file` 플래그와 배타적입니다.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i>(선택사항)</dt>
-<dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-id` 플래그와 배타적입니다. </dd>
+<dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-id` 플래그와 배타적입니다.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>(선택사항)</dt>
-<dd>리소스 그룹의 ID. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-name` 플래그와 배타적입니다. </dd>
+<dd>리소스 그룹의 ID. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file`, `--resource` 및 `--resource-group-name` 플래그와 배타적입니다.</dd>
 <dt>--account-management(선택사항)</dt>
-<dd>모든 계정 관리 서비스에 대해 액세스 권한을 부여합니다. </dd>
+<dd>모든 계정 관리 서비스에 대해 액세스 권한을 부여합니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
 <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
@@ -985,19 +985,19 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dt>SERVICE_ID(필수)</dt>
   <dd>서비스 ID의 UUID 또는 이름</dd>
   <dt>--file</dt>
-  <dd>정책 정의의 JSON 파일. 이 옵션은 `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `--resource-group-name` 및 `--resource-group-id` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의의 JSON 파일. 이 옵션은 `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `--resource-group-name` 및 `--resource-group-id` 플래그와 배타적입니다.</dd>
   <dt>-r, --roles</dt>
   <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 `ibmcloud iam roles --service SERVICE_NAME`을 실행하십시오. 이 옵션은 `--file`과 배타적입니다.</dd>
   <dt>--service-name</dt>
-  <dd>정책 정의의 서비스 이름. 이 옵션은 `--file` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의의 서비스 이름. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
   <dt>--service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>정책 정의의 서비스 인스턴스의 GUID. 이 옵션은 `--file` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의의 서비스 인스턴스의 GUID. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
   <dt>-region</dt>
-  <dd>정책 정의 지역. 이 옵션은 `--file` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의 지역. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
   <dt>--resource-type</dt>
-  <dd>정책 정의의 리소스 유형. 이 옵션은 `--file` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의의 리소스 유형. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
   <dt>--resource</dt>
-  <dd>정책 정의의 리소스. 이 옵션은 `--file` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의의 리소스. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
   <dt>--resource-group-name</dt>
   <dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file` 및 `--resource-group-id`와 배타적입니다.</dd>
   <dt>--resource-group-id </dt>
@@ -1049,19 +1049,19 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dt>POLICY_ID(필수)</dt>
   <dd>서비스 정책의 ID<dd>
   <dt>--file</dt>
-  <dd>정책 정의의 JSON 파일. 이 옵션은 `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `resource-group-name` 및 `resource-group-id` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의의 JSON 파일. 이 옵션은 `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `resource-group-name` 및 `resource-group-id` 플래그와 배타적입니다.</dd>
   <dt>-r, --roles</dt>
   <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 `ibmcloud iam roles --service SERVICE_NAME`을 실행하십시오. 이 옵션은 `--file`과 배타적입니다.</dd>
   <dt>-service-name</dt>
-  <dd>정책 정의의 서비스 이름. 이 옵션은 `--file` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의의 서비스 이름. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>정책 정의의 서비스 인스턴스의 GUID. 이 옵션은 `--file` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의의 서비스 인스턴스의 GUID. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
   <dt>-region</dt>
-  <dd>정책 정의 지역. 이 옵션은 `--file` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의 지역. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
   <dt>-resource-type</dt>
-  <dd>정책 정의의 리소스 유형. 이 옵션은 `--file` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의의 리소스 유형. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
   <dt>-resource</dt>
-  <dd>정책 정의의 리소스. 이 옵션은 `--file` 플래그와 배타적입니다. </dd>
+  <dd>정책 정의의 리소스. 이 옵션은 `--file` 플래그와 배타적입니다.</dd>
   <dt>--resource-group-name</dt>
   <dd>리소스 그룹의 이름. `*`는 모든 리소스 그룹을 의미합니다. 이 옵션은 `--file` 및 `--resource-group-id`와 배타적입니다.</dd>
   <dt>--resource-group-id </dt>
@@ -1221,15 +1221,15 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
   <dd>소스 서비스에 대한 액세스 권한을 제공하는 역할입니다.</dd>  
   <dt>--source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>소스 서비스 인스턴스 이름이며 `--source-service-instance-id`와 상호 배타적입니다. 이를 지정하지 않으면 소스 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다. </dd>
+  <dd>소스 서비스 인스턴스 이름이며 `--source-service-instance-id`와 상호 배타적입니다. 이를 지정하지 않으면 소스 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다.</dd>
   <dt>--source-service-instance-id SOURCE_SERVICE_INSTANCE_ID</dt>
-  <dd>소스 서비스 instanceid이며 `--source-service-instance-name`과 상호 배타적입니다. 이를 지정하지 않으면 소스 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다. </dd>
+  <dd>소스 서비스 instanceid이며 `--source-service-instance-name`과 상호 배타적입니다. 이를 지정하지 않으면 소스 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다.</dd>
   <dt>--source-resource-type</dt>
   <dd>소스 서비스의 리소스 유형입니다.</dd>
   <dt>--target-service-instance-name TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>대상 서비스 인스턴스 이름이며 `--target-service-instance-id`와 상호 배타적입니다. 이를 지정하지 않으면 대상 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다. </dd>
+  <dd>대상 서비스 인스턴스 이름이며 `--target-service-instance-id`와 상호 배타적입니다. 이를 지정하지 않으면 대상 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다.</dd>
   <dt>--target-service-instance-id TARGET_SERVICE_INSTANCE_ID</dt>
-  <dd>대상 서비스 인스턴스 ID이며 `--target-service-instance-name`과 상호 배타적입니다. 이를 지정하지 않으면 대상 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다. </dd>
+  <dd>대상 서비스 인스턴스 ID이며 `--target-service-instance-name`과 상호 배타적입니다. 이를 지정하지 않으면 대상 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다.</dd>
   <dt>--target-resource-type</dt>
   <dd>대상 서비스의 리소스 유형입니다.</dd>
   <dt>--output FORMAT</dt>
@@ -1448,7 +1448,7 @@ ibmcloud iam access-group-users example_group
 ## ibmcloud iam access-group-user-add
 {: #ibmcloud_iam_access_group_user_add}
 
-액세스 그룹에 사용자 추가: 
+액세스 그룹에 사용자 추가:
 ```
 ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 ```

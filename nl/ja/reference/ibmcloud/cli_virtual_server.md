@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 
@@ -96,7 +96,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-o, --os</dt>
 <dd>OS インストール・コード。 ヒント: <OS>_LATEST を指定できます。</dd>
 <dt>--image</dt>
-<dd>イメージ ID。 「ibmcloud sl image list」を参照してください。</dd>
+<dd>イメージ ID。 `ibmcloud sl image list` を参照してください。</dd>
 <dt>--billing</dt>
 <dd>請求レート。 デフォルトは hourly です。 オプション: hourly、monthly。</dd>
 <dt>--dedicated</dt>
@@ -194,7 +194,7 @@ ibmcloud sl vs detail IDENTIFIER [OPTIONS]
 <strong>コマンド・オプション</strong>:
 <dl>
 <dt>--passwords</dt>
-<dd>パスワードを表示します (他人に見られないように注意してください)。</dd>
+<dd>パスワードを表示します (背後に注意してください).</dd>
 <dt>--price</dt>
 <dd>関連付けられた価格を表示します。</dd>
 </dl>
@@ -290,7 +290,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dt>-b, --billing</dt>
 <dd>請求レート。 デフォルトは hourly です。 オプション: hourly、monthly。</dd>
 <dt>-v, --vlan-private</dt>
-<dd>専用ホストを配置するプライベート VLAN の ID。 「ibmcloud sl vlan list」を参照してください。</dd>
+<dd>専用ホストを配置するプライベート VLAN の ID。 `ibmcloud sl vlan list` を参照してください。</dd>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
@@ -354,7 +354,7 @@ ibmcloud sl vs list [OPTIONS]
 <dd>インスタンスを所有するユーザーの ID を基準にフィルター操作します。</dd>
 <dt>--sortby</dt>
 <dd>ソートの基準にする列。デフォルト: hostname、オプション: id、hostname、domain、datacenter、cpu、memory、public_ip、private_ip。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>表示する列。デフォルト: id、hostname、public_ip、private_ip、datacenter、action、オプション: guid、power_state、created_by、tags。</dd>
 </dl>
 
@@ -491,7 +491,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <dt>--image</dt>
 <dd>イメージ ID。 デフォルトは、現行オペレーティング・システムを使用することです。</dd>
 <dt>以下を参照してください。</dt>
-<dd>「ibmcloud sl image list」。</dd>
+<dd>`ibmcloud sl image list`。</dd>
 <dt>-k, --key</dt>
 <dd>root ユーザーに追加する SSH 鍵の ID (複数のオカレンスが許可されます)。</dd>
 <dt>-f, --force</dt>

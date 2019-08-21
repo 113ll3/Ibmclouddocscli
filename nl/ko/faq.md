@@ -2,13 +2,21 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-08-07"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
 subcollection: cloud-cli
 
 ---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:external: target="_blank" .external}
 
 # FAQ
 {: #ibm-cli-faq}
@@ -36,7 +44,7 @@ ibmcloud update
 ## 새 CLI 릴리스에 대한 알림을 받을 수 있는 방법은 무엇입니까?
 {: #cli-get-notified}
 
-예, 사용할 수 있는 CLI의 새 릴리스에 대한 최신 정보를 받을 수 있습니다. [{{site.data.keyword.cloud_notm}} CLI 릴리스 저장소](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")를 구독하십시오.
+예, 사용할 수 있는 CLI의 새 릴리스에 대한 최신 정보를 받을 수 있습니다. [{{site.data.keyword.cloud_notm}} CLI 릴리스 저장소](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}를 구독하십시오.
 
 ## {{site.data.keyword.cloud_notm}} 애플리케이션의 파일 구조는 무엇입니까?
 {: #cli-file-structure}

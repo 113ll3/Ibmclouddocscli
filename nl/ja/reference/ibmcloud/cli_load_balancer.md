@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
+keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
 subcollection: cloud-cli
 
@@ -17,7 +17,7 @@ subcollection: cloud-cli
 # Load Balancer サービスの操作
 {: #sl-load-balancer-service}
 
-{{site.data.keyword.cloud}} Load Balancer サービスは、複数のアプリケーション・サーバー・インスタンス間にトラフィックを分散し、正常なインスタンスのみにトラフィックを転送することにより、ビジネスに不可欠なアプリケーションの可用性の向上に役立ちます。
+{{site.data.keyword.cloud}} Load Balancer サービスは、複数のアプリ・サーバー・インスタンス間にトラフィックを分散し、正常なインスタンスのみにトラフィックを転送することにより、ビジネスに不可欠なアプリケーションの可用性の向上に役立ちます。
 
 以下のコマンドを使用して、{{site.data.keyword.cloud_notm}} クラシック・インフラストラクチャーのロード・バランサー・サービスでロード・バランサーを管理します。
 {: shortdesc}
@@ -81,9 +81,9 @@ ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>必須。 ポート番号。</dd>
 <dt>-t, --routing-type</dt>
-<dd>必須。 ルーティング・タイプの ID。 ID を検出するには、「ibmcloud sl loadbal routing-types」を実行します。</dd>
+<dd>必須。 ルーティング・タイプの ID。 ID を検出するには、`ibmcloud sl loadbal routing-types` を実行します。</dd>
 <dt>-m, --routing-method</dt>
-<dd>必須。 ルーティング・メソッドの ID。 ID を検出するには、「ibmcloud sl loadbal routing-methods」を実行します。</dd>
+<dd>必須。 ルーティング・メソッドの ID。 ID を検出するには、`ibmcloud sl loadbal routing-methods` を実行します。</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-delete
@@ -115,9 +115,9 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>ポート番号を変更します。</dd>
 <dt>-t, --routing-type</dt>
-<dd>ルーティング・タイプの ID を変更します。 ID を検出するには、「ibmcloud sl loadbal routing-types」を実行します。</dd>
+<dd>ルーティング・タイプの ID を変更します。 ID を検出するには、`ibmcloud sl loadbal routing-types` を実行します。</dd>
 <dt>-m, --routing-method</dt>
-<dd>ルーティング方式の ID を変更します。 ID を検出するには、「ibmcloud sl loadbal routing-methods」を実行します。</dd>
+<dd>ルーティング方式の ID を変更します。 ID を検出するには、`ibmcloud sl loadbal routing-methods` を実行します。</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-reset

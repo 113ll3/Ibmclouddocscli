@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-07-12"
 
-keywords: vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
+keywords: cli, vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
 subcollection: cloud-cli
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Plug-in CLI VPN per la CLI cf
 {: #vpn_cli_for_cf}
 
-Puoi utilizzare la CLI (command line interface) per configurare e gestire il tuo servizio {{site.data.keyword.vpn_full}}. Il plug-in della CLI {{site.data.keyword.vpn_short}} è disponibile in due versioni: una per l'utilizzo del plug-in con la CLI Cloud Foundry e l'altra per l'utilizzo del plug-in con la CLI {{site.data.keyword.cloud}}. Entrambe le versioni del plug-in forniscono la stessa funzionalità.
+Puoi utilizzare la CLI (command line interface) per configurare e gestire il tuo servizio {{site.data.keyword.vpn_full}}. Il plug-in della CLI {{site.data.keyword.vpn_short}} è disponibile in due versioni: una per l'utilizzo del plug-in con la CLI Cloud Foundry e l'altra per l'utilizzo del plug-in con la CLI {{site.data.keyword.cloud}}. Entrambe le versioni del plug-in forniscono le stesse funzioni.
 {:shortdesc}
 
 Il plug-in {{site.data.keyword.vpn_short}} è disponibile per i sistemi operativi Windows, MAC e Linux. Assicurati di utilizzare il plug-in adatto a te.
@@ -119,7 +119,7 @@ Indirizzo IP endpoint remoto del tunnel VPN.
 
 **-admin_state:** Stato della connessione VPN. Valori: UP o DOWN.
 
-**-dpd-action:** Azione da intraprendere quando il peer viene individuato come inattivo. Valori: hold; clear; disabled; restart; restart-by-peer. Valore predefinito: hold
+**-dpd-action:** Azione intrapresa quando il peer viene individuato come inattivo. Valori: hold; clear; disabled; restart; restart-by-peer. Valore predefinito: hold
 
 **-gateway_ip:** Indirizzo IP dell'endpoint del tunnel VPN locale.
 
@@ -348,7 +348,7 @@ Chiave precondivisa.
 
 **-admin_state:** Stato della connessione VPN. Valori: UP o DOWN.
 
-**-dpd-action:** Azione da intraprendere quando il peer viene individuato come inattivo. Valori: hold; clear; disabled; restart; restart-by-peer. Valore predefinito: hold
+**-dpd-action:** Azione intrapresa quando il peer viene individuato come inattivo. Valori: hold; clear; disabled; restart; restart-by-peer. Valore predefinito: hold
 
 **-gateway_ip:** Indirizzo IP dell'endpoint del tunnel VPN locale.
 

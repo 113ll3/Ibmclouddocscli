@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
+keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
 subcollection: cloud-cli
 
@@ -81,9 +81,9 @@ ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>必要。埠號。</dd>
 <dt>-t, --routing-type</dt>
-<dd>必要。遞送類型的 ID。請執行 'ibmcloud sl loadbal routing-types' 以尋找 ID。</dd>
+<dd>必要。遞送類型的 ID。請執行 `ibmcloud sl loadbal routing-types` 以尋找 ID。</dd>
 <dt>-m, --routing-method</dt>
-<dd>必要。遞送方法的 ID。請執行 'ibmcloud sl loadbal routing-methods' 以尋找 ID。</dd>
+<dd>必要。遞送方法的 ID。請執行 `ibmcloud sl loadbal routing-methods` 以尋找 ID。</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-delete
@@ -115,9 +115,9 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>變更埠號。</dd>
 <dt>-t, --routing-type</dt>
-<dd>變更遞送類型的 ID。請執行 'ibmcloud sl loadbal routing-types' 以尋找 ID。</dd>
+<dd>變更遞送類型的 ID。請執行 `ibmcloud sl loadbal routing-types` 以尋找 ID。</dd>
 <dt>-m, --routing-method</dt>
-<dd>變更遞送方法的 ID。請執行 'ibmcloud sl loadbal routing-methods' 以尋找 ID。</dd>
+<dd>變更遞送方法的 ID。請執行 `ibmcloud sl loadbal routing-methods` 以尋找 ID。</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-reset

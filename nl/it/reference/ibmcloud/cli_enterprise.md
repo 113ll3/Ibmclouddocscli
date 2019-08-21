@@ -116,9 +116,9 @@ ibmcloud enterprise account-group-update (-n, --name NOME | --id ID) (--new-name
 
 <dl>
 <dt>--id ID (obbligatorio)</dt>
-<dd>ID del gruppo di account di destinazione.Questa opzione è esclusiva con `-n, --name`.</dd>
+<dd>ID del gruppo di account di destinazione. Questa opzione è esclusiva con `-n, --name`.</dd>
 <dt>-n, --name NOME (obbligatorio)</dt>
-<dd>Nome del gruppo di account di destinazione.Questa opzione è esclusiva con `--id`.</dd>
+<dd>Nome del gruppo di account di destinazione. Questa opzione è esclusiva con `--id`.</dd>
 <dt>--new-name NUOVO_NOME (obbligatorio)</dt>
 <dd>Nuovo nome del gruppo di account di destinazione.</dd>
 <dt>--output FORMATO (facoltativo)</dt>
@@ -182,7 +182,7 @@ ibmcloud enterprise account-create NOME [--parent-account-group NOME_GRUPPO_ACCO
 <strong>Opzioni del comando</strong>:
 
 <dl>
-<dt>NAME (obbligatorio)</dt>
+<dt>NOME (obbligatorio)</dt>
 <dd>Nome gruppo di account.</dd>
 <dt>--owner ID_UTENTE (facoltativo)</dt>
 <dd>ID utente del gruppo di account.</dd>
@@ -206,9 +206,9 @@ ibmcloud enterprise account-move (-n, --name NOME | --id ID) (--parent-account-g
 
 <dl>
 <dt>--id ID (obbligatorio)</dt>
-<dd>ID dell'account di destinazione.Questa opzione è esclusiva con `-n, --name`.</dd>
+<dd>ID dell'account di destinazione. Questa opzione è esclusiva con `-n, --name`.</dd>
 <dt>-n, --name NOME (obbligatorio)</dt>
-<dd>Nome dell'account di destinazione.Questa opzione è esclusiva con `--id`.</dd>
+<dd>Nome dell'account di destinazione. Questa opzione è esclusiva con `--id`.</dd>
 <dt>--parent-account-group NOME_GRUPPO_ACCOUNT (obbligatorio)</dt>
 <dd>Nome del gruppo di account parent. Questa opzione è esclusiva con `--parent-account-group-id` e `--parent-enterprise`.</dd>
 <dt>--parent-account-group-id ID_GRUPPO_ACCOUNT (obbligatorio)</dt>

@@ -36,23 +36,23 @@ ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID
    <dt>-r REGION_NAME</dt>
    <dd>지역 이름입니다. 지정된 지역의 조직을 나열합니다. 지정되지 않은 경우 현재 지역으로 기본값이 지정됩니다. 'all'로 설정되면 모든 지역의 모든 조직이 나열됩니다.</dd>
    <dt>--guid</dt>
-   <dd>조직의 guid를 표시합니다. 이 옵션은 `--output`과 배타적입니다. </dd>
+   <dd>조직의 guid를 표시합니다. 이 옵션은 `--output`과 배타적입니다.</dd>
    <dt>--output FORMAT</dt>
-   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 `--guid`와 배타적입니다. </dd>
+   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 `--guid`와 배타적입니다.</dd>
    <dt>-c ACCOUNT_ID</dt>
-   <dd>계정 ID. 계정의 조직을 나열합니다. 지정되지 않은 경우 현재 계정으로 기본값이 지정됩니다. `all`로 설정되면 모든 계정의 조직을 나열합니다. 이 옵션은 `-u`와 배타적입니다. </dd>
+   <dd>계정 ID. 계정의 조직을 나열합니다. 지정되지 않은 경우 현재 계정으로 기본값이 지정됩니다. `all`로 설정되면 모든 계정의 조직을 나열합니다. 이 옵션은 `-u`와 배타적입니다.</dd>
    <dt>-u ACCOUNT_OWNER</dt>
-   <dd>계정 소유자 이름입니다. 해당 사용자가 소유한 계정 아래의 조직을 나열합니다. 지정되지 않은 경우 현재 계정으로 기본값이 지정됩니다. 'all'로 설정되면 모든 계정 아래 조직이 나열됩니다. 이 옵션은 `-c`와 배타적입니다. </dd>
+   <dd>계정 소유자 이름입니다. 해당 사용자가 소유한 계정 아래의 조직을 나열합니다. 지정되지 않은 경우 현재 계정으로 기본값이 지정됩니다. 'all'로 설정되면 모든 계정 아래 조직이 나열됩니다. 이 옵션은 `-c`와 배타적입니다.</dd>
    </dl>
 
 <strong>예제</strong>:
 
-GUID를 표시하여 `us-south` 지역의 모든 조직 나열: 
+GUID를 표시하여 `us-south` 지역의 모든 조직 나열:
 ```
 ibmcloud account orgs -r us-south --guid
 ```
 
-JSON 형식으로 모든 조직 나열: 
+JSON 형식으로 모든 조직 나열:
 ```
 ibmcloud account orgs --output JSON
 ```
@@ -72,11 +72,11 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
    <dt>ORG_NAME(필수)</dt>
    <dd>조직의 이름입니다.</dd>
    <dt>-r REGION</dt>
-   <dd>지역 이름입니다. 지정되지 않은 경우 기본값은 현재 지역입니다. `all`로 설정되면 모든 지역에서 지정된 이름을 가지는 조직이 나열됩니다. </dd>
+   <dd>지역 이름입니다. 지정되지 않은 경우 기본값은 현재 지역입니다. `all`로 설정되면 모든 지역에서 지정된 이름을 가지는 조직이 나열됩니다.</dd>
    <dt>--guid</dt>
-   <dd>조직의 GUID를 검색하고 표시합니다. 조직의 기타 모든 출력은 억제됩니다. 이 옵션은 `--output`과 배타적입니다. </dd>
+   <dd>조직의 GUID를 검색하고 표시합니다. 조직의 기타 모든 출력은 억제됩니다. 이 옵션은 `--output`과 배타적입니다.</dd>
    <dt>--output REGION</dt>
-   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 `--guid`와 배타적입니다. </dd>
+   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 `--guid`와 배타적입니다.</dd>
    </dl>
 
 <strong>예제</strong>:
@@ -99,7 +99,7 @@ ibmcloud account org-create ORG_NAME [-r, --region REGION]
 <strong>명령 옵션</strong>:
    <dl>
    <dt>ORG_NAME(필수)</dt>
-   <dd>작성될 조직의 이름입니다. </dd>
+   <dd>작성될 조직의 이름입니다.</dd>
    <dt>-r, --region REGION(선택사항)</dt>
    <dd>지역 이름입니다. 지정되지 않은 경우 현재 지역으로 기본값이 지정됩니다.</dd>
    </dl>
@@ -207,9 +207,9 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
    <dt>-o ORG_NAME</dt>
    <dd>조직 이름입니다. 지정되지 않은 경우 현재 조직으로 기본값이 지정됩니다.</dd>
    <dt>--guid</dt>
-   <dd>영역의 GUID를 검색하고 표시합니다. 영역의 기타 모든 출력은 억제됩니다. 이 옵션은 `--output`과 배타적입니다. </dd>
+   <dd>영역의 GUID를 검색하고 표시합니다. 영역의 기타 모든 출력은 억제됩니다. 이 옵션은 `--output`과 배타적입니다.</dd>
    <dt>--output FORMAT</dt>
-   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 영역의 기타 모든 출력은 억제됩니다. 이 옵션은 `--guid`와 배타적입니다. </dd>
+   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 영역의 기타 모든 출력은 억제됩니다. 이 옵션은 `--guid`와 배타적입니다.</dd>
    <dt>--security-group-rules</dt>
    <dd>영역과 연관된 모든 보안 그룹의 규칙을 검색합니다.</dd>
    </dl>
@@ -765,7 +765,7 @@ ibmcloud account user-preference-update (--position NEW_POSITION) [--output FORM
 <strong>명령 옵션</strong>:
 <dl>
    <dt>--position <i>NEW_POSITION</i>(선택사항)</dt>
-   <dd>사용자의 지위(예: 'manager' 또는 'student')를 설정합니다. </dd>
+   <dd>사용자의 지위(예: 'manager' 또는 'student')를 설정합니다.</dd>
    <dt>--output FORMAT(선택사항)</dt>
    <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
@@ -782,7 +782,7 @@ ibmcloud account platform-notification-subscribe (--type TYPE)
 <strong>명령 옵션</strong>:
 <dl>
    <dt>--type <i>TYPE</i>(선택사항)</dt>
-   <dd>알림 유형('unplanned_events', 'planned_maintenance' 중 하나)입니다. </dd>
+   <dd>알림 유형('unplanned_events', 'planned_maintenance' 중 하나)입니다.</dd>
 </dl>
 
 ## ibmcloud account platform-notification-unsubscribe
@@ -797,13 +797,13 @@ ibmcloud account platform-notification-unsubscribe (--type TYPE)
 <strong>명령 옵션</strong>:
 <dl>
    <dt>--type <i>TYPE</i>(선택사항)</dt>
-   <dd>알림 유형('unplanned_events', 'planned_maintenance' 중 하나)입니다. </dd>
+   <dd>알림 유형('unplanned_events', 'planned_maintenance' 중 하나)입니다.</dd>
 </dl>
 
 ## ibmcloud account domain-cert
 {: #ibmcloud_account_domain_cert}
 
-도메인의 인증서 정보 나열: 
+도메인의 인증서 정보 나열:
 ```
 ibmcloud account domain-cert DOMAIN_NAME
 ```

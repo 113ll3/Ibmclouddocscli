@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
+keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
 subcollection: cloud-cli
 
@@ -81,9 +81,9 @@ ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>必需。端口号。</dd>
 <dt>-t, --routing-type</dt>
-<dd>必需。路由类型的标识。运行“ibmcloud sl loadbal routing-types”可查找标识。</dd>
+<dd>必需。路由类型的标识。运行 `ibmcloud sl loadbal routing-types` 可查找标识。</dd>
 <dt>-m, --routing-method</dt>
-<dd>必需。路由方法的标识。运行“ibmcloud sl loadbal routing-methods”可查找标识。</dd>
+<dd>必需。路由方法的标识。运行 `ibmcloud sl loadbal routing-methods` 可查找标识。</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-delete
@@ -115,9 +115,9 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>更改端口号。</dd>
 <dt>-t, --routing-type</dt>
-<dd>更改路由类型的标识。运行“ibmcloud sl loadbal routing-types”可查找标识。</dd>
+<dd>更改路由类型的标识。运行 `ibmcloud sl loadbal routing-types` 可查找标识。</dd>
 <dt>-m, --routing-method</dt>
-<dd>更改路由方法的标识。运行“ibmcloud sl loadbal routing-methods”可查找标识。</dd>
+<dd>更改路由方法的标识。运行 `ibmcloud sl loadbal routing-methods` 可查找标识。</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-reset

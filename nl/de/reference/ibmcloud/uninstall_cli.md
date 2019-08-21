@@ -20,7 +20,8 @@ subcollection: cloud-cli
 # Eigenständige {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle deinstallieren
 {: #uninstall-ibmcloud-cli}
 
-Führen Sie zur Deinstallation der eigenständigen {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle auf bestimmten Plattformen die folgenden Schritte aus:{: shortdesc}
+Führen Sie zur Deinstallation der eigenständigen {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle auf bestimmten Plattformen die folgenden Schritte aus:
+{: shortdesc}
 
 ## Deinstallation unter Windows
 {: #uninstall-cli-windows}
@@ -42,7 +43,7 @@ ibmcloud -v
 ```
 {: codeblock}
 
-Um Versionen vor Version `0.9.0` zu deinstallieren, führen Sie die folgenden Befehle aus: 
+Um Versionen vor Version `0.9.0` zu deinstallieren, führen Sie die folgenden Befehle aus:
   ```
   rm -rf /usr/local/ibmcloud
   rm -f /usr/local/bin/ibmcloud
@@ -54,7 +55,7 @@ Um Versionen vor Version `0.9.0` zu deinstallieren, führen Sie die folgenden Be
 
 Bereinigen Sie die Scripts für automatische Vervollständigung, sofern Sie diese konfiguriert haben. Weitere Details finden Sie in [Automatische Vervollständigung für die Shell für die {{site.data.keyword.cloud_notm}}-CLI (nur Linux und Mac)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
-Um die Version `0.9.0` und nachfolgende Versionen zu deinstallieren, führen Sie den folgenden Befehl aus: 
+Um die Version `0.9.0` und nachfolgende Versionen zu deinstallieren, führen Sie den folgenden Befehl aus:
   ```
   /usr/local/ibmcloud/uninstall
   ```

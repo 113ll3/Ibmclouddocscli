@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-12"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -109,7 +109,7 @@ ibmcloud sl user edit-permissions [OPTIONS] IDENTIFIER
 <strong>命令选项</strong>：
 <dl>
 <dt>--enable</dt>
-<dd>启用或禁用所选许可权。接受的输入为“true”和“false”。缺省值为“true”。</dd>
+<dd>启用或禁用所选许可权。接受的输入为 `true` 和 `false`。缺省值为 `true`。</dd>
 <dt>--permission</dt>
 <dd>要设置的许可权 `keyName`，允许使用多个实例。使用关键字 ALL 可选择所有许可权。</dd>
 <dt>--from-user</dt>

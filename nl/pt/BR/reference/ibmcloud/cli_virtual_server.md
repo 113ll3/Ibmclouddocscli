@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 
@@ -96,7 +96,7 @@ Ibmcloud sl vs create [ OPTIONS ]
 <dt>-o, --os</dt>
 <dd>Código de instalação do OS. Dica: é possível especificar <OS>_LATEST.</dd>
 <dt>--image</dt>
-<dd>ID da imagem. Veja: 'ibmcloud sl image list' para referência.</dd>
+<dd>ID da imagem. Consulte: `ibmcloud sl image list` para referência.</dd>
 <dt>--billing</dt>
 <dd>Taxa de faturamento. O padrão é: de hora em hora. As opções são: hourly, monthly.</dd>
 <dt>--dedicated</dt>
@@ -290,7 +290,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dt>-b, --billing</dt>
 <dd>Taxa de faturamento. O padrão é: de hora em hora. As opções são: hourly, monthly.</dd>
 <dt>-v, --vlan-private</dt>
-<dd>O ID da VLAN privada na qual você deseja que o host dedicado seja colocado. Consulte: 'ibmcloud sl vlan list' para referência.</dd>
+<dd>O ID da VLAN privada na qual você deseja que o host dedicado seja colocado. Consulte: `ibmcloud sl vlan list` para referência.</dd>
 <dt>-f, --force</dt>
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
@@ -354,9 +354,8 @@ Sl vs list ibmcloud [ OPTIONS ]
 <dd>Filtrado pelo ID do usuário que possui as instâncias.</dd>
 <dt>--sortby</dt>
 <dd>Coluna pela qual classificar; o padrão é: hostname, as opções são: id, hostname, domain, datacenter, cpu, memory, public_ip, private_ip.</dd>
-<dt>--columns</dt>
-<dd>Colunas para exibição; o padrão é: id, hostname, public_ip, private_ip, datacenter, action, as opções são:
-guid, power_state, created_by, tags.</dd>
+<dt>--column</dt>
+<dd>Coluna a exibir, default is:id,hostname,public_ip,private_ip,datacenter,action, opções são: guid,power_state,created_by,tags.</dd>
 </dl>
 
 **Exemplos**:
@@ -493,7 +492,7 @@ Sl vs reload IDENTIFIER ibmcloud [ OPTIONS ]
 <dt>--image</dt>
 <dd>ID da imagem. O padrão é usar o sistema operacional atual.</dd>
 <dt>Veja:</dt>
-<dd>" Ibmcloud sl image list ' para referência.</dd>
+<dd>`ibmcloud sl image list` para referência.</dd>
 <dt>-k, --key</dt>
 <dd>Os IDs das chaves SSH a serem incluídas para o usuário raiz (múltiplas ocorrências permitidas).</dd>
 <dt>-f, --force</dt>

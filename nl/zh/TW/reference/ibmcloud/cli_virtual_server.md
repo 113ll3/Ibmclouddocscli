@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 
@@ -96,7 +96,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-o, --os</dt>
 <dd>OS 安裝程式碼。提示：您可以指定 <OS>_LATEST。</dd>
 <dt>--image</dt>
-<dd>映像檔 ID。如需參考資料，請參閱：'ibmcloud sl image list'。</dd>
+<dd>映像檔 ID。請參閱 `ibmcloud sl image list` 以獲取參考資訊。</dd>
 <dt>--billing</dt>
 <dd>計費頻率。預設值為：hourly。選項包含：hourly、monthly。</dd>
 <dt>--dedicated</dt>
@@ -138,7 +138,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-s, --private-security-group</dt>
 <dd>要與專用介面建立關聯的安全群組 ID（允許指定多次）。</dd>
 <dt>--wait</dt>
-<dd>等待虛擬伺服器完成佈建，最多 X 秒後才返回。</dd>
+<dd>等待虛擬伺服器完成佈建，最多 X 秒後才傳回。</dd>
 <dt>-f, --force</dt>
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
@@ -194,7 +194,7 @@ ibmcloud sl vs detail IDENTIFIER [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>--passwords</dt>
-<dd>顯示密碼（小心背後有人偷窺！）。</dd>
+<dd>顯示密碼（小心有人在您背後偷看！）.</dd>
 <dt>--price</dt>
 <dd>顯示關聯的價格。</dd>
 </dl>
@@ -290,7 +290,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dt>-b, --billing</dt>
 <dd>計費頻率。預設值為：hourly。選項包含：hourly、monthly。</dd>
 <dt>-v, --vlan-private</dt>
-<dd>要放置專用主機之專用 VLAN 的 ID。如需參考資料，請參閱：'ibmcloud sl vlan list'。</dd>
+<dd>要放置專用主機之專用 VLAN 的 ID。請參閱 `ibmcloud sl vlan list` 以獲取參考資訊。</dd>
 <dt>-f, --force</dt>
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
@@ -354,7 +354,7 @@ ibmcloud sl vs list [OPTIONS]
 <dd>依擁有實例的使用者 ID 進行過濾。</dd>
 <dt>--sortby</dt>
 <dd>直欄排序方式，預設值為：hostname，選項包含：id、hostname、domain、datacenter、cpu、memory、public_ip、private_ip。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>要顯示的直欄，預設值為：id、hostname、public_ip、private_ip、datacenter、action，選項包含：guid、power_state、created_by、tags。</dd>
 </dl>
 
@@ -441,7 +441,7 @@ ibmcloud sl vs ready IDENTIFIER [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>--wait</dt>
-<dd>等待虛擬伺服器完成佈建，最多 X 秒後才返回。</dd>
+<dd>等待虛擬伺服器完成佈建，最多 X 秒後才傳回。</dd>
 </dl>
 
 **範例**：
@@ -491,7 +491,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <dt>--image</dt>
 <dd>映像檔 ID。預設值為使用現行作業系統。</dd>
 <dt>請參閱：</dt>
-<dd>'ibmcloud sl image list' for reference.</dd>
+<dd>`ibmcloud sl image list` 以獲取參考資訊。</dd>
 <dt>-k, --key</dt>
 <dd>要新增至 root 使用者的 SSH 金鑰 ID（允許指定多次）。</dd>
 <dt>-f, --force</dt>

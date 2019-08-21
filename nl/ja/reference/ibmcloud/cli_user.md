@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-12"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -109,7 +109,7 @@ ibmcloud sl user edit-permissions [OPTIONS] IDENTIFIER
 <strong>コマンド・オプション</strong>:
 <dl>
 <dt>--enable</dt>
-<dd>選択した許可を有効または無効にします。 受け入れられる入力は 'true' と 'false' です。 デフォルトは 'true' です。</dd>
+<dd>選択した許可を有効または無効にします。 受け入れられる入力は `true` と `false` です。 デフォルトは `true` です。</dd>
 <dt>--permission</dt>
 <dd>設定する許可 `keyName` (複数インスタンスが許可されます)。 すべての許可を選択するには、キーワード ALL を使用します。</dd>
 <dt>--from-user</dt>

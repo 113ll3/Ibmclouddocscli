@@ -74,7 +74,7 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
    <dt>-r REGION</dt>
    <dd>地域名。 指定しない場合、デフォルトは現行地域です。 `all` に設定された場合は、すべての地域の指定された名前の組織がリストされます。</dd>
    <dt>--guid</dt>
-   <dd>組織の GUID を取得して表示します。この組織の他の出力はすべて抑制されます。 このオプションは、`--output` と同時に指定することはできません。</dd>
+   <dd>組織の GUID を取得して表示します。 この組織の他の出力はすべて抑制されます。 このオプションは、`--output` と同時に指定することはできません。</dd>
    <dt>--output REGION</dt>
    <dd>出力形式を指定します。現在、JSON のみがサポートされています。 このオプションは、`--guid` と同時に指定することはできません。</dd>
    </dl>
@@ -89,7 +89,7 @@ ibmcloud account org IBM --guid
 ## ibmcloud account org-create
 {: #ibmcloud_account_org_create}
 
-組織を作成します。この操作は、アカウントの所有者のみが実行できます。
+組織を作成します。 この操作は、アカウントの所有者のみが実行できます。
 ```
 ibmcloud account org-create ORG_NAME [-r, --region REGION]
 ```
@@ -207,7 +207,7 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
    <dt>-o ORG_NAME</dt>
    <dd>組織名。 未指定の場合、デフォルトは現行組織です。</dd>
    <dt>--guid</dt>
-   <dd>スペースの GUID を取得して表示します。このスペースの他の出力はすべて抑制されます。 このオプションは、`--output` と同時に指定することはできません。</dd>
+   <dd>スペースの GUID を取得して表示します。 このスペースの他の出力はすべて抑制されます。 このオプションは、`--output` と同時に指定することはできません。</dd>
    <dt>--output FORMAT</dt>
    <dd>出力形式を指定します。現在、JSON のみがサポートされています。 このスペースの他の出力はすべて抑制されます。 このオプションは、`--guid` と同時に指定することはできません。</dd>
    <dt>--security-group-rules</dt>
@@ -359,7 +359,7 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE [-r, --region REGION]
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-組織およびスペースの役割は CLI を使用して設定できますが、その他の許可を設定したい場合は UI を使用する必要があります。詳しくは、[リソースに対するアクセス権限の管理](/docs/iam?topic=iam-iammanidaccser)を参照してください。
+組織およびスペースの役割は CLI を使用して設定できますが、その他の許可を設定したい場合は UI を使用する必要があります。 詳しくは、[リソースに対するアクセス権限の管理](/docs/iam?topic=iam-iammanidaccser)を参照してください。
 {: note}
 <!-- Begin Staging URL vs Prod URL -->
 
@@ -434,7 +434,7 @@ ibmcloud account space-roles ORG [-r, --region REGION] [--output FORMAT]
    <dt>ORG (必須)</dt>
    <dd>組織の名前。</dd>
    <dt>-r (オプション)</dt>
-   <dd>地域名。未指定の場合、デフォルトは現行地域です。</dd>
+   <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
    <dt>--output FORMAT (オプション)</dt>
    <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
    </dl>
@@ -544,7 +544,7 @@ ibmcloud account org-account ORG_NAME [-r, --region REGION] [--guid | --output F
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>-r (オプション)</dt>
-  <dd>地域名。未指定の場合、デフォルトは現行地域です。</dd>
+  <dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
   <dt>--guid (オプション)</dt>
   <dd>アカウント ID のみを表示します</dd>
   <dt>--output FORMAT (オプション)</dt>
@@ -690,7 +690,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dd>スペースの役割。 有効な入力は、SpaceManager、SpaceDeveloper、および SpaceAuditor です。</dd>
 </dl>
 
-アクセス権限を割り当てる準備ができていない場合、または Cloud Foundry アクセス権限の代わりに IAM ポリシーを割り当てる場合は、アクセス権限なしでユーザーを招待し、後でアクセス権限を割り当てることができます。ユーザーへのアクセス権限の割り当てについて詳しくは、[リソースに対するアクセス権限の管理](/docs/iam?topic=iam-iammanidaccser#assign_new_access)を参照してください。
+アクセス権限を割り当てる準備ができていない場合、または Cloud Foundry アクセス権限の代わりに IAM ポリシーを割り当てる場合は、アクセス権限なしでユーザーを招待し、後でアクセス権限を割り当てることができます。 ユーザーへのアクセス権限の割り当てについて詳しくは、[リソースに対するアクセス権限の管理](/docs/iam?topic=iam-iammanidaccser#assign_new_access)を参照してください。
 {: tip}
 
 ## ibmcloud account user-reinvite

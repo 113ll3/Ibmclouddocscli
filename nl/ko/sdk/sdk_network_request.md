@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-03"
 
-keywords: bmscore, bmscore sdk, network request, ios, android, cordova
+keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
 subcollection: cloud-cli
 
@@ -49,13 +49,13 @@ subcollection: cloud-cli
 
 `Request` 클래스는 요청을 작성하고 요청이 완료된 후에 응답을 가져오는 간단한 방법입니다. 대량 파일 또는 대량 볼륨의 데이터를 다운로드하거나 업로드하는 경우 `Request` `download` 또는 `upload` 메소드를 사용할 수 있습니다. 다운로드 또는 업로드 진행상태를 모니터하려면 사용자 정의 `ProgressListener`를 작성하고 이를 `download` 또는 `upload` 메소드로 전달하십시오.
 
-<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
+전체 사용 예제는 `BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
 
 ## iOS
 {: #request-ios}
 
-1. iOS 애플리케이션에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios)했는지 확인하십시오.
+1. iOS iOS 앱에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios)했는지 확인하십시오.
 
 2. 네트워크 요청을 작성하십시오.
 
@@ -101,11 +101,10 @@ subcollection: cloud-cli
 
 전체 사용 예제는 `BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
-
 ## Cordova
 {: #request-cordova}
 
-1. Cordova 애플리케이션에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova)했는지 확인하십시오.
+1. Cordova 앱에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova)했는지 확인하십시오.
 
 2. 네트워크 요청을 작성하십시오.
 

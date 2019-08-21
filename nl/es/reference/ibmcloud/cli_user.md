@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-12"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -109,7 +109,7 @@ ibmcloud sl user edit-permissions [OPTIONS] IDENTIFIER
 <strong>Opciones de mandato</strong>:
 <dl>
 <dt>--enable</dt>
-<dd>Habilitar o inhabilitar los permisos seleccionados. Los valores aceptados son 'true' y 'false'. El valor predeterminado es 'true'.</dd>
+<dd>Habilitar o inhabilitar los permisos seleccionados. Las entradas aceptadas son `true` y `false`. El valor predeterminado es `true`.</dd>
 <dt>--permission</dt>
 <dd>Permiso `keyName` a establecer, permitiéndose varias instancias. Utilice la palabra clave ALL para seleccionar todos los permisos.</dd>
 <dt>--from-user</dt>

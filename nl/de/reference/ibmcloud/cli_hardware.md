@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
+keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
 subcollection: cloud-cli
 
@@ -35,7 +35,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 <dt>-i, --immediate</dt>
 <dd>Bricht den Server sofort ab (anstatt am Rechnungsstichtag).</dd>
 <dt>-r, --reason</dt>
-<dd>Ein optionaler Grund für den Abbruch. Eine Liste mit verfügbaren Optionen finden Sie unter 'ibmcloud sl hardware cancel-reasons'.</dd>
+<dd>Ein optionaler Grund für den Abbruch. Eine Liste der verfügbaren Optionen finden Sie unter `ibmcloud sl hardware cancel-reasons`.</dd>
 <dt>-c, --comment</dt>
 <dd>Ein optionaler Kommentar, der dem Abbruchticket hinzugefügt werden soll.</dd>
 <dt>-f, --force</dt>
@@ -184,8 +184,8 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>Nach ID des Eigners filtern.</dd>
 <dt>--sortby</dt>
 <dd>Spalte, nach der standardmäßig sortiert werden soll: hostname, Optionen: id,guid,hostname,domain,public_ip,private_ip,datacenter,status,ipmi_ip,created,created_by.</dd>
-<dt>--columns</dt>
-<dd>Spalten, die standardmäßig angezeigt werden sollen: id,hostname,domain,public_ip,private_ip,datacenter,status, Optionen: guid,cpu,memory,os,ipmi_ip,created,created_by,tags.</dd>
+<dt>--column</dt>
+<dd>Anzuzeigende Spalte. Standardwert: id,hostname,domain,public_ip,private_ip,datacenter,status, options:guid,cpu,memory,os,ipmi_ip,created,created_by,tags.</dd>
 </dl>
 
 ## ibmcloud sl hardware power-cycle

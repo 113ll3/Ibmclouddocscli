@@ -23,7 +23,7 @@ Verwenden Sie die folgenden Befehle, um Unternehmen, Kontogruppen und Konten zu 
 ## ibmcloud enterprise create
 {: #ibmcloud_enterprise_create} 
 
-Ein Unternehmen erstellen. 
+Ein Unternehmen erstellen.
 ```
 ibmcloud enterprise create NAME [-d, --domain DOMAIN_NAME] [--primary-contact-id PRIMARY_CONTACT_USER_ID]
 ```
@@ -120,7 +120,7 @@ ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name
 <dt>-n, --name NAME (erforderlich)</dt>
 <dd>Name der Zielkontogruppe. Diese Option ist gegenseitig ausschließend mit `--id`.</dd>
 <dt>--new-name NEW_NAME (erforderlich)</dt>
-<dd>Neuer Name der Zielkontogruppe. </dd>
+<dd>Neuer Name der Zielkontogruppe.</dd>
 <dt>--output FORMAT (optional)</dt>
 <dd>Ausgabeformat angeben. Nur 'JSON' wird unterstützt.</dd>
 </dl>
@@ -185,7 +185,7 @@ ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NA
 <dt>NAME (erforderlich)</dt>
 <dd>Kontogruppenname.</dd>
 <dt>--owner USER_ID (optional)</dt>
-<dd>Benutzer-ID der Kontogruppe. </dd>
+<dd>Benutzer-ID der Kontogruppe.</dd>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME (optional).</dt>
 <dd>Name der übergeordneten Kontogruppe. Bei Auslassung wird das aktuelle Unternehmen verwendet.</dd>
 <dt>--output FORMAT (optional)</dt>
@@ -206,7 +206,7 @@ ibmcloud enterprise account-move (-n, --name NAME | --id ID) (--parent-account-g
 
 <dl>
 <dt>--id ID (erforderlich)</dt>
-<dd>ID des Zielkontos.Diese Option ist gegenseitig ausschließend mit `-n, --name`.</dd>
+<dd>ID des Zielkontos. Diese Option ist gegenseitig ausschließend mit `-n, --name`.</dd>
 <dt>-n, --name NAME (erforderlich)</dt>
 <dd>Name des Zielkontos. Diese Option ist gegenseitig ausschließend mit `--id`.</dd>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME (erforderlich)</dt>
@@ -275,7 +275,7 @@ ibmcloud enterprise account-import (--account-id ID) [--parent-account-group ACC
 
 <dl>
 <dt>--account-id</dt>
-<dd>ID des Quellenkontos. </dd>
+<dd>ID des Quellenkontos.</dd>
 <dt>--parent-account-group PARENT_ACCOUNT_GROUP (optional)</dt>
 <dd>Name der übergeordneten Kontogruppe. Diese Option ist gegenseitig ausschließend mit `--parent-account-group-id`.</dd>
 <dt>--parent-account-group-id PARENT_ACCOUNT_GROUP_ID (optional)</dt>

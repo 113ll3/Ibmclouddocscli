@@ -95,7 +95,7 @@ ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GR
 <dt>NAME (必須)</dt>
 <dd>アカウント・グループ名。</dd>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME (オプション)</dt>
-<dd>親アカウント・グループの名前。省略された場合、親は現在のエンタープライズになります。</dd>
+<dd>親アカウント・グループの名前。 省略された場合、親は現在のエンタープライズになります。</dd>
 <dt>--primary-contact-id PRIMARY_CONTACT_USER_ID (オプション)</dt>
 <dd>アカウント・グループの 1 次連絡先ユーザー ID。</dd>
 <dt>--output FORMAT (オプション)</dt>
@@ -116,9 +116,9 @@ ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name
 
 <dl>
 <dt>--id ID (必須)</dt>
-<dd>ターゲット・アカウント・グループの ID。このオプションは、`-n, --name` と同時に指定することはできません。</dd>
+<dd>ターゲット・アカウント・グループの ID。 このオプションは、`-n, --name` と同時に指定することはできません。</dd>
 <dt>-n, --name NAME (必須)</dt>
-<dd>ターゲット・アカウント・グループの名前。このオプションは、`--id` と同時に指定することはできません。</dd>
+<dd>ターゲット・アカウント・グループの名前。 このオプションは、`--id` と同時に指定することはできません。</dd>
 <dt>--new-name NEW_NAME (必須)</dt>
 <dd>ターゲット・アカウント・グループの新しい名前。</dd>
 <dt>--output FORMAT (オプション)</dt>
@@ -139,9 +139,9 @@ ibmcloud enterprise account-group (-n, --name NAME | --id ID) [--output FORMAT]
 
 <dl>
 <dt>--id ID (必須)</dt>
-<dd>アカウント・グループの ID。このオプションは、`-n, --name` と同時に指定することはできません。</dd>
+<dd>アカウント・グループの ID。 このオプションは、`-n, --name` と同時に指定することはできません。</dd>
 <dt>-n, --name NAME (必須)</dt>
-<dd>アカウント・グループの名前。このオプションは、`--id` と同時に指定することはできません。</dd>
+<dd>アカウント・グループの名前。 このオプションは、`--id` と同時に指定することはできません。</dd>
 <dt>--output FORMAT (オプション)</dt>
 <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
@@ -160,9 +160,9 @@ ibmcloud enterprise account-groups [--parent-account-group ACCOUNT_GROUP_NAME | 
 
 <dl>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME (オプション)</dt>
-<dd>親アカウント・グループの名前。このオプションは、`--parent-account-group-id` と同時に指定することはできません。</dd>
+<dd>親アカウント・グループの名前。 このオプションは、`--parent-account-group-id` と同時に指定することはできません。</dd>
 <dt>--parent-account-group-id ACCOUNT_GROUP_ID (オプション)</dt>
-<dd>親アカウント・グループの ID。このオプションは、`--parent-account-group` と同時に指定することはできません。</dd>
+<dd>親アカウント・グループの ID。 このオプションは、`--parent-account-group` と同時に指定することはできません。</dd>
 <dt>--recursive (オプション)</dt>
 <dd>子孫アカウント・グループを表示します。</dd>
 <dt>--output FORMAT (オプション)</dt>
@@ -187,7 +187,7 @@ ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NA
 <dt>--owner USER_ID (オプション)</dt>
 <dd>アカウント・グループのユーザー ID。</dd>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME (オプション)。</dt>
-<dd>親アカウント・グループの名前。省略された場合、親は現在のエンタープライズになります。</dd>
+<dd>親アカウント・グループの名前。 省略された場合、親は現在のエンタープライズになります。</dd>
 <dt>--output FORMAT (オプション)</dt>
 <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
@@ -206,15 +206,15 @@ ibmcloud enterprise account-move (-n, --name NAME | --id ID) (--parent-account-g
 
 <dl>
 <dt>--id ID (必須)</dt>
-<dd>ターゲット・アカウントの ID。このオプションは、`-n, --name` と同時に指定することはできません。</dd>
+<dd>ターゲット・アカウントの ID。 このオプションは、`-n, --name` と同時に指定することはできません。</dd>
 <dt>-n, --name NAME (必須)</dt>
-<dd>ターゲット・アカウントの名前。このオプションは、`--id` と同時に指定することはできません。</dd>
+<dd>ターゲット・アカウントの名前。 このオプションは、`--id` と同時に指定することはできません。</dd>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME (必須)</dt>
-<dd>親アカウント・グループの名前。このオプションは、 `--parent-account-group-id` および `--parent-enterprise` と同時に指定することはできません。</dd>
+<dd>親アカウント・グループの名前。 このオプションは、 `--parent-account-group-id` および `--parent-enterprise` と同時に指定することはできません。</dd>
 <dt>--parent-account-group-id ACCOUNT_GROUP_ID (必須)</dt>
-<dd>親アカウント・グループの ID。このオプションは、 `--parent-account-group` および `--parent-enterprise` と同時に指定することはできません。</dd>
+<dd>親アカウント・グループの ID。 このオプションは、 `--parent-account-group` および `--parent-enterprise` と同時に指定することはできません。</dd>
 <dt>--parent-enterprise (必須)</dt>
-<dd>エンタープライズを親として設定します。このオプションは、 `--parent-account-group` および `--parent-account-group-id` と同時に指定することはできません。</dd>
+<dd>エンタープライズを親として設定します。 このオプションは、 `--parent-account-group` および `--parent-account-group-id` と同時に指定することはできません。</dd>
 </dl>
 
 ## ibmcloud enterprise account-show
@@ -231,9 +231,9 @@ ibmcloud enterprise account-show (-n, --name NAME | --id ID) [--output FORMAT]
 
 <dl>
 <dt>--id ID (必須)</dt>
-<dd>アカウントの ID。このオプションは、`-n, --name` と同時に指定することはできません。</dd>
+<dd>アカウントの ID。 このオプションは、`-n, --name` と同時に指定することはできません。</dd>
 <dt>-n, --name NAME (必須)</dt>
-<dd>アカウントの名前。このオプションは、`--id` と同時に指定することはできません。</dd>
+<dd>アカウントの名前。 このオプションは、`--id` と同時に指定することはできません。</dd>
 <dt>--output FORMAT (オプション)</dt>
 <dd>出力形式を指定します。現在、「JSON」のみがサポートされています。</dd>
 </dl>
@@ -252,9 +252,9 @@ ibmcloud enterprise accounts [--parent-account-group ACCOUNT_GROUP_NAME | --pare
 
 <dl>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME (オプション)</dt>
-<dd>親アカウント・グループの名前。このオプションは、`--parent-account-group-id` と同時に指定することはできません。</dd>
+<dd>親アカウント・グループの名前。 このオプションは、`--parent-account-group-id` と同時に指定することはできません。</dd>
 <dt>--parent-account-group-id ACCOUNT_GROUP_ID (オプション)</dt>
-<dd>親アカウント・グループの ID。このオプションは、`--parent-account-group` と同時に指定することはできません。</dd>
+<dd>親アカウント・グループの ID。 このオプションは、`--parent-account-group` と同時に指定することはできません。</dd>
 <dt>--recursive (オプション)</dt>
 <dd>子孫アカウントを表示します。</dd>
 <dt>--output FORMAT (オプション)</dt>
@@ -277,7 +277,7 @@ ibmcloud enterprise account-import (--account-id ID) [--parent-account-group ACC
 <dt>--account-id</dt>
 <dd>ソース・アカウントの ID。</dd>
 <dt>--parent-account-group PARENT_ACCOUNT_GROUP (オプション)</dt>
-<dd>親アカウント・グループの名前。このオプションは、`--parent-account-group-id` と同時に指定することはできません。</dd>
+<dd>親アカウント・グループの名前。 このオプションは、`--parent-account-group-id` と同時に指定することはできません。</dd>
 <dt>--parent-account-group-id PARENT_ACCOUNT_GROUP_ID (オプション)</dt>
-<dd>親アカウント・グループの ID。このオプションは、`--parent-account-group` と同時に指定することはできません。</dd>
+<dd>親アカウント・グループの ID。 このオプションは、`--parent-account-group` と同時に指定することはできません。</dd>
 </dl>

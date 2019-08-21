@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
+keywords: cli, content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
 
 subcollection: cloud-cli
 

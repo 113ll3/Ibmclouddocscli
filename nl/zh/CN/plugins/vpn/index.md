@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-07-12"
 
-keywords: vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
+keywords: cli, vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
 subcollection: cloud-cli
 
@@ -114,7 +114,7 @@ cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> 
 
 **-admin_state：**VPN 连接的状态。值：UP 或 DOWN。
 
-**-dpd-action：**检测到同级无效时要执行的操作。值：hold、clear、disabled、restart 和 restart-by-peer。缺省值：hold
+**-dpd-action：**检测到同级无效时执行的操作。值：hold、clear、disabled、restart 和 restart-by-peer。缺省值：hold
 
 **-gateway_ip：**本地 VPN 隧道端点的 IP 地址。
 
@@ -332,7 +332,7 @@ cf vpn-update connection <connection name> -g <gateway name> -cip <customer gate
 
 **-admin_state：**VPN 连接的状态。值：UP 或 DOWN。
 
-**-dpd-action：**检测到同级无效时要执行的操作。值：hold、clear、disabled、restart 和 restart-by-peer。缺省值：hold
+**-dpd-action：**检测到同级无效时执行的操作。值：hold、clear、disabled、restart 和 restart-by-peer。缺省值：hold
 
 **-gateway_ip：**本地 VPN 隧道端点的 IP 地址。
 

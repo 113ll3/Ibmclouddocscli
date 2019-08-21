@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 
@@ -96,7 +96,7 @@ ibmcloud sl vs create [OPTIONEN]
 <dt>-o, --os</dt>
 <dd>Betriebssystem-Installationscode. Tipp: Sie können <OS>_LATEST angeben.</dd>
 <dt>--image</dt>
-<dd>Image-ID. Siehe 'ibmcloud sl image list'.</dd>
+<dd>Image-ID. Siehe `ibmcloud sl image list` als Referenz.</dd>
 <dt>--billing</dt>
 <dd>Verrechnungssatz. Standardwert: hourly. Optionen: hourly, monthly.</dd>
 <dt>--dedicated</dt>
@@ -290,7 +290,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dt>-b, --billing</dt>
 <dd>Verrechnungssatz. Standardwert: hourly. Optionen: hourly, monthly.</dd>
 <dt>-v, --vlan-private</dt>
-<dd>Die ID des privaten VLANs, in dem der dedizierte Host angeordnet werden soll. Siehe: 'ibmcloud sl vlan list' als Referenz.</dd>
+<dd>Die ID des privaten VLANs, in dem der dedizierte Host angeordnet werden soll. Siehe `ibmcloud sl vlan list` als Referenz.</dd>
 <dt>-f, --force</dt>
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
@@ -354,8 +354,8 @@ ibmcloud sl vs list [OPTIONEN]
 <dd>Gefiltert nach ID des Benutzers, zu dem die Instanzen gehören.</dd>
 <dt>--sortby</dt>
 <dd>Spalte, nach der sortiert werden soll. Standardwert: hostname. Optionen sind: id,hostname,domain,datacenter,cpu,memory,public_ip,private_ip.</dd>
-<dt>--columns</dt>
-<dd>Anzuzeigende Spalten. Standardwert: id,hostname,public_ip,private_ip,datacenter,action. Optionen sind: guid,power_state,created_by,tags.</dd>
+<dt>--column</dt>
+<dd>Anzuzeigende Spalte. Standardwert: id,hostname,public_ip,private_ip,datacenter,action. Optionen sind: guid,power_state,created_by,tags.</dd>
 </dl>
 
 **Beispiele**:
@@ -491,7 +491,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONEN]
 <dt>--image</dt>
 <dd>Image-ID. Standardeinstellung ist die Verwendung des aktuellen Betriebssystems.</dd>
 <dt>Siehe:</dt>
-<dd>'ibmcloud sl image list' als Referenz.</dd>
+<dd>`ibmcloud sl image list` als Referenz.</dd>
 <dt>-k, --key</dt>
 <dd>Die IDs der SSH-Schlüssel, die dem Rootbenutzer hinzugefügt werden sollen (Mehrfachvorkommen zulässig).</dd>
 <dt>-f, --force</dt>

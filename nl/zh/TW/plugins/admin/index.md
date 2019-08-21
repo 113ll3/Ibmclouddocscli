@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -144,7 +144,7 @@ cf ba add-user user_name organization first_name last_name
 ### 從 {{site.data.keyword.Bluemix_dedicated_notm}} 邀請使用者
 {: #admin_dedicated_invite_public}
 
-每一個 {{site.data.keyword.Bluemix_dedicated_notm}} 環境都具有 {{site.data.keyword.cloud_notm}} 中由客戶擁有的公用公司帳戶。若要讓 Dedicated 環境中的使用者利用 {{site.data.keyword.containershort}} 來建立叢集，管理者必須將使用者新增至這個公用公司帳戶。將使用者新增至公用公司帳戶之後，會將其 Dedicated 及公用帳戶鏈結在一起。使用者接著可以使用其 IBM ID 同時登入 Dedicated 及公用，而且可以從 Dedicated 介面建立公用帳戶中的資源。如需相關資訊，請參閱[在 Dedicated 上設定 IBM Cloud Container Service](/docs/containers?topic=containers-dedicated#dedicated_setup)。若要邀請 Dedicated 使用者加入公用帳戶，請執行下列指令：
+每一個 {{site.data.keyword.Bluemix_dedicated_notm}} 環境都具有 {{site.data.keyword.cloud_notm}} 中由客戶擁有的公用公司帳戶。若要讓 Dedicated 環境中的使用者利用 {{site.data.keyword.containershort}} 來建立叢集，管理者必須將使用者新增至這個公用公司帳戶。將使用者新增到公用企業帳戶後，其 Dedicated 帳戶和公用帳戶會鏈結在一起。使用者接著可以使用其 IBM ID 同時登入 Dedicated 及公用，而且可以從 Dedicated 介面建立公用帳戶中的資源。如需相關資訊，請參閱[在 Dedicated 上設定 IBM Cloud Container Service](/docs/containers?topic=containers-dedicated#dedicated_setup)。若要邀請 Dedicated 使用者加入公用帳戶，請執行下列指令：
 ```
 cf ba invite-users-to-public -userid=user_email -organization=dedicated_org_id -apikey=public_api_key -public_org_id=public_org_id
 ```
@@ -166,7 +166,7 @@ cf ba invite-users-to-public -userid=user_email -organization=dedicated_org_id -
 ### 列出從 {{site.data.keyword.Bluemix_dedicated_notm}} 邀請的使用者
 {: #admin_dedicated_list}
 
-如果您已使用 [**`invite-users-to-public`** 指令](#admin_dedicated_invite_public)來邀請 Dedicated 環境使用者加入您的 {{site.data.keyword.cloud_notm}} 帳戶，則可以列出您帳戶中的使用者來查看其邀請狀態。具有現有 IBM ID 的受邀使用者將具有 ACTIVE 狀態。根據是否已接受邀請加入帳戶，沒有現有 IBM ID 的受邀使用者將具有 PENDING 或 ACTIVE 狀態。若要列出您 {{site.data.keyword.cloud_notm}} 帳戶中的使用者，請執行下列指令：
+如果已使用 [**`invite-users-to-public`** 指令](#admin_dedicated_invite_public)邀請 Dedicated 環境使用者加入 {{site.data.keyword.cloud_notm}} 帳戶，則可以列出帳戶中的使用者以查看他們的邀請狀態。具有現有 IBM ID 的受邀使用者的狀態為 ACTIVE。沒有現有 IBM ID 的受邀使用者的狀態為 PENDING 或 ACTIVE，具體取決於是否已接受邀請。若要列出您 {{site.data.keyword.cloud_notm}} 帳戶中的使用者，請執行下列指令：
 
 ```
 cf ba invite-users-status -apikey=public_api_key
@@ -196,7 +196,7 @@ cf ba search-users -name=user_name -permission=permission_value -organization=or
 <dt>user_name</dt>
 <dd>使用者的名稱。</dd>
 <dt>permission_value</dt>
-<dd>指派給使用者的許可權。可用的許可權為 admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
+<dd>指派給使用者的許可權。可用的許可權為 admin（或 superuser）、log in（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
 <dt>organization_value</dt>
 <dd>使用者所屬的組織名稱。您不能在相同的查詢中搭配使用此參數與 permission 參數。</dd>
 <dt>role_value</dt>
@@ -219,7 +219,7 @@ cf ba set-permissions user_name permission access
 <dt>user_name</dt>
 <dd>使用者的名稱。</dd>
 <dt>permission</dt>
-<dd>指派給使用者的許可權。可用的許可權為 admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
+<dd>指派給使用者的許可權。可用的許可權為 admin（或 superuser）、log in（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
 <dt>access</dt>
 <dd>對於型錄、報告或使用者許可權，您還必須將存取層次設定為 `read` 或 `write`。</dd>
 </dl>
@@ -263,7 +263,7 @@ cf ba enable-managers-add-users
 ### 禁止管理員新增使用者
 {: #clius_dmau}
 
-如果已在您的 {{site.data.keyword.cloud_notm}} 環境中使用 **`enable-managers-add-users`** 指令，讓組織管理員能將使用者新增至他們所管理的組織，而且您具有「超級使用者」許可權，則可以移除此設定。若要停止讓管理員新增使用者，請使用下列指令：
+若要停止讓管理員新增使用者，請使用下列指令：
 
 ```
 cf ba disable-managers-add-users
@@ -705,7 +705,7 @@ cf ba retrieve-report search
 ## 檢視資源度量值資訊
 {: #cliresourceusage}
 
-您可以檢視資源度量值資訊（包括記憶體用量、磁碟用量及 CPU 用量）。您可以查看可用的實體資源與保留資源的摘要，以及實體資源與保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 及 Cell（Diego 架構）用量資料。若要檢視資源度量值資訊，請使用下列指令：
+您可以檢視資源度量值資訊（包括記憶體用量、磁碟用量及 CPU 用量）。可以查看可用實體資源和保留資源的摘要，以及實體資源和保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 及 Cell（Diego 架構）用量資料。若要檢視資源度量值資訊，請使用下列指令：
 
 ```
 cf ba resource-metrics
@@ -855,7 +855,7 @@ cf ba update-service-broker broker_name user_name password broker_url
 
 若要使用應用程式安全群組 (ASG)，您必須是本端或專用環境中具有完整存取權的管理者。環境的所有使用者都可以列出可供指令設為目標之組織使用的 ASG。不過，若要建立、更新或連結 ASG，您必須是 {{site.data.keyword.cloud_notm}} 環境的管理者。
 
-ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.cloud_notm}} 環境中應用程式的出埠資料流量。每一個 ASG 都包含一份規則清單，可容許與外部網路之間的特定資料流量和通訊。您可以將一個以上的 ASG 連結至特定安全群組集（例如，用於套用廣域存取權的群組集），也可以連結至 {{site.data.keyword.cloud_notm}} 環境中組織內的空間。
+ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.cloud_notm}} 環境中應用程式的出埠資料流量。每一個 ASG 都包含一份規則清單，可容許與外部網路之間的特定資料流量和通訊。您可以將一個以上的 ASG 連結至特定安全群組集。例如，套用群組集的廣域存取權，也可以連結至 {{site.data.keyword.cloud_notm}} 環境中組織內的空間。
 
 {{site.data.keyword.cloud_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許對所有執行中應用程式或所有編譯打包中應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
 

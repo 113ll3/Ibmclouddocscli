@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -148,7 +148,7 @@ Puoi anche utilizzare **`ba au`** come un alias per il nome del comando **`ba ad
 ### Invito di un utente da {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_invite_public}
 
-Ogni ambiente {{site.data.keyword.Bluemix_dedicated_notm}} ha un account aziendale pubblico di proprietà del client in {{site.data.keyword.cloud_notm}}. Affinché gli utenti nell'ambiente dedicato possano creare cluster con il {{site.data.keyword.containershort}}, l'amministratore deve aggiungere gli utenti a questo account aziendale pubblico. Una volta aggiunti gli utenti all'account aziendale pubblico, i loro account dedicati e pubblici sono collegati tra loro. Gli utenti possono quindi utilizzare il proprio ID IBM per accedere contemporaneamente all'ambiente dedicato e pubblico e possono creare risorse nell'account pubblico dall'interfaccia dedicata. Per ulteriori informazioni, vedi [Setting up IBM Cloud Container Service on Dedicated](/docs/containers?topic=containers-dedicated#dedicated_setup). Per invitare gli utenti dell'ambiente dedicato all'account pubblico:
+Ogni ambiente {{site.data.keyword.Bluemix_dedicated_notm}} ha un account aziendale pubblico di proprietà del client in {{site.data.keyword.cloud_notm}}. Affinché gli utenti nell'ambiente dedicato possano creare cluster con il {{site.data.keyword.containershort}}, l'amministratore deve aggiungere gli utenti a questo account aziendale pubblico. Quando vengono aggiunti degli utenti all'account aziendale pubblico, i loro account dedicati e pubblici sono collegati tra loro. Gli utenti possono quindi utilizzare il proprio ID IBM per accedere contemporaneamente all'ambiente dedicato e pubblico e possono creare risorse nell'account pubblico dall'interfaccia dedicata. Per ulteriori informazioni, vedi [Setting up IBM Cloud Container Service on Dedicated](/docs/containers?topic=containers-dedicated#dedicated_setup). Per invitare gli utenti dell'ambiente dedicato all'account pubblico:
 ```
 cf ba invite-users-to-public -userid=user_email -organization=dedicated_org_id -apikey=public_api_key -public_org_id=public_org_id
 ```
@@ -170,7 +170,7 @@ Per aggiungere utenti dell'ambiente dedicato al tuo account pubblico {{site.data
 ### Elenco degli utenti invitati da {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-Se hai invitato utenti dell'ambiente dedicato al tuo account {{site.data.keyword.cloud_notm}} con il [comando **`invite-users-to-public`**](#admin_dedicated_invite_public), puoi elencare gli utenti nel tuo account per vedere il loro stato di invito. Gli utenti invitati che hanno un ID IBM esistente avranno uno stato di ATTIVO. Gli utenti invitati che non hanno un ID IBM esistente hanno lo stato IN SOSPESO o ATTIVO a seconda che abbiano già accettato o meno l'invito all'account. Per elencare gli utenti nel tuo account {{site.data.keyword.cloud_notm}}:
+Se inviti degli utenti dell'ambiente dedicato nel tuo account {{site.data.keyword.cloud_notm}} con il [comando **`invite-users-to-public`**](#admin_dedicated_invite_public), puoi elencare gli utenti nel tuo account per vedere il loro stato di invito. Gli utenti invitati con un ID IBM esistente hanno uno stato ACTIVE. Gli utenti invitati che non hanno un ID IBM esistente hanno lo stato PENDING o ACTIVE a seconda se hanno accettato l'invito. Per elencare gli utenti nel tuo account {{site.data.keyword.cloud_notm}}:
 
 ```
 cf ba invite-users-status -apikey=public_api_key
@@ -201,7 +201,7 @@ cf ba search-users -name=user_name -permission=permission_value -organization=or
 <dt>user_name</dt>
 <dd>Il nome dell'utente.</dd>
 <dt>permission_value</dt>
-<dd>L'autorizzazione assegnata all'utente. Le autorizzazioni disponibili sono admin (o superuser), login (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. Non puoi utilizzare questo parametro insieme al parametro organizzazione nella stessa query.</dd>
+<dd>L'autorizzazione assegnata all'utente. Le autorizzazioni disponibili sono admin (o superuser), log in (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. Non puoi utilizzare questo parametro insieme al parametro organizzazione nella stessa query.</dd>
 <dt>organization_value</dt>
 <dd>Il nome dell'organizzazione a cui appartiene l'utente. Non puoi utilizzare questo parametro insieme al parametro autorizzazione nella stessa query.</dd>
 <dt>role_value</dt>
@@ -224,7 +224,7 @@ cf ba set-permissions user_name permission access
 <dt>user_name</dt>
 <dd>Il nome dell'utente.</dd>
 <dt>permission</dt>
-<dd>Imposta l'autorizzazione assegnata all'utente. Le autorizzazioni disponibili sono admin (o superuser), login (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. Non puoi utilizzare questo parametro insieme al parametro organizzazione nella stessa query.</dd>
+<dd>Imposta l'autorizzazione assegnata all'utente. Le autorizzazioni disponibili sono admin (o superuser), log in (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. Non puoi utilizzare questo parametro insieme al parametro organizzazione nella stessa query.</dd>
 <dt>access</dt>
 <dd>Per il catalogo, i report o le autorizzazioni utente, devi anche impostare il livello di accesso come `read` o `write`.</dd>
 </dl>
@@ -268,7 +268,7 @@ Puoi anche utilizzare **`ba emau`** come un alias per il nome del comando **`ba 
 ### Disabilitazione dei gestori all'aggiunta di utenti
 {: #clius_dmau}
 
-Se i gestori dell'organizzazione sono abilitati ad aggiungere utenti alle organizzazioni che gestiscono nel tuo ambiente {{site.data.keyword.cloud_notm}} con il comando **`enable-managers-add-users`** e disponi dell'autorizzazione Superuser, puoi rimuovere questa impostazione. Per disabilitare i gestori all'aggiunta di utenti, utilizza il seguente comando:
+Per disabilitare i gestori all'aggiunta di utenti, utilizza il seguente comando:
 
 ```
 cf ba disable-managers-add-users
@@ -748,13 +748,13 @@ cf ba resource-metrics-history hourly|daily|monthly  memory|disk   start|end
 <dt>--monthly</dt>
 <dd>Visualizza la media mensile dei dati cronologici per gli ultimi 6 mesi.</dd>
 <dt>--memory</dt>
-<dd>Visualizza la quantità totale e utilizzata per la memoria riservata e fisica. </dd>
+<dd>Visualizza la quantità totale e utilizzata per la memoria riservata e fisica.</dd>
 <dt>--disk</dt>
 <dd>Visualizza la quantità totale e utilizzata per il disco riservato e fisico.</dd>
 <dt>--start</dt>
-<dd>Specifica una data di inizio per la base giornaliera o mensile nel formato mm-dd-yyyy o una data e ora di inizio per la base oraria nel formato mm-dd-yyyy hh:mm:ss fuso orario. </dd>
+<dd>Specifica una data di inizio per la base giornaliera o mensile nel formato mm-dd-yyyy o una data e ora di inizio per la base oraria nel formato mm-dd-yyyy hh:mm:ss fuso orario.</dd>
 <dt>--end</dt>
-<dd>Specifica una data di fine per la base giornaliera o mensile nel formato mm-dd-yyyy o una data e ora di fine per la base oraria nel formato mm-dd-yyyy hh:mm:ss fuso orario. </dd>
+<dd>Specifica una data di fine per la base giornaliera o mensile nel formato mm-dd-yyyy o una data e ora di fine per la base oraria nel formato mm-dd-yyyy hh:mm:ss fuso orario.</dd>
 </dl>
 
 ### Esempi
@@ -872,14 +872,14 @@ Puoi anche utilizzare **`ba usb`** come un alias per il nome del comando **`ba u
 
 Per gestire i gruppi di sicurezza dell'applicazione (ASG), devi essere un amministratore con accesso completo all'ambiente locale o dedicato. Tutti gli utenti dell'ambiente possono elencare gli ASG disponibili per l'organizzazione a cui si fa riferimento con il comando. Tuttavia, per creare, aggiornare o associare gli ASG, devi essere l'amministratore dell'ambiente {{site.data.keyword.cloud_notm}}.
 
-I gruppi ASG funzionano come firewall virtuali che controllano il traffico in uscita dalle applicazioni presenti nel tuo ambiente {{site.data.keyword.cloud_notm}}. Ogni ASG è costituito da un elenco di regole che consentono un traffico specifico e la comunicazione da e verso la rete esterna. Puoi associare uno o più ASG a una specifica serie di gruppi di sicurezza, ad esempio a una serie di gruppi utilizzata per applicare l'accesso globale, oppure associarli agli spazi all'interno di un'organizzazione nel tuo ambiente {{site.data.keyword.cloud_notm}}.
+I gruppi ASG funzionano come firewall virtuali che controllano il traffico in uscita dalle applicazioni presenti nel tuo ambiente {{site.data.keyword.cloud_notm}}. Ogni ASG è costituito da un elenco di regole che consentono un traffico specifico e la comunicazione da e verso la rete esterna. Puoi associare uno o più ASG a una specifica serie di gruppi di sicurezza. Ad esempio, applicando l'accesso globale a una serie di gruppi o associando degli spazi all'interno di un'organizzazione nel tuo ambiente {{site.data.keyword.cloud_notm}}.
 
 {{site.data.keyword.cloud_notm}} è inizialmente impostato con limitazioni a tutti gli accessi alla rete esterna. Due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, abilitano l'accesso globale alla rete esterna quando esegui il bind di tali gruppi alla serie di gruppi di sicurezza Cloud Foundry predefinita. Le due serie di gruppi di sicurezza in Cloud Foundry utilizzate per applicare l'accesso globale sono **Preparazione predefinita** ed **Esecuzione predefinita**. Queste serie di gruppi applicano le regole per consentire il traffico a tutte le applicazioni in esecuzione o a tutte le applicazioni in fase di preparazione. Se non vuoi eseguire il bind a queste due serie di gruppi di sicurezza, puoi annullare il bind alle serie di gruppi Cloud Foundry e quindi associare il gruppo a uno specifico spazio. Per ulteriori informazioni, vedi il documento relativo all'[associazione mediante bind dei gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
 
 L'annullamento del bind delle serie di gruppi **Preparazione predefinita** o **Esecuzione predefinita** dai due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, disabilita l'accesso globale alla rete esterna. Utilizza l'annullamento del bind con cautela e consapevolezza del suo potenziale impatto sulle applicazioni in esecuzione e in fase di preparazione nel tuo ambiente.
 {: important}
 
-I seguenti comandi che consentono di gestire i gruppi di sicurezza si basano su Cloud Foundry versione 1.6. Per ulteriori informazioni, compresi i campi obbligatori e facoltativi, vedi le informazioni di Cloud Foundry relative alla [creazione di gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
+I seguenti comandi ti consentono di gestire i gruppi di sicurezza che si basano su Cloud Foundry versione 1.6. Per ulteriori informazioni, compresi i campi obbligatori e facoltativi, vedi le informazioni di Cloud Foundry relative alla [creazione di gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
 
 ### Elenco dei gruppi di sicurezza
 {: #clilissecgro}

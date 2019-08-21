@@ -23,7 +23,7 @@ subcollection: cloud-cli
 ## ibmcloud enterprise create
 {: #ibmcloud_enterprise_create} 
 
-엔터프라이즈를 작성합니다. 
+엔터프라이즈를 작성합니다.
 ```
 ibmcloud enterprise create NAME [-d, --domain DOMAIN_NAME] [--primary-contact-id PRIMARY_CONTACT_USER_ID]
 ```
@@ -34,17 +34,17 @@ ibmcloud enterprise create NAME [-d, --domain DOMAIN_NAME] [--primary-contact-id
 
 <dl>
 <dt>NAME(필수)</dt>
-<dd>엔터프라이즈 이름입니다. </dd>
+<dd>엔터프라이즈 이름입니다.</dd>
 <dt>-d, --domain DOMAIN_NAME(선택사항)</dt>
-<dd>도메인 이름입니다. </dd>
+<dd>도메인 이름입니다.</dd>
 <dt>--primary-contact-id PRIMARY_CONTACT_USER_ID(선택사항)</dt>
-<dd>엔터프라이즈의 기본 연락처 사용자 ID입니다. </dd>
+<dd>엔터프라이즈의 기본 연락처 사용자 ID입니다.</dd>
 </dl>
 
 ## ibmcloud enterprise update
 {: #ibmcloud_enterprise_update} 
 
-엔터프라이즈 정보를 업데이트합니다. 
+엔터프라이즈 정보를 업데이트합니다.
 ```
 ibmcloud enterprise update (-n, --name NEW_NAME) [-f, --force] [--output FORMAT]
 ```
@@ -55,9 +55,9 @@ ibmcloud enterprise update (-n, --name NEW_NAME) [-f, --force] [--output FORMAT]
 
 <dl>
 <dt>-f, --force(선택사항)</dt>
-<dd>확인 없이 업데이트합니다. </dd>
+<dd>확인 없이 업데이트합니다.</dd>
 <dt>-n, --name NEW_NAME(필수)</dt>
-<dd>엔터프라이즈의 새 이름입니다. </dd>
+<dd>엔터프라이즈의 새 이름입니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
 <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
@@ -65,7 +65,7 @@ ibmcloud enterprise update (-n, --name NEW_NAME) [-f, --force] [--output FORMAT]
 ## ibmcloud enterprise show
 {: #ibmcloud_enterprise_show} 
 
-엔터프라이즈의 세부사항을 표시합니다. 
+엔터프라이즈의 세부사항을 표시합니다.
 ```
 ibmcloud enterprise show [--output FORMAT]
 ```
@@ -82,7 +82,7 @@ ibmcloud enterprise show [--output FORMAT]
 ## ibmcloud enterprise account-group-create
 {: #ibmcloud_enterprise_account_group_create} 
 
-계정 그룹을 작성합니다. 
+계정 그룹을 작성합니다.
 ```
 ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GROUP_NAME] [--primary-contact-id PRIMARY_CONTACT_USER_ID] [--output FORMAT]
 ```
@@ -93,11 +93,11 @@ ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GR
 
 <dl>
 <dt>NAME(필수)</dt>
-<dd>계정 그룹 이름입니다. </dd>
+<dd>계정 그룹 이름입니다.</dd>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME(선택사항)</dt>
-<dd>상위 계정 그룹의 이름입니다. 이를 생략하면 상위는 현재 엔터프라이즈입니다. </dd>
+<dd>상위 계정 그룹의 이름입니다. 이를 생략하면 상위는 현재 엔터프라이즈입니다.</dd>
 <dt>--primary-contact-id PRIMARY_CONTACT_USER_ID(선택사항)</dt>
-<dd>계정 그룹의 기본 연락처 사용자 ID입니다. </dd>
+<dd>계정 그룹의 기본 연락처 사용자 ID입니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
 <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
@@ -105,7 +105,7 @@ ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GR
 ## ibmcloud enterprise account-group-update
 {: #ibmcloud_enterprise_account_group_update} 
 
-계정 그룹을 업데이트합니다. 
+계정 그룹을 업데이트합니다.
 ```
 ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name NEW_NAME) [--output FORMAT]
 ```
@@ -116,11 +116,11 @@ ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name
 
 <dl>
 <dt>--id ID(필수)</dt>
-<dd>대상 계정 그룹의 ID입니다. 이 옵션은 `-n, --name`과 배타적입니다. </dd>
+<dd>대상 계정 그룹의 ID입니다. 이 옵션은 `-n, --name`과 배타적입니다.</dd>
 <dt>-n, --name NAME(필수)</dt>
-<dd>대상 계정 그룹의 이름입니다. 이 옵션은 `--id`와 배타적입니다. </dd>
+<dd>대상 계정 그룹의 이름입니다. 이 옵션은 `--id`와 배타적입니다.</dd>
 <dt>--new-name NEW_NAME(필수)</dt>
-<dd>대상 계정 그룹의 새 이름입니다. </dd>
+<dd>대상 계정 그룹의 새 이름입니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
 <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
@@ -128,7 +128,7 @@ ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name
 ## ibmcloud enterprise account-group
 {: #ibmcloud_enterprise_account_group} 
 
-계정 그룹의 세부사항을 표시합니다. 
+계정 그룹의 세부사항을 표시합니다.
 ```
 ibmcloud enterprise account-group (-n, --name NAME | --id ID) [--output FORMAT]
 ```
@@ -139,9 +139,9 @@ ibmcloud enterprise account-group (-n, --name NAME | --id ID) [--output FORMAT]
 
 <dl>
 <dt>--id ID(필수)</dt>
-<dd>계정 그룹의 ID입니다. 이 옵션은 `-n, --name`과 배타적입니다. </dd>
+<dd>계정 그룹의 ID입니다. 이 옵션은 `-n, --name`과 배타적입니다.</dd>
 <dt>-n, --name NAME(필수)</dt>
-<dd>계정 그룹의 이름입니다. 이 옵션은 `--id`와 배타적입니다. </dd>
+<dd>계정 그룹의 이름입니다. 이 옵션은 `--id`와 배타적입니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
 <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
@@ -160,11 +160,11 @@ ibmcloud enterprise account-groups [--parent-account-group ACCOUNT_GROUP_NAME | 
 
 <dl>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME(선택사항)</dt>
-<dd>상위 계정 그룹의 이름입니다. 이 옵션은 `--parent-account-group-id`와 배타적입니다. </dd>
+<dd>상위 계정 그룹의 이름입니다. 이 옵션은 `--parent-account-group-id`와 배타적입니다.</dd>
 <dt>--parent-account-group-id ACCOUNT_GROUP_ID(선택사항)</dt>
-<dd>상위 계정 그룹의 ID입니다. 이 옵션은 `--parent-account-group`과 배타적입니다. </dd>
+<dd>상위 계정 그룹의 ID입니다. 이 옵션은 `--parent-account-group`과 배타적입니다.</dd>
 <dt>--recursive(선택사항)</dt>
-<dd>하위 계정 그룹을 표시합니다. </dd>
+<dd>하위 계정 그룹을 표시합니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
 <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
@@ -172,7 +172,7 @@ ibmcloud enterprise account-groups [--parent-account-group ACCOUNT_GROUP_NAME | 
 ## ibmcloud enterprise account-create
 {: #ibmcloud_enterprise_account_create} 
 
-계정을 작성합니다. 
+계정을 작성합니다.
 ```
 ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NAME] [--owner USER_ID] [--output FORMAT]
 ```
@@ -183,11 +183,11 @@ ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NA
 
 <dl>
 <dt>NAME(필수)</dt>
-<dd>계정 그룹 이름입니다. </dd>
+<dd>계정 그룹 이름입니다.</dd>
 <dt>--owner USER_ID(선택사항)</dt>
-<dd>계정 그룹의 사용자 ID입니다. </dd>
+<dd>계정 그룹의 사용자 ID입니다.</dd>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME(선택사항)</dt>
-<dd>상위 계정 그룹의 이름입니다. 이를 생략하면 상위는 현재 엔터프라이즈입니다. </dd>
+<dd>상위 계정 그룹의 이름입니다. 이를 생략하면 상위는 현재 엔터프라이즈입니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
 <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
@@ -195,7 +195,7 @@ ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NA
 ## ibmcloud enterprise account-move
 {: #ibmcloud_enterprise_account_move} 
 
-다른 상위 아래로 계정을 이동합니다. 
+다른 상위 아래로 계정을 이동합니다.
 ```
 ibmcloud enterprise account-move (-n, --name NAME | --id ID) (--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID | --parent-enterprise)
 ```
@@ -206,21 +206,21 @@ ibmcloud enterprise account-move (-n, --name NAME | --id ID) (--parent-account-g
 
 <dl>
 <dt>--id ID(필수)</dt>
-<dd>대상 계정의 ID입니다. 이 옵션은 `-n, --name`과 배타적입니다. </dd>
+<dd>대상 계정의 ID입니다. 이 옵션은 `-n, --name`과 배타적입니다.</dd>
 <dt>-n, --name NAME(필수)</dt>
-<dd>대상 계정의 이름입니다. 이 옵션은 `--id`와 배타적입니다. </dd>
+<dd>대상 계정의 이름입니다. 이 옵션은 `--id`와 배타적입니다.</dd>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME(필수)</dt>
-<dd>상위 계정 그룹의 이름입니다. 이 옵션은 `--parent-account-group-id` 및 `--parent-enterprise`와 배타적입니다. </dd>
+<dd>상위 계정 그룹의 이름입니다. 이 옵션은 `--parent-account-group-id` 및 `--parent-enterprise`와 배타적입니다.</dd>
 <dt>--parent-account-group-id ACCOUNT_GROUP_ID(필수)</dt>
-<dd>상위 계정 그룹의 ID입니다. 이 옵션은 `--parent-account-group` 및 `--parent-enterprise`와 배타적입니다. </dd>
+<dd>상위 계정 그룹의 ID입니다. 이 옵션은 `--parent-account-group` 및 `--parent-enterprise`와 배타적입니다.</dd>
 <dt>--parent-enterprise(필수)</dt>
-<dd>엔터프라이즈를 상위로 설정합니다. 이 옵션은 `--parent-account-group` 및 `--parent-account-group-id`와 배타적입니다. </dd>
+<dd>엔터프라이즈를 상위로 설정합니다. 이 옵션은 `--parent-account-group` 및 `--parent-account-group-id`와 배타적입니다.</dd>
 </dl>
 
 ## ibmcloud enterprise account-show
 {: #ibmcloud_enterprise_account_show} 
 
-계정의 세부사항을 표시합니다. 
+계정의 세부사항을 표시합니다.
 ```
 ibmcloud enterprise account-show (-n, --name NAME | --id ID) [--output FORMAT]
 ```
@@ -231,9 +231,9 @@ ibmcloud enterprise account-show (-n, --name NAME | --id ID) [--output FORMAT]
 
 <dl>
 <dt>--id ID(필수)</dt>
-<dd>계정의 ID입니다. 이 옵션은 `-n, --name`과 배타적입니다. </dd>
+<dd>계정의 ID입니다. 이 옵션은 `-n, --name`과 배타적입니다.</dd>
 <dt>-n, --name NAME(필수)</dt>
-<dd>계정의 이름입니다. 이 옵션은 `--id`와 배타적입니다. </dd>
+<dd>계정의 이름입니다. 이 옵션은 `--id`와 배타적입니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
 <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
@@ -252,11 +252,11 @@ ibmcloud enterprise accounts [--parent-account-group ACCOUNT_GROUP_NAME | --pare
 
 <dl>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME(선택사항)</dt>
-<dd>상위 계정 그룹의 이름입니다. 이 옵션은 `--parent-account-group-id`와 배타적입니다. </dd>
+<dd>상위 계정 그룹의 이름입니다. 이 옵션은 `--parent-account-group-id`와 배타적입니다.</dd>
 <dt>--parent-account-group-id ACCOUNT_GROUP_ID(선택사항)</dt>
-<dd>상위 계정 그룹의 ID입니다. 이 옵션은 `--parent-account-group`과 배타적입니다. </dd>
+<dd>상위 계정 그룹의 ID입니다. 이 옵션은 `--parent-account-group`과 배타적입니다.</dd>
 <dt>--recursive(선택사항)</dt>
-<dd>하위 계정을 표시합니다. </dd>
+<dd>하위 계정을 표시합니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
 <dd>출력 형식을 지정합니다. 'JSON'만 지원됩니다.</dd>
 </dl>
@@ -264,7 +264,7 @@ ibmcloud enterprise accounts [--parent-account-group ACCOUNT_GROUP_NAME | --pare
 ## ibmcloud enterprise account-import
 {: #ibmcloud_enterprise_account_import} 
 
-독립형 계정을 가져옵니다. 
+독립형 계정을 가져옵니다.
 ```
 ibmcloud enterprise account-import (--account-id ID) [--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID]
 ```
@@ -275,9 +275,9 @@ ibmcloud enterprise account-import (--account-id ID) [--parent-account-group ACC
 
 <dl>
 <dt>--account-id</dt>
-<dd>소스 계정의 ID입니다. </dd>
+<dd>소스 계정의 ID입니다.</dd>
 <dt>--parent-account-group PARENT_ACCOUNT_GROUP(선택사항)</dt>
-<dd>상위 계정 그룹의 이름입니다. 이 옵션은 `--parent-account-group-id`와 배타적입니다. </dd>
+<dd>상위 계정 그룹의 이름입니다. 이 옵션은 `--parent-account-group-id`와 배타적입니다.</dd>
 <dt>--parent-account-group-id PARENT_ACCOUNT_GROUP_ID(선택사항)</dt>
-<dd>상위 계정 그룹의 ID입니다. 이 옵션은 `--parent-account-group`과 배타적입니다. </dd>
+<dd>상위 계정 그룹의 ID입니다. 이 옵션은 `--parent-account-group`과 배타적입니다.</dd>
 </dl>

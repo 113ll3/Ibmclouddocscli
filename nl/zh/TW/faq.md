@@ -2,13 +2,21 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-08-07"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
 subcollection: cloud-cli
 
 ---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:external: target="_blank" .external}
 
 # 常見問題
 {: #ibm-cli-faq}
@@ -36,7 +44,7 @@ ibmcloud update
 ## 如何收到新 CLI 發行的通知？
 {: #cli-get-notified}
 
-是，當提供新版 CLI 時，您便會收到第一手資訊。請訂閱 [{{site.data.keyword.cloud_notm}} CLI 版本儲存庫](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
+是，當提供新版 CLI 時，您便會收到第一手資訊。請訂閱 [{{site.data.keyword.cloud_notm}} CLI 版本儲存庫](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}。
 
 ## {{site.data.keyword.cloud_notm}} 應用程式的檔案結構為何？
 {: #cli-file-structure}

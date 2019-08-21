@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
+keywords: cli, content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
 
 subcollection: cloud-cli
 
@@ -79,9 +79,9 @@ ibmcloud sl cdn order [OPTIONS]
 <strong>명령 옵션</strong>:
 <dl>
 <dt>-b, --bandwidth</dt>
-<dd>CDN 대역폭. 지정되지 않은 경우 '종량과금제' 가격이 사용됩니다.</dd>
+<dd>CDN 대역폭. 지정되지 않은 경우 종량과금제 가격이 사용됩니다.</dd>
 <dt>-s, --storage</dt>
-<dd>CDN 스토리지. 지정되지 않은 경우 '종량과금제' 가격이 사용됩니다.</dd>
+<dd>CDN 스토리지. 지정되지 않은 경우 종량과금제 가격이 사용됩니다.</dd>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>

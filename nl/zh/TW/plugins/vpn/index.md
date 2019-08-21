@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-07-12"
 
-keywords: vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
+keywords: cli, vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
 subcollection: cloud-cli
 
@@ -41,7 +41,7 @@ cf uninstall-plugin vpn
 
 ### 在本端安裝
 
-1. 從 [{{site.data.keyword.cloud_notm}} CLI 外掛程式儲存庫](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 下載您平台的 {{site.data.keyword.vpn_short}} 外掛程式。
+1. 從 [{{site.data.keyword.cloud_notm}} CLI 外掛程式儲存庫](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 中，下載適用於您的平台的 {{site.data.keyword.vpn_short}} 外掛程式。
 
 2. 使用下列指令，來安裝 {{site.data.keyword.vpn_short}} 外掛程式：
 

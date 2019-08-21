@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
+keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
 subcollection: cloud-cli
 
@@ -17,7 +17,7 @@ subcollection: cloud-cli
 # Trabalhando com o serviço Load Balancer
 {: #sl-load-balancer-service}
 
-O serviço {{site.data.keyword.cloud}} Load Balancer ajuda a melhorar a disponibilidade dos aplicativos críticos para os negócios, distribuindo o tráfego entre as múltiplas instâncias do servidor de aplicativos e encaminhando-o somente para as instâncias funcionais.
+O serviço {{site.data.keyword.cloud}} Load Balancer ajuda a melhorar a disponibilidade de seus aplicativos críticos aos negócios, distribuindo o tráfego entre várias instâncias do servidor de apps e encaminhando o tráfego apenas para instâncias funcionais.
 
 Use os comandos a seguir para gerenciar os balanceadores de carga no serviço Load Balancer da infraestrutura clássica do {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
@@ -81,9 +81,9 @@ Ibmcloud sl loadbal group-add LOADBAL_ID [ OPTIONS ]
 <dt>-p, --port</dt>
 <dd>Requerido. O número da porta.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Requerido. O ID do tipo de roteamento. Execute 'ibmcloud sl loadbal routing-types' para localizar um ID.</dd>
+<dd>Requerido. O ID do tipo de roteamento. Execute `ibmcloud sl loadbal routing-types` para localizar um ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Requerido. O ID do método de roteamento. Execute 'ibmcloud sl loadbal routing-methods' para localizar um ID.</dd>
+<dd>Requerido. O ID do método de roteamento. Execute `ibmcloud sl loadbal routing-methods` para localizar um ID.</dd>
 </dl>
 
 ## Ibmcloud sl loadbal group-delete
@@ -115,9 +115,9 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>Mudar o número da porta.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Mude o ID do tipo de roteamento. Execute 'ibmcloud sl loadbal routing-types' para localizar um ID.</dd>
+<dd>Mude o ID do tipo de roteamento. Execute `ibmcloud sl loadbal routing-types` para localizar um ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Mude o ID do método de roteamento. Execute 'ibmcloud sl loadbal routing-methods' para localizar um ID.</dd>
+<dd>Mude o ID do método de roteamento. Execute `ibmcloud sl loadbal routing-methods` para localizar um ID.</dd>
 </dl>
 
 ## Ibmcloud sl loadbal group-reset

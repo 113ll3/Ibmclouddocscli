@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-26"
+lastupdated: "2019-06-21"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
@@ -31,67 +31,79 @@ subcollection: cloud-cli
 ## 從 {{site.data.keyword.cloud_notm}} CLI 儲存庫安裝外掛程式
 {: #install-from-repo}
 
-### 步驟 1：搜尋外掛程式
-{: #step1-search-plugin}
+### 搜尋外掛程式
+{: #cli-search-plugin}
 
-1. 使用 `ibmcloud plugin repo-plugins -r REPO_NAME` 指令來尋找儲存庫中的外掛程式。
-2. {{site.data.keyword.cloud_notm}} CLI 具有名稱為 'IBM Cloud' 的正式儲存庫，您可以搜尋正式外掛程式，如下列範例中所示：
+使用 `ibmcloud plugin repo-plugins -r REPO_NAME` 指令來尋找儲存庫中的外掛程式。
 
-  ```
-  $ ibmcloud plugin repo-plugins
-  Getting plug-ins from repository 'IBM Cloud'...
+{{site.data.keyword.cloud_notm}} CLI 提供名稱為 'IBM Cloud' 的正式儲存庫，您可以如範例中所示地進行搜尋：
+```
+ibmcloud plugin repo-plugins -r "IBM Cloud"
+```
+{: codeblock}
 
-  Repository: IBM Cloud
-  Name           Description                                    Versions
-  auto-scaling   IBM Cloud CLI plugin for Auto-Scaling service    0.2.1, 0.2.2
-  nsg            IBM Cloud Network Security Group plugin          0.1.1
+```
+Status             Name                                        Versions                       Description   
+Update Available   container-service/kubernetes-service        0.3.49, 0.3.47, 0.3.34...      IBM Cloud Kubernetes Service for management of Kubernetes clusters   
+Update Available   cloud-functions                             1.0.32, 1.0.30, 1.0.29...      Manage Cloud Functions 
+...
+```
+{: screen}
 
-  ```
-
-### 步驟 2：安裝外掛程式
-{: step2-install-plugin}
+### 安裝外掛程式
+{: #cli-install-plugin}
 
 使用 `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` 指令來安裝外掛程式。例如，使用下列指令，從正式 IBM 外掛程式儲存庫 'IBM Cloud' 安裝外掛程式：
+```
+ibmcloud plugin install auto-scaling
+```
+{: codeblock}
 
-  ```
-  $ ibmcloud plugin install auto-scaling
-  Looking up 'auto-scaling' from repository 'IBM Cloud'...
-  9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
-  OK
-  Plugin 'auto-scaling 0.2.2' was successfully installed.
-  ```
+```
+Looking up 'auto-scaling' from repository 'IBM Cloud'...
+Plug-in 'auto-scaling 0.2.7' found in repository 'IBM Cloud'
+Attempting to download the binary file...
+ 7.28 MiB / 7.28 MiB [============================================] 100.00% 1s
+7636608 bytes downloaded
+Installing binary...
+OK
+Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bluemix/plugins/auto-scaling. Use 'ibmcloud plugin show auto-scaling' to show its details.
+```
+{: screen}
 
 ## 在本端安裝外掛程式
 {: #install-plugin-locally}
 
 使用 `ibmcloud plugin install LOCAL_FILE_NAME` 指令，將外掛程式二進位檔安裝至本端機器。例如：
-
-  ```
-  $ ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.2
-  Installing plugin './auto-scaling-darwin-amd64-0.2.2'...
-  OK
-  Plugin 'auto-scaling 0.2.2' was successfully installed.
-  $
-  ```
-
-## 從 Web URL 安裝外掛程式
-{: install-plugin-from-url}
-
-使用 `ibmcloud plugin install URL` 指令，直接從 Web URL 安裝外掛程式。例如：
-
 ```
-ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
+ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.7
 ```
 {: codeblock}
 
-輸出：
+```
+Installing plugin './auto-scaling-darwin-amd64-0.2.7'...
+OK
+Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bluemix/plugins/auto-scaling. Use 'ibmcloud plugin show auto-scaling' to show its details.
+$
+```
+{: screen}
+
+## 從 Web URL 安裝外掛程式
+{: #install-plugin-from-url}
+
+使用 `ibmcloud plugin install URL` 指令，直接從 Web URL 安裝外掛程式。例如：
+```
+ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/auto-scaling/0.2.7/auto-scaling-darwin-amd64-0.2.7
+```
+{: codeblock}
+
 ```
 Attempting to download the binary file...
-9857792 bytes downloaded
-Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
+ 7.28 MiB / 7.28 MiB [===========================================] 100.00% 0s
+7636608 bytes downloaded
+Installing binary...
 OK
-Plugin 'auto-scaling 0.2.2' was successfully installed.
-~$
+Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bluemix/plugins/auto-scaling. Use 'ibmcloud plugin show auto-scaling' to show its details.
+$
 ```
 {: screen}

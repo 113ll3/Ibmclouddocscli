@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -145,7 +145,7 @@ También puede usar **`ba au`** como alias para el nombre de mandato **`ba add-u
 ### Invitación a un usuario de {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_invite_public}
 
-Cada entorno de {{site.data.keyword.Bluemix_dedicated_notm}} tiene una cuenta corporativa pública, propiedad del cliente, en {{site.data.keyword.cloud_notm}}. Para que los usuarios del entorno Dedicado creen clústeres con {{site.data.keyword.containershort}}, el administrador debe añadir a los usuarios a esta cuenta corporativa pública. Una vez que se añaden los usuarios a la cuenta corporativa pública, sus cuentas públicas y dedicadas quedan enlazadas. Los usuarios pueden utilizar su IBMid para iniciar sesión en ambas simultáneamente, y pueden crear recursos en la cuenta pública de la interfaz dedicada. Para obtener más información, consulte [Configuración de IBM Cloud Container Service en Dedicado](/docs/containers?topic=containers-dedicated#dedicated_setup). Para invitar a los usuarios dedicados a la cuenta pública:
+Cada entorno de {{site.data.keyword.Bluemix_dedicated_notm}} tiene una cuenta corporativa pública, propiedad del cliente, en {{site.data.keyword.cloud_notm}}. Para que los usuarios del entorno Dedicado creen clústeres con {{site.data.keyword.containershort}}, el administrador debe añadir a los usuarios a esta cuenta corporativa pública. Cuando se añaden usuarios a la cuenta corporativa pública, sus cuentas públicas y dedicadas quedan enlazadas. Los usuarios pueden utilizar su IBMid para iniciar sesión en ambas simultáneamente, y pueden crear recursos en la cuenta pública de la interfaz dedicada. Para obtener más información, consulte [Configuración de IBM Cloud Container Service en Dedicado](/docs/containers?topic=containers-dedicated#dedicated_setup). Para invitar a los usuarios dedicados a la cuenta pública:
 ```
 cf ba invite-users-to-public -userid=user_email -organization=dedicated_org_id -apikey=public_api_key -public_org_id=public_org_id
 ```
@@ -167,7 +167,7 @@ Para añadir usuarios del entorno Dedicado a su cuenta pública de {{site.data.k
 ### Listado de usuarios invitados desde {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-Si ha invitado a los usuarios del entorno Dedicado a su cuenta de {{site.data.keyword.cloud_notm}} con el [mandato **`invite-users-to-public`**](#admin_dedicated_invite_public), puede listar a los usuarios en su cuenta para ver el estado de su invitación. Los usuarios invitados que tienen un IBMid existente tendrán un estado ACTIVO. Los usuarios que no tengan un IBMid existente tendrán el estado PENDIENTE o ACTIVO, en función de si ya han aceptado la invitación a la cuenta o no. Para listar los usuarios de su cuenta de {{site.data.keyword.cloud_notm}}:
+Si invita a los usuarios del entorno Dedicado a su cuenta de {{site.data.keyword.cloud_notm}} con el [mandato **`invite-users-to-public`**](#admin_dedicated_invite_public), puede listar a los usuarios en su cuenta para ver el estado de su invitación. Los usuarios invitados con un IBMid existente tienen el estado ACTIVE. Los usuarios que no tengan un IBMid existente tienen el estado PENDING o ACTIVE, en función de si se ha aceptado la invitación. Para listar los usuarios de su cuenta de {{site.data.keyword.cloud_notm}}:
 
 ```
 cf ba invite-users-status -apikey=public_api_key
@@ -197,7 +197,7 @@ cf ba search-users -name=user_name -permission=permission_value -organization=or
 <dt>user_name</dt>
 <dd>El nombre del usuario.</dd>
 <dt>permission_value</dt>
-<dd>El permiso asignado al usuario. Los permisos disponibles son admin (o superuser), login (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. No se puede utilizar este parámetro con el parámetro de organización en la misma consulta.</dd>
+<dd>El permiso asignado al usuario. Los permisos disponibles son admin (o superuser), log in (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. No se puede utilizar este parámetro con el parámetro de organización en la misma consulta.</dd>
 <dt>organization_value</dt>
 <dd>El nombre de la organización a la que pertenece el usuario. No se puede utilizar este parámetro con el parámetro de permiso en la misma consulta.</dd>
 <dt>role_value</dt>
@@ -220,7 +220,7 @@ cf ba set-permissions user_name permission access
 <dt>user_name</dt>
 <dd>El nombre del usuario.</dd>
 <dt>permission</dt>
-<dd>Establece el permiso asignado al usuario. Los permisos disponibles son admin (o superuser), login (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. No se puede utilizar este parámetro con el parámetro de organización en la misma consulta.</dd>
+<dd>Establece el permiso asignado al usuario. Los permisos disponibles son admin (o superuser), log in (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. No se puede utilizar este parámetro con el parámetro de organización en la misma consulta.</dd>
 <dt>access</dt>
 <dd>Para permisos del catálogo, informes o usuarios, también debe tener el nivel de acceso `read` o `write` (lectura o escritura).</dd>
 </dl>
@@ -264,7 +264,7 @@ También puede usar **`ba emau`** como alias para el nombre de mandato **`ba ena
 ### No permitir a los gestores agregar usuarios
 {: #clius_dmau}
 
-Si se permite que los gestores de la organización puedan añadir usuarios a las organizaciones que gestionan en el entorno de {{site.data.keyword.cloud_notm}} con el mandato **`enable-managers-add-users`**, y si tiene el permiso Superusuario, puede eliminar este valor. Para no permitir a los gestores añadir usuarios, utilice el mandato siguiente:
+Para no permitir a los gestores añadir usuarios, utilice el mandato siguiente:
 
 ```
 cf ba disable-managers-add-users
@@ -660,7 +660,7 @@ Si tiene acceso de escritura para el permiso de informes, puede crear una nueva 
 <dt>PDF|TXT|LOG</dt>
 <dd>La vía de acceso del PDF del informe, del archivo de texto o de registro que va a cargar.</dd>
 <dt>RTF</dt>
-<dd>Opción para incluir una versión de formato de texto enriquecido (RTF) del PDF. Esta opción solo se aplica si ha incluido una vía de acceso al PDF del informe. La versión RTF se utiliza para indexar y buscar.</dd>
+<dd>Opción para incluir una versión de formato de texto enriquecido (RTF) del PDF. Esta opción solo se aplica si incluye una vía de acceso al PDF del informe. La versión RTF se utiliza para indexar y buscar.</dd>
 </dl>
 
 También puede usar **`ba ar`** como alias para el nombre de mandato **`ba add-report`** más largo.
@@ -709,7 +709,7 @@ También puede usar **`ba rr`** como alias para el nombre de mandato **`ba retri
 ## Visualización de información de métricas de recursos
 {: #cliresourceusage}
 
-Puede ver información sobre métricas de recursos, incluidos el uso de memoria, de disco y de CPU. Puede ver un resumen de los recursos reservados y físicos disponibles, así como el uso de los recursos reservados y físicos. También puede ver los datos de uso de DEA (Droplet Execution Agent) y de las células (arquitectura de Diego). Para ver la información de métricas de recursos, utilice el mandato siguiente:
+Puede ver información sobre métricas de recursos, incluidos el uso de memoria, de disco y de CPU. Puede ver un resumen de los recursos reservados y físicos disponibles y el uso de los recursos reservados y físicos. También puede ver los datos de uso de DEA (Droplet Execution Agent) y de las células (arquitectura de Diego). Para ver la información de métricas de recursos, utilice el mandato siguiente:
 
 ```
 cf ba resource-metrics
@@ -862,8 +862,7 @@ También puede usar **`ba usb`** como alias para el nombre de mandato **`ba upda
 Para trabajar con grupos de seguridad de aplicaciones (ASG), debe ser un administrador con acceso completo al entorno local o dedicado. Todos los usuarios del entorno pueden mostrar una lista de los ASG disponibles para la organización que el mandato tiene como objetivo. No obstante, para crear, actualizar o enlazar ASG, debe ser administrador del entorno de {{site.data.keyword.cloud_notm}}.
 
 Los ASG funcionan como cortafuegos virtuales que controlan el tráfico de salida de las apps del entorno de
-{{site.data.keyword.cloud_notm}}. Cada ASG está compuesto por una lista de reglas que permiten comunicaciones y tráfico específicos hacia y desde el exterior de la red. Puede enlazar uno o más ASG con un conjunto de grupos de seguridad específico, por ejemplo, un conjunto de grupos que se utiliza para aplicar el acceso global, o puede enlazar con espacios dentro de la organización en el entorno de
-{{site.data.keyword.cloud_notm}}.
+{{site.data.keyword.cloud_notm}}. Cada ASG está compuesto por una lista de reglas que permiten comunicaciones y tráfico específicos hacia y desde el exterior de la red. Puede enlazar uno o más ASG con un conjunto de grupos de seguridad específico. Por ejemplo, si aplica acceso global para un conjunto de grupos o enlaza espacios dentro de una organización en el entorno de {{site.data.keyword.cloud_notm}}.
 
 {{site.data.keyword.cloud_notm}} se configura inicialmente con todo el acceso a la red externa restringido. Dos grupos de seguridad creados por IBM, `public_networks` y `dns`, permiten el acceso global a la red externa al enlazar dichos grupos con los conjuntos de grupos de seguridad de Cloud Foundry predeterminados. Los dos conjuntos de grupos de seguridad de Cloud Foundry que se utilizan para aplicar el acceso global son los conjuntos de grupos **Default Staging** y **Default Running**. Estos conjuntos de grupos aplican las reglas para permitir tráfico hacia todas las apps en ejecución o todas las apps en transferencia. Si no desea enlazar estos dos conjuntos de grupos de seguridad, puede desenlazarlos de los conjuntos de grupos de Cloud Foundry y, a continuación, enlazar el grupo de seguridad con un espacio específico. Para obtener más información, consulte
 [Enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").

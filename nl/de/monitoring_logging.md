@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
-keywords: monitoring, logging, cloud logging, metrics
+keywords: cli, monitoring, logging, cloud logging, metrics, monitor cpu, monitor usage, memory utilization, runtime logging
 
 subcollection: cloud-cli
 
@@ -32,6 +32,6 @@ Weitere Informationen finden Sie unter [Überwachung in {{site.data.keyword.clou
 
 {{site.data.keyword.cloud_notm}} erfasst standardmäßig Protokolle für Ihre Apps, App-Laufzeiten und Verarbeitungslaufzeiten, in denen diese Apps ausgeführt werden. Die {{site.data.keyword.cloud_notm}}-Protokollierungsfunktionen sind in die Plattform integriert und die Erfassung von Daten wird für Cloudressourcen automatisch aktiviert. 
 
-Der {{site.data.keyword.loganalysisfull_notm}}-Service umfasst Protokollerfassungs- und Protokollsuchservices für die {{site.data.keyword.cloud_notm}}-Plattform zur automatischen Erfassung von Anwendungs- und {{site.data.keyword.cloud_notm}}-Servicedaten von ausgewählten Services. Nutzen Sie den {{site.data.keyword.loganalysisshort}}-Service, um Ihre Protokollerfassungs-, Protokollspeicherungs- und Protokollsuchfunktionen zu erweitern, wenn Sie mit Protokollen arbeiten.
+Der {{site.data.keyword.loganalysisfull_notm}}-Service umfasst Protokollerfassungs- und Protokollsuchservices für die {{site.data.keyword.cloud_notm}}-Plattform zur automatischen Erfassung von App- und {{site.data.keyword.cloud_notm}}-Servicedaten von ausgewählten Services. Nutzen Sie den {{site.data.keyword.loganalysisshort}}-Service, um Ihre Protokollerfassungs-, Protokollspeicherungs- und Protokollsuchfunktionen zu erweitern, wenn Sie mit Protokollen arbeiten.
 
-Weitere Informationen finden Sie in [Protokollierung in {{site.data.keyword.cloud_notm}}](/docs/services/CloudLogAnalysis?topic=cloudloganalysis-log_analysis_ov#log_analysis_ov).
+Weitere Informationen finden Sie in [Protokollierung in {{site.data.keyword.cloud_notm}}](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started#getting-started).

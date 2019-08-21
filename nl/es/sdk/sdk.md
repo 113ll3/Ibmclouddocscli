@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-03"
 
-keywords: mobile sdk, server sdk, client sdk, add sdk, android sdk, cordova
+keywords: cli, mobile sdk, server sdk, client sdk, add sdk, android sdk, cordova
 
 subcollection: cloud-cli
 
@@ -13,7 +13,7 @@ subcollection: cloud-cli
 # SDK móviles disponibles
 {: #sdk}
 
-Para añadir SDK de servicios móviles y web de {{site.data.keyword.cloud}} a su app, elija los SDK que desee utilizar y, a continuación, configure el gestor de dependencias para extraer los SDK en la app.
+Para añadir SDK de servicios móviles y web de {{site.data.keyword.cloud}} a su app, seleccione los SDK que desee utilizar y, a continuación, configure el gestor de dependencias para extraer los SDK en la app.
 
 ## SDK de servidor
 {: #server_sdk}
@@ -36,7 +36,7 @@ Si tiene una aplicación de servidor de Java, NodeJS o Swift, puede utilizar los
 ## SDK de cliente
 {: #client_sdk}
 
-Puede utilizar los siguientes SDK en la aplicación móvil para utilizar las prestaciones respectivas.
+Puede utilizar los siguientes SDK en la app móvil para utilizar las prestaciones respectivas.
 
 ### SDK de Android
 {: #android_sdk}

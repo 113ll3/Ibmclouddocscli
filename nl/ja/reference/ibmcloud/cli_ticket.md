@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-07-12"
 
 keywords: cli, manage softlayer tickets, softlayer, classic infrastructure, user management, ibmcloud sl ticket
 
@@ -58,7 +58,7 @@ ibmcloud sl ticket create [OPTIONS]
 <dt>--rootpwd</dt>
 <dd>アタッチされるデバイス ID に関連付けられるルート・パスワード。</dd>
 <dt>--subject-id</dt>
-<dd>必須。 チケットに使用するサブジェクト ID。リストを取得するには 'ibmcloudsl ticket subjects' を実行してください。</dd>
+<dd>必須。 チケットに使用するサブジェクト ID。リストを取得するには `ibmcloudsl ticket subjects` を実行してください。</dd>
 <dt>--title</dt>
 <dd>必須。 チケットのタイトル。</dd>
 <dt>--body</dt>

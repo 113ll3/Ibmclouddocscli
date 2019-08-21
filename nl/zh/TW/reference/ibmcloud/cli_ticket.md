@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-07-12"
 
 keywords: cli, manage softlayer tickets, softlayer, classic infrastructure, user management, ibmcloud sl ticket
 
@@ -58,7 +58,7 @@ ibmcloud sl ticket create [OPTIONS]
 <dt>--rootpwd</dt>
 <dd>與連接的裝置 ID 相關聯的 root 密碼。</dd>
 <dt>--subject-id</dt>
-<dd>必要。用於問題單的主旨 ID，發出 'ibmcloudsl ticket subjects' 可取得清單。</dd>
+<dd>必要。用於問題單的主旨 ID，發出 `ibmcloudsl ticket subjects` 可取得清單。</dd>
 <dt>--title</dt>
 <dd>必要。問題單的標題。</dd>
 <dt>--body</dt>

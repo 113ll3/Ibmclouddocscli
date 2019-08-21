@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-07-12"
 
 keywords: cli, manage softlayer tickets, softlayer, classic infrastructure, user management, ibmcloud sl ticket
 
@@ -58,7 +58,7 @@ ibmcloud sl ticket create [OPTIONS]
 <dt>--rootpwd</dt>
 <dd>Contraseña raíz asociada con el ID de dispositivo adjunto.</dd>
 <dt>--subject-id</dt>
-<dd>Obligatorio. ID del asunto que se va a utilizar para la incidencia; emita 'ibmcloudsl ticket subjects' para obtener la lista.</dd>
+<dd>Obligatorio. ID del asunto que se va a utilizar para la incidencia; emita `ibmcloudsl ticket subjects` para obtener la lista.</dd>
 <dt>--title</dt>
 <dd>Obligatorio. El título de la incidencia.</dd>
 <dt>--body</dt>

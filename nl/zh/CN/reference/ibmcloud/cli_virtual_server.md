@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 
@@ -96,7 +96,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-o, --os</dt>
 <dd>操作系统安装代码。提示：可以指定 <OS>_LATEST。</dd>
 <dt>--image</dt>
-<dd>映像标识。请参阅“ibmcloud sl image list”以获取参考信息。</dd>
+<dd>映像标识。请参阅 `ibmcloud sl image list` 以获取参考信息。</dd>
 <dt>--billing</dt>
 <dd>计费费率。缺省值为：hourly。选项为：hourly 或 monthly。</dd>
 <dt>--dedicated</dt>
@@ -294,7 +294,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dt>-b, --billing</dt>
 <dd>计费费率。缺省值为：hourly。选项为：hourly 或 monthly。</dd>
 <dt>-v, --vlan-private</dt>
-<dd>要将专用主机放到其中的专用 VLAN 的标识。请参阅“ibmcloud sl vlan list”以获取参考信息。</dd>
+<dd>要将专用主机放到其中的专用 VLAN 的标识。请参阅 `ibmcloud sl vlan list` 以获取参考信息。</dd>
 <dt>-f, --force</dt>
 <dd>强制操作而不确认。</dd>
 </dl>
@@ -358,7 +358,7 @@ ibmcloud sl vs list [OPTIONS]
 <dd>按拥有实例的用户的标识过滤。</dd>
 <dt>--sortby</dt>
 <dd>要作为排序依据的列，缺省值为：hostname，选项为：id、hostname、domain、datacenter、cpu、memory、public_ip 或 private_ip。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>要显示的列，缺省值为：id、hostname、public_ip、private_ip、datacenter 和 action，选项为：guid、power_state、created_by 或 tags。</dd>
 </dl>
 
@@ -495,7 +495,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <dt>--image</dt>
 <dd>映像标识。缺省值为使用当前操作系统。</dd>
 <dt>请参阅</dt>
-<dd>“ibmcloud sl image list”以获取参考信息。</dd>
+<dd>`ibmcloud sl image list` 以获取参考信息。</dd>
 <dt>-k, --key</dt>
 <dd>要添加到 root 用户的 SSH 密钥的标识（允许多次出现）。</dd>
 <dt>-f, --force</dt>

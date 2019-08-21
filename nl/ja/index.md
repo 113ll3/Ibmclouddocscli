@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # {{site.data.keyword.cloud_notm}} CLI および {{site.data.keyword.dev_cli_short}} の概説
 {: #getting-started}
 
-このチュートリアルでは、最新の {{site.data.keyword.cloud_notm}} CLI を含む一連の {{site.data.keyword.cloud}} 開発者ツールをインストールし、インストールを検証して、環境を構成します。{{site.data.keyword.dev_cli_notm}} には、クラウド・アプリケーションを作成、開発、デプロイするためのコマンド・ライン・インターフェース (CLI) アプローチが備わっています。
+このチュートリアルでは、最新の {{site.data.keyword.cloud_notm}} CLI を含む一連の {{site.data.keyword.cloud}} 開発者ツールをインストールし、インストールを検証して、環境を構成します。 {{site.data.keyword.dev_cli_notm}} には、クラウド・アプリケーションを作成、開発、デプロイするためのコマンド・ライン・インターフェース (CLI) アプローチが備わっています。
 {: shortdesc}
 
 このチュートリアルのインストール・コマンドにより、入手可能な最新のスタンドアロン {{site.data.keyword.cloud_notm}} CLI バージョンと、以下のツールがインストールされます。

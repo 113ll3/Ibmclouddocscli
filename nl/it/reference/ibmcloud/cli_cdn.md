@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
+keywords: cli, content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
 
 subcollection: cloud-cli
 
@@ -79,9 +79,9 @@ ibmcloud sl cdn order [OPZIONI]
 <strong>Opzioni del comando</strong>:
 <dl>
 <dt>-b, --bandwidth</dt>
-<dd>Larghezza di banda CDN, verrà utilizzato il prezzo 'Pagamento a consumo', se non specificato.</dd>
+<dd>Larghezza di banda CDN, verrà utilizzato il prezzo Pagamento a consumo, se non specificato.</dd>
 <dt>-s, --storage</dt>
-<dd>Archiviazione CDN, verrà utilizzato il prezzo 'Pagamento a consumo', se non specificato.</dd>
+<dd>Archiviazione CDN, verrà utilizzato il prezzo Pagamento a consumo, se non specificato.</dd>
 <dt>-f, --force</dt>
 <dd>Forza l'operazione senza conferma.</dd>
 </dl>

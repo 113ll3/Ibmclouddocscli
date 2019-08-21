@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-31"
 
-keywords: cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
+keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
 subcollection: cloud-cli
 
@@ -391,7 +391,7 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
    <dt>--env ENV</dt>
    <dd>CFEE 环境名称。如果未指定，将缺省为当前的 CFEE 环境。</dd>
    <dt>--guid</dt>
-   <dd>检索并显示给定空间的 GUID。将禁止空间的所有其他输出。</dd>
+   <dd>检索并显示空间的 GUID。将禁止空间的所有其他输出。</dd>
    <dt>-o, --org ORG</dt>
    <dd>组织名称。如果未指定，将缺省为当前组织。</dd>
    <dt>--security-group-rules</dt>
@@ -400,7 +400,7 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
 
 <strong>示例</strong>：
 
-显示空间 `space_example` 的信息：
+显示名为 `space_example` 的空间的详细信息：
 ```
 ibmcloud cfee space space_example
 ```
@@ -418,7 +418,7 @@ ibmcloud cfee space space_example --security-group-rules
 ```
 {: codeblock}
 
-显示组织 `org_example` 和 CFEE 环境 `env_example` 的空间 `space_example` 的信息：
+显示空间 `space_example`、组织 `org_example` 和 CFEE 环境 `env_example` 的详细信息：
 ```
 ibmcloud cfee space space_example -o org_example --env env_example
 ```
@@ -427,7 +427,7 @@ ibmcloud cfee space space_example -o org_example --env env_example
 ## ibmcloud cfee space-create
 {: #ibmcloud_cfee_space_create}
 
-创建新空间
+创建空间：
 ```
 ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 ```
@@ -446,13 +446,13 @@ ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 
 <strong>示例</strong>：
 
-创建新空间 `space_example`：
+创建名为 `space_example` 的空间：
 ```
 ibmcloud cfee space-create space_example
 ```
 {: codeblock}
 
-在组织 `org_example` 和 CFEE 环境 `env_example` 下创建新空间 `space_example`：
+在 CFEE 环境 `env_example` 中的组织 `org_example` 下，创建名为 `space_example` 的空间：
 ```
 ibmcloud cfee space-create space_example -o org_example --env env_example
 ```
@@ -473,7 +473,7 @@ ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
    <dt>OLD_NAME（必需）</dt>
    <dd>要重命名的空间的旧名称。</dd>
    <dt>NEW_NAME（必需）</dt>
-   <dd>空间要重命名为的新名称。</dd>
+   <dd>要重命名的空间的新名称。</dd>
    <dt>--env ENV</dt>
    <dd>CFEE 环境名称。如果未指定，将缺省为当前的 CFEE 环境。</dd>
    <dt>-o, --org ORG</dt>
@@ -551,7 +551,7 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dt>ROLE（必需）</dt>
    <dd>要将此用户分配到的空间角色的名称。例如：
 <ul>
-   <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
+   <li>SpaceManager：此角色可以邀请和管理用户，以及启用空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
    </ul></dd>
@@ -594,7 +594,7 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dt>ROLE（必需）</dt>
    <dd>要将此用户从中除去的空间角色的名称。例如：
 <ul>
-   <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
+   <li>SpaceManager：此角色可以邀请和管理用户，以及启用空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
    </ul></dd>
@@ -686,41 +686,43 @@ ibmcloud cfee space-users org_example space_example --env env_example
 ## ibmcloud cfee create
 {: #ibmcloud_cfee_create}
 
-请求创建新的 Cloud Foundry Enterprise Environment 实例：
+请求创建 Cloud Foundry Enterprise Environment 实例：
 ```
-ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
+ibmcloud cfee create [-n, --name NAME] [--location LOCATION] [--cells CELLS] [--virtual-dedicated-hardware] [--private-access] [--private-vlan ID, --public-vlan ID] [--plan ID] [-c PARAMETERS_AS_JSON]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
 
 <strong>命令选项</strong>：
-  <dl>
-   <dt>NAME（必需）</dt>
-   <dd>实例的名称。</dd>
-   <dt>LOCATION（必需）</dt>
-   <dd>创建实例的位置。</dd>
-   <dt>--cells CELLS</dt>
-   <dd>指定此 CFEE 的单元数。缺省值为 2，最小值为 1。在 1 个单元的 CFEE 中，无法获得高可用性。</dd>
-   <dt>--isolation ISOLATION</dt>
-   <dd>指定 IBM Kubernetes 集群的隔离方式。选项为“dedicated”和“shared”。缺省值为“shared”。“dedicated”集群的费用较高。</dd>
-   <dt>--private-vlan ID</dt>
-   <dd>指定专用 VLAN 的标识。缺省情况下，我们会找到一组可用的 VLAN 或为您创建一对 VLAN。</dd>
-   <dt>--public-vlan ID</dt>
-   <dd>指定公用 VLAN 的标识。缺省情况下，我们会找到一组可用的 VLAN 或为您创建一对 VLAN。</dd>
-   <dt>--plan ID</dt>
-   <dd>指定套餐的标识。缺省情况下，我们会供应到标准套餐中。</dd>
-  </dl>
+<dl>
+  <dt>-n, --name NAME（必需）</dt>
+  <dd>指定 CFEE 的名称。名称必须不超过 24 个字符，以字母开头，并且仅包含字母数字字符、“-”、“_”和“.”。</dd>
+  <dt>--location LOCATION（必需）</dt>
+  <dd>指定要将此 CFEE 供应到的数据中心（例如，dal10）。要查找可用的数据中心，请运行“ibmcloud cfee create-locations”。</dd>
+  <dt>--cells CELLS</dt>
+  <dd>指定此 CFEE 的单元数。缺省值为 2，最小值为 1。在一个单元的 CFEE 中，无法获得高可用性。</dd>
+  <dt>--private-access</dt>
+  <dd>作为 CFEE 的一部分供应的 PostgreSQL 数据库的特定网络访问类型。仅当帐户为 VRF 且启用了服务端点时，才可设置此标志。如果设置了此标志，那么将使用专用访问端点。</dd>
+  <dt>--virtual-dedicated-hardware</dt>
+  <dd>工作程序节点通过专用硬件在帐户专用的基础架构上进行托管。基础架构资源（例如，系统管理程序和物理硬件）通过共享硬件与其他 IBM 客户共享，但每个工作程序节点对您来说都是单租户。如果未设置此标志，那么“Shared”是缺省值。使用“dedicated”工作程序会产生额外的成本。</dd>
+  <dt>--private-vlan ID</dt>
+  <dd>指定专用 VLAN 的标识。缺省情况下，将使用一组可用 VLAN 或为您创建一对 VLAN。</dd>
+  <dt>--public-vlan ID</dt>
+  <dd>指定公用 VLAN 的标识。缺省情况下，将使用一组可用 VLAN 或为您创建一对 VLAN。</dd>
+  <dt>--plan ID</dt>
+  <dd>指定套餐的标识。缺省情况下，会使用标准套餐。</dd>
+  <dt>-c PARAMETERS_AS_JSON</dt>
+  <dd>包含特定于 API 的配置参数的有效 JSON 对象，以内联方式或文件形式提供。有关受支持的配置参数的列表，请参阅 https://cloud.ibm.com/apidocs/cfaas#provision-new-cfee-environment 以获取特定目录条目。此标志对于供应多专区 CFEE 是必需的。注：这将忽略其他所有标志，并且 CLI 命令会处理 resource_group_id、access_token 和 refresh_token 字段。</dd>
+</dl>
 
 <strong>示例</strong>：
 
 在 `dal10` 中创建名为 `test-cfee` 的实例：
-
 ```
 ibmcloud cfee create test-cfee dal10
 ```
 
 在 `dal10` 中创建具有 `4` 个单元且名为 `test-cfee` 的 `dedicated` 实例：
-
 ```
 ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 ```
@@ -730,14 +732,17 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 
 请求获取目标区域的可用数据中心列表
 ```
-ibmcloud cfee create-locations
+ibmcloud cfee create-locations [--output FORMAT]
 ```
 {: codeblock}
 
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
-
+<dl>
+  <dt>--output FORMAT</dt>
+  <dd>指定输出格式，目前仅支持 JSON。</dd>
+</dl>
 
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
@@ -763,16 +768,16 @@ ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [
 <strong>示例</strong>：
 
 检查用户 `name@example.com` 的 CFEE 创建许可权：
-
 ```
 ibmcloud cfee create-permission-get name@example.com
 ```
+{: codeblock}
 
 在访问组 `test-access-group` 中检查用户 `name@example.com` 的 CFEE 创建许可权：
-
 ```
 ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ```
+{: codeblock}
 
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
@@ -822,7 +827,52 @@ ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
    <dt>NAME or ID（必需）</dt>
    <dd>CFEE 实例的名称或标识。</dd>
    <dt>--poll</dt>
-   <dd>指定是否要重复此调用来进行轮询，直到处于稳定状态</dd>
+   <dd>指定是否要重复此调用来进行轮询，直到处于稳定状态。</dd>
    <dt>--output FORMAT</dt>
    <dd>指定状态输出格式，现在仅支持 JSON。</dd>
+  </dl>
+
+## ibmcloud cfee monitoring-enable
+{: #ibmcloud_cfee_monitoring-enable}
+
+启用对目标 CFEE 环境的监视：
+```
+ibmcloud cfee monitoring-enable
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+  <dl>
+  </dl>
+
+## ibmcloud cfee monitoring-disable
+{: #ibmcloud_cfee_monitoring-disable}
+
+禁用对目标 CFEE 环境的监视：
+```
+ibmcloud cfee monitoring-disable
+```
+{: codeblock}
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+  <dl>
+  </dl>
+
+## ibmcloud cfee monitoring-status
+{: #ibmcloud_cfee_monitoring-status}
+
+检查目标 CFEE 环境中最近的监视启用/禁用操作的状态：
+```
+ibmcloud cfee monitoring-status [--poll]
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+  <dl>
+   <dt>--poll</dt>
+   <dd>指定是否要重复此调用来进行轮询，直到处于稳定状态</dd>
   </dl>

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 
@@ -96,7 +96,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-o, --os</dt>
 <dd>OS 설치 코드. 팁: <OS>_LATEST를 지정할 수 있습니다.</dd>
 <dt>--image</dt>
-<dd>이미지 ID. 'ibmcloud sl image list'를 참조하십시오.</dd>
+<dd>이미지 ID. 참조: `ibmcloud sl image list`를 참조하십시오.</dd>
 <dt>--billing</dt>
 <dd>청구 비율. 기본값: hourly. 옵션: hourly, monthly.</dd>
 <dt>--dedicated</dt>
@@ -290,7 +290,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dt>-b, --billing</dt>
 <dd>청구 비율. 기본값: hourly. 옵션: hourly, monthly.</dd>
 <dt>-v, --vlan-private</dt>
-<dd>전용 호스트를 배치할 사설 VLAN ID. 'ibmcloud sl vlan list'를 참조하십시오.</dd>
+<dd>전용 호스트를 배치할 사설 VLAN ID. 참조: `ibmcloud sl vlan list`를 참조하십시오.</dd>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -354,7 +354,7 @@ ibmcloud sl vs list [OPTIONS]
 <dd>인스턴스를 소유한 사용자 ID별 필터링.</dd>
 <dt>--sortby</dt>
 <dd>정렬 기준 열, 기본값: hostname, options are:id,hostname,domain,datacenter,cpu,memory,public_ip,private_ip.</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>표시할 열, 기본값: id,hostname,public_ip,private_ip,datacenter,action, options are: guid,power_state,created_by,tags.</dd>
 </dl>
 
@@ -491,7 +491,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <dt>--image</dt>
 <dd>이미지 ID. 기본값은 현재 운영 체제를 사용하는 것입니다.</dd>
 <dt>참조:</dt>
-<dd>'ibmcloud sl image list'를 참조하십시오.</dd>
+<dd>`ibmcloud sl image list`를 참조하십시오.</dd>
 <dt>-k, --key</dt>
 <dd>루트 사용자에게 추가할 SSH 키 ID(다중 발생 허용).</dd>
 <dt>-f, --force</dt>

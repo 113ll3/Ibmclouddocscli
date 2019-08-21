@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-08"
+lastupdated: "2019-06-10"
 
-keywords: ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
 subcollection: cloud-cli
 
@@ -17,7 +17,7 @@ subcollection: cloud-cli
 {:pre: .pre}
 {:tip: .tip}
 
-# Abilitazione delle applicazioni Python esistenti per la distribuzione cloud 
+# Abilitazione delle applicazioni Python esistenti per la distribuzione cloud
 {: #enable-existing-python}
 
 Puoi generare i file necessari per abilitare la tua applicazione Python all'esecuzione su {{site.data.keyword.cloud}} utilizzando il [comando enable della CLI {{site.data.keyword.dev_cli_long}}](/docs/cli/idt?topic=cloud-cli-idt-cli#enable).
@@ -32,17 +32,17 @@ ibmcloud dev enable
 {: codeblock}
 
 * Quando ti viene richiesto di verificare il framework rilevato per il progetto, **Python - Flask** o **Python - Django**, rispondi `y`. 
-* Ti viene in seguito richiesto **Connect to an IBM Cloud app**. Seleziona l'opzione **Generate assets, create a new IBM Cloud app and connect to it** o **Generate assets without connecting to an IBM Cloud app** per la tua applicazione.
-* Il comando `enable` può anche creare i servizi e associarli alla tua applicazione. Per questo esempio di base, rispondi `n`.
+* Ti viene in seguito richiesto **Connect to an IBM Cloud app**. Seleziona le opzioni **Generate assets, create a new IBM Cloud app and connect to it** o **Generate assets without connecting to an IBM Cloud app** per connettere la tua applicazione.
+* Il comando `enable` crea anche i servizi e li associa alla tua applicazione. Per questo esempio di base, rispondi `n`.
 
 Consulta il seguente output di esempio:
 ```
 > ibmcloud dev enable
 The enable feature is currently in Beta.
 Please provide your experience and feedback at: https://ibm-cloud-tech.slack.com/messages/developer-tools/
-Only server-side applications are supported by the enable feature
+Only server-side apps are supported by the enable feature
 
-? Python - Flask application discovered. Do you want to proceed with this
+? Python - Flask app discovered. Do you want to proceed with this
 language choice? [y/n]> y
 
 
@@ -105,17 +105,18 @@ LICENSE
 The application, <appname>, has been successfully saved
 into the current directory.
 ```
+{: screen}
 
 ## Crea e distribuisci un'applicazione Python abilitata per il cloud
 {: #build-deploy-python}
 
-Successivamente, crea la tua applicazione con il comando [`build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build):
+Successivamente, crea la tua applicazione con il [comando `build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build):
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-Se la creazione viene completata correttamente, puoi distribuire la tua applicazione a {{site.data.keyword.cloud_notm}} con il seguente comando [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy): 
+Se la creazione viene completata correttamente, puoi distribuire la tua applicazione a {{site.data.keyword.cloud_notm}} con il seguente comando [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy):
 ```
 ibmcloud dev deploy
 ```
@@ -130,7 +131,7 @@ ImportError: No module named <projectname>.wsgi
 ```
 {: screen}
 
-Il nome del file `<projectname>.wsgi` è il nome del progetto che sta venendo abilitato.
+Il nome del file `<projectname>.wsgi` è il nome del progetto che viene abilitato.
 
 Se la tua applicazione non viene creata o distribuita dopo aver eseguito `ibmcloud dev enable`, puoi modificare i file generati per completare l'abilitazione cloud.
 

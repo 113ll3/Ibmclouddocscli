@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
-keywords: monitoring, logging, cloud logging, metrics
+keywords: cli, monitoring, logging, cloud logging, metrics, monitor cpu, monitor usage, memory utilization, runtime logging
 
 subcollection: cloud-cli
 
@@ -32,6 +32,6 @@ subcollection: cloud-cli
 
 {{site.data.keyword.cloud_notm}} は、デフォルトで、アプリ、アプリ・ランタイム、およびそれらのアプリの実行場所であるコンピュート・ランタイムについて、ログの収集と表示を行います。 {{site.data.keyword.cloud_notm}} ロギング機能はプラットフォームに統合されており、クラウド・リソースに関するデータ収集は自動的に有効になります。 
 
-{{site.data.keyword.loganalysisfull_notm}} サービスは、{{site.data.keyword.cloud_notm}} プラットフォーム用のログ収集サービスとログ検索サービスを提供し、アプリケーションおよび {{site.data.keyword.cloud_notm}} サービスのデータを、選択したサービスから自動的に収集します。 {{site.data.keyword.loganalysisshort}} サービスを使用して、ログを処理する際のログ収集、ログ保存、およびログ検索の機能を拡張します。
+{{site.data.keyword.loganalysisfull_notm}} サービスは、{{site.data.keyword.cloud_notm}} プラットフォーム用のログ収集サービスとログ検索サービスを提供し、アプリおよび {{site.data.keyword.cloud_notm}} サービスのデータを、選択したサービスから自動的に収集します。 {{site.data.keyword.loganalysisshort}} サービスを使用して、ログを処理する際のログ収集、ログ保存、およびログ検索の機能を拡張します。
 
-詳しくは、[{{site.data.keyword.cloud_notm}} でのロギング](/docs/services/CloudLogAnalysis?topic=cloudloganalysis-log_analysis_ov#log_analysis_ov)を参照してください。
+詳しくは、[{{site.data.keyword.cloud_notm}} でのロギング](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started#getting-started)を参照してください。

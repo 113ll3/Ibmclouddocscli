@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-08-07"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
@@ -10,10 +10,18 @@ subcollection: cloud-cli
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:external: target="_blank" .external}
+
 # Häufig gestellte Fragen
 {: #ibm-cli-faq}
 
-## Muss ich die neueste Version der {{site.data.keyword.cloud_notm}}-CLI verwenden?
+## Ist es erforderlich, die neueste Version von {{site.data.keyword.cloud_notm}}-CLI zu verwenden?
 {: #cli-latest-version}
 
 Ja, Sie müssen die neueste Version verwenden. Sie können überprüfen, welche Version Sie verwenden, indem Sie den folgenden Befehl ausführen:
@@ -23,7 +31,7 @@ ibmcloud -v
 ```
 {: codeblock}
 
-## Wie aktualisiere ich meine CLI?
+## Wie wird die CLI aktualisiert?
 {: #cli-update-version}
 
 Führen Sie den folgenden Befehl aus, um eine Aktualisierung auf die neueste Version der Befehlszeilenschnittstelle durchzuführen:
@@ -33,10 +41,10 @@ ibmcloud update
 ```
 {: codeblock}
 
-## Kann ich über neue Releases der Befehlszeilenschnittstelle (CLI) benachrichtigt werden?
+## Wie werde ich über neue Releases der CLI benachrichtigt?
 {: #cli-get-notified}
 
-Ja, Sie bleiben so auf dem Laufenden über neue Releases der CLI und werden benachrichtigt, sobald sie verfügbar sind. Abonnieren Sie das [Release-Repository der {{site.data.keyword.cloud_notm}}-CLI](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")
+Ja, Sie bleiben so auf dem Laufenden über neue Releases der CLI und werden benachrichtigt, sobald sie verfügbar sind. Abonnieren Sie das [Release-Repository der {{site.data.keyword.cloud_notm}}-CLI](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}.
 
 ## Wie ist die Dateistruktur für {{site.data.keyword.cloud_notm}}-Anwendungen?
 {: #cli-file-structure}
@@ -52,7 +60,7 @@ Das {{site.data.keyword.dev_cli_long}}-CLI-Plug-in verwendet zwei Container, um 
 
 Der zweite Container ist der Ausführungscontainer, der die tatsächliche Laufzeitumgebung Ihrer App recht genau abbildet, nachdem diese in der Cloud bereitgestellt wurde. Dieser Container weist ein Format auf, das beispielsweise für die Bereitstellung zur Verwendung in {{site.data.keyword.cloud_notm}} geeignet ist. In der Folge wird ein Eingangspunkt definiert, der Ihre App startet. Wenn Ihre App über das {{site.data.keyword.dev_cli_long}}-CLI-Plug-in ausgeführt werden soll, verwendet die App diesen Container. Die `Dockerfile` für diesen Container ist durch den Parameter [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) definiert.
 
-## Wie implementiere ich vorhandenen Code?
+## Wie kann der vorhandene Code bereitgestellt werden?
 
 Informationen zum Bereitstellen einer vorhandenen Codebasis finden Sie in [Bereitstellungs- und Cloudaktivierungsassets generieren](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
 

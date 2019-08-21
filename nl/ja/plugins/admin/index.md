@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -165,7 +165,7 @@ Dedicated 環境のユーザーを {{site.data.keyword.cloud_notm}} パブリッ
 ### {{site.data.keyword.Bluemix_dedicated_notm}} から招待したユーザーのリスト表示
 {: #admin_dedicated_list}
 
-Dedicated 環境のユーザーを {{site.data.keyword.cloud_notm}} アカウントに [**`invite-users-to-public`** コマンド](#admin_dedicated_invite_public)を使用して招待した場合、招待の状況を確認するためにアカウントのユーザーをリスト表示することができます。 既存の IBMid を持つ招待されたユーザーは、ACTIVE の状況になります。 既存の IBMid を持たない招待されたユーザーは、アカウントへの招待を受け入れたかどうかによって、PENDING または ACTIVE のいずれかの状況になります。 {{site.data.keyword.cloud_notm}} アカウントのユーザーをリストするには、以下のようにします。
+[**`invite-users-to-public`** コマンド](#admin_dedicated_invite_public)を使用して Dedicated 環境のユーザーを {{site.data.keyword.cloud_notm}} アカウントに招待した場合は、アカウントでそれらのユーザーのリストを表示して、招待の状況を確認できます。招待したユーザーに既存の IBMid がある場合、状況は ACTIVE になります。招待したユーザーに既存の IBMid がない場合は、招待を受け入れたかどうかに応じて、状況は PENDING または ACTIVE になります。{{site.data.keyword.cloud_notm}} アカウントのユーザーをリストするには、以下のようにします。
 
 ```
 cf ba invite-users-status -apikey=public_api_key
@@ -195,7 +195,7 @@ cf ba search-users -name=user_name -permission=permission_value -organization=or
 <dt>user_name</dt>
 <dd>ユーザーの名前。</dd>
 <dt>permission_value</dt>
-<dd>ユーザーに割り当てられた許可。 使用可能な許可は、admin (または superuser)、login (または basic)、catalog.read、catalog.write、reports.read 、reports.write、users.read、または users.write です。 同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。</dd>
+<dd>ユーザーに割り当てられた許可。 使用可能な許可は、admin (または superuser)、log in (または basic)、catalog.read、catalog.write、reports.read 、reports.write、users.read、または users.write です。 同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。</dd>
 <dt>organization_value</dt>
 <dd>ユーザーが所属する組織の名前。 同じ照会内でこのパラメーターを permission パラメーターと一緒に使用することはできません。</dd>
 <dt>role_value</dt>
@@ -218,7 +218,7 @@ cf ba set-permissions user_name permission access
 <dt>user_name</dt>
 <dd>ユーザーの名前。</dd>
 <dt>permission</dt>
-<dd>ユーザーに割り当てる権限を設定します。 使用可能な許可は、admin (または superuser)、login (または basic)、catalog.read、catalog.write、reports.read 、reports.write、users.read、または users.write です。 同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。</dd>
+<dd>ユーザーに割り当てる権限を設定します。 使用可能な許可は、admin (または superuser)、log in (または basic)、catalog.read、catalog.write、reports.read 、reports.write、users.read、または users.write です。 同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。</dd>
 <dt>access</dt>
 <dd>catalog、reports、user の権限の場合は、アクセス・レベルも `read` または `write` に設定する必要があります。</dd>
 </dl>
@@ -262,7 +262,7 @@ cf ba enable-managers-add-users
 ### 管理者のユーザー追加権限の無効化
 {: #clius_dmau}
 
-**`enable-managers-add-users`** コマンドによって、組織管理者が {{site.data.keyword.cloud_notm}} 環境で管理している組織にユーザーを追加できるようになっている場合、Superuser 権限があれば、この設定を削除できます。 管理者によるユーザーの追加を不可にするには、以下のコマンドを使用します。
+管理者によるユーザーの追加を不可にするには、以下のコマンドを使用します。
 
 ```
 cf ba disable-managers-add-users
@@ -329,7 +329,7 @@ cf ba set-org user_name organization [role]
 <dt>organization</dt>
 <dd>ユーザーの割り当て先となる {{site.data.keyword.cloud_notm}} 組織の名前または GUID。</dd>
 <dt>role</dt>
-<dd>ユーザーの役割。 有効な値は、OrgManager、BillingManager、OrgAuditor です。 役割の説明については、[役割](/docs/iam?topic=iam-userroles#userroles)も参照してください。</dd>
+<dd>ユーザーの役割。 有効な値は、OrgManager、BillingManager、OrgAuditor です。 役割の説明については、[役割](/docs/iam?topic=iam-userroles#userroles)を参照してください。</dd>
 </dl>
 
 **`ba set-org`** という長いコマンド名の別名として **`ba so`** を使用することもできます。
@@ -413,7 +413,7 @@ cf ibmcloud-admin set-containers-quota organization options
 <dt>organization</dt>
 <dd>割り当て量を設定する {{site.data.keyword.cloud_notm}} 組織の名前または ID。</dd>
 <dt>options</dt>
-<dd>選択肢は、floating-ips-max 値 (短縮名 fim)、memory-max 値 (短縮名 mm)、memory-space-default 値 (短縮名 msd)、または image-limit 値 (短縮名 il) です。値は整数でなければなりません。</dd>
+<dd>選択肢は、floating-ips-max 値 (短縮名 fim)、memory-max 値 (短縮名 mm)、memory-space-default 値 (短縮名 msd)、または image-limit 値 (短縮名 il) です。 値は整数でなければなりません。</dd>
 </dl>
 
 オプションで、有効な JSON オブジェクトに固有の構成パラメーターを含むファイルを指定できます。 **`-file`** オプションを使用すると、それが優先され、他のオプションは無視されます。 オプションを設定する代わりにファイルを指定する場合は、以下のコマンドを使用します。
@@ -546,7 +546,7 @@ cf ba enable-service-plan plan_identifier
 
 <dl>
 <dt>plan_identifier</dt>
-<dd>有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」や「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、<b>「追加」</b>を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。 </dd>
+<dd>有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」や「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、<b>「追加」</b>を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。 </dd>
 </dl>
 
 **`ba enable-service-plan`** という長いコマンド名の別名として **`ba esp`** を使用することもできます。
@@ -564,7 +564,7 @@ cf ba disable-service-plan plan_identifier
 
 <dl>
 <dt>plan_identifier</dt>
-<dd>有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」や「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、<b>「追加」</b>を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd>有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」や「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、<b>「追加」</b>を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 </dl>
 
 **`ba disable-service-plan`** という長いコマンド名の別名として **`ba dsp`** を使用することもできます。
@@ -582,7 +582,7 @@ cf ba add-service-plan-visibility plan_identifier organization
 
 <dl>
 <dt>plan_identifier</dt>
-<dd>有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」や「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、<b>「追加」</b>を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd>有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」や「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、<b>「追加」</b>を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt>organization</dt>
 <dd>サービスの表示可能性リストに追加する組織の名前または GUID。</dd>
 </dl>
@@ -602,7 +602,7 @@ cf ba remove-service-plan-visibility plan_identifier organization
 
 <dl>
 <dt>plan_identifier</dt>
-<dd>有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」や「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、<b>「追加」</b>を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd>有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」や「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、<b>「追加」</b>を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt>organization</dt>
 <dd>サービスの表示可能性リストから削除する組織の名前または GUID。</dd>
 </dl>
@@ -624,7 +624,7 @@ cf ba edit-service-plan-visibilities plan_identifier organization_1 optional_org
 
 <dl>
 <dt>plan_identifier</dt>
-<dd>有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」や「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、<b>「追加」</b>を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd>有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」や「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、<b>「追加」</b>を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt>organization</dt>
 <dd>表示可能性を追加する組織の名前または GUID。 コマンドに追加の組織名または GUID を入力することで、複数の組織に対してサービスの表示可能性を有効化できます。</dd>
 </dl>
@@ -704,7 +704,7 @@ cf ba retrieve-report search
 ## リソース・メトリック情報の表示
 {: #cliresourceusage}
 
-メモリー、ディスク、CPU 使用量など、リソース・メトリック情報を表示できます。 使用可能な物理リソースと予約済みリソース、および物理リソースと予約済みリソースの使用量の要約を確認できます。 Droplet Execution Agent (DEA) およびセル (Diego アーキテクチャー) の使用データも確認できます。 リソース・メトリック情報を表示するには、以下のコマンドを使用します。
+メモリー、ディスク、CPU 使用量など、リソース・メトリック情報を表示できます。 使用可能な物理リソースと予約済みリソース、物理リソース、および予約済みリソースの使用量の要約を確認できます。Droplet Execution Agent (DEA) およびセル (Diego アーキテクチャー) の使用データも確認できます。 リソース・メトリック情報を表示するには、以下のコマンドを使用します。
 
 ```
 cf ba resource-metrics
@@ -854,7 +854,7 @@ cf ba update-service-broker broker_name user_name password broker_url
 
 アプリケーション・セキュリティー・グループ (ASG) に関して作業するには、ローカル環境または専用環境の全アクセス権限を持つ管理者でなければなりません。 コマンドでターゲットとする組織に有効な ASG のリスト表示は、環境のすべてのユーザーが行えます。 それに対し、ASG の作成、更新、バインドを行うには、{{site.data.keyword.cloud_notm}} 環境の管理者である必要があります。
 
-ASG は、{{site.data.keyword.cloud_notm}} 環境内のアプリからのアウトバウンド・トラフィックを制御する仮想ファイアウォールとして機能します。 各 ASG は、外部ネットワークに対する特定のトラフィックおよび通信を許可するルールのリストから構成されます。 1 つ以上の ASG を特定のセキュリティー・グループ・セット (例えば、グローバル・アクセスの適用に使用されるグループ・セットなど) にバインドすることや、{{site.data.keyword.cloud_notm}} 環境の組織内のスペースにバインドすることができます。
+ASG は、{{site.data.keyword.cloud_notm}} 環境内のアプリからのアウトバウンド・トラフィックを制御する仮想ファイアウォールとして機能します。 各 ASG は、外部ネットワークに対する特定のトラフィックおよび通信を許可するルールのリストから構成されます。 1 つ以上の ASG を特定の 1 つのセキュリティー・グループ・セットにバインドできます。例えば、グループ・セットにグローバル・アクセスを適用したり、{{site.data.keyword.cloud_notm}} 環境内の組織のスペースにバインドしたりできます。
 
 {{site.data.keyword.cloud_notm}} は最初、制限された外部ネットワークへのすべてのアクセス権限でセットアップされます。 IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` をデフォルトの Cloud Foundry セキュリティー・グループ・セットにバインドした場合、これらのグループにより、外部ネットワークへのグローバル・アクセスが可能になります。 グローバル・アクセスの適用に使用される Cloud Foundry 内の 2 つのセキュリティー・グループ・セットは、**デフォルト・ステージング**と**デフォルト実行**のグループ・セットです。 これらのグループ・セットは、すべての実行アプリ、またはすべてのステージング・アプリに対するトラフィックを許可するためのルールを適用します。 これらの 2 つのセキュリティー・グループ・セットにバインドしたくない場合は、Cloud Foundry グループ・セットからアンバインドし、セキュリティー・グループを特定スペースにバインドしてください。 詳しくは、[アプリケーション・セキュリティー・グループのバインド ](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 

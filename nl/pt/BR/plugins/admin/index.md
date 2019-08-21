@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -40,8 +40,7 @@ Depois de instalar a CLI do Cloud Foundry, é possível incluir o plug-in da CLI
 Se anteriormente você instalou o plug-in do administrador do {{site.data.keyword.cloud_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e, em seguida, instalar novamente para obter as atualizações mais recentes.
 {: tip}
 
-Conclua as etapas a seguir para incluir o repositório e instalar
-o plug-in:
+Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
 
 1. Para incluir o repositório do plug-in de administrador do {{site.data.keyword.cloud_notm}}, execute o comando a seguir:
   ```
@@ -148,7 +147,7 @@ Também é possível usar **`ba au`** como um alias para o nome de comando mais 
 ### Convidando um usuário do {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_invite_public}
 
-Cada ambiente do {{site.data.keyword.Bluemix_dedicated_notm}} tem uma conta pública, corporativa ou de propriedade do cliente no {{site.data.keyword.cloud_notm}}. Para que os usuários no ambiente Dedicated criem clusters com o {{site.data.keyword.containershort}}, o administrador deve incluir os usuários nessa conta corporativa pública. Quando os usuários são incluídos na conta corporativa pública, suas contas Dedicated e públicas são vinculadas. Os usuários podem então usar seu IBMid para efetuar login no Dedicated ou público simultaneamente e podem criar recursos na conta pública da interface Dedicated. Para obter mais informações, veja [Configurando o IBM Cloud Container Service no Dedicated](/docs/containers?topic=containers-dedicated#dedicated_setup). Para convidar usuários do Dedicated para a conta pública:
+Cada ambiente do {{site.data.keyword.Bluemix_dedicated_notm}} tem uma conta pública, corporativa ou de propriedade do cliente no {{site.data.keyword.cloud_notm}}. Para que os usuários no ambiente Dedicated criem clusters com o {{site.data.keyword.containershort}}, o administrador deve incluir os usuários nessa conta corporativa pública. Quando os usuários são incluídos na conta corporativa pública, suas contas dedicada e pública são vinculadas. Os usuários podem então usar seu IBMid para efetuar login no Dedicated ou público simultaneamente e podem criar recursos na conta pública da interface Dedicated. Para obter mais informações, veja [Configurando o IBM Cloud Container Service no Dedicated](/docs/containers?topic=containers-dedicated#dedicated_setup). Para convidar usuários do Dedicated para a conta pública:
 ```
 cf ba invite-users-to-public -userid=user_email -organization=dedicated_org_id -apikey=public_api_key -public_org_id=public_org_id
 ```
@@ -170,7 +169,7 @@ Para incluir usuários do ambiente Dedicado em sua conta pública do {{site.data
 ### Listando usuários que são convidados do {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-Se você convidou os usuários do ambiente Dedicated para sua conta do {{site.data.keyword.cloud_notm}} com o [comando **`invite-users-to-public`**](#admin_dedicated_invite_public), é possível listar os usuários em sua conta para ver seu status do convite. Os usuários convidados que têm um IBMid existente têm um status de ACTIVE. Os usuários convidados que não tinham um IBMid existente têm um status de PENDING ou ACTIVE, dependendo se já aceitaram o convite para a conta. Para listar os usuários em sua conta do {{site.data.keyword.cloud_notm}}:
+Se você convidar usuários do ambiente dedicado para a sua conta do {{site.data.keyword.cloud_notm}} com o [comando **`invite-users-to-public`**](#admin_dedicated_invite_public), poderá listar os usuários em sua conta para ver o status de convite deles. Os usuários convidados com um IBMid existente têm um status ATIVO. Os usuários convidados que não têm um IBMid existente têm um status de PENDENTE ou ATIVO, dependendo de se o convite foi aceito. Para listar os usuários em sua conta do {{site.data.keyword.cloud_notm}}:
 
 ```
 cf ba invite-users-status -apikey=public_api_key
@@ -269,7 +268,7 @@ Também é possível usar o **`ba emau`** como um alias para o nome de comando m
 ### Desativando gerenciadores de incluir usuários
 {: #clius_dmau}
 
-Se os gerenciadores de organização estiverem ativados para incluir usuários nas organizações que gerenciam em seu ambiente do {{site.data.keyword.cloud_notm}} com o comando **`enable-managers-add-users`** e se você tiver a permissão Superusuário, será possível remover essa configuração. Para desativar os usuários de incluírem usuários, use o comando a seguir:
+Para desativar os usuários de incluírem usuários, use o comando a seguir:
 
 ```
 cf ba disable-managers-add-users
@@ -337,7 +336,7 @@ cf ba set-org user_name organization [role]
 <dt>organização</dt>
 <dd>O nome ou GUID da organização do {{site.data.keyword.cloud_notm}} para a qual designar o usuário.</dd>
 <dt>Função</dt>
-<dd>A função do usuário. Os valores válidos são OrgManager, BillingManager, OrgAuditor. Consulte [Funções](/docs/iam?topic=iam-userroles#userroles) para obter as descrições de função.</dd>
+<dd>A função do usuário. Os valores válidos são OrgManager, BillingManager, OrgAuditor. Consulte [Funções](/docs/iam?topic=iam-userroles#userroles) para obter as descrições de funções.</dd>
 </dl>
 
 Também é possível usar **`ba so`** como um alias para o nome de comando mais longo **`ba set-org`**.
@@ -645,7 +644,7 @@ comando substitui os serviços visíveis existentes para as organizações espec
 <dd>O nome ou o GUID do plano de serviço que você deseja ativar. Se você inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será solicitado que selecione um plano de serviço. Para identificar um nome de plano de serviço, selecione a categoria do serviço na página inicial, em seguida, selecione <b>Incluir</b> para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
 serviços que estão disponíveis para esse serviço.</dd>
 <dt>organização</dt>
-<dd>O nome ou o GUID da organização para a qual incluir visibilidade. É
+<dd>O nome ou GUID da organização para a qual incluir visibilidade. É
 possível ativar a visibilidade do serviço para mais de uma organização, inserindo mais nomes da organização ou GUIDs no comando.</dd>
 </dl>
 
@@ -676,7 +675,7 @@ o novo nome da categoria para o parâmetro **`category`** ou inclua o seu novo r
 <dt>PDF|TXT|LOG</dt>
 <dd>O caminho para o PDF do relatório, arquivo de texto ou arquivo de log para upload.</dd>
 <dt>RTF</dt>
-<dd>Uma opção para incluir uma versão do Rich Text Format (RTF) do PDF. Essa opção se aplicará apenas se você incluir um caminho no PDF do relatório. A versão RTF é usada para indexação e procura.</dd>
+<dd>Uma opção para incluir uma versão do Rich Text Format (RTF) do PDF. Essa opção se aplicará apenas se você incluir um caminho para o PDF do relatório. A versão RTF é usada para indexação e procura.</dd>
 </dl>
 
 Também é possível usar **`ba ar`** como um alias para o nome de comando mais longo **`ba add-report`**.
@@ -725,7 +724,7 @@ Também é possível usar **`ba rr`** como um alias para o nome de comando mais 
 ## Visualizando informações de métrica de recurso
 {: #cliresourceusage}
 
-É possível visualizar informações de métrica de recurso, incluindo memória, disco e uso de CPU. É possível ver um resumo dos recursos físicos e reservados disponíveis, bem como o uso de recursos físicos e reservados. Também é possível ver dados de uso de Droplet Execution Agents (DEAs) e células (arquitetura Diego). Para visualizar as informações de métrica de recurso, use o comando a seguir:
+É possível visualizar informações de métrica de recurso, incluindo memória, disco e uso de CPU. É possível ver um resumo dos recursos físicos e reservados disponíveis e o uso deles. Também é possível ver dados de uso de Droplet Execution Agents (DEAs) e células (arquitetura Diego). Para visualizar as informações de métrica de recurso, use o comando a seguir:
 
 ```
 cf ba resource-metrics
@@ -884,10 +883,7 @@ administrador do ambiente {{site.data.keyword.cloud_notm}}.
 
 Os ASGs funcionam como firewalls virtuais que controlam o tráfego de saída dos apps em seu ambiente do {{site.data.keyword.cloud_notm}}. Cada ASG consiste
 em uma lista de regras que permitem tráfego e comunicação específicos de/para a
-rede externa. É possível ligar um ou mais ASGs a um conjunto de grupos de segurança
-específicos, por exemplo, um conjunto de grupos usado para aplicar acesso global ou
-você pode ligar aos espaços dentro de uma organização em seu ambiente do
-{{site.data.keyword.cloud_notm}}.
+rede externa. É possível ligar um ou mais ASGs a um conjunto de grupos de segurança específico. Por exemplo, ao aplicar acesso global para um conjunto de grupos ou ligação a espaços dentro de uma organização em seu ambiente {{site.data.keyword.cloud_notm}}.
 
 O {{site.data.keyword.cloud_notm}} é configurado inicialmente com todos
 os acessos à rede externa restrita. Dois grupos de segurança criados pela IBM,
@@ -904,7 +900,7 @@ específico. Para obter mais informações, consulte [Ligando grupos de seguran�
 A desvinculação dos conjuntos de grupos **Preparação padrão** ou **Execução padrão** dos dois grupos de segurança criados pela IBM, `public_networks` e `dns`, desativa o acesso global à rede externa. Use a desvinculação com cuidado e reconhecimento de seu impacto potencial nos apps em execução e de preparação em seu ambiente.
 {: important}
 
-Os comandos a seguir que permitem que você trabalhe com grupos de segurança são baseados na versão 1.6 do Cloud Foundry. Para obter mais informações, incluindo campos obrigatórios e opcionais, consulte as informações do Cloud Foundry sobre [Criando grupos de segurança do aplicativo](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo").
+Os comandos a seguir permitem que você trabalhe com grupos de segurança baseados na versão 1.6 do Cloud Foundry. Para obter mais informações, incluindo campos obrigatórios e opcionais, consulte as informações do Cloud Foundry sobre [Criando grupos de segurança do aplicativo](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo").
 
 ### Listando grupos de segurança
 {: #clilissecgro}

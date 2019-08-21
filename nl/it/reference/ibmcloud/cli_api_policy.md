@@ -301,7 +301,7 @@ L'utilizzo dell'accesso alla CLI {{site.data.keyword.cloud_notm}} con una chiave
 
 <strong>Opzioni del comando</strong>:
 <dl>
-<dt>NAME (obbligatorio)</dt>
+<dt>NOME (obbligatorio)</dt>
 <dd>Nome della chiave API da creare.</dd>
 <dt>-d <i>DESCRIPTION</i> (facoltativo)</dt>
 <dd>Descrizione della chiave API</dd>

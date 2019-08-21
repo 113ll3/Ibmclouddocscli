@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-12"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -109,7 +109,7 @@ ibmcloud sl user edit-permissions [OPTIONS] IDENTIFIER
 <strong>명령 옵션</strong>:
 <dl>
 <dt>--enable</dt>
-<dd>선택한 권한을 사용 또는 사용 안함으로 설정합니다. 허용되는 입력은 'true' 및 'false'입니다. 기본값은 'true'입니다.</dd>
+<dd>선택한 권한을 사용 또는 사용 안함으로 설정합니다. 허용되는 입력은 `true` 및 `false`입니다. 기본값은 `true`입니다.</dd>
 <dt>--permission</dt>
 <dd>설정할 권한 `keyName`이며 여러 인스턴스가 허용됩니다. 모든 권한을 선택하려면 키워드 ALL을 사용하십시오.</dd>
 <dt>--from-user</dt>

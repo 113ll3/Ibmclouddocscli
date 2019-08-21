@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-31"
 
-keywords: cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
+keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
 subcollection: cloud-cli
 
@@ -191,7 +191,7 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 <strong>コマンド・オプション</strong>:
   <dl>
    <dt>ORG (必須)</dt>
-   <dd>削除される組織の名前。</dd>
+   <dd>削除する組織の名前。</dd>
    <dt>--env ENV</dt>
    <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
    <dt>-f, --force</dt>
@@ -313,7 +313,7 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 <strong>コマンド・オプション</strong>:
   <dl>
    <dt>USER_EMAIL (必須)</dt>
-   <dd>削除されるユーザーの E メール。</dd>
+   <dd>削除するユーザーの E メール。</dd>
    <dt>ORG (必須)</dt>
    <dd>このユーザーの削除元の組織の名前。</dd>
    <dt>ROLE (必須)</dt>
@@ -391,7 +391,7 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
    <dt>--env ENV</dt>
    <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
    <dt>--guid</dt>
-   <dd>指定されたスペースの GUID を取得して表示します。 このスペースの他の出力はすべて抑制されます。</dd>
+   <dd>スペースの GUID を取得して表示します。 このスペースの他の出力はすべて抑制されます。</dd>
    <dt>-o, --org ORG</dt>
    <dd>組織名。 未指定の場合、デフォルトは現行組織です。</dd>
    <dt>--security-group-rules</dt>
@@ -400,7 +400,7 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
 
 <strong>例</strong>:
 
-スペース `space_example` の情報を表示します。
+`space_example` という名前のスペースの詳細情報を表示します。
 ```
 ibmcloud cfee space space_example
 ```
@@ -418,7 +418,7 @@ ibmcloud cfee space space_example --security-group-rules
 ```
 {: codeblock}
 
-組織 `org_example` および CFEE 環境 `env_example` のスペース `space_example` の情報を表示します。
+CFEE 環境 `env_example` の組織 `org_example` にあるスペース `space_example` の詳細情報を表示します。
 ```
 ibmcloud cfee space space_example -o org_example --env env_example
 ```
@@ -427,7 +427,7 @@ ibmcloud cfee space space_example -o org_example --env env_example
 ## ibmcloud cfee space-create
 {: #ibmcloud_cfee_space_create}
 
-新規スペースを作成します
+スペースを作成します。
 ```
 ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 ```
@@ -446,13 +446,13 @@ ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 
 <strong>例</strong>:
 
-新規スペース `space_example` を作成します。
+`space_example` という名前のスペースを作成します。
 ```
 ibmcloud cfee space-create space_example
 ```
 {: codeblock}
 
-組織 `org_example` および CFEE 環境 `env_example` の下に新規スペース `space_example` を作成します。
+`space_example` という名前のスペースを、CFEE 環境 `env_example` の組織 `org_example` に作成します。
 ```
 ibmcloud cfee space-create space_example -o org_example --env env_example
 ```
@@ -551,7 +551,7 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dt>ROLE (必須)</dt>
    <dd>このユーザーの割り当て先のスペース内での役割の名前。 以下に例を示します。
    <ul>
-   <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、特定のスペースに対してフィーチャーを有効にします。</li>
+   <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、スペースに対してフィーチャーを有効にします。</li>
    <li>SpaceDeveloper: この役割は、アプリとサービスを作成して管理し、ログとレポートを表示します。</li>
    <li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。</li>
    </ul></dd>
@@ -586,7 +586,7 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
 <strong>コマンド・オプション</strong>:
   <dl>
    <dt>USER_EMAIL (必須)</dt>
-   <dd>削除されるユーザーの E メール。</dd>
+   <dd>削除するユーザーの E メール。</dd>
    <dt>ORG (必須)</dt>
    <dd>このユーザーの削除元の組織の名前。</dd>
    <dt>SPACE (必須)</dt>
@@ -594,7 +594,7 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dt>ROLE (必須)</dt>
    <dd>このユーザーの削除元のスペース内での役割の名前。 以下に例を示します。
    <ul>
-   <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、特定のスペースに対してフィーチャーを有効にします。</li>
+   <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、スペースに対してフィーチャーを有効にします。</li>
    <li>SpaceDeveloper: この役割は、アプリとサービスを作成して管理し、ログとレポートを表示します。</li>
    <li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。</li>
    </ul></dd>
@@ -686,41 +686,43 @@ ibmcloud cfee space-users org_example space_example --env env_example
 ## ibmcloud cfee create
 {: #ibmcloud_cfee_create}
 
-Cloud Foundry エンタープライズ環境の新規インスタンスの作成を要求します。
+Cloud Foundry Enterprise Environment のインスタンスの作成を要求します。
 ```
-ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
+ibmcloud cfee create [-n, --name NAME] [--location LOCATION] [--cells CELLS] [--virtual-dedicated-hardware] [--private-access] [--private-vlan ID, --public-vlan ID] [--plan ID] [-c PARAMETERS_AS_JSON]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
-  <dl>
-   <dt>NAME (必須)</dt>
-   <dd>インスタンスの名前。</dd>
-   <dt>LOCATION (必須)</dt>
-   <dd>インスタンスを作成する場所。</dd>
-   <dt>--cells CELLS</dt>
-   <dd>この CFEE 用のセルの数を指定します。 デフォルトは 2、最小は 1 です。1 セル CFEE には高可用性は望めません。</dd>
-   <dt>--isolation ISOLATION</dt>
-   <dd>IBM Kubernetes クラスターの独立性を指定します。 オプションは「dedicated」と「shared」です。 デフォルトは「shared」です。「dedicated」クラスターの場合は課金が増えます。</dd>
-   <dt>--private-vlan ID</dt>
-   <dd>プライベート VLAN の ID を指定します。 デフォルトでは、使用可能な VLAN のセットが検出されるか、ペアが作成されます。</dd>
-   <dt>--public-vlan ID</dt>
-   <dd>パブリック VLAN の ID を指定します。 デフォルトでは、使用可能な VLAN のセットが検出されるか、ペアが作成されます。</dd>
-   <dt>--plan ID</dt>
-   <dd>プランの ID を指定します。 デフォルトでは、標準プランにプロビジョンされます。</dd>
-  </dl>
+<dl>
+  <dt>-n, --name NAME (必須)</dt>
+  <dd>CFEE の名前を指定します。名前は 24 文字以下で、先頭は文字でなければならず、英数字、「-」、「_」および「.」のみを使用できます。</dd>
+  <dt>--location LOCATION (必須)</dt>
+  <dd>この CFEE をプロビジョンするデータ・センターを指定します (例: dal10)。指定できるデータ・センターを確認するには、「ibmcloud cfee create-locations」を実行します。</dd>
+  <dt>--cells CELLS</dt>
+  <dd>この CFEE 用のセルの数を指定します。 デフォルトは 2、最小は 1 です。1 セル CFEE には高可用性は望めません。</dd>
+  <dt>--private-access</dt>
+  <dd>CFEE の一部としてプロビジョンする PostgreSQL データベースのネットワーク・アクセス・タイプを指定します。このフラグは、アカウントが VRF でサービス・エンドポイントが有効な場合にのみ設定します。このフラグを設定すると、プライベート・アクセス・エンドポイントが使用されます。</dd>
+  <dt>--virtual-dedicated-hardware</dt>
+  <dd>専用ハードウェアを使用する場合、お客様のワーカー・ノードは、お客様のアカウント専用のインフラストラクチャーでホストされます。 共有ハードウェアを使用する場合、ハイパーバイザーや物理ハードウェアなどのインフラストラクチャー・リソースは、他の IBM のお客様と共有されます。ただし、各ワーカー・ノードはお客様のシングル・テナントです。 このフラグを設定しない場合は、「共有」がデフォルトです。「専用」のワーカーを使用するには、追加のコストがかかります。</dd>
+  <dt>--private-vlan ID</dt>
+  <dd>プライベート VLAN の ID を指定します。 デフォルトでは、使用可能な VLAN のセットが使用されるか、ペアが 1 つ自動的に作成されます。</dd>
+  <dt>--public-vlan ID</dt>
+  <dd>パブリック VLAN の ID を指定します。 デフォルトでは、使用可能な VLAN のセットが使用されるか、ペアが 1 つ自動的に作成されます。</dd>
+  <dt>--plan ID</dt>
+  <dd>プランの ID を指定します。 デフォルトでは、標準プランが使用されます。</dd>
+  <dt>-c PARAMETERS_AS_JSON</dt>
+  <dd>インラインまたはファイルのいずれかで提供される API 固有の構成パラメーターを含む、有効な JSON オブジェクト。 サポートされている構成パラメーターのリストについては、特定のカタログ項目 (https://cloud.ibm.com/apidocs/cfaas#provision-new-cfee-environment) を参照してください。 これは、マルチゾーンの CFEE をプロビジョニングする場合に必要です。注: この CLI コマンドでは、他のすべてのフラグは無視され、resource_group_id、access_token、refresh_token のフィールドが処理されます。</dd>
+</dl>
 
 <strong>例</strong>:
 
 `test-cfee` という名前のインスタンスを `dal10` に作成します。
-
 ```
 ibmcloud cfee create test-cfee dal10
 ```
 
 `test-cfee` という名前の `dedicated` インスタンスを `dal10` に `4` 個のセルで作成します。
-
 ```
 ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 ```
@@ -730,14 +732,17 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 
 ターゲット地域の使用可能なデータ・センターのリストの取得を要求します
 ```
-ibmcloud cfee create-locations
+ibmcloud cfee create-locations [--output FORMAT]
 ```
 {: codeblock}
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
-
+<dl>
+  <dt>--output FORMAT</dt>
+  <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
+</dl>
 
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
@@ -763,16 +768,16 @@ ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [
 <strong>例</strong>:
 
 ユーザー `name@example.com` の CFEE 作成権限を検査します。
-
 ```
 ibmcloud cfee create-permission-get name@example.com
 ```
+{: codeblock}
 
 ユーザー `name@example.com` およびアクセス・グループ `test-access-group` の CFEE 作成権限を検査します。
-
 ```
 ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ```
+{: codeblock}
 
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
@@ -825,4 +830,49 @@ ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
    <dd>安定状態になるまでこの呼び出しを繰り返してポーリングするかどうかを指定します。</dd>
    <dt>--output FORMAT</dt>
    <dd>状況の出力形式を指定します。現在は JSON のみがサポートされています。</dd>
+  </dl>
+
+## ibmcloud cfee monitoring-enable
+{: #ibmcloud_cfee_monitoring-enable}
+
+ターゲットにしている CFEE 環境のモニタリングを有効にします。
+```
+ibmcloud cfee monitoring-enable
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+  <dl>
+  </dl>
+
+## ibmcloud cfee monitoring-disable
+{: #ibmcloud_cfee_monitoring-disable}
+
+ターゲットにしている CFEE 環境のモニタリングを無効にします。
+```
+ibmcloud cfee monitoring-disable
+```
+{: codeblock}
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+  <dl>
+  </dl>
+
+## ibmcloud cfee monitoring-status
+{: #ibmcloud_cfee_monitoring-status}
+
+ターゲットにしている CFEE 環境のモニタリングに対して最後に行われた有効化/無効化の操作の状況を確認します。
+```
+ibmcloud cfee monitoring-status [--poll]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+  <dl>
+   <dt>--poll</dt>
+   <dd>安定状態になるまでこの呼び出しを繰り返してポーリングするかどうかを指定します。</dd>
   </dl>

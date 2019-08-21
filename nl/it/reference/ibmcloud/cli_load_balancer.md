@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
+keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
 subcollection: cloud-cli
 
@@ -81,9 +81,9 @@ ibmcloud sl loadbal group-add ID_PROGRAMMA_DI_BILANCIAMENTO_DEL_CARICO [OPZIONI]
 <dt>-p, --port</dt>
 <dd>Obbligatorio. Il numero di porta.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Obbligatorio. L'ID del tipo di instradamento. Esegui 'ibmcloud sl loadbal routing-types' per trovare un ID.</dd>
+<dd>Obbligatorio. L'ID del tipo di instradamento. Esegui `ibmcloud sl loadbal routing-types` per trovare un ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Obbligatorio. L'ID del metodo di instradamento. Esegui 'ibmcloud sl loadbal routing-methods' per trovare un ID.</dd>
+<dd>Obbligatorio. L'ID del metodo di instradamento. Esegui `ibmcloud sl loadbal routing-methods` per trovare un ID.</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-delete
@@ -115,9 +115,9 @@ ibmcloud sl loadbal group-edit ID_PROGRAMMA_DI_BILANCIAMENTO_DEL_CARICO ID_GRUPP
 <dt>-p, --port</dt>
 <dd>Modifica il numero di porta.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Modifica l'ID del tipo di instradamento. Esegui 'ibmcloud sl loadbal routing-types' per trovare un ID.</dd>
+<dd>Modifica l'ID del tipo di instradamento. Esegui `ibmcloud sl loadbal routing-types` per trovare un ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Modifica l'ID del metodo di instradamento. Esegui 'ibmcloud sl loadbal routing-methods' per trovare un ID.</dd>
+<dd>Modifica l'ID del metodo di instradamento. Esegui `ibmcloud sl loadbal routing-methods` per trovare un ID.</dd>
 </dl>
 
 ## ibmcloud sl loadbal group-reset

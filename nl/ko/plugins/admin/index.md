@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -36,7 +36,7 @@ Cloud Foundry CLI는 Cygwin에 의해 지원되지 않습니다. Cygwin 명령�
 
 Cloud Foundry CLI가 설치된 후에 {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인을 추가할 수 있습니다.
 
-이전에 {{site.data.keyword.cloud_notm}} 관리 플러그인을 설치한 경우, 최신 업데이트를 가져오려면 이 플러그인을 설치 제거하고 저장소를 삭제한 후 설치해야 합니다.
+이전에 {{site.data.keyword.cloud_notm}} 관리 플러그인을 설치한 경우, 최신 업데이트를 가져오려면 이 플러그인을 설치 제거하고 저장소를 삭제한 후 다시 설치해야 합니다.
 {: tip}
 
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
@@ -169,7 +169,7 @@ cf ba invite-users-to-public -userid=user_email -organization=dedicated_org_id -
 ### {{site.data.keyword.Bluemix_dedicated_notm}}에서 초대된 사용자 나열
 {: #admin_dedicated_list}
 
-[**`invite-users-to-public`** 명령](#admin_dedicated_invite_public)으로 {{site.data.keyword.cloud_notm}} 계정에 데디케이티드 환경 사용자를 초대한 경우, 계정의 사용자를 나열하여 초대 상태를 볼 수 있습니다. 기존 IBM ID가 있는 초대된 사용자의 상태는 ACTIVE입니다. 기존 IBM ID가 없는 초대된 사용자의 상태는 계정에 대한 초대 수락 여부에 따라 PENDING 또는 ACTIVE입니다. {{site.data.keyword.cloud_notm}} 계정에 사용자를 나열하려면 다음을 수행하십시오.
+[**`invite-users-to-public`** 명령](#admin_dedicated_invite_public)으로 {{site.data.keyword.cloud_notm}} 계정에 데디케이티드 환경 사용자를 초대한 경우, 계정의 사용자를 나열하여 초대 상태를 볼 수 있습니다. 기존 IBM ID가 있는 초대된 사용자는 ACTIVE 상태입니다. 기존 IBM ID가 없는 초대된 사용자의 상태는 초대 수락 여부에 따라 PENDING 또는 ACTIVE입니다. {{site.data.keyword.cloud_notm}} 계정에 사용자를 나열하려면 다음을 수행하십시오.
 
 ```
 cf ba invite-users-status -apikey=public_api_key
@@ -200,7 +200,7 @@ cf ba search-users -name=user_name -permission=permission_value -organization=or
 <dt>user_name</dt>
 <dd>사용자의 이름입니다.</dd>
 <dt>permission_value</dt>
-<dd>사용자에게 지정된 권한입니다. 사용 가능한 권한은 admin(또는 superuser), login(또는 basic), catalog.read, catalog.write, reports.read, reports.write, users.read 또는 users.write입니다. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다.</dd>
+<dd>사용자에게 지정된 권한입니다. 사용 가능한 권한은 admin(또는 superuser), log in(또는 basic), catalog.read, catalog.write, reports.read, reports.write, users.read 또는 users.write입니다. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다.</dd>
 <dt>organization_value</dt>
 <dd>사용자가 속한 조직 이름입니다. 동일한 조회에 권한 매개변수가 있으면 이 매개변수를 사용할 수 없습니다.</dd>
 <dt>role_value</dt>
@@ -223,7 +223,7 @@ cf ba set-permissions user_name permission access
 <dt>user_name</dt>
 <dd>사용자의 이름입니다.</dd>
 <dt>permission</dt>
-<dd>사용자에게 지정된 권한을 설정합니다. 사용 가능한 권한은 admin(또는 superuser), login(또는 basic), catalog.read, catalog.write, reports.read, reports.write, users.read 또는 users.write입니다. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다.</dd>
+<dd>사용자에게 지정된 권한을 설정합니다. 사용 가능한 권한은 admin(또는 superuser), log in(또는 basic), catalog.read, catalog.write, reports.read, reports.write, users.read 또는 users.write입니다. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다.</dd>
 <dt>access</dt>
 <dd>카탈로그, 보고서 또는 사용자 권한의 경우 `read` 또는 `write`로 액세스 레벨을 설정해야 합니다.</dd>
 </dl>
@@ -267,7 +267,7 @@ cf ba enable-managers-add-users
 ### 관리자가 사용자를 추가할 수 없도록 설정
 {: #clius_dmau}
 
-조직 관리자가 **`enable-managers-add-users`** 명령을 사용하여 {{site.data.keyword.cloud_notm}} 환경에서 자신이 관리하는 조직에 사용자를 추가할 수 있도록 설정된 경우 및 수퍼유저 권한이 있는 경우 이 설정을 제거할 수 있습니다. 관리자가 사용자를 추가할 수 없도록 하려면 다음 명령을 사용하십시오.
+관리자가 사용자를 추가할 수 없도록 하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba disable-managers-add-users
@@ -868,9 +868,9 @@ cf ba update-service-broker broker_name user_name password broker_url
 ## 애플리케이션 보안 그룹 관리
 {: #admin_secgro}
 
-애플리케이션 보안 그룹(ASG)에 대해 작업하려면 로컬 또는 데디케이티드 환경의 전체 액세스 관리자여야 합니다. 환경의 모든 사용자는 명령으로 대상이 되는 조직의 사용 가능한 ASG를 나열할 수 있습니다. 그러나 ASG의 작성, 업데이트 또는 바인드를 수행하려면 {{site.data.keyword.cloud_notm}} 환경의 관리자여야 합니다.
+애플리케이션 보안 그룹(ASG)에 대해 작업하려면 로컬 또는 데디케이티드 환경의 전체 액세스 관리자여야 합니다. 환경의 모든 사용자는 명령을 사용하여 대상으로 지정되는 조직의 사용 가능한 ASG를 나열할 수 있습니다. 그러나 ASG의 작성, 업데이트 또는 바인드를 수행하려면 {{site.data.keyword.cloud_notm}} 환경의 관리자여야 합니다.
 
-ASG는 {{site.data.keyword.cloud_notm}} 환경에서 앱의 아웃바운드 트래픽을 제어하는 가상 방화벽 역할을 합니다. 각 ASG는 네트워크 안팎으로 특정 트래픽과 통신을 허용하는 규칙의 목록으로 구성됩니다. 하나 이상의 ASG를 특정 보안 그룹 세트(예: 글로벌 액세스를 적용하는 데 사용되는 그룹 세트)에 바인딩하거나 {{site.data.keyword.cloud_notm}} 환경에서 조직 내의 영역에 바인딩할 수 있습니다.
+ASG는 {{site.data.keyword.cloud_notm}} 환경에서 앱의 아웃바운드 트래픽을 제어하는 가상 방화벽 역할을 합니다. 각 ASG는 네트워크 안팎으로 특정 트래픽과 통신을 허용하는 규칙의 목록으로 구성됩니다. 하나 이상의 ASG를 특정 보안 그룹 세트에 바인딩할 수 있습니다. 예를 들어, 그룹 세트에 글로벌 액세스를 적용하거나 {{site.data.keyword.cloud_notm}} 환경 내의 조직에 영역을 바인딩할 수 있습니다.
 
 {{site.data.keyword.cloud_notm}}는 처음에 외부 네트워크에 대한 모든 액세스가 제한된 상태로 설정됩니다. IBM에서 작성한 두 보안 그룹(`public_networks`, `dns`)을 사용하면 이들 그룹을 기본 Cloud Foundry 보안 그룹 세트에 바인딩할 때 외부 네트워크에 대한 글로벌 액세스가 가능합니다. 글로벌 액세스를 적용하는 데 사용되는 Cloud Foundry의 두 보안 그룹 세트는 **기본 스테이징** 그룹 세트와 **기본 실행** 그룹 세트입니다. 이 그룹 세트는 모든 실행 중인 앱 또는 모든 스테이징 앱에 대한 트래픽을 허용하는 규칙을 적용합니다. 이 두 개의 보안 그룹 세트에 바인딩하지 않으려면 Cloud Foundry 그룹 세트에서 바인드를 해제한 후 특정 영역에 보안 그룹을 바인딩할 수 있습니다. 자세한 정보는 [애플리케이션 보안 그룹 바인딩](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
 

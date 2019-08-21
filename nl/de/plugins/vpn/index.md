@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-07-12"
 
-keywords: vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
+keywords: cli, vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
 subcollection: cloud-cli
 
@@ -28,7 +28,7 @@ Das {{site.data.keyword.vpn_short}}-Plug-in ist für Windows-, MAC- und Linux-Be
 
 Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Details finden Sie unter [Cloud Foundry-Befehlszeilenschnittstelle](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
 
-## Plug-in für die Befehlszeilenschnittstelle VPN installieren
+## VPN-CLI-Plug-in installieren
 {: #install-vpn-cli-plugin}
 
 Wenn Sie eine Vorgängerversion des {{site.data.keyword.vpn_short}}-CLI-Plug-ins besitzen, muss diese zuerst deinstalliert werden. Verwenden Sie den folgenden Befehl:
@@ -41,7 +41,7 @@ cf uninstall-plugin vpn
 
 ### Lokal installieren
 
-1. Laden Sie das {{site.data.keyword.vpn_short}}-Plug-in für Ihre Plattform aus dem [{{site.data.keyword.cloud_notm}} CLI-Plug-in-Repository](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link") herunter.
+1. Laden Sie das {{site.data.keyword.vpn_short}}-Plug-in für Ihre Plattform aus dem [{{site.data.keyword.cloud_notm}}-CLI-Plug-in-Repository](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link") herunter.
 
 2. Installieren Sie das {{site.data.keyword.vpn_short}}-Plug-in mit dem folgenden Befehl:
 
@@ -119,7 +119,7 @@ Die IP-Adresse des fernen Endpunkts des VPN-Tunnels.
 
 **-admin_state:** Der Status der VPN-Verbindung. Werte: UP oder DOWN.
 
-**-dpd-action:** Die auszuführende Aktion, wenn der Peer als inaktiv erkannt wird. Werte: hold; clear; disabled; restart; restart-by-peer. Standardwert: hold
+**-dpd-action:** Die Aktion, die ausgeführt wird, wenn der Peer als inaktiv erkannt wird. Werte: hold; clear; disabled; restart; restart-by-peer. Standardwert: hold
 
 **-gateway_ip:** Die IP-Adresse des lokalen VPN-Tunnelendpunkts.
 
@@ -348,7 +348,7 @@ Der vorab verteilte Schlüssel.
 
 **-admin_state:** Der Status der VPN-Verbindung. Werte: UP oder DOWN.
 
-**-dpd-action:** Die auszuführende Aktion, wenn der Peer als inaktiv erkannt wird. Werte: hold; clear; disabled; restart; restart-by-peer. Standardwert: hold
+**-dpd-action:** Die Aktion, die ausgeführt wird, wenn der Peer als inaktiv erkannt wird. Werte: hold; clear; disabled; restart; restart-by-peer. Standardwert: hold
 
 **-gateway_ip:** Die IP-Adresse des lokalen VPN-Tunnelendpunkts.
 

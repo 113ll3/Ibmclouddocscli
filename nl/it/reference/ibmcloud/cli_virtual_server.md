@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Creazione e gestione di server virtuali
 {: #cli-virtual-servers}
 
-I {{site.data.keyword.BluVirtServers}} sono server virtuali scalabili acquistati con allocazioni di memoria e core dedicati. Sono una opzione molto valida se stai cercando risorse di calcolo che è possibile aggiungere in pochi minuti, con accesso a funzioni come i template immagine. 
+I {{site.data.keyword.BluVirtServers}} sono server virtuali scalabili acquistati con allocazioni di memoria e core dedicati. Sono un'opzione molto valida se stai cercando risorse di calcolo che è possibile aggiungere in pochi minuti, con accesso a funzioni come i template immagine. 
 
 Utilizza i seguenti comandi per gestire i server virtuali dell'infrastruttura classica.
 {: shortdesc}
@@ -96,7 +96,7 @@ ibmcloud sl vs create [OPZIONI]
 <dt>-o, --os</dt>
 <dd>Codice di installazione SO. Suggerimento: puoi specificare <OS>_LATEST.</dd>
 <dt>--image</dt>
-<dd>ID immagine. Vedi: 'ibmcloud sl image list' per riferimento.</dd>
+<dd>ID immagine. Vedi: `ibmcloud sl image list` per riferimento.</dd>
 <dt>--billing</dt>
 <dd>Frequenza di fatturazione. Il valore predefinito è: hourly. Le opzioni sono: hourly, monthly.</dd>
 <dt>--dedicated</dt>
@@ -290,7 +290,7 @@ ibmcloud sl vs host-create [OPZIONI]
 <dt>-b, --billing</dt>
 <dd>Frequenza di fatturazione. Il valore predefinito è: hourly. Le opzioni sono: hourly, monthly.</dd>
 <dt>-v, --vlan-private</dt>
-<dd>L'ID della VLAN privata su cui desideri posizionare l'host dedicato. Vedi: 'ibmcloud sl vlan list' per riferimento.</dd>
+<dd>L'ID della VLAN privata su cui desideri posizionare l'host dedicato. Vedi: `ibmcloud sl vlan list` per riferimento.</dd>
 <dt>-f, --force</dt>
 <dd>Forza l'operazione senza conferma.</dd>
 </dl>
@@ -354,8 +354,8 @@ ibmcloud sl vs list [OPZIONI]
 <dd>Filtra per ID dell'utente proprietario delle istanze.</dd>
 <dt>--sortby</dt>
 <dd>Colonna in base alla quale ordinare; il valore predefinito è:hostname, le opzioni sono:id,hostname,domain,datacenter,cpu,memory,public_ip,private_ip.</dd>
-<dt>--columns</dt>
-<dd>Colonne da visualizzare, il valore predefinito è:id,hostname,public_ip,private_ip,datacenter,action, le opzioni sono: guid,power_state,created_by,tags.</dd>
+<dt>--column</dt>
+<dd>Colonna da visualizzare; il valore predefinito è:id,hostname,public_ip,private_ip,datacenter,action; le opzioni sono: guid,power_state,created_by,tags.</dd>
 </dl>
 
 **Esempi**:
@@ -491,7 +491,7 @@ ibmcloud sl vs reload IDENTIFICATIVO [OPZIONI]
 <dt>--image</dt>
 <dd>ID immagine. L'impostazione predefinita è l'utilizzo del sistema operativo corrente.</dd>
 <dt>Vedi:</dt>
-<dd>'ibmcloud sl image list' per riferimento.</dd>
+<dd>`ibmcloud sl image list` per riferimento.</dd>
 <dt>-k, --key</dt>
 <dd>Gli ID delle chiavi SSH da aggiungere all'utente root (più ricorrenze consentite).</dd>
 <dt>-f, --force</dt>

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-07-12"
 
-keywords: vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
+keywords: cli, vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
 subcollection: cloud-cli
 
@@ -115,7 +115,7 @@ cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> 
 
 **-admin_state:** VPN 接続の状況。 値: UP または DOWN。
 
-**-dpd-action:** ピアが非活動として検出された場合に取るアクション。 値: hold、clear、disabled、restart、restart-by-peer。 デフォルト値: hold
+**-dpd-action:** ピアが非活動として検出された場合に実行するアクション。値: hold、clear、disabled、restart、restart-by-peer。 デフォルト値: hold
 
 **-gateway_ip:** ローカル VPN トンネル・エンドポイントの IP アドレス。
 
@@ -336,7 +336,7 @@ cf vpn-update connection <connection name> -g <gateway name> -cip <customer gate
 
 **-admin_state:** VPN 接続の状況。 値: UP または DOWN。
 
-**-dpd-action:** ピアが非活動として検出された場合に取るアクション。 値: hold、clear、disabled、restart、restart-by-peer。 デフォルト値: hold
+**-dpd-action:** ピアが非活動として検出された場合に実行するアクション。値: hold、clear、disabled、restart、restart-by-peer。 デフォルト値: hold
 
 **-gateway_ip:** ローカル VPN トンネル・エンドポイントの IP アドレス。
 

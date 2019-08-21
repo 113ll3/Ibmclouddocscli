@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-26"
+lastupdated: "2019-04-15"
 
-keywords: cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
+keywords: cli, cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
 subcollection: cloud-cli
 
@@ -224,7 +224,7 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
    <dd>経路によってマップされる cf アプリケーションまたはコンテナー・
 グループの名前。</dd>
    <dt>DOMAIN (必須)</dt>
-   <dd>経路のドメイン。 例えば、mychinabluemix.net または chinabluemix.net などです。 </dd>
+   <dd>経路のドメイン。 例えば、mybluemix.net です。</dd>
    <dt>-n <i>HOST_NAME</i> (オプション)</dt>
    <dd>経路のホスト名。 指定されない場合、ホスト名は、デフォルトで、アプリケーション名またはコンテナー・グループ名に設定されます。</dd>
    </dl>
@@ -232,22 +232,22 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 <strong>例</strong>:
 
 指定されたドメインで `my-app` に経路をマップします。
-
 ```
-ibmcloud app route-map my-app mychinabluemix.net
+ibmcloud app route-map my-app mybluemix.net
 ```
 
 指定されたドメインとホスト名で「my-container-group」に経路をマップします。
+```
+ibmcloud app route-map my-container-group bluemix.net -n abc
+```
 
-```
-ibmcloud app route-map my-container-group chinabluemix.net -n abc
-```
+デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。 `appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)を参照してください。
+{: tip}
 
 ## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
 指定された経路を既存 cf アプリケーションまたはコンテナー・グループからマップ解除します。
-
 ```
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
@@ -260,24 +260,25 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (必須)</dt>
    <dd>cf アプリケーションまたはコンテナー・グループの名前。</dd>
    <dt>DOMAIN (必須)</dt>
-   <dd>経路のドメイン (例えば、mychinabluemix.net または chinabluemix.net)。</dd>
+   <dd>経路のドメイン。 例えば、mybluemix.net です。</dd>
    <dt>-n <i>HOST_NAME</i> (オプション)</dt>
    <dd>経路のホスト名。 指定されない場合、ホスト名は、デフォルトで、アプリケーション名またはコンテナー・グループ名に設定されます。</dd>
    </dl>
 
 <strong>例</strong>:
 
-`my-app.mychinabluemix.net` を `my-app` からマップ解除するには、以下のように指定します。
+`my-app.mybluemix.net` を `my-app` からマップ解除するには、以下のように指定します。
+```
+ibmcloud app route-unmap my-app mybluemix.net
+```
 
+`abc.bluexmix.net` を `my-container-group` からマップ解除するには、以下のように指定します。
 ```
-ibmcloud app route-unmap my-app mychinabluemix.net
+ibmcloud app route-unmap my-container-group bluemix.net -n abc
 ```
 
-`abc.chinabluexmix.net` を `my-container-group` からマップ解除するには、以下のように指定します。
-
-```
-ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
-```
+デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。 `appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)を参照してください。
+{: tip}
 
 ## ibmcloud app route-create
 {: #ibmcloud_app_route_create}

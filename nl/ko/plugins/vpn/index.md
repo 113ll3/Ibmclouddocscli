@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-07-12"
 
-keywords: vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
+keywords: cli, vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
 subcollection: cloud-cli
 
@@ -119,7 +119,7 @@ VPN 터널의 원격 엔드포인트 IP 주소입니다.
 
 **-admin_state:** VPN 연결 상태입니다. 값: UP 또는 DOWN.
 
-**-dpd-action:** 피어가 작동 중지로 발견될 때 수행해야 하는 조치입니다. 값: hold, clear, disabled, restart, restart-by-peer. 기본값: hold
+**-dpd-action:** 피어가 작동 중지된 것으로 발견될 때 수행해야 하는 조치입니다. 값: hold, clear, disabled, restart, restart-by-peer. 기본값: hold
 
 **-gateway_ip:** 로컬 VPN 터널 엔드포인트의 IP 주소입니다.
 
@@ -349,7 +349,7 @@ CIDR 형식의 서브넷 주소입니다.
 
 **-admin_state:** VPN 연결 상태입니다. 값: UP 또는 DOWN.
 
-**-dpd-action:** 피어가 작동 중지로 발견될 때 수행해야 하는 조치입니다. 값: hold, clear, disabled, restart, restart-by-peer. 기본값: hold
+**-dpd-action:** 피어가 작동 중지된 것으로 발견될 때 수행해야 하는 조치입니다. 값: hold, clear, disabled, restart, restart-by-peer. 기본값: hold
 
 **-gateway_ip:** 로컬 VPN 터널 엔드포인트의 IP 주소입니다.
 

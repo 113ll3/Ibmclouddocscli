@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-26"
+lastupdated: "2019-04-15"
 
-keywords: cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
+keywords: cli, cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
 subcollection: cloud-cli
 
@@ -223,7 +223,7 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME（必需）</dt>
    <dd>要使用路径映射到的 cf 应用程序或容器组的名称。</dd>
    <dt>DOMAIN（必需）</dt>
-   <dd>路径的域。例如，mychinabluemix.net 或 chinabluemix.net。</dd>
+   <dd>路径的域。例如，mybluemix.net。</dd>
    <dt>-n <i>HOST_NAME</i>（可选）</dt>
    <dd>路径的主机名。如果未提供，缺省情况下主机名将设置为应用程序名称或容器组名称。</dd>
    </dl>
@@ -231,22 +231,22 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 <strong>示例</strong>：
 
 使用指定的域将路径映射到 `my-app`：
-
 ```
-ibmcloud app route-map my-app mychinabluemix.net
+ibmcloud app route-map my-app mybluemix.net
 ```
 
 使用指定域和主机名将路径映射到“my-container-group”：
+```
+ibmcloud app route-map my-container-group bluemix.net -n abc
+```
 
-```
-ibmcloud app route-map my-container-group chinabluemix.net -n abc
-```
+缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。有关迁移到 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
+{: tip}
 
 ## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
 取消来自现有 cf 应用程序或容器组中的指定路径映射。
-
 ```
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
@@ -259,24 +259,25 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME（必需）</dt>
    <dd>cf 应用程序或容器组的名称。</dd>
    <dt>DOMAIN（必需）</dt>
-   <dd>路径的域（例如，mychinabluemix.net 或 chinabluemix.net）。</dd>
+   <dd>路径的域。例如，mybluemix.net。</dd>
    <dt>-n <i>HOST_NAME</i>（可选）</dt>
    <dd>路径的主机名。如果未提供，缺省情况下主机名将设置为应用程序名称或容器组名称。</dd>
    </dl>
 
 <strong>示例</strong>：
 
-从 `my-app` 取消 `my-app.mychinabluemix.net` 的映射：
+从 `my-app` 取消 `my-app.mybluemix.net` 的映射：
+```
+ibmcloud app route-unmap my-app mybluemix.net
+```
 
+从 `my-container-group` 取消 `abc.bluexmix.net` 的映射：
 ```
-ibmcloud app route-unmap my-app mychinabluemix.net
+ibmcloud app route-unmap my-container-group bluemix.net -n abc
 ```
 
-从 `my-container-group` 取消 `abc.chinabluexmix.net` 的映射：
-
-```
-ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
-```
+缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。有关迁移到 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
+{: tip}
 
 ## ibmcloud app route-create
 {: #ibmcloud_app_route_create}

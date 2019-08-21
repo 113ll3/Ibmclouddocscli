@@ -2,13 +2,21 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-08-07"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
 subcollection: cloud-cli
 
 ---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:external: target="_blank" .external}
 
 # FAQ
 {: #ibm-cli-faq}
@@ -36,14 +44,14 @@ ibmcloud update
 ## 新しい CLI リリースに関する通知を受け取るにはどうすればよいですか?
 {: #cli-get-notified}
 
-はい。新しい CLI リリースが利用できるようになるときに情報を受け取れます。 [{{site.data.keyword.cloud_notm}} CLI リリース・リポジトリー](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") にサブスクライブします。
+はい。新しい CLI リリースが利用できるようになるときに情報を受け取れます。 [{{site.data.keyword.cloud_notm}} CLI リリース・リポジトリー](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}にサブスクライブします。
 
 ## {{site.data.keyword.cloud_notm}} アプリケーションのファイル構造とは何ですか?
 {: #cli-file-structure}
 
 CLI から作成または使用可能化されたアプリケーションには、`cli-config.yml` ファイル内にカプセル化されている事前構成された設定が付属しています。 `cli-config.yml` には、CLI のコマンドによって使用されるデフォルト項目が含まれています。それらは、コマンド・ラインを介して渡す値によってオーバーライドできます。
 
-DevOps ツールチェーンにデプロイされたアプリには、`toolchain.yml` や `pipeline.yml` などのファイルも含まれていることがあります。手動でデプロイするアプリには、`manifest.yml` ファイルや Helm チャート・ファイル (例えば Cloud Foundry や Kubernetes へのデプロイメントなど) を含めることができます。
+DevOps ツールチェーンにデプロイされたアプリには、`toolchain.yml` や `pipeline.yml` などのファイルも含まれていることがあります。 手動でデプロイするアプリには、`manifest.yml` ファイルや Helm チャート・ファイル (例えば Cloud Foundry や Kubernetes へのデプロイメントなど) を含めることができます。
 
 ## ローカル・コンテナーはどのように使用されますか?
 {: #cli-faq-containers}

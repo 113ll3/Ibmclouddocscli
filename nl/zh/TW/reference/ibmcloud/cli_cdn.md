@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
+keywords: cli, content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
 
 subcollection: cloud-cli
 
@@ -79,9 +79,9 @@ ibmcloud sl cdn order [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>-b, --bandwidth</dt>
-<dd>如果未指定，將會使用 CDN 頻寬「隨收隨付制」價格。</dd>
+<dd>CDN 頻寬，如果未指定，將使用「隨收隨付制」價格。</dd>
 <dt>-s, --storage</dt>
-<dd>如果未指定，將會使用 CDN 儲存空間「隨收隨付制」價格。</dd>
+<dd>CDN 儲存空間，如果未指定，將使用「隨收隨付制」價格。</dd>
 <dt>-f, --force</dt>
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>

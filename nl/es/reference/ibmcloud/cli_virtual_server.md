@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-07-12"
 
 keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
@@ -96,7 +96,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-o, --os</dt>
 <dd>Código de instalación de sistema operativo. Consejo: puede especificar <OS>_LATEST.</dd>
 <dt>--image</dt>
-<dd>ID de imagen. Consulte: 'ibmcloud sl image list' como referencia.</dd>
+<dd>ID de imagen. Consulte: `ibmcloud sl image list` como referencia.</dd>
 <dt>--billing</dt>
 <dd>Tasa de facturación. El valor predeterminado es: por hora. Las opciones son: por hora, mensual.</dd>
 <dt>--dedicated</dt>
@@ -290,7 +290,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dt>-b, --billing</dt>
 <dd>Tasa de facturación. El valor predeterminado es: por hora. Las opciones son: por hora, mensual.</dd>
 <dt>-v, --vlan-private</dt>
-<dd>El ID de la VLAN privada donde quiere colocar el host dedicado. Consulte: 'ibmcloud sl vlan list' como referencia.</dd>
+<dd>El ID de la VLAN privada donde quiere colocar el host dedicado. Consulte: `ibmcloud sl vlan list` como referencia.</dd>
 <dt>-f, --force</dt>
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
@@ -491,7 +491,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <dt>--image</dt>
 <dd>ID de imagen. El valor predeterminado es utilizar el sistema operativo actual.</dd>
 <dt>Consulte:</dt>
-<dd>'ibmcloud sl image list' como referencia.</dd>
+<dd>`ibmcloud sl image list` como referencia.</dd>
 <dt>-k, --key</dt>
 <dd>ID de las claves SSH para añadir al usuario root (se permiten varios).</dd>
 <dt>-f, --force</dt>

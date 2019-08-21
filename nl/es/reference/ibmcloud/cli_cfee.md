@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-31"
 
-keywords: cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
+keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
 subcollection: cloud-cli
 
@@ -151,7 +151,7 @@ ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
 <strong>Opciones de mandato</strong>:
   <dl>
    <dt>ORG (obligatorio)</dt>
-   <dd>Nombre de la organización que se está creando.</dd>
+   <dd>Nombre de la organización que se ha de crear.</dd>
    <dt>--env ENV</dt>
    <dd>Nombre de entorno CFEE. Si no se especifica, el valor predeterminado es el entorno CFEE actual.</dd>
    <dt>-q, --quota QUOTA</dt>
@@ -191,7 +191,7 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 <strong>Opciones de mandato</strong>:
   <dl>
    <dt>ORG (obligatorio)</dt>
-   <dd>Nombre de la organización que se va a suprimir.</dd>
+   <dd>El nombre de la organización que se va a suprimir.</dd>
    <dt>--env ENV</dt>
    <dd>Nombre de entorno CFEE. Si no se especifica, el valor predeterminado es el entorno CFEE actual.</dd>
    <dt>-f, --force</dt>
@@ -391,7 +391,7 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
    <dt>--env ENV</dt>
    <dd>Nombre de entorno CFEE. Si no se especifica, el valor predeterminado es el entorno CFEE actual.</dd>
    <dt>--guid</dt>
-   <dd>Recuperar y visualizar el guid del espacio predeterminado. Se suprimirá el resto de la salida del espacio.</dd>
+   <dd>Recuperar y visualizar el guid del espacio. Se suprimirá el resto de la salida del espacio.</dd>
    <dt>-o, --org ORG</dt>
    <dd>Nombre de la organización. Si no se especifica, el valor predeterminado es la organización actual.</dd>
    <dt>--security-group-rules</dt>
@@ -400,7 +400,7 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
 
 <strong>Ejemplos</strong>:
 
-Mostrar la información del espacio `space_example`:
+Mostrar detalles de un espacio llamado `space_example`:
 ```
 ibmcloud cfee space space_example
 ```
@@ -418,7 +418,7 @@ ibmcloud cfee space space_example --security-group-rules
 ```
 {: codeblock}
 
-Mostrar la información del espacio `space_example` de la organización `org_example` y el entorno CFEE `env_example`:
+Mostrar detalles del espacio `space_example`, de la org `org_example` y del entorno de CFEE `env_example`:
 ```
 ibmcloud cfee space space_example -o org_example --env env_example
 ```
@@ -427,7 +427,7 @@ ibmcloud cfee space space_example -o org_example --env env_example
 ## ibmcloud cfee space-create
 {: #ibmcloud_cfee_space_create}
 
-Crear un espacio nuevo
+Crear un espacio:
 ```
 ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 ```
@@ -446,13 +446,13 @@ ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 
 <strong>Ejemplos</strong>:
 
-Crear un espacio nuevo `space_example`:
+Crear un espacio llamado `space_example`:
 ```
 ibmcloud cfee space-create space_example
 ```
 {: codeblock}
 
-Crear un espacio nuevo `space_example` en la organización `org_example` y el entorno CFEE `env_example`:
+Crear un espacio llamado `space_example`, bajo la org `org_example` y el entorno de CFEE `env_example`:
 ```
 ibmcloud cfee space-create space_example -o org_example --env env_example
 ```
@@ -551,7 +551,7 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dt>ROLE (obligatorio)</dt>
    <dd>Nombre del rol de espacio al que se asigna a este usuario. Por ejemplo:
    <ul>
-   <li>SpaceManager: este rol puede invitar y gestionar usuarios, y habilitar características para un espacio dado.</li>
+   <li>SpaceManager: este rol puede invitar y gestionar usuarios, y habilitar características para un espacio.</li>
    <li>SpaceDeveloper: este rol puede crear y gestionar apps y servicios, y ver registros e informes.</li>
    <li>SpaceAuditor: este rol puede ver los registros, informes y valores para el espacio.</li>
    </ul></dd>
@@ -594,7 +594,7 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dt>ROLE (obligatorio)</dt>
    <dd>Nombre del rol del espacio del que se elimina a este usuario. Por ejemplo:
    <ul>
-   <li>SpaceManager: este rol puede invitar y gestionar usuarios, y habilitar características para un espacio dado.</li>
+   <li>SpaceManager: este rol puede invitar y gestionar usuarios, y habilitar características para un espacio.</li>
    <li>SpaceDeveloper: este rol puede crear y gestionar apps y servicios, y ver registros e informes.</li>
    <li>SpaceAuditor: este rol puede ver los registros, informes y valores para el espacio.</li>
    </ul></dd>
@@ -686,41 +686,43 @@ ibmcloud cfee space-users org_example space_example --env env_example
 ## ibmcloud cfee create
 {: #ibmcloud_cfee_create}
 
-Realizar una solicitud para crear una nueva instancia de Cloud Foundry Enterprise Environment:
+Realizar una solicitud para crear una instancia de Cloud Foundry Enterprise Environment:
 ```
-ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
+ibmcloud cfee create [-n, --name NAME] [--location LOCATION] [--cells CELLS] [--virtual-dedicated-hardware] [--private-access] [--private-vlan ID, --public-vlan ID] [--plan ID] [-c PARAMETERS_AS_JSON]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
-  <dl>
-   <dt>NAME (necesario)</dt>
-   <dd>El nombre de la instancia.</dd>
-   <dt>LOCATION (obligatorio)</dt>
-   <dd>La ubicación en la que se va a crear la instancia.</dd>
-   <dt>--cells CELLS</dt>
-   <dd>Especifique el número de células para este CFEE. El valor predeterminado es 2 y el mínimo es 1. En una CFEE de 1 célula, no puede haber alta disponibilidad.</dd>
-   <dt>--isolation ISOLATION</dt>
-   <dd>Especifique el aislamiento del clúster de IBM Kubernetes. Las opciones son "dedicated" y "shared". El valor predeterminado es "shared" y un clúster "dedicated" tiene un coste más alto.</dd>
-   <dt>--private-vlan ID</dt>
-   <dd>Especifique el ID de la VLAN privada. De forma predeterminada, encontraremos un conjunto disponible de VLAN o crearemos un par automáticamente.</dd>
-   <dt>--public-vlan ID</dt>
-   <dd>Especifique el ID de la VLAN pública. De forma predeterminada, encontraremos un conjunto disponible de VLAN o crearemos un par automáticamente.</dd>
-   <dt>--plan ID</dt>
-   <dd>Especifique el ID del plan. De forma predeterminada, suministraremos la cuenta en el plan Estándar.</dd>
-  </dl>
+<dl>
+  <dt>-n, --name NAME (obligatorio)</dt>
+  <dd>Especifique el nombre del CFEE. El nombre no debe superar los 24 caracteres, debe comenzar por una letra y solo puede contener caracteres alfanuméricos, '-', '_' y '.'.</dd>
+  <dt>--location LOCATION (obligatorio)</dt>
+  <dd>Especifique el centro de datos en el que se va a suministrar este CFEE (por ejemplo, dal10). Para ver los centros de datos disponibles, ejecute "ibmcloud cfee create-locations".</dd>
+  <dt>--cells CELLS</dt>
+  <dd>Especifique el número de células para este CFEE. El valor predeterminado es 2 y el mínimo es 1. En un CFEE de una célula, no puede haber alta disponibilidad.</dd>
+  <dt>--private-access</dt>
+  <dd>Especifique el tipo de acceso de red para la base de datos PostgreSQL que se suministra como parte de CFEE. Establezca este distintivo solo si la cuenta es VRF y el punto final de servicio está habilitado. Si se establece este distintivo, se utiliza el punto final de acceso privado.</dd>
+  <dt>--virtual-dedicated-hardware</dt>
+  <dd>Con hardware dedicado, los nodos trabajadores están alojados en la infraestructura dedicada a su cuenta. Con hardware compartido, los recursos de la infraestructura, como el hipervisor y el hardware físico, se comparten con otros clientes de IBM, pero cada uno de los nodos trabajadores es de un único arrendatario. "Shared" es el valor predeterminado si NO se establece este distintivo. El uso de un nodo trabajador dedicado ("dedicated") tiene costes adicionales.</dd>
+  <dt>--private-vlan ID</dt>
+  <dd>Especifique el ID de la VLAN privada. De forma predeterminada, se utiliza un conjunto disponible de VLAN o se crea un par automáticamente.</dd>
+  <dt>--public-vlan ID</dt>
+  <dd>Especifique el ID de la VLAN pública. De forma predeterminada, se utiliza un conjunto disponible de VLAN o se crea un par automáticamente.</dd>
+  <dt>--plan ID</dt>
+  <dd>Especifique el ID del plan. De forma predeterminada, se utiliza un plan estándar.</dd>
+  <dt>-c PARAMETERS_AS_JSON</dt>
+  <dd>Objeto JSON válido que contiene parámetros de configuración específicos de la api, proporcionados en línea o en un archivo. Para ver una lista de los parámetros de configuración admitidos, consulte https://cloud.ibm.com/apidocs/cfaas#provision-new-cfee-environment para ver la entrada del catálogo en particular. Esto es necesario para el suministro de CFEE de varias zonas. Nota: todos los demás distintivos se pasan por alto y el mandato de CLI gestiona los campos resource_group_id, access_token y refresh_token.</dd>
+</dl>
 
 <strong>Ejemplos</strong>:
 
 Crear una instancia denominada `test-cfee` en `dal10`:
-
 ```
 ibmcloud cfee create test-cfee dal10
 ```
 
-Crear una instancia `dedicate` denominada `test-cfee` en `dal10` con `4` células:
-
+Crear una instancia `dedicated` denominada `test-cfee` en `dal10` con `4` células:
 ```
 ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 ```
@@ -730,14 +732,17 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 
 Realizar una solicitud para obtener una lista de los centros de datos disponibles para las regiones de destino
 ```
-ibmcloud cfee create-locations
+ibmcloud cfee create-locations [--output FORMAT]
 ```
 {: codeblock}
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
-
+<dl>
+  <dt>--output FORMAT</dt>
+  <dd>Especificar el formato de salida; actualmente solo se admite JSON.</dd>
+</dl>
 
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
@@ -763,16 +768,16 @@ ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [
 <strong>Ejemplos</strong>:
 
 Comprobar los permisos de creación de CFEE para el usuario `name@example.com`:
-
 ```
 ibmcloud cfee create-permission-get name@example.com
 ```
+{: codeblock}
 
 Comprobar los permisos de creación de CFEE para el usuario `name@example.com` y en el grupo de acceso `test-access-group`:
-
 ```
 ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ```
+{: codeblock}
 
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
@@ -822,7 +827,52 @@ ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
    <dt>NAME o ID (obligatorio)</dt>
    <dd>El nombre o el ID de la instancia de CFEE.</dd>
    <dt>--poll</dt>
-   <dd>Especifique esta opción si desea hacer que esta llamada sea recurrente, para sondear hasta alcanzar un estado estable</dd>
+   <dd>Especifique si desea hacer que esta llamada sea recurrente, para sondear hasta alcanzar un estado estable.</dd>
    <dt>--output FORMAT</dt>
    <dd>Especifique el formato de salida del estado; actualmente solo se da soporte a JSON.</dd>
+  </dl>
+
+## ibmcloud cfee monitoring-enable
+{: #ibmcloud_cfee_monitoring-enable}
+
+Habilitar la supervisión en el entorno CFEE de destino:
+```
+ibmcloud cfee monitoring-enable
+```
+
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
+
+<strong>Opciones de mandato</strong>:
+  <dl>
+  </dl>
+
+## ibmcloud cfee monitoring-disable
+{: #ibmcloud_cfee_monitoring-disable}
+
+Inhabilitar la supervisión en el entorno CFEE de destino:
+```
+ibmcloud cfee monitoring-disable
+```
+{: codeblock}
+
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
+
+<strong>Opciones de mandato</strong>:
+  <dl>
+  </dl>
+
+## ibmcloud cfee monitoring-status
+{: #ibmcloud_cfee_monitoring-status}
+
+Comprobar el estado de la operación de habilitación o inhabilitación de supervisión más reciente en el entorno CFEE de destino:
+```
+ibmcloud cfee monitoring-status [--poll]
+```
+
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
+
+<strong>Opciones de mandato</strong>:
+  <dl>
+   <dt>--poll</dt>
+   <dd>Especifique esta opción si desea hacer que esta llamada sea recurrente, para sondear hasta alcanzar un estado estable</dd>
   </dl>

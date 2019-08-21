@@ -34,7 +34,7 @@ ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 
 <dl>
   <dt>-d MONTH_DATE (オプション)</dt>
-  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。指定されていない場合、今月の使用量が表示されます。</dd>
+  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
   <dt>--output FORMAT (オプション)</dt>
   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
@@ -62,7 +62,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
   <dt>ORG_NAME (必須)</dt>
   <dd>組織の名前。</dd>
   <dt>-d MONTH_DATE (オプション)</dt>
-  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。指定されていない場合、今月の使用量が表示されます。</dd>
+  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
   <dt>--output FORMAT (オプション)</dt>
   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
@@ -83,7 +83,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
   <dt>GROUP_NAME (必須)</dt>
   <dd>リソース・グループの名前。</dd>
   <dt>-d MONTH_DATE (オプション)</dt>
-  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。指定されていない場合、今月の使用量が表示されます。</dd>
+  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
   <dt>--output FORMAT (オプション)</dt>
   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
@@ -106,7 +106,7 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dt>-g GROUP_NAME</dt>
   <dd>リソース・グループを基準にしてインスタンスをフィルターに掛けます。</dd>
   <dt>-d MONTH_DATE (オプション)</dt>
-  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。指定されていない場合、今月の使用量が表示されます。</dd>
+  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
   <dt>--output FORMAT (オプション)</dt>
   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
@@ -135,7 +135,7 @@ ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --accoun
   <dt>--children (オプション)</dt>
   <dd>子の使用レポートを表示します。</dd>
   <dt>--month MONTH (オプション)</dt>
-  <dd>ターゲット月。デフォルトは現在の月です。</dd>
+  <dd>ターゲット月。 デフォルトは現在の月です。</dd>
   <dt>--output FORMAT (オプション)</dt>
   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>

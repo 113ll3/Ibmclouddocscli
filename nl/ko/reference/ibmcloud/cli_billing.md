@@ -49,7 +49,7 @@ ibmcloud billing account-usage -d 2016-06
 ## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
-조직의 월별 사용량 표시(계정 관리자 또는 조직 비용 청구 관리자 전용): 
+조직의 월별 사용량 표시(계정 관리자 또는 조직 비용 청구 관리자 전용):
 ```
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -114,7 +114,7 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
 ## ibmcloud billing enterprise-usage
 {: #ibmcloud_billing_enterprise_usage}
 
-엔터프라이즈 사용량 보고서 표시: 
+엔터프라이즈 사용량 보고서 표시:
 ```
 ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --account-group-id ACCOUNT_GROUP_ID | --account ACCOUNT_NAME | --account-id ACCOUNT_ID] [--month MONTH] [--children] [--output FORMAT]
 ```
@@ -125,17 +125,17 @@ ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --accoun
 
 <dl>
   <dt>--account ACCOUNT_NAME(선택사항)</dt>
-  <dd>대상 계정의 이름입니다. </dd>
+  <dd>대상 계정의 이름입니다.</dd>
   <dt>--account-id ACCOUNT_ID(선택사항)</dt>
-  <dd>대상 계정의 ID입니다. </dd>
+  <dd>대상 계정의 ID입니다.</dd>
   <dt>--account-group ACCOUNT_GROUP_NAME(선택사항)</dt>
-  <dd>대상 계정 그룹의 이름입니다. </dd>
+  <dd>대상 계정 그룹의 이름입니다.</dd>
   <dt>--account-group-id ACCOUNT_GROUP_ID(선택사항)</dt>
-  <dd>대상 계정 그룹의 ID입니다. </dd>
+  <dd>대상 계정 그룹의 ID입니다.</dd>
   <dt>--children(선택사항)</dt>
-  <dd>하위 사용량 보고서를 표시합니다. </dd>
+  <dd>하위 사용량 보고서를 표시합니다.</dd>
   <dt>--month MONTH(선택사항)</dt>
-  <dd>대상 월입니다. 기본값은 현재 월입니다. </dd>
+  <dd>대상 월입니다. 기본값은 현재 월입니다.</dd>
   <dt>--output FORMAT(선택사항)</dt>
   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
