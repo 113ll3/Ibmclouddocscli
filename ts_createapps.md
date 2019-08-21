@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-16"
+lastupdated: "2019-08-21"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -381,6 +381,7 @@ To resolve the issue, set the client's version to the same as the cluster's vers
 ## Why is ibmcloud dev build failing with a user name that includes "@"?
 {: #ts-cli-username}
 {: troubleshoot}
+
 During the image build process, your user name is used for the user in the Docker tools image. If the user name contains any special characters like '@' or '-', then the Docker image build process fails with the following error:
 ```
 Image will have user johnsmith@acme.com with id 501 added
@@ -404,6 +405,7 @@ ibmcloud dev build --use-root-user-tools
 ## The ibm.biz short URL is unreachable for CLI dev plug-in installation
 {: ts-cli-shorturl}
 {: troubleshoot}
+
 Installing the {{site.data.keyword.dev_cli_short}} CLI plug-in with the `https://ibm.biz/idt-installer` link might fail if the `ibm.biz` domain is unreachable.
 
 To resolve the issue, substitute the short ibm.biz installer URL with the following full paths to the installation scripts:
