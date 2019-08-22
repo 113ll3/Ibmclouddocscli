@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-31"
+lastupdated: "2019-08-05"
 
 keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
@@ -696,15 +696,15 @@ ibmcloud cfee create [-n, --name NAME] [--location LOCATION] [--cells CELLS] [--
 <strong>Options de commande</strong> :
 <dl>
   <dt>-n, --name NAME (obligatoire)</dt>
-  <dd>Spécifier le nom de l'environnement CFEE. Il doit comporter 24 caractères au maximum, commencer par une lettre et contenir uniquement des caractères alphanumériques ou les caractères "-", "_" et ".".</dd>
+  <dd>Spécifier le nom de l'environnement CFEE. Il doit comporter 24 caractères au maximum, commencer par une lettre et contenir uniquement des caractères alphanumériques, `-`, `_` et `.`.</dd>
   <dt>--location LOCATION (obligatoire)</dt>
-  <dd>Spécifiez le centre de données pour la mise à disposition de cet environnement CFEE (dal10, par exemple). Pour trouver les centres de données disponibles, exécutez la commande "ibmcloud cfee create-locations".</dd>
+  <dd>Spécifiez le centre de données pour la mise à disposition de cet environnement CFEE (dal10, par exemple). Pour trouver les centres de données disponibles, exécutez la commande `ibmcloud cfee create-locations`.</dd>
   <dt>--cells CELLS</dt>
   <dd>Spécifiez le nombre de cellules pour cette instance CFEE. La valeur par défaut est 2 et la valeur minimale est 1. Dans une cellule CFEE, il ne peut pas y avoir de haute disponibilité.</dd>
   <dt>--private-access</dt>
   <dd>Spécifiez le type d'accès réseau de la base de données PostgreSQL mise à disposition dans le cadre de CFEE. Ne définissez l'indicateur que si le compte est VRF et le noeud final de service activé. Si cet indicateur est défini, le noeud final d'accès privé est utilisé.</dd>
   <dt>--virtual-dedicated-hardware</dt>
-  <dd>Avec un matériel dédié, vos noeuds worker sont hébergés sur l'infrastructure réservée à votre compte. Avec un matériel partagé, les ressources d'infrastructure, telles que l'hyperviseur et le matériel physique, sont partagés avec d'autres clients IBM mais chaque noeud worker est un noeud à service exclusif qui vous est propre. "Partagé" est la valeur par défaut si l'indicateur n'est PAS défini. L'utilisation d'un noeud worker "dédié" entraîne des coûts supplémentaires.</dd>
+  <dd>Avec un matériel dédié, vos noeuds worker sont hébergés sur l'infrastructure réservée à votre compte. Avec un matériel partagé, les ressources d'infrastructure, telles que l'hyperviseur et le matériel physique, sont partagés avec d'autres clients IBM mais chaque noeud worker est un noeud à service exclusif qui vous est propre. `Partagé` est la valeur par défaut si l'indicateur n'est PAS défini. L'utilisation d'un noeud worker `dédié` entraîne des coûts supplémentaires.</dd>
   <dt>--private-vlan ID</dt>
   <dd>Spécifiez l'ID de VLAN privé. Par défaut, un ensemble disponible de réseaux VLAN est utilisé ou une paire est créée pour vous.</dd>
   <dt>--public-vlan ID</dt>
@@ -760,7 +760,7 @@ ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [
    <dt>USER_NAME (obligatoire)</dt>
    <dd>Nom de l'utilisateur.</dd>
    <dt>--access-group GROUP_NAME</dt>
-   <dd>Nom du groupe d'accès dans lequel vérifier les droits. Le groupe d'accès par défaut est "cfee-provision-access-group".</dd>
+   <dd>Nom du groupe d'accès dans lequel vérifier les droits. Le groupe d'accès par défaut est `cfee-provision-access-group`.</dd>
    <dt>--output FORMAT</dt>
    <dd>Indiquez un format de sortie pour les droits. Seul JSON est pris en charge pour l'instant.</dd>
   </dl>
@@ -795,7 +795,7 @@ ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
    <dt>USER_NAME (obligatoire)</dt>
    <dd>Nom de l'utilisateur.</dd>
    <dt>--access-group GROUP_NAME</dt>
-   <dd>Nom du groupe d'accès dans lequel accorder des droits. Le groupe d'accès par défaut est "cfee-provision-access-group".</dd>
+   <dd>Nom du groupe d'accès dans lequel accorder des droits. Le groupe d'accès par défaut est `cfee-provision-access-group`.</dd>
   </dl>
   
 <strong>Exemples</strong> :
@@ -829,7 +829,7 @@ ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
    <dt>--poll</dt>
    <dd>Spécifiez si vous souhaitez rendre cet appel récurrent, afin d'effectuer des interrogations jusqu'à obtenir un état stable.</dd>
    <dt>--output FORMAT</dt>
-   <dd>Indiquez un format de sortie pour l'état. Seul JSON est pris en charge pour l'instant.</dd>
+   <dd>Spécifiez un format de sortie pour le statut. Seul JSON est pris en charge pour l'instant.</dd>
   </dl>
 
 ## ibmcloud cfee monitoring-enable

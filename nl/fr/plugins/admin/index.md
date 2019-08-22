@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-12"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -144,7 +144,7 @@ Vous pouvez aussi utiliser **`ba au`** comme alias pour le nom de commande plus 
 ### Invitation d'un utilisateur depuis {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_invite_public}
 
-Chaque environnement {{site.data.keyword.Bluemix_dedicated_notm}} dispose d'un compte d'entreprise, public et appartenant au client, dans {{site.data.keyword.cloud_notm}}. Pour que les utilisateurs de l'environnement dédié puissent créer des clusters dans{{site.data.keyword.containershort}}, l'administrateur doit ajouter ces utilisateurs à ce compte public d'entreprise. Une fois les utilisateurs ajoutés au compte public d'entreprise, leurs comptes publics et dédiés sont liés les uns aux autres. L'utilisateur peut se servir de son IBMid pour se connecter simultanément au compte public et au compte dédié et peut créer des ressources dans le compte public depuis l'interface dédiée. Pour plus d'informations, voir la rubrique relative à la [configuration d'IBM Cloud Container Service en environnement dédié](/docs/containers?topic=containers-dedicated#dedicated_setup). Pour inviter des utilisateurs dédiés dans le compte public :
+Chaque environnement {{site.data.keyword.Bluemix_dedicated_notm}} dispose d'un compte d'entreprise, public et appartenant au client, dans {{site.data.keyword.cloud_notm}}. Pour que les utilisateurs de l'environnement dédié puissent créer des clusters dans{{site.data.keyword.containershort}}, l'administrateur doit ajouter ces utilisateurs à ce compte public d'entreprise. Quand les utilisateurs sont ajoutés au compte public d'entreprise, leurs comptes publics et dédiés sont liés entre eux. L'utilisateur peut se servir de son IBMid pour se connecter simultanément au compte public et au compte dédié et peut créer des ressources dans le compte public depuis l'interface dédiée. Pour plus d'informations, voir la rubrique relative à la [configuration d'IBM Cloud Container Service en environnement dédié](/docs/containers?topic=containers-dedicated#dedicated_setup). Pour inviter des utilisateurs dédiés dans le compte public :
 ```
 cf ba invite-users-to-public -userid=user_email -organization=dedicated_org_id -apikey=public_api_key -public_org_id=public_org_id
 ```
@@ -166,7 +166,7 @@ Pour ajouter des utilisateurs d'environnement dédié à votre compte public {{s
 ### Etablissement de la liste des utilisateurs invités depuis {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-Si vous avez invité des utilisateurs d'un environnement dédié dans votre compte {{site.data.keyword.cloud_notm}} à l'aide de la [commande **`invite-users-to-public`**](#admin_dedicated_invite_public), vous pouvez répertorier les utilisateurs de votre compte pour voir leur statut d'invitation. Les utilisateurs invités qui ont un IBMid existant possèdent le statut ACTIF. Les utilisateurs invités ne disposant pas d'un IBMid existant possèdent le statut EN ATTENTE ou ACTIF selon qu'ils ont ou non déjà accepté l'invitation au compte. Pour répertorier les utilisateurs de votre compte {{site.data.keyword.cloud_notm}} :
+Si vous invitez des utilisateurs d'un environnement dédié dans votre compte {{site.data.keyword.cloud_notm}} avec la [commande **`invite-users-to-public`**](#admin_dedicated_invite_public), vous pouvez répertorier les utilisateurs de votre compte pour voir leur statut d'invitation. Les utilisateurs invités avec un IBMid existant ont un statut ACTIF. Les utilisateurs invités ne disposant pas d'un IBMid existant ont un statut EN ATTENTE ou ACTIF, selon que l'invitation ait été déjà acceptée ou non. Pour répertorier les utilisateurs de votre compte {{site.data.keyword.cloud_notm}} :
 
 ```
 cf ba invite-users-status -apikey=public_api_key
@@ -196,7 +196,7 @@ cf ba search-users -name=user_name -permission=permission_value -organization=or
 <dt>user_name</dt>
 <dd>Nom de l'utilisateur.</dd>
 <dt>permission_value</dt>
-<dd>Droit accordé à l'utilisateur. Les droits d'accès disponibles sont : admin (ou superuser), login (ou basic), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans la même requête.</dd>
+<dd>Droit accordé à l'utilisateur. Les droits d'accès disponibles sont : admin (ou superuser), log in (ou basic), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans la même requête.</dd>
 <dt>organization_value</dt>
 <dd>Nom de l'organisation à laquelle appartient l'utilisateur. Vous ne pouvez pas utiliser ce paramètre avec le paramètre permission dans la même requête.</dd>
 <dt>role_value</dt>
@@ -219,7 +219,7 @@ cf ba set-permissions user_name permission access
 <dt>user_name</dt>
 <dd>Nom de l'utilisateur.</dd>
 <dt>permission</dt>
-<dd>Permet de définir les droits qui sont affectés à l'utilisateur. Les droits d'accès disponibles sont : admin (ou superuser), login (ou basic), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans la même requête.</dd>
+<dd>Permet de définir les droits qui sont affectés à l'utilisateur. Les droits d'accès disponibles sont : admin (ou superuser), log in (ou basic), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans la même requête.</dd>
 <dt>access</dt>
 <dd>Pour les droits catalog, reports ou user, vous devez aussi définir le niveau d'accès `read` ou `write`.</dd>
 </dl>
@@ -263,7 +263,7 @@ Vous pouvez aussi utiliser **`ba emau`** comme alias pour le nom de commande plu
 ### Procédure visant à empêcher les responsables d'ajouter des utilisateurs
 {: #clius_dmau}
 
-Si des responsables de l'organisation sont autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement {{site.data.keyword.cloud_notm}} via la commande **`enable-managers-add-users`** et que vous disposez du droit Superuser, vous pouvez retirer cette fonction. Pour empêcher les responsables d'ajouter des utilisateurs, utilisez la commande suivante :
+Pour empêcher les responsables d'ajouter des utilisateurs, utilisez la commande suivante :
 
 ```
 cf ba disable-managers-add-users
@@ -288,7 +288,7 @@ cf ba create-org organization manager
 
 <dl>
 <dt>organization</dt>
-<dd>Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}} à ajouter. </dd>
+<dd>Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}} à ajouter.</dd>
 <dt>manager</dt>
 <dd>Nom d'utilisateur du responsable de l'organisation.</dd>
 </dl>
@@ -331,7 +331,7 @@ cf ba set-org user_name organization [role]
 <dt>organization</dt>
 <dd>Nom ou identificateur global unique de l'organisation {{site.data.keyword.cloud_notm}} à laquelle affecter l'utilisateur.</dd>
 <dt>role</dt>
-<dd>Rôle de l'utilisateur. Les valeurs valides sont OrgManager, BillingManager, OrgAuditor. Pour obtenir des descriptions de rôle, voir [Rôles](/docs/iam?topic=iam-userroles#userroles).</dd>
+<dd>Rôle de l'utilisateur. Les valeurs valides sont OrgManager, BillingManager, OrgAuditor. Voir [Rôles](/docs/iam?topic=iam-userroles#userroles) pour obtenir des descriptions de rôle.</dd>
 </dl>
 
 Vous pouvez aussi utiliser **`ba so`** comme alias pour le nom de commande plus long **`ba set-org`**.
@@ -709,8 +709,7 @@ Vous pouvez aussi utiliser **`ba rr`** comme alias pour le nom de commande plus 
 {: #cliresourceusage}
 
 Vous pouvez afficher des informations sur les mesures des ressources,
-notamment sur l'utilisation de la mémoire, du disque et de l'unité centrale. Vous
-pouvez consulter un récapitulatif des ressources physiques et réservées disponibles, ainsi que l'utilisation des ressources physiques et réservées. Vous pouvez également afficher les données d'utilisation des agents DEA (Droplet Execution Agent) et des cellules (architecture Diego). Pour afficher les informations sur les mesures des ressources, entrez la commande suivante :
+notamment sur l'utilisation de la mémoire, du disque et de l'unité centrale. Vous pouvez consulter un récapitulatif des ressources physiques et réservées disponibles et de l'utilisation de ces ressources. Vous pouvez également afficher les données d'utilisation des agents DEA (Droplet Execution Agent) et des cellules (architecture Diego). Pour afficher les informations sur les mesures des ressources, entrez la commande suivante :
 
 ```
 cf ba resource-metrics
@@ -735,9 +734,9 @@ cf ba resource-metrics-history hourly|daily|monthly  memory|disk   start|end
 <dt>--daily</dt>
 <dd>Affiche la moyenne quotidienne des données d'historique au cours des 30 derniers jours.</dd>
 <dt>--monthly</dt>
-<dd>Affiche la moyenne mensuelle des données d'historique au cours des 6 derniers mois. </dd>
+<dd>Affiche la moyenne mensuelle des données d'historique au cours des 6 derniers mois.</dd>
 <dt>--memory</dt>
-<dd>Affiche la valeur utilisée et la valeur totale de la mémoire physique et réservée. </dd>
+<dd>Affiche la valeur utilisée et la valeur totale de la mémoire physique et réservée.</dd>
 <dt>--disk</dt>
 <dd>Affiche la valeur utilisée et la valeur totale du disque physique et réservé.</dd>
 <dt>--start</dt>
@@ -860,14 +859,14 @@ Vous pouvez aussi utiliser **`ba usb`** comme alias pour le nom de commande plus
 
 Pour utiliser des groupes de sécurité d'application, vous devez être un administrateur avec accès complet pour l'environnement local ou dédié. Tous les utilisateurs de l'environnement peuvent répertorier les groupes de sécurité d'application disponibles pour l'organisation ciblée par la commande. En revanche, pour créer, mettre à jour ou lier des groupes de sécurité d'application, vous devez être un administrateur de l'environnement {{site.data.keyword.cloud_notm}}.
 
-Les groupes de sécurité d'application fonctionnent comme des pare-feux virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.cloud_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes donné, par exemple, un ensemble de groupes utilisé pour l'application d'un accès global, ou vous pouvez effectuer une liaison à des espaces d'une organisation dans votre environnement {{site.data.keyword.cloud_notm}}.
+Les groupes de sécurité d'application fonctionnent comme des pare-feux virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.cloud_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes spécifique en appliquant, par exemple, un accès global pour un ensemble de groupes ou en effectuant une liaison à des espaces d'une organisation de votre environnement {{site.data.keyword.cloud_notm}}.
 
 A l'origine, {{site.data.keyword.cloud_notm}} est configuré avec un accès global restreint au réseau externe. Deux groupes de sécurité créés par IBM, `public_networks` et `dns`, permettent un accès global au réseau externe lorsque vous liez ces deux groupes aux ensembles de groupes de sécurité Cloud Foundry. Les deux ensembles de groupes de sécurité Cloud Foundry qui sont utilisés pour appliquer un accès global sont **Default Staging** et **Default Running**. Ces ensembles de groupes appliquent les règles autorisant le trafic vers toutes les applications en cours d'exécution ou toutes les applications en cours de constitution. Si vous ne souhaitez pas établir de liaison à ces deux ensembles de groupes de sécurité, vous pouvez annuler la liaison à ces ensembles de groupes Cloud Foundry, puis lier le groupe de sécurité à un espace donné. Pour plus d'informations, voir [Binding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
 
 Le fait de supprimer la liaison entre les ensembles de groupes **Default Staging** ou **Default Running** et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe. Tenez compte des répercussions possibles sur l'ensemble des applications en cours d'exécution ou de transfert dans votre environnement quand vous supprimez une liaison.
 {: important}
 
-Les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. Pour plus d'informations, y compris sur les zones obligatoires et facultatives, reportez-vous aux informations Cloud Foundry concernant la [création de groupes de sécurité d'application](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
+Les commandes suivantes, qui vous permettent d'utiliser les groupes de sécurité, sont basées sur la version 1.6 de Cloud Foundry. Pour plus d'informations, y compris sur les zones obligatoires et facultatives, reportez-vous aux informations Cloud Foundry concernant la [création de groupes de sécurité d'application](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
 
 ### Liste des groupes de sécurité
 {: #clilissecgro}

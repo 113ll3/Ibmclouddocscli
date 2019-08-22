@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-07-12"
 
-keywords: vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
+keywords: cli, vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
 subcollection: cloud-cli
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Plug-in d'interface de ligne de commande VPN pour l'interface de ligne de commande cf
 {: #vpn_cli_for_cf}
 
-Vous pouvez utiliser l'interface de ligne de commande pour configurer et gérer votre service {{site.data.keyword.vpn_full}}. Le plug-in d'interface de ligne de commande {{site.data.keyword.vpn_short}} est disponible en deux versions, l'une est destinée à être utilisée avec le plug-in d'interface de ligne de commande Cloud Foundry et l'autre avec le plug-in d'interface de ligne de commande {{site.data.keyword.cloud}}. Les deux versions du plug-in fournissent la même fonctionnalité.
+Vous pouvez utiliser l'interface de ligne de commande pour configurer et gérer votre service {{site.data.keyword.vpn_full}}. Le plug-in d'interface de ligne de commande {{site.data.keyword.vpn_short}} est disponible en deux versions, l'une est destinée à être utilisée avec le plug-in d'interface de ligne de commande Cloud Foundry et l'autre avec le plug-in d'interface de ligne de commande {{site.data.keyword.cloud}}. Les deux versions du plug-in fournissent les mêmes fonctionnalités.
 {:shortdesc}
 
 Le plug-in {{site.data.keyword.vpn_short}} est disponible pour les systèmes d'exploitation Windows, MAC et Linux. Assurez-vous d'utiliser celui qui vous correspond.
@@ -41,7 +41,7 @@ cf uninstall-plugin vpn
 
 ### Installation locale
 
-1. Téléchargez le plug-in {{site.data.keyword.vpn_short}} pour votre plateforme depuis le [référentiel de plug-in de l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
+1. Téléchargez le plug-in {{site.data.keyword.vpn_short}} pour votre plateforme depuis le [référentiel de plug-in de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} ](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe").
 
 2. Installez le plug-in {{site.data.keyword.vpn_short}} en utilisant la commande suivante :
 
@@ -114,7 +114,7 @@ cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> 
 
 **-admin_state :** statut de la connexion VPN. Valeurs : UP ou DOWN.
 
-**-dpd-action :** action à effectuer lorsque l'homologue est identifié comme non opérationnel. Valeurs : hold ; clear ; disabled ; restart ; restart-by-peer. Valeur par défaut : hold
+**-dpd-action :** action entreprise quand l'homologue est identifié comme non opérationnel. Valeurs : hold ; clear ; disabled ; restart ; restart-by-peer. Valeur par défaut : hold
 
 **-gateway_ip :** adresse IP du noeud final du tunnel VPN local.
 
@@ -334,7 +334,7 @@ cf vpn-update connection <connection name> -g <gateway name> -cip <customer gate
 
 **-admin_state :** statut de la connexion VPN. Valeurs : UP ou DOWN.
 
-**-dpd-action :** action à effectuer lorsque l'homologue est identifié comme non opérationnel. Valeurs : hold ; clear ; disabled ; restart ; restart-by-peer. Valeur par défaut : hold
+**-dpd-action :** action entreprise quand l'homologue est identifié comme non opérationnel. Valeurs : hold ; clear ; disabled ; restart ; restart-by-peer. Valeur par défaut : hold
 
 **-gateway_ip :** adresse IP du noeud final du tunnel VPN local.
 

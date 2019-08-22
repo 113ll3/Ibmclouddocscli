@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
-keywords: monitoring, logging, cloud logging, metrics
+keywords: cli, monitoring, logging, cloud logging, metrics, monitor cpu, monitor usage, memory utilization, runtime logging
 
 subcollection: cloud-cli
 
@@ -34,4 +34,4 @@ Par défaut, {{site.data.keyword.cloud_notm}} collecte et affiche des journaux p
 
 {{site.data.keyword.loganalysisfull_notm}} fournit des services de collecte de journaux et de recherche dans ceux-ci pour la plateforme {{site.data.keyword.cloud_notm}}, en collectant automatiquement des données d'application et de services {{site.data.keyword.cloud_notm}} depuis divers services. Vous pouvez utiliser le service {{site.data.keyword.loganalysisshort}} pour étendre vos fonctions de collecte de journaux, de conservation de journaux et de recherche de journaux lorsque vous utilisez des journaux.
 
-Pour plus d'informations, voir [Journalisation dans {{site.data.keyword.cloud_notm}}](/docs/services/CloudLogAnalysis?topic=cloudloganalysis-log_analysis_ov#log_analysis_ov).
+Pour plus d'informations, voir [Journalisation dans {{site.data.keyword.cloud_notm}}](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started#getting-started).

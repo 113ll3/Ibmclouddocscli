@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-07-12"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 
@@ -96,7 +96,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-o, --os</dt>
 <dd>Code d'installation du système d'exploitation. Astuce : vous pouvez spécifier <OS>_LATEST.</dd>
 <dt>--image</dt>
-<dd>ID image. Voir : 'ibmcloud sl image list' pour référence.</dd>
+<dd>ID image. Voir : `ibmcloud sl image list` pour référence.</dd>
 <dt>--billing</dt>
 <dd>Taux de facturation. Par défaut : hourly. Options : hourly, monthly.</dd>
 <dt>--dedicated</dt>
@@ -290,7 +290,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dt>-b, --billing</dt>
 <dd>Taux de facturation. Par défaut : hourly. Options : hourly, monthly.</dd>
 <dt>-v, --vlan-private</dt>
-<dd>ID du VLAN privé sur lequel vous voulez placer l'hôte dédié. Voir 'ibmcloud sl vlan list' pour référence.</dd>
+<dd>ID du VLAN privé sur lequel vous voulez placer l'hôte dédié. Voir : `ibmcloud sl vlan list` pour référence.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -353,9 +353,9 @@ ibmcloud sl vs list [OPTIONS]
 <dt>--owner</dt>
 <dd>Filtrer par ID de l'utilisateur qui possède les instances.</dd>
 <dt>--sortby</dt>
-<dd>Colonne de tri par défaut : hostname, options :id, hostname, domain, datacenter, cpu, memory, public_ip, private_ip.</dd>
-<dt>--columns</dt>
-<dd>Colonnes à afficher par défaut :id, hostname, public_ip, private_ip, datacenter, action, options : guid, power_state, created_by, tags.</dd>
+<dd>Colonne de tri par défaut : hostname - Options : id, hostname, domain, datacenter, cpu, memory, public_ip, private_ip.</dd>
+<dt>--column</dt>
+<dd>Colonnes à afficher, valeurs par défaut : id, hostname, public_ip, private_ip, datacenter, action - Options : guid, power_state, created_by, tags.</dd>
 </dl>
 
 **Exemples** :
@@ -491,7 +491,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <dt>--image</dt>
 <dd>ID image. Par défaut, il convient d'utiliser le système d'exploitation en cours.</dd>
 <dt>Voir :</dt>
-<dd>'ibmcloud sl image list' for reference.</dd>
+<dd>`ibmcloud sl image list` pour référence.</dd>
 <dt>-k, --key</dt>
 <dd>ID des clés SSH à ajouter à l'utilisateur root (plusieurs occurrences autorisées).</dd>
 <dt>-f, --force</dt>

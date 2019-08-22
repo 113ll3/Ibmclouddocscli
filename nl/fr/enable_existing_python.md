@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-08"
+lastupdated: "2019-06-10"
 
-keywords: ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
 subcollection: cloud-cli
 
@@ -32,7 +32,7 @@ ibmcloud dev enable
 {: codeblock}
 
 * Quand vous êtes invité à vérifier l'infrastructure détectée pour le projet, **Python - Flask** ou **Python - Django**, répondez `y`. 
-* Vous êtes ensuite invité à exécuter la commande **Connecter à une application IBM Cloud**. Sélectionnez l'option **Générer des actifs, créer une nouvelle application IBM Cloud et s'y connecter** ou l'option **Générer des actifs sans se connecter à une application IBM Cloud** dans votre application.
+* Vous êtes ensuite invité à exécuter la commande **Connecter à une application IBM Cloud**. Sélectionnez l'option **Générer des actifs, créer une nouvelle application IBM Cloud et s'y connecter** ou l'option **Générer des actifs sans se connecter à une application IBM Cloud** pour connecter votre application.
 * La commande `enable` peut aussi créer des services et les lier à votre application. Dans cet exemple de base, répondez `n`.
 
 Voir la sortie exemple suivante :
@@ -40,9 +40,9 @@ Voir la sortie exemple suivante :
 > ibmcloud dev enable
 The enable feature is currently in Beta.
 Please provide your experience and feedback at: https://ibm-cloud-tech.slack.com/messages/developer-tools/
-Only server-side applications are supported by the enable feature
+Only server-side apps are supported by the enable feature
 
-? Python - Flask application discovered. Do you want to proceed with this
+? Python - Flask app discovered. Do you want to proceed with this
 language choice? [y/n]> y
 
 
@@ -105,6 +105,7 @@ LICENSE
 The application, <appname>, has been successfully saved
 into the current directory.
 ```
+{: screen}
 
 ## Génération et déploiement d'une application Python optimisée pour le cloud
 {: #build-deploy-python}
@@ -130,7 +131,7 @@ ImportError: No module named <projectname>.wsgi
 ```
 {: screen}
 
-Le nom de fichier `<projectname>.wsgi` est le nom du projet qui est activé.
+Le nom de fichier `<projectname>.wsgi` correspond au nom du projet en cours d'activation.
 
 Si votre application n'est pas générée ou déployée après exécution d'`ibmcloud dev enable`, vous pouvez modifier les fichiers générés pour terminer l'activation de cloud.
 

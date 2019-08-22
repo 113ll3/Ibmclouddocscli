@@ -125,13 +125,13 @@ ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --accoun
 
 <dl>
   <dt>--account ACCOUNT_NAME (facultatif)</dt>
-  <dd>Nom du compte cible. </dd>
+  <dd>Nom du compte cible.</dd>
   <dt>--account-id ACCOUNT_ID (facultatif)</dt>
-  <dd>ID du compte cible. </dd>
+  <dd>ID du compte cible.</dd>
   <dt>--account-group ACCOUNT_GROUP_NAME (facultatif)</dt>
-  <dd>Nom du groupe de comptes cible. </dd>
+  <dd>Nom du groupe de comptes cible.</dd>
   <dt>--account-group-id ACCOUNT_GROUP_ID (facultatif)</dt>
-  <dd>ID du groupe de comptes cible. </dd>
+  <dd>ID du groupe de comptes cible.</dd>
   <dt>--children (facultatif)</dt>
   <dd>Affichez les rapports d'utilisation des enfants.</dd>
   <dt>--month MONTH (facultatif)</dt>
