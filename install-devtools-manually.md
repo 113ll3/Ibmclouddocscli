@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-21"
+lastupdated: "2019-08-22"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in manually
 {: #install-devtools-manually}
 
-You can manually install the {{site.data.keyword.cloud}} developer tools command-line interface (CLI) plug-in if you prefer more granular control for installing the components. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt).
+You can manually install the {{site.data.keyword.cloud}} developer tools command line interface (CLI) plug-in if you prefer more granular control for installing the components. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt).
 {: shortdesc}
 
 ## Before you begin
@@ -106,7 +106,7 @@ To create and manage Kubernetes clusters in {{site.data.keyword.containerlong}}:
   ```
   {: codeblock}
 
-For more information, see the [{{site.data.keyword.registryshort_notm}} command reference](/docs/containers-cli-plugin?topic=containers-cli-plugin-cs_cli_reference).
+For more information, see the [{{site.data.keyword.registryshort_notm}} command reference](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli).
 
 ## Installing Helm
 {: #idt-install-helm}
