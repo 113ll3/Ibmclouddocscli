@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-15"
+lastupdated: "2019-09-09"
 
 keywords: cli, content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
 
@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Working with the Content Delivery Service (CDN) service
+# Working with the Content Delivery Newtork (CDN) service
 {: #sl-cdn-service}
 
 The Content Delivery Network (CDN) service distributes content where its needed. A CDN is a system of distributed servers that deliver web content based on the geographic locations of the user, the origin of the webpage, and the content delivery server.
