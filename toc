@@ -17,7 +17,7 @@ IBM Cloud CLI and Developer Tools
 	reference/ibmcloud/uninstall_cli.md
 	
 	{: .topicgroup}
-	Creating and deploying apps with the CLI
+	Creating and deploying apps
 		/apps/creating-apps-create-deploy-app-cli
 		idt/deploy_to_icp.md
 
