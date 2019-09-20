@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-21"
+lastupdated: "2019-09-09"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -422,4 +422,28 @@ Windows&trade;:
 https://raw.githubusercontent.com/IBM-Cloud/ibm-cloud-developer-tools/master/windows-installer/idt-win-installer.ps1
 ```
 {: codeblock}
+
+## ibmcloud dev build fails with "exit status 100"
+{: #ts-cli-build-error}
+{: troubleshoot}
+
+Running the `ibmcloud dev build` command displays the following error:
+```
+FAILED
+An error exit status 100 was encountered while building the Docker image.
+```
+{: screen}
+{: tsSymptoms}
+
+There is a problem with mapping the OS user into the container due to a UID conflict.
+{: tsCauses}
+
+Resolve the OS user's UID conflict. To work around the issue, you can run the following command:
+{: tsResolve}
+
+```
+ibmcloud dev build --use-root-user-tools
+```
+{: codeblock}
+
 
