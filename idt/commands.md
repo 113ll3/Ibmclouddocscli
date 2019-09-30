@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-09-30"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -297,12 +297,13 @@ You can also override the detected app language by using the `--language` argume
 {: #enable-language-options}
 
 Language options include:
-* Node
-* Swift
-* Python
+* Go
 * Java EE (interpreted as Java&trade; - Java&trade; EE)
 * Java-mp (interpreted as Java&trade; - Java&trade; MicroProfile)
 * Java-spring (interpreted as Java&trade; - Spring Framework)
+* Node
+* Python
+* Swift
 
 Files that are created by using the `ibmcloud dev enable` command are saved with a `.merge` file extension if there are name conflicts with existing files in the app folder.
 
