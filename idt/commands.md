@@ -159,7 +159,23 @@ ibmcloud dev delete [appName] [--force,-f]
 
 You can deploy an app as a Cloud Foundry app or as a container.
 
+Run the following command in your current app directory to build your app:  
+```
+ibmcloud dev build
+```
+{: codeblock}
+
+Run the following command in your current app directory to deploy your app:
+```
+ibmcloud dev deploy
+```
+{: codeblock}
+
 Before you deploy a Cloud Foundry app to {{site.data.keyword.cloud_notm}}, a `manifest.yml` file must be present in your app's root directory.
+{: tip}
+
+### Deploying to Kubernetes
+{: #deploy-kubernetes}
 
 Before you deploy an app as a container, you must locally install [Kubernetes](https://kubernetes.io/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and [Helm](https://github.com/helm/helm){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"). The Helm client version must not be newer than the Helm server version. You can find both by running `helm version`. It is recommended to use v2.4.2 for the client version.
 
@@ -179,24 +195,19 @@ ibm-cluster: "mycluster"
 
 In the `cli-config.yml`, you can define the location of a Helm chart in the `chart-path` property and configure the `deploy-image-target` as shown in the example. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.cloud_notm}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster that you created in {{site.data.keyword.cloud_notm}}.
 
-Run the following command in your current app directory to build your app:  
-```
-ibmcloud dev build
-```
-{: codeblock}
-
-Run the following command in your current app directory to deploy your app:
-```
-ibmcloud dev deploy
-```
-{: codeblock}
-
-### deploy to {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment 
+### Deploying to {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment 
 {: #deploy-cfee}
 
 You can deploy to an {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment. To do so, configure your local environment for this environment by using `ibmcloud target --cf`, and then select the correct environment from that list. You can then use the `deploy` command as you would for {{site.data.keyword.cloud_notm}} Public Cloud Foundry.
 
-### deploy command parameters
+### Deploying to Knative clusters
+{: #deploy-knative-cli}
+
+The most recent [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-getting-started) CLI release adds toolchain deployment support for [Knative](https://www.ibm.com/cloud/learn/knative) clusters on the [IBM Cloud Kubernetes Service](https://www.ibm.com/cloud/container-service). To use this feature, you need a [Knative-based cluster](https://www.ibm.com/cloud/blog/announcing-managed-knative-on-ibm-cloud-kubernetes-service-experimental) (and not a Helm-based cluster). With this prerequisite met, a Knative deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} CLI.
+
+By selecting the **Knative** option, you can create a toolchain that deploys to the Knative-based cluster that you specify through the dialog.
+
+### `deploy` command parameters
 {: #deploy-parameters}
 
 The following parameters can be used with the `deploy` command or by updating the app's `cli-config.yml` file directly. There are [more parameters](#command-parameters) that are shared with other commands.
@@ -529,7 +540,7 @@ ibmcloud dev shell
 ```
 {: codeblock}
 
-The {{site.data.keyword.dev_cli_short}} CLI opens an interactive shell into the app's docker container. The default target container for the shell command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command targets the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. For more information, see [this reference](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
+The {{site.data.keyword.dev_cli_short}} CLI opens an interactive shell into the app's docker container. The default target container for the `shell` command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command targets the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. For more information, see [this reference](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
 Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container is brought up and the shell is opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you want to shell. However, this flag is reserved for when no containers are running. The `run` and `tools` arguments are more flexible so you can switch between containers when one is running. For example, if the tools container is running and you execute `ibmcloud dev shell run`, the `tools` container is stopped and the `run` container starts, and vice versa.
 
@@ -540,6 +551,9 @@ You can also specify the shell that you want to open by using the `container-she
 Any additional arguments that you pass to the command beyond the flags are parsed as the command to be run when the shell is opened. If you provide a command, the shell inside the container exits upon running the command and returns you to your terminal.
 
 For example, you can run the Linux&trade; `ls` command inside of the tools container shell by invoking `ibmcloud dev shell tools ls`. You can also specify flags to be passed into the shell command execution by wrapping the arguments in quotation marks, such as `ibmcloud dev shell "ls -la"`.
+
+The `shell` command doesn't require an app to be compiled, which allows for shelling into the tools container directly to debug why an app is failing to compile.
+{: tip}
 
 ### shell command parameters
 {: #shell-parameters}
