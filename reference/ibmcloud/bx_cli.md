@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-24"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -293,7 +293,7 @@ ibmcloud cf install --restore
 
 Log in to the {{site.data.keyword.cloud_notm}} CLI:
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-r REGION | --no-region] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE]
 ```
 
 ### Prerequisites
@@ -307,18 +307,22 @@ None.
 <dl>
 <dt>-a API_ENDPOINT</dt>
 <dd>The API endpoint, for example, `cloud.ibm.com`. </dd>
-<dt>--apikey API_KEY or @API_KEY_FILE_PATH</dt>
-<dd>The API key content or the path of an API key file that is indicated by the @ symbol.</dd>
+<dt>--sso</dt>
+<dd>Specify this option to [log in with a federated ID](/docs/iam?topic=iam-federated_id). Using this option prompts you to authenticate with your single sign-on provider and enter a one-time passcode to log in.</dd>
 <dt>-u USER_NAME</dt>
 <dd>The user name. Optional.</dd>
 <dt>-p PASS_WORD</dt>
 <dd>The user password. Optional.</dd>
+<dt>--apikey API_KEY or @API_KEY_FILE_PATH</dt>
+<dd>The API key content or the path of an API key file that is indicated by the @ symbol.</dd>
+<dt>--no-iam</dt>
+<dd>Force authentication with the login server instead of the public IAM.</dd>
 <dt>-c ACCOUNT_ID</dt>
 <dd>The ID of the target account. This option is exclusive with the `--no account` option.</dd>
 <dt>--no-account</dt>
 <dd>Forced login without the account. This option isn't recommended, and it is exclusive with the `-c` option.</dd>
 <dt>-g RESOURCE_GROUP</dt>
-<dd>The name of the target resource group. Optional.</dd>
+<dd>The name or ID of the target resource group. Optional.</dd>
 <dt>-r REGION</dt>
 <dd>The name of the target region, for example, `us-south` or `eu-gb`.</dd>
 <dt>--no-region</dt>
@@ -327,8 +331,6 @@ None.
 <dd>The name of the target organization. This option is deprecated. Use `ibmcloud target -o org_name` instead. Optional.</dd>
 <dt>-s SPACE</dt>
 <dd>The name of the target space. This option is deprecated. Use `ibmcloud target -s space_name` instead. Optional.</dd>
-<dt>--no-iam</dt>
-<dd>Force authentication with the login server instead of the public IAM.</dd>
 <dt>--skip-ssl-validation</dt>
 <dd>Bypass the SSL validation of HTTP requests. This option isn't recommended.</dd>
 </dl>
@@ -348,13 +350,13 @@ ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ```
 {: codeblock}
 
-Log in with a one time passcode, and set a target account, org, and space:
+Log in with federated ID, and set a target account and Cloud Foundry org and space:
 ```
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 {: codeblock}
 
-Set your Cloud Found org and space. You can run the following command to interactively identify the org and space:
+Set your Cloud Foundry org and space. You can run the following command to interactively identify the org and space:
 ```
 ibmcloud target --cf
 ```
@@ -391,7 +393,7 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 If the API key has an associated account, switching to another account isn't supported.
 {: note}
 
-Use a one time passcode:
+Log in as a specific user with a federated ID:
 ```
 ibmcloud login -u UserID --sso
 ```
@@ -399,7 +401,8 @@ ibmcloud login -u UserID --sso
 
 Then, the CLI provides a URL link and prompts you for the passcode:
 ```
-One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
+Get One Time Code from https://identity-1.us-south.iam.cloud.ibm.com/identity/passcode to proceed.
+Open the URL in the default browser? [Y/n] > 
 ```
 {: screen}
 
