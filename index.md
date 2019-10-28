@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-30"
+lastupdated: "2019-10-28"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -50,7 +50,7 @@ You need an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){:
 ## Step 1. Run the installation command
 {: #step1-install-idt}
 
-The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when you run the command.
+The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when you run the command. As the CLI and plug-ins install, keep an eye on the command line to authenticate as needed.
 
 * For Mac and Linux&trade;, run the following command:
   ```
@@ -75,13 +75,16 @@ If you need to use a 32-bit version of the CLI, or a previous version other than
 ## Step 2. Verify the installation
 {: #step2-verify-idt}
 
-To verify that the CLI and Developer tools were installed successfully, run the `help` command:
+To verify that the CLI and {{site.data.keyword.dev_cli_short}} were installed successfully, run the `help` command:
 ```
 ibmcloud dev help
 ```
 {: codeblock}
 
 The output lists the usage instructions, the current version, and the supported commands.
+
+If you instead see a message that states `'dev' is not a registered command.`, run the command from the previous step again. If you continue to see this message, run the `ibmcloud plugin install dev` command to separately install the {{site.data.keyword.dev_cli_short}} plug-in.
+{: tip}
 
 ## Step 3. Configure your environment
 {: #step3-configure-idt-env}
@@ -91,7 +94,7 @@ The output lists the usage instructions, the current version, and the supported 
   ibmcloud login
   ```
   {: codeblock}
-  
+
   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam/federated_id?topic=iam-federated_id#federated_id) for more details.
   {: tip}
 
