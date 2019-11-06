@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-16"
+lastupdated: "2019-11-06"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -713,7 +713,7 @@ ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 
 Invite a user to the account:
 ```
-ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE, --space-role SPACE_ROLE]]
+ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE, --space-role SPACE_ROLE]] [-r, --region REGION]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -722,14 +722,16 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
 <dl>
    <dt>USER_EMAIL (required)</dt>
    <dd>The email of the user to be invited.</dd>
-   <dt>-o ORG</dt>
+   <dt>-o, --org ORG (deprecated)</dt>
    <dd>Organization to invite user to.</dd>
-   <dt>--org-role ORG_ROLE</dt>
-   <dd>Organization role. Valid inputs are: OrgManager, BillingManager, OrgAuditor, and OrgUser. If omitted, the OrgUser role is set.</dd>
-   <dt>-s SPACE</dt>
+   <dt>--org-role ORG_ROLE (deprecated)</dt>
+   <dd>Organization role. Valid inputs are: `OrgManager`, `BillingManager`, `OrgAuditor`, and `OrgUser`. If omitted, the `OrgUser` role is set.</dd>
+   <dt>-s, --space SPACE (deprecated)</dt>
    <dd>Space to invite user to.</dd>
-   <dt>--space-role SPACE_ROLE</dt>
-   <dd>Space role. Valid inputs are: SpaceManager, SpaceDeveloper, and SpaceAuditor.</dd>
+   <dt>--space-role SPACE_ROLE (deprecated)</dt>
+   <dd>Space role. Valid inputs are: `SpaceManager`, `SpaceDeveloper`, and `SpaceAuditor`.</dd>
+   <dt>-r, --region REGION (deprecated)</dt>
+   <dd>Region name. Defaults to current region if not specified.</dd>
 </dl>
 
 If you aren't ready to assign access, or want to assign an IAM policy instead of Cloud Foundry access, you can invite a user and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser#assign_new_access).

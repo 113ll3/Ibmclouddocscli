@@ -174,7 +174,7 @@ ibmcloud plugin show PLUGIN-NAME
 
 Install the specific version of plug-in to {{site.data.keyword.cloud_notm}} CLI from the specified path or repository.
 ```
-ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
+ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION] [-f]
 ```
 
 ```
@@ -193,7 +193,7 @@ If no repository is specified, the command uses the default plug-in repository `
    <dt>-r <i>REPO_NAME</i> (optional)</dt>
    <dd>The name of the repository where the plug-in binary is located. If no repository is specified, the command uses the default plug-in repository `IBM Cloud`.</dd>
    <dt>-v <i>VERSION</i> (optional)</dt>
-   <dd>The version of the plug-in to be installed. If not provided, the most recent version of the plug-in is installed. This option is valid only when you install the plug-in from the repository.</dd>
+   <dd>Version of the plug-in to be installed. Accepts specific semantic version or constraint.</dd>
    <dt>-f </dt>
    <dd>Force installs the plug-in without confirmation.</dd>
    </dl>
@@ -213,7 +213,8 @@ Install a plug-in from the remote URL:
 ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/new_plugin
 ```
 
-Install the 'container-service' plug-in of the newest version from the `IBM Cloud` repository:
+Install the `container-service` plug-in of the latest version from the `IBM Cloud` repository:
+
 ```
 ibmcloud plugin install container-service -r "IBM Cloud"
 ```
@@ -225,11 +226,14 @@ ibmcloud plugin install container-service
 ```
 {: codeblock}
 
-Install the 'container-service' plug-in with the version '0.1.425' from the official plug-in repository:
+Install the `container-service` plug-in with the  version `0.1.425` from the official plug-in repository:
+
 ```
 ibmcloud plugin install container-service -v 0.1.425
 ```
 {: codeblock}s
+
+Install the `container-service` plug-in  with the latest version between `0.1` and `0.2` from the official plug-in repository without confirmation:
 
 ## ibmcloud plugin update
 {: #ibmcloud_plugin_update}
