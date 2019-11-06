@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-10-24"
+lastupdated: "2019-11-06"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -465,9 +465,9 @@ ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_G
 <dt>--cf-api</dt>
 <dd>The Cloud Foundry API endpoint.</dd>
 <dt>-o ORG</dt>
-<dd>The name of the target organization. Optional.</dd>
+<dd>The name of the target organization. Optional. Deprecated, use `ibmcloud target -o ORG`.</dd>
 <dt>-s SPACE</dt>
-<dd>The name of the target space. Optional.</dd>
+<dd>The name of the target space. Optional. Deprecated, use `ibmcloud target -s SPACE`.</dd>
 <dt>--unset-region</dt>
 <dd>Clear the targeted region.</dd>
 <dt>--unset-resource-group</dt>

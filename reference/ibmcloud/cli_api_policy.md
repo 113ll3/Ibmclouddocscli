@@ -740,7 +740,7 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 
 Create a user policy:
 ```
-ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT]
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login, Account Targeted
@@ -769,6 +769,8 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dd>ID of the resource group. `*` means all resource groups. This option is exclusive with `--file`, `--resource` and `--resource-group-name` flags.</dd>
 <dt>--account-management (optional)</dt>
 <dd>Give access to all account management services.</dd>
+<dt>--attributes <i>name=value,name=value...</i></dt>
+<dd>Set resource attributes in the form of `name=value,name=value....`</dd>
 <dt>--output FORMAT (optional)</dt>
 <dd>Specify output format. Only JSON is supported now.</dd>
 </dl>
@@ -811,12 +813,18 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 ```
 {: codeblock}
 
+Give `name@example.com` `Viewer` role for service `is` resources with attribute `instanceId` equal to `*`:
+```
+ibmcloud iam user-policy-create name@example.com --roles Viewer --service-name is --attributes "instanceId=*"
+```
+{: codeblock}
+
 ## ibmcloud iam user-policy-update
 {: #ibmcloud_iam_user_policy_update}
 
 Update a user policy:
 ```
-ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT]
+ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login, Account Targeted
@@ -846,6 +854,8 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dd>ID of the resource group. `*` means all resource groups. This option is exclusive with `--file`, `--resource` and `--resource-group-name` flags.</dd>
 <dt>--account-management (optional)</dt>
 <dd>Give access to all account management services.</dd>
+<dt>--attributes <i>name=value,name=value...</i></dt>
+<dd>Set resource attributes in the form of 'name=value,name=value....'</dd>
 <dt>--output FORMAT (optional)</dt>
 <dd>Specify output format. Only JSON is supported now.</dd>
 </dl>
@@ -885,6 +895,12 @@ ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer -
 Update user policy to give `name@example.com` `Viewer` role for members of resource group with ID `dda27e49d2a1efca58083a01dfde18f6`:
 ```
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+```
+{: codeblock}
+
+Update user policy to give `name@example.com` `Viewer` role for service `is` resources with attribute `instance` equal to `*`:
+```
+ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --service-name is --attributes "instanceId=*"
 ```
 {: codeblock}
 
@@ -993,7 +1009,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 
 Create a service policy:
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-f, --force]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -1020,6 +1036,8 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dd>Name of the resource group. `*` means all resource groups. This option is exclusive with `--file` and `--resource-group-id`.</dd>
   <dt>--resource-group-id </dt>
   <dd>ID of the resource group. `*` means all resource groups. This option is exclusive with `--file` and `--resource-group-name`.</dd>
+  <dt>--account-management (optional)</dt>
+  <dd>Give access to all account management services.</dd>
   <dt>--account-management (optional)</dt>
   <dd>Give access to all account management services.</dd>
   <dt>--output FORMAT</dt>
@@ -1054,12 +1072,18 @@ ibmcloud iam service-policy-create test --roles Viewer
 ```
 {: codeblock}
 
+Give service `test` the `Viewer` role for service `is` resources with attribute `instanceId` equal to `*`:
+```
+ibmcloud iam service-policy-create sample-service --roles Viewer --service-name is --attributes "instanceId=*"
+```
+{: codeblock}
+
 ## ibmcloud iam service-policy-update
 {: #ibmcloud_iam_service_policy_update}
 
 Update a service policy:
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [--output FORMAT] [-f, --force]
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-f, --force]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -1090,6 +1114,8 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dd>ID of the resource group. `*` means all resource groups. This option is exclusive with `--file` and `--resource-group-name`.</dd>
   <dt>--account-management (optional)</dt>
   <dd>Give access to all account management services.</dd>
+  <dt>--attributes <i>name=value,name=value...</i></dt>
+  <dd>Set resource attributes in the form of 'name=value,name=value....'</dd>
   <dt>--output FORMAT</dt>
   <dd>Specify output format. Only JSON is supported.</dd>
   <dt>-f, --force</dt>
@@ -1119,6 +1145,12 @@ ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Administrator -
 Update service policy `140798e2-8ea7db3` to grant service `test` the `Viewer` role for all resources in account:
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer
+```
+{: codeblock}
+
+Update service policy `140798e2-8ea7db3` to grant service `test` the `Viewer` role for service `is` resources with attribute `instanceId` equal to `*`:
+```
+ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer --service-name is --attributes "instanceId=*"
 ```
 {: codeblock}
 
@@ -1186,7 +1218,7 @@ ibmcloud iam oauth-tokens
 
 List platform and service defined roles:
 ```
-ibmcloud iam roles [--service SERVICE_NAME] [--output FORMAT]
+ibmcloud iam roles [--service SERVICE_NAME [--resource-type RESOURCE_TYPE] [--source-service SOURCE_SERVICE_NAME]] [--roles ROLE_NAME] [--output FORMAT]
 ```
 {: codeblock}
 
@@ -1194,7 +1226,13 @@ ibmcloud iam roles [--service SERVICE_NAME] [--output FORMAT]
 
 <strong>Command Options</strong>:
 <dl>
+  <dt>--resource-type</dt>
+  <dd>Resource type of the service. '--service' must be set along with this option.</dd>
+  <dt>--roles ROLE_NAME1,ROLE_NAME2...</dt>
+  <dd>Show details of specific roles</dd>
   <dt>--service SERVICE_NAME</dt>
+  <dd>Name of the service, only list platform defined roles if not specified.</dd>
+  <dt>--source-service<dt>
   <dd>Name of the service, only list platform defined roles if not specified.</dd>
   <dt>--output FORMAT</dt>
   <dd>Specify output format. Only JSON is supported.</dd>
@@ -1202,15 +1240,45 @@ ibmcloud iam roles [--service SERVICE_NAME] [--output FORMAT]
 
 <strong>Examples</strong>:
 
-List platform roles:
+List platform default access roles:
 ```
 ibmcloud iam roles
 ```
 {: codeblock}
 
-List roles for service `cloudantnosql` in JSON:
+List details of platform default access policy roles `Administrator`, `Operator`:
 ```
-ibmcloud iam roles --service cloudantnosql --output JSON
+ibmcloud iam roles --roles Administrator,Operator
+```
+{: codeblock}
+
+List details of access policy role `Writer` of `cloud-object-storage` service in JSON format:
+```
+ibmcloud iam roles --service cloud-object-storage --roles Writer --output JSON
+```
+{: codeblock}
+
+List access policy roles for all account management service in JSON:
+```
+ibmcloud iam roles --service allacctmgmtroles --output JSON
+```
+{: codeblock}
+
+List details of resource group access policy role `Administrator`:
+```
+ibmcloud iam roles --service resource-controller --roles Administrator
+```
+{: codeblock}
+
+List details of access policy roles of resource type `image` of service `is`:
+```
+ibmcloud iam roles --service is --resource-type image
+```
+{: codeblock}
+
+List authorization roles for source service `cloud-object-storage` and target service `kms`:
+```
+ibmcloud iam roles --source-service cloud-object-storage --service kms
 ```
 {: codeblock}
 
@@ -1432,7 +1500,7 @@ ibmcloud iam access-group-update example_group --name "hello_world_group"
 
 Delete an access group:
 ```
-ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
+ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive] [-a, --all]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
@@ -1443,6 +1511,8 @@ ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
   <dd>Force deletion without confirmation.</dd>
   <dt>-r, --recursive</dt>
   <dd>Delete an access group and its members.</dd>
+  <dt>-a, --all</dt>
+  <dd>Force to delete access groups with the same name</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1689,7 +1759,7 @@ ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 
 Create an access group policy:
 ```
-ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
@@ -1714,6 +1784,10 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
   <dd>Name of the resource group. `*` means all resource groups. This option is exclusive with `--file` and `--resource-group-id`.</dd>
   <dt>-resource-group-id</dt>
   <dd>ID of the resource group. `*` means all resource groups. This option is exclusive with `--file` and `--resource-group-name`.</dd>
+  <dt>--account-management</dt>
+  <dd>Give access to all account management services.</dd>
+  <dt>--attributes <i>name=value,name=value...</i></dt>
+  <dd>Set resource attributes in the form of 'name=value,name=value....'</dd>
   <dt>--output FORMAT</dt>
   <dd>Specify output format. Only JSON is supported.</dd>
 </dl>
@@ -1755,12 +1829,30 @@ ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-
 ```
 {: codeblock}
 
+Give `example_group` `Administrator` role for all account management services:
+```
+ibmcloud iam access-group-policy-create example_group --roles Administrator --account-management
+```
+{: codeblock}
+
+Give `example_group` `Viewer` role for all resources in account:
+```
+ibmcloud iam access-group-policy-create example_group --roles Viewer
+```
+{: codeblock}
+
+Give `example_group` `Viewer` role for service `is` resources with attribute `instanceId` equal to `*`:
+```
+ibmcloud iam access-group-policy-create example_group --roles Viewer --service-name is --attributes "instanceId=*"
+```
+{: codeblock}
+
 ## ibmcloud iam access-group-policy-update
 {: #ibmcloud_iam_access_group_policy_update}
 
 Update an access group policy:
 ```
-ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [--output FORMAT]
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
@@ -1785,45 +1877,67 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
   <dd>Name of the resource group. `*` means all resource groups. This option is exclusive with `--file` and `--resource-group-id`.</dd>
   <dt>-resource-group-id</dt>
   <dd>ID of the resource group. `*` means all resource groups. This option is exclusive with `--file` and `--resource-group-name`.</dd>
+  <dt>--account-management (optional)</dt>
+  <dd>Give access to all account management services.</dd>
+  <dt>--attributes <i>name=value,name=value...</i></dt>
+  <dd>Set resource attributes in the form of 'name=value,name=value....'</dd>
   <dt>--output FORMAT</dt>
   <dd>Specify output format. Only JSON is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
 
-Update access group policy with the one in policy JSON file:
+Update access group policy `b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4` with the one in policy JSON file:
 ```
 ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 -f @policy.json
 ```
 {: codeblock}
 
-Update access group policy to give `example_group` `Administrator` role for all `sample-service` resources:
+Update access group policy `b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4` to give `example_group` `Administrator` role for all `sample-service` resources:
 ```
 ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Administrator --service-name sample-service
 ```
 {: codeblock}
 
-Update access group policy to give `example_group` `Editor` role for resource `key123` of `sample-service` instance with GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` in `us-south` region:
+Update access group policy `b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4` to give `example_group` `Editor` role for resource `key123` of `sample-service` instance with GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` in `us-south` region:
 ```
 ibmcloud iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south
 ```
 {: codeblock}
 
-Update access group policy to give `example_group` `Operator` role for resource group with ID `dda27e49d2a1efca58083a01dfde18f6`:
+Update access group policy `b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4` to give `example_group` `Operator` role for resource group with ID `dda27e49d2a1efca58083a01dfde18f6`:
 ```
 ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 {: codeblock}
 
-Update access group policy to give `example_group` `Viewer` role for members of resource group `sample-resource-group`:
+Update access group policy `b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4` to give `example_group` `Viewer` role for members of resource group `sample-resource-group`:
 ```
 ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-name sample-resource-group
 ```
 {: codeblock}
 
-Update access group policy to give `example_group` `Viewer` role for members of resource group with ID `dda27e49d2a1efca58083a01dfde18f6`:
+Update access group policy `b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4` to give `example_group` `Viewer` role for members of resource group with ID `dda27e49d2a1efca58083a01dfde18f6`:
 ```
 ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+```
+{: codeblock}
+
+Update access group policy `b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4` to give `example_group` `Administrator` role for all account management services:
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Administrator --account-management
+```
+{: codeblock}
+
+Update access group policy `b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4` to give `example_group` `Viewer` role for all resources in account:
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer
+```
+{: codeblock}
+
+Update access group policy `b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4` to give `example_group` `Viewer` role for service `is` resources with attribute `instanceId` equal to `*`:
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --service-name is --attributes "instanceId=*"
 ```
 {: codeblock}
 

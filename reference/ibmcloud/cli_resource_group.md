@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-15"
+lastupdated: "2019-11-06"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -1043,7 +1043,7 @@ ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --re
 ## ibmcloud resource tag-delete
 {: #ibmcloud_resource_tag_delete}
 
-Deleting a tag:
+Delete a tag:
 ```
 ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
 ```
@@ -1052,10 +1052,109 @@ ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--tag-name(required)</dt>
+  <dt>--tag-name (required)</dt>
   <dd>The name of the tag to be deleted.</dd>
-  <dt>-p; --provider</dt> 
-  <dd>Specify classic-infrastructure when you delete a classic infrastructure tag.</dd>
+  <dt>-p, --provider</dt>
+  <dd>Specify `classic-infrastructure` when you delete a classic infrastructure tag.</dd>
 </dl>
 
-A tag can be deleted only if it is not attached to any resource.
+A tag can be deleted only if it isn't attached to any resource.
+
+## ibmcloud resource reclamations
+{: #ibmcloud_resource_reclamations}
+
+List reclaimed resources that can be restored or deleted:
+```
+ibmcloud resource reclamations [--instance-id INSTANCE_ID | --instance-name INSTANCE_NAME] [--output FORMAT]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+  <dt>--instance-id</dt>
+  <dd>ID of the resource instance</dd>
+  <dt>--instance-name</dt>
+  <dd>Name of the resource instance</dd>
+  <dt>--output</dt>
+  <dd>Specify output format, only `JSON` is supported.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+List all resource reclamations:
+```
+ibmcloud resource reclamations
+```
+
+List resource reclamation of service instance `test-cloudant`:
+```
+ibmcloud resource reclamations --instance-name "test-cloudant"
+```
+
+## ibmcloud resource reclamation-restore
+{: #ibmcloud_resource_reclamation_restore}
+
+Restore a reclaimed resource so that the resource is available again:
+```
+ibmcloud resource reclamation-restore --id RECLAMATION_ID [--comment COMMENT] [--output FORMAT]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+  <dt>--id (required)</dt>
+  <dd>ID of the resource reclamation</dd>
+  <dt>--comment</dt>
+  <dd>Comments about the action</dd>
+  <dt>--output</dt>
+  <dd>Specify output format, only `JSON` is supported.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Restore a resource reclamation with ID `d9fendfwlw`:
+```
+ibmcloud resource reclamation-restore --id "d9fendfwlw"
+```
+
+Restore a resource reclamation with ID `d9fendfwlw`, leave a comment of "need to use for another 3 months", and show JSON output:
+```
+ibmcloud resource reclamation-restore --id "d9fendfwlw" --comment "need to use for another 3 months" --output JSON
+```
+
+## ibmcloud resource reclamation-delete
+{: #ibmcloud_resource_reclamation_delete}
+
+Delete a reclaimed resource so that the resource can no longer be restored:
+```
+ibmcloud resource reclamation-delete --id RECLAMATION_ID [--comment COMMENT] [--f, --force] [--output FORMAT]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+  <dt>--id (required)</dt>
+  <dd>ID of the resource reclamation</dd>
+  <dt>--comment</dt>
+  <dd>Comments about the action</dd>
+  <dt>-f, --force</dt>
+  <dd>Force deletion without confirmation</dd>
+  <dt>--output</dt>
+  <dd>Specify output format, only `JSON` is supported.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Delete a resource reclamation with ID `d9fendfwlw`:
+```
+ibmcloud resource reclamation-delete --id "d9fendfwlw"
+```
+
+Delete a resource reclamation with ID `d9fendfwlw` and leave a comment of "no longer needed" without confirmation:
+```
+ibmcloud resource reclamation-delete --id "d9fendfwlw" --comment "no longer needed" -f
+```
+
