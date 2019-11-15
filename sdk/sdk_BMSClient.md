@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-11-14"
 
-keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
+keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk
 
 subcollection: cloud-cli
 
@@ -19,6 +19,7 @@ subcollection: cloud-cli
 {: #sdk_BMSClient}
 
 `BMSCore` provides the HTTP infrastructure that the other {{site.data.keyword.cloud}} Web and Mobile services client SDKs use to communicate with their corresponding {{site.data.keyword.cloud_notm}} services.
+{: shortdesc}
 
 ## Initializing your Android app
 {: #init-BMSClient-android}

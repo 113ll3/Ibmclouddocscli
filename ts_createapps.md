@@ -281,19 +281,17 @@ This error might be due to one of the following causes:
 Be sure that you run the command from the app directory that contains source code for the app. If the issue is not resolved, and the language is one of the [supported languages](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), use the `--language` parameter to specify the language.
 {: tsResolve}
 
-## Why can't I build or run an app that is enabled for cloud deployment?
+## Why can't I build or run a Node.js app that is enabled for cloud deployment?
 {: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
 You might encounter various failures to [build](/docs/cli/idt?topic=cloud-cli-idt-cli#build) or [run](/docs/cli/idt?topic=cloud-cli-idt-cli#run) an app that is enabled for cloud deployment.
 {: tsSymptoms}
 
-The many different possible causes can be found in each of the following links.
-{: tsCauses}
-
-- For more information about resolving such problems with a Spring app, see [Enabling existing Spring Boot apps for cloud deployment](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
-- For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js apps for cloud deployment](/docs/node?topic=nodejs-enable_existing#enable_existing).
+These failures have many possible causes. For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js apps for cloud deployment](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
+
+<!-- - For more information about resolving such problems with a Spring app, see [Enabling existing Spring Boot apps for cloud deployment](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).-->
 
 ## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
 {: #ts-cli-install-devtools-manually}

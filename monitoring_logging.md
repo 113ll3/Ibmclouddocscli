@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-27"
+lastupdated: "2019-11-14"
 
 keywords: cli, monitoring, logging, cloud logging, metrics, monitor cpu, monitor usage, memory utilization, runtime logging
 
@@ -20,10 +20,13 @@ subcollection: cloud-cli
 # Monitoring and logging in {{site.data.keyword.cloud_notm}}
 {: #monitoring_logging}
 
+By default, {{site.data.keyword.cloud}} collects metrics and logs that you can use to monitor your cloud environment and applications.
+{: shortdesc}
+
 ## Monitoring
 {: #cloud-monitoring}
 
-{{site.data.keyword.cloud}}, by default, collects and displays metrics for CPU usage, memory utilization, and network I/O for the {{site.data.keyword.containershort_notm}}. You can use the {{site.data.keyword.monitoringlong_notm}} service in {{site.data.keyword.cloud_notm}} to automatically collect and measure key metrics from your environment and applications. No special instrumentation is required to collect metrics.
+{{site.data.keyword.cloud_notm}}, by default, collects and displays metrics for CPU usage, memory utilization, and network I/O for the {{site.data.keyword.containershort_notm}}. You can use the {{site.data.keyword.monitoringlong_notm}} service in {{site.data.keyword.cloud_notm}} to automatically collect and measure key metrics from your environment and applications. No special instrumentation is required to collect metrics.
 
 For more information, see [Monitoring in {{site.data.keyword.cloud_notm}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#monitoring_ov).
 

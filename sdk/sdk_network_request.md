@@ -18,7 +18,8 @@ subcollection: cloud-cli
 # Making a network request
 {: #sdk-network-request}
 
-You can also use the `BMSCore` SDK to make network requests to any resource.
+You can use the `BMSCore` SDK to make network requests to any resource.
+{: shortdesc}
 
 ## Android
 {: #request-android}

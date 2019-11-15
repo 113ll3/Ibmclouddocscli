@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-15"
+lastupdated: "2019-11-14"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -21,6 +21,7 @@ subcollection: cloud-cli
 {: #enable-existing-python}
 
 You can generate the files that are needed to enable your Python application to run on {{site.data.keyword.cloud}} by using the [{{site.data.keyword.dev_cli_long}} CLI enable command](/docs/cli/idt?topic=cloud-cli-idt-cli#enable).
+{: shortdesc}
 
 ## Enabling your Python app
 {: #enable-app-python}

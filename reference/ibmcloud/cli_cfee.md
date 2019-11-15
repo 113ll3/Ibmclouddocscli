@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-16"
+lastupdated: "2019-11-14"
 
 keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
@@ -712,7 +712,7 @@ ibmcloud cfee create [-n, --name NAME] [--location LOCATION] [--cells CELLS] [--
   <dt>--plan ID</dt>
   <dd>Specify ID of plan. By default, a Standard plan is used.</dd>
   <dt>-c PARAMETERS_AS_JSON</dt>
-  <dd>Valid JSON object that contains api-specific configuration parameters, provided either inline or in a file. For a list of supported configuration parameters, see https://cloud.ibm.com/apidocs/cfaas#provision-new-cfee-environment for the particular catalog entry. This optoin is necessary for provisioning multi-zone CFEEs. Note: All other flags are ignored, and the fields resource_group_id, access_token, and refresh_token are handled by the CLI command.</dd>
+  <dd>Valid JSON object that contains api-specific configuration parameters, provided either inline or in a file. For a list of supported configuration parameters, see the [Provision new CFEE environment](/apidocs/cfaas#provision-new-cfee-environment) API docs for the particular catalog entry. This optoin is necessary for provisioning multi-zone CFEEs. Note: All other flags are ignored, and the fields resource_group_id, access_token, and refresh_token are handled by the CLI command.</dd>
 </dl>
 
 <strong>Examples</strong>:

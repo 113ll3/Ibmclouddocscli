@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-07"
+lastupdated: "2019-11-14"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
@@ -18,8 +18,11 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:external: target="_blank" .external}
 
-# FAQs
+# FAQs for the {{site.data.keyword.cloud_notm}} CLI
 {: #ibm-cli-faq}
+
+FAQs for the {{site.data.keyword.cloud}} CLI include questions about CLI versioning, updates, and working with apps. To find all FAQs for {{site.data.keyword.cloud_notm}}, see our [FAQ library](https://{DomainName}/docs/faqs).
+{: shortdesc}
 
 ## Is it required to use the latest version of the {{site.data.keyword.cloud_notm}} CLI?
 {: #cli-latest-version}
@@ -31,7 +34,7 @@ ibmcloud -v
 ```
 {: codeblock}
 
-## How to update the CLI
+## How do I update the CLI?
 {: #cli-update-version}
 
 Run the following command to update to the latest version of the CLI:
@@ -41,10 +44,10 @@ ibmcloud update
 ```
 {: codeblock}
 
-## How to be notified about new CLI releases?
+## How can I be notified about new CLI releases?
 {: #cli-get-notified}
 
-Yes, you stay up-to-date on new releases of the CLI as they become available. Subscribe to the [{{site.data.keyword.cloud_notm}} CLI releases repository](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}
+When you run an {{site.data.keyword.cloud_notm}} CLI command, you're notified if a new version is available. You can also subscribe to the [{{site.data.keyword.cloud_notm}} CLI releases repository](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external} to stay up-to-date on the latest releases.
 
 ## What is the file structure for {{site.data.keyword.cloud_notm}} applications?
 {: #cli-file-structure}
@@ -60,7 +63,7 @@ The {{site.data.keyword.dev_cli_long}} CLI plug-in uses two containers to facili
 
 The second container is the run container, which closely mimics the actual runtime environment of your app once it is deployed to the cloud. This container is in a form that is suitable to be deployed for use, for example, in {{site.data.keyword.cloud_notm}}. As a result, an entry point is defined that starts your app. When you select to run your app through the {{site.data.keyword.dev_cli_long}} CLI plug-in CLI, it uses this container. The `Dockerfile` for this container is defined by the [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) parameter.
 
-## How to deploy existing code?
+## How do I deploy existing code?
 
 To deploy an existing code base, see [Generating deployment and cloud enablement assets](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
 
