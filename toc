@@ -6,6 +6,7 @@ IBM Cloud CLI and Developer Tools
 
 	{: .navgroup id="learn"}
 	index.md
+	[Why IBM Cloud Developer Tools CLI?](https://www.ibm.com/cloud/cli)
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
