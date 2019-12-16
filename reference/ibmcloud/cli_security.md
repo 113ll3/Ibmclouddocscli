@@ -19,11 +19,12 @@ subcollection: cloud-cli
 {: #sl-manage-security-keys}
 
 SSH keys allow access to a device without using a password from corresponding clients for each public key that is implemented on the device. By adding an SSH key to a device, the device that was provided with the SSH key accesses the device for the corresponding key without the use of a password.
+{: shortdesc}
 
 SSL certificates are enabled by websites as a security measure to protect the user. They are generally used when you are required to transmit confidential information to a website.
 
 Use the following commands to manage {{site.data.keyword.cloud}} classic infrastructure SSH Keys and Certificates.
-{: shortdesc}
+
 
 ## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
