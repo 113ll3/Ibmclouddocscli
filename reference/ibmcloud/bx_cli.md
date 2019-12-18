@@ -81,7 +81,7 @@ ibmcloud help dev
 ## ibmcloud version
 {: #ibmcloud_version}
 
-Print the version of IBM Cloud CLI.
+Print the version of the {{site.data.keyword.cloud_notm}} CLI.
 ```
 ibmcloud version
 ```
@@ -99,7 +99,7 @@ None.
 ### Examples
 {: #version-examples}
 
-Print the version of IBM Cloud CLI:
+Print the version of the {{site.data.keyword.cloud_notm}} CLI:
 ```
 ibmcloud version
 ```
@@ -272,7 +272,7 @@ ibmcloud -q cf services
 ## ibmcloud cf install
 {: #ibmcloud_cf_install}
 
-Install a Cloud Foundry CLI for IBM Cloud CLI:
+Install a Cloud Foundry CLI for the {{site.data.keyword.cloud_notm}} CLI.
 ```
 ibmcloud cf install [-v, --version VERSION] [--restore] [-f, --force]
 ```
