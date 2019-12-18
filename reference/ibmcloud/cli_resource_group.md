@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-11-06"
+lastupdated: "2019-12-16"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -36,7 +36,7 @@ ibmcloud resource groups [--default] [--output FORMAT]
   <dt>--default</dt>
   <dd>Get the default group of the current account.</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>--output value  Specify output format, only JSON is supported now.</dd>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -70,7 +70,7 @@ ibmcloud resource group NAME [--id] [--output FORMAT]
   <dt>--id</dt>
   <dd>Show ID only</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>--output value  Specify output format, only JSON is supported now.</dd>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -215,7 +215,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 
 List service instances.
 ```
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--type INSTANCE_TYPE] [-g RESOURCE_GROUP] [--long] [--output FORMAT]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--type INSTANCE_TYPE] [-g RESOURCE_GROUP | --all-resource-groups] [--long] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -230,10 +230,12 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
   <dd>Type of instances. `service_instance` type is used if not specified, use all to list all types of instances.</dd>
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Resource group name</dd>
+  <dt>--all-resource-groups</dt>
+  <dd>Query all resource groups</dd>
   <dt>--long</dt>
   <dd>Show more fields in output.</dd>
   <dt>--output <i>FORMAT</i></dt>
-  <dd>Specify output format, only JSON is supported now. </dd>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -266,7 +268,7 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--out
   <dt>--id</dt>
   <dd>Display the ID of service instance</dd>
   <dt>--output</dt>
-  <dd>Specify output format, only JSON is supported now. This option is exclusive with '--id'.</dd>
+  <dd>Specify output format. Only `json` is supported. This option is exclusive with '--id'.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -397,7 +399,7 @@ ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
   <dt>SERVICE_ALIAS (required)</dt>
   <dd>Service alias name</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>--output value  Specify output format, only JSON is supported now.</dd>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -426,7 +428,7 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
   <dt>--id</dt>
   <dd>Display the ID. All other output for the service binding is suppressed. This option is exclusive with '--output'.</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>--output value  Specify output format, only JSON is supported now. This option is exclusive with '--id'.</dd>
+  <dd>Specify output format. Only `json` is supported. This option is exclusive with '--id'.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -521,7 +523,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
   <dt>--alias-name</dt>
   <dd>Service Alias Name</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>--output value  Specify output format, only JSON is supported now.</dd>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -554,7 +556,7 @@ ibmcloud resource service-key (NAME | ID) [-g RESOURCE_GROUP] [--id] [--output F
   <dt>-g RESOURCE_GROUP</dt>
   <dd>Resource group name</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format, only JSON is supported now. This option is exclusive with '--id'.</dd>
+  <dd>Specify output format. Only `json` is supported. This option is exclusive with '--id'.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -684,7 +686,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [-
   <dt>--instance-name</dt>
   <dd>Name of the belonging service instance.</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>--output value  Specify output format, only JSON is supported now.</dd>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -711,7 +713,7 @@ ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
   <dt>--id</dt>
   <dd>Display the service alias's ID. All other output for the alias is suppressed. This option is exclusive with '--output'.</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>--output value  Specify output format, only JSON is supported now. This option is exclusive with '--id'.</dd>
+  <dd>Specify output format. Only `json` is supported. This option is exclusive with '--id'.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -815,7 +817,7 @@ ibmcloud resource service-alias-delete my-service-alias
 
 Search resources by using Lucene query syntax.
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)] [-p, --provider PROVIDER]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)] [-p, --provider PROVIDER] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
@@ -825,11 +827,13 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
   <dt>-o, -offset</dt>
   <dd>Starting resource position number</dd>
   <dt>-l, -limit</dt>
-  <dd>Number of resources to return (maximum 10000)</dd>
+  <dd>Number of resources to return, up to a maximum of 10000.</dd>
   <dt>-s, --sort-by</dt>
-  <dd>Property to sort by. Accepted inputs are `name`, `family`, `region`, `type`, `crn`.</dd>
+  <dd>Property to sort by. Accepted values are `name`, `family`, `region`, `type`, `crn`.</dd>
   <dt>-p, --provider</dt>
-  <dd>Display Classic Infrastructure resources. The only value allowed is: classic-infrastructure</dd>
+  <dd>Display classic infrastructure resources. The only supported value is `classic-infrastructure`.</dd>
+  <dt>--output</dt>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Searcheable attributes</strong>:
@@ -938,7 +942,7 @@ ibmcloud resource search "tagReferences.tag.name:name _objectType:SoftLayer_Hard
 List all tags in your billing account
 
 ```
-ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider classic-infrastructure] [-d, --details true]
+ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider classic-infrastructure] [-d, --details true] [-a, --attached true] [--output FORMAT]
 ```
 <strong>Prerequisites</strong>: Endpoint, Login
 
@@ -947,11 +951,15 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
   <dt>-o, -offset</dt>
   <dd>Starting tag position number.</dd>
   <dt>-l, -limit</dt>
-  <dd>Number of tags to return (maximum 1000, default 100).</dd>
+  <dd>Number of tags to return, up to a maximum of `1000`. The default value is `100`.</dd>
   <dt>-p; --provider</dt> 
   <dd>Specify classic-infrastructure when you search for classic infrastructure tags.</dd>
   <dt>-d, --details</dt>
   <dd>Show the number of tagged resources.</dd>
+  <dt>-a, --attached</dt>
+  <dd>Show only filtered attached tags to a resource. The only supported value is `true`.</dd>
+  <dt>--output</dt>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 
@@ -1045,16 +1053,20 @@ ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --re
 
 Delete a tag:
 ```
-ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
+ibmcloud resource tag-delete (--tag-name TAG_NAME | -a, --all  [-f, --force]) [-p, --provider PROVIDER]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--tag-name (required)</dt>
+  <dt>--tag-name</dt>
   <dd>The name of the tag to be deleted.</dd>
-  <dt>-p, --provider</dt>
+  <dt>-a, --all</dt>
+  <dd>Delete all tags that aren't attached to any resources.</dd>
+  <dt>-f, --force</dt>
+  <dd>Delete the tags without confirmation.</dd>
+  <dt>-p, --provider</dt> 
   <dd>Specify `classic-infrastructure` when you delete a classic infrastructure tag.</dd>
 </dl>
 
@@ -1077,7 +1089,7 @@ ibmcloud resource reclamations [--instance-id INSTANCE_ID | --instance-name INST
   <dt>--instance-name</dt>
   <dd>Name of the resource instance</dd>
   <dt>--output</dt>
-  <dd>Specify output format, only `JSON` is supported.</dd>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1097,31 +1109,31 @@ ibmcloud resource reclamations --instance-name "test-cloudant"
 
 Restore a reclaimed resource so that the resource is available again:
 ```
-ibmcloud resource reclamation-restore --id RECLAMATION_ID [--comment COMMENT] [--output FORMAT]
+ibmcloud resource reclamation-restore ID [--comment COMMENT] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--id (required)</dt>
+  <dt>ID</dt>
   <dd>ID of the resource reclamation</dd>
   <dt>--comment</dt>
   <dd>Comments about the action</dd>
   <dt>--output</dt>
-  <dd>Specify output format, only `JSON` is supported.</dd>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
 
 Restore a resource reclamation with ID `d9fendfwlw`:
 ```
-ibmcloud resource reclamation-restore --id "d9fendfwlw"
+ibmcloud resource reclamation-restore "d9fendfwlw"
 ```
 
 Restore a resource reclamation with ID `d9fendfwlw`, leave a comment of "need to use for another 3 months", and show JSON output:
 ```
-ibmcloud resource reclamation-restore --id "d9fendfwlw" --comment "need to use for another 3 months" --output JSON
+ibmcloud resource reclamation-restore "d9fendfwlw" --comment "need to use for another 3 months" --output JSON
 ```
 
 ## ibmcloud resource reclamation-delete
@@ -1129,32 +1141,32 @@ ibmcloud resource reclamation-restore --id "d9fendfwlw" --comment "need to use f
 
 Delete a reclaimed resource so that the resource can no longer be restored:
 ```
-ibmcloud resource reclamation-delete --id RECLAMATION_ID [--comment COMMENT] [--f, --force] [--output FORMAT]
+ibmcloud resource reclamation-delete ID [--comment COMMENT] [--f, --force] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--id (required)</dt>
+  <dt>ID</dt>
   <dd>ID of the resource reclamation</dd>
   <dt>--comment</dt>
   <dd>Comments about the action</dd>
   <dt>-f, --force</dt>
   <dd>Force deletion without confirmation</dd>
   <dt>--output</dt>
-  <dd>Specify output format, only `JSON` is supported.</dd>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
 
 Delete a resource reclamation with ID `d9fendfwlw`:
 ```
-ibmcloud resource reclamation-delete --id "d9fendfwlw"
+ibmcloud resource reclamation-delete "d9fendfwlw"
 ```
 
 Delete a resource reclamation with ID `d9fendfwlw` and leave a comment of "no longer needed" without confirmation:
 ```
-ibmcloud resource reclamation-delete --id "d9fendfwlw" --comment "no longer needed" -f
+ibmcloud resource reclamation-delete "d9fendfwlw" --comment "no longer needed" -f
 ```
 

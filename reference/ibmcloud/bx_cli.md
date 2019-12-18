@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-11-06"
+lastupdated: "2019-12-16"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -75,6 +75,33 @@ ibmcloud help
 Display help for the `dev` command:
 ```
 ibmcloud help dev
+```
+{: codeblock}
+
+## ibmcloud version
+{: #ibmcloud_version}
+
+Print the version of the {{site.data.keyword.cloud_notm}} CLI.
+```
+ibmcloud version
+```
+
+### Prerequisites
+{: #version-prereqs}
+
+None.
+
+### Command options
+{: #version-options}
+
+None.
+
+### Examples
+{: #version-examples}
+
+Print the version of the {{site.data.keyword.cloud_notm}} CLI:
+```
+ibmcloud version
 ```
 {: codeblock}
 
@@ -245,7 +272,7 @@ ibmcloud -q cf services
 ## ibmcloud cf install
 {: #ibmcloud_cf_install}
 
-Install a Cloud Foundry CLI for IBM Cloud CLI:
+Install a Cloud Foundry CLI for the {{site.data.keyword.cloud_notm}} CLI.
 ```
 ibmcloud cf install [-v, --version VERSION] [--restore] [-f, --force]
 ```
