@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-11-14"
+lastupdated: "2019-12-13"
 
 keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
@@ -74,15 +74,15 @@ ibmcloud cfee environment env_example --id
 
 List all orgs:
 ```
-ibmcloud cfee orgs [--env ENV]
+ibmcloud cfee orgs [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
   <dl>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -104,7 +104,7 @@ ibmcloud cfee orgs --env env_example
 
 Display details of an org:
 ```
-ibmcloud cfee org ORG [--guid] [--env ENV]
+ibmcloud cfee org ORG [--guid] [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -113,8 +113,8 @@ ibmcloud cfee org ORG [--guid] [--env ENV]
   <dl>
    <dt>ORG (required)</dt>
    <dd>The name of the organization.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
    <dt>--guid</dt>
    <dd>Display org GUID only, all other output for the org is suppressed.</dd>
   </dl>
@@ -144,7 +144,7 @@ ibmcloud cfee org org_example --guid
 
 Create an org:
 ```
-ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
+ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -153,8 +153,8 @@ ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
   <dl>
    <dt>ORG (required)</dt>
    <dd>The name of the organization to be created.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
    <dt>-q, --quota QUOTA</dt>
    <dd>Quota to assign to the newly created org (use default quota if not specified).</dd>
   </dl>
@@ -184,7 +184,7 @@ ibmcloud cfee org org-create org_example --quota quota_example
 
 Delete an org:
 ```
-ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
+ibmcloud cfee org-delete ORG [-f, --force] [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -193,8 +193,8 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
   <dl>
    <dt>ORG (required)</dt>
    <dd>The name of the organization to be deleted.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
    <dt>-f, --force</dt>
    <dd>Force deletion without confirmation.</dd>
   </dl>
@@ -224,7 +224,7 @@ ibmcloud cfee org org-delete org_example -f
 
 Display users in specified organization by role:
 ```
-ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
+ibmcloud cfee org-users ORG [-a, --all] [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -235,8 +235,8 @@ ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
    <dd>The name of the organization.</dd>
    <dt>-a, --all</dt>
    <dd>List all users in the specified org.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -264,7 +264,7 @@ ibmcloud cfee org-users org_example -a
 
 Assign an org role to a user (org manager required):
 ```
-ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
+ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -283,8 +283,8 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
    <li>OrgAuditor: This role has read-only access to org information and reports.</li>
    </ul>
    </dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -306,7 +306,7 @@ ibmcloud cfee org-role-set tes@example.com org_example BillingManager --env env_
 
 Remove an org role from a user (org manager or user only):
 ```
-ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
+ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -325,8 +325,8 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
    <li>OrgAuditor: This role has read-only access to org information and reports.</li>
    </ul>
    </dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -348,7 +348,7 @@ ibmcloud cfee org-role-unset tes@example.com org_example BillingManager --env en
 
 List all spaces:
 ```
-ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
+ibmcloud cfee spaces [-o,--org ORG] [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -356,9 +356,9 @@ ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
 <strong>Command options</strong>:
   <dl>
    <dt>-o, --org ORG</dt>
-   <dd>Organization name. Default to current organization if not specified.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dd>Organization name. Defaults to the current organization if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -380,7 +380,7 @@ ibmcloud cfee spaces -o org_example --env env_example
 
 Show the info of specified space:
 ```
-ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--env ENV]
+ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -389,12 +389,12 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
   <dl>
    <dt>SPACE (required)</dt>
    <dd>Name of space to be shown.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
    <dt>--guid</dt>
    <dd>Retrieve and display the space's guid. All other output for the space is suppressed.</dd>
    <dt>-o, --org ORG</dt>
-   <dd>Organization name. Default to current organization if not specified.</dd>
+   <dd>Organization name. Defaults to the current organization if not specified.</dd>
    <dt>--security-group-rules</dt>
    <dd>Retrieve the rules for all the security groups associated with the space.</dd>
   </dl>
@@ -430,7 +430,7 @@ ibmcloud cfee space space_example -o org_example --env env_example
 
 Create a space:
 ```
-ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
+ibmcloud cfee space-create SPACE [-o, --org ORG] [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -439,10 +439,10 @@ ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
   <dl>
    <dt>SPACE (required)</dt>
    <dd>Name of space to be created.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
    <dt>-o, --org ORG</dt>
-   <dd>Organization name. Default to current organization if not specified.</dd>
+   <dd>Organization name. Defaults to the current organization if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -464,7 +464,7 @@ ibmcloud cfee space-create space_example -o org_example --env env_example
 
 Rename a space:
 ```
-ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
+ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -475,10 +475,10 @@ ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
    <dd>The old name of the space that is to be renamed.</dd>
    <dt>NEW_NAME (required)</dt>
    <dd>The new name of the space that it is to be renamed to.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
    <dt>-o, --org ORG</dt>
-   <dd>Organization name. Default to current organization if not specified.</dd>
+   <dd>Organization name. Defaults to the current organization if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -500,7 +500,7 @@ ibmcloud cfee space-rename space_example new_pace_example -o org_example --env e
 
 Delete a space:
 ```
-ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
+ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -509,12 +509,12 @@ ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
   <dl>
    <dt>SPACE (required)</dt>
    <dd>Name of space to be deleted.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
    <dt>-f, --force</dt>
    <dd>Force deletion without confirmation.</dd>
    <dt>-o, --org ORG</dt>
-   <dd>Organization name. Default to current organization if not specified.</dd>
+   <dd>Organization name. Defaults to the current organization if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -536,7 +536,7 @@ ibmcloud cfee space-delete space_example new_pace_example -f -o org_example --en
 
 Assign a space role to a user:
 ```
-ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
+ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -556,8 +556,8 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
    <li>SpaceDeveloper: This role can create and manage apps and services, and see logs and reports.</li>
    <li>SpaceAuditor: This role can view logs, reports, and settings for the space.</li>
    </ul></dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -579,7 +579,7 @@ ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceMana
 
 Remove a space role from a user:
 ```
-ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
+ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -599,8 +599,8 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
    <li>SpaceDeveloper: This role can create and manage apps and services, and see logs and reports.</li>
    <li>SpaceAuditor: This role can view logs, reports, and settings for the space.</li>
    </ul></dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -622,7 +622,7 @@ ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceMa
 
 Get all space roles of current user under specific org:
 ```
-ibmcloud cfee space-roles ORG [--env ENV]
+ibmcloud cfee space-roles ORG [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -631,8 +631,8 @@ ibmcloud cfee space-roles ORG [--env ENV]
   <dl>
    <dt>ORG (required)</dt>
    <dd>The name of the organization.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -654,7 +654,7 @@ ibmcloud cfee space-roles org_example --env env_example
 
 Display users in specified space by role:
 ```
-ibmcloud cfee space-users ORG SPACE [--env ENV]
+ibmcloud cfee space-users ORG SPACE [--env NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -665,8 +665,8 @@ ibmcloud cfee space-users ORG SPACE [--env ENV]
    <dd>The name of the organization.</dd>
    <dt>SPACE (required)</dt>
    <dd>The name of the space.</dd>
-   <dt>--env ENV</dt>
-   <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
+   <dt>--env NAME</dt>
+   <dd>The CFEE environment name. Defaults to the current CFEE environment if not specified.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -821,6 +821,7 @@ Check the provisioning status of a CFEE instance:
 ```
 ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
@@ -829,10 +830,40 @@ ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
    <dt>NAME or ID (required)</dt>
    <dd>The name or ID of the CFEE instance.</dd>
    <dt>--poll</dt>
-   <dd>Specify whether you'd like to make this call recurring, to poll until in stable state.</dd>
+   <dd>Specify whether to make this call recurring, which polls until in a stable state.</dd>
    <dt>--output FORMAT</dt>
-   <dd>Specify the status output format, only JSON is supported now.</dd>
+   <dd>Specify the status output format. Only `json` is supported.</dd>
   </dl>
+   
+## ibmcloud cfee delete
+{: #ibmcloud_cfee_delete}
+
+Deletes a particular CFEE environment:
+```
+ibmcloud cfee delete --env {Name|ID} [-f, --force]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--env NAME or ID</dt>
+   <dd>Specify an environment to check by name or ID.</dd>
+   <dt>-f, --force</dt>
+   <dd>Force CFEE delete without confirmation. Use with caution.</dd>
+  </dl>
+<strong>Examples</strong>:
+
+Delete the `env_example` CFEE environment, confirming before the environment is deleted:
+```
+ibmcloud cfee delete --env env_example
+```
+{: codeblock}
+
+Delete the `env_example` CFEE environment without requiring confirmation:
+```
+ibmcloud cfee delete --env env_example --force
+```
+{: codeblock}
 
 ## ibmcloud cfee monitoring-enable
 {: #ibmcloud_cfee_monitoring-enable}
@@ -877,5 +908,323 @@ ibmcloud cfee monitoring-status [--poll]
 <strong>Command options</strong>:
   <dl>
    <dt>--poll</dt>
-   <dd>Specify whether you'd like to make this call recurring, to poll until in stable state</dd>
+   <dd>Specify whether to make this call recurring, which polls until in a stable state</dd>
   </dl>
+
+## ibmcloud cfee status
+{: #ibmcloud_cfee_status}
+
+Check the status of a CFEE instance:
+```
+ibmcloud cfee status {NAME|ID} [--poll] [--output FORMAT]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>NAME or ID (required)</dt>
+   <dd>The name or ID of the CFEE instance.</dd>
+   <dt>--poll</dt>
+   <dd>Specify whether to make this call recurring, which polls until in a stable state.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Specify the status output format. Only `json` is supported.</dd>
+  </dl>
+
+<strong>Examples</strong>:
+
+Get the status of CFEE environment `env_example`:
+```
+ibmcloud cfee status env_example
+```
+{: codeblock}
+
+Get the status of CFEE environment `env_example` in JSON format:
+```
+ibmcloud cfee status env_example --output json
+```
+{: codeblock}
+
+Poll the status of CFEE environment `env_example`:
+```
+ibmcloud cfee status env_example --poll
+```
+{: codeblock}
+
+## ibmcloud cfee version
+{: #ibmcloud_cfee_version}
+
+Get the version of an environment, or get the latest available CFEE version:
+```
+ibmcloud cfee version [--env {NAME|ID} | --latest] [--details] [--output FORMAT]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--env NAME or ID</dt>
+   <dd>The CFEE environment name or ID. Defaults to the current CFEE environment if not specified.</dd>
+  </dl>
+  <dl>
+   <dt>--latest</dt>
+   <dd>Specify to find the latest CFEE version available.</dd>
+  </dl>
+  <dl>
+   <dt>--details</dt>
+   <dd>Specify if you want CFEE package version information to be included in the output.</dd>
+  </dl>
+  <dl>
+   <dt>--output FORMAT</dt>
+   <dd>Specify the status output format. Only `json` is supported.</dd>
+  </dl>
+
+<strong>Examples</strong>:
+
+Get version information for the currently targeted CFEE environment:
+```
+ibmcloud cfee version
+```
+{: codeblock}
+
+Get version information with package details for the currently targeted CFEE environment:
+```
+ibmcloud cfee version --details
+```
+{: codeblock}
+
+Get version information with package details for the currently targeted CFEE environment in JSON format:
+```
+ibmcloud cfee version --details --output json
+```
+{: codeblock}
+
+Get version information with package details for the CFEE environment `env_example` in JSON format:
+```
+ibmcloud cfee version --env env_example --details --output json
+```
+{: codeblock}
+
+Get the latest available CFEE version information with details:
+```
+ibmcloud cfee version --latest --details
+```
+{: codeblock}
+
+## ibmcloud cfee update
+{: #ibmcloud_cfee_update}
+
+Check or initiate a CFEE environment update to the next available version of CFEE:
+```
+ibmcloud cfee update --env {NAME|ID} [-f, --force] [--dryrun]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--env NAME or ID</dt>
+   <dd>Specify an environment to check by name or ID.</dd>
+  </dl>
+  <dl>
+   <dt>-f or --force</dt>
+   <dd>Force CFEE to update without confirmation. Use with caution.</dd>
+  </dl>
+  <dl>
+   <dt>--dryrun</dt>
+   <dd>Check if the update is possible and display actions to be taken based on current and target CFEE versions. No actual update is initiated.</dd>
+  </dl>
+
+<strong>Examples</strong>:
+
+Initiate the update of the CFEE environment `env_example`. The user must confirm before the update is initiated:
+```
+ibmcloud cfee update --env env_example
+```
+{: codeblock}
+
+Initiate the update of the CFEE environment `env_example` without requiring user confirmation:
+```
+ibmcloud cfee update --env env_example --force
+```
+{: codeblock}
+
+Perform a dry-run initiation of the update of the CFEE environment `env_example`:
+```
+ibmcloud cfee update --env env_example --dryrun
+```
+{: codeblock}
+
+## ibmcloud cfee show-alert-manager-config
+{: #ibmcloud_cfee_show-alert-manager-config}
+
+Get the Prometheus Alertmanager configuration for a CFEE environment:
+```
+ibmcloud cfee show-alert-manager-config [--env {NAME|ID}]
+```
+{: codeblock}
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--env Name or ID</dt>
+   <dd>The CFEE environment name or ID. Defaults to the current CFEE environment if not specified.</dd>
+  </dl>
+
+## ibmcloud cfee logging-enable
+{: #ibmcloud_cfee_logging-enable}
+
+Enable logging on a CFEE environment by using the {{site.data.keyword.la_full_notm}} service:
+```
+ibmcloud cfee logging-enable --service-guid SERVICE_GUID [--env {NAME|ID}]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--env Name or ID</dt>
+   <dd>The CFEE environment name or ID. Defaults to the current CFEE environment if not specified.</dd>
+   <dt>--service-guid</dt>
+   <dd>Specify the GUID of your {{site.data.keyword.la_short}} instance. You can find this value by running `ibmcloud resource service-instance SERVICE_NAME`.</dd>
+  </dl>
+  
+<strong>Examples</strong>:
+
+Enable logging for the currently targeted CFEE environment by using the {{site.data.keyword.la_short}} instance's GUID:
+```
+ibmcloud cfee logging-enable --service-guid ab123456-12ab-1234-a1b1-ab123c123456
+```
+{: codeblock}
+
+Enable logging for CFEE environment `env_example` by using the {{site.data.keyword.la_short}} instance's GUID:
+```
+ibmcloud cfee logging-enable --env example_env --service-guid ab123456-12ab-1234-a1b1-ab123c123456
+```
+{: codeblock}
+  
+
+## ibmcloud cfee logging-disable
+{: #ibmcloud_cfee_logging-disable}
+
+Disable logging with {{site.data.keyword.la_short}} on the targeted CFEE environment:
+```
+ibmcloud cfee logging-disable [--env {NAME|ID}]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--env Name or ID</dt>
+   <dd>The CFEE environment name or ID. Defaults to the current CFEE environment if not specified.</dd>
+  </dl>
+  
+## ibmcloud cfee logging-status
+{: #ibmcloud_cfee_logging-status}
+
+Check the status of the most recent logging enablement or disablement operation on a CFEE environment:
+```
+ibmcloud cfee logging-status [--env {NAME|ID}] [--output FORMAT]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--env Name or ID</dt>
+   <dd>The CFEE environment name or ID. Defaults to the current CFEE environment if not specified.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Specify the status output format. Only `json` is supported.</dd>
+  </dl>
+  
+  <strong>Examples</strong>:
+  
+Get logging status for the currently targeted CFEE environment:
+```
+ibmcloud cfee logging-status
+```
+{: codeblock}
+
+Get logging status for CFEE environment `env_example` in JSON format:
+```
+ibmcloud cfee logging-status --env env_example --output json
+```
+{: codeblock}
+
+## ibmcloud cfee auditing-enable
+{: #ibmcloud_cfee_auditing-enable}
+
+Enable auditing on a CFEE environment by using events from the {{site.data.keyword.at_full_notm}} service:
+```
+ibmcloud cfee auditing-enable --service-guid SERVICE_GUID --ingestion-key KEY [--env {NAME|ID}]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--env Name or ID</dt>
+   <dd>The CFEE environment name or ID. Defaults to the current CFEE environment if not specified.</dd>
+   <dt>--service-guid SERVICE_GUID</dt>
+   <dd>Specify the GUID of your {{site.data.keyword.at_short}} instance. You can find this value by running `ibmcloud resource service-instance SERVICE_NAME`.</dd>
+   <dt>--ingestion-key KEY</dt>
+   <dd>The ingestion key of your {{site.data.keyword.at_short}} instance. You can find this value in the {{site.data.keyword.at_short}} dashboard by going to **Settings > Organization > API Keys**.></dd>
+  </dl>
+  
+  <strong>Examples</strong>:
+
+Enable auditing for the currently targeted CFEE environment by using the {{site.data.keyword.at_short}} instance's GUID and ingestion key:
+```
+ibmcloud cfee auditing-enable --service-guid ab123456-12ab-1234-a1b1-ab123c123456 --ingestion-key 123456abc123456
+```
+{: codeblock}
+
+Enable auditing for CFEE environment `env_example` by using the {{site.data.keyword.at_short}} instance's GUID and ingestion key:
+```
+ibmcloud cfee auditing-enable --env example_env --service-guid ab123456-12ab-1234-a1b1-ab123c123456 --ingestion-key 123456abc123456
+```
+{: codeblock}
+
+## ibmcloud cfee auditing-disable
+{: #ibmcloud_cfee_auditing-disable}
+
+Disable {{site.data.keyword.at_short}} auditing on a CFEE environment:
+```
+ibmcloud cfee auditing-disable [--env {NAME|ID}]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--env Name or ID</dt>
+   <dd>The CFEE environment name or ID. Defaults to the current CFEE environment if not specified.</dd>
+  </dl>
+  
+## ibmcloud cfee auditing-status
+{: #ibmcloud_cfee_auditing-status}
+
+Get the {{site.data.keyword.at_short}} auditing configuration for a CFEE environment:
+```
+ibmcloud cfee auditing-status [--env {NAME|ID}] [--output FORMAT]
+```
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--env Name or ID</dt>
+   <dd>The CFEE environment name or ID. Defaults to the current CFEE environment if not specified.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Specify the status output format. Only `json` is supported.</dd>
+  </dl>
+  
+<strong>Examples</strong>:
+
+Get auditing status for the currently targeted CFEE environment:
+```
+ibmcloud cfee auditing-status
+```
+{: codeblock}
+
+Get auditing status for CFEE environment `env_example` in JSON format:
+```
+ibmcloud cfee auditing-status --env env_example --output json
+```
+{: codeblock}
