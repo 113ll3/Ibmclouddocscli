@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-01-07"
 
 keywords: cli, security cli, ssh keys cli, ssl cli, ibmcloud sl security, certificate cli, ibmcloud sl, sshkey-add, manage security cli
 
@@ -46,11 +46,11 @@ ibmcloud sl security sshkey-add LABEL [OPTIONS]
 
 **Examples**:
 ```
-ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
+ibmcloud sl security sshkey-add MyLabel -f ~/.ssh/id_rsa.pub --note mykey
 ```
 {: codeblock}
 
-This command adds an SSH key from file `~/.ssh/id_rsa.pub` with a note `mykey`.
+This command adds an SSH key with the label `MyLabel` from file `~/.ssh/id_rsa.pub` with a note `mykey`.
 
 ## ibmcloud sl security sshkey-edit
 {: #sl_security_sshkey_edit}
