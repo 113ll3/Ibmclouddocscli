@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-01-09"
 
 keywords: classic infrastructure, block storage, mpio, ibmcloud sl block, volume-options, snapshot, datacenter, replica, cli, storage type, size
 
@@ -19,9 +19,11 @@ subcollection: cloud-cli
 {: #sl-block-storage}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.blockstorageshort}} is a persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based {{site.data.keyword.blockstorageshort}} LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections. 
+{: shortdesc}
+
+For more information about {{site.data.keyword.blockstorageshort}}, see the [{{site.data.keyword.blockstorageshort}} documentation](https://cloud.ibm.com/docs/infrastructure/BlockStorage).
 
 Use the following commands to manage a volume for the {{site.data.keyword.cloud_notm}} classic infrastructure {{site.data.keyword.blockstorageshort}} service.
-{: shortdesc}
 
 ## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
