@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-12-16"
+  years: 2018, 2020
+lastupdated: "2020-01-08"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -29,17 +29,20 @@ As of May 2018, the {{site.data.keyword.cloud_notm}} CLI commands changed from `
 
 The following lists detailed commands that are supported by the {{site.data.keyword.cloud_notm}} CLI, including their names, arguments, options, prerequisites, descriptions, and examples.
 
-Prerequisites list which actions are required before running the command, and might include one or more of the following actions:
+## Global prerequisites
+{: #global-prereqs}
+
+The prerequisites for each command describe which actions are required before you run the command. The prerequisites can include one or more of the following actions:
 
 <dl>
 <dt>Docker</dt>
 <dd>Install the Docker CLI.</dd>
 <dt>Endpoint</dt>
-<dd>Use the `ibmcloud api` command to set an API endpoint.</dd>
+<dd>Use the [`ibmcloud api` command](#ibmcloud_api) to set an API endpoint.</dd>
 <dt>Log in</dt>
-<dd>Use the `ibmcloud login` command to log in. If you log in with a federated ID, use the `--sso` option to authenticate with a one time passcode. Or use the `--apikey` option to authenticate with an API key.</dd>
+<dd>Use the [`ibmcloud login` command](#ibmcloud_login) to log in. If you log in with a federated ID, use the `--sso` option to authenticate with a one time passcode. Or use the `--apikey` option to authenticate with an API key.</dd>
 <dt>Target</dt>
-<dd>Use the `ibmcloud target` command to set an org and space.</dd>
+<dd>Use the [`ibmcloud target` command](#ibmcloud_target) to set an org and space.</dd>
 </dl>
 
 ## ibmcloud help
@@ -537,6 +540,8 @@ ibmcloud update [-f]
 ### Prerequisites
 {: #update-prereqs}
 
+None.
+
 ### Command options
 {: #update-options}
 
@@ -551,6 +556,7 @@ ibmcloud update [-f]
 Use classic infrastructure commands in the {{site.data.keyword.cloud_notm}} CLI to configure and manage infrastructure services.
 
 Run the `ibmcloud sl` command to see the list of available commands:
+
 ```
 USAGE:
    ibmcloud sl command [arguments...] [options...]
@@ -581,6 +587,8 @@ To view help information about a command, run the following command:
 ```
 ibmcloud sl [command] -h
 ```
+
+For detailed information about each command, see the related reference topics in this documentation.
 
 The `ibmcloud sl init` command is no longer available as of CLI version `0.14`. To install the most recent CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
 {: note}
