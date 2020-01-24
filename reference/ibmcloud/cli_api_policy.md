@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-12-17"
+  years: 2018, 2020
+lastupdated: "2020-01-24"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -533,7 +533,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dd>UUID of the service ID, exclusive with SERVICE_ID_NAME</dd>
   <dt>-d, --description</dt>
   <dd>Description of the API key</dd>
-  <dt>--file</dt>
+  <dt>--file FILE</dt>
   <dd>Save API key information to the specified file.</dd>
   <dt>--output FORMAT</dt>
   <dd>Specify output format, only 'JSON' is supported.</dd>
@@ -1304,7 +1304,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 
 Create an authorization policy to allow a service instance access to another service instance:
 ```
-ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-type RESOURCE_TYPE] [--source-resource RESOURCE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME] [--target-resource-type RESOURCE_TYPE | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--output FORMAT]
+ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-type RESOURCE_TYPE] [--source-resource RESOURCE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME | --target-resource-type RESOURCE_TYPE] [--target-service-instance-id TARGET_SERVICE_INSTANCE_ID] | --file FILE} [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Login, Target
@@ -1331,6 +1331,8 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>Target service instance ID, mutually exclusive with `--target-service-instance-name`. If not specified, all instances of the target service are authorized to access.</dd>
   <dt>--target-resource-type</dt>
   <dd>Resource type of target service.</dd>
+  <dt>--file FILE</dt>
+  <dd>JSON file of policy definition</dd>
   <dt>--output FORMAT</dt>
   <dd>Specify output format. Only JSON is supported.</dd>
 </dl>
@@ -1554,13 +1556,15 @@ ibmcloud iam access-group-users example_group
 
 Add users to an access group:
 ```
-ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
+ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command Options</strong>:
 <dl>
+<dt>--output FORMAT</dt>
+<dd>Specify output format. Only JSON is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1646,13 +1650,15 @@ ibmcloud iam access-group-service-ids example_group
 
 Add service ID to an access group:
 ```
-ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
+ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command Options</strong>:
 <dl>
+<dt>--output FORMAT</dt>
+<dd>Specify output format. Only JSON is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
