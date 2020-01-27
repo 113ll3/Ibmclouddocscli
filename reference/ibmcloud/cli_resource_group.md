@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-12-16"
+  years: 2018, 2020
+lastupdated: "2020-01-24"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -92,7 +92,7 @@ ibmcloud resource group example-group --id
 
 Create a resource group:
 ```
-ibmcloud resource group-create NAME
+ibmcloud resource group-create NAME [--output FORMAT]
 ```
 {: codeblock}
 
@@ -102,6 +102,8 @@ ibmcloud resource group-create NAME
 <dl>
   <dt>NAME (required)</dt>
   <dd>Name of the resource group</dd>
+  <dt>--output <i>FORMAT</i></dt>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -117,7 +119,7 @@ ibmcloud resource group-create example-group
 
 Update an existing resource group
 ```
-ibmcloud resource group-update NAME [-n, --name NEW_NAME] 
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-f, --force] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -128,8 +130,10 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME]
   <dd>Name of the target resource group</dd>
   <dt>-n, --name</dt>
   <dd>New name of the resource group</dd>
-  <dt>-f</dt>
+  <dt>-f, --force</dt>
   <dd>Force update without confirmation</dd>
+  <dt>--output <i>FORMAT</i></dt>
+  <dd>Specify output format. Only `json` is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -137,6 +141,32 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME]
 Rename resource group `example-group` to `trial-group`:
 ```
 ibmcloud resource group-update example-group -n trial-group
+```
+{: codeblock}
+
+## ibmcloud resource group-delete
+{: #ibmcloud_resource_group_delete}
+
+Delete an existing resource group
+```
+ibmcloud resource group-delete NAME [-f, --force] 
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login, Target
+
+<strong>Command options</strong>:
+<dl>
+  <dt>NAME (required)</dt>
+  <dd>Name of the target resource group</dd>
+  <dt>-f, --force</dt>
+  <dd>Force deletion without confirmation</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Delete resource group `example-group`:
+```
+ibmcloud resource group-delete example-group -f
 ```
 {: codeblock}
 

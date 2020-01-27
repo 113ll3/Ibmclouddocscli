@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-11-06"
+  years: 2018, 2020
+lastupdated: "2020-01-24"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -64,7 +64,7 @@ ibmcloud account orgs --output JSON
 
 Show the information of the specified organization:
 ```
-ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
+ibmcloud account org ORG_NAME [-r REGION] [--guid | --output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -77,7 +77,7 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
    <dd>Region name. If not specified, the default is current region. If set to `all`, orgs with the given name in all regions are listed.</dd>
    <dt>--guid</dt>
    <dd>Retrieve and display the org's guid. All other output for the org is suppressed. This option is exclusive with `--output`.</dd>
-   <dt>--output REGION</dt>
+   <dt>--output FORMAT</dt>
    <dd>Specify output format. Only JSON is supported. This option is exclusive with `--guid`.</dd>
    </dl>
 
@@ -94,18 +94,20 @@ ibmcloud account org IBM --guid
 
 Create an organization. This operation can be run only by the account owner.
 ```
-ibmcloud account org-create ORG_NAME [-r, --region REGION]
+ibmcloud account org-create ORG_NAME [-r, --region REGION] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
-   <dl>
+<dl>
    <dt>ORG_NAME (required)</dt>
    <dd>The name of the organization to be created.</dd>
    <dt>-r, --region REGION (optional)</dt>
    <dd>Region name. Default to current region if not specified.</dd>
-   </dl>
+   <dt>--output FORMAT</dt>
+   <dd>Specify output format. Only JSON is supported.</dd>
+</dl>
 
 <strong>Examples</strong>:
 
@@ -120,20 +122,22 @@ ibmcloud account org-create IBM
 
 Replicate an org from the current region to another region:
 ```
-ibmcloud account org-replicate ORG_NAME REGION_NAME [-r, --region SOURCE_REGION]
+ibmcloud account org-replicate ORG_NAME REGION_NAME [-r, --region SOURCE_REGION] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
-   <dl>
+<dl>
    <dt>ORG_NAME (required)</dt>
    <dd>The name of the existing org that is to be replicated.</dd>
    <dt>REGION_NAME (required)</dt>
    <dd>The name of the region that hosts the replicated org.</dd>
    <dt>-r, --region REGION (optional)</dt>
    <dd>Region name. Default to current region if not specified.</dd>
-   </dl>
+   <dt>--output FORMAT</dt>
+   <dd>Specify output format. Only JSON is supported.</dd>
+</dl>
 
 <strong>Examples</strong>:
 
@@ -148,20 +152,22 @@ ibmcloud account org-replicate myorg eu-gb
 
 Rename an organization. This operation can be done only by an org manager.
 ```
-ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME [-r, --region REGION]
+ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME [-r, --region REGION] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
-   <dl>
+<dl>
    <dt>OLD_ORG_NAME (required)</dt>
    <dd>The old name of the org that is to be renamed.</dd>
    <dt>NEW_ORG_NAME (required)</dt>
    <dd>The new name of the org that is to be renamed.</dd>
    <dt>-r, --region REGION (optional)</dt>
    <dd>Region name. Default to current region if not specified.</dd>
-   </dl>
+   <dt>--output FORMAT</dt>
+   <dd>Specify output format. Only JSON is supported.</dd>
+</dl>
 
 ## ibmcloud account spaces
 {: #ibmcloud_account_spaces}
@@ -267,19 +273,21 @@ This command has the same function and options as the [`cf delete-space`](http:/
 
 Display users in the specified organization by role:
 ```
-ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
+ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
-<dt>ORG_NAME (required)</dt>
-<dd>The name of the organization.</dd>
-<dt>-a, -all (optional)</dt>
-<dd>List all the users in the specified organization, not grouped by role.</dd>
-<dt>-r, --region REGION (optional)</dt>
-<dd>Region name. Default to current region if not specified.</dd>
+   <dt>ORG_NAME (required)</dt>
+   <dd>The name of the organization.</dd>
+   <dt>-a, -all (optional)</dt>
+   <dd>List all the users in the specified organization, not grouped by role.</dd>
+   <dt>-r, --region REGION (optional)</dt>
+   <dd>Region name. Default to current region if not specified.</dd>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format. Only JSON is supported.</dd>
 </dl> 
 
 ## ibmcloud account org-user-add
@@ -567,7 +575,7 @@ ibmcloud account org-account ORG_NAME [-r, --region REGION] [--guid | --output F
 
 Show account details:
 ```
-ibmcloud account show
+ibmcloud account show [--output FORMAT]
 ```
 {: codeblock}
 
@@ -575,6 +583,8 @@ ibmcloud account show
 
 <strong>Command options</strong>:
 <dl>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format. Only JSON is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -824,7 +834,7 @@ ibmcloud account platform-notification-unsubscribe (--type TYPE)
 
 List the certificate information of a domain:
 ```
-ibmcloud account domain-cert DOMAIN_NAME
+ibmcloud account domain-cert DOMAIN_NAME [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -833,6 +843,8 @@ ibmcloud account domain-cert DOMAIN_NAME
 <dl>
 <dt>DOMAIN_NAME (required)</dt>
 <dd>The domain that hosts the certificate.</dd>
+<dt>--output FORMAT (optional)</dt>
+<dd>Specify output format. Only JSON is supported.</dd>
 </dl>
 
 <strong>Examples</strong>:

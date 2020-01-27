@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-01-24"
 
 keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
@@ -26,11 +26,16 @@ subcollection: cloud-cli
 
 List all plug-in repositories that are registered in {{site.data.keyword.cloud_notm}} CLI.
 ```
-ibmcloud plugin repos
+ibmcloud plugin repos [--output FORMAT]
 ```
 {: codeblock}
 
 <strong>Prerequisites</strong>:  None
+<strong>Command options</strong>:
+<dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format. Only JSON is supported.</dd>
+</dl>
 
 ## ibmcloud plugin repo-add
 {: #ibmcloud_plugin_repo_add}
@@ -90,17 +95,19 @@ ibmcloud plugin repo-remove ibmcloud-repo
 
 List all available plug-ins in all added repositories or a specific repository.
 ```
-ibmcloud plugin repo-plugins [-r REPO_NAME]
+ibmcloud plugin repo-plugins [-r REPO_NAME] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  None
 
 <strong>Command options</strong>:
 
-   <dl>
+<dl>
    <dt>-r <i>REPO_NAME</i> (optional)</dt>
    <dd>List only the plug-ins in the specified repository.</dd>
-   </dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format. Only JSON is supported.</dd>
+</dl>
 
 <strong>Examples</strong>:
 
@@ -122,17 +129,19 @@ ibmcloud plugin repo-plugins -r ibmcloud-repo
 Show the details of a plug-in in the repository.
 
 ```
-ibmcloud plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
+ibmcloud plugin repo-plugin PLUGIN_NAME [-r REPO_NAME] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  None
 
 <strong>Command options</strong>:
 
-   <dl>
+<dl>
    <dt>-r <i>REPO_NAME</i> (optional)</dt>
    <dd>The name of the repository. If no repository is specified, the command uses the default plug-in repository.å</dd>
-   </dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format. Only JSON is supported.</dd>
+</dl>
 
 <strong>Examples</strong>:
 
@@ -153,21 +162,33 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 
 List all installed plug-ins in {{site.data.keyword.cloud_notm}} CLI.
 ```
-ibmcloud plugin list
+ibmcloud plugin list [--output FORMAT]
 ```
 {: codeblock}
 
 <strong>Prerequisites</strong>:  None
+
+<strong>Command options</strong>:
+<dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format. Only JSON is supported.</dd>
+</dl>
 
 ## ibmcloud plugin show
 {: #ibmcloud_plugin_show}
 
 Show details of an installed plug-in.
 ```
-ibmcloud plugin show PLUGIN-NAME
+ibmcloud plugin show PLUGIN-NAME [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  None
+
+<strong>Command options</strong>:
+<dl>
+   <dt>--output FORMAT (optional)</dt>
+   <dd>Specify output format. Only JSON is supported.</dd>
+</dl>
 
 ## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
