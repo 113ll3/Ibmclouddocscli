@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-01-27"
 
 keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
 
@@ -15,12 +15,12 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Working with the File Storage service
+# Working with the {{site.data.keyword.filestorage_short}} service
 {: #sl-file-storage-service}
 
 {{site.data.keyword.filestorage_full}} is a persistent, fast, and flexible network-attached, NFS-based {{site.data.keyword.filestorage_short}}. In this network-attached storage (NAS) environment, you have total control over your file shares function and performance.
 
-Use the following commands to manage a volume in the {{site.data.keyword.cloud_notm}} classic infrastructure File Storage service.
+Use the following commands to manage a volume in the {{site.data.keyword.cloud_notm}} classic infrastructure {{site.data.keyword.filestorage_short}} service.
 {: shortdesc}
  
 ## ibmcloud sl file access-authorize
@@ -432,6 +432,26 @@ ibmcloud sl file volume-count [OPTIONS]
 <dt>-d, --datacenter</dt>
 <dd>Filter by datacenter shortname.</dd>
 </dl>
+
+## ibmcloud sl file volume-limits
+{: #sl_file_volume_limits}
+
+Display the global maximum volume count for the account and the number of {{site.data.keyword.blockstorageshort}} and {{site.data.keyword.filestorage_short}} volumes that are already provisioned.
+```
+ibmcloud sl file volume-limits
+```
+
+**Examples**:
+```
+[{'datacenterName': 'global', 'maximumAvailableCount': 250, 'provisioned Count':117}]
+:............:.......................:..................:
+: Datacenter : maximumAvailableCount : ProvisionedCount :
+:............:.......................:..................:
+:   global   :           250         :         117      :
+:............:.......................:..................:
+```
+{: codeblock}
+
 
 ## ibmcloud sl file volume-list
 {: #sl_file_volume_list}

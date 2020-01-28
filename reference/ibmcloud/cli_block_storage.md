@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-01-09"
+lastupdated: "2020-01-27"
 
 keywords: classic infrastructure, block storage, mpio, ibmcloud sl block, volume-options, snapshot, datacenter, replica, cli, storage type, size
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Working with the {{site.data.keyword.blockstorageshort}} service
 {: #sl-block-storage}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.blockstorageshort}} is a persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based {{site.data.keyword.blockstorageshort}} LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections. 
+{{site.data.keyword.cloud}} {{site.data.keyword.blockstorageshort}} is a persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based {{site.data.keyword.blockstorageshort}} LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections.
 {: shortdesc}
 
 For more information about {{site.data.keyword.blockstorageshort}}, see the [{{site.data.keyword.blockstorageshort}} documentation](https://cloud.ibm.com/docs/infrastructure/BlockStorage).
@@ -449,6 +449,25 @@ ibmcloud sl block volume-count [OPTIONS]
 <dd>Filter by datacenter shortname.</dd>
 </dl>
 
+## ibmcloud sl block volume-limits
+{: #sl_block_volume_limits}
+
+Display the global maximum volume count for the account and the number of {{site.data.keyword.blockstorageshort}} and {{site.data.keyword.filestorage_short}} volumes that are already provisioned.
+```
+ibmcloud sl block volume-limits
+```
+
+**Examples**:
+```
+[{'datacenterName': 'global', 'maximumAvailableCount': 250, 'provisioned Count':117}]
+:............:.......................:..................:
+: Datacenter : maximumAvailableCount : ProvisionedCount :
+:............:.......................:..................:
+:   global   :           250         :         117      :
+:............:.......................:..................:
+```
+{: codeblock}
+
 ## ibmcloud sl block volume-list
 {: #sl_block_volume_list}
 
@@ -572,6 +591,7 @@ ibmcloud sl block volume-duplicate 12345678
 {: codeblock}
 
 This command shows order a new volume by duplicating the volume with ID `12345678`.
+
 
 ## ibmcloud sl block volume-order
 {: #sl_block_volume_order}
