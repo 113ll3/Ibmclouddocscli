@@ -17,6 +17,7 @@ subcollection: cloud-cli
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # {{site.data.keyword.dev_cli_notm}} CLI plug-in (ibmcloud dev) commands
 {: #idt-cli}
@@ -41,7 +42,7 @@ You can build your app by using the `build` command. The `test`, `debug`, and `r
 
 The `build-cmd-debug` configuration element is used to build the app for all uses except for `run`. You build your app for debugging by specifying the command line option `--debug`. The `build-cmd-run` configuration element is used when you're building the app for use with the `run` command.
 
-To build with multiple containers, your app must have a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one.
+To build with multiple containers, your app must have a [Compose](https://docs.docker.com/compose/overview/){: external} file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one.
 
 Run the following command in your current app directory to begin building:  
 ```
@@ -177,7 +178,7 @@ Before you deploy a Cloud Foundry app to {{site.data.keyword.cloud_notm}}, a `ma
 ### Deploying to Kubernetes
 {: #deploy-kubernetes}
 
-Before you deploy an app as a container, you must locally install [Kubernetes](https://kubernetes.io/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and [Helm](https://github.com/helm/helm){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"). The Helm client version must not be newer than the Helm server version. You can find both by running `helm version`. It is recommended to use v2.4.2 for the client version.
+Before you deploy an app as a container, you must locally install [Kubernetes](https://kubernetes.io/){: external} and [Helm](https://github.com/helm/helm){: external}. The Helm client version must not be newer than the Helm server version. You can find both by running `helm version`. It is recommended to use v2.4.2 for the client version.
 
 To deploy your app on Kubernetes, you must either specify the `deploy-target` as `container` in the `cli-config.yml` or use the parameter `-t container`.
 
@@ -467,7 +468,7 @@ If you're using Windows&trade;, you must run Windows&trade; 10 Pro or later.
 
 You can run your app through the `run` command. A build must first be completed against the app by using the `build` command. When you run the `run` command, the run container starts and exposes the ports as defined by the `container-port-map` parameter. The `run-cmd` parameter is used to invoke the app if the run container `Dockerfile` doesn't contain an entry point to complete this step.
 
-To run with multiple containers, your app must contain a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one.
+To run with multiple containers, your app must contain a [Compose](https://docs.docker.com/compose/overview/){: external} file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one.
 
 First, compile your app:
 ```
@@ -540,7 +541,7 @@ ibmcloud dev shell
 ```
 {: codeblock}
 
-The {{site.data.keyword.dev_cli_short}} CLI opens an interactive shell into the app's docker container. The default target container for the `shell` command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command targets the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. For more information, see [this reference](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
+The {{site.data.keyword.dev_cli_short}} CLI opens an interactive shell into the app's docker container. The default target container for the `shell` command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command targets the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. For more information, see [this reference](https://docs.docker.com/engine/reference/builder/#workdir){: external}.
 
 Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container is brought up and the shell is opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you want to shell. However, this flag is reserved for when no containers are running. The `run` and `tools` arguments are more flexible so you can switch between containers when one is running. For example, if the tools container is running and you execute `ibmcloud dev shell run`, the `tools` container is stopped and the `run` container starts, and vice versa.
 

@@ -14,6 +14,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # IBM Cloud Developer Tools for JetBrains IDEs
 {: #ibm-dev-tools-for-jetbrains}
@@ -31,7 +32,7 @@ To use the {{site.data.keyword.cloud_notm}} developer tools extension for JetBra
 ## Installation
 {: #jetbrains-installation}
 
-The best way to install the {{site.data.keyword.cloud_notm}} developer tools extension for JetBrains IDE, is to go to the [{{site.data.keyword.cloud_notm}} developer tools GitHub repo's JetBrains page](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), and follow the instructions.
+The best way to install the {{site.data.keyword.cloud_notm}} developer tools extension for JetBrains IDE, is to go to the [{{site.data.keyword.cloud_notm}} developer tools GitHub repo's JetBrains page](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains){: external}, and follow the instructions.
 
 ## Usage
 {: #jetbrains-usage}

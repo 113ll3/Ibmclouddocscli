@@ -14,6 +14,7 @@ subcollection: cloud-cli
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # VPN CLI plug-in for cf CLI
 {: #vpn_cli_for_cf}
@@ -41,7 +42,7 @@ cf uninstall-plugin vpn
 
 ### Install locally
 
-1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from the [{{site.data.keyword.cloud_notm}} CLI plug-in Repository](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from the [{{site.data.keyword.cloud_notm}} CLI plug-in Repository](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: external}.
 
 2. Install the {{site.data.keyword.vpn_short}} plug-in by using the following command:
 

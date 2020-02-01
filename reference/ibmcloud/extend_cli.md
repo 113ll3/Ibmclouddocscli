@@ -17,13 +17,14 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:external: target="_blank" .external}
 
 # Extending {{site.data.keyword.cloud_notm}} CLI with plug-ins
 {: #plug-ins}
 
 {{site.data.keyword.cloud}} CLI supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally.
 
-[{{site.data.keyword.cloud_notm}} CLI plug-ins repository](https://plugins.cloud.ibm.com/ui/repository.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg) is the official repository where plug-ins are hosted.
+[{{site.data.keyword.cloud_notm}} CLI plug-ins repository](https://plugins.cloud.ibm.com/ui/repository.html){: external} is the official repository where plug-ins are hosted.
 
 For more commands to manage plug-ins, run `ibmcloud plugin` to see the help messages.
 {: tip}

@@ -14,6 +14,7 @@ subcollection: cloud-cli
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:codeblock: .codeblock}
+{:external: target="_blank" .external}
 
 # Managing Cloud Foundry applications
 {: #ibmcloud_commands_apps}
@@ -24,97 +25,97 @@ Use the following commands to manage Cloud Foundry applications, domains, and ro
 ## ibmcloud app push
 {: #ibmcloud_app_push}
 
-This command has the same function and options as the [cf push](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf push](http://cli.cloudfoundry.org/en-US/cf/push.html){: external} command.
 
 ## ibmcloud app list
 {: #ibmcloud_app_list}
 
-This command has the same function and options as the [cf apps](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf apps](http://cli.cloudfoundry.org/en-US/cf/apps.html){: external} command.
 
 ## ibmcloud app show
 {: #ibmcloud_app_show}
 
-This command has the same function and options as the [cf app](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf app](http://cli.cloudfoundry.org/en-US/cf/app.html){: external} command.
 
 ## ibmcloud app delete
 {: #ibmcloud_app_delete}
 
-This command has the same function and options as the [cf delete](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf delete](http://cli.cloudfoundry.org/en-US/cf/delete.html){: external} command.
 
 ## ibmcloud app rename
 {: #ibmcloud_app_rename}
 
-This command has the same function and options as the [cf rename](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf rename](http://cli.cloudfoundry.org/en-US/cf/rename.html){: external} command.
 
 ## ibmcloud app start
 {: #ibmcloud_app_start}
 
-This command has the same function and options as the [cf start](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf start](http://cli.cloudfoundry.org/en-US/cf/start.html){: external} command.
 
 ## ibmcloud app stop
 {: #ibmcloud_app_stop}
 
-This command has the same function and options as the [cf stop](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf stop](http://cli.cloudfoundry.org/en-US/cf/stop.html){: external} command.
 
 ## ibmcloud app restart
 {: #ibmcloud_app_restart}
 
-This command has the same function and options as the [cf restart](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf restart](http://cli.cloudfoundry.org/en-US/cf/restart.html){: external} command.
 
 ## ibmcloud app restage
 {: #ibmcloud_app_restage}
 
-This command has the same function and options as the [cf restage](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf restage](http://cli.cloudfoundry.org/en-US/cf/restage.html){: external} command.
 
 ## ibmcloud app instance-restart
 {: #ibmcloud_app_instance_restart}
 
-This command has the same function and options as the [cf restart-app-instance](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf restart-app-instance](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: external} command.
 
 ## ibmcloud app events
 {: #ibmcloud_app_events}
 
-This command has the same function and options as the [cf events](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf events](http://cli.cloudfoundry.org/en-US/cf/events.html){: external} command.
 
 ## ibmcloud app files
 {: #ibmcloud_app_files}
 
-This command has the same function and options as the [cf files](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf files](http://cli.cloudfoundry.org/en-US/cf/files.html){: external} command.
 
 ## ibmcloud app logs
 {: #ibmcloud_app_logs}
 
-This command has the same function and options as the [cf logs](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf logs](http://cli.cloudfoundry.org/en-US/cf/logs.html){: external} command.
 
 ## ibmcloud app env
 {: #ibmcloud_app_env}
 
-This command has the same function and options as the [cf env](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf env](http://cli.cloudfoundry.org/en-US/cf/env.html){: external} command.
 
 ## ibmcloud app env-set
 {: #ibmcloud_app_env_set}
 
-This command has the same function and options as the [cf set-env](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf set-env](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: external} command.
 
 ## ibmcloud app env-unset
 {: #ibmcloud_app_env_unset}
 
-This command has the same function and options as the [cf unset-env](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf unset-env](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: external} command.
 
 ## ibmcloud app stacks
 {: #ibmcloud_app_stacks}
 
-This command has the same function and options as the [cf stacks](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf stacks](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: external} command.
 
 ## ibmcloud app stack-show
 {: #ibmcloud_app_stack_show}
 
-This command has the same function and options as the [cf stack](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf stack](http://cli.cloudfoundry.org/en-US/cf/stack.html){: external} command.
 
 ## ibmcloud app manifest-create
 {: #ibmcloud_app_manifest_create}
 
-This command has the same function and options as the [cf create-app-manifest](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf create-app-manifest](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: external} command.
 
 ## ibmcloud app domain-cert
 {: #cf-list-domain-cert}
@@ -200,12 +201,12 @@ ibmcloud app domain-cert-remove DOMAIN [-f]
 ## ibmcloud app routes
 {: #ibmcloud_app_routes}
 
-This command has the same function and options as the [cf routes](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf routes](http://cli.cloudfoundry.org/en-US/cf/routes.html){: external} command.
 
 ## ibmcloud app route-check
 {: #ibmcloud_app_route_check}
 
-This command has the same function and options as the [cf check-route](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf check-route](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: external} command.
 
 ## ibmcloud app route-map
 {: #ibmcloud_app_route_map}
@@ -287,39 +288,39 @@ The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another d
 ## ibmcloud app route-create
 {: #ibmcloud_app_route_create}
 
-This command has the same function and options as the [cf create-route](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf create-route](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: external} command.
 
 ## ibmcloud app route-delete
 {: #ibmcloud_app_route_delete}
 
-This command has the same function and options as the [cf delete-route](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf delete-route](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: external} command.
 
 ## ibmcloud app orphaned-routes-delete
 {: #ibmcloud_app_orphaned_routes_delete}
 
-This command has the same function and options as the [cf delete-orphaned-routes](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf delete-orphaned-routes](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: external} command.
 
 ## ibmcloud app domains
 {: #ibmcloud_app_domains}
 
-This command has the same function and options as the [cf domains](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf domains](http://cli.cloudfoundry.org/en-US/cf/domains.html){: external} command.
 
 ## ibmcloud app domain-create
 {: #ibmcloud_app_domain_create}
 
-This command has the same function and options as the [cf create-domain](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf create-domain](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: external} command.
 
 ## ibmcloud app domain-delete
 {: #ibmcloud_app_domain_delete}
 
-This command has the same function and options as the [cf delete-domain](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf delete-domain](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: external} command.
 
 ## ibmcloud app shared-domain-create
 {: #ibmcloud_app_shared_domain_create}
 
-This command has the same function and options as the [cf create-shared-domain](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf create-shared-domain](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: external} command.
 
 ## ibmcloud app shared-domain-delete
 {: #ibmcloud_app_shared_domain_delete}
 
-This command has the same function and options as the [cf delete-shared-domain](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [cf delete-shared-domain](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: external} command.

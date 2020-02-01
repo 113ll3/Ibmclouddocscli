@@ -15,6 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:note: .note}
 {:codeblock: .codeblock}
+{:external: target="_blank" .external}
 
 # Managing accounts, users, and Cloud Foundry orgs
 {: #ibmcloud_commands_account}
@@ -256,17 +257,17 @@ ibmcloud account space space_example --security-group-rules
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
 
-This command has the same function and options as the [`cf create-space`](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [`cf create-space`](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: external} command.
 
 ## ibmcloud account space-rename
 {: #ibmcloud_account_space_rename}
 
-This command has the same function and options as the [`cf rename-space`](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [`cf rename-space`](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: external} command.
 
 ## ibmcloud account space-delete
 {: #ibmcloud_account_space_delete}
 
-This command has the same function and options as the [`cf delete-space`](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
+This command has the same function and options as the [`cf delete-space`](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: external} command.
 
 ## ibmcloud account org-users
 {: #ibmcloud_account_org_users}

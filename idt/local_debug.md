@@ -16,6 +16,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Local app debugging for the {{site.data.keyword.dev_cli_notm}} CLI
 {: #local-debug}
@@ -39,7 +40,7 @@ Steps to enable the debugging tool for a Java&trade; app:
 
 	* Eclipse
       1. Import the **Existing maven project** into Eclipse.
-      2. Create a [Java&trade; remote app](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") debug configuration.
+      2. Create a [Java&trade; remote app](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: external} debug configuration.
          1. Enter the IP address or `localhost:<port>`  
          2. Enter `7777` for port number.
          3. Specify the name of the project that you imported.
@@ -50,8 +51,8 @@ Steps to enable the debugging tool for a Java&trade; app:
 	   The default port is `9080` for the Java&trade; basic Microservices endpoint.
 	   {: note}
 
-	* [IntelliJ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-	* [VSCode](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+	* [IntelliJ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: external}
+	* [VSCode](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger){: external}
 	* JDK command line: `jdb -attach <host:port>`
 
 ## Node.js app debugging
@@ -66,8 +67,8 @@ Steps to enable the debugging tool for a Node.js app:
   {: codeblock}
 
 2. Connecting the debugger to your app:
-	* [VSCode](https://blog.docker.com/2016/07/live-debugging-docker/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-	* [WebStorm](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+	* [VSCode](https://blog.docker.com/2016/07/live-debugging-docker/){: external}
+	* [WebStorm](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/){: external}
 
 
 <!--

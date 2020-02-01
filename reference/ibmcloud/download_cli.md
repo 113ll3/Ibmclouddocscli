@@ -15,6 +15,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:screen: .screen}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI
 {: #install-ibmcloud-cli}
@@ -27,7 +28,7 @@ If you want to install both the latest {{site.data.keyword.cloud}} CLI and other
 ## Before you begin
 {: #before-download-cli}
 
-If you need to use a 32-bit version, or a previous version other than the latest for {{site.data.keyword.cloud_notm}} Dedicated environments, see [{{site.data.keyword.cloud_notm}} CLI releases](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+If you need to use a 32-bit version, or a previous version other than the latest for {{site.data.keyword.cloud_notm}} Dedicated environments, see [{{site.data.keyword.cloud_notm}} CLI releases](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}.
 
 ## Installing with an installer
 {: #ibmcloud-cli-installer}
@@ -68,7 +69,7 @@ To install the latest CLI for your OS from the shell manually, use the following
   ```
   {: codeblock}
 
-* For **Windows&trade;**, copy and paste the following command to a [Windows&trade; PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") terminal console and run it:
+* For **Windows&trade;**, copy and paste the following command to a [Windows&trade; PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: external} terminal console and run it:
   ```
   iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
   ```
@@ -139,4 +140,4 @@ No update required. Your CLI is already up-to-date.
 ```
 {: screen}
 
-To get notified about new {{site.data.keyword.cloud_notm}} CLI releases, subscribe to the [{{site.data.keyword.cloud_notm}} CLI releases repository](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+To get notified about new {{site.data.keyword.cloud_notm}} CLI releases, subscribe to the [{{site.data.keyword.cloud_notm}} CLI releases repository](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}.

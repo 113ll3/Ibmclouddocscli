@@ -15,6 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Managing IAM access, API keys, service IDs, and access groups
 {: #ibmcloud_commands_iam}
@@ -294,7 +295,7 @@ Create an {{site.data.keyword.cloud_notm}} platform API key:
 ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock] [--output FORMAT]
 ```
 
-Using the {{site.data.keyword.cloud_notm}} CLI login with an API Key does not work with the legacy SL API Key that is found on `control.softlayer.com` option. An upgraded {{site.data.keyword.cloud_notm}} Account where Infrastructure is managed through [cloud.ibm.com](https://cloud.ibm.com/registration){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") is required for the {{site.data.keyword.cloud_notm}} CLI login with an API Key.
+Using the {{site.data.keyword.cloud_notm}} CLI login with an API Key does not work with the legacy SL API Key that is found on `control.softlayer.com` option. An upgraded {{site.data.keyword.cloud_notm}} Account where Infrastructure is managed through [cloud.ibm.com](https://cloud.ibm.com/registration){: external} is required for the {{site.data.keyword.cloud_notm}} CLI login with an API Key.
 {: note}
 
 <strong>Prerequisites</strong>:  Endpoint, Login

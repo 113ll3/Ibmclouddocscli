@@ -20,6 +20,7 @@ subcollection: cloud-cli
 {:pre: .pre}
 {:note: .deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
+{:external: target="_blank" .external}
 
 # Troubleshooting for the {{site.data.keyword.cloud_notm}} Developer Tools CLI plug-in
 {: #troubleshoot}
@@ -149,7 +150,7 @@ Use one of the following ways to get the code:
 
 * Use the {{site.data.keyword.dev_console}}.
 
-	1. Select your [app](https://cloud.ibm.com/resources){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") in the {{site.data.keyword.dev_console}}.
+	1. Select your [app](https://cloud.ibm.com/resources){: external} in the {{site.data.keyword.dev_console}}.
 
 	2. Click **Download Code**.
 {: tsResolve}
@@ -317,9 +318,9 @@ This error might be due to one of the following causes:
 {: tsCauses}
 
 Be sure that Docker is installed and running:
-- To install or start [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
-- To install or start [Docker for Windows&trade;](https://docs.docker.com/docker-for-windows/install/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
-- To install or start [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+- To install or start [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: external}
+- To install or start [Docker for Windows&trade;](https://docs.docker.com/docker-for-windows/install/){: external}
+- To install or start [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: external}
 {: tsResolve}
 
 ## Helm upgrade is failing with errors
@@ -367,7 +368,7 @@ To resolve the issue, set the client's version to the same as the cluster's vers
   export HELM_HOME=~/.helm
   ```
 
-* For Windows&trade;: As an administrator, download and install the `helm` binary from [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+* For Windows&trade;: As an administrator, download and install the `helm` binary from [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: external}.
   
   From the PowerShell terminal, use the following commands:
   ```

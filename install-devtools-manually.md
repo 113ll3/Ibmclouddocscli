@@ -16,6 +16,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:note: .deprecated}
+{:external: target="_blank" .external}
 
 # Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in manually
 {: #install-devtools-manually}
@@ -27,7 +28,7 @@ You can manually install the {{site.data.keyword.cloud}} developer tools command
 {: cli-before-you-begin}
 
 * Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli) to get support for installing command line plug-ins for {{site.data.keyword.cloud_notm}}.
-* Install the [curl](https://curl.haxx.se/download.html){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") command for downloading packages through the command line.
+* Install the [curl](https://curl.haxx.se/download.html){: external} command for downloading packages through the command line.
 
 ## Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in
 {: #install-devtools-idt}
@@ -43,12 +44,12 @@ ibmcloud plugin install dev
 ## Installing Docker
 {: #install-devtools-docker}
 
-For running and debugging apps locally, install [Docker](https://www.docker.com/get-started){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+For running and debugging apps locally, install [Docker](https://www.docker.com/get-started){: external}.
 
 ## Installing the Kubernetes command line tool
 {: #idt-install-kube}
 
-To view a local version of the Kubernetes dashboard, and to deploy apps into your clusters, install the [Kubernetes command line tool](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for your platform:
+To view a local version of the Kubernetes dashboard, and to deploy apps into your clusters, install the [Kubernetes command line tool](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} for your platform:
 
 * Mac:
   ```
@@ -111,7 +112,7 @@ For more information, see the [{{site.data.keyword.registryshort_notm}} command 
 ## Installing Helm
 {: #idt-install-helm}
 
-Install [Helm](https://helm.sh/docs/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), which is a Kubernetes-based package manager.
+Install [Helm](https://helm.sh/docs/){: external}, which is a Kubernetes-based package manager.
 
 * Mac and Linux&trade; users, run the following commands:
   ```
@@ -120,7 +121,7 @@ Install [Helm](https://helm.sh/docs/){: new_window} ![External link icon](../ico
   ```
   {: codeblock}
 
-* Windows&trade; users can download and install the Helm [binary](https://github.com/helm/helm/releases/tag/v2.7.2){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+* Windows&trade; users can download and install the Helm [binary](https://github.com/helm/helm/releases/tag/v2.7.2){: external}.
 
 ## Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in
 {: #idt-install-functions}

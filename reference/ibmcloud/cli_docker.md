@@ -15,6 +15,7 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # Using {{site.data.keyword.dev_cli_notm}} from a Docker Container
 {: #using-idt-from-docker}
@@ -33,7 +34,7 @@ With the {{site.data.keyword.dev_cli_notm}} Docker Container, you get the {{site
 ## Before you begin
 {: #idt-docker-prereq}
 
-You need an [{{site.data.keyword.cloud_notm}} account](https://{DomainName}/login){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") and you must install the most recent stable Docker version.
+You need an [{{site.data.keyword.cloud_notm}} account](https://{DomainName}/login){: external} and you must install the most recent stable Docker version.
 
 ## Step 1. Pull the Docker Image from the Docker hub.
 {: #step1-pull-docker-image}
