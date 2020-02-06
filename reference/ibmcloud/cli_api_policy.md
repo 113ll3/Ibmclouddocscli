@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-01-24"
+lastupdated: "2020-02-06"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -751,7 +751,7 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dt>USER_NAME (required)</dt>
 <dd>User name to whom the policy belongs to.</dd>
 <dt>--file <i>FILE</i> (optional)</dt>
-<dd>JSON file of policy definition.</dd>
+<dd>JSON file of policy definition. You can use advanced operators in a JSON policy document to grant access to resources that satisfy specific naming conventions. For more information about using advanced operators to create wildcard policies, see [Assigning access by using wildcard policies](/docs/iam?topic=iam-wildcard).</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (optional)</dt>
 <dd>Role names of the policy definition. For supported roles of a specific service, run `ibmcloud iam roles --service SERVICE_NAME`. This option is exclusive with the `--file` option.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (optional)</dt>
@@ -1021,7 +1021,7 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dt>SERVICE_ID (required)</dt>
   <dd>Name or UUID of service ID.</dd>
   <dt>--file</dt>
-  <dd>JSON file of policy definition. This option is exclusive with the `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `--resource-group-name` and `--resource-group-id` options.</dd>
+  <dd>JSON file of policy definition. This option is exclusive with the `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `--resource-group-name` and `--resource-group-id` options.  You can use advanced operators in a JSON policy document to grant access to resources that satisfy specific naming conventions. For more information about using advanced operators to create wildcard policies, see [Assigning access by using wildcard policies](/docs/iam?topic=iam-wildcard).</dd>
   <dt>-r, --roles</dt>
   <dd>Role names of the policy definition. For supported roles of a specific service, run `ibmcloud iam roles --service SERVICE_NAME` option. This option is exclusive with the `--file` option.</dd>
   <dt>--service-name</dt>
@@ -1777,7 +1777,7 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
 <strong>Command Options</strong>:
 <dl>
   <dt>--file</dt>
-  <dd>JSON file of policy definition.</dd>
+  <dd>JSON file of policy definition. You can use advanced operators in a JSON policy document to grant access to resources that satisfy specific naming conventions. For more information about using advanced operators to create wildcard policies, see [Assigning access by using wildcard policies](/docs/iam?topic=iam-wildcard).</dd>
   <dt>-roles</dt>
   <dd>Role names of the policy definition. For supported roles of a specific service, run `ibmcloud iam roles --service SERVICE_NAME`. This option is exclusive with the `--file` option.</dd>
   <dt>-service-name</dt>
