@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2017, 2019
-lastupdated: "2019-09-30"
+   years: 2017, 2020
+lastupdated: "2020-02-06"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -64,7 +64,7 @@ ibmcloud dev code <appName>
 ## console
 {: #console}
 
-Use the `console` command to open a web browser to your app's web console on {{site.data.keyword.cloud_notm}}. You can run the `ibmcloud dev console` command from inside your app's folder. The CLI attempts to find a matching app on the {{site.data.keyword.cloud_notm}} that has the same app ID as the current directory. If the system isn't able to find a matching name, it opens the **Web and Mobile** dashboard on {{site.data.keyword.cloud_notm}} instead of the specific app.
+Use the `console` command to open a web browser to your app's web console on {{site.data.keyword.cloud_notm}}. You can run the `ibmcloud dev console` command from inside your app's folder. The CLI attempts to find a matching app on the {{site.data.keyword.cloud_notm}} that has the same app ID as the current directory. If the system isn't able to find a matching name, it opens the **App Development** console on {{site.data.keyword.cloud_notm}} instead of the specific app.
 
 You can provide an app name and the CLI skips matching based on the folder or app name. In this case, the CLI opens the named app's console in a web browser.  
 
