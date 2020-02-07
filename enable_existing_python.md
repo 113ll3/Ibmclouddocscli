@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-14"
+  years: 2019, 2020
+lastupdated: "2020-02-06"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -71,7 +71,7 @@ IBM Cloud app.
 
 
 This app already has a git repo therefore Toolchain creation must be completed
-in the IBM Cloud console. Use bx dev console to access the console.
+in the IBM Cloud console. Use ibmcloud dev console to access the console.
 
 The application <appname> has been created in IBM Cloud.
 

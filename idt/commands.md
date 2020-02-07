@@ -336,12 +336,6 @@ The following parameters can be used with the `enable` command or by updating th
 * Parameter used to force reenabling an already enabled app.
 * Usage `ibmcloud dev enable -f|--force`
 
-#### `no-create`
-{: #enable-no-create}
-
-* Parameter to prevent creating an app in {{site.data.keyword.cloud_notm}}, and creates the enablement files locally.
-* Usage `ibmcloud dev enable --no-create`
-
 ## get-credentials
 {: #get-credentials}
 
