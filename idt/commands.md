@@ -2,9 +2,9 @@
 
 copyright:
    years: 2017, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-02-21"
 
-keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
+keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
 
 subcollection: cloud-cli
 
@@ -12,7 +12,7 @@ subcollection: cloud-cli
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:screen: .screen}  
+{:screen: .screen}
 {:codeblock: .codeblock}  
 {:pre: .pre}
 {:tip: .tip}
@@ -22,13 +22,13 @@ subcollection: cloud-cli
 # {{site.data.keyword.dev_cli_notm}} CLI plug-in (ibmcloud dev) commands
 {: #idt-cli}
 
-Version: 2.1.18
-Released: 28 March 2019
+Version: 2.4.5
+Released: 21 February 2020
 
-As of May 2018, the {{site.data.keyword.cloud}} CLI commands `bluemix` and `bx` are now `ibmcloud`. However, you can still use the `bluemix` and `bx` CLI commands until they're removed later.
+As of May 2018, the {{site.data.keyword.cloud}} CLI commands `bluemix` and `bx` are now `ibmcloud` and `ic`. However, you can still use the `bluemix` and `bx` CLI commands until they're removed later.
 {: tip}
 
-Use the {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) commands to create an application, manage, deploy, debug, and test it.
+Use the {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev` or `ic dev`) commands to create an application, manage, deploy, debug, and test it.
 
 Run multiple commands in a single command line statement by using [compound commands](#compound).
 {: tip}
@@ -77,13 +77,15 @@ ibmcloud dev console [appName]
 ## create
 {: #create}
 
-Create an app that prompts for all information, including resource type, language, starter kit, and DevOps toolchain options. Including IBM Cloud Foundry or Cloud Foundry Enterprise Environment, and Kubernetes. The app is created in the current directory.
+Create an app that prompts for all information, including resource group, app type, language, and starter kit. You are prompted to enter a name for your app, and you can select services to add to the app. You can also select DevOps toolchain options for automatic deployment, or you can select manual deployment. The app is created in the current directory. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cloud-cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
 
 To create an app in the current directory and to associate services with it, run the following command:
 ```
 ibmcloud dev create
 ```
 {: codeblock}
+
+For more information, see [Creating an app from a starter kit](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-app-cli).
 
 ## debug
 {: #debug}
@@ -175,10 +177,12 @@ ibmcloud dev deploy
 Before you deploy a Cloud Foundry app to {{site.data.keyword.cloud_notm}}, a `manifest.yml` file must be present in your app's root directory.
 {: tip}
 
+For more information, see [Deploying your app](/docs/apps?topic=creating-apps-create-deploy-app-cli#deploy-app-cli).
+
 ### Deploying to Kubernetes
 {: #deploy-kubernetes}
 
-Before you deploy an app as a container, you must locally install [Kubernetes](https://kubernetes.io/){: external} and [Helm](https://github.com/helm/helm){: external}. The Helm client version must not be newer than the Helm server version. You can find both by running `helm version`. It is recommended to use v2.4.2 for the client version.
+Before you deploy an app as a container, you must locally install [Kubernetes](https://kubernetes.io/){: external} and [Helm](https://github.com/helm/helm){: external}. The Helm client version must not be newer than the Helm server version. You can find both by running `helm version`.
 
 To deploy your app on Kubernetes, you must either specify the `deploy-target` as `container` in the `cli-config.yml` or use the parameter `-t container`.
 
@@ -189,12 +193,12 @@ chart-path: "chart/myapp"
 
 deploy-target: "container"
 
-deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
+deploy-image-target: "registry.<{{site.data.keyword.cloud_notm}} Region>.icr.io/<Container Registry Namespace>/<App-Name>"
 
 ibm-cluster: "mycluster"
 ```
 
-In the `cli-config.yml`, you can define the location of a Helm chart in the `chart-path` property and configure the `deploy-image-target` as shown in the example. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.cloud_notm}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster that you created in {{site.data.keyword.cloud_notm}}.
+In the `cli-config.yml`, you can define the location of a Helm chart in the `chart-path` property and configure the `deploy-image-target` as shown in the example. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.cloud_notm}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster that you created in {{site.data.keyword.cloud_notm}}. If you don't specify the cluster name, you'll be prompted to select it from a list of your available clusters.
 
 ### Deploying to {{site.data.keyword.cloud_notm}} Foundry Enterprise Environment 
 {: #deploy-cfee}
@@ -204,7 +208,7 @@ You can deploy to an {{site.data.keyword.cloud_notm}} Foundry Enterprise Environ
 ### Deploying to Knative clusters
 {: #deploy-knative-cli}
 
-The most recent [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-getting-started) CLI release adds toolchain deployment support for [Knative](https://www.ibm.com/cloud/learn/knative) clusters on the [IBM Cloud Kubernetes Service](https://www.ibm.com/cloud/container-service). To use this feature, you need a [Knative-based cluster](https://www.ibm.com/cloud/blog/announcing-managed-knative-on-ibm-cloud-kubernetes-service-experimental) (and not a Helm-based cluster). With this prerequisite met, a Knative deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} CLI.
+The most recent [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-getting-started) CLI release adds toolchain deployment support for [Knative](https://www.ibm.com/cloud/learn/knative) clusters on the [{{site.data.keyword.containerlong_notm}}](https://www.ibm.com/cloud/container-service). To use this feature, you need a [Knative-based cluster](https://www.ibm.com/cloud/blog/announcing-managed-knative-on-ibm-cloud-kubernetes-service-experimental) (and not a Helm-based cluster). With this prerequisite met, a Knative deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} CLI.
 
 By selecting the **Knative** option, you can create a toolchain that deploys to the Knative-based cluster that you specify through the dialog.
 
@@ -263,7 +267,12 @@ ibmcloud dev diag
 ## edit
 {: #edit}
 
-Edit your app with options such as connecting it with an existing {{site.data.keyword.cloud_notm}} app, managing {{site.data.keyword.cloud_notm}}, and its {{site.data.keyword.cloud_notm}} toolchain that deploys to {{site.data.keyword.cloud_notm}} Kubernetes, Cloud Foundry, or Cloud Foundry Enterprise Environment. With a local app that is connected to an app in {{site.data.keyword.cloud_notm}}, use `edit` to add new services, connect and disconnect existing services, or remove existing services from your account. Additionally, you can create or view an {{site.data.keyword.cloud_notm}} toolchain for the app. Run the following command in the root of your app directory:
+Edit your app with options such as connecting it with an existing {{site.data.keyword.cloud_notm}} app, managing {{site.data.keyword.cloud_notm}}, and its {{site.data.keyword.cloud_notm}} toolchain that deploys to {{site.data.keyword.cloud_notm}} Kubernetes, Cloud Foundry, or Cloud Foundry Enterprise Environment. With a local app that is connected to an app in {{site.data.keyword.cloud_notm}}, use `edit` to add new services, connect and disconnect existing services, or remove existing services from your account. Additionally, you can:
+ * Create or view a DevOps toolchain for the app.
+ * Select DevOps toolchain options for automatic deployment.
+ * Select manual deployment. The deployment files that are relevant for your choice of deployment target are created.
+
+Run the following command in the root of your app directory:
 ```
 ibmcloud dev edit
 ```
@@ -282,7 +291,7 @@ You can also add a service to your app, where you are guided through service sel
 ## enable
 {: #enable}
 
-Enable an existing app for {{site.data.keyword.cloud_notm}} deployment. The `enable` command attempts to automatically detect the language of an existing app and then prompt for necessary additional information. Files are generated to be used for local Docker containers, Cloud Foundry deployment, Cloud Foundry Enterprise Environment deployment, or Kubernetes Container deployment. All deployment environments can be used through a manual `deploy` or by using a DevOps toolchain.
+Enable an existing app for {{site.data.keyword.cloud_notm}} deployment. The `enable` command attempts to automatically detect the language of an existing app and then prompt for necessary additional information. All deployment environments can be used through a manual `deploy` or by using a DevOps toolchain. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cloud-cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
 
 While logged in to {{site.data.keyword.cloud_notm}}, you can connect this local app with an app that is already in {{site.data.keyword.cloud_notm}} or create a new {{site.data.keyword.cloud_notm}} app. To take advantage of {{site.data.keyword.cloud_notm}} features such as services and DevOps toolchains, an app in {{site.data.keyword.cloud_notm}} is necessary. When an {{site.data.keyword.cloud_notm}} app is created for an app that is cloned from a Git repository, the {{site.data.keyword.cloud_notm}} app includes this repository in its configuration. 
 
@@ -720,7 +729,7 @@ For apps deployed to Cloud Foundry, the URL consists of the app's host name and 
 
 For apps deployed to Kubernetes, the URL consists of the IP address of the node it is deployed to, and the public port. If the command determines that the app was deployed to Kubernetes, the CLI tool prompts for confirmation. If you specify that the app wasn't deployed to Kubernetes, then the Cloud Foundry URL is shown. If you expected the command to show the URL for a Kubernetes deployed app, ensure that the `cli-config.yml` contains an entry for `chart-path` or supply it through command line as shown [here](#chart-path).
 
-Run the following command to view your app:
+Run the following command from the app directory to view your app:
 ```
 ibmcloud dev view
 ```
