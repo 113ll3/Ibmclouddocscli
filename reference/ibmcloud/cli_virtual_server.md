@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-03-10"
 
 keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
@@ -90,7 +90,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-m, --memory</dt>
 <dd>Required. Memory in megabytes.</dd>
 <dt>--flavor</dt>
-<dd>Public Virtual Server flavor key name.</dd>
+<dd>Public Virtual Server flavor key name. Required if suspended billing capabilities are needed.</dd>
 <dt>-d, --datacenter</dt>
 <dd>Required. Datacenter shortname.</dd>
 <dt>-o, --os</dt>
