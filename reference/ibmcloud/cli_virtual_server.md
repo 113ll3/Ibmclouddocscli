@@ -90,7 +90,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-m, --memory</dt>
 <dd>Required. Memory in megabytes.</dd>
 <dt>--flavor</dt>
-<dd>Public Virtual Server flavor key name. Required if suspended billing capabilities are needed.</dd>
+<dd>Public Virtual Server flavor key name. Required if suspend billing capabilities are needed.</dd>
 <dt>-d, --datacenter</dt>
 <dd>Required. Datacenter shortname.</dd>
 <dt>-o, --os</dt>
