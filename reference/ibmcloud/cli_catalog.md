@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-03-19"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -258,6 +258,32 @@ ibmcloud catalog service-marketplace --global
 ```
 {: codeblock}
 
+## ibmcloud catalog service
+{: #ibmcloud_catalog_service}
+
+View details of a service in the catalog, including a description, tags, compatibility information, and available plans. 
+
+```
+ibmcloud catalog service NAME_OR_ID [--output json] [--global]
+```
+
+<strong>Command options</strong>:
+
+<dl>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format, only JSON is supported now.</dd>
+  <dt>--global</dt>
+  <dd>Operate in a global scope</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Show details of the `container-kubernetes` service:
+```
+ibmcloud catalog service container-kubernetes
+```
+{: codeblock}
+
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
@@ -395,7 +421,7 @@ ibmcloud catalog runtime RUNTIME_ID [--output json]
 
 Show details of runtime "nodejsHelloWorld":
 ```
-catalog runtime nodejsHelloWorld
+ibmcloud catalog runtime nodejsHelloWorld
 ```
 {: codeblock}
 
@@ -423,3 +449,5 @@ List all runtimes along with their descriptions:
 ibmcloud catalog runtimes -d
 ```
 {: codeblock}
+
+
