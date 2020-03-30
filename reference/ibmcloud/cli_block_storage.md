@@ -49,13 +49,14 @@ ibmcloud sl block access-authorize VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl block access-authorize 12345678 --virtual-id 87654321
 ```
+{: codeblock}
 
 This command authorizes virtual server with ID `87654321` to access volume with ID `12345678`.
 
 ## ibmcloud sl block access-list
 {: #sl_block_access_list}
 
-List ACLs.
+List hosts that are authorized to access the volume:
 ```
 ibmcloud sl block access-list VOLUME_ID [OPTIONS]
 ```
@@ -63,9 +64,9 @@ ibmcloud sl block access-list VOLUME_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>--sortby</dt>
-<dd>Column to sort by. Options are: id,name,type,private_ip_address,host_iqn,username,password.</dd>
+<dd>Column to sort by. Options are: id,name,type,private_ip_address,source_subnet,host_iqn,username,password,allowed_host_id.</dd>
 <dt>--column</dt>
-<dd>Column to display. Options are: id,name,type,private_ip_address,host_iqn,username,password.</dd>
+<dd>Column to display. Options are: id,name,type,private_ip_address,source_subnet,host_iqn,username,password,allowed_host_id. This option can be specified multiple times.</dd>
 </dl>
 
 **Examples**:
@@ -79,7 +80,7 @@ This command lists all hosts that are authorized to access volume with ID `12345
 ## ibmcloud sl block access-password
 {: #sl_block_access_password}
 
-Changes a password for a volume's access.
+Changes a password for a volume's access:
 ```
 ibmcloud sl block access-password ACCESS_ID PASSWORD
 ```
@@ -163,7 +164,7 @@ This command lists suitable replication data centers for block volume with ID `1
 ## ibmcloud sl block replica-order
 {: #sl_block_replica_order}
 
-Order a block storage replica volume.
+Order a block storage replica volume:
 ```
 ibmcloud sl block replica-order VOLUME_ID [OPTIONS]
 ```
@@ -190,14 +191,14 @@ ibmcloud sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LI
 ```
 {: codeblock}
 
-This command orders a replica for volume with ID `12345678`, which performs DAILY replication, is located at `dal09`, tier level is 4, and OS type is Linux&trade;.
+This command orders a replica for volume with ID `12345678`, which performs DAILY replication, is located at `dal09`, tier level is 4, and OS type is Linux.
 
 ## ibmcloud sl block replica-partners
 {: #sl_block_replica_partners}
 
 List existing replicant volumes for a block volume:
 ```
-ibmcloud sl block replica-partners VOLUME_ID [OPTIONS]
+ibmcloud sl block replica-partners VOLUME_ID
 ```
 
 **Examples**:
@@ -315,7 +316,6 @@ Delete a snapshot on a specified volume:
 ```
 ibmcloud sl block snapshot-delete SNAPSHOT_ID
 ```
-{: codeblock}
 
 **Examples**:
 ```
@@ -459,14 +459,11 @@ ibmcloud sl block volume-limits
 
 **Examples**:
 ```
-[{'datacenterName': 'global', 'maximumAvailableCount': 250, 'provisioned Count':117}]
-:............:.......................:..................:
-: Datacenter : maximumAvailableCount : ProvisionedCount :
-:............:.......................:..................:
-:   global   :           250         :         117      :
-:............:.......................:..................:
+ibmcloud sl block volume-limits
 ```
 {: codeblock}
+
+This command lists the storage limits for this account.
 
 ## ibmcloud sl block volume-list
 {: #sl_block_volume_list}
@@ -487,9 +484,9 @@ ibmcloud sl block volume-list [OPTIONS]
 <dt>-o, --order</dt>
 <dd>Filter by ID of the order that purchased the block storage.</dd>
 <dt>--sortby</dt>
-<dd>Column to sort by, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,active_transactions,created_by.</dd>
+<dd>Column to sort by, default:id, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,lunId,active_transactions,created_by.</dd>
 <dt>--column</dt>
-<dd>Column to display, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
+<dd>Column to display. Options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,lunId,created_by,active_transactions,notes. This option can be specified multiple times.</dd>
 </dl>
 
 **Examples**:
@@ -563,7 +560,7 @@ This command shows details of volume with ID `12345678`.
 ## ibmcloud sl block volume-duplicate
 {: #sl_block_volume_duplicate}
 
-Order a block volume by duplicating an existing volume.
+Order a block volume by duplicating an existing volume:
 ```
 ibmcloud sl block volume-duplicate VOLUME_ID [OPTIONS]
 ```
@@ -638,7 +635,6 @@ List all options for ordering a block storage:
 ```
 ibmcloud sl block volume-options
 ```
-{: codeblock}
 
 **Examples**:
 ```
@@ -647,3 +643,6 @@ ibmcloud sl block volume-options
 {: codeblock}
 
 This command lists all options for creating a block storage volume, including storage type, volume size, OS type, IOPS, tier level, datacenter, and snapshot size.
+
+
+

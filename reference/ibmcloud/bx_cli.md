@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-03-24"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -22,11 +22,6 @@ subcollection: cloud-cli
 The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}} command-line client bundles a Cloud Foundry command-line client in its installation. If you have your own Cloud Foundry CLI installed, don't use both {{site.data.keyword.cloud_notm}} CLI commands and Cloud Foundry CLI commands of your own installation in the same context. Instead, use `ibmcloud cf [command]` if you want to use the Cloud Foundry CLI to manage Cloud Foundry resources in {{site.data.keyword.cloud_notm}} CLI context. The `ibmcloud cf api/login/logout/target` command isn't allowed, and you must use `ibmcloud api/login/logout/target` instead.
-
-As of May 2018, the {{site.data.keyword.cloud_notm}} CLI commands changed from `bluemix` and `bx` to `ibmcloud`. However, you can still use the `bluemix` and `bx` CLI commands until they're removed later.
-{: tip}
-
 The following lists detailed commands that are supported by the {{site.data.keyword.cloud_notm}} CLI, including their names, arguments, options, prerequisites, descriptions, and examples.
 
 ## Global prerequisites
@@ -44,6 +39,39 @@ The prerequisites for each command describe which actions are required before yo
 <dt>Target</dt>
 <dd>Use the [`ibmcloud target` command](#ibmcloud_target) to set an org and space.</dd>
 </dl>
+
+## Global options
+{: #global-options}
+
+The following options are available for most commands in the {{site.data.keyword.cloud_notm}} CLI. To check whether an option is available for a specific command, use the `-h, --help` option with the command.
+
+### `--output FORMAT`
+{: #global-option-output}
+
+Specifies an output format. Only JSON is currently supported.
+
+#### Examples
+{: #global-option-output-examples}
+
+Print available resource groups in JSON format:
+```
+ibmcloud resource groups --output json
+```
+{: codeblock}
+
+### `-q, --quiet`
+{: #global-option-quiet}
+
+Suppresses verbose messages. Prompt messages like `Getting information from... as ...` do not display if `-q, --quiet` is specified.
+
+#### Examples
+{: #global-option-quiet-examples}
+
+Print available resource groups in quiet mode:
+```
+ibmcloud resource groups -q
+```
+{: codeblock}
 
 ## ibmcloud help
 {: #ibmcloud_help}
@@ -166,7 +194,8 @@ ibmcloud api --unset
 Writes default values to the configuration file.
 
 ```
-ibmcloud config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/file) | --color (true|false) | --locale (LOCALE|CLEAR) | --check-version (true|false)
+ibmcloud config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/file) | 
+         --color (true|false) | --locale (LOCALE|CLEAR) | --check-version (true|false)
 ```
 
 ### Prerequisites
@@ -232,15 +261,15 @@ ibmcloud config --locale CLEAR
 ```
 {: codeblock}
 
-## ibmcloud info
-{: #ibmcloud_info}
-
-The `ibmcloud info` command is no longer available as of CLI version 0.14. To install the most recent CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
-
 ## ibmcloud cf
 {: #ibmcloud_cf}
 
-Invoke the embedded Cloud Foundry CLI.
+Use a Cloud Foundry CLI that's managed by IBM to work with Cloud Foundry resources through the {{site.data.keyword.cloud_notm}} CLI. If you have a separate Cloud Foundry CLI (`cf`) installation, don't use both `ibmcloud cf` commands and `cf` commands in the same context. Instead, use only `ibmcloud cf [command]` to manage resources in the {{site.data.keyword.cloud_notm}} CLI context. 
+
+When you use the `ibmcloud cf` command, authentication is handled by the {{site.data.keyword.cloud_notm}} CLI. Instead of running the `ibmcloud cf api/login/logout/target` commands, use `ibmcloud api/login/logout/target`.
+{: tip}
+
+Invoke the Cloud Foundry CLI.
 ```
 ibmcloud [-q, --quiet] cf COMMAND...
 ```
@@ -248,7 +277,7 @@ ibmcloud [-q, --quiet] cf COMMAND...
 ### Prerequisites
 {: #info-prereqs}
 
-None.
+Run [`ibmcloud cf install`](#ibmcloud_cf_install) to install the Cloud Foundry CLI.
 
 ### Command options
 {: #info-options}
@@ -261,12 +290,12 @@ None.
 ### Examples
 {: #info-examples}
 
-List the Cloud Foundry apps:
+List Cloud Foundry apps:
 ```
 ibmcloud cf apps
 ```
 
-List the Cloud Foundry services without displaying the `Invoking cf command...` message:
+List Cloud Foundry services without displaying the `Invoking cf command...` message:
 ```
 ibmcloud -q cf services
 ```
@@ -275,7 +304,8 @@ ibmcloud -q cf services
 ## ibmcloud cf install
 {: #ibmcloud_cf_install}
 
-Install a Cloud Foundry CLI for the {{site.data.keyword.cloud_notm}} CLI.
+Install the Cloud Foundry CLI for the {{site.data.keyword.cloud_notm}} CLI, or update an existing installation.
+
 ```
 ibmcloud cf install [-v, --version VERSION] [--restore] [-f, --force]
 ```
@@ -471,7 +501,7 @@ Use the `ibmcloud api` command to set an API endpoint.
 
 Set or view the target account, region, organization, or space:
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE]
 ```
 
 ### Prerequisites
@@ -502,8 +532,6 @@ ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_G
 <dd>Clear the targeted region.</dd>
 <dt>--unset-resource-group</dt>
 <dd>Clear the targeted resource group.</dd>
-<dt>--output FORMAT</dt>
-<dd>The specified output format. Only JSON is supported.</dd>
 </dl>
 
 If none of the options are specified, the current account, region, org, and space are displayed.

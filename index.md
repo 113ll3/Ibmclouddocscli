@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-19"
+lastupdated: "2020-03-26"
 
-keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
+keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
 subcollection: cloud-cli
 
@@ -18,10 +18,10 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:note: .note}
 
-# Getting started with the {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.dev_cli_short}}
+# Getting started with the {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.dev_cli_short}} (ibmcloud dev) commands
 {: #getting-started}
 
-In this tutorial, you install a set of {{site.data.keyword.cloud}} developer tools that include the latest {{site.data.keyword.cloud_notm}} CLI, verify the installation, and configure the environment. The {{site.data.keyword.dev_cli_notm}} offer a command-line interface (CLI) for creating, developing, and deploying cloud applications.
+In this tutorial, you install the {{site.data.keyword.cloud}} CLI, which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands, so you can work with apps, toolchains, pipelines, and more without needing to install a separate plug-in.
 {: shortdesc}
 
 The installation command in this tutorial installs the latest stand-alone {{site.data.keyword.cloud_notm}} CLI version available, plus the following tools:
@@ -32,7 +32,6 @@ The installation command in this tutorial installs the latest stand-alone {{site
 * `Helm`
 * `kubectl`
 * `curl` (Linux&trade; only)
-* {{site.data.keyword.dev_cli_notm}} plug-in
 * {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} plug-in
 * {{site.data.keyword.cos_full_notm}} plug-in
 * {{site.data.keyword.registrylong_notm}} plug-in
@@ -86,9 +85,6 @@ ibmcloud dev help
 
 The output lists the usage instructions, the current version, and the supported commands.
 
-If you instead see a message that states `'dev' is not a registered command.`, run the command from the previous step again. If you continue to see this message, run the `ibmcloud plugin install dev` command to separately install the {{site.data.keyword.dev_cli_short}} plug-in.
-{: tip}
-
 ## Step 3. Configure your environment
 {: #step3-configure-idt-env}
 
@@ -120,5 +116,5 @@ You're now ready to develop and deploy your first app. For more information, see
 
 Stay up to date with the {{site.data.keyword.cloud_notm}} CLI by subscribing to the [{{site.data.keyword.cloud_notm}} CLI releases repository](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}. You'll receive notifications about new {{site.data.keyword.cloud_notm}} CLI releases.
 
-Need a hand with remembering {{site.data.keyword.cloud_notm}} CLI commands? Print the [IBM Cloud CLI quick reference](https://github.com/ibm-cloud-docs/cli/blob/master/IBM%20Cloud%20CLI%20quick%20reference.pdf){:external} to keep commands for common tasks at your fingertips.
+Need a hand with remembering {{site.data.keyword.cloud_notm}} CLI commands? Print the [{{site.data.keyword.cloud_notm}} CLI quick reference](https://github.com/ibm-cloud-docs/cli/blob/master/IBM%20Cloud%20CLI%20quick%20reference.pdf){:external} to keep commands for common tasks at your fingertips.
 {:tip}

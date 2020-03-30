@@ -25,7 +25,7 @@ Use the following commands to retrieve resource usage and billing information.
 
 Show monthly usage of the current account (account admin only):
 ```
-ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
+ibmcloud billing account-usage [-d YYYY-MM]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -35,8 +35,6 @@ ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 <dl>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -51,7 +49,7 @@ ibmcloud billing account-usage -d 2016-06
 
 Show monthly usage for an org (account admin or org billing manager only):
 ```
-ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
+ibmcloud billing org-usage ORG_NAME [-d YYYY-MM]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -63,8 +61,6 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
   <dd>Name of the org.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 ## ibmcloud billing resource-group-usage
@@ -72,7 +68,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 
 Show monthly usage for a resource group (account admin or resource group admin only):
 ```
-ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
+ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -84,8 +80,6 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
   <dd>Name of the resource group.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 ## ibmcloud billing resource-instances-usage
@@ -93,7 +87,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 
 Show monthly resource instances usage under the current account:
 ```
-ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
+ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -107,8 +101,6 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>Filter instance by resource group.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 ## ibmcloud billing enterprise-usage
@@ -116,7 +108,7 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
 
 Show enterprise usage reports:
 ```
-ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --account-group-id ACCOUNT_GROUP_ID | --account ACCOUNT_NAME | --account-id ACCOUNT_ID] [--month MONTH] [--children] [--output FORMAT]
+ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --account-group-id ACCOUNT_GROUP_ID | --account ACCOUNT_NAME | --account-id ACCOUNT_ID] [--month MONTH] [--children]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -136,6 +128,4 @@ ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --accoun
   <dd>Show children usage reports.</dd>
   <dt>--month MONTH (optional)</dt>
   <dd>Target month. Default to current month.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>

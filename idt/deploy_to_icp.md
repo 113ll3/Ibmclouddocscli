@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-08-15"
+  years: 2019, 2020
+lastupdated: "2020-03-17"
 
 keywords: cli, ibmcloud private, icp, ibmcloud dev deploy, containers, kubernetes, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -123,4 +123,4 @@ The application is now deployed to {{site.data.keyword.cloud_notm}} Private usin
 
 - Blog: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: external}
 
-For more information, see the full `ibmcloud dev` [command reference](/docs/cli/idt?topic=idt-cli).
+For more information, see the full `ibmcloud dev` [command reference](/docs/cli?topic=cloud-cli-idt-cli).

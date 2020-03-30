@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-09-09"
+  years: 2015, 2020
+lastupdated: "2020-03-26"
 
-keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
+keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
 subcollection: cloud-cli
 
@@ -21,18 +21,20 @@ subcollection: cloud-cli
 {:note: .deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:external: target="_blank" .external}
+{:support: data-reuse='support'}
 
-# Troubleshooting for the {{site.data.keyword.cloud_notm}} Developer Tools CLI plug-in
+# Troubleshooting for the {{site.data.keyword.dev_cli_short}} (ibmcloud dev) commands
 {: #troubleshoot}
 
-See solutions to common problems with the {{site.data.keyword.dev_cli_short}} command line interface (CLI). In many cases, you can recover from these problems by following a few easy steps.
+See solutions to common problems with using the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands. In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
 
 ## Why do I get a host name error when I create an application with a non-mobile pattern?
 {: #ts-cli-hostname-error}
 {: troubleshoot}
+{: support}
 
-The following error might be displayed if you use the {{site.data.keyword.dev_cli_short}} CLI to deploy an application to Cloud Foundry. If you enter a unique host name, you might still see this message.
+The following error might be displayed if you use the {{site.data.keyword.cloud_notm}} CLI to deploy an application to Cloud Foundry. If you enter a unique host name, you might still see this message.
 ```
 The hostname <myHostname> is taken.
 ```
@@ -52,6 +54,7 @@ ibmcloud login
 ## Why do I get general command failures?
 {: #ts-cli-general-failures}
 {: troubleshoot}
+{: support}
 
 The following error might be displayed if you use the `create`, `delete`, `list`, or `code` commands:
 ```
@@ -191,6 +194,7 @@ Delete the `node_modules` folder and run the `ibmcloud dev run` command again.
 ## Why can't I deploy to {{site.data.keyword.cloud_notm}}?
 {: #ts-cli-deploy-issues}
 {: troubleshoot}
+{: support}
 
 A failure occurs when you try to deploy to {{site.data.keyword.cloud_notm}}, but there is no error that is displayed.
 {: tsSymptoms}
@@ -207,6 +211,7 @@ ibmcloud login
 ## Why can't I deploy to Kubernetes on {{site.data.keyword.cloud_notm}}?
 {: #ts-cli-kube-deploy}
 {: troubleshoot}
+{: support}
 
 The following failure might be displayed after you're prompted for your cluster name:
 ```
@@ -228,7 +233,7 @@ Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"T
 
 Be sure that you are using the correct cluster and that it is configured for deployment by running:
 ```
-ibmcloud cs cluster-config <cluster-name>
+ibmcloud ks cluster config <cluster-name>
 ```
 {: codeblock}
 {: tsResolve}
@@ -259,7 +264,7 @@ ibmcloud cr namespaces
 {: codeblock}
 {: tsResolve}
 
-## Why can't the language determined?
+## Why can't the app language be determined?
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
@@ -294,12 +299,6 @@ These failures have many possible causes. For more information about resolving s
 
 <!-- - For more information about resolving such problems with a Spring app, see [Enabling existing Spring Boot apps for cloud deployment](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).-->
 
-## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
-{: #ts-cli-install-devtools-manually}
-{: troubleshoot}
-
-To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
-
 ## Why can't I build the Docker image?
 {: #ts-cli-docker}
 {: troubleshoot}
@@ -323,7 +322,7 @@ Be sure that Docker is installed and running:
 - To install or start [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: external}
 {: tsResolve}
 
-## Helm upgrade is failing with errors
+## Why is my Helm upgrade failing with errors?
 {: #ts-cli-helm-rbac}
 {: troubleshoot}
 
@@ -345,7 +344,7 @@ kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceac
 ```
 {: codeblock}
 
-## How to resolve incompatible helm versions?
+## How do I resolve incompatible Helm versions?
 {: #ts-cli-helm}
 {: troubleshoot}
 
@@ -377,7 +376,7 @@ To resolve the issue, set the client's version to the same as the cluster's vers
   ```
   {: codeblock}
 
-## Why is ibmcloud dev build failing with a user name that includes "@"?
+## Why is `ibmcloud dev build` failing with a user name that includes "@"?
 {: #ts-cli-username}
 {: troubleshoot}
 
@@ -401,11 +400,11 @@ ibmcloud dev build --use-root-user-tools
 {: codeblock}
 {: tsResolve}
 
-## The ibm.biz short URL is unreachable for CLI dev plug-in installation
+## Why is the ibm.biz short URL unreachable for CLI dev installation?
 {: ts-cli-shorturl}
 {: troubleshoot}
 
-Installing the {{site.data.keyword.dev_cli_short}} CLI plug-in with the `https://ibm.biz/idt-installer` link might fail if the `ibm.biz` domain is unreachable.
+Installing the {{site.data.keyword.dev_cli_short}} CLI with the `https://ibm.biz/idt-installer` link might fail if the `ibm.biz` domain is unreachable.
 
 To resolve the issue, substitute the short ibm.biz installer URL with the following full paths to the installation scripts:
 {: tsResolve}
@@ -422,7 +421,7 @@ https://raw.githubusercontent.com/IBM-Cloud/ibm-cloud-developer-tools/master/win
 ```
 {: codeblock}
 
-## ibmcloud dev build fails with "exit status 100"
+## Why is `ibmcloud dev build` failing with "exit status 100"?
 {: #ts-cli-build-error}
 {: troubleshoot}
 

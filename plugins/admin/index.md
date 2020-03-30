@@ -350,7 +350,7 @@ cf ibmcloud-admin containers-quota organization
 
 <dl>
 <dt>organization</dt>
-<dd>The name or ID of the organization in IBM Cloud. This parameter is required.</dd>
+<dd>The name or ID of the organization in {{site.data.keyword.cloud_notm}}. This parameter is required.</dd>
 </dl>
 
 You can also use **`ba cq`** as an alias for the longer **`ibmcloud-admin containers-quota`** command name.

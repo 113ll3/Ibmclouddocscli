@@ -22,9 +22,9 @@ Use the following commands to manage {{site.data.keyword.cloud}} classic infrast
 {: shortdesc}
 
 ## ibmcloud sl ticket attach
-{: #sl_ticket_attach} 
+{: #sl_ticket_attach}
 
-To attach devices to a ticket:
+Attach devices to a ticket:
 ```
 ibmcloud sl ticket attach TICKETID [OPTIONS]
 ```
@@ -44,9 +44,9 @@ ibmcloud sl ticket attach 7676767 --hardware 8675654
 {: codeblock}
 
 ## ibmcloud sl ticket create
-{: #sl_ticket_create} 
+{: #sl_ticket_create}
 
-To create a support ticket:
+Create a support ticket:
 ```
 ibmcloud sl ticket create [OPTIONS]
 ```
@@ -58,7 +58,7 @@ ibmcloud sl ticket create [OPTIONS]
 <dt>--rootpwd</dt>
 <dd>Root password that is associated with the attached device ID.</dd>
 <dt>--subject-id</dt>
-<dd>Required. The subject ID to use for the ticket, issue `ibmcloudsl ticket subjects` to get the list.</dd>
+<dd>Required. The subject ID to use for the ticket, issue `ibmcloud sl ticket subjects` to get the list.</dd>
 <dt>--title</dt>
 <dd>Required. The title of the ticket.</dd>
 <dt>--body</dt>
@@ -69,10 +69,16 @@ ibmcloud sl ticket create [OPTIONS]
 <dd>Specify the type of attachment，hardware or virtual. The default is hardware.</dd>
 </dl>
 
-## ibmcloud sl ticket detach 
-{: #sl_ticket_detach} 
+**Examples**:
+```
+ibmcloud sl ticket create --title "Example title" --subject-id 1522 --body "This is an example ticket. Please disregard."
+```
+{: codeblock}
 
-To detach devices from a ticket:
+## ibmcloud sl ticket detach
+{: #sl_ticket_detach}
+
+Detach devices from a ticket:
 ```
 ibmcloud sl ticket detach TICKETID [OPTIONS]
 ```
@@ -96,10 +102,10 @@ ibmcloud sl ticket detach 767676 --virtual 1234567
 ```
 {: codeblock}
 
-## ibmcloud sl ticket detail 
-{: #sl_ticket_detail} 
+## ibmcloud sl ticket detail
+{: #sl_ticket_detail}
 
-To view ticket details:
+Get details for a ticket:
 ```
 ibmcloud sl ticket detail TICKETID [OPTIONS]
 ```
@@ -121,12 +127,12 @@ ibmcloud sl ticket detail 767676 --count 10
 ```
 {: codeblock}
 
-## ibmcloud sl ticket list 
-{: #sl_ticket_list} 
+## ibmcloud sl ticket list
+{: #sl_ticket_list}
 
-To list tickets:
+List tickets:
 ```
-ibmcloud sl ticket list[OPTIONS]
+ibmcloud sl ticket list [OPTIONS]
 ```
 
 <strong>Command options</strong>:
@@ -137,28 +143,27 @@ ibmcloud sl ticket list[OPTIONS]
 <dd>Display only closed tickets.</dd>
 </dl>
 
-## ibmcloud sl ticket subjects 
-{: #sl_ticket_subjects} 
+## ibmcloud sl ticket subjects
+{: #sl_ticket_subjects}
 
-To list Subject IDs for ticket creation:
+List Subject IDs for ticket creation:
 ```
 ibmcloud sl ticket subjects
 ```
 {: codeblock}
 
-## ibmcloud sl ticket summary 
-{: #sl_ticket_summary} 
+## ibmcloud sl ticket summary
+{: #sl_ticket_summary}
 
-To view summary information about tickets:
+View the summary information about tickets:
 ```
 ibmcloud sl ticket summary
 ```
-{: codeblock}
 
-## ibmcloud sl ticket update 
-{: #sl_ticket_update} 
+## ibmcloud sl ticket update
+{: #sl_ticket_update}
 
-To add an update to an existing ticket:
+Adds an update to an existing ticket:
 ```
 ibmcloud sl ticket update TICKETID ["CONTENTS"]
 ```
@@ -169,10 +174,10 @@ ibmcloud sl ticket update 767676 "A problem has been detected."
 ```
 {: codeblock}
 
-## ibmcloud sl ticket upload 
-{: #sl_ticket_upload} 
+## ibmcloud sl ticket upload
+{: #sl_ticket_upload}
 
-To add an attachment to an existing ticket:
+Adds an attachment to an existing ticket:
 ```
 ibmcloud sl ticket upload TICKETID FILEPATH
 ```

@@ -42,7 +42,7 @@ This command deletes image with ID `12345678`.
 
 Get details for an image:
 ```
-ibmcloud sl image detail IDENTIFIER
+ibmcloud sl image detail IDENTIFIER 
 ```
 
 **Examples**:
@@ -72,7 +72,7 @@ ibmcloud sl image edit IDENTIFIER [OPTIONS]
 </dl>
 
 **Examples**:
-```  
+```
 ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
 {: codeblock}
@@ -96,3 +96,12 @@ ibmcloud sl image list [OPTIONS]
 <dt>--private</dt>
 <dd>Display only private images.</dd>
 </dl>
+
+**Examples**:
+```
+ibmcloud sl image list --public
+```
+{: codeblock}
+
+This command list all public images on current account.
+

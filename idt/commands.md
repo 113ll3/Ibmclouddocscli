@@ -2,9 +2,9 @@
 
 copyright:
    years: 2017, 2020
-lastupdated: "2020-03-13"
+lastupdated: "2020-03-26"
 
-keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
+keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
 
 subcollection: cloud-cli
 
@@ -19,13 +19,10 @@ subcollection: cloud-cli
 {:note: .note}
 {:external: target="_blank" .external}
 
-# {{site.data.keyword.dev_cli_notm}} CLI plug-in (ibmcloud dev) commands
+# {{site.data.keyword.dev_cli_notm}} (ibmcloud dev) commands
 {: #idt-cli}
 
-Version: 2.4.5
-Released: 21 February 2020
-
-Use the {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev` or `ic dev`) commands to create an application, manage, deploy, debug, and test it.
+Use the `ibmcloud dev` or `ic dev` commands to create an application, manage, deploy, debug, and test it.
 
 Run multiple commands in a single command-line statement by using [compound commands](#compound).
 {: tip}
@@ -384,11 +381,6 @@ ibm-cluster: "mycluster"
 
 In the `cli-config.yml`, you can define the location of a Helm chart in the `chart-path` property and configure the `deploy-image-target` as shown in the example. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.cloud_notm}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster that you created in {{site.data.keyword.cloud_notm}}. If you don't specify the cluster name, are prompted to select it from a list of your available clusters.
 
-### Deploying to {{site.data.keyword.cfee_full_notm}}
-{: #deploy-cfee}
-
-To deploy to {{site.data.keyword.cfee_full_notm}}, configure your local environment by using `ibmcloud target --cf`, and then select the correct environment from that list. You can then use the `deploy` command as you would for {{site.data.keyword.cloud_notm}} Public Cloud Foundry.
-
 ### Deploying to Knative clusters
 {: #deploy-knative-cli}
 
@@ -453,7 +445,7 @@ Command parameters that are entered on the command line take precedence over the
 * Usage: `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `image-name-run`
-{: #image-name-run}
+{: #deploy-image-name-run}
 
 * Parameter that is used to identify the image so that `deploy` knows which image to push to the {{site.data.keyword.cloud_notm}} image registry for {{site.data.keyword.containerlong_notm}} deployments.
 * Usage: `ibmcloud dev deploy --image-name-run [image-name]`
@@ -495,7 +487,7 @@ The following parameter can be used with the `diag` command.
 ## edit
 {: #edit}
 
-Edit your app with options such as connecting it with an existing {{site.data.keyword.cloud_notm}} app, managing {{site.data.keyword.cloud_notm}}, and its {{site.data.keyword.cloud_notm}} toolchain that deploys to {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.cloud_notm}} Foundry, or {{site.data.keyword.cfee_full_notm}}. With a local app that is connected to an app in {{site.data.keyword.cloud_notm}}, use `edit` to add new services, connect and disconnect existing services, or remove existing services from your account. Additionally, you can:
+Edit your app with options such as connecting it with an existing {{site.data.keyword.cloud_notm}} app, managing {{site.data.keyword.cloud_notm}}, and its {{site.data.keyword.cloud_notm}} toolchain that deploys to {{site.data.keyword.containerlong_notm}}, or {{site.data.keyword.cloud_notm}} Foundry. With a local app that is connected to an app in {{site.data.keyword.cloud_notm}}, use `edit` to add new services, connect and disconnect existing services, or remove existing services from your account. Additionally, you can:
  * Create or view a DevOps toolchain for the app.
  * Select DevOps toolchain options for automatic deployment.
  * Select manual deployment. The deployment files that are relevant for your choice of deployment target are created.
@@ -669,7 +661,7 @@ Command parameters that are entered on the command line take precedence over the
 View the details of a pipeline.
 
 ```
-ibmcloud dev pipeline-get [pipelineID] [--json]
+ibmcloud dev pipeline-get [pipelineID] [--output JSON]
 ```
 {: codeblock}
 
@@ -680,7 +672,7 @@ ibmcloud dev pipeline-get [pipelineID] [--json]
 {: #json-get}
 
 * Parameter that is used to output the pipeline details in JSON format.
-* Usage: `ibmcloud dev pipeline-get [pipelineID] --json`
+* Usage: `ibmcloud dev pipeline-get [pipelineID] --output JSON`
 
 ### pipeline-get command parameters
 {: #pipeget-parameters}
@@ -701,7 +693,7 @@ Command parameters that are entered on the command line take precedence over the
 
 Run a pipeline.
 ```
-ibmcloud dev pipeline-run [pipelineID] [--stage-id stageID] [--json] 
+ibmcloud dev pipeline-run [pipelineID] [--stage-id stageID] [--output JSON] 
 ```
 {: codeblock}
 
@@ -723,7 +715,7 @@ Command parameters that are entered on the command line take precedence over the
 {: #json-run}
 
 * Parameter that is used to output the pipeline's invocation details in JSON format.
-* Usage: `ibmcloud dev pipeline-run [pipelineID] --json`
+* Usage: `ibmcloud dev pipeline-run [pipelineID] --output JSON`
 
 #### `trace`
 {: #pipeline-run-trace}
@@ -921,7 +913,7 @@ Command parameters that are entered on the command line take precedence over the
 * Usage: `ibmcloud dev run --host-path-tools [/path/to/build/tools]`
 
 #### `image-name-run`
-{: #image-name-run}
+{: #run-image-name-run}
 
 * Image to create from `dockerfile-run`.
 * Usage: `ibmcloud dev run --image-name-run [/path/to/image-name]`
@@ -1236,7 +1228,7 @@ View the details of a toolchain. If no toolchain name is provided, you can selec
 
 Uses the targeted resource group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry-based toolchains might not be compatible with this command.
 ```
-ibmcloud dev toolchain-get [toolchainName] [--json]
+ibmcloud dev toolchain-get [toolchainName] [--output JSON]
 ```
 {: codeblock}
 
@@ -1252,7 +1244,7 @@ Command parameters that are entered on the command line take precedence over the
 {: #json-toolchain-get}
 
 * Parameter that is used to output the toolchain details in JSON format.
-* Usage: `ibmcloud dev toolchain-get [toolchainName] --json`
+* Usage: `ibmcloud dev toolchain-get [toolchainName] --output JSON`
 
 #### `trace`
 {: #toolchain-get-trace}
@@ -1290,7 +1282,7 @@ View a list of toolchains in the current resource group.
 
 Uses the targeted Resource Group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry-based toolchains might not be compatible with this command.
 ```
-ibmcloud dev toolchains [--json]
+ibmcloud dev toolchains [--output JSON]
 ```
 {: codeblock}
 
@@ -1306,7 +1298,7 @@ Command parameters that are entered on the command line take precedence over the
 {: #json-toolchains}
 
 * Parameter that is used to output the toolchains in JSON format.
-* Usage: `ibmcloud dev toolchains --json`
+* Usage: `ibmcloud dev toolchains --output JSON`
 
 #### `trace`
 {: #toolchains-trace}

@@ -734,17 +734,11 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 
 Make request to get a list of available data centers for the targeted regions:
 ```
-ibmcloud cfee create-locations [--output FORMAT]
+ibmcloud cfee create-locations
 ```
 {: codeblock}
 
 <strong>Prerequisites</strong>:  Endpoint, Login
-
-<strong>Command options</strong>:
-<dl>
-  <dt>--output FORMAT</dt>
-  <dd>Specify output format. Only JSON is supported.</dd>
-</dl>
 
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
@@ -752,7 +746,7 @@ ibmcloud cfee create-locations [--output FORMAT]
 Check whether a user has all the permissions that are required to create a CFEE instance. The command checks the following access policies for the target user: Editor to the CFEE services, administrator role to the Kubernetes Service, editor for the platform role and manager for the service access role to the Cloud Object Storage service, and developer role to the current space in the current org for provisioning Compose for PostgreSQL
 
 ```
-ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
+ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login, Target
@@ -763,8 +757,6 @@ ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [
    <dd>The name of the user.</dd>
    <dt>--access-group GROUP_NAME</dt>
    <dd>The name of the access group to check. The default access group is `cfee-provision-access-group`.</dd>
-   <dt>--output FORMAT</dt>
-   <dd>Specify permissions output format. Only JSON is supported.</dd>
   </dl>
   
 <strong>Examples</strong>:
@@ -819,7 +811,7 @@ ibmcloud cfee create-permission-set name@example.com -ag test-access-group
 
 Check the provisioning status of a CFEE instance:
 ```
-ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
+ibmcloud cfee create-status NAME or ID [--poll]
 ```
 {: codeblock}
 
@@ -831,8 +823,6 @@ ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
    <dd>The name or ID of the CFEE instance.</dd>
    <dt>--poll</dt>
    <dd>Specify whether to make this call recurring, which polls until in a stable state.</dd>
-   <dt>--output FORMAT</dt>
-   <dd>Specify the status output format. Only `json` is supported.</dd>
   </dl>
    
 ## ibmcloud cfee delete
@@ -916,7 +906,7 @@ ibmcloud cfee monitoring-status [--poll]
 
 Check the status of a CFEE instance:
 ```
-ibmcloud cfee status {NAME|ID} [--poll] [--output FORMAT]
+ibmcloud cfee status {NAME|ID} [--poll]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -927,8 +917,6 @@ ibmcloud cfee status {NAME|ID} [--poll] [--output FORMAT]
    <dd>The name or ID of the CFEE instance.</dd>
    <dt>--poll</dt>
    <dd>Specify whether to make this call recurring, which polls until in a stable state.</dd>
-   <dt>--output FORMAT</dt>
-   <dd>Specify the status output format. Only `json` is supported.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -956,7 +944,7 @@ ibmcloud cfee status env_example --poll
 
 Get the version of an environment, or get the latest available CFEE version:
 ```
-ibmcloud cfee version [--env {NAME|ID} | --latest] [--details] [--output FORMAT]
+ibmcloud cfee version [--env {NAME|ID} | --latest] [--details]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -975,8 +963,6 @@ ibmcloud cfee version [--env {NAME|ID} | --latest] [--details] [--output FORMAT]
    <dd>Specify if you want CFEE package version information to be included in the output.</dd>
   </dl>
   <dl>
-   <dt>--output FORMAT</dt>
-   <dd>Specify the status output format. Only `json` is supported.</dd>
   </dl>
 
 <strong>Examples</strong>:
@@ -1124,7 +1110,7 @@ ibmcloud cfee logging-disable [--env {NAME|ID}]
 
 Check the status of the most recent logging enablement or disablement operation on a CFEE environment:
 ```
-ibmcloud cfee logging-status [--env {NAME|ID}] [--output FORMAT]
+ibmcloud cfee logging-status [--env {NAME|ID}]
 ```
 <strong>Prerequisites</strong>:  Endpoint, Login
 
@@ -1132,8 +1118,6 @@ ibmcloud cfee logging-status [--env {NAME|ID}] [--output FORMAT]
   <dl>
    <dt>--env Name or ID</dt>
    <dd>The CFEE environment name or ID. Defaults to the current CFEE environment if not specified.</dd>
-   <dt>--output FORMAT</dt>
-   <dd>Specify the status output format. Only `json` is supported.</dd>
   </dl>
   
   <strong>Examples</strong>:
@@ -1203,7 +1187,7 @@ ibmcloud cfee auditing-disable [--env {NAME|ID}]
 
 Get the {{site.data.keyword.at_short}} auditing configuration for a CFEE environment:
 ```
-ibmcloud cfee auditing-status [--env {NAME|ID}] [--output FORMAT]
+ibmcloud cfee auditing-status [--env {NAME|ID}]
 ```
 <strong>Prerequisites</strong>:  Endpoint, Login
 
@@ -1211,8 +1195,6 @@ ibmcloud cfee auditing-status [--env {NAME|ID}] [--output FORMAT]
   <dl>
    <dt>--env Name or ID</dt>
    <dd>The CFEE environment name or ID. Defaults to the current CFEE environment if not specified.</dd>
-   <dt>--output FORMAT</dt>
-   <dd>Specify the status output format. Only `json` is supported.</dd>
   </dl>
   
 <strong>Examples</strong>:

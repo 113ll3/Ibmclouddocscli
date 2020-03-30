@@ -20,15 +20,15 @@ subcollection: cloud-cli
 # IBM Cloud Developer Tools for Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-The IBM Cloud Developer Tools extension for Visual Studio Code provides access to capabilities from the IBM developer CLI directly within the Visual Studio Code editor’s command palette. You can quickly access a subset of `ibmcloud dev` commands for both Docker and Cloud Foundry workflows. The commands can be used for app deployment, starting/stopping/restarting apps on {{site.data.keyword.cloud}}, viewing remote app logs, and more – all without the need to leave the editor’s context.
+The {{site.data.keyword.dev_cli_notm}} extension for Visual Studio Code provides access to capabilities from the IBM developer CLI directly within the Visual Studio Code editor’s command palette. You can quickly access a subset of `ibmcloud dev` commands for both Docker and Cloud Foundry workflows. The commands can be used for app deployment, starting/stopping/restarting apps on {{site.data.keyword.cloud}}, viewing remote app logs, and more – all without the need to leave the editor’s context.
 {: shortdesc}
 
-![Screen capture of the IBM Developer Tools extension download screen.](../images/vscode.png "Extension download screen within Visual Studio Code"){: caption="Figure 1. Extension download screen within Visual Studio Code." caption-side="bottom"}
+![Screen capture of the {{site.data.keyword.dev_cli_notm}} extension download screen.](../images/vscode.png "Extension download screen within Visual Studio Code"){: caption="Figure 1. Extension download screen within Visual Studio Code." caption-side="bottom"}
 
 ## Dependencies
 {: #vscode-dependencies}
 
-To use the IBM Cloud Developer Tools extension for Visual Studio Code, you need the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) and the {{site.data.keyword.cloud_notm}} CLI plug-in that is installed on your system.
+To use the {{site.data.keyword.dev_cli_notm}} extension for Visual Studio Code, you need the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) and the {{site.data.keyword.cloud_notm}} CLI plug-in that is installed on your system.
 
 ## Installation
 {: #vscode-installation}

@@ -26,7 +26,7 @@ Use the following commands to manage classic infrastructure VLANs.
 ## ibmcloud sl vlan create
 {: #sl_vlan_create}
 
-Create a VLAN:
+Create a new VLAN:
 ```
 ibmcloud sl vlan create [OPTIONS]
 ```
@@ -47,11 +47,11 @@ ibmcloud sl vlan create [OPTIONS]
 
 **Examples**:
 ```
-ibmcloud sl vlan create -t public -d dal09 -s 16 -n myvlan
+ibmcloud sl vlan create -t public -d dal09 -n myvlan
 ```
 {: codeblock}
 
-This command creates a public VLAN that is located in datacenter `dal09` with 16 IP addresses and name is `myvlan`.
+This command creates a public VLAN that is located in datacenter `dal09` and name is `myvlan`.
 
 ## ibmcloud sl vlan cancel
 {: #sl_vlan_cancel}
@@ -119,7 +119,7 @@ ibmcloud sl vlan edit 12345678 -n myvlan-rename
 ```
 {: codeblock}
 
-This command updates vlan with `ID 12345678` and gives it a new name `myvlan-rename`.
+This command updates vlan with ID `12345678` and gives it a new name `myvlan-rename`.
 
 ## ibmcloud sl vlan list
 {: #sl_vlan_list}
@@ -132,7 +132,7 @@ ibmcloud sl vlan list [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>--sortby</dt>
-<dd>Column to sort by, options are: id,number,name,firewall,datacenter,hardware,virtual_servers,public_ips.</dd>
+<dd>Column to sort by. Options are: id,number,name,firewall,datacenter,hardware,virtual_servers,public_ips.</dd>
 <dt>-d, --datacenter</dt>
 <dd>Filter by datacenter shortname.</dd>
 <dt>-n, --number</dt>
@@ -154,11 +154,10 @@ This commands lists all VLANs on current account, and filtering by datacenter th
 ## ibmcloud sl vlan options
 {: #sl_vlan_options}
 
-List all the options for creating VLAN.
+List all the options for creating VLAN:
 ```
 ibmcloud sl vlan options
 ```
-{: codeblock}
 
 **Examples**:
 ```
@@ -166,4 +165,5 @@ ibmcloud sl vlan options
 ```
 {: codeblock}
 
-This command lists all options for creating a VLAN, eg.  type, datacenters, subnet size, routers, etc.
+This command lists all options for creating a VLAN, eg. VLAN type, datacenters, subnet size, routers, etc.
+
