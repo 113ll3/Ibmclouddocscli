@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-01-24"
+lastupdated: "2020-03-30"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -1084,8 +1084,8 @@ ibmcloud resource reclamations [--resource-instance-id INSTANCE_ID]
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--instance-id</dt>
-  <dd>ID of the resource instance</dd>
+  <dt>--resource-instance-id</dt>
+  <dd>The globally unique ID (GUID) of the resource instance</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1097,13 +1097,13 @@ ibmcloud resource reclamations
 
 List resource reclamation of service instance `test-cloudant`:
 ```
-ibmcloud resource reclamations --instance-name "test-cloudant"
+ibmcloud resource reclamations --resource-instance-id abcd1234-ef56-486e-b293-22d6c7eb6699
 ```
 
 ## ibmcloud resource reclamation
 {: #ibmcloud_resource_reclamation}
 
-Show details of a resource reclamation
+Show details of a resource reclamation:
 ```
 ibmcloud resource reclamation RECLAMATION_ID
 ```
