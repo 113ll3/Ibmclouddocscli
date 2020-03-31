@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-13"
+lastupdated: "2020-03-31"
 
 keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
@@ -106,27 +106,27 @@ ibmcloud sl vs create [OPTIONS]
 <dt>--san</dt>
 <dd>Use SAN storage instead of local disk.</dd>
 <dt>--test</dt>
-<dd>Do not actually create the virtual server.</dd>
+<dd>Run this command as a test and do not actually create the virtual server.</dd>
 <dt>--export</dt>
 <dd>Exports options to a template file.</dd>
 <dt>-i, --postinstall</dt>
 <dd>Post-install script to download.</dd>
 <dt>-k, --key</dt>
-<dd>The IDs of the SSH keys to add to the root user. You can specify more than one.</dd>
+<dd>The IDs of the SSH keys to add to the root user. You can specify this option multiple times. </dd>
 <dt>--disk</dt>
-<dd>Disk sizes (multiple occurrence permitted).</dd>
+<dd>Disk sizes. You can specify more than one.</dd>
 <dt>--private</dt>
-<dd>Forces the virtual server to only have access the private network.</dd>
+<dd>Forces the virtual server to only have access to the private network.</dd>
 <dt>--like</dt>
 <dd>Use the configuration from an existing virtual server.</dd>
 <dt>-n, --network</dt>
 <dd>Network port speed in Mbps.</dd>
 <dt>-g, --tag</dt>
-<dd>Tags to add to the instance (multiple occurrence permitted).</dd>
+<dd>Tags to add to the instance. You can specify this option multiple times.</dd>
 <dt>-t, --template</dt>
 <dd>A template file that defaults the command line options.</dd>
 <dt>-u, --userdata</dt>
-<dd>User defined metadata string.</dd>
+<dd>User-defined metadata string.</dd>
 <dt>-F, --userfile</dt>
 <dd>Read user data from file.</dd>
 <dt>--vlan-public</dt>
@@ -134,9 +134,9 @@ ibmcloud sl vs create [OPTIONS]
 <dt>--vlan-private</dt>
 <dd>The ID of the private VLAN on which you want the virtual server placed.</dd>
 <dt>-S, --public-security-group</dt>
-<dd>Security group ID to associate with the public interface (multiple occurrence permitted).</dd>
+<dd>Security group ID to associate with the public interface. You can specify this option multiple times.</dd>
 <dt>-s, --private-security-group</dt>
-<dd>Security group ID to associate with the private interface (multiple occurrence permitted).</dd>
+<dd>Security group ID to associate with the private interface. You can specify this option multiple times.</dd>
 <dt>--wait</dt>
 <dd>Wait until the virtual server is finished provisioning for up to X seconds.</dd>
 <dt>--placement-group-id</dt>
