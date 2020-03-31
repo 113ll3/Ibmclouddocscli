@@ -1095,7 +1095,7 @@ List all resource reclamations:
 ibmcloud resource reclamations
 ```
 
-List resource reclamation of service instance `test-cloudant`:
+List resource reclamations of a particular service instance:
 ```
 ibmcloud resource reclamations --resource-instance-id abcd1234-ef56-486e-b293-22d6c7eb6699
 ```
