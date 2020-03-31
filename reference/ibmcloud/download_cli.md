@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-06-10"
+  years: 2015, 2020
+lastupdated: "2020-03-30"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -16,11 +16,13 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:tip: .tip}
 {:external: target="_blank" .external}
+{:note: .note}
 
 # Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI
 {: #install-ibmcloud-cli}
 
-{{site.data.keyword.cloud}} CLI provides the command line interface for managing resources in {{site.data.keyword.cloud_notm}}. You can still use the `cf` CLI to log in to {{site.data.keyword.cloud_notm}}, but it works with a Cloud Foundry service in {{site.data.keyword.cloud_notm}}. 
+{{site.data.keyword.cloud}} CLI provides the command line interface for managing resources in {{site.data.keyword.cloud_notm}}. When you install the standalone {{site.data.keyword.cloud_notm}} CLI, you get only the CLI itself without any recommended plug-ins or tools.
+{: shortdesc}
 
 If you want to install both the latest {{site.data.keyword.cloud}} CLI and other recommended plug-ins and tools for developing applications for {{site.data.keyword.cloud_notm}}, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 {: tip}
@@ -75,10 +77,20 @@ To install the latest CLI for your OS from the shell manually, use the following
   ```
   {: codeblock}
 
+  If you encounter errors like `The underlying connection was closed: An unexpected error occurred on a send`, make sure you have .Net Framework 4.5 or later installed. Also try to enable TLS 1.2 protocol by running the following command:
+  
+  ```
+  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+  ```
+  {: codeblock}
+
 ## Installing to a custom directory
 {: #install-custom-dir}
 
 When you use installers or a shell script to install the {{site.data.keyword.cloud_notm}} CLI, it is installed in your system directories. If you want to specify a different directory, use the following steps.
+
+If you install the {{site.data.keyword.cloud_notm}} CLI to a custom directory, the `ibmcloud update` command can't be used to update the CLI.
+{: note}
 
 1. Use a browser to access the official [`ibm-cloud-cli-releases`](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/) GitHub repository, and **select** the matching binary of your platform to begin the download. The following platforms are supported: macOS, linux32, linux64, ppc64le, win32, and win64.
 
@@ -94,8 +106,6 @@ When you use installers or a shell script to install the {{site.data.keyword.clo
    ├── autocomplete
    │   ├── bash_autocomplete
    │   └── zsh_autocomplete
-   ├── cfcli
-   │   └── cf
    ├── ibmcloud
    └── ibmcloud-analytics
    ```
@@ -106,8 +116,6 @@ When you use installers or a shell script to install the {{site.data.keyword.clo
    IBM_Cloud_CLI
    ├── LICENSE
    ├── NOTICE
-   ├── cfcli
-   │   └── cf.exe
    ├── ibmcloud-analytics.exe
    └── ibmcloud.exe
    ```
@@ -116,6 +124,7 @@ When you use installers or a shell script to install the {{site.data.keyword.clo
 3. Add to the `PATH` environment variable and enable shell autocompletion.
   * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
   * For shell autocompletion support (Mac and Linux&trade; only), see [Enabling shell autocompletion for IBM Cloud CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
+
 
 ## Updating the {{site.data.keyword.cloud_notm}} CLI
 {: #update-ibmcloud-cli}

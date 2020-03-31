@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-03-31"
 
 keywords: cli, manage security groups, ingress, egress, traffic, virtual server cli, classic infrastructure cli, securitygroup, ibmcloud sl securitygroup, security group cli
 
@@ -25,7 +25,7 @@ Use the following commands to manage a security group by using the {{site.data.k
 ## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}
 
-Create a security group.
+Create a security group:
 ```
 ibmcloud sl securitygroup create [OPTIONS]
 ```
@@ -41,7 +41,7 @@ ibmcloud sl securitygroup create [OPTIONS]
 ## ibmcloud sl securitygroup delete
 {: #sl_securitygroup_delete}
 
-Delete the security group.
+Delete the security group:
 ```
 ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 ```
@@ -55,7 +55,7 @@ ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 ## ibmcloud sl securitygroup detail
 {: #sl_securitygroup_detail}
 
-Get details about a security group.
+Get details about a security group:
 ```
 ibmcloud sl securitygroup detail SECURITYGROUP_ID [OPTIONS]
 ```
@@ -63,7 +63,7 @@ ibmcloud sl securitygroup detail SECURITYGROUP_ID [OPTIONS]
 ## ibmcloud sl securitygroup edit
 {: #sl_securitygroup_edit}
 
-Edit details of a security group.
+Edit details of a security group:
 ```
 ibmcloud sl securitygroup edit SECURITYGROUP_ID [OPTIONS]
 ```
@@ -79,7 +79,7 @@ ibmcloud sl securitygroup edit SECURITYGROUP_ID [OPTIONS]
 ## ibmcloud sl securitygroup interface-add
 {: #sl_securitygroup_interface_add}
 
-Attach an interface to a security group.
+Attach an interface to a security group:
 ```
 ibmcloud sl securitygroup interface-add SECURITYGROUP_ID [OPTIONS]
 ```
@@ -97,7 +97,7 @@ ibmcloud sl securitygroup interface-add SECURITYGROUP_ID [OPTIONS]
 ## ibmcloud sl securitygroup interface-list
 {: #sl_securitygroup_interface_list}
 
-List interfaces associated with security group.
+List interfaces associated with security group:
 ```
 ibmcloud sl securitygroup interface-list SECURITYGROUP_ID [OPTIONS]
 ```
@@ -105,13 +105,13 @@ ibmcloud sl securitygroup interface-list SECURITYGROUP_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>--sortby</dt>
-<dd>Column to sort by, options are: id,virtualServerId,hostname.</dd>
+<dd>Column to sort by. Options are: id,virtualServerId,hostname.</dd>
 </dl>
 
 ## ibmcloud sl securitygroup interface-remove
 {: #sl_securitygroup_interface_remove}
 
-Detach an interface from a security group.
+Detach an interface from a security group:
 ```
 ibmcloud sl securitygroup interface-remove SECURITYGROUP_ID [OPTIONS]
 ```
@@ -129,21 +129,21 @@ ibmcloud sl securitygroup interface-remove SECURITYGROUP_ID [OPTIONS]
 ## ibmcloud sl securitygroup list
 {: #sl_securitygroup_list}
 
-List security groups.
+List security groups:
 ```
-List security groups
+ibmcloud sl securitygroup list [OPTIONS]
 ```
 
 <strong>Command options</strong>:
 <dl>
 <dt>--sortby</dt>
-<dd>Column to sort by, options are: id,name,description,created.</dd>
+<dd>Column to sort by. Options are: id,name,description,created.</dd>
 </dl>
 
 ## ibmcloud sl securitygroup rule-add
 {: #sl_securitygroup_rule_add}
 
-Add a security group rule to a security group.
+Add a security group rule to a security group:
 ```
 ibmcloud sl securitygroup rule-add SECURITYGROUP_ID [OPTIONS]
 ```
@@ -169,7 +169,7 @@ ibmcloud sl securitygroup rule-add SECURITYGROUP_ID [OPTIONS]
 ## ibmcloud sl securitygroup rule-edit
 {: #sl_securitygroup_rule_edit}
 
-Edit a security group rule in a security group.
+Edit a security group rule in a security group:
 ```
 ibmcloud sl securitygroup rule-edit SECURITYGROUP_ID RULE_ID [OPTIONS]
 ```
@@ -183,7 +183,7 @@ ibmcloud sl securitygroup rule-edit SECURITYGROUP_ID RULE_ID [OPTIONS]
 <dt>-d, --direction</dt>
 <dd>The direction of traffic to enforce (ingress or egress), required.</dd>
 <dt>-e, --ether-type</dt>
-<dd>The ethertype (IPV4 or IPV6) to enforce, default is IPV4 if not specified.</dd>
+<dd>The ethertype (IPv4 or IPv6) to enforce, default is IPv4 if not specified.</dd>
 <dt>-M, --port-max</dt>
 <dd>The upper port bound to enforce.</dd>
 <dt>-m, --port-min</dt>
@@ -195,7 +195,7 @@ ibmcloud sl securitygroup rule-edit SECURITYGROUP_ID RULE_ID [OPTIONS]
 ## ibmcloud sl securitygroup rule-list
 {: #sl_securitygroup_rule_list}
 
-List security group rules.
+List security group rules:
 ```
 ibmcloud sl securitygroup rule-list SECURITYGROUP_ID [OPTIONS]
 ```
@@ -203,13 +203,13 @@ ibmcloud sl securitygroup rule-list SECURITYGROUP_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>--sortby</dt>
-<dd>Column to sort by, options are: id,remoteIp,remoteGroupId,direction,ethertype,portRangeMin,portRangeMax,protocol.</dd>
+<dd>Column to sort by. Options are: id,remoteIp,remoteGroupId,direction,ethertype,portRangeMin,portRangeMax,protocol.</dd>
 </dl>
 
 ## ibmcloud sl securitygroup rule-remove
 {: #sl_securitygroup_rule_remove}
 
-Remove a rule from a security group.
+Remove a rule from a security group:
 ```
 ibmcloud sl securitygroup rule-remove SECURITYGROUP_ID RULE_ID [OPTIONS]
 ```

@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:external: target="_blank" .external}
+{:support: data-reuse='support'}
 
 # Getting help and support
 {: #getting-help}
@@ -22,6 +23,7 @@ If you have questions or problems you use the {{site.data.keyword.cloud}} CLI an
 
 ## Community help
 {: #community-help}
+{: support}
 
 * If you have a casual question or just want to talk about all things {{site.data.keyword.cloud_notm}} CLI, come chat with the development team on [IBM Cloud Technology Slack](https://ibm.biz/cli-feedback). After you request your invite, sign in and join the `#developer-tools` channel.
 * Search [Stack Overflow](https://stackoverflow.com/search?q=ibm-cloud){: external} or [IBM Developer Answers](https://ibm.biz/cli-developer-answers){: external} to see whether other users ran into the same problem. When you use these forums to ask a question, tag your question with `ibm-cloud` and `cli` so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.

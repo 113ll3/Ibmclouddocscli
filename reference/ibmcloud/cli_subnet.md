@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-03-31"
 
 keywords: cli, manage subnet cli, classic infrastructure cli, subnet cli, ibmcloud sl subnet, subnet cli, newtork cli
 
@@ -24,7 +24,7 @@ A subnet is a logical partition of an IP network into multiple, smaller network 
 ## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
-Cancel a subnet.
+Cancel a subnet:
 ```
 ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
 ```
@@ -39,12 +39,14 @@ ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet cancel 12345678 -f
 ```
+{: codeblock}
+
 This command cancels subnet with ID `12345678` without asking for confirmation.
 
 ## ibmcloud sl subnet create
 {: #sl_subnet_create}
 
-Add a subnet to your account.
+Add a new subnet to your account:
 ```
 ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
@@ -52,7 +54,7 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>--v6, --ipv6</dt>
-<dd>Order IPV6 Addresses.</dd>
+<dd>Order IPv6 Addresses.</dd>
 <dt>--test</dt>
 <dd>Do not order the subnet; just get a quote.</dd>
 <dt>-f, --force</dt>
@@ -65,12 +67,12 @@ ibmcloud sl subnet create public 16 567
 ```
 {: codeblock}
 
-This command creates a public subnet with 16 IPV4 addresses and places it on VLAN with ID `567`.
+This command creates a public subnet with 16 IPv4 addresses and places it on VLAN with ID `567`.
 
 ## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
 
-Get details of a subnet.
+Get details of a subnet:
 ```
 ibmcloud sl subnet detail IDENTIFIER [OPTIONS]
 ```
@@ -94,7 +96,7 @@ This command shows detailed information about subnet with ID `12345678`, includi
 ## ibmcloud sl subnet list
 {: #sl_subnet_list}
 
-List all subnets on your account.
+List all subnets on your account:
 ```
 ibmcloud sl subnet list [OPTIONS]
 ```
@@ -114,7 +116,7 @@ ibmcloud sl subnet list [OPTIONS]
 <dt>--v4, --ipv4</dt>
 <dd>Display only IPv4 subnets.</dd>
 <dt>--v6, --ipv6</dt>
-<dd>Display only IPV6 subnets.</dd>
+<dd>Display only IPv6 subnets.</dd>
 <dt>--order</dt>
 <dd>Filter by the ID of order that purchased the subnets.</dd>
 </dl>
@@ -125,14 +127,14 @@ ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 {: codeblock}
 
-This command lists IPV4 subnets on the current account, and filters by datacenter `dal09`, subnet type `PRIMARY`, and network space `PUBLIC`.
+This command lists IPv4 subnets on the current account, and filters by datacenter `dal09`, subnet type `PRIMARY`, and network space `PUBLIC`.
 
 ## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
 
-Find an IP address and display its subnet and device information.
+Find an IP address and display its subnet and device information:
 ```
-ibmcloud sl subnet lookup IP_ADDRESS
+ibmcloud sl subnet lookup IP_ADDRESS [OPTIONS]
 ```
 
 **Examples**:
@@ -142,3 +144,4 @@ ibmcloud sl subnet lookup 9.125.235.255
 {: codeblock}
 
 This command finds the IP address record with IP address `9.125.235.255` and displays its subnet and device information.
+

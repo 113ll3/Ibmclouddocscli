@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-07-29"
+  years: 2018, 2020
+lastupdated: "2020-03-31"
 
 keywords: cli, ibmcloud enterprise, view enterprise, view enterprise account, view enterprise account group., enterprise, account-group, account-group-create, account-group-update, 
 
@@ -46,7 +46,7 @@ ibmcloud enterprise create NAME [-d, --domain DOMAIN_NAME] [--primary-contact-id
 
 Update enterprise information.
 ```
-ibmcloud enterprise update (-n, --name NEW_NAME) [-f, --force] [--output FORMAT]
+ibmcloud enterprise update (-n, --name NEW_NAME) [-f, --force]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -58,8 +58,6 @@ ibmcloud enterprise update (-n, --name NEW_NAME) [-f, --force] [--output FORMAT]
 <dd>Update without confirmation.</dd>
 <dt>-n, --name NEW_NAME (required)</dt>
 <dd>New name of the enterprise.</dd>
-<dt>--output FORMAT (optional)</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
 
 ## ibmcloud enterprise show
@@ -67,24 +65,17 @@ ibmcloud enterprise update (-n, --name NEW_NAME) [-f, --force] [--output FORMAT]
 
 Display details of the enterprise.
 ```
-ibmcloud enterprise show [--output FORMAT]
+ibmcloud enterprise show
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
-
-<strong>Command options</strong>:
-
-<dl>
-<dt>--output FORMAT (optional)</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
-</dl>
 
 ## ibmcloud enterprise account-group-create
 {: #ibmcloud_enterprise_account_group_create} 
 
 Create an account group.
 ```
-ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GROUP_NAME] [--primary-contact-id PRIMARY_CONTACT_USER_ID] [--output FORMAT]
+ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GROUP_NAME] [--primary-contact-id PRIMARY_CONTACT_USER_ID]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -98,8 +89,6 @@ ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GR
 <dd>Name of the parent account group. If omitted, the parent would be the current enterprise.</dd>
 <dt>--primary-contact-id PRIMARY_CONTACT_USER_ID (optional)</dt>
 <dd>Primary contact user ID of the account group.</dd>
-<dt>--output FORMAT (optional)</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
 
 ## ibmcloud enterprise account-group-update
@@ -107,7 +96,7 @@ ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GR
 
 Update an account group.
 ```
-ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name NEW_NAME) [--output FORMAT]
+ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name NEW_NAME)
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -121,8 +110,6 @@ ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name
 <dd>Name of target account group. This option is exclusive with `--id`.</dd>
 <dt>--new-name NEW_NAME (required)</dt>
 <dd>New name of target account group.</dd>
-<dt>--output FORMAT (optional)</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
 
 ## ibmcloud enterprise account-group
@@ -130,7 +117,7 @@ ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name
 
 Display details of account group.
 ```
-ibmcloud enterprise account-group (-n, --name NAME | --id ID) [--output FORMAT]
+ibmcloud enterprise account-group (-n, --name NAME | --id ID)
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -142,8 +129,6 @@ ibmcloud enterprise account-group (-n, --name NAME | --id ID) [--output FORMAT]
 <dd>ID of the account group. This option is exclusive with `-n, --name`.</dd>
 <dt>-n, --name NAME (required)</dt>
 <dd>Name of the account group. This option is exclusive with `--id`.</dd>
-<dt>--output FORMAT (optional)</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
 
 ## ibmcloud enterprise account-groups
@@ -151,7 +136,7 @@ ibmcloud enterprise account-group (-n, --name NAME | --id ID) [--output FORMAT]
 
 List account groups.
 ```
-ibmcloud enterprise account-groups [--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID] [--recursive] [--output FORMAT]
+ibmcloud enterprise account-groups [--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID] [--recursive]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -165,8 +150,6 @@ ibmcloud enterprise account-groups [--parent-account-group ACCOUNT_GROUP_NAME | 
 <dd>ID of the parent account group. This option is exclusive with `--parent-account-group`.</dd>
 <dt>--recursive (optional)</dt>
 <dd>Show descendant account groups.</dd>
-<dt>--output FORMAT (optional)</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
 
 ## ibmcloud enterprise account-create
@@ -174,7 +157,7 @@ ibmcloud enterprise account-groups [--parent-account-group ACCOUNT_GROUP_NAME | 
 
 Create an account.
 ```
-ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NAME] [--owner USER_ID] [--output FORMAT]
+ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NAME] [--owner USER_ID]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -188,8 +171,6 @@ ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NA
 <dd>User ID of the account group.</dd>
 <dt>--parent-account-group ACCOUNT_GROUP_NAME (optional).</dt>
 <dd>Name of the parent account group. If omitted, the parent would be the current enterprise.</dd>
-<dt>--output FORMAT (optional)</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
 
 ## ibmcloud enterprise account-move
@@ -222,7 +203,7 @@ ibmcloud enterprise account-move (-n, --name NAME | --id ID) (--parent-account-g
 
 Display details of an account.
 ```
-ibmcloud enterprise account-show (-n, --name NAME | --id ID) [--output FORMAT]
+ibmcloud enterprise account-show (-n, --name NAME | --id ID)
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -234,8 +215,6 @@ ibmcloud enterprise account-show (-n, --name NAME | --id ID) [--output FORMAT]
 <dd>ID of the account. This option is exclusive with `-n, --name`.</dd>
 <dt>-n, --name NAME (required)</dt>
 <dd>Name of the account. This option is exclusive with `--id`.</dd>
-<dt>--output FORMAT (optional)</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
 
 ## ibmcloud enterprise accounts
@@ -243,7 +222,7 @@ ibmcloud enterprise account-show (-n, --name NAME | --id ID) [--output FORMAT]
 
 List accounts.
 ```
-ibmcloud enterprise accounts [--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID] [--recursive] [--output FORMAT]
+ibmcloud enterprise accounts [--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID] [--recursive]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -257,8 +236,6 @@ ibmcloud enterprise accounts [--parent-account-group ACCOUNT_GROUP_NAME | --pare
 <dd>ID of the parent account group. This option is exclusive with `--parent-account-group`.</dd>
 <dt>--recursive (optional)</dt>
 <dd>Show descendant accounts.</dd>
-<dt>--output FORMAT (optional)</dt>
-<dd>Specify output format, only 'JSON' is supported.</dd>
 </dl>
 
 ## ibmcloud enterprise account-import

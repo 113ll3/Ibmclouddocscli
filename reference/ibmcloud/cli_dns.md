@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-03-31"
 
 keywords: cli, domain management, dns service, ibmcloud sl dns, classic infrastructure, management interface, dns, dns cli, manage dns cli
 
@@ -26,7 +26,7 @@ Use the following commands to manage the {{site.data.keyword.cloud_notm}} classi
 ## ibmcloud sl dns import
 {: #sl_dns_import}
 
-Import a zone by using a BIND zone file:
+Import a zone based off a BIND zone file:
 ```
 ibmcloud sl dns import ZONEFILE [OPTIONS]
 ```
@@ -34,7 +34,7 @@ ibmcloud sl dns import ZONEFILE [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>--dry-run</dt>
-<dd>Don't create DNS records.</dd>
+<dd>Don't actually create records.</dd>
 </dl>
 
 **Examples**:
@@ -84,7 +84,7 @@ ibmcloud sl dns record-edit ZONE [OPTIONS]
 <dt>--data</dt>
 <dd>Record data, such as an IP address.</dd>
 <dt>--ttl</dt>
-<dd>TTL value in seconds, such as: 86400.</dd>
+<dd>TTL(Time-To-Live) in seconds, such as: 86400.</dd>
 </dl>
 
 **Examples**:
@@ -93,7 +93,7 @@ ibmcloud sl dns record-edit ibm.com --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 {: codeblock}
 
-This command edits a record under the zone: ibm.com, whose ID is `12345678`, and sets its data to "127.0.0.2" and ttl to 3600.
+This command edits records under the zone: ibm.com, whose ID is `12345678`, and sets its data to "127.0.0.2" and ttl to 3600.
 
 ## ibmcloud sl dns record-list
 {: #sl_dns_record_list}
@@ -110,7 +110,7 @@ ibmcloud sl dns record-list ZONE [OPTIONS]
 <dt>--record</dt>
 <dd>Filter by host record, such as www.</dd>
 <dt>--ttl</dt>
-<dd>Filter by TTL value in seconds, such as 86400.</dd>
+<dd>Filter by TTL(Time-To-Live) in seconds, such as 86400.</dd>
 <dt>--type</dt>
 <dd>Filter by record type, such as A or CNAME.</dd>
 </dl>
@@ -144,7 +144,7 @@ This command removes resource record with ID `12345678`.
 
 Create a zone:
 ```
-ibmcloud sl dns zone-create ZONE
+ibmcloud sl dns zone-create ZONE 
 ```
 
 **Examples**:
@@ -176,9 +176,8 @@ This command deletes a zone that is named `ibm.com`.
 
 List all zones on your account:
 ```
-ibmcloud sl dns zone-list
+ibmcloud sl dns zone-list 
 ```
-{: codeblock}
 
 **Examples**:
 ```
@@ -191,7 +190,7 @@ This command lists all zones under current account.
 ## ibmcloud sl dns zone-print
 {: #sl_dns_zone_print}
 
-Print zone and resource records in BIND format.
+Print zone and resource records in BIND format:
 ```
 ibmcloud sl dns zone-print ZONE
 ```
@@ -203,3 +202,4 @@ ibmcloud sl dns zone-print ibm.com
 {: codeblock}
 
 This command prints zone that is named `ibm.com`, and in BIND format.
+

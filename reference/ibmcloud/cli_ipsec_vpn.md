@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-03-31"
 
 keywords: cli, classic infrastructure, ipsec, vpn, ibmcloud sl ipsec, tunnel, vpn access, encryption, vpn tunnel cli, ipsec vpn tunnel
 
@@ -25,7 +25,7 @@ Use the following commands to manage IPSec VPN tunnels in the {{site.data.keywor
 ## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
-Cancel a IPSec VPN tunnel context.
+Cancel a IPSec VPN tunnel context:
 ```
 ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 ```
@@ -43,7 +43,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 ## ibmcloud sl ipsec config
 {: #sl_ipsec_config}
 
-Request configuration of a tunnel context.
+Request configuration of a tunnel context:
 ```
 ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
 ```
@@ -51,7 +51,7 @@ ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
 ## ibmcloud sl ipsec detail
 {: #sl_ipsec_detail}
 
-List IPSec VPN tunnel context details.
+List IPSec VPN tunnel context details:
 ```
 ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 ```
@@ -59,13 +59,13 @@ ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-i, --include</dt>
-<dd>Include extra resources, options are: at,is,rs,sr,ss.</dd>
+<dd>Include extra resources. Options are: at,is,rs,sr,ss.</dd>
 </dl>
 
 ## ibmcloud sl ipsec list
 {: #sl_ipsec_list}
 
-List IPSec VPN tunnel contexts.
+List IPSec VPN tunnel contexts:
 ```
 ibmcloud sl ipsec list [OPTIONS]
 ```
@@ -79,7 +79,7 @@ ibmcloud sl ipsec list [OPTIONS]
 ## ibmcloud sl ipsec order
 {: #sl_ipsec_order}
 
-Order a IPSec VPN tunnel.
+Order a IPSec VPN tunnel:
 ```
 ibmcloud sl ipsec order [OPTIONS]
 ```
@@ -93,7 +93,7 @@ ibmcloud sl ipsec order [OPTIONS]
 ## ibmcloud sl ipsec subnet-add
 {: #sl_ipsec_subnet_add}
 
-Add a subnet to an IPSec tunnel context.
+Add a subnet to an IPSec tunnel context:
 ```
 ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ```
@@ -103,7 +103,7 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <dt>-s, --subnet-id</dt>
 <dd>Subnet identifier to add, required.</dd>
 <dt>-t, --subnet-type</dt>
-<dd>Subnet type to add, required, options are: internal,remote,service.</dd>
+<dd>Required. Subnet type to add. Options are: internal,remote,service.</dd>
 <dt>-n, --network</dt>
 <dd>Subnet network identifier to create.</dd>
 </dl>
@@ -111,15 +111,15 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ## ibmcloud sl ipsec subnet-remove
 {: #sl_ipsec_subnet_remove}
 
-Remove a subnet from an IPSEC tunnel context.
+Remove a subnet from an IPSEC tunnel context:
 ```
-ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
+ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE
 ```
 
 ## ibmcloud sl ipsec translation-add
 {: #sl_ipsec_translation_add}
 
-Add an address translation to an IPSec tunnel.
+Add an address translation to an IPSec tunnel:
 ```
 ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ```
@@ -127,9 +127,9 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-s, --static-ip</dt>
-<dd>Static IP address,required.</dd>
+<dd>Required. Static IP address.</dd>
 <dt>-r, --remote-ip</dt>
-<dd>Remote IP address,required.</dd>
+<dd>Required. Remote IP address.</dd>
 <dt>-n, --note</dt>
 <dd>Note.</dd>
 </dl>
@@ -137,15 +137,15 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ## ibmcloud sl ipsec translation-remove
 {: #sl_ipsec_translation_remove}
 
-Remove a translation entry from an IPSec.
+Remove a translation entry from an IPSec:
 ```
-ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
+ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID
 ```
 
 ## ibmcloud sl ipsec translation-update
 {: #sl_ipsec_translation_update}
 
-Update an address translation for an IPSec.
+Update an address translation for an IPSec:
 ```
 ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
@@ -153,9 +153,9 @@ ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-s, --static-ip</dt>
-<dd>Static IP address,required.</dd>
+<dd>Required. Static IP address.</dd>
 <dt>-r, --remote-ip</dt>
-<dd>Remote IP address,required.</dd>
+<dd>Required. Remote IP address.</dd>
 <dt>-n, --note</dt>
 <dd>Note.</dd>
 </dl>
@@ -163,7 +163,7 @@ ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ## ibmcloud sl ipsec update
 {: #sl_ipsec_update}
 
-Update tunnel context properties.
+Update tunnel context properties:
 ```
 ibmcloud sl ipsec update CONTEXT_ID [OPTIONS]
 ```
@@ -195,3 +195,4 @@ ibmcloud sl ipsec update CONTEXT_ID [OPTIONS]
 <dt>-l, --phase2-key-ttl</dt>
 <dd>Phase 2 key life. Range is `120-172800`.</dd>
 </dl>
+

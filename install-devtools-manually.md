@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-08-22"
+  years: 2019, 2020
+lastupdated: "2020-03-25"
 
-keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
+keywords: IBM Cloud CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, kubernetes, kubectl
 
 subcollection: cloud-cli
 
@@ -18,38 +18,27 @@ subcollection: cloud-cli
 {:note: .deprecated}
 {:external: target="_blank" .external}
 
-# Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in manually
+# Installing the tools and plug-ins manually
 {: #install-devtools-manually}
 
-You can manually install the {{site.data.keyword.cloud}} developer tools command line interface (CLI) plug-in if you prefer more granular control for installing the components. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt).
+You can manually install the {{site.data.keyword.cloud}} command-line interface (CLI) if you prefer more granular control for installing the components. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt).
 {: shortdesc}
 
 ## Before you begin
 {: cli-before-you-begin}
 
-* Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli) to get support for installing command line plug-ins for {{site.data.keyword.cloud_notm}}.
+* Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli) to get support for installing command-line plug-ins for {{site.data.keyword.cloud_notm}}.
 * Install the [curl](https://curl.haxx.se/download.html){: external} command for downloading packages through the command line.
-
-## Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in
-{: #install-devtools-idt}
-
-You can use the {{site.data.keyword.cloud_notm}} developer tools CLI commands to create an application, manage, deploy, debug, and test it.
-
-To install the {{site.data.keyword.cloud_notm}} developer tools plug-in, run the following command: 
-```
-ibmcloud plugin install dev
-```
-{: codeblock}
 
 ## Installing Docker
 {: #install-devtools-docker}
 
 For running and debugging apps locally, install [Docker](https://www.docker.com/get-started){: external}.
 
-## Installing the Kubernetes command line tool
+## Installing the Kubernetes command-line tool
 {: #idt-install-kube}
 
-To view a local version of the Kubernetes dashboard, and to deploy apps into your clusters, install the [Kubernetes command line tool](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} for your platform:
+To view a local version of the Kubernetes dashboard, and to deploy apps into your clusters, install the [Kubernetes command-line tool](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} for your platform:
 
 * Mac:
   ```
@@ -69,11 +58,11 @@ To view a local version of the Kubernetes dashboard, and to deploy apps into you
   ```
   {: codeblock}
 
-The prefix for running commands by using the Kubernetes command line tool is `kubectl`. For more information, see [Setting up the CLI and API](/docs/containers?topic=containers-cs_cli_install).
+The prefix for running commands by using the Kubernetes command-line tool is `kubectl`. For more information, see [Setting up the CLI and API](/docs/containers?topic=containers-cs_cli_install).
 
 ## Installing {{site.data.keyword.cos_full_notm}} CLI plug-in
 
-The {{site.data.keyword.cos_full_notm}} plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with Object Storage resources.
+The {{site.data.keyword.cos_full_notm}} plug-in extends the {{site.data.keyword.cloud_notm}} command-line interface (CLI) with an API wrapper for working with Object Storage resources.
 
 * To install the {{site.data.keyword.cos_full_notm}} plug-in, run the following command:
   ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-03-26"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # Enabling existing Python applications for cloud deployment
 {: #enable-existing-python}
 
-You can generate the files that are needed to enable your Python application to run on {{site.data.keyword.cloud}} by using the [{{site.data.keyword.dev_cli_long}} CLI enable command](/docs/cli/idt?topic=cloud-cli-idt-cli#enable).
+You can generate the files that are needed to enable your Python application to run on {{site.data.keyword.cloud}} by using the [`ibmcloud dev enable` command](/docs/cli/idt?topic=cloud-cli-idt-cli#enable).
 {: shortdesc}
 
 ## Enabling your Python app
@@ -33,7 +33,7 @@ ibmcloud dev enable
 {: codeblock}
 
 * When you're prompted to verify the detected framework for the project, **Python - Flask** or **Python - Django**, reply `y`. 
-* You are then prompted to **Connect to an IBM Cloud app**. Select either the **Generate assets, create a new IBM Cloud app and connect to it** or **Generate assets without connecting to an IBM Cloud app** option to connect your app.
+* You are then prompted to **Connect to an {{site.data.keyword.cloud_notm}} app**. Select either the **Generate assets, create a new {{site.data.keyword.cloud_notm}} app and connect to it** or **Generate assets without connecting to an {{site.data.keyword.cloud_notm}} app** option to connect your app.
 * The `enable` command can also create services and bind them to your app. For this basic example, reply `n`.
 
 See the following sample output:
@@ -156,4 +156,4 @@ CMD ["gunicorn", "-b", "0.0.0.0:3000", "--env", "DJANGO_SETTINGS_MODULE=<project
 ## Next Steps
 {: #next_steps_existing_python notoc}
 
-For more information, see [IBM Cloud Developer Tools CLI](/docs/cli/idt?topic=cloud-cli-idt-cli#idt-cli).
+For more information, see [{{site.data.keyword.dev_cli_notm}} CLI](/docs/cli/idt?topic=cloud-cli-idt-cli#idt-cli).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-03-31"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -26,7 +26,7 @@ Use the following commands to manage the {{site.data.keyword.cloud}} catalog ent
 
 Search catalog entries:
 ```
-ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
+ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--csv] [--global]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -47,8 +47,6 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dd>Specify more columns for the table. Currently, "group", "provider", and "tags"</dd>
   <dt>--reverse</dt>
   <dd>Whether to reverse the sorting order</dd>
-  <dt>--output TYPE (optional)</dt>
-  <dd>--output value  Specify output TYPE, only JSON is supported now. This option is exclusive with '--id'.</dd>
   <dt>--csv</dt>
   <dd>Output CSV file</dd>
   <dt>--global</dt>
@@ -67,7 +65,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 
 Get a catalog entry:
 ```
-ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
+ibmcloud catalog entry ID [--children] [--global]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -76,8 +74,6 @@ ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 <dl>
   <dt>--children</dt>
   <dd>Get all children for the catalog entry</dd>
-  <dt>--output TYPE (optional)</dt>
-  <dd>--output value  Specify output TYPE, only JSON is supported now.</dd>
   <dt>--global</dt>
   <dd>Operate in global scope</dd>
 </dl>
@@ -119,7 +115,7 @@ ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
 
-Update an existing catalog entry(catalog admin or editor of an account only):
+Update an existing catalog entry (catalog admin or editor of an account only):
 ```
 ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
@@ -168,18 +164,14 @@ ibmcloud catalog delete `j402-dnf1i`
 
 Get the visibility for a catalog entry(catalog admin of an account only)
 ```
-ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
+ibmcloud catalog entry-visibility ID [--global]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
-  <dt>-json</dt>
-  <dd>Output original JSON response</dd>
-  <dt>--output TYPE (optional)</dt>
-  <dd>--output value  Specify output TYPE, only JSON is supported now.</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>Operate in global scope</dd>
 </dl>
 
@@ -264,14 +256,12 @@ ibmcloud catalog service-marketplace --global
 View details of a service in the catalog, including a description, tags, compatibility information, and available plans. 
 
 ```
-ibmcloud catalog service NAME_OR_ID [--output json] [--global]
+ibmcloud catalog service NAME_OR_ID [--global]
 ```
 
 <strong>Command options</strong>:
 
 <dl>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format, only JSON is supported now.</dd>
   <dt>--global</dt>
   <dd>Operate in a global scope</dd>
 </dl>
@@ -289,7 +279,7 @@ ibmcloud catalog service container-kubernetes
 
 View the boilerplate templates on {{site.data.keyword.cloud_notm}}.
 ```
-ibmcloud catalog templates [-d] [--output json]
+ibmcloud catalog templates [-d]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -299,8 +289,6 @@ ibmcloud catalog templates [-d] [--output json]
    <dl>
    <dt>-d (optional)</dt>
    <dd>If the <i>-d</i> option is specified, the description of each template is also displayed. Otherwise, only the ID and name of each template is shown.</dd>
-   <dt>--output FORMAT (optional)</dt>
-   <dd>Specify output format, only JSON is supported now.</dd>
    </dl>
 
 ## ibmcloud catalog template
@@ -308,7 +296,7 @@ ibmcloud catalog templates [-d] [--output json]
 
 View the detailed information of a specified boilerplate template.
 ```
-ibmcloud catalog template TEMPLATE_ID [--output json]
+ibmcloud catalog template TEMPLATE_ID
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -317,8 +305,6 @@ ibmcloud catalog template TEMPLATE_ID [--output json]
    <dl>
    <dt>TEMPLATE_ID (required)</dt>
    <dd>The ID of the boilerplate template. Use <i>ibmcloud templates</i> to view all templates' IDs.</dd>
-   <dt>--output FORMAT (optional)</dt>
-   <dd>Specify output format, only JSON is supported now.</dd>
    </dl>
 
 
@@ -383,7 +369,7 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 
 Get a choice subset of regions in your choice of format.
 ```
-ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
+ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--global] [--csv]
 ```
 
 <strong>Command options</strong>:
@@ -395,8 +381,6 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
   <dd>Get a list of entries for the specified kind.</dd>
   <dt>--col</dt>
   <dd>Specify more columns for the table. Currently, "group", "provider", and "tags".</dd>
-  <dt>--output TYPE (optional)</dt>
-  <dd>--output value  Specify output TYPE, only JSON is supported now. This option is exclusive with '--id'.</dd>
   <dt>--global</dt>
   <dd>Operate in a global scope.</dd>
   <dt>--csv</dt>
@@ -408,14 +392,8 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
 
 View the details of a runtime. This command is only available for public cloud.
 ```
-ibmcloud catalog runtime RUNTIME_ID [--output json]
+ibmcloud catalog runtime RUNTIME_ID
 ```
-
-<strong>Command options</strong>:
-<dl>
-   <dt>--output FORMAT (optional)</dt>
-   <dd>Specify output format, only JSON is supported now.</dd>
-</dl>
 
 <strong>Examples</strong>:
 
@@ -430,7 +408,7 @@ ibmcloud catalog runtime nodejsHelloWorld
 
 List all runtimes. This command is only available for public cloud.
 ```
-ibmcloud catalog runtimes [-d] [--output json]
+ibmcloud catalog runtimes [-d]
 ```
 
 <strong>Command options</strong>:
@@ -438,8 +416,6 @@ ibmcloud catalog runtimes [-d] [--output json]
 <dl>
   <dt>-d</dt>
   <dd>Show the description of each runtime</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 <strong>Examples</strong>:
