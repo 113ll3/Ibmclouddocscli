@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-03-30"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -1294,8 +1294,8 @@ ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NA
   <dd>Source service instance name, mutually exclusive with `--source-service-instance-id`. If not specified, all instances of the source service are authorized to access.</dd>
   <dt>--source-service-instance-id SOURCE_SERVICE_INSTANCE_ID</dt>
   <dd>Source service instance ID, mutually exclusive with `--source-service-instance-name`. If not specified, all instances of the source service are authorized to access.</dd>
-  <dd>--source-resource-group-id RESOURCE_GROUP_ID<dd>
-  <dt>Source resource group ID, mutually exclusive with '--source-service-instance-id'.</dt>
+  <dt>--source-resource-group-id RESOURCE_GROUP_ID<dt>
+  <dd>Source resource group ID, mutually exclusive with '--source-service-instance-id'.</dd>
   <dt>--source-resource-type</dt>
   <dd>Resource type of source service.</dd>
   <dt>--source-resource</dt>
@@ -1304,8 +1304,8 @@ ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NA
   <dd>Target service instance name, mutually exclusive with `--target-service-instance-id`. If not specified, all instances of the target service are authorized to access.</dd>
   <dt>--target-service-instance-id TARGET_SERVICE_INSTANCE_ID</dt>
   <dd>Target service instance ID, mutually exclusive with `--target-service-instance-name`. If not specified, all instances of the target service are authorized to access.</dd>
-  <dd>--target-resource-group-id RESOURCE_GROUP_ID<dd>
-  <dt>Target resource group ID, mutually exclusive with '--target-service-instance-id'.</dt>
+  <dt>--target-resource-group-id RESOURCE_GROUP_ID<dt>
+  <dd>Target resource group ID, mutually exclusive with '--target-service-instance-id'.</dd>
   <dt>--target-resource-type</dt>
   <dd>Resource type of target service.</dd>
   <dt>--file FILE</dt>
