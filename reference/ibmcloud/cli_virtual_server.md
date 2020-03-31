@@ -342,7 +342,7 @@ ibmcloud sl vs list [OPTIONS]
 <dt>--monthly</dt>
 <dd>Show only monthly instances.</dd>
 <dt>-g, --tag</dt>
-<dd>Filter by tags (multiple occurrence permitted).</dd>
+<dd>Filter by tags. This option can be specified multiple times.</dd>
 <dt>-o, --order</dt>
 <dd>Filter by ID of the order that purchased this instance.</dd>
 <dt>--owner</dt>
@@ -512,7 +512,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <dt>See:</dt>
 <dd>`ibmcloud sl image list` for reference.</dd>
 <dt>-k, --key</dt>
-<dd>The IDs of the SSH keys to add to the root user (multiple occurrence permitted).</dd>
+<dd>The IDs of the SSH keys to add to the root user. This option can be specified multiple times.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
