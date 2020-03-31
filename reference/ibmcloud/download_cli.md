@@ -77,6 +77,13 @@ To install the latest CLI for your OS from the shell manually, use the following
   ```
   {: codeblock}
 
+  If you encounter errors like `The underlying connection was closed: An unexpected error occurred on a send`, make sure you have .Net Framework 4.5 or later installed. Also try to enable TLS 1.2 protocol by running the following command:
+  
+  ```
+  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+  ```
+  {: codeblock}
+
 ## Installing to a custom directory
 {: #install-custom-dir}
 
