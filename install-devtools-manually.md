@@ -90,13 +90,13 @@ For more information, see the [{{site.data.keyword.registrylong}} command refere
 
 To create and manage Kubernetes clusters in {{site.data.keyword.containerlong}}:
 
-* To install the {{site.data.keyword.registryshort_notm}} plug-in, run the following command:
+* To install the {{site.data.keyword.containershort_notm}} plug-in, run the following command:
   ```
   ibmcloud plugin install container-service
   ```
   {: codeblock}
 
-For more information, see the [{{site.data.keyword.registryshort_notm}} command reference](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli).
+For more information, see the [{{site.data.keyword.containershort_notm}} command reference](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli).
 
 ## Installing Helm
 {: #idt-install-helm}
