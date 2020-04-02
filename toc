@@ -80,6 +80,7 @@ IBM Cloud CLI and Developer Tools
 	{: .topicgroup}
 	Plug-ins for the IBM Cloud CLI 
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
+		plugins/catalogs/manage-catalogs.md
 		/databases-cli-plugin/cloud-databases-cli-cdb-reference
 		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
 		/cloud-object-storage-cli-plugin/cloud-object-storage-cli-ic-cos-cli
