@@ -51,8 +51,8 @@ IBM Cloud CLI and Developer Tools
 
 	{: .topicgroup}
 	IBM Cloud CLI infrastructure commands
-		reference/ibmcloud/cli_call_api.md
 		reference/ibmcloud/cli_block_storage.md
+		reference/ibmcloud/cli_call_api.md
 		reference/ibmcloud/cli_dns.md
 		reference/ibmcloud/cli_file_storage.md
 		reference/ibmcloud/cli_global_ip.md
