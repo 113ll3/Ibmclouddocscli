@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Creating and working with bare metal servers
+# Creating and working with bare metal servers (ibmcloud sl hardware)
 {: #sl-manage-bare-metal}
 
 {{site.data.keyword.baremetal_long}} are single-tenant physical servers that provide you performance and control with low-level access to the hardware resources. Bare metal servers provide the raw horsepower you demand for your processor-intensive and disk I/O-intensive workloads. These servers come with the most complete package of standard features and services.

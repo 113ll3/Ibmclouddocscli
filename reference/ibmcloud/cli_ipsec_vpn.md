@@ -14,7 +14,7 @@ subcollection: cloud-cli
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing IPSec VPN tunnels
+# Managing IPSec VPN tunnels (ibmcloud sl ipsec)
 {: #sl-manage-ipsec-vpn-tunnels}
 
 {{site.data.keyword.cloud}} VPN access allows users to manage all servers remotely and securely over the {{site.data.keyword.cloud_notm}} private network. A VPN connection from your location to the private network gives you the capability for out-of-band management and server rescue through an encrypted VPN tunnel.

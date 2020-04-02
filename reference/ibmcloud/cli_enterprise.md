@@ -14,7 +14,7 @@ subcollection: cloud-cli
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing enterprise, account groups, and accounts
+# Managing enterprises, account groups, and accounts (ibmcloud enterprise)
 {: #ibmcloud_enterprise}
 
 Use the following commands to manage enterprise, account groups, and accounts.

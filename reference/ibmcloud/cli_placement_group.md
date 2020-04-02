@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Managing classic infrastructure placement groups
+# Managing classic infrastructure placement groups (ibmcloud sl placement-group)
 {: #sl-manage-placement-group}
 
 Use the following commands to manage the {{site.data.keyword.cloud_notm}} classic infrastructure placement group.

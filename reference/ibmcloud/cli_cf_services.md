@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-04-03"
+  years: 2018, 2020
+lastupdated: "2020-04-01"
 
 keywords: cli, cloud foundry services, ibmcloud service, offerings, service list, service show, service create, service bind, service unbind, unbind service, service keys, create cloud foundry service, delete cloud foundry service
 
@@ -14,12 +14,16 @@ subcollection: cloud-cli
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:external: target="_blank" .external}
+{:deprecated: .deprecated}
 
-# Creating, deleting, and binding Cloud Foundry services
+# Creating, deleting, and binding Cloud Foundry services (ibmcloud service)
 {: #ibmcloud_commands_services}
 
-Use the following commands to manage the service offerings, service instances, service bindings, and keys for the {{site.data.keyword.Bluemix_notm}} Foundry service.
+Use the following commands to manage the service offerings, service instances, service bindings, and keys for Cloud Foundry services on {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
+
+The `ibmcloud service` commands are deprecated. To work with Cloud Foundry services, use the [`ibmcloud cf service` commands](/docs/cli?topic=cloud-cli-ibmcloud_cli#ibmcloud_cf) instead. You can also use the [`ibmcloud resource` commands](/docs/cli?topic=cloud-cli-ibmcloud_commands_resource) to work with {{site.data.keyword.Bluemix_notm}} resources.
+{: deprecated}
 
 ## ibmcloud service offerings
 {: #ibmcloud_service_offerings}

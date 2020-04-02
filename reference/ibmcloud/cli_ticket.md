@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:tip: .tip}
 
-# Managing classic infrastructure tickets
+# Managing classic infrastructure support tickets (ibmcloud sl ticket)
 {: #manage-sl-tickets}
 
 Use the following commands to manage {{site.data.keyword.cloud}} classic infrastructure tickets.

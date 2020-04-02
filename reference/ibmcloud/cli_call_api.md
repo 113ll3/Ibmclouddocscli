@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Calling arbitrary classic infrastructure API endpoints
+# Calling arbitrary classic infrastructure API endpoints (ibmcloud sl call-api)
 {: #sl-all-api}
 
 Use the following command to call the arbitrary classic infrastructure API endpoints.

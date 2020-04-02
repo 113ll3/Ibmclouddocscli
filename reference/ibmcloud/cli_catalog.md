@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Searching and managing catalog offerings
+# Searching and managing catalog offerings (ibmcloud catalog)
 {: #ibmcloud_catalog}
 
 Use the following commands to manage the {{site.data.keyword.cloud}} catalog entries, query templates, runtimes, and geolocations of data centers.

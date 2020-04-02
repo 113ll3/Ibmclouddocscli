@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Creating, editing, and deleting compute images
+# Creating, editing, and deleting compute images (ibmcloud sl image)
 {: #sl-manage-compute-images}
 
 Use the following commands to manage {{site.data.keyword.cloud}} compute images.

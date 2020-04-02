@@ -19,7 +19,7 @@ subcollection: cloud-cli
 {:note: .note}
 {:external: target="_blank" .external}
 
-# {{site.data.keyword.dev_cli_notm}} (ibmcloud dev) commands
+# {{site.data.keyword.dev_cli_notm}} commands (ibmcloud dev)
 {: #idt-cli}
 
 Use the `ibmcloud dev` or `ic dev` commands to create an application, manage, deploy, debug, and test it.

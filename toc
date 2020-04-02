@@ -31,32 +31,36 @@ IBM Cloud CLI and Developer Tools
 	Debugging
 		idt/local_debug.md
 		enable_existing_python.md
+	
+	monitoring_logging.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
+	[IBM Cloud CLI quick reference](https://github.com/ibm-cloud-docs/cli/blob/master/IBM%20Cloud%20CLI%20quick%20reference.pdf)
+	reference/ibmcloud/bx_cli.md
+
 	{: .topicgroup}
-	IBM Cloud CLI (ibmcloud) commands
-		[IBM Cloud CLI quick reference](https://github.com/ibm-cloud-docs/cli/blob/master/IBM%20Cloud%20CLI%20quick%20reference.pdf)
-		reference/ibmcloud/bx_cli.md
+	IBM Cloud CLI platform commands
 		reference/ibmcloud/cli_acct_org_role.md
 		reference/ibmcloud/cli_billing.md
-		reference/ibmcloud/cli_block_storage.md
 		reference/ibmcloud/cli_catalog.md
-		reference/ibmcloud/cli_cf_apps.md
-		reference/ibmcloud/cli_cf_services.md
-		reference/ibmcloud/cli_cfee.md
-		reference/ibmcloud/cli_dns.md
 		reference/ibmcloud/cli_enterprise.md
+		reference/ibmcloud/cli_api_policy.md
+		reference/ibmcloud/cli_plugin.md
+		reference/ibmcloud/cli_resource_group.md
+
+	{: .topicgroup}
+	IBM Cloud CLI infrastructure commands
+		reference/ibmcloud/cli_call_api.md
+		reference/ibmcloud/cli_block_storage.md
+		reference/ibmcloud/cli_dns.md
 		reference/ibmcloud/cli_file_storage.md
 		reference/ibmcloud/cli_global_ip.md
 		reference/ibmcloud/cli_hardware.md
-		reference/ibmcloud/cli_api_policy.md
 		reference/ibmcloud/cli_image.md
 		reference/ibmcloud/cli_ipsec_vpn.md
 		reference/ibmcloud/cli_order.md
 		reference/ibmcloud/cli_placement_group.md
-		reference/ibmcloud/cli_plugin.md
-		reference/ibmcloud/cli_resource_group.md
 		reference/ibmcloud/cli_security.md
 		reference/ibmcloud/cli_securitygroup.md
 		reference/ibmcloud/cli_subnet.md
@@ -64,16 +68,22 @@ IBM Cloud CLI and Developer Tools
 		reference/ibmcloud/cli_user.md
 		reference/ibmcloud/cli_virtual_server.md
 		reference/ibmcloud/cli_vlan.md
-		reference/ibmcloud/cli_call_api.md
+
 	idt/commands.md
 
 	{: .topicgroup}
-	IBM Cloud CLI plug-ins
+	IBM Cloud CLI Cloud Foundry commands
+		reference/ibmcloud/cli_cfee.md
+		reference/ibmcloud/cli_cf_apps.md
+		reference/ibmcloud/cli_cf_services.md
+
+	{: .topicgroup}
+	Plug-ins for the IBM Cloud CLI 
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
-		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
 		/databases-cli-plugin/cloud-databases-cli-cdb-reference
 		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
 		/cloud-object-storage-cli-plugin/cloud-object-storage-cli-ic-cos-cli
+		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-kubernetes-service-cli
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
@@ -84,12 +94,10 @@ IBM Cloud CLI and Developer Tools
 		/hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
 
 	{: .topicgroup}
-	Cloud Foundry CLI plug-ins
+	Plug-ins for the standalone Cloud Foundry CLI
 		/cf-cli-plugin/cf-cli-plugin-cf-cli-plugin
 		plugins/admin/index.md
 		plugins/vpn/index.md
-
-	monitoring_logging.md
 
 	{: .topicgroup}
 	SDKs for Mobile

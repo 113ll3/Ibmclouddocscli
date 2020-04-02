@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:tip: .tip}
 
-# Adding and removing {{site.data.keyword.cloud_notm}} CLI plug-ins
+# Adding and removing {{site.data.keyword.cloud_notm}} CLI plug-ins (ibmcloud plugin)
 {: #ibmcloud_commands_settings}
 
 {{site.data.keyword.cloud}} supports a plug-in framework to extend its capability. Use the following commands to manage the {{site.data.keyword.cloud_notm}} CLI plug-ins.

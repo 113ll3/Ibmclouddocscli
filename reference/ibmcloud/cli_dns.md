@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Managing domains with the DNS service
+# Managing domains with the DNS service (ibmcloud sl dns)
 {: #sl-manage-domains}
 
 {{site.data.keyword.cloud}} Domain Name Service (DNS) provides customers with a central location to view and manage their domains through the basic DNS management interface. Users can manage reverse and secondary DNS in the same location free of charge.

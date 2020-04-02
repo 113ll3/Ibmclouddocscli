@@ -17,7 +17,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:external: target="_blank" .external}
 
-# Managing accounts, users, and Cloud Foundry orgs
+# Managing accounts, users, and Cloud Foundry orgs (ibmcloud account)
 {: #ibmcloud_commands_account}
 
 Use the following commands to manage accounts, users in an account, and the org, space, and roles of public Cloud Foundry environments.

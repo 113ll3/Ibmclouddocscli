@@ -14,7 +14,7 @@ subcollection: cloud-cli
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing classic infrastructure orders and quotes
+# Managing classic infrastructure orders and quotes (ibmcloud sl order)
 {: #sl-manage-classic-orders}
 
 Use the following commands to manage orders and quotes in your classic infrastructure.

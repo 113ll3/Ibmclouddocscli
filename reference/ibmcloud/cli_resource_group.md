@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:tip: .tip}
 
-# Working with resources and resource groups
+# Working with resources and resource groups (ibmcloud resource)
 {: #ibmcloud_commands_resource}
 
 A resource group is a way for you to organize your account resources in customizable groupings. Use the following commands to manage {{site.data.keyword.cloud}} resources in a resource group.

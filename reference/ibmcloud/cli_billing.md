@@ -14,7 +14,7 @@ subcollection: cloud-cli
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Viewing usage for accounts, orgs, resource groups, and resources 
+# Viewing billing and usage information (ibmcloud billing)
 {: #ibmcloud_billing}
 
 Use the following commands to retrieve resource usage and billing information.

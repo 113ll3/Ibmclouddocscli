@@ -17,7 +17,7 @@ subcollection: cloud-cli
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Managing IAM access, API keys, service IDs, and access groups
+# Managing IAM access, API keys, service IDs, and access groups (ibmcloud iam)
 {: #ibmcloud_commands_iam}
 
 Use the following commands to manage API keys, service IDs, access groups, and authorization policies for users, services, and access groups.

@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Managing global IPs
+# Managing global IPs (ibmcloud sl globalip)
 {: #sl-manage-global-ip}
 
 A global IP address is a specialized static secondary subnet. It is delivered to you as a `/32` subnet (in other words, a single IP address) that can be routed to any other IP address on your account.

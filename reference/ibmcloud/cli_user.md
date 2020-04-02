@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:tip: .tip}
 
-# Managing classic infrastructure users
+# Managing classic infrastructure users (ibmcloud sl user)
 {: #manage-sl-users}
 
 Use the following commands to manage {{site.data.keyword.cloud}} classic infrastructure users.

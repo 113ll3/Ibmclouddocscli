@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Working with the {{site.data.keyword.blockstorageshort}} service
+# Working with the {{site.data.keyword.blockstorageshort}} service (ibmcloud sl block)
 {: #sl-block-storage}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.blockstorageshort}} is a persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based {{site.data.keyword.blockstorageshort}} LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections.

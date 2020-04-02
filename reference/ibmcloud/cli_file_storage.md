@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:codeblock: .codeblock}
 
-# Working with the {{site.data.keyword.filestorage_short}} service
+# Working with the {{site.data.keyword.filestorage_short}} service (ibmcloud sl file)
 {: #sl-file-storage-service}
 
 {{site.data.keyword.filestorage_full}} is a persistent, fast, and flexible network-attached, NFS-based {{site.data.keyword.filestorage_short}}. In this network-attached storage (NAS) environment, you have total control over your file shares function and performance.

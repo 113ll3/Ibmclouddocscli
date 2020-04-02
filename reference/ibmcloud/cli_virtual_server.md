@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:tip: .tip}
 
-# Creating and working with virtual servers
+# Creating and working with virtual servers (ibmcloud sl vs)
 {: #cli-virtual-servers}
 
 {{site.data.keyword.BluVirtServers}} are scalable virtual servers that are purchased with dedicated cores and memory allocations. They are a great option if you are looking for compute resources, that can be added in minutes, with access to features like image templates. 

@@ -15,7 +15,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:tip: .tip}
 
-# Creating, canceling, and viewing subnets
+# Creating, canceling, and viewing subnets (ibmcloud sl subnet)
 {: #sl-manage-subnets}
 
 A subnet is a logical partition of an IP network into multiple, smaller network segments. Use the following commands to manage {{site.data.keyword.cloud}} classic infrastructure subnets.
