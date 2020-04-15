@@ -20,45 +20,6 @@ subcollection: cloud-cli
 
 Use the following commands to manage the {{site.data.keyword.cloud}} catalog entries, query templates, runtimes, and geolocations of data centers.
 {: shortdesc}
-  
-## ibmcloud catalog search
-{: #ibmcloud_catalog_search}
-
-Search catalog entries:
-```
-ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--csv] [--global]
-```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
-<strong>Command Options</strong>:
-<dl>
-  <dt>-r, --region</dt>
-  <dd>Specify the geographic region to search within. Currently, only "us-south" and "united-kingdom" are supported</dd>
-  <dt>-k, --kind</dt>
-  <dd>Filter by the kind of resources. Currently, only "service-cf", "iaas", "runtime", "template", and "dashboard" are supported</dd>
-  <dt>-p, --price</dt>
-  <dd>Filter by price. Currently, only "free", "paygo", "ibmcloud-subscription" are supported</dd>
-  <dt>-t, --tag</dt>
-  <dd>Filter by tag.</dd>
-  <dt>--sort-by</dt>
-  <dd>Property to sort by</dd>
-  <dt>--col</dt>
-  <dd>Specify more columns for the table. Currently, "group", "provider", and "tags"</dd>
-  <dt>--reverse</dt>
-  <dd>Whether to reverse the sorting order</dd>
-  <dt>--csv</dt>
-  <dd>Output CSV file</dd>
-  <dt>--global</dt>
-  <dd>Operate in global scope</dd>
-</dl>
-
-<strong>Examples</strong>:
-
-Search service `Automation test`:
-```
-ibmcloud catalog search -k service -q 'Automation test'
-```
 
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
