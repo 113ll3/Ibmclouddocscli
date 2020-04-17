@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-08-15"
+  years: 2017, 2020
+lastupdated: "2020-04-17"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -66,15 +66,15 @@ Next, you enter or select the command that you want to start. You can type ‘ib
 
 You can get started with `ibmcloud dev` workflows in just a few steps:
 * Create a project by using one of the two following methods:
-  * Use the [{{site.data.keyword.cloud_notm}} web console](https://{DomainName}/developer/appservice/starter-kits){: external} and download the generated code
+  * Use the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/developer/appservice/starter-kits){: external} and download the generated code.
   * Use the {{site.data.keyword.cloud_notm}} Developer Tools CLI plug-in and generate a project by using the [ibmcloud dev create](/docs/cli/idt?topic=cloud-cli-idt-cli#create) command.
-* Open the project’s folder locally in the Visual Studio Code editor
-* Use the `ibmcloud dev build` command to build the app into a Docker image
-* Use the `ibmcloud dev debug` command to run the app in local Docker for development
+* Open the project’s folder locally in the Visual Studio Code editor.
+* Use the `ibmcloud dev build` command to build the app into a Docker image.
+* Use the `ibmcloud dev debug` command to run the app in local Docker for development.
   Note: To debug a Node.js application that is running inside the local Docker container, you need to [add a debug configuration for the local container](https://github.com/IBM-Cloud/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: external}.
-  {: note}
+  {: note}.
 * Use the `ibmcloud dev run` command to run the app in local Docker in release mode
-* Use the `ibmcloud dev deploy` command to deploy the app to a Cloud Foundry runtime on {{site.data.keyword.cloud_notm}}
+* Use the `ibmcloud dev deploy` command to deploy the app to a Cloud Foundry runtime on {{site.data.keyword.cloud_notm}}.
 
 ### Using the IBM Developer Extension for Cloud Foundry workflows
 {: #usage-cloud-foundry}
@@ -82,12 +82,12 @@ You can get started with `ibmcloud dev` workflows in just a few steps:
 For users that are currently deploying apps to Cloud Foundry runtimes on {{site.data.keyword.cloud_notm}}, there's also support for the `cf` set of operations.
 
 You can get started with Cloud Foundry workflows in just a few steps:
-* Create a Cloud Foundry app
-  * Use the [{{site.data.keyword.cloud_notm}} web console](https://{DomainName}/developer/appservice/starter-kits){: external} and download the starter code
-  * Create a Cloud Foundry app manually
-* Open the project folder locally in the Visual Studio Code editor
-* Use `ibmcloud cf apps` to list all of your apps
-* Use `ibmcloud cf push` to push a build of your app to the Cloud Foundry runtime
-* Use ibmcloud `cf <start/stop/restage/restart>` to change the status of your app
-* Use `ibmcloud cf logs` to view the live log stream for your app
-  * Use `ibmcloud cf logs` to stop the log stream
+* Create a Cloud Foundry app.
+  * Use the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/developer/appservice/starter-kits){: external} and download the starter code.
+  * Create a Cloud Foundry app manually.
+* Open the project folder locally in the Visual Studio Code editor.
+* Use `ibmcloud cf apps` to list all of your apps.
+* Use `ibmcloud cf push` to push a build of your app to the Cloud Foundry runtime.
+* Use ibmcloud `cf <start/stop/restage/restart>` to change the status of your app.
+* Use `ibmcloud cf logs` to view the live log stream for your app.
+  * Use `ibmcloud cf logs` to stop the log stream.
