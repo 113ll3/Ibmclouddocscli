@@ -24,13 +24,15 @@ subcollection: cloud-cli
 
 You can manage your {{site.data.keyword.cloud_notm}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command line interface (CLI) with the {{site.data.keyword.cloud_notm}} admin CLI plug-in. For example, you can add users from an LDAP registry.
 
-Before you begin, install the Cloud Foundry CLI. The {{site.data.keyword.cloud_notm}} admin CLI plug-in
-requires `cf` version 6.11.2 or later. [Download Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: external}. Note that the admin CLI can only be installed into the standalone Cloud Foundry CLI (`cf`), and it can't be used with the Cloud Foundry CLI that's embedded in the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud cf`).
+Before you begin, install the [Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: external}. The {{site.data.keyword.cloud_notm}} admin CLI plug-in
+requires `cf` version 6.11.2 or later. Note that the admin CLI can only be installed into the standalone Cloud Foundry CLI (`cf`), and it can't be used with the Cloud Foundry CLI that's embedded in the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud cf`).
 
 The Cloud Foundry CLI is not supported by Cygwin. Use the Cloud Foundry CLI in a command line window other than the Cygwin command line window.
 
 {{site.data.keyword.cloud_notm}} admin CLI is only for use with {{site.data.keyword.cloud_notm}} Local and {{site.data.keyword.cloud_notm}} Dedicated environments. It is not supported by {{site.data.keyword.cloud_notm}} public.
 {: note}
+
+Only the `cf` commands that are part of the admin CLI plug-in are described in this reference. To list all of the **`cf`** commands and associated help information, run the **`cf help`** command. To view detailed help information for a particular command, run the **`cf command_name -h`** command. For more information about Cloud Foundry CLI commands, see the [Cloud Foundry CLI reference guide](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: external}.
 
 ## Adding the {{site.data.keyword.cloud_notm}} admin CLI plug-in
 {: #add-admin-cli}

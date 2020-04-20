@@ -22,7 +22,9 @@ subcollection: cloud-cli
 You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.cloud}} CLI plug-in. Both versions of the plug-in provide the same functions.
 {: shortdesc}
 
-The {{site.data.keyword.vpn_short}} plug-in is available for Windows&trade;, Mac, and Linux&trade; operating systems. Ensure that you use the one that is applicable to you.
+The {{site.data.keyword.vpn_short}} plug-in is available for Windows, Mac, and Linux&trade; operating systems. Ensure that you use the one that is applicable to you.
+
+Only the `cf` commands that are part of the VPN CLI plug-in for Cloud Foundry are described in this reference. To list all of the **`cf`** commands and associated help information, run the **`cf help`** command. To view detailed help information for a particular command, run the **`cf command_name -h`** command. For more information about Cloud Foundry CLI commands, see the [Cloud Foundry CLI reference guide](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: external}.
 
 ## Install the cf CLI plug-in
 {: #install-cf-cli-plugin}

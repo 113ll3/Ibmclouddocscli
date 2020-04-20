@@ -20,7 +20,7 @@ subcollection: cloud-cli
 
 Use the following commands to manage the {{site.data.keyword.cloud}} catalog entries, query templates, runtimes, and geolocations of data centers.
 {: shortdesc}
-
+  
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
