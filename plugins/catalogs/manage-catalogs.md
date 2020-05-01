@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-06"
+lastupdated: "2020-05-01"
 
-keywords: catalog management cli
+keywords: cli
 
 subcollection: cloud-cli
 
@@ -18,11 +18,11 @@ subcollection: cloud-cli
 {:important: .important}
 {:tip: .tip}
 
-# Catalog management CLI
+# Catalogs management CLI plug-in
 {: #manage-catalogs-plugin}
 
 
-The {{site.data.keyword.cloud}} catalog management command-line interface (CLI) provides extra capabilities for catalogs. You can use this {{site.data.keyword.cloud_notm}} CLI to manage your private catalogs that are only available to users in your account, onboard new private software offerings, and manage catalog visibility between the public catalog and your private catalogs.
+The {{site.data.keyword.cloud}} catalogs management command-line interface (CLI) provides extra capabilities for catalogs. You can use this {{site.data.keyword.cloud_notm}} CLI to manage your private catalogs that are only available to users in your account, onboard new private software offerings, and manage catalog visibility between the public catalog and your private catalogs.
 {:shortdesc} 
 
 ## Before you begin
@@ -32,10 +32,10 @@ The {{site.data.keyword.cloud}} catalog management command-line interface (CLI) 
 * Before you run the registry commands, log in to {{site.data.keyword.cloud_notm}} with the `ibmcloud login` command to generate an access token and authenticate your session.
 
 
-## Installing the catalog management plug-in
+## Installing the catalogs management plug-in
 {: #manage-catalogs-plugin}
 
-To install the catalog management plug-in, run the following command:
+To install the catalogs management plug-in, run the following command:
 
 ```
 ibmcloud plugin install catalogs-management
@@ -53,7 +53,7 @@ Don't put personal information in your catalog names or catalog descriptions.
 
 Use this command to create a new private catalog in your account. A private catalog is used to organize a set of offerings, private ones you add or references to public IBM Cloud catalog offerings, for users in your account to access. A user must have access to your private catalog through an IAM access policy and the resource group that contains your private catalog to see the offerings.
 
-You must target a resource group to create a catalog, as the catalog exists in the context of a particular resource group. To get list of resource groups, you can run `ibmcloud resource groups`, and then `ibmcloud target -g "resource group"`.
+You must target a resource group to create a catalog, as the catalog will exist in the context of a particular resource group. To get list of resource groups, you can run `ibmcloud resource groups`, and then `ibmcloud target -g "resource group"`.
 {: important}
 
 ```
@@ -179,13 +179,13 @@ ibmcloud catalog search <QUERY> [--catalog CATALOG] [--type TYPE] [-r, --region 
   <dt>--output FORMAT (optional)</dt>
   <dd>Specifies output format. Default is terminal-friendly and the only alternative options are "json" and "csv". json`</dd>
   <dt>--kind KIND (optional)</dt>
-  <dd>Flag is only valid for services search. Provide a comma-separated list of offering kinds.s</dd>
+  <dd>Flag is only valid for services search. Provide a comma separated list of offering kinds.s</dd>
   <dt>--region REGION (optional)</dt>
-  <dd>Flag is only valid for services search. Provide a comma-separated list of regions. Run "ibmcloud cs regions" for valid list.</dd>
+  <dd>Flag is only valid for services search. Provide a comma separated list of regions. Run "ibmcloud cs regions" for valid list.</dd>
   <dt>--price PRICE (optional)</dt>
-  <dd>Flag is only valid for services search. Provide a comma-separated list of pricing types.</dd>
+  <dd>Flag is only valid for services search. Provide a comma separated list of pricing types.</dd>
   <dt>--tag TAG (optional)</dt>
-  <dd>Flag is only valid for services search. Provide a comma-separated list of tags.</dd>
+  <dd>Flag is only valid for services search. Provide a comma separated list of tags.</dd>
   <dt>--global (optional)</dt>
   <dd>Flag is only valid for services search. Use it to operate in global scope.</dd>
   <dt>--sort-by TYPE (optional)</dt>
@@ -193,7 +193,7 @@ ibmcloud catalog search <QUERY> [--catalog CATALOG] [--type TYPE] [-r, --region 
   <dt>--reverse (optional)</dt>
   <dd>Flag is only valid for services search. Use it to reverse order the sorting order.</dd>
   <dt>--fields FIELDS (optional)</dt>
-  <dd>Flag is only valid for services search. Customize table(that is, --fields name, kind,metadata.service.iam_compatible</dd>
+  <dd>Flag is only valid for services search. Customize table(i.e., --fields name,kind,metadata.service.iam_compatible</dd>
   </dl>
 
 ### Output
@@ -249,7 +249,7 @@ Provider       false     Third Party
 ## ibmcloud catalog filter create
 {: #create-filter}
 
-Run the following command to create a new filter. If a filter already exists, this overrides the current filter.
+Run the following command to create a new filter. If a filter already exists, this will override the current filter.
 
 ```
 ibmcloud catalog filter create [--catalog CATALOG] [--category CATEGORY] [--compliance COMPLIANCE] [--deployment-target TARGET] [--exclude-list LIST] [--include-all ALL] [--include-list LIST] [--offering-format FORMAT] [--pricing-plan PLAN] [--provider PROVIDER] [--release RELEASE] [--type TYPE]
@@ -260,37 +260,37 @@ ibmcloud catalog filter create [--catalog CATALOG] [--category CATEGORY] [--comp
 
   <dl>
   <dt>--catalog CATALOG (optional)</dt>
-  <dd>Specify the catalog name or ID. If not specified, the filter is created on the account level.</dd>
+  <dd>Specify the catalog name or ID. If not specified, the filter will be created on the account level.</dd>
   <dt>hide-ibm-catalog (optional)</dt>
   <dd>By default, the catalog is visible to all users in this account. By providing this flag, You can make products available only to the users you choose by turning off visibility to the IBM Cloud catalog and adding the products to your private catalogs.
   <dt>--include-all BOOLEAN (optional)</dt>
-  <dd>Default is true if flag not provided. Valid values are "true" and "false". If true, the filter defaults to include the whole public catalog, and subsequent filters are exclusions. If false, the filter excludes the whole public catalog, and subsequent flags are inclusions. Read more at https://cloud.ibm.com/docs/account?topic=account-visibility-public-catalog</dd>
+  <dd>Default is true if flag not provided. Valid values are "true" and "false". if true, the filter defaults to include the whole public catalog, and subsequent filters are exclusions. If false, the filter excludes the whole public catalog, and subsequent flags are inclusions. Read more at https://cloud.ibm.com/docs/account?topic=account-visibility-public-catalog</dd>
   <dt>--offering-format FORMAT (optional)</dt>
   <dt>--category CATEGORY (optional)</dt>
-  <dd>Provide comma-separated list of category names or tags you would like to include or exclude. Run "ibmcloud catalog offering category-options" to see all options</dd>
+  <dd>Provide comma separated list of category names or tags you would like to include or exclude. Run "ibmcloud catalog offering category-options" to see all options</dd>
   <dt>--compliance TYPE (optional)</dt>
-  <dd>Provide comma-separated list of compliance categories you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
+  <dd>Provide comma separated list of compliance categories you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
   <dt>--deployment-target TARGET (optional)</dt>
-  <dd>Provide comma-separated list of deployment targets you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
+  <dd>Provide comma separated list of deployment targets you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
   <dt>--exclude-list LIST (optional)</dt>
-  <dd>Provide comma-separated list of offerings IDs or names that must be excluded in filtered public catalog.</dd>
+  <dd>Provide comma separated list of offerings IDs or names that must be excluded in filtered public catalog.</dd>
   <dt>--include-list LIST (optional)</dt>
-  <dd>Provide comma-separated list of offerings IDs or names that must be included in filtered public catalog.</dd>
-  <dd>Provide comma-separated list of offering formats you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
+  <dd>Provide comma separated list of offerings IDs or names that must be included in filtered public catalog.</dd>
+  <dd>Provide comma separated list of offering formats you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
   <dt>--pricing-plan PLAN (options)</dt>
-  <dd>Provide comma-separated list of pricing plans you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
+  <dd>Provide comma separated list of pricing plans you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
   <dt>--provider PROVIDER (optional)</dt>
-  <dd>Provide comma-separated list of providers you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
+  <dd>Provide comma separated list of providers you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
   <dt>--release RELEASE (optional)</dt>
-  <dd>Provide comma-separated list of release categories you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
+  <dd>Provide comma separated list of release categories you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
   <dt>--type TYPE (optional)</dt>
-  <dd>Provide comma-separated list of types you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
+  <dd>Provide comma separated list of types you would like to include or exclude. Run 'ibmcloud catalog filter options' to see all options</dd>
   </dl>
 
 ## ibmcloud catalog filter delete
 {: #delete-filter}
 
-Run the following command to delete the filter. This defaults to the account level unless a catalog is specified. It resets filter to include the whole public catalog.
+Run the following command to delete the filter. This defaults to the account level unless a catalog is specified. It will reset filter to include the whole public catalog.
 
 ```
 ibmcloud catalog filter delete --catalog CATALOG
@@ -303,6 +303,24 @@ ibmcloud catalog filter delete --catalog CATALOG
   <dt>--catalog CATALOG</dt>
   <dd>The catalog name or ID.</dd>
   </dl>
+
+## ibmcloud catalog filter hide-ibm-public-catalog
+{: #delete-filter}
+
+By default, the IBM public catalog is visible to all users in this account. You can make products available only to the users you choose by turning off visibility to the IBM Cloud catalog and adding the products to your private catalogs.
+
+```
+ibmcloud catalog filter hide-ibm-public-catalog
+```
+
+## ibmcloud catalog filter show-ibm-public-catalog
+{: #delete-filter}
+
+By default, the IBM public catalog is visible to all users in this account. You can make products available only to the users you choose by turning off visibility to the IBM Cloud catalog and adding the products to your private catalogs.
+
+```
+ibmcloud catalog filter show-ibm-public-catalog
+```
 
 
 ## ibmcloud catalog filter options
@@ -362,7 +380,6 @@ ibmcloud catalog offering create --catalog CATALOG --zipurl URL [--include-confi
   <dt>--include-config (optional)</dt>
   <dd>If provided, all configuration values are included and available when you create the offering in the account.</dd>
   </dl>
-
 
 ## ibmcloud catalog offering list
 {: #list-offering-options}
@@ -508,6 +525,13 @@ dev-offering
 {: screen}
 
 
+<!-- ## ibmcloud catalog offering delete
+{: #delete-offering-options}
+Use this command to an offering catalogs, and provides ability to filter by catalog, offering, and version.
+```
+ibmcloud catalog offering delete --catalog dev-catalog
+``` -->
+
 ## ibmcloud catalog offering import-version
 {: #import-offering-version}
 
@@ -600,7 +624,7 @@ ibmcloud catalog offering validate --version-locator VERSION_NUMBER --cluster CL
 
   <dl>
   <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering version you'd like to use.</dd>
+  <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering/version you'd like to use.</dd>
   <dt>--cluster CLUSTER_ID</dt>
   <dd>Provide the cluster ID of the cluster where you want to install this offering.</dd>
   <dt>--namespace NAME</dt>
@@ -788,12 +812,13 @@ ibmcloud catalog offering publish-to-account --version-locator VERSION_NUMBER
   <dt>--version-locator VERSION_NUMBER</dt>
   <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.</dd>
   </dl> 
-
+  
+<!-- These commands below will NOT go public and will always remain internal until we remove them entirely in favor of the provider portal which will be used to onboard content offerings to the public catalog. -->
 
 ## ibmcloud catalog offering publish-to-ibm
 {: #publish-offering-to-ibm}
 
-Run the following command to publish an offering that is already availble in your account to all IBMers. This part of the publication process creates a tile in the staging and production catalogs that is visible only to IBMers. Publishing to IBMers allows testing the offering in production before you make it available to all users in the IBM Cloud catalog.
+Run the following command to publish an offering that is already availble in your account to all IBMers. This part of the publication process creates a tile in the staging and production catalogs that is visible only to IBMers. Publishing to IBMers only enables you to test out the offering in production before you make it available to all users in the IBM Cloud catalog.
 
 ```
 ibmcloud catalog offering publish-to-ibm --version-locator VERSION_NUMBER
@@ -847,7 +872,7 @@ ibmcloud catalog offering deprecate --version-locator VERSION_NUMBER
 ## ibmcloud catalog offering restore
 {: #publish-offering-restore}
 
-Run the following command to restore a previously deprecated offering version in the IBM Cloud catalog. Restoring it places the version in draft state. After validating, you can restore the original version to the published state it was in before being deprecated.
+Run the following command to restore a previously deprecated offering version in the IBM Cloud catalog. Restoring it will place the version in draft state. After validating it, you will be able to restore the original version to the published state it was in prior to being deprecated.
 
 ```
 ibmcloud catalog offering restore --version-locator VERSION_NUMBER
