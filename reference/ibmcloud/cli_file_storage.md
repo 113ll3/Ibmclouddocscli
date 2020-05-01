@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-05-01"
 
 keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
 
@@ -489,6 +489,22 @@ ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 
 This command lists all endurance volumes on the current account that are located in datacenter `dal09`, and sorts them by capacity.
 
+## ibmcloud sl file volume-convert
+{: #sl_file_volume_convert}
+
+Convert a dependent duplicate volume to an independent volume:
+```
+ibmcloud sl file volume-convert VOLUME_ID
+```
+
+**Examples**:
+```
+ibmcloud sl file volume-convert 12345678
+```
+{: codeblock}
+
+Convert a dependent duplicate 12345678 to an independent volume.
+
 ## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
 
@@ -525,6 +541,8 @@ ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
 <dd>Endurance Storage Tier. If no tier is specified, the tier of the original volume is used.</dd>
 <dt>-n, --duplicate-snapshot-size</dt>
 <dd>The size of snapshot space to order for the duplicate. If no snapshot space size is specified, the snapshot space size of the original volume is used.</dd>
+<dt>-d, --dependent-duplicate</dt>
+<dd>Whether or not this duplicate will be a dependent duplicate of the origin volume.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
@@ -625,3 +643,18 @@ ibmcloud sl file volume-options
 This command lists all options for creating a file storage volume, including storage type, volume size, IOPS, tier level, datacenter, and snapshot size.
 
 
+## ibmcloud sl file volume-refresh
+{: #sl_file_volume_refresh}
+
+Refresh a dependent duplicate volume with a snapshot from its parent:
+```
+ibmcloud sl file volume-refresh VOLUME_ID SNAPSHOT_ID
+```
+
+**Examples**:
+```
+ibmcloud sl file volume-refresh 123 456
+```
+{: codeblock}
+
+Refresh a dependent duplicate 123 with a snapshot from its parent 456.

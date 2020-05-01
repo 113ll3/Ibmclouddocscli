@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-01"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -1277,7 +1277,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 
 Create an authorization policy to allow a service instance access to another service instance:
 ```
-ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-group-id RESOURCE_GROUP_ID] [--source-resource-type RESOURCE_TYPE] [--source-resource RESOURCE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--target-resource-group-id RESOURCE_GROUP_ID] [--target-resource-type RESOURCE_TYPE] | --file FILE}
+ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-group-id RESOURCE_GROUP_ID] [--source-resource-type RESOURCE_TYPE] [--source-resource RESOURCE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--target-resource-group-id RESOURCE_GROUP_ID] [--target-resource-type RESOURCE_TYPE] [--target-resource RESOURCE] | --file FILE}
 ```
 
 <strong>Prerequisites</strong>: Login, Target
@@ -1308,6 +1308,8 @@ ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NA
   <dd>Target resource group ID, mutually exclusive with '--target-service-instance-id'.</dd>
   <dt>--target-resource-type</dt>
   <dd>Resource type of target service.</dd>
+  <dt>--target-resource</dt>
+  <dd>Resource of target service.</dd>
   <dt>--file FILE</dt>
   <dd>JSON file of policy definition</dd>
 </dl>

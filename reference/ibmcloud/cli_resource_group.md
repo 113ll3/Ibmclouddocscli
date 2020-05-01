@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-01"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -298,7 +298,7 @@ ibmcloud resource service-instance my-service-instance
 
 Create a service instance.
 ```
-ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVICE_PLAN_NAME LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [--allow-cleanup]
+ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVICE_PLAN_NAME LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [--allow-cleanup] [--lock]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -323,6 +323,8 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dd>Types of the service endpoints. Possible values are 'public', 'private', 'public-and-private'.</dd>
   <dt>--allow-cleanup</dt>
   <dd>Whether the service instance should be deleted (cleaned up) during the processing of a region instance delete call</dd>
+  <dt>--lock</dt>
+  <dd>Whether to create the service instance with locked state</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -399,6 +401,64 @@ Delete resource service-instance `my-service-instance`:
 ibmcloud resource service-instance-delete my-service-instance
 ```
 {: codeblock}
+
+## ibmcloud resource service-instance-lock
+{: #ibmcloud_resource_service_instance_lock}
+
+Lock service instance.
+```
+ibmcloud resource service-instance-lock ( NAME | ID ) [-g RESOURCE_GROUP] [-f, --force]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login, Target
+
+<strong>Command options</strong>:
+<dl>
+  <dt>Name (required)</dt>
+  <dd>Name of the service instance, exclusive with ID</dd>
+  <dt>ID (required)</dt>
+  <dd>ID of the service instance, exclusive with NAME</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>Resource group name</dd>
+  <dt>-f, --force</dt>
+  <dd>Force locking without confirmation</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Lock resource service-instance `my-service-instance`:
+```
+ibmcloud resource service-instance-lock my-service-instance
+```
+
+## ibmcloud resource service-instance-unlock
+{: #ibmcloud_resource_service_instance_unlock}
+
+Unlock service instance.
+```
+ibmcloud resource service-instance-unlock ( NAME | ID ) [-g RESOURCE_GROUP] [-f, --force]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login, Target
+
+<strong>Command options</strong>:
+<dl>
+  <dt>Name (required)</dt>
+  <dd>Name of the service instance, exclusive with ID</dd>
+  <dt>ID (required)</dt>
+  <dd>ID of the service instance, exclusive with NAME</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>Resource group name</dd>
+  <dt>-f, --force</dt>
+  <dd>Force locking without confirmation</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Unlock resource service-instance `my-service-instance`:
+```
+ibmcloud resource service-instance-unlock my-service-instance
+```
 
 ## ibmcloud resource service-bindings
 {: #ibmcloud_resource_service_bindings}
@@ -585,7 +645,7 @@ ibmcloud resource service-key crn:v1:bluemix:public:cloudantnosqldb:us-south:a/5
 
 Create a service key.
 ```
-ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-g RESOURCE_GROUP] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
+ibmcloud resource service-key-create NAME [ROLE_NAME] ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-g RESOURCE_GROUP] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -594,7 +654,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
 <dl>
   <dt>NAME (required)</dt>
   <dd>Name of the key</dd>
-  <dt>ROLE_NAME (required)</dt>
+  <dt>ROLE_NAME (optional)</dt>
   <dd>Name of the user role</dd>
   <dt>--instance-id <i>SERVICE_INSTANCE_ID</i></dt>
   <dd>Service Instance ID</dd>
@@ -622,6 +682,12 @@ Create a service key named `my-service-key` with role `Administrator` for servic
 ```
 ibmcloud resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
+
+Create a service key named `my-service-key` without any role for a non-iam-enabled service instance `my-service-instance`:
+```
+ibmcloud resource service-key-create my-service-key --instance-name my-service-instance
+```
+
 
 ## ibmcloud resource service-key-update
 {: #ibmcloud_resource_service_key_update}

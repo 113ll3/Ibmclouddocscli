@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-05-01"
 
 keywords: classic infrastructure, block storage, mpio, ibmcloud sl block, volume-options, snapshot, datacenter, replica, cli, storage type, size
 
@@ -541,6 +541,22 @@ Set the LUN ID on an existing block storage volume:
 ibmcloud sl block volume-set-lun-id VOLUME_ID LUN_ID
 ```
 
+## ibmcloud sl block volume-convert
+{: #sl_block_volume_convert}
+
+Convert a dependent duplicate volume to an independent volume:
+```
+ibmcloud sl block volume-convert VOLUME_ID
+```
+
+**Examples**:
+```
+ibmcloud sl block volume-convert 12345678
+```
+{: codeblock}
+
+Convert a dependent duplicate 12345678 to an independent volume.
+
 ## ibmcloud sl block volume-detail
 {: #sl_block_volume_detail}
 
@@ -577,6 +593,8 @@ ibmcloud sl block volume-duplicate VOLUME_ID [OPTIONS]
 <dd>Endurance Storage Tier. If no tier is specified, the tier of the original volume is used.</dd>
 <dt>-n, --duplicate-snapshot-size</dt>
 <dd>The size of snapshot space to order for the duplicate. If no snapshot space size is specified, the snapshot space size of the origin volume is used.</dd>
+<dt>-d, --dependent-duplicate</dt>
+<dd>Whether or not this duplicate will be a dependent duplicate of the origin volume.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
@@ -644,5 +662,19 @@ ibmcloud sl block volume-options
 
 This command lists all options for creating a block storage volume, including storage type, volume size, OS type, IOPS, tier level, datacenter, and snapshot size.
 
+## ibmcloud sl block volume-refresh
+{: #sl_block_volume_refresh}
 
+Refresh a dependent duplicate volume with a snapshot from its parent:
+```
+ibmcloud sl block volume-refresh VOLUME_ID SNAPSHOT_ID
+```
+
+**Examples**:
+```
+ibmcloud sl block volume-refresh 123 456
+```
+{: codeblock}
+
+Refresh a dependent duplicate 123 with a snapshot from its parent 456.
 
