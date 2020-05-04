@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-01"
+lastupdated: "2020-05-04"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -1285,11 +1285,11 @@ ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NA
 <strong>Command Options</strong>:
 <dl>
   <dt>SOURCE_SERVICE_NAME</dt>
-  <dd>Source service that can be authorized to access.</dd>
+  <dd>The source service that can be authorized to access. To find the service's name, run the `ibmcloud catalog service-marketplace` command.</dd>
   <dt>TARGET_SERVICE_NAME</dt>
-  <dd>Target service that the source service can be authorized to access.</dd>
+  <dd>The target service that the source service can be authorized to access. To find the service's name, run the `ibmcloud catalog service-marketplace` command.</dd>
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
-  <dd>The roles that provide access for the source service.</dd>  
+  <dd>The roles that provide access for the source service.</dd>
   <dt>--source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME</dt>
   <dd>Source service instance name, mutually exclusive with `--source-service-instance-id`. If not specified, all instances of the source service are authorized to access.</dd>
   <dt>--source-service-instance-id SOURCE_SERVICE_INSTANCE_ID</dt>
@@ -1902,5 +1902,3 @@ Delete policy `51b9717e-76b0-4f6a-bda7-b8132431f926` of access group `example_gr
 ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
 ```
 {: codeblock}
-
-
