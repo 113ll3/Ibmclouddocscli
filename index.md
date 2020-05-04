@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-17"
+lastupdated: "2020-05-04"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -49,6 +49,9 @@ You need an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){:
 * For Linux&trade;, install the [curl](https://curl.haxx.se/download.html){: external} command for downloading packages through the command line. If `curl` is already installed, the installer updates it to the latest version.
 * For Windows&trade;, some functions are not supported unless you are running Windows&trade; 10 Pro.
 
+If you need to use a 32-bit version of the CLI, or a previous version other than the latest for {{site.data.keyword.cloud_notm}} Dedicated environments, see [{{site.data.keyword.cloud_notm}} CLI releases](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}.
+{: note}
+
 ## Step 1. Run the installation command
 {: #step1-install-idt}
 
@@ -60,19 +63,20 @@ The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when
   ```
   {: codeblock}
 
+  If you'd rather not pipe through bash, you can manually [install the IBM Cloud CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli) and then [install the CLI plug-ins and tools](/docs/cli?topic=cloud-cli-install-devtools-manually) separately.
+  {: tip}
+
 * For Windows&trade; 10 Pro, run the following command in PowerShell as an administrator:
   ```
   [Net.ServicePointManager]::SecurityProtocol = "Tls12, Tls11, Tls, Ssl3"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
 
-  Right-click the Windows&trade; PowerShell icon, and select **Run as administrator**.
+  To open PowerShell, right-click the Windows&trade; PowerShell icon, and select **Run as administrator**.
   {: tip}
 
 * For automating DevOps installations, you can also access the installer script directly from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: external}.
 
-If you need to use a 32-bit version of the CLI, or a previous version other than the latest for {{site.data.keyword.cloud_notm}} Dedicated environments, see [{{site.data.keyword.cloud_notm}} CLI releases](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}.
-{: note}
 
 ## Step 2. Verify the installation
 {: #step2-verify-idt}
