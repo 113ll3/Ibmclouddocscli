@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-05-05"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -23,11 +23,35 @@ subcollection: cloud-cli
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 
-# Troubleshooting for the {{site.data.keyword.dev_cli_short}} (ibmcloud dev) commands
+# Troubleshooting for the {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.dev_cli_short}}
 {: #troubleshoot}
 
-See solutions to common problems with using the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands. In many cases, you can recover from these problems by following a few easy steps.
+See solutions to common problems with using the {{site.data.keyword.cloud}} CLI. In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
+
+## Why do I receive a log cache error when running Cloud Foundry commands?
+{: #ts-cli-cf-logcache}
+{: troubleshoot}
+
+The following error is displayed when you run a Cloud Foundry CLI (`cf`) command, such as `cf push` or `cf logs`.
+{: tsSymptoms}
+
+```
+Failed to retrieve logs from Log Cache: unexpected status code 404
+```
+{: screen}
+
+This error is caused by a known log cache issue in Cloud Foundry CLI 6.50 and later. For details, see the [Cloud Foundry CLI release notes](https://github.com/cloudfoundry/cli/releases/tag/v6.50.0){: external}.
+{: tsCauses}
+
+Install Cloud Foundry CLI 6.49 by running the following command:
+{: tsResolve}
+
+```sh
+ibmcloud cf install -v 6.49.0
+```
+{: pre}
+
 
 ## Why do I get a host name error when I create an application with a non-mobile pattern?
 {: #ts-cli-hostname-error}
@@ -35,21 +59,25 @@ See solutions to common problems with using the {{site.data.keyword.dev_cli_shor
 {: support}
 
 The following error might be displayed if you use the {{site.data.keyword.cloud_notm}} CLI to deploy an application to Cloud Foundry. If you enter a unique host name, you might still see this message.
+{: tsSymptoms}
+
 ```
 The hostname <myHostname> is taken.
 ```
 {: screen}
-{: tsSymptoms}
+
 
 This error is caused by an expired login token.
 {: tsCauses}
 
 Log in again by running the following command:
+{: tsResolve}
+
 ```
 ibmcloud login
 ```
 {: codeblock}
-{: tsResolve}
+
 
 ## Why do I get general command failures?
 {: #ts-cli-general-failures}
