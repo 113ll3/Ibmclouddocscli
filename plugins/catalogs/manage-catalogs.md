@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-05-01"
+lastupdated: "2020-05-07"
 
 keywords: cli
 
@@ -524,13 +524,6 @@ dev-offering
 ```
 {: screen}
 
-
-<!-- ## ibmcloud catalog offering delete
-{: #delete-offering-options}
-Use this command to an offering catalogs, and provides ability to filter by catalog, offering, and version.
-```
-ibmcloud catalog offering delete --catalog dev-catalog
-``` -->
 
 ## ibmcloud catalog offering import-version
 {: #import-offering-version}
