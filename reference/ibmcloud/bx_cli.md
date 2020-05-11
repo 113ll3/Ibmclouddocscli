@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-04"
+lastupdated: "2020-05-08"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -305,9 +305,6 @@ ibmcloud -q cf services
 {: #ibmcloud_cf_install}
 
 Install the Cloud Foundry CLI for the {{site.data.keyword.cloud_notm}} CLI, or update an existing installation.
-
-Cloud Foundry CLI 6.50 and later have a [known log cache issue](https://github.com/cloudfoundry/cli/releases/tag/v6.50.0) that prevents some commands from working, such as `cf logs` and `cf push`. Until this is fixed, install version 6.49.0 by running `ibmcloud cf install -v 6.49.0`.
-{: note}
 
 ```
 ibmcloud cf install [-v, --version VERSION] [--restore] [-f, --force]

@@ -1902,3 +1902,5 @@ Delete policy `51b9717e-76b0-4f6a-bda7-b8132431f926` of access group `example_gr
 ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
 ```
 {: codeblock}
+
+
