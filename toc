@@ -19,7 +19,7 @@ IBM Cloud CLI and Developer Tools
 
 	{: .topicgroup}
 	Creating and deploying apps
-		/apps/creating-apps-create-deploy-app-cli
+		/apps/apps-create-deploy-app-cli
 		idt/deploy_to_icp.md
 
 	{: .topicgroup}
@@ -81,13 +81,13 @@ IBM Cloud CLI and Developer Tools
 	Plug-ins for the IBM Cloud CLI 
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
 		plugins/catalogs/manage-catalogs.md
-		/databases-cli-plugin/cloud-databases-cli-cdb-reference
+		/databases-cli-plugin/databases-cli-plugin-cdb-reference
 		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
-		/cloud-object-storage-cli-plugin/cloud-object-storage-cli-ic-cos-cli
+		/cloud-object-storage-cli-plugin/cloud-object-storage-cli-plugin-ic-cos-cli
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-kubernetes-service-cli
-		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
+		/machine-learning-cli-plugin/machine-learning-cli-plugin-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
 		/cis-cli-plugin/cis-cli-plugin-cis-cli
 		/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
