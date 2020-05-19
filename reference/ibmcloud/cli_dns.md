@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, domain management, dns service, ibmcloud sl dns, classic infrastructure, management interface, dns, dns cli, manage dns cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

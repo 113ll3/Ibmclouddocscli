@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, classic cli, orders, quotes, ibmcloud sl order, item-list, package-locations, manage orders cli, manage quotes cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

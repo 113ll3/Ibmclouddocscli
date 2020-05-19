@@ -6,7 +6,7 @@ lastupdated: "2020-05-04"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

@@ -6,7 +6,7 @@ lastupdated: "2020-05-07"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 
@@ -308,7 +308,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
   <dt>NAME (required)</dt>
   <dd>Name of the service instance</dd>
   <dt>SERVICE_NAME or SERVICE_ID (required)</dt>
-  <dd>Name or ID of the service. To list service offerings, use the `ibmcloud catalog service-marketplace`[command](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace).</dd>
+  <dd>Name or ID of the service. To list service offerings, use the `ibmcloud catalog service-marketplace`[command](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_catalog#ibmcloud_catalog_service_marketplace).</dd>
   <dt>SERVICE_PLAN_NAME or SERVICE_PLAN_ID (required)</dt>
   <dd>Name or ID of the service plan</dd>
   <dt>LOCATION (required)</dt>

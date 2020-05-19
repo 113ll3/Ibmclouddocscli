@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, classic infrastructure, ibmcloud sl image, manage compute images, create compute image cli, compute image cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

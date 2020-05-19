@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

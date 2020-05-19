@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, classic infrastructure, ipsec, vpn, ibmcloud sl ipsec, tunnel, vpn access, encryption, vpn tunnel cli, ipsec vpn tunnel
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

@@ -6,7 +6,7 @@ lastupdated: "2019-11-14"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

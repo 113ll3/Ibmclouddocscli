@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

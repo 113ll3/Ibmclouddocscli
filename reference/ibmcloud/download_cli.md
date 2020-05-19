@@ -6,7 +6,7 @@ lastupdated: "2020-03-30"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 
@@ -24,7 +24,7 @@ subcollection: cloud-cli
 {{site.data.keyword.cloud}} CLI provides the command line interface for managing resources in {{site.data.keyword.cloud_notm}}. When you install the standalone {{site.data.keyword.cloud_notm}} CLI, you get only the CLI itself without any recommended plug-ins or tools.
 {: shortdesc}
 
-If you want to install both the latest {{site.data.keyword.cloud}} CLI and other recommended plug-ins and tools for developing applications for {{site.data.keyword.cloud_notm}}, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
+If you want to install both the latest {{site.data.keyword.cloud}} CLI and other recommended plug-ins and tools for developing applications for {{site.data.keyword.cloud_notm}}, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 {: tip}
 
 ## Before you begin
@@ -123,7 +123,7 @@ If you install the {{site.data.keyword.cloud_notm}} CLI to a custom directory, t
 
 3. Add to the `PATH` environment variable and enable shell autocompletion.
   * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
-  * For shell autocompletion support (Mac and Linux&trade; only), see [Enabling shell autocompletion for IBM Cloud CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
+  * For shell autocompletion support (Mac and Linux&trade; only), see [Enabling shell autocompletion for IBM Cloud CLI](/docs/cli/reference/ibmcloud?topic=cli-shell-autocomplete#shell-autocomplete).
 
 
 ## Updating the {{site.data.keyword.cloud_notm}} CLI

@@ -6,7 +6,7 @@ lastupdated: "2019-11-14"
 
 keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

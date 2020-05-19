@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, security cli, ssh keys cli, ssl cli, ibmcloud sl security, certificate cli, ibmcloud sl, sshkey-add, manage security cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

@@ -6,7 +6,7 @@ lastupdated: "2020-02-06"
 
 keywords: cli, placement group management, ibmcloud sl placement-group, classic infrastructure, placement group, placement group cli, manage placement group cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

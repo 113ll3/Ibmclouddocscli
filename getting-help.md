@@ -6,7 +6,7 @@ lastupdated: "2020-02-03"
 
 keywords: command line interface, cli, cli support, cli forum, cli slack, cli chat, cli help
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

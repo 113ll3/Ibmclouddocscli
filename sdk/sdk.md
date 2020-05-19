@@ -6,7 +6,7 @@ lastupdated: "2019-11-14"
 
 keywords: cli, mobile sdk, server sdk, client sdk, add sdk, android sdk, cordova
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

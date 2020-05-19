@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

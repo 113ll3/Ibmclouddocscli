@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, manage softlayer tickets, softlayer, classic infrastructure, user management, ibmcloud sl ticket
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

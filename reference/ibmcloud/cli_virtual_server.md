@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

@@ -6,7 +6,7 @@ lastupdated: "2020-04-17"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 
@@ -162,7 +162,7 @@ ibmcloud dev console [appName]
 ## create
 {: #create}
 
-Create an app that prompts for all information, including resource group, app type, language, and starter kit. You are prompted to enter a name for your app, and you can select services to add to the app. You can also select DevOps toolchain options for automatic deployment, or you can select manual deployment. The app is created in the current directory. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cloud-cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
+Create an app that prompts for all information, including resource group, app type, language, and starter kit. You are prompted to enter a name for your app, and you can select services to add to the app. You can also select DevOps toolchain options for automatic deployment, or you can select manual deployment. The app is created in the current directory. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
 
 To create an app in the current directory and to associate services with it, run the following command:
 ```
@@ -384,7 +384,7 @@ In the `cli-config.yml`, you can define the location of a Helm chart in the `cha
 ### Deploying to Knative clusters
 {: #deploy-knative-cli}
 
-The most recent [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-getting-started) CLI release adds toolchain deployment support for [Knative](https://www.ibm.com/cloud/learn/knative) clusters on the [{{site.data.keyword.containerlong_notm}}](https://www.ibm.com/cloud/container-service). To use this feature, you need a [Knative-based cluster](https://www.ibm.com/cloud/blog/announcing-managed-knative-on-ibm-cloud-kubernetes-service-experimental) (and not a Helm-based cluster). With this prerequisite met, a Knative deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} CLI.
+The most recent [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cli-getting-started) CLI release adds toolchain deployment support for [Knative](https://www.ibm.com/cloud/learn/knative) clusters on the [{{site.data.keyword.containerlong_notm}}](https://www.ibm.com/cloud/container-service). To use this feature, you need a [Knative-based cluster](https://www.ibm.com/cloud/blog/announcing-managed-knative-on-ibm-cloud-kubernetes-service-experimental) (and not a Helm-based cluster). With this prerequisite met, a Knative deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} CLI.
 
 By selecting the **Knative** option, you can create a toolchain that deploys to the Knative-based cluster that you specify through the dialog.
 
@@ -531,11 +531,11 @@ Command parameters that are entered on the command line take precedence over the
 ## enable
 {: #enable}
 
-Enable an existing app for {{site.data.keyword.cloud_notm}} deployment. The `enable` command attempts to automatically detect the language of an existing app and then prompt for necessary additional information. All deployment environments can be used through a manual `deploy` or by using a DevOps toolchain. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cloud-cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
+Enable an existing app for {{site.data.keyword.cloud_notm}} deployment. The `enable` command attempts to automatically detect the language of an existing app and then prompt for necessary additional information. All deployment environments can be used through a manual `deploy` or by using a DevOps toolchain. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
 
 While logged in to {{site.data.keyword.cloud_notm}}, you can connect this local app with an app that is already in {{site.data.keyword.cloud_notm}} or create a new {{site.data.keyword.cloud_notm}} app. To take advantage of {{site.data.keyword.cloud_notm}} features such as services and DevOps toolchains, an app in {{site.data.keyword.cloud_notm}} is necessary. When an {{site.data.keyword.cloud_notm}} app is created for an app that is cloned from a Git repository, the {{site.data.keyword.cloud_notm}} app includes this repository in its configuration. 
 
-The `enable` command is a Beta feature. If you have trouble with the `enable` command, see [troubleshooting](/docs/cli?topic=cloud-cli-troubleshoot). In particular, `enable` isn't intended for mobile apps or frameworks. For complex apps that produce several deployable assets, each component of the app must be enabled individually. 
+The `enable` command is a Beta feature. If you have trouble with the `enable` command, see [troubleshooting](/docs/cli?topic=cli-troubleshoot). In particular, `enable` isn't intended for mobile apps or frameworks. For complex apps that produce several deployable assets, each component of the app must be enabled individually. 
 
 Run the following command to enable an existing app in the current directory:
 ```
@@ -1195,7 +1195,7 @@ Command parameters that are entered on the command line take precedence over the
 
 Delete a toolchain. If no toolchain name is provided, you can select one from a list. The list of toolchains depends on the currently targeted resource group and region.
 
-The targeted Resource Group is found in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target).
+The targeted Resource Group is found in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_cli#ibmcloud_target).
 ```
 ibmcloud dev toolchain-delete [toolchainName] [--force,-f]
 ```
@@ -1226,7 +1226,7 @@ Command parameters that are entered on the command line take precedence over the
 
 View the details of a toolchain. If no toolchain name is provided, you can select one from a list. 
 
-Uses the targeted resource group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry-based toolchains might not be compatible with this command.
+Uses the targeted resource group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry-based toolchains might not be compatible with this command.
 ```
 ibmcloud dev toolchain-get [toolchainName] [--output JSON]
 ```
@@ -1280,7 +1280,7 @@ Command parameters that are entered on the command line take precedence over the
 
 View a list of toolchains in the current resource group. 
 
-Uses the targeted Resource Group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry-based toolchains might not be compatible with this command.
+Uses the targeted Resource Group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry-based toolchains might not be compatible with this command.
 ```
 ibmcloud dev toolchains [--output JSON]
 ```

@@ -6,7 +6,7 @@ lastupdated: "2019-11-14"
 
 keywords: cli, monitoring, logging, cloud logging, metrics, monitor cpu, monitor usage, memory utilization, runtime logging
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

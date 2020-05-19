@@ -6,7 +6,7 @@ lastupdated: "2020-05-01"
 
 keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

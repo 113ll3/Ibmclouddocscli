@@ -6,7 +6,7 @@ lastupdated: "2019-06-21"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

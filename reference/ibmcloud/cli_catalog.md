@@ -6,7 +6,7 @@ lastupdated: "2020-04-15"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

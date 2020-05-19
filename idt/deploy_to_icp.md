@@ -6,7 +6,7 @@ lastupdated: "2020-03-17"
 
 keywords: cli, ibmcloud private, icp, ibmcloud dev deploy, containers, kubernetes, ibmcloud dev, cli blog, cli video, cli reference
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 
@@ -24,7 +24,7 @@ subcollection: cloud-cli
 [{{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/developerworks/community/groups/service/html/communityoverview?communityUuid=fe25b4ef-ea6a-4d86-a629-6f87ccf4649e){: external} is an application platform for developing and managing on-premises, containerized applications. It is an integrated environment for managing containers that includes the container orchestrator Kubernetes, a private image repository, a management console, and monitoring frameworks. {{site.data.keyword.cloud_notm}} Developer Tools supports deployments to {{site.data.keyword.cloud_notm}} Private environments.
 {: shortdesc}
 
-To install the {{site.data.keyword.cloud_notm}} Developer Tools, follow these [instructions](/docs/cli/idt?topic=cloud-cli-install-devtools-manually){: external}. Once installed, ensure that the [Helm](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: external} version is appropriate for the {{site.data.keyword.cloud_notm}} Private environment. To install Helm from the {{site.data.keyword.cloud_notm}} Private Management console for use with {{site.data.keyword.cloud_notm}} Private 3.2.0, follow these [instructions](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.2.0/app_center/create_helm_cli.html){: external}.
+To install the {{site.data.keyword.cloud_notm}} Developer Tools, follow these [instructions](/docs/cli/idt?topic=cli-install-devtools-manually){: external}. Once installed, ensure that the [Helm](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: external} version is appropriate for the {{site.data.keyword.cloud_notm}} Private environment. To install Helm from the {{site.data.keyword.cloud_notm}} Private Management console for use with {{site.data.keyword.cloud_notm}} Private 3.2.0, follow these [instructions](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.2.0/app_center/create_helm_cli.html){: external}.
 
 ## Before you begin
 {: #before-deploy-icp}
@@ -123,4 +123,4 @@ The application is now deployed to {{site.data.keyword.cloud_notm}} Private usin
 
 - Blog: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: external}
 
-For more information, see the full `ibmcloud dev` [command reference](/docs/cli?topic=cloud-cli-idt-cli).
+For more information, see the full `ibmcloud dev` [command reference](/docs/cli?topic=cli-idt-cli).

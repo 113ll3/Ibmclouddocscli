@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, manage subnet cli, classic infrastructure cli, subnet cli, ibmcloud sl subnet, subnet cli, newtork cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

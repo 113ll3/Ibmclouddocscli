@@ -6,7 +6,7 @@ lastupdated: "2019-11-14"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

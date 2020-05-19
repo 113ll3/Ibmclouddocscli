@@ -6,7 +6,7 @@ lastupdated: "2020-03-25"
 
 keywords: cli, ibmcloud sl call-api, classic infrastructure, API endpoints
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

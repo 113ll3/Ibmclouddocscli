@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, classic infrastructure, ibmcloud sl globalip, globalip, global ip addresses, assign global ip
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

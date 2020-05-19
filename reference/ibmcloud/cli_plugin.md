@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, ibmcloud enterprise, view enterprise, view enterprise account, view enterprise account group., enterprise, account-group, account-group-create, account-group-update, 
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

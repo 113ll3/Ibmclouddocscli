@@ -6,7 +6,7 @@ lastupdated: "2020-03-25"
 
 keywords: IBM Cloud CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, kubernetes, kubectl
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 
@@ -21,13 +21,13 @@ subcollection: cloud-cli
 # Installing the tools and plug-ins manually
 {: #install-devtools-manually}
 
-You can manually install the {{site.data.keyword.cloud}} command-line interface (CLI) if you prefer more granular control for installing the components. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt).
+You can manually install the {{site.data.keyword.cloud}} command-line interface (CLI) if you prefer more granular control for installing the components. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cli-getting-started#step1-install-idt).
 {: shortdesc}
 
 ## Before you begin
 {: cli-before-you-begin}
 
-* Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli) to get support for installing command-line plug-ins for {{site.data.keyword.cloud_notm}}.
+* Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#install-ibmcloud-cli) to get support for installing command-line plug-ins for {{site.data.keyword.cloud_notm}}.
 * Install the [curl](https://curl.haxx.se/download.html){: external} command for downloading packages through the command line.
 
 ## Installing Docker

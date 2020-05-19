@@ -6,7 +6,7 @@ lastupdated: "2019-06-03"
 
 keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 
@@ -25,7 +25,7 @@ You can use the `BMSCore` SDK to make network requests to any resource.
 ## Android
 {: #request-android}
 
-1. Make sure you've [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android) in your Android application.
+1. Make sure you've [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cli-sdk_BMSClient#init-BMSClient-android) in your Android application.
 
 2. Make a network request.
 
@@ -57,7 +57,7 @@ For complete usage examples, see the `BMSCore` GitHub [README](https://github.co
 ## iOS
 {: #request-ios}
 
-1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) in your iOS app.
+1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cli-sdk_BMSClient#init-BMSClient-ios) in your iOS app.
 
 2. Create a network request.
 
@@ -106,7 +106,7 @@ For complete usage examples, see the `BMSCore` GitHub [README](https://github.co
 ## Cordova
 {: #request-cordova}
 
-1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) in your Cordova app.
+1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cli-sdk_BMSClient#init-BMSClient-cordova) in your Cordova app.
 
 2. Create a network request.
 

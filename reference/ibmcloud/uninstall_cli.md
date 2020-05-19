@@ -6,7 +6,7 @@ lastupdated: "2020-05-11"
 
 keywords: uninstall, stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 
@@ -81,4 +81,4 @@ The uninstallation steps are different depending on the version of the CLI that 
       ```
       {: pre}
 
-1. Clean up any autocompletion scripts, if you configured them. For more information, see [Enabling shell autocompletion](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
+1. Clean up any autocompletion scripts, if you configured them. For more information, see [Enabling shell autocompletion](/docs/cli/reference/ibmcloud?topic=cli-shell-autocomplete#shell-autocomplete).

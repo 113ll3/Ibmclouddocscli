@@ -6,7 +6,7 @@ lastupdated: "2020-05-07"
 
 keywords: cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 
@@ -28,7 +28,7 @@ The {{site.data.keyword.cloud}} catalogs management command-line interface (CLI)
 ## Before you begin
 {: #prereqs-managecatalogs}
 
-* Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started). The prefix for running commands by using the {{site.data.keyword.cloud_notm}} CLI is `ibmcloud`.
+* Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started). The prefix for running commands by using the {{site.data.keyword.cloud_notm}} CLI is `ibmcloud`.
 * Before you run the registry commands, log in to {{site.data.keyword.cloud_notm}} with the `ibmcloud login` command to generate an access token and authenticate your session.
 
 

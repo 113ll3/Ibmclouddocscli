@@ -6,7 +6,7 @@ lastupdated: "2020-05-04"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 
@@ -63,7 +63,7 @@ The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when
   ```
   {: codeblock}
 
-  If you'd rather not pipe through bash, you can manually [install the IBM Cloud CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli) and then [install the CLI plug-ins and tools](/docs/cli?topic=cloud-cli-install-devtools-manually) separately.
+  If you'd rather not pipe through bash, you can manually [install the IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli) and then [install the CLI plug-ins and tools](/docs/cli?topic=cli-install-devtools-manually) separately.
   {: tip}
 
 * For Windows&trade; 10 Pro, run the following command in PowerShell as an administrator:

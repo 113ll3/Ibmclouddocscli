@@ -6,7 +6,7 @@ lastupdated: "2019-08-15"
 
 keywords: cli, shell autocompletion, bash, linux shell, macos shell, autocompletion, autocompletion support, shell
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

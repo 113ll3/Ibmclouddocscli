@@ -6,7 +6,7 @@ lastupdated: "2020-03-25"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 

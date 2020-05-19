@@ -6,7 +6,7 @@ lastupdated: "2020-03-31"
 
 keywords: cli, manage security groups, ingress, egress, traffic, virtual server cli, classic infrastructure cli, securitygroup, ibmcloud sl securitygroup, security group cli
 
-subcollection: cloud-cli
+subcollection: cli
 
 ---
 
