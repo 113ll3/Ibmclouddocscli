@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-05-20"
 
 keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
@@ -46,7 +46,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME (required)</dt>
    <dd>The name of the repository to be added. You can define your own name for each repository.</dd>
    <dt>REPO_URL (required)</dt>
-   <dd>The URL of the repository to be added. The repository URL must contain the protocol (for example, https://plugins.cloud.ibm.com instead of plugins.cloud.ibm.com). https://plugins.cloud.ibm.com is the official plug-in repository of {{site.data.keyword.cloud_notm}} CLI.</dd>
+   <dd>The URL of the repository to be added. The repository URL must contain the protocol (for example, `https://plugins.cloud.ibm.com` instead of `plugins.cloud.ibm.com`). https://plugins.cloud.ibm.com is the official plug-in repository of {{site.data.keyword.cloud_notm}} CLI.</dd>
     </dl>
 
 
@@ -204,7 +204,7 @@ ibmcloud plugin install /downloads/new_plugin
 
 Install a plug-in from the remote URL:
 ```
-ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/new_plugin
+ibmcloud plugin install http://example.com/downloads/my-plugin
 ```
 
 Install the `container-service` plug-in of the latest version from the `IBM Cloud` repository:

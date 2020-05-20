@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-06-21"
+  years: 2015, 2020
+lastupdated: "2020-05-20"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
@@ -23,8 +23,6 @@ subcollection: cli
 {: #plug-ins}
 
 {{site.data.keyword.cloud}} CLI supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally.
-
-[{{site.data.keyword.cloud_notm}} CLI plug-ins repository](https://plugins.cloud.ibm.com/ui/repository.html){: external} is the official repository where plug-ins are hosted.
 
 For more commands to manage plug-ins, run `ibmcloud plugin` to see the help messages.
 {: tip}
@@ -94,17 +92,6 @@ $
 
 Use the `ibmcloud plugin install URL` command to install a plug-in directly from a web URL. For example:
 ```
-ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/auto-scaling/0.2.7/auto-scaling-darwin-amd64-0.2.7
+ibmcloud plugin install http://example.com/downloads/my-plugin
 ```
 {: codeblock}
-
-```
-Attempting to download the binary file...
- 7.28 MiB / 7.28 MiB [===========================================] 100.00% 0s
-7636608 bytes downloaded
-Installing binary...
-OK
-Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bluemix/plugins/auto-scaling. Use 'ibmcloud plugin show auto-scaling' to show its details.
-$
-```
-{: screen}
