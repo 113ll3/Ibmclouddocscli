@@ -264,7 +264,7 @@ ibmcloud catalog filter create [--catalog CATALOG] [--category CATEGORY] [--comp
   <dt>hide-ibm-catalog (optional)</dt>
   <dd>By default, the catalog is visible to all users in this account. By providing this flag, You can make products available only to the users you choose by turning off visibility to the IBM Cloud catalog and adding the products to your private catalogs.
   <dt>--include-all BOOLEAN (optional)</dt>
-  <dd>Default is true if flag not provided. Valid values are "true" and "false". if true, the filter defaults to include the whole public catalog, and subsequent filters are exclusions. If false, the filter excludes the whole public catalog, and subsequent flags are inclusions.</dd>
+  <dd>Default is true if flag not provided. Valid values are "true" and "false". if true, the filter defaults to include the whole public catalog, and subsequent filters are exclusions. If false, the filter excludes the whole public catalog, and subsequent flags are inclusions. [Learn more](/docs/account?topic=account-filter-account).</dd>
   <dt>--offering-format FORMAT (optional)</dt>
   <dt>--category CATEGORY (optional)</dt>
   <dd>Provide comma separated list of category names or tags you would like to include or exclude. Run "ibmcloud catalog offering category-options" to see all options</dd>
