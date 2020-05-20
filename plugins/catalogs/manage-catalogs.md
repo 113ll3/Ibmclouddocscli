@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-05-16"
+lastupdated: "2020-05-20"
 
 keywords: cli
 
@@ -855,7 +855,7 @@ ibmcloud catalog offering deprecate --version-locator VERSION_NUMBER
 ```
 
 ### Command options
-{: #publish-offering-to-public-options}
+{: #publish-offering-deprecate-options}
 
   <dl>
   <dt>--version-locator VERSION_NUMBER</dt>
@@ -872,7 +872,7 @@ ibmcloud catalog offering restore --version-locator VERSION_NUMBER
 ```
 
 ### Command options
-{: #publish-offering-to-public-options}
+{: #publish-offering-restore-options}
 
   <dl>
   <dt>--version-locator VERSION_NUMBER</dt>
