@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-05-07"
+lastupdated: "2020-05-16"
 
 keywords: cli
 
@@ -33,7 +33,7 @@ The {{site.data.keyword.cloud}} catalogs management command-line interface (CLI)
 
 
 ## Installing the catalogs management plug-in
-{: #manage-catalogs-plugin}
+{: #install-managecatalogs}
 
 To install the catalogs management plug-in, run the following command:
 
@@ -169,7 +169,7 @@ ibmcloud catalog search <QUERY> [--catalog CATALOG] [--type TYPE] [-r, --region 
 ```
 
 ### Command options
-{: #get-catalog-options}
+{: #search-catalog-options}
 
   <dl>
   <dt>--type TYPE (optional)</dt>
@@ -297,7 +297,7 @@ ibmcloud catalog filter delete --catalog CATALOG
 ```
 
 ### Command options
-{: #get-filter-options}
+{: #delete-filter-options}
 
   <dl>
   <dt>--catalog CATALOG</dt>
@@ -305,7 +305,7 @@ ibmcloud catalog filter delete --catalog CATALOG
   </dl>
 
 ## ibmcloud catalog filter hide-ibm-public-catalog
-{: #delete-filter}
+{: #hide-catalog-filter}
 
 By default, the IBM public catalog is visible to all users in this account. You can make products available only to the users you choose by turning off visibility to the IBM Cloud catalog and adding the products to your private catalogs.
 
@@ -314,7 +314,7 @@ ibmcloud catalog filter hide-ibm-public-catalog
 ```
 
 ## ibmcloud catalog filter show-ibm-public-catalog
-{: #delete-filter}
+{: #show-catalog-filter}
 
 By default, the IBM public catalog is visible to all users in this account. You can make products available only to the users you choose by turning off visibility to the IBM Cloud catalog and adding the products to your private catalogs.
 
@@ -401,7 +401,7 @@ ibmcloud catalog offering list [--catalog CATALOG] [--offering OFFERING_NAME] [-
   </dl> 
   
 ### Example
-{: #get-example}
+{: #list-example}
 
 List all of the offerings that are in the `dev-catalog`.
 
@@ -411,7 +411,7 @@ ibmcloud catalog offering list --catalog dev-catalog
 
 
 ### Output
-{: #get-offering-output}
+{: #list-offering-output}
 
 The command returns the following output:
 
@@ -464,7 +464,7 @@ ibmcloud catalog offering search [--catalog CATALOG] [--offering OFFERING_NAME] 
   </dl> 
   
 ### Example
-{: #get-example}
+{: #search-example}
 
 List all of the offerings that are in the `dev-catalog`.
 
@@ -474,7 +474,7 @@ ibmcloud catalog offering list --catalog dev-catalog
 
 
 ### Output
-{: #get-offering-output}
+{: #search-offering-output}
 
 The command returns the following output:
 
