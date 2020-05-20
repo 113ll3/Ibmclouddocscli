@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-25"
+lastupdated: "2020-05-20"
 
 keywords: IBM Cloud CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -70,7 +70,7 @@ The {{site.data.keyword.cos_full_notm}} plug-in extends the {{site.data.keyword.
   ```
   {: codeblock}
 
-For more information, see the [{{site.data.keyword.cos_full_notm}} command reference](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli).
+For more information, see the [{{site.data.keyword.cos_full_notm}} command reference](/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
 
 ## Installing {{site.data.keyword.registrylong_notm}} CLI plug-in
 {: #idt-install-container-registry-cli-plugin}
@@ -123,5 +123,5 @@ ibmcloud plugin install cloud-functions
 ```
 {: codeblock}
 
-For more information, see [Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in](/docs/openwhisk?topic=cloud-functions-cli_install).
+For more information, see [Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in](/docs/openwhisk?topic=openwhisk-cli_install).
 

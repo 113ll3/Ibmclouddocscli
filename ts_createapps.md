@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-08"
+lastupdated: "2020-05-20"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -299,7 +299,7 @@ Be sure that you run the command from the app directory that contains source cod
 You might encounter various failures to [build](/docs/cli/idt?topic=cli-idt-cli#build) or [run](/docs/cli/idt?topic=cli-idt-cli#run) an app that is enabled for cloud deployment.
 {: tsSymptoms}
 
-These failures have many possible causes. For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js apps for cloud deployment](/docs/node?topic=nodejs-enable_existing#enable_existing).
+These failures have many possible causes. For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js apps for cloud deployment](/docs/node?topic=node-enable_existing#enable_existing).
 {: tsResolve}
 
 <!-- - For more information about resolving such problems with a Spring app, see [Enabling existing Spring Boot apps for cloud deployment](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).-->

@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2020
-lastupdated: "2020-04-17"
+lastupdated: "2020-05-20"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
 
@@ -170,7 +170,7 @@ ibmcloud dev create
 ```
 {: codeblock}
 
-For more information, see [Creating an app from a starter kit](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-app-cli).
+For more information, see [Creating an app from a starter kit](/docs/apps?topic=apps-create-deploy-app-cli#create-app-cli).
 
 ### create command parameters
 {: #create-parameters}
@@ -358,7 +358,7 @@ ibmcloud dev deploy
 Before you deploy a Cloud Foundry app to {{site.data.keyword.cloud_notm}}, a `manifest.yml` file must be present in your app's root directory.
 {: tip}
 
-For more information, see [Deploying your app](/docs/apps?topic=creating-apps-create-deploy-app-cli#deploy-app-cli).
+For more information, see [Deploying your app](docs/apps?topic=apps-create-deploy-app-cli#deploy-app-cli).
 
 ### Deploying to {{site.data.keyword.containerlong_notm}}
 {: #deploy-kubernetes}

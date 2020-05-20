@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-11-14"
+  years: 2018, 2020
+lastupdated: "2020-05-20"
 
 keywords: cli, monitoring, logging, cloud logging, metrics, monitor cpu, monitor usage, memory utilization, runtime logging
 
@@ -37,4 +37,4 @@ For more information, see [Monitoring in {{site.data.keyword.cloud_notm}}](/docs
 
 The {{site.data.keyword.loganalysisfull_notm}} service provides log collection and log search services for the {{site.data.keyword.cloud_notm}} platform, automatically collecting app and {{site.data.keyword.cloud_notm}} services’ data from select services. Use the {{site.data.keyword.loganalysisshort}} service to expand your log collection, log retention, and log search abilities when you're working with logs.
 
-For more information, see [Logging in {{site.data.keyword.cloud_notm}}](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started#getting-started).
+For more information, see [Logging in {{site.data.keyword.cloud_notm}}](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-getting-started).

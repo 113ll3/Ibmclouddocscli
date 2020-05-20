@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-05-20"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
@@ -83,5 +83,5 @@ The second container is the run container, which closely mimics the actual runti
 {: #faq-deploy-existing-code}
 {: faq}
 
-To deploy an existing code base, see [Generating deployment and cloud enablement assets](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
+To deploy an existing code base, see [Generating deployment and cloud enablement assets](/docs/apps?topic=apps-create-deploy-app-cli#byoc-cli).
 
