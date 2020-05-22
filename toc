@@ -89,10 +89,10 @@ IBM Cloud CLI and Developer Tools
 		/containers-cli-plugin/containers-cli-plugin-kubernetes-service-cli
 		/machine-learning-cli-plugin/machine-learning-cli-plugin-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
+		/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin
 		/cis-cli-plugin/cis-cli-plugin-cis-cli
 		/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
 		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
-		/hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
 
 	{: .topicgroup}
 	Plug-ins for the standalone Cloud Foundry CLI
