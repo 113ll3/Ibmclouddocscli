@@ -464,5 +464,5 @@ FAILED
 The `ibmcloud catalog search` command was moved to a separate plug-in in v1.0.0.
 {: tsCauses}
 
-To use this command, you must install the catalogs-management plug-in. For more information, see [Catalogs management CLI plug-in](/docs/cli?topic=cloud-cli-manage-catalogs-plugin).
+To use this command, you must install the catalogs-management plug-in. For more information, see [Catalogs management CLI plug-in](/docs/cli?topic=cli-manage-catalogs-plugin).
 {: tsResolve}
