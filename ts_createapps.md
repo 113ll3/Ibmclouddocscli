@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-20"
+lastupdated: "2020-06-05"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -449,4 +449,20 @@ ibmcloud dev build --use-root-user-tools
 ```
 {: codeblock}
 
+## Why does the 'ibmcloud catalog search' command fail?
+{: #ts-cli-catalog-search-error}
+{: troubleshoot}
 
+Running the `ibmcloud catalog search` command displays the following error:
+```
+FAILED
+'search' is not a registered command. See 'C:\Program Files\IBM\Cloud\bin\ibmcloud.exe catalog help'.
+```
+{: screen}
+{: tsSymptoms}
+
+The `ibmcloud catalog search` command was moved to a separate plug-in in v1.0.0.
+{: tsCauses}
+
+To use this command, you must install the catalogs-management plug-in. For more information, see [Catalogs management CLI plug-in](/docs/cli?topic=cloud-cli-manage-catalogs-plugin).
+{: tsResolve}
