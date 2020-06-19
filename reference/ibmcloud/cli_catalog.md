@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-15"
+lastupdated: "2020-06-10"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -13,6 +13,7 @@ subcollection: cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
 {:codeblock: .codeblock}
 
 # Searching and managing the {{site.data.keyword.cloud_notm}} catalog (ibmcloud catalog)
@@ -20,6 +21,10 @@ subcollection: cli
 
 Use the following commands to manage the {{site.data.keyword.cloud}} catalog entries, query templates, runtimes, and geolocations of data centers.
 {: shortdesc}
+
+There are extra CLI commands and capabilities for catalogs. You can use the Catalogs management CLI plug-in to manage your private catalogs and onboard new private software. For more information, see [Catalogs management CLI plug-in](/docs/cli?topic=cli-manage-catalogs-plugin). 
+{: note}
+
   
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}

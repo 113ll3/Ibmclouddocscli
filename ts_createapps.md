@@ -285,18 +285,18 @@ directly.
 {: tsSymptoms}
 
 This error might be due to one of the following causes:
-- Running the [enable](/docs/cli/idt?topic=cli-idt-cli#enable) command from a directory that is not the source directory of your app.
-- Running the [enable](/docs/cli/idt?topic=cli-idt-cli#enable) command for an app of a language that is not recognized.
+- Running the [enable](/docs/cli?topic=cli-idt-cli#enable) command from a directory that is not the source directory of your app.
+- Running the [enable](/docs/cli?topic=cli-idt-cli#enable) command for an app of a language that is not recognized.
 {: tsCauses}
 
-Be sure that you run the command from the app directory that contains source code for the app. If the issue is not resolved, and the language is one of the [supported languages](/docs/cli/idt?topic=cli-idt-cli#enable-language-options), use the `--language` parameter to specify the language.
+Be sure that you run the command from the app directory that contains source code for the app. If the issue is not resolved, and the language is one of the [supported languages](/docs/cli?topic=cli-idt-cli#enable-language-options), use the `--language` parameter to specify the language.
 {: tsResolve}
 
 ## Why can't I build or run a Node.js app that is enabled for cloud deployment?
 {: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-You might encounter various failures to [build](/docs/cli/idt?topic=cli-idt-cli#build) or [run](/docs/cli/idt?topic=cli-idt-cli#run) an app that is enabled for cloud deployment.
+You might encounter various failures to [build](/docs/cli?topic=cli-idt-cli#build) or [run](/docs/cli?topic=cli-idt-cli#run) an app that is enabled for cloud deployment.
 {: tsSymptoms}
 
 These failures have many possible causes. For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js apps for cloud deployment](/docs/node?topic=node-enable_existing#enable_existing).

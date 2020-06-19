@@ -67,7 +67,7 @@ Next, you enter or select the command that you want to start. You can type ‘ib
 You can get started with `ibmcloud dev` workflows in just a few steps:
 * Create a project by using one of the two following methods:
   * Use the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/developer/appservice/starter-kits){: external} and download the generated code.
-  * Use the {{site.data.keyword.cloud_notm}} Developer Tools CLI plug-in and generate a project by using the [ibmcloud dev create](/docs/cli/idt?topic=cli-idt-cli#create) command.
+  * Use the {{site.data.keyword.cloud_notm}} Developer Tools CLI plug-in and generate a project by using the [ibmcloud dev create](/docs/cli?topic=cli-idt-cli#create) command.
 * Open the project’s folder locally in the Visual Studio Code editor.
 * Use the `ibmcloud dev build` command to build the app into a Docker image.
 * Use the `ibmcloud dev debug` command to run the app in local Docker for development.
