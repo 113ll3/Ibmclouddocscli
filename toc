@@ -36,7 +36,7 @@ IBM Cloud CLI and Developer Tools
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
-	[IBM Cloud CLI quick reference](https://github.com/ibm-cloud-docs/cli/blob/master/IBM%20Cloud%20CLI%20quick%20reference.pdf)
+	[IBM Cloud CLI quick reference](https://cloud.ibm.com/media/docs/downloads/IBM%20Cloud%20CLI%20quick%20reference.pdf)
 	reference/ibmcloud/bx_cli.md
 
 	{: .topicgroup}
@@ -50,7 +50,7 @@ IBM Cloud CLI and Developer Tools
 		reference/ibmcloud/cli_resource_group.md
 
 	{: .topicgroup}
-	IBM Cloud CLI infrastructure commands
+	IBM Cloud CLI classic infrastructure commands
 		reference/ibmcloud/cli_block_storage.md
 		reference/ibmcloud/cli_call_api.md
 		reference/ibmcloud/cli_dns.md
@@ -85,12 +85,14 @@ IBM Cloud CLI and Developer Tools
 		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
 		/cloud-object-storage-cli-plugin/cloud-object-storage-cli-plugin-ic-cos-cli
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
+		/dl-cli-plugin/dl-cli-plugin-dl-cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-kubernetes-service-cli
 		/machine-learning-cli-plugin/machine-learning-cli-plugin-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
 		/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin
 		/cis-cli-plugin/cis-cli-plugin-cis-cli
+		/dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
 		/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
 		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
 
