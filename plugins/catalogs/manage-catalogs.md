@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-30"
+lastupdated: "2020-07-09"
 
 keywords: cli, catalogs management
 
@@ -13,7 +13,7 @@ subcollection: cli
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
+
 {:note: .note}
 {:important: .important}
 {:tip: .tip}
@@ -336,7 +336,7 @@ ibmcloud catalog filter offering --offering PRODUCT-NAME
   </dl>
 
 ## ibmcloud catalog filter hide-ibm-public-catalog
-{: #delete-filter}
+{: #hide-filter}
 
 By default, the {{site.data.keyword.cloud_notm}} catalog is visible to all users in the account. You can make products available only to the users you choose by turning off visibility to the {{site.data.keyword.cloud_notm}} catalog and adding the products to your private catalogs.
 
@@ -345,7 +345,7 @@ ibmcloud catalog filter hide-ibm-public-catalog
 ```
 
 ## ibmcloud catalog filter show-ibm-public-catalog
-{: #delete-filter}
+{: #show-filter}
 
 By default, the {{site.data.keyword.cloud_notm}} catalog is visible to all users in the account. You can make products available only to the users you choose by turning off visibility to the {{site.data.keyword.cloud_notm}} catalog and adding the products to your private catalogs.
 
@@ -832,3 +832,75 @@ ibmcloud catalog offering publish-to-account --version-locator VERSION_NUMBER
   <dd>To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.</dd>
   </dl> 
 
+<!-- These commands below will NOT go public and will always remain internal until we remove them entirely in favor of the provider portal which will be used to onboard content offerings to the public catalog. -->
+
+## ibmcloud catalog offering publish-to-ibm
+{: #publish-offering-to-ibm}
+
+Run the following command to publish an offering that is already availble in your account to all IBMers. This part of the publication process creates a tile in the staging and production catalogs that is visible only to IBMers. Publishing to IBMers only enables you to test out the offering in production before you make it available to all users in the IBM Cloud catalog.
+
+```
+ibmcloud catalog offering publish-to-ibm --version-locator VERSION_NUMBER
+```
+
+### Command options
+{: #publish-offering-to-ibm-options}
+
+  <dl>
+  <dt>--version-locator VERSION_NUMBER</dt>
+  <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.</dd>
+  </dl> 
+
+## ibmcloud catalog offering publish-to-public
+{: #publish-offering-to-public}
+
+Run the following command to publish your private offering to the IBM Cloud catalog for all users to see and use. To get to this step in the publication process, you must first publish the offering to your account and to all IBMers to complete the testing process. After your testing is complete, you can run this command. 
+
+This option does require an approval process from offering management. As soon as your approval is complete, your tile is available for all IBM Cloud customers to see and use.
+{: important}
+
+```
+ibmcloud catalog offering publish-to-public --version-locator VERSION_NUMBER
+```
+
+### Command options
+{: #publish-offering-to-public-options}
+
+  <dl>
+  <dt>--version-locator VERSION_NUMBER</dt>
+  <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.</dd>
+  </dl> 
+
+## ibmcloud catalog offering deprecate
+{: #publish-offering-deprecate}
+
+Run the following command to deprecate a previously published offering version in the IBM Cloud catalog.
+
+```
+ibmcloud catalog offering deprecate --version-locator VERSION_NUMBER
+```
+
+### Command options
+{: #publish-offering-to-public-options}
+
+  <dl>
+  <dt>--version-locator VERSION_NUMBER</dt>
+  <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.</dd>
+  </dl> 
+
+## ibmcloud catalog offering restore
+{: #publish-offering-restore}
+
+Run the following command to restore a previously deprecated offering version in the IBM Cloud catalog. Restoring it will place the version in draft state. After validating it, you will be able to restore the original version to the published state it was in prior to being deprecated.
+
+```
+ibmcloud catalog offering restore --version-locator VERSION_NUMBER
+```
+
+### Command options
+{: #publish-offering-to-public-options}
+
+  <dl>
+  <dt>--version-locator VERSION_NUMBER</dt>
+  <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.</dd>
+  </dl> 
