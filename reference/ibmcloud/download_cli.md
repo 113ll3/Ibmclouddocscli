@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-22"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -12,7 +12,7 @@ subcollection: cli
 
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+
 {:screen: .screen}
 {:tip: .tip}
 {:external: target="_blank" .external}
@@ -51,7 +51,7 @@ Use the following steps to install the latest stand-alone {{site.data.keyword.cl
    
   Now, you're ready to manage {{site.data.keyword.cloud_notm}} resources. Enter `ibmcloud help` to view the command descriptions.
 
-  If you're using a federated ID, [log in with a one-time passcode or an API key](/docs/iam?topic=iam-federated_id).
+  If you're using a federated ID, [log in with a one-time passcode or an API key](/docs/account?topic=account-federated_id).
   {: tip}
 
 ## Installing from the shell

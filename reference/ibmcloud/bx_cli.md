@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-22"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -368,7 +368,7 @@ None.
 <dt>-a API_ENDPOINT</dt>
 <dd>The API endpoint, for example, `cloud.ibm.com`. </dd>
 <dt>--sso</dt>
-<dd>Specify this option to [log in with a federated ID](/docs/iam?topic=iam-federated_id). Using this option prompts you to authenticate with your single sign-on provider and enter a one-time passcode to log in.</dd>
+<dd>Specify this option to [log in with a federated ID](/docs/account?topic=account-federated_id). Using this option prompts you to authenticate with your single sign-on provider and enter a one-time passcode to log in.</dd>
 <dt>-u USER_NAME</dt>
 <dd>The user name. Optional.</dd>
 <dt>-p PASS_WORD</dt>

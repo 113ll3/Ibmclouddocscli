@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-20"
+lastupdated: "2020-07-22"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli
 
@@ -15,7 +15,7 @@ subcollection: cli
 {:screen: .screen}
 {:tip: .tip}
 {:external: target="_blank" .external}
-{:new_window: target="_blank"}
+
 {:note: .note}
 
 # Getting started with the {{site.data.keyword.cloud_notm}} CLI
@@ -98,7 +98,7 @@ The output lists the usage instructions, the current version, and the supported 
   ```
   {: codeblock}
 
-  If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam/federated_id?topic=iam-federated_id#federated_id) for more details.
+  If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
   {: tip}
 
 2. If you plan to access Cloud Foundry services, specify a Cloud Foundry org and space. You can run the following command to interactively identify the org and space:

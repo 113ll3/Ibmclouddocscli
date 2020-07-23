@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-11-14"
+  years: 2015, 2020
+lastupdated: "2020-07-22"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -13,7 +13,7 @@ subcollection: cli
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
+
 {:note: .note}
 {:important: .important}
 {:tip: .tip}
@@ -294,7 +294,7 @@ cf ba set-org user_name organization [role]
 <dt>organization</dt>
 <dd>The name or GUID of the {{site.data.keyword.cloud_notm}} org to assign the user to.</dd>
 <dt>role</dt>
-<dd>The role of the user. Valid values are OrgManager, BillingManager, OrgAuditor. See [Roles](/docs/iam?topic=iam-userroles#userroles) for the role descriptions.</dd>
+<dd>The role of the user. Valid values are OrgManager, BillingManager, OrgAuditor. See [Roles](/docs/account?topic=account-userroles#userroles) for the role descriptions.</dd>
 </dl>
 
 You can also use **`ba so`** as an alias for the longer **`ba set-org`** command name.
@@ -315,7 +315,7 @@ cf ba unset-org user_name organization [role]
 <dt>organization</dt>
 <dd>The name or GUID of the {{site.data.keyword.cloud_notm}} org.</dd>
 <dt>role</dt>
-<dd>The role of the user. Valid values are OrgManager, BillingManager, OrgAuditor. See [Roles](/docs/iam?topic=iam-userroles#userroles) for the role descriptions.</dd>
+<dd>The role of the user. Valid values are OrgManager, BillingManager, OrgAuditor. See [Roles](/docs/account?topic=account-userroles#userroles) for the role descriptions.</dd>
 </dl>
 
 You can also use **`ba uo`** as an alias for the longer **`ba unset-org`** command name.

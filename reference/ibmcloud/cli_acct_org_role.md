@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-07-22"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:note: .note}
@@ -360,7 +360,7 @@ Assign user `Mary` to the organization `IBM` as `OrgManager` role:
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-You can set org and space roles by using the CLI, but if you want to set the other permissions, you must use the UI. For more information, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).
+You can set org and space roles by using the CLI, but if you want to set the other permissions, you must use the UI. For more information, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 {: note}
 <!-- Begin Staging URL vs Prod URL -->
 
@@ -707,7 +707,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dd>Region name. Defaults to current region if not specified.</dd>
 </dl>
 
-If you aren't ready to assign access, or want to assign an IAM policy instead of Cloud Foundry access, you can invite a user and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser#assign_new_access).
+If you aren't ready to assign access, or want to assign an IAM policy instead of Cloud Foundry access, you can invite a user and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 {: tip}
 
 ## ibmcloud account user-reinvite

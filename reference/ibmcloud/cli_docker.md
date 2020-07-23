@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-07-22"
 
 keywords: cli, docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
 
@@ -14,7 +14,7 @@ subcollection: cli
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:tip: .tip}
-{:new_window: target="_blank"}
+
 {:external: target="_blank" .external}
 
 # Using {{site.data.keyword.dev_cli_notm}} from a Docker Container
@@ -61,7 +61,7 @@ ibmcloud login
 ```
 {: codeblock}
 
-If your credentials are rejected, you might be using a federated ID. See [Logging in with a federated ID](/docs/iam?topic=iam-federated_id#federated_id) for more details.
+If your credentials are rejected, you might be using a federated ID. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
 {: tip}
 
 The {{site.data.keyword.dev_cli_notm}} CLI uses two containers to facilitate building and testing your application. The first is the tools container, which contains the necessary utilities to build and test your app. The `Dockerfile` for this container is defined by the [`dockerfile-tools`](/docs/cli?topic=cli-idt-cli#build-dockerfile-tools) parameter. You might think of it as a development container, as it contains the tools that are normally used for development of a particular runtime.
