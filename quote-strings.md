@@ -29,27 +29,27 @@ For Linux, MacOS, or PowerShell, use single quotation marks ('). For the Windows
 
 For a Windows command prompt, use double quotation marks to surround the JSON data structure. Additionally, you must escape each double quotation mark that is inside the JSON structure by using a backslash before each double quotation mark.
 
-  ```
-    ibmcloud resource service-instance-create my-service-instance db-service lite us-south -p "{\“units\”:1}"
-  ```
-  {: codeblock}
+```
+ibmcloud resource service-instance-create my-service-instance db-service lite us-south -p "{\“units\”:1}"
+```
+{: codeblock}
 
 ## Linux or MacOS
 {: #quote-linux}
 
 For Linux or MacOS, use single quotation marks to surround the JSON data structure.
 
-  ```
-    ibmcloud resource service-instance-create my-service-instance db-service lite us-south -p ‘{“units”:1}’
-  ```
-  {: codeblock}
+```
+ibmcloud resource service-instance-create my-service-instance db-service lite us-south -p ‘{“units”:1}’
+```
+{: codeblock}
 
 ## Windows PowerShell
 {: #quote-powershell}
 
 For PowerShell, use single quotation marks to surround the JSON data structure. Additionally, you must escape each double quotation mark that is inside the JSON structure by using a backslash before each double quotation mark.
 
-  ```
-    ibmcloud resource service-instance-create my-service-instance db-service lite us-south -p ‘{\“units\”:1}’
-  ```
-  {: codeblock}
+```
+  ibmcloud resource service-instance-create my-service-instance db-service lite us-south -p ‘{\“units\”:1}’
+```
+{: codeblock}
