@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-07-29"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -667,7 +667,7 @@ ibmcloud iam service-api-key-unlock sample-key sample-service
 ## ibmcloud iam user-policies
 {: #ibmcloud_iam_user_policies}
 
-List policies of a user
+List all access policies for a specified user:
 ```
 ibmcloud iam user-policies USER_NAME
 ```
@@ -690,7 +690,7 @@ ibmcloud iam user-policies name@example.com
 ## ibmcloud iam user-policy
 {: #ibmcloud_iam_user_policy}
 
-Display details of a user policy:
+Display details of an access policy for a user:
 ```
 ibmcloud iam user-policy USER_NAME POLICY_ID
 ```
@@ -715,7 +715,7 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 ## ibmcloud iam user-policy-create
 {: #ibmcloud_iam_user_policy_create}
 
-Create a user policy:
+Create an access policy for the specified user in the current account:
 ```
 ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]}
 ```
@@ -803,7 +803,7 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --service-name i
 ## ibmcloud iam user-policy-update
 {: #ibmcloud_iam_user_policy_update}
 
-Update a user policy:
+Update an access policy for the specified user in the current account:
 ```
 ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]}
 ```
@@ -893,7 +893,7 @@ ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer -
 ## ibmcloud iam user-policy-delete
 {: #ibmcloud_iam_user_policy_delete}
 
-Delete a user policy:
+Delete an access policy for the specified user:
 ```
 ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
 ```
@@ -923,7 +923,7 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 ## ibmcloud iam service-policies
 {: #ibmcloud_iam_service_policies}
 
-List all service policies of specified service:
+List all access policies for a specified service ID:
 ```
 ibmcloud iam service-policies SERVICE_ID [-f, --force]
 ```
@@ -955,7 +955,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ## ibmcloud iam service-policy
 {: #ibmcloud_iam_service_policy}
 
-Display details of a service policy:
+Display details of an access policy for a specified user:
 ```
 ibmcloud iam service-policy SERVICE_ID POLICY_ID [-f, --force]
 ```
@@ -989,7 +989,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 ## ibmcloud iam service-policy-create
 {: #ibmcloud_iam_service_policy_create}
 
-Create a service policy:
+Create an access policy and assign it to a service ID:
 ```
 ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [-f, --force]
 ```
@@ -1067,7 +1067,7 @@ ibmcloud iam service-policy-create sample-service --roles Viewer --service-name 
 ## ibmcloud iam service-policy-update
 {: #ibmcloud_iam_service_policy_update}
 
-Update a service policy:
+Update an access policy for a service ID:
 ```
 ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [-f, --force]
 ```
@@ -1147,7 +1147,7 @@ ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer --servic
 ## ibmcloud iam service-policy-delete
 {: #ibmcloud_iam_service_policy_delete}
 
-Delete a service policy:
+Delete an access policy for a service ID:
 ```
 ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 ```
