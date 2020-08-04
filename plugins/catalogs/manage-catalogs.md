@@ -320,7 +320,7 @@ ibmcloud catalog filter offering --offering PRODUCT-NAME
 ```
 
 ### Command options
-{: #get-filter-options}
+{: #get-filter-offering-options}
 
   <dl>
   <dt>--catalog CATALOG</dt>
@@ -441,7 +441,7 @@ ibmcloud catalog offering list --catalog dev-catalog
 
 
 ### Output
-{: #get-offering-output}
+{: #list-offering-output}
 
 The command returns the following output:
 
@@ -881,7 +881,7 @@ ibmcloud catalog offering deprecate --version-locator VERSION_NUMBER
 ```
 
 ### Command options
-{: #publish-offering-to-public-options}
+{: #publish-offering-deprecate-options}
 
   <dl>
   <dt>--version-locator VERSION_NUMBER</dt>
@@ -898,7 +898,7 @@ ibmcloud catalog offering restore --version-locator VERSION_NUMBER
 ```
 
 ### Command options
-{: #publish-offering-to-public-options}
+{: #publish-offering-restore-options}
 
   <dl>
   <dt>--version-locator VERSION_NUMBER</dt>
