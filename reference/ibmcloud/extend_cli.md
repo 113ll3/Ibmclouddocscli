@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-20"
+lastupdated: "2020-08-03"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
@@ -11,7 +11,6 @@ subcollection: cli
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -22,7 +21,7 @@ subcollection: cli
 # Extending {{site.data.keyword.cloud_notm}} CLI with plug-ins
 {: #plug-ins}
 
-{{site.data.keyword.cloud}} CLI supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally.
+The {{site.data.keyword.cloud}} Command Line Interface supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally.
 
 For more commands to manage plug-ins, run `ibmcloud plugin` to see the help messages.
 {: tip}

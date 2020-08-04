@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-25"
+lastupdated: "2020-08-03"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:tip: .tip}
@@ -18,7 +18,7 @@ subcollection: cli
 # Managing classic infrastructure users (ibmcloud sl user)
 {: #manage-sl-users}
 
-Use the following commands to manage {{site.data.keyword.cloud}} classic infrastructure users.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage {{site.data.keyword.cloud_notm}} classic infrastructure users.
 {: shortdesc}
 
 ## ibmcloud sl user create

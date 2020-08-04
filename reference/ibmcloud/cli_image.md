@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-03"
 
 keywords: cli, classic infrastructure, ibmcloud sl image, manage compute images, create compute image cli, compute image cli
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:codeblock: .codeblock}
@@ -18,7 +18,7 @@ subcollection: cli
 # Creating, editing, and deleting compute images (ibmcloud sl image)
 {: #sl-manage-compute-images}
 
-Use the following commands to manage {{site.data.keyword.cloud}} compute images.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage {{site.data.keyword.cloud_notm}} compute images.
 {: shortdesc}
 
 ## ibmcloud sl image delete

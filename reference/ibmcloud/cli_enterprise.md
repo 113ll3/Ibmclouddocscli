@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-03"
 
 keywords: cli, ibmcloud enterprise, view enterprise, view enterprise account, view enterprise account group., enterprise, account-group, account-group-create, account-group-update, 
 
@@ -10,14 +10,14 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
 # Managing enterprises, account groups, and accounts (ibmcloud enterprise)
 {: #ibmcloud_enterprise}
 
-Use the following commands to manage enterprise, account groups, and accounts.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage enterprise, account groups, and accounts.
 {: shortdesc}
 
 ## ibmcloud enterprise create

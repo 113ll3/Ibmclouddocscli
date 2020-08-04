@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-15"
+  years: 2018, 2020
+lastupdated: "2020-08-03"
 
 keywords: cli, shell autocompletion, bash, linux shell, macos shell, autocompletion, autocompletion support, shell
 
@@ -12,13 +12,12 @@ subcollection: cli
 
 {:codeblock: .codeblock} 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:tip: .tip}
 
-# Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux and MacOS only)
+# Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux and macOS only)
 {: #shell-autocomplete}
 
-Starting from version `0.7.0`, the {{site.data.keyword.cloud_notm}} CLI installers don't enable shell autocompletion automatically. To have the autocompletion support, you need to manually enable it. The autocompletion scripts are installed in the following locations:
+Starting from version `0.7.0`, the {{site.data.keyword.cloud}} Command Line Interface installers don't enable shell autocompletion automatically. To have the autocompletion support, you need to manually enable it. The autocompletion scripts are installed in the following locations:
 
 * `Bash` autocompletion: `/usr/local/ibmcloud/autocomplete/bash_autocomplete`
 * `Zsh` autocompletion: `/usr/local/ibmcloud/autocomplete/zsh_autocomplete`
@@ -35,7 +34,7 @@ Starting from version `0.7.0`, the {{site.data.keyword.cloud_notm}} CLI installe
 * If you're using `Zsh`: add 
 `source /usr/local/ibmcloud/autocomplete/zsh_autocomplete` into `~/.zshrc`.
 
-## Enabling autocompletion support for MacOS
+## Enabling autocompletion support for macOS
 {: #shell-autocomplete-macos}
 
 * If you're using `Bash`: add 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-05-11"
+lastupdated: "2020-08-03"
 
 keywords: uninstall, stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -11,7 +11,7 @@ subcollection: cli
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:note: .note}
@@ -21,7 +21,7 @@ subcollection: cli
 # Uninstalling the stand-alone {{site.data.keyword.cloud_notm}} CLI
 {: #uninstall-ibmcloud-cli}
 
-Use the following steps to uninstall the stand-alone {{site.data.keyword.cloud_notm}} CLI on specific platforms.
+Use the following steps to uninstall the stand-alone {{site.data.keyword.cloud}} Command Line Interface on specific platforms.
 {: shortdesc}
 
 ## Uninstalling on Windows

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-02-03"
+lastupdated: "2020-08-03"
 
-keywords: command line interface, cli, cli support, cli forum, cli slack, cli chat, cli help
+keywords: command line interface, cli, cli support, cli forum, cli slack, cli chat, cli help, developer tools, ibmcloud dev commands, ic dev commands
 
 subcollection: cli
 
@@ -18,7 +18,7 @@ subcollection: cli
 # Getting help and support
 {: #getting-help}
 
-If you have questions or problems you use the {{site.data.keyword.cloud}} CLI and {{site.data.keyword.dev_cli_short}}, you can chat with the development team on Slack or post questions to Stack Overflow. If you need to, you can open a support case from the Support Center.
+If you have questions or problems when you use the {{site.data.keyword.cloud}} Command Line Interface and {{site.data.keyword.dev_cli_notm}} commands, you can chat with the development team on Slack or post questions to Stack Overflow. If you need to, you can open a support case from the Support Center.
 {: shortdesc}
 
 ## Community help

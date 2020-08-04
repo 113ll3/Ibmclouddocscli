@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-03"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -22,7 +22,7 @@ subcollection: cli
 # {{site.data.keyword.cloud_notm}} admin CLI
 {: #ibmcloud-admincli}
 
-You can manage your {{site.data.keyword.cloud_notm}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command line interface (CLI) with the {{site.data.keyword.cloud_notm}} admin CLI plug-in. For example, you can add users from an LDAP registry.
+You can manage your {{site.data.keyword.cloud}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command line interface (CLI) with the {{site.data.keyword.cloud_notm}} admin CLI plug-in. For example, you can add users from an LDAP registry.
 
 Before you begin, install the [Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: external}. The {{site.data.keyword.cloud_notm}} admin CLI plug-in
 requires `cf` version 6.11.2 or later. Note that the admin CLI can only be installed into the standalone Cloud Foundry CLI (`cf`), and it can't be used with the Cloud Foundry CLI that's embedded in the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud cf`).

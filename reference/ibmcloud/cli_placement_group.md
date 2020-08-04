@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-08-03"
 
 keywords: cli, placement group management, ibmcloud sl placement-group, classic infrastructure, placement group, placement group cli, manage placement group cli
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:codeblock: .codeblock}
@@ -18,7 +18,7 @@ subcollection: cli
 # Managing classic infrastructure placement groups (ibmcloud sl placement-group)
 {: #sl-manage-placement-group}
 
-Use the following commands to manage the {{site.data.keyword.cloud_notm}} classic infrastructure placement group.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage the {{site.data.keyword.cloud_notm}} classic infrastructure placement group.
 {: shortdesc}
 
 ## ibmcloud sl placement-group create

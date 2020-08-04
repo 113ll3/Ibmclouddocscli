@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-01"
+lastupdated: "2020-08-03"
 
 keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:codeblock: .codeblock}
@@ -20,7 +20,7 @@ subcollection: cli
 
 {{site.data.keyword.filestorage_full}} is a persistent, fast, and flexible network-attached, NFS-based {{site.data.keyword.filestorage_short}}. In this network-attached storage (NAS) environment, you have total control over your file shares function and performance.
 
-Use the following commands to manage a volume in the {{site.data.keyword.cloud_notm}} classic infrastructure {{site.data.keyword.filestorage_short}} service.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage a volume in the {{site.data.keyword.cloud_notm}} classic infrastructure {{site.data.keyword.filestorage_short}} service.
 {: shortdesc}
  
 ## ibmcloud sl file access-authorize

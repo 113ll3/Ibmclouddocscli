@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-14"
+  years: 2017, 2020
+lastupdated: "2020-08-03"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -18,10 +18,10 @@ subcollection: cli
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Local app debugging for the {{site.data.keyword.dev_cli_notm}} CLI
+# Local app debugging for the {{site.data.keyword.dev_cli_notm}} commands
 {: #local-debug}
 
-There are tools to help you debug your application in Java&trade; and Node.js in {{site.data.keyword.cloud}}.
+In the {{site.data.keyword.cloud}} Command Line Interface, tools are provided to help you debug your application in Java&trade; and Node.js in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 ## Java app debugging

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-08-03"
 
 keywords: cli, cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:codeblock: .codeblock}
@@ -20,10 +20,10 @@ subcollection: cli
 # Managing Cloud Foundry applications (ibmcloud app)
 {: #ibmcloud_commands_apps}
 
-Use the following commands to manage Cloud Foundry applications, domains, and routes.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage Cloud Foundry applications, domains, and routes.
 {: shortdesc}
 
-The `ibmcloud app` commands are deprecated. To work with Cloud Foundry applications, use the [`ibmcloud cf app` commands](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_cf) instead. You can also use the [Developer Tools (`ibmcloud dev`) commands](/docs/cli?topic=cli-idt-cli) to build, test, run, and deploy apps on {{site.data.keyword.Bluemix_notm}}.
+The `ibmcloud app` commands are deprecated. To work with Cloud Foundry applications, use the [`ibmcloud cf app` commands](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_cf) instead. You can also use the [{{site.data.keyword.dev_cli_notm}} (`ibmcloud dev`) commands](/docs/cli?topic=cli-idt-cli) to build, test, run, and deploy apps on {{site.data.keyword.cloud_notm}}.
 {: deprecated}
 
 ## ibmcloud app push

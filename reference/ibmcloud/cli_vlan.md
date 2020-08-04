@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-03"
 
 keywords: cli, classic infrastructure cli, vlan cli, classic vlan cli, ibmcloud sl vlan, manage virtual network cli
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:tip: .tip}
@@ -20,7 +20,7 @@ subcollection: cli
 
 Virtual local area networks (VLANs) are used by {{site.data.keyword.cloud}} to isolate broadcast traffic on the public and private networks. VLANs are assigned as needed to fulfill other offerings.
 
-Use the following commands to manage classic infrastructure VLANs.
+Use the following commands from the {{site.data.keyword.cloud_notm}} Command Line Interface to manage classic infrastructure VLANs.
 {: shortdesc}
 
 ## ibmcloud sl vlan create

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-03"
 
 keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:tip: .tip}
@@ -19,9 +19,9 @@ subcollection: cli
 # Working with the Cloud Foundry Enterprise Environment service (ibmcloud cfee)
 {: #ibmcloud_commands_cfee}
 
-With {{site.data.keyword.cfee_full}} (CFEE) you can instantiate multiple, isolated, enterprise-grade Cloud Foundry platforms on-demand. Instances of the IBM Cloud Foundry Enterprise service run within your own account in the {{site.data.keyword.cloud_notm}}. The environment is deployed on isolated hardware (Kubernetes clusters). You have full control over the environment, including access control, capacity, version updates, resource usage, and monitoring.
+With {{site.data.keyword.cfee_full}} (CFEE) you can instantiate multiple, isolated, enterprise-grade Cloud Foundry platforms on-demand. Instances of the IBM Cloud Foundry Enterprise service run within your own account on {{site.data.keyword.cloud}}. The environment is deployed on isolated hardware (Kubernetes clusters). You have full control over the environment, including access control, capacity, version updates, resource usage, and monitoring.
 
-Use the following commands to manage CFEE environments, orgs, spaces, users, and roles.
+Use the following commands from {{site.data.keyword.cloud_notm}} Command Line Interface to manage CFEE environments, orgs, spaces, users, and roles.
 {: shortdesc}
 
 ## ibmcloud cfee environments

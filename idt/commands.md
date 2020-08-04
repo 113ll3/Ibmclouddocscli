@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-08-03"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
 
@@ -11,7 +11,7 @@ subcollection: cli
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+
 {:screen: .screen}
 {:codeblock: .codeblock}  
 {:pre: .pre}
@@ -22,7 +22,8 @@ subcollection: cli
 # {{site.data.keyword.dev_cli_notm}} commands (ibmcloud dev)
 {: #idt-cli}
 
-Use the `ibmcloud dev` or `ic dev` commands to create an application, manage, deploy, debug, and test it.
+The {{site.data.keyword.cloud}} Command Line Interface includes the `ibmcloud dev` or `ic dev` {{site.data.keyword.dev_cli_short}} commands to create, manage, deploy, debug, and test applications.
+{: shortdesc}
 
 Run multiple commands in a single command-line statement by using [compound commands](#compound).
 {: tip}
@@ -384,7 +385,7 @@ In the `cli-config.yml`, you can define the location of a Helm chart in the `cha
 ### Deploying to Knative clusters
 {: #deploy-knative-cli}
 
-The most recent [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cli-getting-started) CLI release adds toolchain deployment support for [Knative](https://www.ibm.com/cloud/learn/knative) clusters on the [{{site.data.keyword.containerlong_notm}}](https://www.ibm.com/cloud/container-service). To use this feature, you need a [Knative-based cluster](https://www.ibm.com/cloud/blog/announcing-managed-knative-on-ibm-cloud-kubernetes-service-experimental) (and not a Helm-based cluster). With this prerequisite met, a Knative deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} CLI.
+[{{site.data.keyword.cloud_notm}}](/docs/cli?topic=cli-getting-started) CLI provides toolchain deployment support for [Knative](https://www.ibm.com/cloud/learn/knative) clusters on the [{{site.data.keyword.containerlong_notm}}](https://www.ibm.com/cloud/container-service). To use this feature, you need a [Knative-based cluster](https://www.ibm.com/cloud/blog/announcing-managed-knative-on-ibm-cloud-kubernetes-service-experimental) (and not a Helm-based cluster). With this prerequisite met, a Knative deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} commands.
 
 By selecting the **Knative** option, you can create a toolchain that deploys to the Knative-based cluster that you specify through the dialog.
 
@@ -465,7 +466,7 @@ Command parameters that are entered on the command line take precedence over the
 ## diag
 {: #diag}
 
-The `diag` command is used as a diagnostic to display the version information of installed dependencies for the {{site.data.keyword.dev_cli_notm}} CLI. Running `diag` is helpful to determine whether you're missing any dependencies or to help in debugging problems.
+The `diag` command is used as a diagnostic to display the version information of installed dependencies for the {{site.data.keyword.dev_cli_notm}} commands. Running `diag` is helpful to determine whether you're missing any dependencies or to help in debugging problems.
 
 Run the following command to display the versions of your installed dependencies:
 ```
@@ -658,7 +659,7 @@ Command parameters that are entered on the command line take precedence over the
 ## pipeline-get
 {: #pipeline-get}
 
-View the details of a pipeline.
+View the details of a Classic pipeline.
 
 ```
 ibmcloud dev pipeline-get [pipelineID] [--output JSON]
@@ -691,7 +692,7 @@ Command parameters that are entered on the command line take precedence over the
 ## pipeline-run
 {: #pipeline-run}
 
-Run a pipeline.
+Run a Classic pipeline.
 ```
 ibmcloud dev pipeline-run [pipelineID] [--stage-id stageID] [--output JSON] 
 ```
@@ -726,7 +727,7 @@ Command parameters that are entered on the command line take precedence over the
 ## pipeline-log
 {: #pipeline-log}
 
-View recent pipeline logs by using the `pipeline-log` command. 
+View recent Classic pipeline logs by using the `pipeline-log` command.
 
 * If the pipeline ID is specified as an argument, all logs for all jobs in all stages are printed for that pipeline.
 * If the stage ID flag is populated, the logs are filtered by that stage in the pipeline. 
@@ -777,7 +778,7 @@ Command parameters that are entered on the command line take precedence over the
 ## pipeline-open
 {: #pipeline-open}
 
-View the URL for the pipeline through the `pipeline-open` command. The `pipeline-open` command also opens the URL in your default browser.
+View the URL for the Classic pipeline through the `pipeline-open` command. The `pipeline-open` command also opens the URL in your default browser.
 ```
 ibmcloud dev pipeline-open [pipelineID]
 ```
@@ -949,7 +950,7 @@ ibmcloud dev shell
 ```
 {: codeblock}
 
-The {{site.data.keyword.dev_cli_short}} CLI opens an interactive shell into the app's docker container. The default target container for the `shell` command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command targets the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. For more information, see [this reference](https://docs.docker.com/engine/reference/builder/#workdir){: external}.
+This command opens an interactive shell into the app's docker container. The default target container for the `shell` command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command targets the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. For more information, see [this reference](https://docs.docker.com/engine/reference/builder/#workdir){: external}.
 
 Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container is brought up and the shell is opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you want to shell. However, this flag is reserved for when no containers are running. The `run` and `tools` arguments are more flexible so you can switch between containers when one is running. For example, if the tools container is running and you run `ibmcloud dev shell run`, the `tools` container is stopped and the `run` container starts, and vice versa.
 
@@ -1007,7 +1008,7 @@ Command parameters that are entered on the command line take precedence over the
 
 If you are using Windows&trade;, you must be running Windows&trade; 10 Pro or later.
 
-You can query the status of the containers that are used by the {{site.data.keyword.dev_cli_short}} CLI as defined by `container-name-run` and `container-name-tools`.
+You can query the status of the containers that are used by the {{site.data.keyword.dev_cli_short}} commands as defined by `container-name-run` and `container-name-tools`.
 
 Run the following command in your current app directory to check container status:
 ```
@@ -1368,7 +1369,7 @@ Command parameters that are entered on the command line take precedence over the
 ## compound commands
 {: #compound}
 
-You are able to run several commands in one command-line statement by separating the {{site.data.keyword.cloud_notm}} developer tools commands with the `/` delimiter. More command-line flags can be used after you specify the compound commands. The following commands are examples of how you can use compound commands:
+You are able to run several commands in one command-line statement by separating the {{site.data.keyword.dev_cli_notm}} commands with the `/` delimiter. More command-line flags can be used after you specify the compound commands. The following commands are examples of how you can use compound commands:
 ```
 ibmcloud dev build/run
 ibmcloud dev build/deploy --trace -t buildpack

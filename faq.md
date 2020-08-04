@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-05-20"
+lastupdated: "2020-08-03"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -23,7 +23,7 @@ subcollection: cli
 # FAQs for the {{site.data.keyword.cloud_notm}} CLI
 {: #ibm-cli-faq}
 
-FAQs for the {{site.data.keyword.cloud}} CLI include questions about CLI versioning, updates, and working with apps. To find all FAQs for {{site.data.keyword.cloud_notm}}, see our [FAQ library](https://{DomainName}/docs/faqs).
+FAQs for the {{site.data.keyword.cloud}} Command Line Interface include questions about CLI versioning, updates, and working with apps. To find all FAQs for {{site.data.keyword.cloud_notm}}, see our [FAQ library](https://{DomainName}/docs/faqs).
 {: shortdesc}
 
 ## Is it required to use the latest version of the {{site.data.keyword.cloud_notm}} CLI?
@@ -49,11 +49,11 @@ ibmcloud update
 ```
 {: codeblock}
 
-## How do I manually install the {{site.data.keyword.dev_cli_notm}} CLI components?
+## How do I manually install the {{site.data.keyword.dev_cli_notm}} commands?
 {: #cli-install-devtools-manually}
 {: troubleshoot}
 
-To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cli-install-devtools-manually#install-devtools-manually).
+To manually install the {{site.data.keyword.dev_cli_notm}} commands, see [Installing the tools and plug-ins manually](/docs/cli?topic=cli-install-devtools-manually).
 
 ## How can I be notified about new CLI releases?
 {: #cli-get-notified}

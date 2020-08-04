@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-17"
+lastupdated: "2020-08-03"
 
 keywords: cli, ibmcloud private, icp, ibmcloud dev deploy, containers, kubernetes, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -21,10 +21,10 @@ subcollection: cli
 # Deploying applications to {{site.data.keyword.cloud_notm}} Private
 {: #deploy-to-icp}
 
-[{{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/developerworks/community/groups/service/html/communityoverview?communityUuid=fe25b4ef-ea6a-4d86-a629-6f87ccf4649e){: external} is an application platform for developing and managing on-premises, containerized applications. It is an integrated environment for managing containers that includes the container orchestrator Kubernetes, a private image repository, a management console, and monitoring frameworks. {{site.data.keyword.cloud_notm}} Developer Tools supports deployments to {{site.data.keyword.cloud_notm}} Private environments.
+[{{site.data.keyword.cloud}} Private](https://www.ibm.com/developerworks/community/groups/service/html/communityoverview?communityUuid=fe25b4ef-ea6a-4d86-a629-6f87ccf4649e){: external} is an application platform for developing and managing on-premises, containerized applications. It is an integrated environment for managing containers that includes the container orchestrator Kubernetes, a private image repository, a management console, and monitoring frameworks. {{site.data.keyword.dev_cli_notm}} supports deployments to {{site.data.keyword.cloud_notm}} Private environments.
 {: shortdesc}
 
-To install the {{site.data.keyword.cloud_notm}} Developer Tools, follow these [instructions](/docs/cli?topic=cli-install-devtools-manually). Once installed, ensure that the [Helm](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: external} version is appropriate for the {{site.data.keyword.cloud_notm}} Private environment. To install Helm from the {{site.data.keyword.cloud_notm}} Private Management console for use with {{site.data.keyword.cloud_notm}} Private 3.2.0, follow these [instructions](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.2.0/app_center/create_helm_cli.html){: external}.
+To install the {{site.data.keyword.dev_cli_notm}} commands, follow these [instructions](/docs/cli?topic=cli-install-devtools-manually). Once installed, ensure that the [Helm](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: external} version is appropriate for the {{site.data.keyword.cloud_notm}} Private environment. To install Helm from the {{site.data.keyword.cloud_notm}} Private Management console for use with {{site.data.keyword.cloud_notm}} Private 3.2.0, follow these [instructions](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.2.0/app_center/create_helm_cli.html){: external}.
 
 ## Before you begin
 {: #before-deploy-icp}
@@ -116,11 +116,11 @@ In this case, the `deploy` command will:
 
  - Perform a deployment to the {{site.data.keyword.cloud_notm}} Private Kubernetes cluster by using the Helm chart that was generated with the `ibmcloud dev create` or `ibmcloud dev enable` command.
 
-The application is now deployed to {{site.data.keyword.cloud_notm}} Private using `{{site.data.keyword.cloud_notm}} Developer Tools CLI`.
+The application is now deployed to {{site.data.keyword.cloud_notm}} Private using the {{site.data.keyword.dev_cli_notm}} commands.
 
 ### Reference blogs and videos
 {: #idt-deploy-reference}
 
-- Blog: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.cloud_notm}} Developer Tools CLI](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: external}
+- Blog: [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.dev_cli_notm}} commands](https://www.ibm.com/cloud/blog/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli){: external}
 
 For more information, see the full `ibmcloud dev` [command reference](/docs/cli?topic=cli-idt-cli).

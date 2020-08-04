@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-29"
+lastupdated: "2020-08-03"
 
 keywords: cli, quotes, quotation, quotation marks, strings, double quotation mark, single quotation mark, double quote, single quote, json, string
 
@@ -19,10 +19,10 @@ subcollection: cli
 # Using quotation marks with strings in {{site.data.keyword.cloud_notm}} CLI
 {: #quote-strings}
 
-Depending on the operating system that you're running {{site.data.keyword.cloud_notm}} CLI on, you use either single or double quotation marks in the command. Linux&trade;, MacOS, the Windows&trade; command prompt (`cmd.exe`), and Windows&trade; PowerShell have different quotation-escaping requirements when you run commands. This difference impacts how you pass strings on the {{site.data.keyword.cloud}} command line, including JSON content.
+Depending on the operating system that you're running {{site.data.keyword.cloud}} Command Line Interface on, you use either single or double quotation marks in the command. Linux&trade;, macOS, the Windows&trade; command prompt (`cmd.exe`), and Windows&trade; PowerShell have different quotation-escaping requirements when you run commands. This difference impacts how you pass strings on the {{site.data.keyword.cloud}} command line, including JSON content.
 {: shortdesc}
 
-For Linux, MacOS, or PowerShell, use single quotation marks ('). For the Windows command prompt, use double quotation marks ("). A JSON string requires double quotation marks around each name and value in the JSON structure. For more information, see the following examples.
+For Linux, macOS, or PowerShell, use single quotation marks ('). For the Windows command prompt, use double quotation marks ("). A JSON string requires double quotation marks around each name and value in the JSON structure. For more information, see the following examples.
 
 ## Windows command prompt
 {: #quote-windows}
@@ -34,10 +34,10 @@ ibmcloud resource service-instance-create my-service-instance db-service lite us
 ```
 {: codeblock}
 
-## Linux or MacOS
+## Linux or macOS
 {: #quote-linux}
 
-For Linux or MacOS, use single quotation marks to surround the JSON data structure.
+For Linux or macOS, use single quotation marks to surround the JSON data structure.
 
 ```
 ibmcloud resource service-instance-create my-service-instance db-service lite us-south -p ‘{“units”:1}’

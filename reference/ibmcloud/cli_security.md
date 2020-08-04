@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-03"
 
 keywords: cli, security cli, ssh keys cli, ssl cli, ibmcloud sl security, certificate cli, ibmcloud sl, sshkey-add, manage security cli
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:tip: .tip}
@@ -23,7 +23,7 @@ SSH keys allow access to a device without using a password from corresponding cl
 
 SSL certificates are enabled by websites as a security measure to protect the user. They are generally used when you are required to transmit confidential information to a website.
 
-Use the following commands to manage {{site.data.keyword.cloud}} classic infrastructure SSH Keys and Certificates.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage {{site.data.keyword.cloud_notm}} classic infrastructure SSH Keys and Certificates.
 
 ## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}

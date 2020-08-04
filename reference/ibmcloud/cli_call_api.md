@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-25"
+lastupdated: "2020-08-03"
 
 keywords: cli, ibmcloud sl call-api, classic infrastructure, API endpoints
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:codeblock: .codeblock}
@@ -18,7 +18,7 @@ subcollection: cli
 # Calling arbitrary classic infrastructure API endpoints (ibmcloud sl call-api)
 {: #sl-all-api}
 
-Use the following command to call the arbitrary classic infrastructure API endpoints.
+Use the following command from the {{site.data.keyword.cloud}} Command Line Interface to call the arbitrary classic infrastructure API endpoints.
 {: shortdesc}
 
 ## ibmcloud sl call-api

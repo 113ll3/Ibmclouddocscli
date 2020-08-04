@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-01"
+lastupdated: "2020-08-03"
 
 keywords: classic infrastructure, block storage, mpio, ibmcloud sl block, volume-options, snapshot, datacenter, replica, cli, storage type, size
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:codeblock: .codeblock}
@@ -23,7 +23,7 @@ subcollection: cli
 
 For more information about {{site.data.keyword.blockstorageshort}}, see the [{{site.data.keyword.blockstorageshort}} documentation](https://cloud.ibm.com/docs/infrastructure/BlockStorage).
 
-Use the following commands to manage a volume for the {{site.data.keyword.cloud_notm}} classic infrastructure {{site.data.keyword.blockstorageshort}} service.
+Use the following commands from the {{site.data.keyword.cloud_notm}} Command Line Interface to manage a volume for the {{site.data.keyword.cloud_notm}} classic infrastructure {{site.data.keyword.blockstorageshort}} service.
 
 ## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}

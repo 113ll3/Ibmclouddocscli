@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-03"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -12,7 +12,6 @@ subcollection: cli
 
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
-
 {:screen: .screen}
 {:tip: .tip}
 {:external: target="_blank" .external}
@@ -21,10 +20,10 @@ subcollection: cli
 # Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI
 {: #install-ibmcloud-cli}
 
-{{site.data.keyword.cloud}} CLI provides the command line interface for managing resources in {{site.data.keyword.cloud_notm}}. When you install the standalone {{site.data.keyword.cloud_notm}} CLI, you get only the CLI itself without any recommended plug-ins or tools.
+The {{site.data.keyword.cloud}} Command Line Interface provides commands for managing resources in {{site.data.keyword.cloud_notm}}. When you install the standalone {{site.data.keyword.cloud_notm}} CLI, you get only the CLI itself without any recommended plug-ins or tools.
 {: shortdesc}
 
-If you want to install both the latest {{site.data.keyword.cloud}} CLI and other recommended plug-ins and tools for developing applications for {{site.data.keyword.cloud_notm}}, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
+If you want to install both the latest {{site.data.keyword.cloud_notm}} CLI and other recommended plug-ins and tools for developing applications for {{site.data.keyword.cloud_notm}}, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 {: tip}
 
 ## Before you begin

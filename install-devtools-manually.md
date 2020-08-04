@@ -21,7 +21,7 @@ subcollection: cli
 # Installing the tools and plug-ins manually
 {: #install-devtools-manually}
 
-You can manually install the {{site.data.keyword.cloud}} command-line interface (CLI) if you prefer more granular control for installing the components. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cli-getting-started#step1-install-idt).
+You can manually install the {{site.data.keyword.cloud}} Command Line Interface if you prefer more granular control for installing the components. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cli-getting-started#step1-install-idt).
 {: shortdesc}
 
 ## Before you begin

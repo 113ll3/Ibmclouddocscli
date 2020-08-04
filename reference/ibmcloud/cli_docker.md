@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-03"
 
 keywords: cli, docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
 
@@ -20,7 +20,7 @@ subcollection: cli
 # Using {{site.data.keyword.dev_cli_notm}} from a Docker Container
 {: #using-idt-from-docker}
 
-With the {{site.data.keyword.dev_cli_notm}} Docker Container, you get the {{site.data.keyword.cloud}} CLI, plus the following tools:
+With the {{site.data.keyword.dev_cli_long}} Docker Container, you get the {{site.data.keyword.cloud}} Command Line Interface, plus the following tools:
 
 * `Git`
 * `Helm`
@@ -64,8 +64,8 @@ ibmcloud login
 If your credentials are rejected, you might be using a federated ID. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
 {: tip}
 
-The {{site.data.keyword.dev_cli_notm}} CLI uses two containers to facilitate building and testing your application. The first is the tools container, which contains the necessary utilities to build and test your app. The `Dockerfile` for this container is defined by the [`dockerfile-tools`](/docs/cli?topic=cli-idt-cli#build-dockerfile-tools) parameter. You might think of it as a development container, as it contains the tools that are normally used for development of a particular runtime.
+The {{site.data.keyword.dev_cli_notm}} commands use two containers to facilitate building and testing your application. The first is the tools container, which contains the necessary utilities to build and test your app. The `Dockerfile` for this container is defined by the [`dockerfile-tools`](/docs/cli?topic=cli-idt-cli#build-dockerfile-tools) parameter. You might think of it as a development container, as it contains the tools that are normally used for development of a particular runtime.
 
-The second container is the run container, which closely mimics the actual runtime environment of your app. This container is in a form that is suitable to be deployed for use, for example, in {{site.data.keyword.cloud_notm}}. As a result, an entry point is defined that starts your app. When you select to run your app through the {{site.data.keyword.dev_cli_notm}} CLI, it uses this container. The `Dockerfile` for this container is defined by the [`dockerfile-run`](/docs/cli?topic=cli-idt-cli#run-parameters) parameter.
+The second container is the run container, which closely mimics the actual runtime environment of your app. This container is in a form that is suitable to be deployed for use, for example, in {{site.data.keyword.cloud_notm}}. As a result, an entry point is defined that starts your app. When you choose to run your app through the {{site.data.keyword.cloud_notm}} CLI, it uses this container. The `Dockerfile` for this container is defined by the [`dockerfile-run`](/docs/cli?topic=cli-idt-cli#run-parameters) parameter.
 
-Now you're ready to use the {{site.data.keyword.dev_cli_notm}} to manage {{site.data.keyword.cloud_notm}} resources and develop and deploy your apps.
+Now you're ready to use the {{site.data.keyword.dev_cli_notm}} commands to manage {{site.data.keyword.cloud_notm}} resources and develop and deploy your apps.

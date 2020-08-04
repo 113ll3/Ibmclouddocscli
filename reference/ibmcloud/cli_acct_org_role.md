@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-03"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -20,7 +20,7 @@ subcollection: cli
 # Managing accounts, users, and Cloud Foundry orgs (ibmcloud account)
 {: #ibmcloud_commands_account}
 
-Use the following commands to manage accounts, users in an account, and the org, space, and roles of public Cloud Foundry environments.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage accounts, users in an account, and the org, space, and roles of public Cloud Foundry environments.
 {: shortdesc}
 
 ## ibmcloud account orgs

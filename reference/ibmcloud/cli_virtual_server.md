@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-03"
 
 keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:tip: .tip}
@@ -20,7 +20,7 @@ subcollection: cli
 
 {{site.data.keyword.BluVirtServers}} are scalable virtual servers that are purchased with dedicated cores and memory allocations. They are a great option if you are looking for compute resources, that can be added in minutes, with access to features like image templates. 
 
-Use the following commands to manage classic infrastructure virtual servers.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage classic infrastructure virtual servers.
 {: shortdesc}
 
 ## ibmcloud sl vs cancel

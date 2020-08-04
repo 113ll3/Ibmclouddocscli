@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-07"
+lastupdated: "2020-08-03"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:tip: .tip}
@@ -18,7 +18,7 @@ subcollection: cli
 # Working with resources and resource groups (ibmcloud resource)
 {: #ibmcloud_commands_resource}
 
-A resource group is a way for you to organize your account resources in customizable groupings. Use the following commands to manage {{site.data.keyword.cloud}} resources in a resource group.
+A resource group is a way for you to organize your account resources in customizable groupings. Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage {{site.data.keyword.cloud_notm}} resources in a resource group.
 {: shortdesc}
 
 ## ibmcloud resource groups

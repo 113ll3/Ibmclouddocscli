@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-03"
 
 keywords: cli, domain management, dns service, ibmcloud sl dns, classic infrastructure, management interface, dns, dns cli, manage dns cli
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:codeblock: .codeblock}
@@ -20,7 +20,7 @@ subcollection: cli
 
 {{site.data.keyword.cloud}} Domain Name Service (DNS) provides customers with a central location to view and manage their domains through the basic DNS management interface. Users can manage reverse and secondary DNS in the same location free of charge.
 
-Use the following commands to manage the {{site.data.keyword.cloud_notm}} classic infrastructure DNS service.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage the {{site.data.keyword.cloud_notm}} classic infrastructure DNS service.
 {: shortdesc}
 
 ## ibmcloud sl dns import

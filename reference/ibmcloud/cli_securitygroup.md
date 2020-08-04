@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-03"
 
 keywords: cli, manage security groups, ingress, egress, traffic, virtual server cli, classic infrastructure cli, securitygroup, ibmcloud sl securitygroup, security group cli
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
@@ -20,8 +20,7 @@ subcollection: cli
 A security group is a set of IP filter rules that define how to handle incoming (ingress) and outgoing (egress) traffic from the public and private interfaces of a virtual server instance. The rules that you add to a security group are known as security group rules.
 {: shortdesc}
 
-Use the following commands to manage a security group by using the {{site.data.keyword.cloud}} classic infrastructure Security Group service.
-
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage a security group by using the {{site.data.keyword.cloud_notm}} classic infrastructure Security Group service.
 
 ## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}

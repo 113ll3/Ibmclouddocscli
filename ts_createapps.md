@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-08-03"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -26,7 +26,7 @@ subcollection: cli
 # Troubleshooting for the {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.dev_cli_short}}
 {: #troubleshoot}
 
-See solutions to common problems with using the {{site.data.keyword.cloud}} CLI. In many cases, you can recover from these problems by following a few easy steps.
+See solutions to common problems with using the {{site.data.keyword.cloud}} Command Line Interface. In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
 
 
@@ -405,16 +405,16 @@ ibmcloud dev build --use-root-user-tools
 {: codeblock}
 {: tsResolve}
 
-## Why is the ibm.biz short URL unreachable for CLI dev installation?
+## Why is the ibm.biz short URL unreachable for ibmcloud dev installation?
 {: ts-cli-shorturl}
 {: troubleshoot}
 
-Installing the {{site.data.keyword.dev_cli_short}} CLI with the `https://ibm.biz/idt-installer` link might fail if the `ibm.biz` domain is unreachable.
+Installing the {{site.data.keyword.dev_cli_short}} commands with the `https://ibm.biz/idt-installer` link might fail if the `ibm.biz` domain is unreachable.
 
 To resolve the issue, substitute the short ibm.biz installer URL with the following full paths to the installation scripts:
 {: tsResolve}
 
-Linux&trade; and MacOS:
+Linux&trade; and macOS:
 ```
 https://raw.githubusercontent.com/IBM-Cloud/ibm-cloud-developer-tools/master/linux-installer/idt-installer
 ```

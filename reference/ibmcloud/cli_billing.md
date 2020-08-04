@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-03"
 
 keywords: cli, ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
@@ -10,14 +10,14 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
 # Viewing billing and usage information (ibmcloud billing)
 {: #ibmcloud_billing}
 
-Use the following commands to retrieve resource usage and billing information.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to retrieve resource usage and billing information.
 {: shortdesc}
  
 ## ibmcloud billing account-usage

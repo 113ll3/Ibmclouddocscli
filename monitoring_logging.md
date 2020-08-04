@@ -11,7 +11,7 @@ subcollection: cli
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:screen: .screen}

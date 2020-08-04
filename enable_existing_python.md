@@ -2,15 +2,15 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-08-03"
 
-keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help, ic dev enable
 
 subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -20,7 +20,7 @@ subcollection: cli
 # Enabling existing Python applications for cloud deployment
 {: #enable-existing-python}
 
-You can generate the files that are needed to enable your Python application to run on {{site.data.keyword.cloud}} by using the [`ibmcloud dev enable` command](/docs/cli?topic=cli-idt-cli#enable).
+You can generate the files that are needed to enable your Python application to run on {{site.data.keyword.cloud}} by using the [`ibmcloud dev enable`](/docs/cli?topic=cli-idt-cli#enable) command.
 {: shortdesc}
 
 ## Enabling your Python app
@@ -153,7 +153,7 @@ CMD ["gunicorn", "-b", "0.0.0.0:3000", "--env", "DJANGO_SETTINGS_MODULE=<project
 ```
 {: codeblock}
 
-## Next Steps
+## Next steps
 {: #next_steps_existing_python notoc}
 
-For more information, see [{{site.data.keyword.dev_cli_notm}} CLI](/docs/cli?topic=cli-idt-cli).
+For more information, see [{{site.data.keyword.dev_cli_notm}} commands](/docs/cli?topic=cli-idt-cli).

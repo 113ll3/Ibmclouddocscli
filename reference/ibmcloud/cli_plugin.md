@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-20"
+lastupdated: "2020-08-03"
 
 keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
@@ -10,7 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:tip: .tip}
@@ -18,7 +18,7 @@ subcollection: cli
 # Adding and removing {{site.data.keyword.cloud_notm}} CLI plug-ins (ibmcloud plugin)
 {: #ibmcloud_commands_settings}
 
-{{site.data.keyword.cloud}} supports a plug-in framework to extend its capability. Use the following commands to manage the {{site.data.keyword.cloud_notm}} CLI plug-ins.
+{{site.data.keyword.cloud}} supports a plug-in framework to extend its capability. Use the following commands to manage the {{site.data.keyword.cloud_notm}} Command Line Interface plug-ins.
 {: shortdesc}
 
 ## ibmcloud plugin repos
