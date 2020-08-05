@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-08-05"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -28,7 +28,6 @@ subcollection: cli
 
 See solutions to common problems with using the {{site.data.keyword.cloud}} Command Line Interface. In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
-
 
 ## Why do I get a host name error when I create an application with a non-mobile pattern?
 {: #ts-cli-hostname-error}
@@ -353,14 +352,14 @@ kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceac
 {: #ts-cli-helm}
 {: troubleshoot}
 
-If the client and server helm versions are not in sync, you might see the following errors:
+If the client and server Helm versions are not in sync, you might see the following errors:
 ```
 FAILED
 The 'helm upgrade ' command failed to complete due to: exit status 1
 ```
 {: screen}
 
-To resolve the issue, set the client's version to the same as the cluster's version. For example, to install the 2.8.1 helm version, run the following commands:
+To resolve the issue, set the client's version to the same as the cluster's version. For example, to install the 2.8.1 Helm version, run the following commands:
 {: tsResolve}
 
 * For Mac and Linux&trade;, run the following commands:
@@ -380,6 +379,28 @@ To resolve the issue, set the client's version to the same as the cluster's vers
   Set-Item HELM_HOME C:\.helm\
   ```
   {: codeblock}
+
+## Why does the Helm init command fail during app deployment to my Kubernetes cluster?
+{: #ts-cli-helm-error}
+{: troubleshoot}
+{: support}
+
+When I try to deploy my app to a Kubernetes cluster by using the `ic dev deploy -t container` command, the following error occurs:
+{: tsSymptoms}
+
+```
+Executing helm init
+$HELM_HOME has been configured at /Users/username/.helm.
+FAILED
+The 'helm init' command failed to complete due to: exit status 1
+```
+{: screen}
+
+Some specifications are deprecated with new Kubernetes V1.16 clusters.
+{: tsCauses}
+
+Update Helm to 2.16.0 or later.
+{: tsResolve}
 
 ## Why is `ibmcloud dev build` failing with a user name that includes "@"?
 {: #ts-cli-username}
