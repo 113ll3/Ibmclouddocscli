@@ -94,7 +94,8 @@ IBM Cloud CLI and Developer Tools
 		/dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
 		/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
 		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
-
+		/mobilepush-cli-plugin/mobilepush-cli-plugin-mobilepush-cli
+    
 	{: .topicgroup}
 	Plug-ins for the standalone Cloud Foundry CLI
 		plugins/admin/index.md
