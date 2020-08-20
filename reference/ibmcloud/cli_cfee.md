@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-08-20"
 
 keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
@@ -15,14 +15,18 @@ subcollection: cli
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:codeblock: .codeblock}
+{:deprecated: .deprecated}
 
 # Working with the Cloud Foundry Enterprise Environment service (ibmcloud cfee)
 {: #ibmcloud_commands_cfee}
 
-With {{site.data.keyword.cfee_full}} (CFEE) you can instantiate multiple, isolated, enterprise-grade Cloud Foundry platforms on-demand. Instances of the IBM Cloud Foundry Enterprise service run within your own account on {{site.data.keyword.cloud}}. The environment is deployed on isolated hardware (Kubernetes clusters). You have full control over the environment, including access control, capacity, version updates, resource usage, and monitoring.
+With {{site.data.keyword.cfee_full}} (CFEE) you can instantiate multiple, isolated, enterprise-grade Cloud Foundry platforms on-demand. Instances of the {{site.data.keyword.cfee_full_notm}} service run within your own account on {{site.data.keyword.cloud}}. The environment is deployed on isolated hardware (Kubernetes clusters). You have full control over the environment, including access control, capacity, version updates, resource usage, and monitoring.
 
-Use the following commands from {{site.data.keyword.cloud_notm}} Command Line Interface to manage CFEE environments, orgs, spaces, users, and roles.
+Use the following commands from the {{site.data.keyword.cloud_notm}} Command Line Interface to manage CFEE environments, orgs, spaces, users, and roles.
 {: shortdesc}
+
+The `ibmcloud cfee` commands are deprecated because the {{site.data.keyword.cfee_full_notm}} single-tenant cloud product is deprecated. For more information, see [Cloud Foundry Enterprise Deprecation](/docs/cloud-foundry?topic=cloud-foundry-what-s-new-in-ibm-cloud-foundry-enterprise-environment#deprecation).
+{: deprecated}
 
 ## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}

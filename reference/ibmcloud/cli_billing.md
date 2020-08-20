@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-08-20"
 
 keywords: cli, ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
@@ -25,7 +25,7 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 
 Show monthly usage of the current account (account admin only):
 ```
-ibmcloud billing account-usage [-d YYYY-MM]
+ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -35,6 +35,10 @@ ibmcloud billing account-usage [-d YYYY-MM]
 <dl>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format. Accepted inputs are JSON and CSV.</dd>
+  <dt>-q, --quiet (optional)</dt>
+  <dd>Suppress verbose output.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -49,7 +53,7 @@ ibmcloud billing account-usage -d 2016-06
 
 Show monthly usage for an org (account admin or org billing manager only):
 ```
-ibmcloud billing org-usage ORG_NAME [-d YYYY-MM]
+ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -61,6 +65,10 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM]
   <dd>Name of the org.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format. Only JSON is supported.</dd>
+  <dt>-q, --quiet (optional)</dt>
+  <dd>Suppress verbose output.</dd>
 </dl>
 
 ## ibmcloud billing resource-group-usage
@@ -68,7 +76,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM]
 
 Show monthly usage for a resource group (account admin or resource group admin only):
 ```
-ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM]
+ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -80,6 +88,10 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM]
   <dd>Name of the resource group.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format. Only JSON is supported.</dd>
+  <dt>-q, --quiet (optional)</dt>
+  <dd>Suppress verbose output.</dd>
 </dl>
 
 ## ibmcloud billing resource-instances-usage
@@ -87,7 +99,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM]
 
 Show monthly resource instances usage under the current account:
 ```
-ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM]
+ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -101,6 +113,10 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>Filter instance by resource group.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format. Accepted inputs are JSON and CSV.</dd>
+  <dt>-q, --quiet (optional)</dt>
+  <dd>Suppress verbose output.</dd>
 </dl>
 
 ## ibmcloud billing enterprise-usage
@@ -108,7 +124,7 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
 
 Show enterprise usage reports:
 ```
-ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --account-group-id ACCOUNT_GROUP_ID | --account ACCOUNT_NAME | --account-id ACCOUNT_ID] [--month MONTH] [--children]
+ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --account-group-id ACCOUNT_GROUP_ID | --account ACCOUNT_NAME | --account-id ACCOUNT_ID] [--month MONTH] [--children] [--output FORMAT] [-q, --quiet]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -128,4 +144,8 @@ ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --accoun
   <dd>Show children usage reports.</dd>
   <dt>--month MONTH (optional)</dt>
   <dd>Target month. Default to current month.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format. Only JSON is supported.</dd>
+  <dt>-q, --quiet (optional)</dt>
+  <dd>Suppress verbose output.</dd>
 </dl>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-08-20"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -955,7 +955,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ## ibmcloud iam service-policy
 {: #ibmcloud_iam_service_policy}
 
-Display details of an access policy for a specified user:
+Display details of an access policy for a specified service ID:
 ```
 ibmcloud iam service-policy SERVICE_ID POLICY_ID [-f, --force]
 ```

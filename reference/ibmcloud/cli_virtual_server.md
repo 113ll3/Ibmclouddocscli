@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-08-20"
 
 keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
@@ -587,6 +587,8 @@ ibmcloud sl vs upgrade IDENTIFIER [OPTIONS]
 <dd>Memory in megabytes.</dd>
 <dt>--network</dt>
 <dd>Network port speed in Mbps.</dd>
+<dt>--flavor</dt>
+<dd>Flavor key name.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>

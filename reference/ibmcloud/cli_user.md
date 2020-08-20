@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-08-20"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -41,6 +41,8 @@ ibmcloud sl user create USERNAME [OPTIONS]
 <dd>A JSON string that describes https://softlayer.github.io/reference/datatypes/SoftLayer_User_Customer/.</dd>
 <dt>--api-key</dt>
 <dd>Create an API key for this user.</dd>
+<dt>--vpn-password</dt>
+<dd>VPN password to set for this user.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>

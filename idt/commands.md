@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-08-20"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
 
@@ -385,9 +385,56 @@ In the `cli-config.yml`, you can define the location of a Helm chart in the `cha
 ### Deploying to Knative clusters
 {: #deploy-knative-cli}
 
-[{{site.data.keyword.cloud_notm}}](/docs/cli?topic=cli-getting-started) CLI provides toolchain deployment support for [Knative](https://www.ibm.com/cloud/learn/knative) clusters on the [{{site.data.keyword.containerlong_notm}}](https://www.ibm.com/cloud/container-service). To use this feature, you need a [Knative-based cluster](https://www.ibm.com/cloud/blog/announcing-managed-knative-on-ibm-cloud-kubernetes-service-experimental) (and not a Helm-based cluster). With this prerequisite met, a Knative deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} commands.
+You can deploy your app to a Knative cluster by using a DevOps toolchain or by using the `deploy` command. 
+
+#### Toolchain deployment to Knative
+{: #deploy-knative-toolchain}
+
+[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) provides toolchain deployment support for [Knative](https://www.ibm.com/cloud/learn/knative) clusters on the [{{site.data.keyword.containerlong_notm}}](https://www.ibm.com/cloud/container-service). To use this feature, you need a [Knative-based cluster](https://www.ibm.com/cloud/blog/announcing-managed-knative-on-ibm-cloud-kubernetes-service-experimental) (and not a Helm-based cluster). With this prerequisite met, a Knative deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} commands.
 
 By selecting the **Knative** option, you can create a toolchain that deploys to the Knative-based cluster that you specify through the dialog.
+
+#### Manual deployment to Knative
+{: #deploy-knative-manual}
+
+First, create or enable an app. You must have a Kubernetes cluster that includes Knative. For more information about configuring your cluster, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
+
+After those prerequisites are met, you can deploy to Knative by typing the following command from the app folder: 
+
+```
+ibmcloud dev deploy -t knative
+```
+{: codeblock}
+
+The CLI prompts you through the deployment process.
+
+### Deploying to Red Hat OpenShift on {{site.data.keyword.cloud_notm}}
+{: #deploy-openshift-cli}
+
+You can deploy your app to a {{site.data.keyword.openshiftlong}} container by using a DevOps toolchain or by using the `deploy` command.
+
+#### Toolchain deployment to OpenShift
+{: #deploy-openshift-toolchain}
+
+[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) provides toolchain deployment support for [OpenShift](/docs/openshift?topic=openshift-getting-started) clusters. To use this feature, you need an OpenShift cluster. With this prerequisite met, an OpenShift deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} commands.
+
+By selecting the **OpenShift** option, you can create a toolchain that deploys to the OpenShift cluster that you specify through the dialog.
+
+#### Manual deployment to OpenShift
+{: #deploy-openshift-manual}
+
+For manual deployment to an OpenShift container, the syntax is the same as for deploying your app to any other Helm-based Kubernetes cluster.
+
+First, create or enable an app. You must have an OpenShift cluster. For more information about configuring your cluster, see [Creating OpenShift clusters](/docs/openshift?topic=openshift-clusters).
+
+After those prerequisites are met, you can deploy the app by typing the following command from the app folder:
+
+```
+ibmcloud dev deploy -t container
+```
+{: codeblock}
+
+The CLI prompts you through the deployment process.
 
 ### deploy command parameters
 {: #deploy-parameters}
@@ -436,7 +483,7 @@ Command parameters that are entered on the command line take precedence over the
 #### `host`
 {: #host}
 
-* Parameter that is used to define the host name of the app when you deploy to {{site.data.keyword.cloud_notm}} Foundry.
+* Parameter that is used to define the hostname of the app when you deploy to {{site.data.keyword.cloud_notm}} Foundry.
 * Usage: `ibmcloud dev deploy --host [hostname]`
 
 #### `ibm-cluster`
@@ -567,7 +614,7 @@ Language options include:
 * Python
 * Swift
 
-Files that are created by using the `ibmcloud dev enable` command are saved with a `.merge` file extension if there are name conflicts with existing files in the app folder.
+Files that are created by using the `ibmcloud dev enable` command are saved with a `.merge` file extension if name conflicts occur with existing files in the app folder.
 
 ### enable command parameters
 {: #enable-parameters}
@@ -1312,9 +1359,9 @@ Command parameters that are entered on the command line take precedence over the
 
 You can view the URL to which your app is deployed through the `view` command. Run this command in the root directory of the app you want to view. The `view` command also opens the URL in your default browser.
 
-For apps deployed to {{site.data.keyword.cloud_notm}} Foundry, the URL consists of the app's host name and the app's domain.
+For apps that are deployed to {{site.data.keyword.cloud_notm}} Foundry, the URL consists of the app's hostname and the app's domain.
 
-For apps deployed to {{site.data.keyword.containerlong_notm}}, the URL consists of the IP address of the node it is deployed to, and the public port. If the command determines that the app was deployed to Kubernetes, the CLI tool prompts for confirmation. If you specify that the app wasn't deployed to Kubernetes, then the {{site.data.keyword.cloud_notm}} Foundry URL is shown. If you expected the command to show the URL for a Kubernetes-deployed app, ensure that the `cli-config.yml` contains an entry for `chart-path` or supply it through command line as shown [here](#chart-path).
+For apps that are deployed to {{site.data.keyword.containerlong_notm}}, the URL consists of the IP address of the node it is deployed to, and the public port. If the command determines that the app was deployed to Kubernetes, the CLI tool prompts for confirmation. If you specify that the app wasn't deployed to Kubernetes, then the {{site.data.keyword.cloud_notm}} Foundry URL is shown. If you expected the command to show the URL for a Kubernetes-deployed app, ensure that the `cli-config.yml` contains an entry for `chart-path` or supply it through command line as shown [here](#chart-path).
 
 Run the following command from the app directory to view your app:
 ```
