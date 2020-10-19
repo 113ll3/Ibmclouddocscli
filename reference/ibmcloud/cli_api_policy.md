@@ -1524,7 +1524,7 @@ ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 
 Add user `name@example.com` to access group `example_group`:
 ```
-ibmcloud iam access group-user-add example_group name@example.com
+ibmcloud iam access-group-user-add example_group name@example.com
 ```
 {: codeblock}
 
