@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-05"
+lastupdated: "2020-10-29"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -425,27 +425,6 @@ ibmcloud dev build --use-root-user-tools
 ```
 {: codeblock}
 {: tsResolve}
-
-## Why is the ibm.biz short URL unreachable for ibmcloud dev installation?
-{: ts-cli-shorturl}
-{: troubleshoot}
-
-Installing the {{site.data.keyword.dev_cli_short}} commands with the `https://ibm.biz/idt-installer` link might fail if the `ibm.biz` domain is unreachable.
-
-To resolve the issue, substitute the short ibm.biz installer URL with the following full paths to the installation scripts:
-{: tsResolve}
-
-Linux&trade; and macOS:
-```
-https://raw.githubusercontent.com/IBM-Cloud/ibm-cloud-developer-tools/master/linux-installer/idt-installer
-```
-{: codeblock}
-
-Windows&trade;:
-```
-https://raw.githubusercontent.com/IBM-Cloud/ibm-cloud-developer-tools/master/windows-installer/idt-win-installer.ps1
-```
-{: codeblock}
 
 ## Why is `ibmcloud dev build` failing with "exit status 100"?
 {: #ts-cli-build-error}

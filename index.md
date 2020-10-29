@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-10-29"
 
-keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli
+keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli, IBM Cloud CLI installer, installing IBM Cloud CLI, install IBM Cloud CLI
 
 subcollection: cli
 
@@ -56,9 +56,9 @@ If you need to use a 32-bit version of the CLI, or a previous version other than
 
 The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when you run the command. As the CLI and plug-ins install, keep an eye on the command line to authenticate as needed.
 
-* For Mac and Linux&trade;, run the following command:
+* For MacOS and Linux&trade;, run the following command:
   ```
-  curl -sL https://ibm.biz/idt-installer | bash
+  curl -sL https://raw.githubusercontent.com/IBM-Cloud/ibm-cloud-developer-tools/master/linux-installer/idt-installer | bash
   ```
   {: codeblock}
 
@@ -67,7 +67,7 @@ The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when
 
 * For Windows&trade; 10 Pro, run the following command in PowerShell as an administrator:
   ```
-  [Net.ServicePointManager]::SecurityProtocol = "Tls12, Tls11, Tls, Ssl3"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
+  [Net.ServicePointManager]::SecurityProtocol = "Tls12, Tls11, Tls, Ssl3"; iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/IBM-Cloud/ibm-cloud-developer-tools/master/windows-installer/idt-win-installer.ps1')
   ```
   {: codeblock}
 
