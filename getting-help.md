@@ -26,7 +26,7 @@ If you have questions or problems when you use the {{site.data.keyword.cloud}} C
 {: support}
 
 * If you have a casual question or just want to talk about all things {{site.data.keyword.cloud_notm}} CLI, come chat with the development team on [IBM Cloud Technology Slack](https://ibm.biz/cli-feedback). After you request your invite, sign in and join the `#developer-tools` channel.
-* Search [Stack Overflow](https://stackoverflow.com/search?q=ibm-cloud){: external} or [IBM Developer Answers](https://ibm.biz/cli-developer-answers){: external} to see whether other users ran into the same problem. When you use these forums to ask a question, tag your question with `ibm-cloud` and `cli` so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
+* Search [Stack Overflow](https://stackoverflow.com/search?q=ibm-cloud){: external} or [IBM Support Forums](https://www.ibm.com/mysupport/s/forumshome){: external} to see whether other users ran into the same problem. When you use these forums to ask a question, tag your question with `ibm-cloud` and `cli` so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
 
 ## Contacting support
 {: #contacting-support}
