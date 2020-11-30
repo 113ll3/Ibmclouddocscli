@@ -31,7 +31,7 @@ IBM Cloud CLI and Developer Tools
 	Debugging
 		idt/local_debug.md
 		enable_existing_python.md
-	
+
 	monitoring_logging.md
 	ha-dr.md
 	{: .navgroup-end}
@@ -80,7 +80,7 @@ IBM Cloud CLI and Developer Tools
 		reference/ibmcloud/cli_cf_services.md
 
 	{: .topicgroup}
-	Plug-ins for the IBM Cloud CLI 
+	Plug-ins for the IBM Cloud CLI
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
 		plugins/catalogs/manage-catalogs.md
 		/databases-cli-plugin/databases-cli-plugin-cdb-reference
@@ -99,6 +99,7 @@ IBM Cloud CLI and Developer Tools
 		/dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
 		/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
 		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
+		/whcs-cli-plugin/whcs-cli-plugin-whcs-annotator-for-clinical-data-cli
 
 	{: .topicgroup}
 	Plug-ins for the standalone Cloud Foundry CLI
