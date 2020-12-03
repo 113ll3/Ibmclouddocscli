@@ -22,7 +22,7 @@ subcollection: cli
 Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage the service offerings, service instances, service bindings, and keys for Cloud Foundry services on {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-The `ibmcloud service` commands are deprecated. To work with Cloud Foundry services, use the [`ibmcloud cf service` commands](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_cf) instead. You can also use the [`ibmcloud resource` commands](/docs/cli?topic=cli-ibmcloud_commands_resource) to work with {{site.data.keyword.Bluemix_notm}} resources.
+The `ibmcloud service` commands are deprecated. To work with Cloud Foundry services, use the [`ibmcloud cf service` commands](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_cf) instead. You can also use the [`ibmcloud resource` commands](/docs/cli?topic=cli-ibmcloud_commands_resource) to work with {{site.data.keyword.cloud_notm}} resources.
 {: deprecated}
 
 ## ibmcloud service offerings

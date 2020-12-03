@@ -83,7 +83,7 @@ You can use the `container-registry` CLI plug-in to set up your own image namesp
   ```
   {: codeblock}
 
-For more information, see the [{{site.data.keyword.registrylong}} command reference](/docs/services/Registry?topic=container-registry-cli-plugin-containerregcli).
+For more information, see the [{{site.data.keyword.registrylong}} command reference](/docs/Registry?topic=container-registry-cli-plugin-containerregcli).
 
 ## Installing {{site.data.keyword.containerlong_notm}} CLI plug-in
 {: #idt-install-kubernetes-cli-plugin}
@@ -110,7 +110,7 @@ Install [Helm](https://helm.sh/docs/){: external}, which is a Kubernetes-based p
   ```
   {: codeblock}
 
-* Windows&trade; users can download and install the Helm [binary](https://github.com/helm/helm/releases/tag/v2.7.2){: external}.
+* Windows&trade; users can download and install the Helm [binary](https://github.com/helm/helm/releases){: external}.
 
 ## Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in
 {: #idt-install-functions}

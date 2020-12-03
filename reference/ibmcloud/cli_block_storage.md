@@ -21,7 +21,7 @@ subcollection: cli
 {{site.data.keyword.cloud}} {{site.data.keyword.blockstorageshort}} is a persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based {{site.data.keyword.blockstorageshort}} LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections.
 {: shortdesc}
 
-For more information about {{site.data.keyword.blockstorageshort}}, see the [{{site.data.keyword.blockstorageshort}} documentation](https://cloud.ibm.com/docs/infrastructure/BlockStorage).
+For more information about {{site.data.keyword.blockstorageshort}}, see the [{{site.data.keyword.blockstorageshort}} documentation](/docs/BlockStorage).
 
 Use the following commands from the {{site.data.keyword.cloud_notm}} Command Line Interface to manage a volume for the {{site.data.keyword.cloud_notm}} classic infrastructure {{site.data.keyword.blockstorageshort}} service.
 
