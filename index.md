@@ -2,10 +2,13 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-29"
+lastupdated: "2020-12-07"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli, IBM Cloud CLI installer, installing IBM Cloud CLI, install IBM Cloud CLI
-
+content-type: tutorial
+services: 
+account-plan: lite
+completion-time: 30m
 subcollection: cli
 
 ---
@@ -15,11 +18,15 @@ subcollection: cli
 {:screen: .screen}
 {:tip: .tip}
 {:external: target="_blank" .external}
+{:step: data-tutorial-type='step'}
 
 {:note: .note}
 
 # Getting started with the {{site.data.keyword.cloud_notm}} CLI
 {: #getting-started}
+{: toc-content-type="tutorial"} 
+{: toc-services=""} 
+{: toc-completion-time="30m"}
 
 In this tutorial, you install the {{site.data.keyword.cloud}} Command Line Interface, along with popular plug-ins and tools so that you can work with apps, toolchains, pipelines, Kubernetes clusters, and more in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
@@ -51,8 +58,9 @@ Want to instantly start working with the {{site.data.keyword.cloud_notm}} CLI? T
 If you need to use a 32-bit version of the CLI, or a previous version other than the latest for {{site.data.keyword.cloud_notm}} Dedicated environments, see [{{site.data.keyword.cloud_notm}} CLI releases](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}.
 {: note}
 
-## Step 1. Run the installation command
+## Run the installation command
 {: #step1-install-idt}
+{: step}
 
 The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when you run the command. As the CLI and plug-ins install, keep an eye on the command line to authenticate as needed.
 
@@ -77,8 +85,9 @@ The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when
 * For automating DevOps installations, you can also access the installer script directly from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: external}.
 
 
-## Step 2. Verify the installation
+## Verify the installation
 {: #step2-verify-idt}
+{: step}
 
 To verify that the CLI and {{site.data.keyword.dev_cli_short}} were installed successfully, run the `help` command:
 ```
@@ -88,8 +97,9 @@ ibmcloud dev help
 
 The output lists the usage instructions, the current version, and the supported commands.
 
-## Step 3. Configure your environment
+## Configure your environment
 {: #step3-configure-idt-env}
+{: step}
 
 1. Log in to {{site.data.keyword.cloud_notm}} with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
   ```
