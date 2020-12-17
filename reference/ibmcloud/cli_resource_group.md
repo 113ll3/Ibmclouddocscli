@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-12-17"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -645,7 +645,7 @@ ibmcloud resource service-key crn:v1:bluemix:public:cloudantnosqldb:us-south:a/5
 
 Create a service key.
 ```
-ibmcloud resource service-key-create NAME [ROLE_NAME] ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-g RESOURCE_GROUP] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
+ibmcloud resource service-key-create NAME [ROLE_NAME] ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-g RESOURCE_GROUP] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force] [-f, --force] [-q, --quiet]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -653,27 +653,31 @@ ibmcloud resource service-key-create NAME [ROLE_NAME] ( --instance-id SERVICE_IN
 <strong>Command options</strong>:
 <dl>
   <dt>NAME (required)</dt>
-  <dd>Name of the key</dd>
+  <dd>Name of the key.</dd>
   <dt>ROLE_NAME (optional)</dt>
-  <dd>Name of the user role</dd>
+  <dd>Name of the user role.</dd>
   <dt>--instance-id <i>SERVICE_INSTANCE_ID</i></dt>
-  <dd>Service Instance ID</dd>
+  <dd>Service instance ID.</dd>
   <dt>--instance-name <i>SERVICE_INSTANCE_NAME</i></dt>
-  <dd>Service Instance Name</dd>
+  <dd>Service instance name.</dd>
   <dt>--alias-id <i>SERVICE_ALIAS_ID</i></dt>
-  <dd>Service Alias ID</dd>
+  <dd>Service alias ID.</dd>
   <dt>--alias-name <i>SERVICE_ALIAS_NAME</i></dt>
-  <dd>Service Alias Name</dd>
+  <dd>Service alias name.</dd>
   <dt>--service-id <i>SERVICE_ID</i></dt>
-  <dd>Name or UUID of the service ID, which the role belongs to</dd>
+  <dd>Name or UUID of the service ID, which the role belongs to.</dd>
   <dt>-p, --parameters <i>@JSON_FILE | JSON_TEXT</i></dt>
-  <dd>Parameters JSON file or JSON string</dd>
+  <dd>Parameters JSON file or JSON string.</dd>
   <dt>-g <i>RESOURCE_GROUP</i></dt>
-  <dd>Resource group name</dd>
+  <dd>Resource group name.</dd>
   <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
-  <dd>Type of the service endpoint. Possible values are 'public', 'private'.</dd>
+  <dd>Type of the service endpoint. Possible values are 'public' or 'private'.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify the output format. Only JSON is supported.</dd>
   <dt>-f, --force</dt>
   <dd>Force creation without confirmation</dd>
+  <dt>-q, --quite</dt>
+  <dd>Suppress verbose output.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1010,7 +1014,7 @@ ibmcloud resource search "tagReferences.tag.name:name _objectType:SoftLayer_Hard
 List all tags in your billing account
 
 ```
-ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider classic-infrastructure] [-d, --details true] [-a, --attached true]
+ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider classic-infrastructure] [-d, --details true] [-a, --attached true] [--output FORMAT] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
 ```
 <strong>Prerequisites</strong>: Endpoint, Login
 
@@ -1024,8 +1028,14 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
   <dd>Specify classic-infrastructure when you search for classic infrastructure tags.</dd>
   <dt>-d, --details</dt>
   <dd>Show the number of tagged resources.</dd>
-  <dt>-a, --attached</dt>
-  <dd>Show only filtered attached tags to a resource. The only supported value is `true`.</dd>
+  <dt>--attached value, -a value</dt>
+  <dd>Show only the filtered attached tags to a resource. The only value allowed is `true`.</dd>
+  <dt>tag-type</dt>
+  <dd>The type of the tag. The only allowed values are `user` or `service`. The default value is `user`.</dd>
+  <dt>account-id</dt>
+  <dd>The ID of the account that owns the tags that you want to list. This value is required if `tag-type` is set.</dd>
+  <dt>--output value/dt>
+  <dd>Specify the output format. Only JSON is supported.</dd>
 </dl>
 
 
@@ -1034,7 +1044,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
 
 Attach one or more tags to a resource:
 ```
-ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
 ```
 <strong>Prerequisites</strong>: Endpoint, Login
 
@@ -1048,6 +1058,10 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
   <dd>The CRN of the resource to which the tags are going to be attached; for classic infrastructure resources, it is the ID of the resource. You can obtain the CRN or the ID of the resource by using the `ibmcloud resource search` command.</dd>
   <dt>--resource-type</dt>
   <dd>The resource type of the classic infrastructure resource to which the tags are going to be attached. This parameter is required if you are attaching a tag to a classic infrastructure resource. Possible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
+  <dt>--tag-type</dt>
+  <dd>The type of the tag. The only allowed values are `user` or `service`. The default value is `user`.</dd>
+  <dt>account-id</dt>
+  <dd>The ID of the account that owns the resources to be tagged. This value is required if `tag-type` is set.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1096,7 +1110,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
 
 Detaching one or more tags from a resource:
 ```
-ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE]
+ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
@@ -1111,6 +1125,10 @@ ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --re
   <dd>The CRN of the resource from which the tags are going to be detached; for classic infrastructure resources, it is the ID of the resource. You can obtain the CRN or the ID of the resource by using `ibmcloud resource search` command.</dd>
   <dt>--resource-type</dt>
   <dd>The resource type of the classic infrastructure resource from which the tags are going to be detached; this parameter is required if you are attaching a tag to a classic infrastructure resource. Possible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
+  <dt>--tag-type</dt>
+  <dd>The type of the tag. The only allowed values are `user` or `service`. The default value is `user`.</dd>
+  <dt>account-id</dt>
+  <dd>The ID of the account that owns the resources to be detached. This value is required if `tag-type` is set.</dd>
 </dl>
 
 
@@ -1119,7 +1137,7 @@ ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --re
 
 Delete a tag:
 ```
-ibmcloud resource tag-delete (--tag-name TAG_NAME | -a, --all  [-f, --force]) [-p, --provider PROVIDER]
+ibmcloud resource tag-delete (--tag-name TAG_NAME | -a, --all  [-f, --force]) [-p, --provider PROVIDER] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
@@ -1128,12 +1146,16 @@ ibmcloud resource tag-delete (--tag-name TAG_NAME | -a, --all  [-f, --force]) [-
 <dl>
   <dt>--tag-name</dt>
   <dd>The name of the tag to be deleted.</dd>
-  <dt>-a, --all</dt>
-  <dd>Delete all tags that aren't attached to any resources.</dd>
-  <dt>-f, --force</dt>
+  <dt>-p; --provider</dt> 
+  <dd>Specify classic-infrastructure when you delete a classic infrastructure tag.</dd>
+  <dt>--tag-type</dt>
+  <dd>The type of the tag. The only allowed values are `user` or `service`. The default value is `user`.</dd>
+  <dt>account-id</dt>
+  <dd>The ID of the account that owns the tags to be deleted. This value is required if `tag-type` is set</dd>
+  <dt>force, f</dt>
   <dd>Delete the tags without confirmation.</dd>
-  <dt>-p, --provider</dt> 
-  <dd>Specify `classic-infrastructure` when you delete a classic infrastructure tag.</dd>
+  <dt>all, a</dt>
+  <dd>Delete all tags that are not attatched to any resources.</dd>
 </dl>
 
 A tag can be deleted only if it isn't attached to any resource.

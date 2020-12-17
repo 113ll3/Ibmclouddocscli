@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-20"
+lastupdated: "2020-12-17"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -1207,9 +1207,9 @@ ibmcloud iam roles [--service SERVICE_NAME [--resource-type RESOURCE_TYPE] [--so
   <dt>--roles ROLE_NAME1,ROLE_NAME2...</dt>
   <dd>Show details of specific roles</dd>
   <dt>--service SERVICE_NAME</dt>
-  <dd>Name of the service, only list platform defined roles if not specified.</dd>
+  <dd>Name of the service. Only list platform-defined roles if not specified.</dd>
   <dt>--source-service<dt>
-  <dd>Name of the service, only list platform defined roles if not specified.</dd>
+  <dd>Name of the service. Only list platform-defined roles if not specified. <b>This option does not support private endpoints.</b></dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1313,6 +1313,8 @@ ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NA
   <dt>--file FILE</dt>
   <dd>JSON file of policy definition</dd>
 </dl>
+
+<b>Note:</b> Currently, some combination of `--source-service` and `--service` might fail under private endpoints. Use `--file` as a workaround, or you can create the policy from public endpoints or the UI console.
 
 ## ibmcloud iam authorization-policy-delete
 {: #ibmcloud_iam_authorization_policy_delete}

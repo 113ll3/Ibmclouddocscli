@@ -32,6 +32,7 @@ IBM Cloud CLI and Developer Tools
 		idt/local_debug.md
 		enable_existing_python.md
 
+	service-connection.md
 	monitoring_logging.md
 	ha-dr.md
 	{: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-12-17"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -366,7 +366,7 @@ None.
 
 <dl>
 <dt>-a API_ENDPOINT</dt>
-<dd>The API endpoint, for example, `cloud.ibm.com`. </dd>
+<dd>The API endpoint. For example, `cloud.ibm.com`. Or use `private.cloud.ibm.com` to log in using a private endpoint. </dd>
 <dt>--sso</dt>
 <dd>Specify this option to [log in with a federated ID](/docs/account?topic=account-federated_id). Using this option prompts you to authenticate with your single sign-on provider and enter a one-time passcode to log in.</dd>
 <dt>-u USER_NAME</dt>
@@ -384,7 +384,7 @@ None.
 <dt>-g RESOURCE_GROUP</dt>
 <dd>The name or ID of the target resource group. Optional.</dd>
 <dt>-r REGION</dt>
-<dd>The name of the target region, for example, `us-south` or `eu-gb`.</dd>
+<dd>The name of the target region. For example, `us-south` or `eu-gb`.</dd>
 <dt>--no-region</dt>
 <dd>Forced login without targeting a region.</dd>
 <dt>-o ORG</dt>
@@ -398,25 +398,33 @@ None.
 ### Examples
 {: #login-examples}
 
-Log in interactively:
+#### Log in interactively:
 ```
 ibmcloud login
 ```
 {: codeblock}
 
-Log in with a user name and password, and set a target account, org, and space:
+#### Log in to a private endpoint:
+```
+ibmcloud login -a private.cloud.ibm.com
+```
+{: codeblock}
+
+Two regions are currently supported: `us-south` and `us-east`.
+
+#### Log in with a user name and password, and set a target account, org, and space:
 ```
 ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ```
 {: codeblock}
 
-Log in with federated ID, and set a target account and Cloud Foundry org and space:
+#### Log in with federated ID, and set a target account and Cloud Foundry org and space:
 ```
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 {: codeblock}
 
-Set your Cloud Foundry org and space. You can run the following command to interactively identify the org and space:
+#### Set your Cloud Foundry org and space. You can run the following command to interactively identify the org and space:
 ```
 ibmcloud target --cf
 ```
@@ -428,7 +436,7 @@ ibmcloud target -o <value> -s <value>
 ```
 {: codeblock}
 
-Use an API key with an associated account:
+#### Use an API key with an associated account:
 ```
 ibmcloud login --apikey api-key-string -o MyOrg -s MySpace
 ```
@@ -439,7 +447,7 @@ ibmcloud login --apikey @filename -o MyOrg -s MySpace
 ```
 {: codeblock}
 
-Use an API key with no associated account:
+#### Use an API key with no associated account:
 ```
 ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 ```
@@ -453,7 +461,7 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 If the API key has an associated account, switching to another account isn't supported.
 {: note}
 
-Log in as a specific user with a federated ID:
+#### Log in as a specific user with a federated ID:
 ```
 ibmcloud login -u UserID --sso
 ```

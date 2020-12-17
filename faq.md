@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-12-17"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
@@ -61,6 +61,24 @@ To manually install the {{site.data.keyword.dev_cli_notm}} commands, see [Instal
 {: support}
 
 When you run an {{site.data.keyword.cloud_notm}} CLI command, you're notified if a new version is available. You can also subscribe to the [{{site.data.keyword.cloud_notm}} CLI releases repository](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external} to stay up-to-date on the latest releases.
+
+## Which CLI plugins support private endpoints?
+{: #cli-private-endpoint-plugins-faq}
+{: faq}
+{: support}
+
+To find out which installed CLI plug-ins support private endpoints, use the [**plugin list**](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_list) command.
+
+## Which regions support private endpoints?
+{: #cli-private-endpoint-faq}
+{: faq}
+{: support}
+
+Regions that support private endpoints are `us-east` and `us-south`.
+
+A region must be targeted when a private endpoint is set in the {{site.data.keyword.cloud_notm}} CLI.
+
+For more information about regions, see [Locations for resource deployment](/docs/overview?topic=overview-locations) and [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
 
 ## What is the file structure for {{site.data.keyword.cloud_notm}} applications?
 {: #cli-file-structure}

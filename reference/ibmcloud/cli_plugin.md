@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-12-17"
 
 keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
@@ -149,7 +149,7 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ## ibmcloud plugin list
 {: #ibmcloud_plugin_list}
 
-List all installed plug-ins in {{site.data.keyword.cloud_notm}} CLI.
+List all installed plug-ins in {{site.data.keyword.cloud_notm}} CLI. Each plug-in returns the current version installed, whether there is a more recent version available for update, and if the version of the plug-in installed supports private endpoint use.
 ```
 ibmcloud plugin list
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-12-17"
 
 keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
@@ -277,6 +277,24 @@ ibmcloud sl hardware rescue IDENTIFIER [OPTIONS]
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
+</dl>
+
+## ibmcloud sl hardware toggle-ipmi
+{: #sl_hardware_toggle-ipmi}
+
+Toggle the IPMI interface on and off. This command is asynchronous.
+```
+ibmcloud sl hardware toggle-ipmi IDENTIFIER [OPTIONS]
+```
+
+<strong>Command options</strong>:
+<dl>
+<dt>--enable</dt>
+<dd>Enable the IPMI interface.</dd>
+<dt>--disable</dt>
+<dd>Disable the IPMI interface.</dd>
+<dt>-q, --quiet</dt>
+<dd>Suppress verbose output.</dd>
 </dl>
 
 ## ibmcloud sl hardware update-firmware
