@@ -16,6 +16,7 @@ subcollection: cli
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
+{:note: .note}
 {:tip: .tip}
 
 # Securing your connection when using the {{site.data.keyword.cloud_notm}} CLI
