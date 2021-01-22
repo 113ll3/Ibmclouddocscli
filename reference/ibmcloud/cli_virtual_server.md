@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-08-20"
+  years: 2018, 2021
+lastupdated: "2021-01-22"
 
 keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
@@ -195,7 +195,7 @@ ibmcloud sl vs detail IDENTIFIER [OPTIONS]
 
 **Examples**:
 ```
-ibmcloud sl vs details 12345678
+ibmcloud sl vs detail 12345678
 ```
 {: codeblock}
 
