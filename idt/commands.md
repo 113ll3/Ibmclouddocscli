@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2017, 2020
-lastupdated: "2020-08-20"
+   years: 2017, 2021
+lastupdated: "2021-02-10"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
 
@@ -381,32 +381,6 @@ ibm-cluster: "mycluster"
 ```
 
 In the `cli-config.yml`, you can define the location of a Helm chart in the `chart-path` property and configure the `deploy-image-target` as shown in the example. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.cloud_notm}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster that you created in {{site.data.keyword.cloud_notm}}. If you don't specify the cluster name, are prompted to select it from a list of your available clusters.
-
-### Deploying to Knative clusters
-{: #deploy-knative-cli}
-
-You can deploy your app to a Knative cluster by using a DevOps toolchain or by using the `deploy` command. 
-
-#### Toolchain deployment to Knative
-{: #deploy-knative-toolchain}
-
-[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) provides toolchain deployment support for [Knative](https://www.ibm.com/cloud/learn/knative) clusters on the [{{site.data.keyword.containerlong_notm}}](https://www.ibm.com/cloud/container-service). To use this feature, you need a [Knative-based cluster](https://www.ibm.com/cloud/blog/announcing-managed-knative-on-ibm-cloud-kubernetes-service-experimental) (and not a Helm-based cluster). With this prerequisite met, a Knative deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} commands.
-
-By selecting the **Knative** option, you can create a toolchain that deploys to the Knative-based cluster that you specify through the dialog.
-
-#### Manual deployment to Knative
-{: #deploy-knative-manual}
-
-First, create or enable an app. You must have a Kubernetes cluster that includes Knative.
-
-After those prerequisites are met, you can deploy to Knative by typing the following command from the app folder: 
-
-```
-ibmcloud dev deploy -t knative
-```
-{: codeblock}
-
-The CLI prompts you through the deployment process.
 
 ### Deploying to Red Hat OpenShift on {{site.data.keyword.cloud_notm}}
 {: #deploy-openshift-cli}
