@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-02-09"
+lastupdated: "2021-02-10"
 
 keywords: IBM Cloud CLI, IBMCLOUD_HOME, ibmcloud cli, ibmcloud
 
@@ -17,13 +17,13 @@ subcollection: cli
 {:note: .deprecated}
 {:external: target="_blank" .external}
 
-# Working with multiple accounts or sessions with the {{site.data.keyword.cloud_notm}} CLI
+# Working with multiple sessions with the {{site.data.keyword.cloud_notm}} CLI
 {: #ibmcloud-home}
 
-You can use the IBMCLOUD_HOME environment variable to work with multiple accounts or multiple sessions at the same time in the {{site.data.keyword.cloud}} CLI.
+You can use the IBMCLOUD_HOME environment variable to work with multiple sessions at the same time in the {{site.data.keyword.cloud}} CLI.
 {: shortdesc}
 
-With the IBMCLOUD_HOME environment variable, you can set a path for the local account metadata. You can specify a different directory for each account, and that's helpful when you want to create different {{site.data.keyword.cloud_notm}} CLI sessions for every call or API call.
+With the IBMCLOUD_HOME environment variable, you can set a path for the session metadata. You can specify a different directory for each session, and that's helpful when you want to run multiple {{site.data.keyword.cloud_notm}} CLI sessions simultaneously.
 
 ## Before you begin
 {: #ibmcloud-home-prereq}
