@@ -397,7 +397,7 @@ By selecting the **Knative** option, you can create a toolchain that deploys to 
 #### Manual deployment to Knative
 {: #deploy-knative-manual}
 
-First, create or enable an app. You must have a Kubernetes cluster that includes Knative. For more information about configuring your cluster, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
+First, create or enable an app. You must have a Kubernetes cluster that includes Knative.
 
 After those prerequisites are met, you can deploy to Knative by typing the following command from the app folder: 
 
