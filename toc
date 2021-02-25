@@ -92,6 +92,7 @@ IBM Cloud CLI and Developer Tools
 		/dl-cli-plugin/dl-cli-plugin-dl-cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-kubernetes-service-cli
+		/schematics-cli-plugin/schematics-cli-plugin-schematics-cli-reference
 		/satellite/satellite-satellite-cli-reference
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
 		/hpvs-cli-plugin/hpvs-cli-plugin-hpvs_cli_plugin
