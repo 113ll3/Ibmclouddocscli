@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-03"
+  years: 2019, 2021
+lastupdated: "2021-02-25"
 
 keywords: IBM Cloud CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, kubernetes, kubectl, git
 
@@ -124,6 +124,19 @@ ibmcloud plugin install cloud-functions
 {: codeblock}
 
 For more information, see [Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in](/docs/openwhisk?topic=openwhisk-cli_install).
+
+## Installing {{site.data.keyword.bplong_notm}} CLI plug-in
+{: #idt-install-schematics-cli-plugin}
+
+To create and manage {{site.data.keyword.bpshort}} in {{site.data.keyword.bplong_notm}} service:
+
+* To install the {{site.data.keyword.bplong_notm}} plug-in, run the following command:
+  ```
+  ibmcloud plugin install schematics
+  ```
+  {: codeblock}
+
+For more information, see the [{{site.data.keyword.bplong_notm}} command reference](/docs/schematics?topic=schematics-setup-cli).
 
 ## Installing Git
 {: #idt-install-git}
