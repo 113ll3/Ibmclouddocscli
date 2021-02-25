@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-17"
+  years: 2018, 2021
+lastupdated: "2021-02-25"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -1014,29 +1014,60 @@ ibmcloud resource search "tagReferences.tag.name:name _objectType:SoftLayer_Hard
 List all tags in your billing account
 
 ```
-ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider classic-infrastructure] [-d, --details true] [-a, --attached true] [--output FORMAT] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
+ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT]  [-p, --provider classic-infrastructure] [-d, --details true] [-a, --attached true] [--output FORMAT] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
 ```
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
-  <dt>-o, -offset</dt>
-  <dd>Starting tag position number.</dd>
-  <dt>-l, -limit</dt>
-  <dd>Number of tags to return, up to a maximum of `1000`. The default value is `100`.</dd>
-  <dt>-p; --provider</dt> 
-  <dd>Specify classic-infrastructure when you search for classic infrastructure tags.</dd>
-  <dt>-d, --details</dt>
-  <dd>Show the number of tagged resources.</dd>
+  <dt>--offset value, -o value</dt>
+  <dd>Starting resource position number (default: 0).</dd>
+  <dt>--limit value, -l value</dt>
+  <dd>Number of resources to return (maximum 1000) (default: 100).</dd>
+  <dt>--provider value, -p value</dt> 
+  <dd>Display classic infrastructure resources, only value allowed is: classic-infrastructure. Use it for resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan.</dd>
+  <dt>--details value, -d value</dt>
+  <dd>Show additional attributes for each tag, only value allowed is true.</dd>
   <dt>--attached value, -a value</dt>
-  <dd>Show only the filtered attached tags to a resource. The only value allowed is `true`.</dd>
-  <dt>tag-type</dt>
-  <dd>The type of the tag. The only allowed values are `user` or `service`. The default value is `user`.</dd>
-  <dt>account-id</dt>
-  <dd>The ID of the account that owns the tags that you want to list. This value is required if `tag-type` is set.</dd>
-  <dt>--output value/dt>
-  <dd>Specify the output format. Only JSON is supported.</dd>
+  <dd>Show only filtered attached tags to a resource, only value allowed is true.</dd>
+  <dt>--tag-type value</dt>
+  <dd>Type of the tag. Only allowed values are: user, service or access (default value : user).</dd>
+  <dt>--account-id value</dt>
+  <dd>The ID of the account that owns the tags that you want to list (required if tag-type is set to service).</dd>
+  <dt>--output value</dt>
+  <dd>Specify output format, only JSON is supported now.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
 </dl>
+
+
+## ibmcloud resource tag-create
+{: #ibmcloud_resource_tag_create}
+
+Create an access management tag:
+```
+ibmcloud resource tag-create --tag-names TAG_NAMES
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+  <dt>--tag-names value</dt>
+  <dd>Comma separated list of tag names.</dd>
+  <dt>-q, --quiet</dt> 
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+This command is only valid for access management tags.
+
+<strong>Example</strong>:
+
+* Run the following command to create the access management tag `project:myproject`:
+  ```
+  ibmcloud resource tag-create —tag-names “project:myproject”
+  ```
+  {: codeblock}
 
 
 ## ibmcloud resource tag-attach
@@ -1050,23 +1081,25 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--tag-names(required)</dt>
-  <dd>Comma-separated list of tag names</dd>
-  <dt>--resource-name</dt>
-  <dd>The name of the resource to which the tags are to be attached. This option cannot be used with classic infrastructure resources.</dd>
-  <dt>--resource-id</dt>
-  <dd>The CRN of the resource to which the tags are going to be attached; for classic infrastructure resources, it is the ID of the resource. You can obtain the CRN or the ID of the resource by using the `ibmcloud resource search` command.</dd>
-  <dt>--resource-type</dt>
-  <dd>The resource type of the classic infrastructure resource to which the tags are going to be attached. This parameter is required if you are attaching a tag to a classic infrastructure resource. Possible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
-  <dt>--tag-type</dt>
+  <dt>--tag-names value</dt>
+  <dd>Comma-separated list of tag names.</dd>
+  <dt>--resource-name value</dt>
+  <dd>Name of the resource on which the tags should be attached.</dd>
+  <dt>--resource-id value</dt>
+  <dd>CRN of the resource on which the tags should be attached (for classic infrastructure resources, the value is the ID of the resource).</dd>
+  <dt>--resource-type value</dt>
+  <dd>Type of the tag. Only allowed values are: user, service or access (default value : user).</dd>
+  <dt>--tag-type value</dt>
   <dd>The type of the tag. The only allowed values are `user` or `service`. The default value is `user`.</dd>
-  <dt>account-id</dt>
-  <dd>The ID of the account that owns the resources to be tagged. This value is required if `tag-type` is set.</dd>
+  <dt>--account-id value</dt>
+  <dd>The ID of the account that owns the resources to be tagged (required if tag-type is set to service).</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
 </dl>
 
 <strong>Examples</strong>:
 
-* To attach the tag `MyTag` to a Kubernetes cluster named `MyCluster`, first look for the CRN of the cluster you would like to tag:
+* To attach the user tag `MyTag` to a Kubernetes cluster named `MyCluster`, first look for the CRN of the cluster you would like to tag:
   ```
   ibmcloud resource search 'type:k8\-cluster AND name:MyCluster'
   ```
@@ -1084,14 +1117,14 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
   ```
   {: codeblock}
 
-* To attach the tag `MyTag` to a resource names `MyResource`:
+* To attach the user tag `MyTag` to a resource named `MyResource`:
   ```
   ibmcloud resource tag-attach --tag-name MyTag --resource-name  'MyResource'
   ```
   {: codeblock}
   
   
-* To attach the tag `MyTag` to a classic infrastructure virtual guest named `MyVM`, first look for the ID of the virtual guest you would like to tag:
+* To attach the user tag `MyTag` to a classic infrastructure virtual guest named `MyVM`, first look for the ID of the virtual guest you would like to tag:
   ```
   ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
   ```
@@ -1104,33 +1137,88 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
   ibmcloud resource tag-attach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest  
   ```
   {: codeblock}
+  
+* To attach the access management tag `project:myproject`, that you previously created, to an instance of IBM Cloud Object Storage called `Project data`, run the following command:
+  ```
+  ibmcloud resource tag-attach --tag-names "project:myproject" --resource-name Project data -—tag-type access  
+  ```
+  {: codeblock}
 
 ## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
 
 Detaching one or more tags from a resource:
 ```
-ibmcloud resource tag-detach  --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
+ibmcloud resource tag-detach --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--tag-names(required)</dt>
-  <dd>Comma-separated list of tag names</dd>
-  <dt>--resource-name</dt>
-  <dd>The name of the resource from which the tags are to be detached. This option cannot be used with classic infrastructure resources.</dd>
-  <dt>--resource-id</dt>
-  <dd>The CRN of the resource from which the tags are going to be detached; for classic infrastructure resources, it is the ID of the resource. You can obtain the CRN or the ID of the resource by using `ibmcloud resource search` command.</dd>
-  <dt>--resource-type</dt>
-  <dd>The resource type of the classic infrastructure resource from which the tags are going to be detached; this parameter is required if you are attaching a tag to a classic infrastructure resource. Possible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
-  <dt>--tag-type</dt>
-  <dd>The type of the tag. The only allowed values are `user` or `service`. The default value is `user`.</dd>
-  <dt>account-id</dt>
-  <dd>The ID of the account that owns the resources to be detached. This value is required if `tag-type` is set.</dd>
+  <dt>--tag-names value</dt>
+  <dd>Comma-separated list of tag names.</dd>
+  <dt>--resource-name value</dt>
+  <dd>Name of the resource on which the tags should be attached.</dd>
+  <dt>--resource-id value</dt>
+  <dd>CRN of the resource on which the tags should be attached (for classic infrastructure resources, the value is the ID of the resource).</dd>
+  <dt>--resource-type value</dt>
+  <dd>Resource type on which the tags should be attached (required for classic infrastructure resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan only).</dd>
+  <dt>--tag-type value</dt>
+  <dd>Type of the tag. Only allowed values are: user, service or access (default value : user).</dd>
+  <dt>--account-id value</dt>
+  <dd>The ID of the account that owns the resources to be detached (required if tag-type is set to service).</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
 </dl>
 
+<strong>Examples</strong>:
+
+* To detach the user tag `MyTag` from a Kubernetes cluster named `MyCluster`, first look for the CRN of the cluster you would like to detach the tag from:
+  ```
+  ibmcloud resource search 'type:k8\-cluster AND name:MyCluster'
+  ```
+  {: codeblock}
+
+  Take note of the CRN, which is a string similar to the following example: 
+  ```
+  crn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
+  ```
+  {: screen}
+
+  To detach the tag, run the following command:
+  ```
+  ibmcloud resource tag-detach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a:: 
+  ```
+  {: codeblock}
+
+* To detach the user tag `MyTag` to a resource named `MyResource`:
+  ```
+  ibmcloud resource tag-detach --tag-name MyTag --resource-name 'MyResource'
+  ```
+  {: codeblock}
+  
+  
+* To detach the user tag `MyTag` to a classic infrastructure virtual guest named `MyVM`, first look for the ID of the virtual guest you would like to detach the tag from:
+  ```
+  ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
+  ```
+  {: codeblock}
+
+  Take a note of the ID, which is a string similar to `48373549`.
+
+  To detach the tag, run the following command:
+  ```
+  ibmcloud resource tag-detach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest  
+  ```
+  {: codeblock}
+  
+* To detach the access management tag `project:myproject` from an instance of IBM Cloud Object Storage called `Project data`, run the following command:
+  ```
+  ibmcloud resource tag-detach --tag-names "project:myproject" --resource-name Project data -—tag-type access  
+  ```
+  {: codeblock}
+  
 
 ## ibmcloud resource tag-delete
 {: #ibmcloud_resource_tag_delete}
@@ -1144,22 +1232,51 @@ ibmcloud resource tag-delete (--tag-name TAG_NAME | -a, --all  [-f, --force]) [-
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--tag-name</dt>
-  <dd>The name of the tag to be deleted.</dd>
-  <dt>-p; --provider</dt> 
-  <dd>Specify classic-infrastructure when you delete a classic infrastructure tag.</dd>
-  <dt>--tag-type</dt>
-  <dd>The type of the tag. The only allowed values are `user` or `service`. The default value is `user`.</dd>
-  <dt>account-id</dt>
-  <dd>The ID of the account that owns the tags to be deleted. This value is required if `tag-type` is set</dd>
-  <dt>force, f</dt>
+  <dt>--tag-name value</dt>
+  <dd>Tag name to be deleted.</dd>
+  <dt>--provider value, -p value</dt> 
+  <dd>Delete the tag in the specified provider (only supported value is classic-infrastructure). Use it for resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan.</dd>
+  <dt>--tag-type value</dt>
+  <dd>Type of the tag. Only allowed values are: user, service or access (default value : user).</dd>
+  <dt>account-id value</dt>
+  <dd>The ID of the account that owns the tags to be deleted (required if tag-type is set to service).</dd>
+  <dt>--force, -f</dt>
   <dd>Delete the tags without confirmation.</dd>
-  <dt>all, a</dt>
-  <dd>Delete all tags that are not attatched to any resources.</dd>
+  <dt>--all, -a</dt>
+  <dd>Delete all tags not attatched to any resources.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
 </dl>
 
 A tag can be deleted only if it isn't attached to any resource.
 
+<strong>Examples</strong>:
+
+* To delete the user tag `MyTag` from the account:
+  ```
+  ibmcloud resource tag-delete --tag-name "MyTag"
+  ```
+  {: codeblock}
+  
+* To delete the access management tag `project:myproject` from the account:
+  ```
+  ibmcloud resource tag-delete --tag-name "project:myproject" --tag-type access
+  ```
+  {: codeblock}
+  
+* To delete all unused user tags from the account:
+  ```
+  ibmcloud resource tag-delete -a 
+  ```
+  {: codeblock}
+  
+* To delete all unused access management tags from the account:
+  ```
+  ibmcloud resource tag-delete -a --tag-type access
+  ```
+  {: codeblock}
+  
+  
 ## ibmcloud resource reclamations
 {: #ibmcloud_resource_reclamations}
 
@@ -1272,4 +1389,3 @@ Delete a resource reclamation with ID `d9fendfwlw` and leave a comment of "no lo
 ```
 ibmcloud resource reclamation-delete "d9fendfwlw" --comment "no longer needed" -f
 ```
-
