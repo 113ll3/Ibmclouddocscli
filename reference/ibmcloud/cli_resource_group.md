@@ -1025,7 +1025,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT]  [-p, --provide
   <dt>--limit value, -l value</dt>
   <dd>Number of resources to return (maximum 1000) (default: 100).</dd>
   <dt>--provider value, -p value</dt> 
-  <dd>Display Classic Infrastructure resources, only value allowed is: classic-infrastructure. Use it for resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan.</dd>
+  <dd>Display classic infrastructure resources, only value allowed is: classic-infrastructure. Use it for resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan.</dd>
   <dt>--details value, -d value</dt>
   <dd>Show additional attributes for each tag, only value allowed is true.</dd>
   <dt>--attached value, -a value</dt>
@@ -1086,7 +1086,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
   <dt>--resource-name value</dt>
   <dd>Name of the resource on which the tags should be attached.</dd>
   <dt>--resource-id value</dt>
-  <dd>CRN of the resource on which the tags should be attached (for Classic Infrastructure resource, it is the ID of the resource).</dd>
+  <dd>CRN of the resource on which the tags should be attached (for classic infrastructure resources, the value is the ID of the resource).</dd>
   <dt>--resource-type value</dt>
   <dd>Type of the tag. Only allowed values are: user, service or access (default value : user).</dd>
   <dt>--tag-type value</dt>
@@ -1161,9 +1161,9 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES (--resource-name NAME | --res
   <dt>--resource-name value</dt>
   <dd>Name of the resource on which the tags should be attached.</dd>
   <dt>--resource-id value</dt>
-  <dd>CRN of the resource on which the tags should be attached (for Classic Infrastructure resource, it is the ID of the resource).</dd>
+  <dd>CRN of the resource on which the tags should be attached (for classic infrastructure resources, the value is the ID of the resource).</dd>
   <dt>--resource-type value</dt>
-  <dd>Resource type on which the tags should be attached (required for Classic Infrastructure resource of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan only).</dd>
+  <dd>Resource type on which the tags should be attached (required for classic infrastructure resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan only).</dd>
   <dt>--tag-type value</dt>
   <dd>Type of the tag. Only allowed values are: user, service or access (default value : user).</dd>
   <dt>--account-id value</dt>
