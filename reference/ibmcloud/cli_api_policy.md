@@ -732,7 +732,7 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dd>Role names of the policy definition. For supported roles of a specific service, run `ibmcloud iam roles --service SERVICE_NAME`. This option is exclusive with the `--file` option.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (optional)</dt>
 <dd>Service name of the policy definition. This option is exclusive with the `--file` option.</dd>
-<dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i> (optional)</dt>
+<dt>--service-instance <i>SERVICE_INSTANCE_GUID</i> (optional)</dt>
 <dd>GUID of service instance of the policy definition. This option is exclusive with the `--file` option.</dd>
 <dt>--region <i>REGION</i> (optional)</dt>
 <dd>Region of the policy definition. This option is exclusive with the `--file` option.</dd>
