@@ -727,7 +727,7 @@ ibmcloud resource service-key-update my-service-key -n my-service-key-2
 
 Delete a service key.
 ```
-ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
+ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --force]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
