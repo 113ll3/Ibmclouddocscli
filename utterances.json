@@ -1,0 +1,55 @@
+{
+  "faq-deploy-existing-code": [
+    "how to deploy apps",
+    "deploy apps",
+    "deploy apps with CLI",
+    "want to deploy an app",
+    "use CLI for app deployment",
+    "app deployment using CLI",
+    "deploy apps with the CLI",
+    "create an app using command line",
+    "Create an app using the CLI commands",
+    "how to build and run the app",
+    "how to deploy an app with command line",
+    "how to view an app using CLI",
+    "view the URL of an app running on IBM Cloud"
+  ],
+  "cli-install-devtools-manually": [
+    "where can I find cloud foundry command line interface",
+    "steps to install IBM Cloud CLI",
+    "installing Cloud CLI",
+    "where is the command line",
+    "how to login into IBM CLI",
+    "how to access CLI",
+    "access from the command line",
+    "install the IBM Cloud Developer Tools commands",
+    "how to launch CLI",
+    "CLI",
+    "find the command line interface?",
+    "command line interface"
+  ],
+  "ts-cli-docker": [
+    "how do I deploy docker images with ibm cloud",
+    "Not able to push docker image",
+    "how to deploy docker image on cloud foundry application",
+    "How to deploy docker image",
+    "How to deploy docker image on IBM Kubernets",
+    "cannot push docker image to registry",
+    "want to create a docker image that uses Db2 Warehouse Developer Edition",
+    "how to build docker image",
+    "can't buid a docker image",
+    "An error exit status 1 was encountered while building the Docker image"
+  ],
+  "ts-cli-determine-language": [
+    "how can i change language to ibmcloud cli",
+    "update the language in CLI",
+    "why can't the app language be determined",
+    "Could not determine the language of your app",
+    "error could not determine the language of your app",
+    "how to specify the language of your app",
+    "change the language of the app",
+    "supported languages for apps",
+    "determine the app language",
+    "app language change in app"
+  ]
+}
