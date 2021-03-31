@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cli" category="platform_services" audience="platform" href="/docs/cli?topic=cli-getting-started" path="cli" console-page="/shell" product-page="https://www.ibm.com/cloud/cli"}
-IBM Cloud CLI and Developer Tools
+IBM Cloud CLI
 
 	{: .navgroup id="learn"}
 	index.md
@@ -92,6 +92,9 @@ IBM Cloud CLI and Developer Tools
 		/dl-cli-plugin/dl-cli-plugin-dl-cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-kubernetes-service-cli
+		/monitor-cli-plugin/monitor-cli-plugin-monitor-cli
+		/log-analysis-cli-plugin/log-analysis-cli-plugin-log-analysis-cli
+		/activity-tracker-cli-plugin/activity-tracker-cli-plugin-activity-tracker-cli
 		/schematics-cli-plugin/schematics-cli-plugin-schematics-cli-reference
 		/satellite/satellite-satellite-cli-reference
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
