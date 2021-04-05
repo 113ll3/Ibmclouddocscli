@@ -27,6 +27,7 @@ IBM Cloud CLI
 	IBM Cloud Developer Tools IDE Extensions
 		idt/vscode.md
 		idt/jetbrains.md
+		eclipse.md
 
 	{: .topicgroup}
 	Debugging
