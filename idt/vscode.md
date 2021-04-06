@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-06"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -59,6 +59,6 @@ First, open the command palette by using the following key combination:
 * **Mac:** `cmd + shift + p`
 * **Windows&trade; / Linux&trade;:** `ctrl + shift + p`
 
-Next, either enter or select the command that you want to start. You can type `ibmcloud` within the command palette to see the list of all available commands.
+Next, either enter or select the command that you want to start. You can type `dev` within the command palette to see the list of all available commands.
 
 From here, you can develop and deploy your application. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli#create-deploy-app-cli).
