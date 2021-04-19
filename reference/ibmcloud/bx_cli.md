@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-17"
+  years: 2018, 2021
+lastupdated: "2021-04-19"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -353,7 +353,7 @@ ibmcloud cf install --restore
 
 Log in to the {{site.data.keyword.cloud_notm}} CLI:
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [--accept] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE]
 ```
 
 ### Prerequisites
@@ -375,12 +375,12 @@ None.
 <dd>The user password. Optional.</dd>
 <dt>--apikey API_KEY or @API_KEY_FILE_PATH</dt>
 <dd>The API key content or the path of an API key file that is indicated by the @ symbol.</dd>
-<dt>--no-iam</dt>
-<dd>Force authentication with the login server instead of the public IAM.</dd>
 <dt>-c ACCOUNT_ID</dt>
 <dd>The ID of the target account. This option is exclusive with the `--no account` option.</dd>
 <dt>--no-account</dt>
 <dd>Forced login without the account. This option isn't recommended, and it is exclusive with the `-c` option.</dd>
+<dt>--accept</dt>
+<dd>Accept an invitation to join the targeted account. The provided account must be a valid account ID.</dd>
 <dt>-g RESOURCE_GROUP</dt>
 <dd>The name or ID of the target resource group. Optional.</dd>
 <dt>-r REGION</dt>
@@ -475,6 +475,12 @@ Open the URL in the default browser? [Y/n] >
 {: screen}
 
 Open the link in a browser to get a passcode. Enter the passcode in the console to log in.
+
+#### Accept invitation to join a new account:
+```
+ibmcloud login -c TargetedAccountID --accept
+```
+{: codeblock}
 
 ## ibmcloud logout
 {: #ibmcloud_logout}
