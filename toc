@@ -24,7 +24,7 @@ IBM Cloud CLI
 		idt/deploy_to_icp.md
 
 	{: .topicgroup}
-	IBM Cloud Developer Tools IDE Extensions
+	IBM Cloud CLI IDE Extensions
 		idt/vscode.md
 		idt/jetbrains.md
 		eclipse.md
@@ -114,7 +114,6 @@ IBM Cloud CLI
 
 	{: .topicgroup}
 	SDKs for Mobile
-		sdk/sdk.md
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md
 	{: .navgroup-end}
