@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-08-03"
+  years: 2020, 2021
+lastupdated: "2021-04-29"
 
-keywords: command line interface, cli, cli support, cli forum, cli slack, cli chat, cli help, developer tools, ibmcloud dev commands, ic dev commands
+keywords: command line interface, cli, cli support, cli forum, cli slack, cli chat, cli help, developer tools, ibmcloud dev commands, ic dev commands, commands
 
 subcollection: cli
 
@@ -21,12 +21,16 @@ subcollection: cli
 If you have questions or problems when you use the {{site.data.keyword.cloud}} Command Line Interface and {{site.data.keyword.dev_cli_notm}} commands, you can chat with the development team on Slack or post questions to Stack Overflow. If you need to, you can open a support case from the Support Center.
 {: shortdesc}
 
+## Chat with us on Slack
+{: #feedback-chat}
+
+Have a casual question or just want to talk about all things CLI? Come chat with the development team on [{{site.data.keyword.cloud_notm}} Dev Tools Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}. After you request your invitation, sign in and join the `#ask-your-question` channel.
+
 ## Community help
 {: #community-help}
 {: support}
 
-* If you have a casual question or just want to talk about all things {{site.data.keyword.cloud_notm}} CLI, come chat with the development team on [IBM Cloud Technology Slack](https://ibm.biz/cli-feedback). After you request your invite, sign in and join the `#developer-tools` channel.
-* Search [Stack Overflow](https://stackoverflow.com/search?q=ibm-cloud){: external} or [IBM Support Forums](https://www.ibm.com/mysupport/s/forumshome){: external} to see whether other users ran into the same problem. When you use these forums to ask a question, tag your question with `ibm-cloud` and `cli` so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
+Search [Stack Overflow](https://stackoverflow.com/search?q=ibm-cloud){: external} or [IBM Support Forums](https://www.ibm.com/mysupport/s/forumshome){: external} to see whether other users ran into the same problem. When you use these forums to ask a question, tag your question with `ibm-cloud` and `cli` so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
 
 ## Contacting support
 {: #contacting-support}

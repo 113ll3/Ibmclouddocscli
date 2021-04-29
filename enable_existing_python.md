@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-03"
+  years: 2019, 2021
+lastupdated: "2021-04-29"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help, ic dev enable
 
@@ -40,7 +40,7 @@ See the following sample output:
 ```
 > ibmcloud dev enable
 The enable feature is currently in Beta.
-Please provide your experience and feedback at: https://ibm-cloud-tech.slack.com/messages/developer-tools/
+Please provide your experience and feedback at: https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/
 Only server-side apps are supported by the enable feature
 
 ? Python - Flask app discovered. Do you want to proceed with this
