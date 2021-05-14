@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "202`-05-14"
+lastupdated: "2021-05-14"
 
 keywords: IBM Cloud CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, kubernetes, kubectl, git
 
