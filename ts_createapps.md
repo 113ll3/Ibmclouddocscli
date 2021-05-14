@@ -8,18 +8,19 @@ keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud 
 
 subcollection: cli
 
+content-type: troubleshoot
+
 ---
 
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
-
+{:troubleshoot: data-hd-content-type='troubleshoot'}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:note: .deprecated}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 
