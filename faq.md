@@ -8,6 +8,8 @@ keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
 subcollection: cli
 
+content-type: faq
+
 ---
 
 
@@ -51,7 +53,7 @@ ibmcloud update
 
 ## How do I manually install the {{site.data.keyword.dev_cli_notm}} commands?
 {: #cli-install-devtools-manually}
-{: troubleshoot}
+{: faq}
 
 To manually install the {{site.data.keyword.dev_cli_notm}} commands, see [Installing the tools and plug-ins manually](/docs/cli?topic=cli-install-devtools-manually).
 
