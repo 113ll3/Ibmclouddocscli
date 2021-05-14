@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-02-25"
+lastupdated: "202`-05-14"
 
 keywords: IBM Cloud CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, kubernetes, kubectl, git
 
@@ -105,7 +105,6 @@ Install [Helm](https://helm.sh/docs/){: external}, which is a Kubernetes-based p
 
 * Mac and Linux&trade; users, run the following commands:
   ```
-  export DESIRED_VERSION=v2.7.2
   curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
   ```
   {: codeblock}
