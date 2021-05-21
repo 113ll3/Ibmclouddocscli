@@ -93,6 +93,7 @@ IBM Cloud CLI
 		/dl-cli-plugin/dl-cli-plugin-dl-cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-kubernetes-service-cli
+		/cloudant-cli-plugin/cloudant-cli-plugin-cloudant-cli
 		/monitor-cli-plugin/monitor-cli-plugin-monitor-cli
 		/log-analysis-cli-plugin/log-analysis-cli-plugin-log-analysis-cli
 		/activity-tracker-cli-plugin/activity-tracker-cli-plugin-activity-tracker-cli
