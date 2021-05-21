@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-03"
+  years: 2015, 2021
+lastupdated: "2021-05-21"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -57,6 +57,9 @@ Use the following steps to install the latest stand-alone {{site.data.keyword.cl
 {: #shell_install}
 
 To install the latest CLI for your OS from the shell manually, use the following command for your OS:
+
+  If you don't want to install from the shell because it might utilize root permissions, you can [download and run the installer](/docs/cli?topic=cli-install-ibmcloud-cli#ibmcloud-cli-installer).
+  {: tip}
 
 * For **Mac**, copy and paste the following command to a terminal and run it:
   ```
