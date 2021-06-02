@@ -35,7 +35,6 @@ IBM Cloud CLI
 		enable_existing_python.md
 
 	service-connection.md
-	monitoring_logging.md
 	ha-dr.md
 	{: .navgroup-end}
 
