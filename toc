@@ -13,7 +13,6 @@ IBM Cloud CLI
 	install-devtools-manually.md
 	reference/ibmcloud/extend_cli.md
 	ibmcloud_home.md
-	reference/ibmcloud/cli_docker.md
 	reference/ibmcloud/enable_cli_autocompletion.md
 	quote-strings.md
 	reference/ibmcloud/uninstall_cli.md
