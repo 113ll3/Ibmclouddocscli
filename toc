@@ -11,6 +11,7 @@ IBM Cloud CLI
 	{: .navgroup id="howto"}
 	reference/ibmcloud/download_cli.md
 	install-devtools-manually.md
+	cli-private-endpoints.md
 	reference/ibmcloud/extend_cli.md
 	ibmcloud_home.md
 	reference/ibmcloud/enable_cli_autocompletion.md
