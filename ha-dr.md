@@ -25,7 +25,7 @@ subcollection: cli
 {{site.data.keyword.cloud}} provides a service for hosting the {{site.data.keyword.cloud}} Command Line Interface and plug-ins. The {{site.data.keyword.cloud_notm}} CLI follows the practices that are described in [How IBM Cloud ensures high availability and disaster recovery](/docs/overview?topic=overview-zero-downtime).
 {: shortdesc}
 
-This service is hosted in the Dallas (`us-south`) and Frankfurt (`eu-de`) regions, which are collectively served by a global endpoint. The CLI binary data is stored in a cross-regional {{site.data.keyword.cos_full_notm}} instance. If the service in one region fails, the {{site.data.keyword.cloud_notm}} CLI is still operational on the client's on-premise installation. At that point, region failover ensures that installation and updates can continue.
+This service is hosted in the Dallas (`us-south`) and Frankfurt (`eu-de`) regions, which are collectively served by a global endpoint. The CLI binary data is stored in a US cross-regional {{site.data.keyword.cos_full_notm}} instance. If the service in one region fails, the {{site.data.keyword.cloud_notm}} CLI is still operational on the client's on-premise installation. At that point, region failover ensures that installation and updates can continue.
 
 The {{site.data.keyword.cloud_notm}} CLI does not store user data.
 {: note}
