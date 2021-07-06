@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-24"
+lastupdated: "2021-07-06"
 
 keywords: IBM Cloud CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, private endpoints, shell
 
@@ -35,12 +35,7 @@ You must first enable virtual routing and forwarding in your account, and then y
 
 To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Secure access to services by using service endpoints](/docs/account?topic=account-service-endpoints-overview).
 
-Certain commands are supported only on classic infrastructure when the private endpoints feature is enabled. The following commands are currently not supported on VPC:
-* `plugin repo-plugins`
-* `plugin repo-plugin`
-* `plugin install`
-* `plugin update`
-* `update`
+The core CLI is supported only on classic infrastructure when the private endpoints feature is enabled. Certain core features and commands are currently not supported on VPC infrastructure.
 {: important}
 
 ## Installing from the shell
