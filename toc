@@ -100,7 +100,7 @@ IBM Cloud CLI
 		/satellite/satellite-satellite-cli-reference
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
 		/hpvs-cli-plugin/hpvs-cli-plugin-hpvs_cli_plugin
-		/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin
+		/hs-crypto-cli-plugin/hs-crypto-cli-plugin-hpcs-cli-plugin
 		/mobilepush-cli-plugin/mobilepush-cli-plugin-mobilepush-cli
 		/cis-cli-plugin/cis-cli-plugin-cis-cli
 		/dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
