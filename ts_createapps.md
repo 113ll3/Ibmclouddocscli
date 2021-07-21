@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-29"
+  years: 2015, 2021
+lastupdated: "2021-07-20"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -201,7 +201,7 @@ Delete the `node_modules` folder and run the `ibmcloud dev run` command again.
 {: troubleshoot}
 {: support}
 
-A failure occurs when you try to deploy to {{site.data.keyword.cloud_notm}}, but there is no error that is displayed.
+A failure occurs when you try to deploy to {{site.data.keyword.cloud_notm}}, but no error is displayed.
 {: tsSymptoms}
 
 You might not be logged in to your account.
