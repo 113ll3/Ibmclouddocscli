@@ -25,7 +25,7 @@ You can manually install the {{site.data.keyword.cloud}} Command Line Interface 
 {: shortdesc}
 
 ## Before you begin
-{: cli-before-you-begin}
+{: #cli-before-you-begin}
 
 * Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#install-ibmcloud-cli) to get support for installing command-line plug-ins for {{site.data.keyword.cloud_notm}}.
 * Install the [curl](https://curl.haxx.se/download.html){: external} command for downloading packages through the command line.
