@@ -29,7 +29,7 @@ To ensure that you have enhanced control and security over your data when you us
 The CLI uses the private endpoint support that is provided by the {{site.data.keyword.cloud_notm}} platform. Platform services that are used by the core CLI provide private endpoint support.
 
 ## Before you begin
-{: cli-private-endpoints-prereqs}
+{: #cli-private-endpoints-prereqs}
 
 You must first enable virtual routing and forwarding in your account, and then you can enable the use of {{site.data.keyword.cloud_notm}} private service endpoints. For more information about setting up your account to support the private connectivity option, see [Enabling VRF and service endpoints](/docs/account?topic=account-vrf-service-endpoint). In addition to enabling VRF, you must be on a private network on `ibmcloud` with either classic infrastructure or a VPC. For more information, see [how to connect to the {{site.data.keyword.cloud_notm}} VPN](https://cloud.ibm.com/docs/iaas-vpn?topic=iaas-vpn-getting-started).
 
@@ -39,7 +39,7 @@ The core CLI is supported only on classic infrastructure when the private endpoi
 {: important}
 
 ## Installing from the shell
-{: #shell_install}
+{: #cli-private-endpoints-shell}
 
 To install the latest CLI for your OS from the shell manually, use the following command for your OS:
 
@@ -73,7 +73,7 @@ To install the latest CLI for your OS from the shell manually, use the following
   
 
 ## Downloading installation packages with private endpoints
-{: cli-private-endpoints-download}
+{: #cli-private-endpoints-download}
 
 Use the following steps to install the latest stand-alone {{site.data.keyword.cloud_notm}} CLI:
 
@@ -150,9 +150,7 @@ To view previous releases, access the official [ibm-cloud-cli-releases](https://
   ```
   {: codeblock}
    
-
 ## Installing to a custom directory
-
 {: #install-custom-dir}
 
 When you use installers or a shell script to install the {{site.data.keyword.cloud_notm}} CLI, it is installed in your system directories. If you want to specify a different directory, use the following steps.
@@ -249,11 +247,11 @@ To view previous releases, access the official [ibm-cloud-cli-releases](https://
   {: codeblock}
 
 ## Using private endpoints in the CLI
-{: cli-private-endpoints-using}
+{: #cli-private-endpoints-using}
 
 For instructions on how to use private endpoints in the CLI, and to view the list of commands that support private endpoints, see [Logging in to the CLI with a private endpoint](/docs/cli?topic=cli-service-connection#cli-private-login)
 
 ## Related information
-{: cli-private-endpoints-related}
+{: #cli-private-endpoints-related}
 
 For more information, see [Securing your connection when using the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-service-connection).
