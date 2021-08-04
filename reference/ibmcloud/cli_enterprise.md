@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-08-03"
+  years: 2018, 2021
+lastupdated: "2021-07-29"
 
 keywords: cli, ibmcloud enterprise, view enterprise, view enterprise account, view enterprise account group., enterprise, account-group, account-group-create, account-group-update, 
 
@@ -28,8 +28,6 @@ Create an enterprise.
 ibmcloud enterprise create NAME [-d, --domain DOMAIN_NAME] [--primary-contact-id PRIMARY_CONTACT_USER_ID]
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 
 <dl>
@@ -49,8 +47,6 @@ Update enterprise information.
 ibmcloud enterprise update (-n, --name NEW_NAME) [-f, --force]
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 
 <dl>
@@ -68,8 +64,6 @@ Display details of the enterprise.
 ibmcloud enterprise show
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 ## ibmcloud enterprise account-group-create
 {: #ibmcloud_enterprise_account_group_create} 
 
@@ -77,8 +71,6 @@ Create an account group.
 ```
 ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GROUP_NAME] [--primary-contact-id PRIMARY_CONTACT_USER_ID]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 
@@ -99,8 +91,6 @@ Update an account group.
 ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name NEW_NAME)
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 
 <dl>
@@ -120,8 +110,6 @@ Display details of account group.
 ibmcloud enterprise account-group (-n, --name NAME | --id ID)
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 
 <dl>
@@ -138,8 +126,6 @@ List account groups.
 ```
 ibmcloud enterprise account-groups [--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID] [--recursive]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 
@@ -160,8 +146,6 @@ Create an account.
 ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NAME] [--owner USER_ID]
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 
 <dl>
@@ -180,8 +164,6 @@ Move an account under different parent.
 ```
 ibmcloud enterprise account-move (-n, --name NAME | --id ID) (--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID | --parent-enterprise)
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 
@@ -206,8 +188,6 @@ Display details of an account.
 ibmcloud enterprise account-show (-n, --name NAME | --id ID)
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 
 <dl>
@@ -224,8 +204,6 @@ List accounts.
 ```
 ibmcloud enterprise accounts [--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID] [--recursive]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 
@@ -245,8 +223,6 @@ Import a stand-alone account.
 ```
 ibmcloud enterprise account-import (--account-id ID) [--parent-account-group ACCOUNT_GROUP_NAME | --parent-account-group-id ACCOUNT_GROUP_ID]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 

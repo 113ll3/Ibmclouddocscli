@@ -77,7 +77,6 @@ IBM Cloud CLI
 
 	{: .topicgroup}
 	IBM Cloud CLI Cloud Foundry commands
-		reference/ibmcloud/cli_cfee.md
 		reference/ibmcloud/cli_cf_apps.md
 		reference/ibmcloud/cli_cf_services.md
 

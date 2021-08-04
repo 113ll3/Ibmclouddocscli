@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-08-20"
+  years: 2018, 2021
+lastupdated: "2021-07-29"
 
 keywords: cli, ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
@@ -27,8 +27,6 @@ Show monthly usage of the current account (account admin only):
 ```
 ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 
@@ -56,8 +54,6 @@ Show monthly usage for an org (account admin or org billing manager only):
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 
 <dl>
@@ -79,8 +75,6 @@ Show monthly usage for a resource group (account admin or resource group admin o
 ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 
 <dl>
@@ -101,8 +95,6 @@ Show monthly resource instances usage under the current account:
 ```
 ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 
@@ -126,8 +118,6 @@ Show enterprise usage reports:
 ```
 ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --account-group-id ACCOUNT_GROUP_ID | --account ACCOUNT_NAME | --account-id ACCOUNT_ID] [--month MONTH] [--children] [--output FORMAT] [-q, --quiet]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 

@@ -139,6 +139,4 @@ app (deprecated)
   all commands
 service (deprecated)
   all commands
-cfee (deprecated)
-  all commands
 ```

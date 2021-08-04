@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-08-03"
+  years: 2018, 2021
+lastupdated: "2021-07-29"
 
 keywords: cli, cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
@@ -129,8 +129,6 @@ List the certificate information of a domain.
 ibmcloud app domain-cert DOMAIN_NAME
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 <dl>
 <dt>DOMAIN_NAME (required)</dt>
@@ -154,8 +152,6 @@ Add a certificate to the specified domain in the current org.
 ```
 ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Target
 
 <strong>Command options</strong>:
    <dl>
@@ -191,8 +187,6 @@ Remove a certificate from the specified domain in current org.
 ibmcloud app domain-cert-remove DOMAIN [-f]
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login, Target
-
 <strong>Command options</strong>:
 
    <dl>
@@ -220,8 +214,6 @@ Map a route to an existing cf application or container group that has the specif
 ```
 ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Target
 
 <strong>Command options</strong>:
 
@@ -258,8 +250,6 @@ Unmap the specified route from an existing cf application or container group.
 ```
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Target
 
 <strong>Command options</strong>:
 

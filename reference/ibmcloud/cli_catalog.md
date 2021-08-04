@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-08-03"
+  years: 2018, 2021
+lastupdated: "2021-07-29"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -34,8 +34,6 @@ Get a catalog entry:
 ibmcloud catalog entry ID [--children] [--global]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>--children</dt>
@@ -58,8 +56,6 @@ Create a catalog entry (catalog admin of an account only):
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -86,8 +82,6 @@ Update an existing catalog entry (catalog admin or editor of an account only):
 ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>-c</dt>
@@ -110,8 +104,6 @@ Delete a catalog entry(catalog admin of an account only)
 ibmcloud catalog entry-delete ID [--global]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>--global</dt>
@@ -133,8 +125,6 @@ Get the visibility for a catalog entry(catalog admin of an account only)
 ibmcloud catalog entry-visibility ID [--global]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>--global</dt>
@@ -155,8 +145,6 @@ Update the visibility of an existing catalog entry(catalog admin of an account o
 ```
 ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -195,8 +183,6 @@ List service offerings in the marketplace:
 ```
 ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -248,8 +234,6 @@ View the boilerplate templates on {{site.data.keyword.cloud_notm}}.
 ibmcloud catalog templates [-d]
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 
    <dl>
@@ -264,8 +248,6 @@ View the detailed information of a specified boilerplate template.
 ```
 ibmcloud catalog template TEMPLATE_ID
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
    <dl>
@@ -290,8 +272,6 @@ Create a cf application that is based on the specified template with the specifi
 ```
 ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNAME] [-desc DESCRIPTION] [--no-start]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Target
 
 <strong>Command options</strong>:
    <dl>

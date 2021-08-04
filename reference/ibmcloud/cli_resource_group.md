@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-07-29"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -28,8 +28,6 @@ List resource groups.
 ```
 ibmcloud resource groups [--default]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -58,8 +56,6 @@ Show details of a resource group
 ```
 ibmcloud resource group NAME [--id]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -92,8 +88,6 @@ ibmcloud resource group-create NAME
 ```
 {: codeblock}
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>NAME (required)</dt>
@@ -115,8 +109,6 @@ Update an existing resource group
 ```
 ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -144,8 +136,6 @@ Delete an existing resource group
 ibmcloud resource group-delete NAME [-f, --force] 
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>NAME (required)</dt>
@@ -171,8 +161,6 @@ ibmcloud resource quotas
 ```
 {: codeblock}
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Examples</strong>:
 
 List all quota definitions:
@@ -189,8 +177,6 @@ Show details of a quota definition.
 ibmcloud resource quota NAME
 ```
 {: codeblock}
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -214,8 +200,6 @@ Migrate a Cloud Foundry service instance into resource group:
 ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>SERVICE_INSTANCE_NAME or SERVICE_INSTANCE_ID (required)</dt>
@@ -235,8 +219,6 @@ List service instances.
 ```
 ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--type INSTANCE_TYPE] [-g RESOURCE_GROUP | --all-resource-groups] [--long]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -271,8 +253,6 @@ Show details of a service instance.
 ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>NAME (required), exclusive with ID</dt>
@@ -300,8 +280,6 @@ Create a service instance.
 ```
 ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVICE_PLAN_NAME LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [--allow-cleanup] [--lock]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -343,8 +321,6 @@ Update service instance.
 ibmcloud resource service-instance-update ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>Name (required)</dt>
@@ -380,8 +356,6 @@ Delete service instance.
 ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>Name (required)</dt>
@@ -410,8 +384,6 @@ Lock service instance.
 ibmcloud resource service-instance-lock ( NAME | ID ) [-g RESOURCE_GROUP] [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>Name (required)</dt>
@@ -438,8 +410,6 @@ Unlock service instance.
 ```
 ibmcloud resource service-instance-unlock ( NAME | ID ) [-g RESOURCE_GROUP] [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -468,8 +438,6 @@ Show bindings to the service alias.
 ibmcloud resource service-bindings SERVICE_ALIAS
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>SERVICE_ALIAS (required)</dt>
@@ -490,8 +458,6 @@ Show details of a service binding.
 ```
 ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -518,8 +484,6 @@ Create a service binding.
 ```
 ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-n BINDING_NAME] [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -555,8 +519,6 @@ Delete a service binding.
 ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: None
-
 <strong>Command options</strong>:
 <dl>
   <dt>SERVICE_ALIAS_NAME (required)</dt>
@@ -581,8 +543,6 @@ List service keys of service instance or service alias.
 ```
 ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -610,8 +570,6 @@ Displays the details of any number of service keys, where the first *n* characte
 ```
 ibmcloud resource service-key (NAME | ID) [-g RESOURCE_GROUP] [--id]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -647,8 +605,6 @@ Create a service key.
 ```
 ibmcloud resource service-key-create NAME [ROLE_NAME] ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-g RESOURCE_GROUP] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force] [-f, --force] [-q, --quiet]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -701,8 +657,6 @@ Update a service key.
 ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RESOURCE_GROUP] [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>NAME | ID</dt>
@@ -730,8 +684,6 @@ Delete a service key.
 ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>KEY_NAME | KEY_ID</dt>
@@ -754,8 +706,6 @@ List aliases for a service instance.
 ```
 ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -780,8 +730,6 @@ Show details of a service alias.
 ibmcloud resource service-alias ALIAS_NAME [--id]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>ALIAS_NAME (required)</dt>
@@ -804,8 +752,6 @@ Create an alias of a service instance.
 ```
 ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
@@ -838,8 +784,6 @@ Update a service alias.
 ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>ALIAS_NAME (required)</dt>
@@ -869,8 +813,6 @@ Delete a service alias.
 ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command options</strong>:
 <dl>
   <dt>ALIAS_NAME (required)</dt>
@@ -893,8 +835,6 @@ Search resources by using Lucene query syntax.
 ```
 ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)] [-p, --provider PROVIDER]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
@@ -1016,7 +956,6 @@ List all tags in your billing account
 ```
 ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT]  [-p, --provider classic-infrastructure] [-d, --details true] [-a, --attached true] [--output FORMAT] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
 ```
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
@@ -1025,7 +964,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT]  [-p, --provide
   <dt>--limit value, -l value</dt>
   <dd>Number of resources to return (maximum 1000) (default: 100).</dd>
   <dt>--provider value, -p value</dt> 
-  <dd>Display classic infrastructure resources, only value allowed is: classic-infrastructure. Use it for resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan.</dd>
+  <dd>Display Classic Infrastructure resources, only value allowed is: classic-infrastructure. Use it for resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan.</dd>
   <dt>--details value, -d value</dt>
   <dd>Show additional attributes for each tag, only value allowed is true.</dd>
   <dt>--attached value, -a value</dt>
@@ -1048,8 +987,6 @@ Create an access management tag:
 ```
 ibmcloud resource tag-create --tag-names TAG_NAMES
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
@@ -1077,7 +1014,6 @@ Attach one or more tags to a resource:
 ```
 ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
 ```
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
@@ -1086,7 +1022,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
   <dt>--resource-name value</dt>
   <dd>Name of the resource on which the tags should be attached.</dd>
   <dt>--resource-id value</dt>
-  <dd>CRN of the resource on which the tags should be attached (for classic infrastructure resources, the value is the ID of the resource).</dd>
+  <dd>CRN of the resource on which the tags should be attached (for Classic Infrastructure resource, it is the ID of the resource).</dd>
   <dt>--resource-type value</dt>
   <dd>Type of the tag. Only allowed values are: user, service or access (default value : user).</dd>
   <dt>--tag-type value</dt>
@@ -1152,8 +1088,6 @@ Detaching one or more tags from a resource:
 ibmcloud resource tag-detach --tag-names TAG_NAMES (--resource-name NAME | --resource-id RESOURCE_ID ) [--resource-type RESOURCE_TYPE] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Command options</strong>:
 <dl>
   <dt>--tag-names value</dt>
@@ -1161,9 +1095,9 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES (--resource-name NAME | --res
   <dt>--resource-name value</dt>
   <dd>Name of the resource on which the tags should be attached.</dd>
   <dt>--resource-id value</dt>
-  <dd>CRN of the resource on which the tags should be attached (for classic infrastructure resources, the value is the ID of the resource).</dd>
+  <dd>CRN of the resource on which the tags should be attached (for Classic Infrastructure resource, it is the ID of the resource).</dd>
   <dt>--resource-type value</dt>
-  <dd>Resource type on which the tags should be attached (required for classic infrastructure resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan only).</dd>
+  <dd>Resource type on which the tags should be attached (required for Classic Infrastructure resource of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan only).</dd>
   <dt>--tag-type value</dt>
   <dd>Type of the tag. Only allowed values are: user, service or access (default value : user).</dd>
   <dt>--account-id value</dt>
@@ -1228,8 +1162,6 @@ Delete a tag:
 ibmcloud resource tag-delete (--tag-name TAG_NAME | -a, --all  [-f, --force]) [-p, --provider PROVIDER] [--tag-type TAG_TYPE] [--account-id ACCOUNT_ID]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Command options</strong>:
 <dl>
   <dt>--tag-name value</dt>
@@ -1285,8 +1217,6 @@ List reclaimed resources that can be restored or deleted:
 ibmcloud resource reclamations [--resource-instance-id INSTANCE_ID]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Command options</strong>:
 <dl>
   <dt>--resource-instance-id</dt>
@@ -1313,8 +1243,6 @@ Show details of a resource reclamation:
 ibmcloud resource reclamation RECLAMATION_ID
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Command options</strong>:
 <dl>
   <dt>RECLAMATION_ID</dt>
@@ -1335,8 +1263,6 @@ Restore a reclaimed resource so that the resource is available again:
 ```
 ibmcloud resource reclamation-restore ID [--comment COMMENT]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
@@ -1366,8 +1292,6 @@ Delete a reclaimed resource so that the resource can no longer be restored:
 ibmcloud resource reclamation-delete ID [--comment COMMENT] [--f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Command options</strong>:
 <dl>
   <dt>ID</dt>
@@ -1389,3 +1313,4 @@ Delete a resource reclamation with ID `d9fendfwlw` and leave a comment of "no lo
 ```
 ibmcloud resource reclamation-delete "d9fendfwlw" --comment "no longer needed" -f
 ```
+

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-17"
+  years: 2018, 2021
+lastupdated: "2021-07-29"
 
 keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -31,8 +31,6 @@ List all service IDs:
 ibmcloud iam service-ids [--uuid]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>--uuid</dt>
@@ -54,8 +52,6 @@ Display details of a service ID:
 ```
 ibmcloud iam service-id (NAME|UUID) [--uuid]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -89,8 +85,6 @@ Create a service ID:
 ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>NAME (required)</dt>
@@ -122,8 +116,6 @@ Update a service ID:
 ```
 ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -167,8 +159,6 @@ Delete a service ID:
 ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>NAME (required)</dt>
@@ -200,8 +190,6 @@ Lock a service ID:
 ```
 ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -236,8 +224,6 @@ ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 ```
 {: codeblock}
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>NAME (required)</dt>
@@ -271,8 +257,6 @@ ibmcloud iam api-keys [--uuid]
 ```
 {: codeblock}
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command Options</strong>:
 <dl>
   <dt>--uuid</dt>
@@ -289,8 +273,6 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 
 Using the {{site.data.keyword.cloud_notm}} CLI login with an API Key does not work with the legacy SL API Key that is found on `control.softlayer.com` option. An upgraded {{site.data.keyword.cloud_notm}} Account where Infrastructure is managed through [cloud.ibm.com](https://cloud.ibm.com/registration){: external} is required for the {{site.data.keyword.cloud_notm}} CLI login with an API Key.
 {: note}
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
@@ -326,8 +308,6 @@ Update a {{site.data.keyword.cloud_notm}} platform API key:
 ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 <dl>
 <dt>NAME (required)</dt>
@@ -348,6 +328,9 @@ ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ```
 {: codeblock}
 
+The `iam-identity.apikey.manage` privilege is required for the account when the NAME and UUID command options are used. For more information, see [Managing user API keys](/docs/account?topic=account-userapikey&interface=ui#manage-user-keys) and [IAM Identity Service](/docs/account?topic=account-iam-service-roles-actions#iam-identity-service).
+{: note}
+
 ## ibmcloud iam api-key-delete
 {: #ibmcloud_iam_api_key_delete}
 
@@ -355,8 +338,6 @@ Delete a {{site.data.keyword.cloud_notm}} platform API key:
 ```
 ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
@@ -375,8 +356,6 @@ Lock a platform API key:
 ```
 ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
@@ -410,8 +389,6 @@ Unlock a platform API key:
 ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login
-
 <strong>Command options</strong>:
 <dl>
 <dt>NAME (required)</dt>
@@ -444,8 +421,6 @@ List all API keys of a service:
 ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>SERVICE_ID_NAME (required)</dt>
@@ -471,8 +446,6 @@ List details of a service API key:
 ```
 ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -506,8 +479,6 @@ Create a service API key:
 ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [-f, --force] [--lock]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>NAME (required)</dt>
@@ -539,8 +510,6 @@ Update a service API key:
 ```
 ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -576,8 +545,6 @@ Delete a service API key:
 ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>APIKEY_NAME (required)</dt>
@@ -607,8 +574,6 @@ Lock a service API key:
 ```
 ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -640,8 +605,6 @@ Unlock a service API key:
 ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>APIKEY_NAME (required)</dt>
@@ -672,8 +635,6 @@ List all access policies for a specified user:
 ibmcloud iam user-policies USER_NAME
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login, Account Targeted
-
 <strong>Command options</strong>:
 <dl>
 <dt>USER_NAME (required)</dt>
@@ -694,8 +655,6 @@ Display details of an access policy for a user:
 ```
 ibmcloud iam user-policy USER_NAME POLICY_ID
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Account Targeted
 
 <strong>Command options</strong>:
 <dl>
@@ -719,8 +678,6 @@ Create an access policy for the specified user in the current account:
 ```
 ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]}
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Account Targeted
 
 <strong>Command options</strong>:
 <dl>
@@ -807,8 +764,6 @@ Update an access policy for the specified user in the current account:
 ```
 ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]}
 ```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Account Targeted
 
 <strong>Command options</strong>:
 <dl>
@@ -898,8 +853,6 @@ Delete an access policy for the specified user:
 ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
 ```
 
-<strong>Prerequisites</strong>:  Endpoint, Login, Account Targeted
-
 <strong>Command Options</strong>:
 <dl>
   <dt>-f, --force</dt>
@@ -927,8 +880,6 @@ List all access policies for a specified service ID:
 ```
 ibmcloud iam service-policies SERVICE_ID [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -959,8 +910,6 @@ Display details of an access policy for a specified service ID:
 ```
 ibmcloud iam service-policy SERVICE_ID POLICY_ID [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -993,8 +942,6 @@ Create an access policy and assign it to a service ID:
 ```
 ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -1071,8 +1018,6 @@ Update an access policy for a service ID:
 ```
 ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -1152,8 +1097,6 @@ Delete an access policy for a service ID:
 ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>SERVICE_ID (required)</dt>
@@ -1187,8 +1130,6 @@ ibmcloud iam oauth-tokens
 ```
 {: codeblock}
 
-<strong>Prerequisites</strong>: Login, Target
-
 ## ibmcloud iam roles
 {: #ibmcloud_iam_roles}
 
@@ -1197,8 +1138,6 @@ List platform, service-defined, and custom roles:
 ibmcloud iam roles [--service SERVICE_NAME [--resource-type RESOURCE_TYPE] [--source-service SOURCE_SERVICE_NAME]] [--roles ROLE_NAME]
 ```
 {: codeblock}
-
-<strong>Prerequisites</strong>: Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -1256,6 +1195,46 @@ ibmcloud iam roles --source-service cloud-object-storage --service kms
 ```
 {: codeblock}
 
+## ibmcloud iam access-policies
+{: #ibmcloud_iam_access_policies}
+
+List all access policies under current account:
+```
+ibmcloud iam access-policies [--type user | service_id | access_group]
+```
+{: codeblock}
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>--type</dt>
+  <dd>List all access policies under current account filtered by policy type. Valid options are: `user` | `service_id` | `access_group`</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+List all access policies under current account:
+```
+ibmcloud iam access-policies
+```
+{: codeblock}
+
+List all user access policies under current account:
+```
+ibmcloud iam access-policies --type user
+```
+{: codeblock}
+
+List all service ID access policies under current account:
+```
+ibmcloud iam access-policies --type service_id
+```
+{: codeblock}
+
+List all access group access policies under current account:
+```
+ibmcloud iam access-policies --type access_group
+```
+{: codeblock}
 ## ibmcloud iam dedicated-id-disconnect
 {: #ibmcloud_iam_dedicated_id_disconnect}
 
@@ -1263,8 +1242,6 @@ Disconnect the public IBMid with dedicated non-IBMid:
 ```
 ibmcloud iam dedicated-id-disconnect [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -1279,8 +1256,6 @@ Create an authorization policy to allow a service instance access to another ser
 ```
 ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-group-id RESOURCE_GROUP_ID] [--source-resource-type RESOURCE_TYPE] [--source-resource RESOURCE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--target-resource-group-id RESOURCE_GROUP_ID] [--target-resource-type RESOURCE_TYPE] [--target-resource RESOURCE] | --file FILE}
 ```
-
-<strong>Prerequisites</strong>: Login, Target
 
 <strong>Command Options</strong>:
 <dl>
@@ -1324,8 +1299,6 @@ Delete an authorization policy:
 ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 ```
 
-<strong>Prerequisites</strong>: Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>AUTHORIZATION_POLICY_ID</dt>
@@ -1343,8 +1316,6 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 ```
 {: codeblock}
 
-<strong>Prerequisites</strong>: Login, Target
-
 <strong>Command Options</strong>:
 <dl>
   <dt>AUTHORIZATION_POLICY_ID</dt>
@@ -1360,8 +1331,6 @@ ibmcloud iam authorization-policies
 ```
 {: codeblock}
 
-<strong>Prerequisites</strong>: Login, Target
-
 <strong>Command options</strong>:
    <dl>
    </dl>
@@ -1373,8 +1342,6 @@ List access groups under current account:
 ```
 ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command Options</strong>:
 <dl>
@@ -1400,8 +1367,6 @@ Show details of an access group:
 ibmcloud iam access-group GROUP_NAME [--id]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Command Options</strong>:
 <dl>
   <dt>-id</dt>
@@ -1424,8 +1389,6 @@ Create an access group:
 ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Command Options</strong>:
 <dl>
   <dt>-d, --description</dt>
@@ -1446,8 +1409,6 @@ Update an access group:
 ```
 ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command Options</strong>:
 <dl>
@@ -1475,8 +1436,6 @@ Delete an access group:
 ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive] [-a, --all]
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Command Options</strong>:
 <dl>
   <dt>-f, --force</dt>
@@ -1502,8 +1461,6 @@ List users in an access group:
 ibmcloud iam access-group-users GROUP_NAME
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Examples</strong>:
 
 List all users in access group `example_group`:
@@ -1519,8 +1476,6 @@ Add users to an access group:
 ```
 ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Examples</strong>:
 
@@ -1538,8 +1493,6 @@ Remove a user from an access group:
 ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Examples</strong>:
 
 Remove user `name@example.com` from access group `example_group`:
@@ -1555,8 +1508,6 @@ Remove user from all access groups:
 ```
 ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command Options</strong>:
 <dl>
@@ -1580,8 +1531,6 @@ List service IDs in an access group:
 ibmcloud iam access-group-service-ids GROUP_NAME
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Examples</strong>:
 
 List all service IDs in access group `example_group`:
@@ -1597,8 +1546,6 @@ Add service ID to an access group:
 ```
 ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Examples</strong>:
 
@@ -1616,8 +1563,6 @@ Remove a service ID from an access group:
 ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Examples</strong>:
 
 Remove service ID `example-service` from access group `example_group`:
@@ -1633,8 +1578,6 @@ Remove service ID from all access groups:
 ```
 ibmcloud iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command Options</strong>:
 <dl>
@@ -1658,8 +1601,6 @@ List policies of an access group:
 ibmcloud iam access-group-policies GROUP_NAME
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Examples</strong>:
 
 List all policies of access group `example_group`:
@@ -1676,8 +1617,6 @@ Show details of an access group policy:
 ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Examples</strong>:
 
 Show details of policy `51b9717e-76b0-4f6a-bda7-b8132431f926` of access group `example_group`:
@@ -1693,8 +1632,6 @@ Create an access group policy:
 ```
 ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]}
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command Options</strong>:
 <dl>
@@ -1791,8 +1728,6 @@ Update an access group policy:
 ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]}
 ```
 
-<strong>Prerequisites</strong>: Endpoint, Login
-
 <strong>Command Options</strong>:
 <dl>
   <dt>--file</dt>
@@ -1888,8 +1823,6 @@ Delete an access group policy:
 ```
 ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```
-
-<strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command Options</strong>:
 <dl>

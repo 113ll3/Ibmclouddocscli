@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-17"
+  years: 2018, 2021
+lastupdated: "2021-07-29"
 
 keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
@@ -38,8 +38,6 @@ Add a new plug-in repository to {{site.data.keyword.cloud_notm}} CLI.
 ibmcloud plugin repo-add REPO_NAME REPO_URL
 ```
 
-<strong>Prerequisites</strong>:  None
-
 <strong>Command options</strong>:
 
    <dl>
@@ -67,8 +65,6 @@ ibmcloud plugin repo-remove REPO_NAME
 ```
 {: codeblock}
 
-<strong>Prerequisites</strong>:  None
-
 <strong>Command options</strong>:
    <dl>
    <dt>REPO_NAME (required)</dt>
@@ -90,8 +86,6 @@ List all available plug-ins in all added repositories or a specific repository.
 ```
 ibmcloud plugin repo-plugins [-r REPO_NAME]
 ```
-
-<strong>Prerequisites</strong>:  None
 
 <strong>Command options</strong>:
 
@@ -122,8 +116,6 @@ Show the details of a plug-in in the repository.
 ```
 ibmcloud plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 ```
-
-<strong>Prerequisites</strong>:  None
 
 <strong>Command options</strong>:
 
@@ -176,8 +168,6 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
 If no repository is specified, the command uses the default plug-in repository `IBM Cloud`. If no version is specified, the command selects the most recent version to install.
-
-<strong>Prerequisites</strong>:  None
 
 <strong>Command options</strong>:
 
@@ -239,8 +229,6 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 
 If no repository is specified, the command uses the default plug-in repository `IBM Cloud`. If no version is specified, the command selects the latest available version to install.
 
-<strong>Prerequisites</strong>:  None
-
 <strong>Command options</strong>:
 <dl>
  <dt>PLUGIN NAME</dt>
@@ -286,8 +274,6 @@ Uninstall the specified plug-in from {{site.data.keyword.cloud_notm}} CLI.
 ```
 ibmcloud plugin uninstall PLUGIN_NAME
 ```
-
-<strong>Prerequisites</strong>:  None
 
 <strong>Command options</strong>:
 
