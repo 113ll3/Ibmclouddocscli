@@ -151,7 +151,7 @@ To view previous releases, access the official [ibm-cloud-cli-releases](https://
   {: codeblock}
    
 ## Installing to a custom directory
-{: #install-custom-dir}
+{: #install-private-custom-dir}
 
 When you use installers or a shell script to install the {{site.data.keyword.cloud_notm}} CLI, it is installed in your system directories. If you want to specify a different directory, use the following steps.
 
