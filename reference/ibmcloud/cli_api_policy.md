@@ -2259,7 +2259,7 @@ ibmcloud iam trusted-profile-link-create Profile-bdf62c30-35dd-4852-bcb8-2f0dd39
 {: codeblock}
 
 ## ibmcloud iam trusted-profile-links
-{: #ibmcloud_iam_trusted_profile_links}}
+{: #ibmcloud_iam_trusted_profile_links}
 
 List all links to compute resources for a specified trusted profile
 ```
@@ -2493,4 +2493,3 @@ Delete rule `my-rule` from trusted profile `my-profile` without confirmation:
 ```
 ibmcloud iam trusted-profile-rule-delete my-profile my-rule -f
 ```
-{: codeblock}
