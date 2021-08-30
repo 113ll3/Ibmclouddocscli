@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-29"
+lastupdated: "2021-08-30"
 
-keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
+keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
 subcollection: cli
 
@@ -17,7 +17,7 @@ subcollection: cli
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Managing IAM access, API keys, service IDs, and access groups (ibmcloud iam)
+# Managing IAM access, API keys, trusted profiles, service IDs, and access groups (ibmcloud iam)
 {: #ibmcloud_commands_iam}
 
 Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage API keys, service IDs, access groups, and authorization policies for users, services, and access groups.
@@ -34,7 +34,7 @@ ibmcloud iam service-ids [--uuid]
 <strong>Command Options</strong>:
 <dl>
   <dt>--uuid</dt>
-  <dd>Show UUID of service IDs only</dd>
+  <dd>Show UUID of service IDs only.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -120,15 +120,15 @@ ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --descript
 <strong>Command Options</strong>:
 <dl>
   <dt>NAME (required)</dt>
-  <dd>Name of the service, exclusive with UUID</dd>
+  <dd>Name of the service, exclusive with UUID.</dd>
   <dt>UUID (required)</dt>
-  <dd>UUID of the service, exclusive with NAME</dd>
+  <dd>UUID of the service, exclusive with NAME.</dd>
   <dt>-n, --name</dt>
-  <dd>New name of the service</dd>
+  <dd>New name of the service.</dd>
   <dt>-d, --description</dt>
-  <dd>New description of the service</dd>
+  <dd>New description of the service.</dd>
   <dt>-f, --force</dt>
-  <dd>Update without confirmation</dd>
+  <dd>Update without confirmation.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -162,11 +162,11 @@ ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 <strong>Command Options</strong>:
 <dl>
   <dt>NAME (required)</dt>
-  <dd>Name of the service, exclusive with UUID</dd>
+  <dd>Name of the service, exclusive with UUID.</dd>
   <dt>UUID (required)</dt>
-  <dd>UUID of the service, exclusive with NAME</dd>
+  <dd>UUID of the service, exclusive with NAME.</dd>
   <dt>-f, --force</dt>
-  <dd>Delete without confirmation</dd>
+  <dd>Delete without confirmation.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -194,11 +194,11 @@ ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 <strong>Command Options</strong>:
 <dl>
   <dt>NAME (required)</dt>
-  <dd>Name of the service, exclusive with UUID</dd>
+  <dd>Name of the service, exclusive with UUID.</dd>
   <dt>UUID (required)</dt>
-  <dd>UUID of the service, exclusive with NAME</dd>
+  <dd>UUID of the service, exclusive with NAME.</dd>
   <dt>-f, --force</dt>
-  <dd>Lock without confirmation</dd>
+  <dd>Lock without confirmation.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -227,11 +227,11 @@ ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 <strong>Command Options</strong>:
 <dl>
   <dt>NAME (required)</dt>
-  <dd>Name of the service, exclusive with UUID</dd>
+  <dd>Name of the service, exclusive with UUID.</dd>
   <dt>UUID (required)</dt>
-  <dd>UUID of the service, exclusive with NAME</dd>
+  <dd>UUID of the service, exclusive with NAME.</dd>
   <dt>-f, --force</dt>
-  <dd>Unlock without confirmation</dd>
+  <dd>Unlock without confirmation.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -260,7 +260,7 @@ ibmcloud iam api-keys [--uuid]
 <strong>Command Options</strong>:
 <dl>
   <dt>--uuid</dt>
-  <dd>Show UUID of the API key</dd>
+  <dd>Show UUID of the API key.</dd>
 </dl>
 
 ## ibmcloud iam api-key-create
@@ -342,9 +342,9 @@ ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 <strong>Command options</strong>:
 <dl>
 <dt>NAME (required)</dt>
-<dd>Name of the API key to be deleted, exclusive with UUID</dd>
+<dd>Name of the API key to be deleted, exclusive with UUID.</dd>
 <dt>UUID (required)</dt>
-<dd>UUID of the API key to be deleted, exclusive with NAME</dd>
+<dd>UUID of the API key to be deleted, exclusive with NAME.</dd>
 <dt>-f, --force</dt>
 <dd>Force deletion without confirmation.</dd>
 </dl>
@@ -482,17 +482,17 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>Command Options</strong>:
 <dl>
   <dt>NAME (required)</dt>
-  <dd>Name of the service ID or newly created service API key</dd>
+  <dd>Name of the service ID or newly created service API key.</dd>
   <dt>SERVICE_ID_NAME (required)</dt>
-  <dd>Name of the service ID, exclusive with SERVICE_ID_UUID</dd>
+  <dd>Name of the service ID, exclusive with SERVICE_ID_UUID.</dd>
   <dt>SERVICE_ID_UUID (required)</dt>
-  <dd>UUID of the service ID, exclusive with SERVICE_ID_NAME</dd>
+  <dd>UUID of the service ID, exclusive with SERVICE_ID_NAME.</dd>
   <dt>-d, --description</dt>
-  <dd>Description of the API key</dd>
+  <dd>Description of the API key.</dd>
   <dt>--file FILE</dt>
   <dd>Save API key information to the specified file.</dd>
   <dt>-f, --force</dt>
-  <dd>Force creation without confirmation</dd>
+  <dd>Force creation without confirmation.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -608,15 +608,15 @@ ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>Command Options</strong>:
 <dl>
   <dt>APIKEY_NAME (required)</dt>
-  <dd>Name of the API key, exclusive with APIKEY_UUID</dd>
+  <dd>Name of the API key, exclusive with APIKEY_UUID.</dd>
   <dt>APIKEY_UUID (required)</dt>
-  <dd>UUID of the API key, exclusive with APIKEY_NAME</dd>
+  <dd>UUID of the API key, exclusive with APIKEY_NAME.</dd>
   <dt>SERVICE_ID_NAME (required)</dt>
-  <dd>Name of the service ID, exclusive with SERVICE_ID_UUID</dd>
+  <dd>Name of the service ID, exclusive with SERVICE_ID_UUID.</dd>
   <dt>SERVICE_ID_UUID (required)</dt>
-  <dd>UUID of the service ID, exclusive with SERVICE_ID_NAME</dd>
+  <dd>UUID of the service ID, exclusive with SERVICE_ID_NAME.</dd>
   <dt>-f, --force</dt>
-  <dd>Unlock without confirmation</dd>
+  <dd>Unlock without confirmation.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1200,14 +1200,14 @@ ibmcloud iam roles --source-service cloud-object-storage --service kms
 
 List all access policies under current account:
 ```
-ibmcloud iam access-policies [--type user | service_id | access_group]
+ibmcloud iam access-policies [-t, --type user | service_id | access_group | trusted_profile]
 ```
 {: codeblock}
 
 <strong>Command Options</strong>:
 <dl>
-  <dt>--type</dt>
-  <dd>List all access policies under current account filtered by policy type. Valid options are: `user` | `service_id` | `access_group`</dd>
+  <dt>-t, --type ACCESS_POLICY_TYPE</dt>
+  <dd>List all access policies under current account filtered by policy type. Valid options are: `user` | `service_id` | `access_group` | `trusted_profile`</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1235,6 +1235,13 @@ List all access group access policies under current account:
 ibmcloud iam access-policies --type access_group
 ```
 {: codeblock}
+
+List all trusted profile access policies under current account:
+```
+ibmcloud iam access-policies --type trusted_profile
+```
+{: codeblock}
+
 ## ibmcloud iam dedicated-id-disconnect
 {: #ibmcloud_iam_dedicated_id_disconnect}
 
@@ -1286,7 +1293,7 @@ ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NA
   <dt>--target-resource</dt>
   <dd>Resource of target service.</dd>
   <dt>--file FILE</dt>
-  <dd>JSON file of policy definition</dd>
+  <dd>JSON file of policy definition.</dd>
 </dl>
 
 <b>Note:</b> Currently, some combination of `--source-service` and `--service` might fail under private endpoints. Use `--file` as a workaround, or you can create the policy from public endpoints or the UI console.
@@ -1443,7 +1450,7 @@ ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive] [-a,
   <dt>-r, --recursive</dt>
   <dd>Delete an access group and its members.</dd>
   <dt>-a, --all</dt>
-  <dd>Force to delete access groups with the same name</dd>
+  <dd>Force to delete access groups with the same name.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1838,4 +1845,652 @@ ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8
 ```
 {: codeblock}
 
+## ibmcloud iam trusted-profile-create
+{: #ibmcloud_iam_trusted_profile_create}
 
+Create a trusted profile:
+```
+ibmcloud iam trusted-profile-create NAME [-d, --description DESCRIPTION] [--output FORMAT] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME (required)</dt>
+  <dd>Name of the new profile.</dd>
+  <dt>-d, --description DESCRIPTION</dt>
+  <dd>Description of the profile.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Create trusted profile with name `sample-test` and description "sample trusted profile":
+```
+ibmcloud iam trusted-profile-create sample-test -d "sample trusted profile" 
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile
+{: #ibmcloud_iam_trusted_profile}
+
+Get a trusted profile by name or ID:
+```
+ibmcloud iam trusted-profile NAME|ID [--id | --output FORMAT] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile.</dd>
+  <dt>--id</dt>
+  <dd>Show ID of the profile only.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Retrieve trusted profile with name `sample-test`:
+```
+ibmcloud iam trusted-profile sample-test
+```
+{: codeblock}
+
+Retrieve trusted profile with profile ID `Profile-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`:
+```
+ibmcloud iam trusted-profile Profile-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profiles
+{: #ibmcloud_iam_trusted_profiles}
+
+List trusted profiles under current account
+```
+ibmcloud iam trusted-profiles [--id | --output FORMAT] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>--id</dt>
+  <dd>Show ID of profiles only.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+List ID of all trusted profiles under current account:
+```
+ibmcloud iam trusted-profiles --id
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-update
+{: #ibmcloud_iam_trusted_profile_update}
+
+Update a trusted profile
+```
+ibmcloud iam trusted-profile-update NAME|ID [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [--output FORMAT] [-f, --force] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile to update.</dd>
+  <dt>-n, --name NEW_NAME</dt>
+  <dd>New name of the trusted profile.</dd>
+  <dt>-d, --description NEW_DESCRIPTION</dt>
+  <dd>New description of the profile. Providing an empty description will clear the description of the profile.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force failure if multiple profiles are found.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Update trusted profile with name `sample-test` to new name of `test`:
+```
+ibmcloud iam trusted-profile-update sample-test -n test
+```
+{: codeblock}
+
+Update trusted profile `sample-test` with new description of `testing trusted profile update`:
+```
+ibmcloud iam trusted-profile-update sample-test -d "testing trusted profile update"
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-delete
+{: #ibmcloud_iam_trusted_profile_delete}
+
+Delete a trusted profile
+```
+ibmcloud iam trusted-profile-delete NAME|ID [-f, --force] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile to delete.</dd>
+  <dt>-f, --force</dt>
+  <dd>Delete a trusted profile without confirmation.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Delete trusted profile with name `sample-test`:
+```
+ibmcloud iam trusted-profile-delete sample-test
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-policy-create
+{: #ibmcloud_iam_trusted_profile_policy_create}
+
+Create an access policy and assign it to a trusted profile
+```
+ibmcloud iam trusted-profile-policy-create (NAME|ID) {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--tags name1:value1,name2:value2...] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [-f, --force]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile to assign the new policy to</dd>
+  <dt>--account-management</dt>
+  <dd>Give access to all account management services.</dd>
+  <dt>--attributes name=value,name-value...</dt>
+  <dd>Set resource attributes in the form of 'name=value,name=value....'</dd>
+  <dt>--file JSON_FILE</dt>
+  <dd>JSON file of policy definition.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force failure if multiple profiles are found.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>--region REGION</dt>
+  <dd>Region of the policy definition. This option is exclusive with '--file'. For supported regions, run 'ibmcloud regions'.</dd>
+  <dt>--resource RESOURCE</dt>
+  <dd>Resource of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>--resource-group-id RESOURCE_GROUP_ID</dt>
+  <dd>ID of the resource group. '*' means all resource groups. This option is exclusive with '--file' and '--resource-group-name'.</dd>
+  <dt>--resource-group-name RESOURCE_GROUP_NAME</dt>
+  <dd>Name of the resource group. '*' means all resource groups. This option is exclusive with '--file' and '--resource-group-id'.</dd>
+  <dt>--resource-type RESOURCE_TYPE</dt>
+  <dd>Resource type of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>--roles ROLE_NAME1,ROLE_NAME2...</dt>
+  <dd>Role names of the policy definition. For supported roles of a specific service, run 'ibmcloud iam roles --service SERVICE_NAME'. This option is exclusive with '--file'.</dd>
+  <dt>--service-instance SERVICE_INSTANCE_GUID</dt>
+  <dd>GUID of service instance of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>--service-name SERVICE_NAME</dt>
+  <dd>Service name of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>--tags name1:value1,name2:value2...</dt>
+  <dd>Access tags of the resource.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Create a trusted profile policy for `my-profile` from a JSON file:
+```
+iam trusted-profile-policy-create my-profile --file policy.json
+```
+{: codeblock}
+
+Give `my-profile` Viewer role for the members of resource group `sample-resource-group`:
+```
+iam trusted-profile-policy-create my-profile --roles Viewer --resource-group-id sample-resource-group
+```
+{: codeblock}
+
+Give `my-profile` Viewer role for all resources in account:
+```
+iam trusted-profile-policy-create my-profile --roles Viewer
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-policy
+{: #ibmcloud_iam_trusted_profile_policy}
+
+Display details of an access policy for a specified trusted profile
+```
+ibmcloud iam trusted-profile-policy (NAME|ID) POLICY_ID [--output FORMAT] [-f, --force] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile.</dd>
+  <dt>POLICY_ID (required)</dt>
+  <dd>The ID of the policy to retrieve.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force failure if multiple profiles are found.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Get policy `bdf62c30-35dd-4852-bcb8-2f0dd3929701` of trusted profile `my-profile`:
+```
+ibmcloud iam trusted-profile-policy my-profile bdf62c30-35dd-4852-bcb8-2f0dd3929701
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-policies
+{: #ibmcloud_iam_trusted_profile_policies}
+
+List all access policies for a specified trusted profile
+```
+ibmcloud iam trusted-profile-policies (NAME|ID) [--output FORMAT] [-f, --force] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force failure if multiple profiles are found.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+List all policies of trusted profile ID `Profile-bdf62c30-35dd-4852-bcb8-2f0dd3929701`:
+```
+ibmcloud iam trusted-profile-policies Profile-bdf62c30-35dd-4852-bcb8-2f0dd3929701
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-policy-update
+{: #ibmcloud_iam_trusted_profile_policy_update}
+
+Update an access policy for a trusted profile
+```
+ibmcloud iam trusted-profile-policy-update (NAME|ID) POLICY_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--tags name1:value1,name2:value2...] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [-f, --force]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile to assign the new policy to update.</dd>
+  <dt>POLICY_ID (required)</dt>
+  <dd>The ID of the policy to update.</dd>
+  <dt>--account-management</dt>
+  <dd>Give access to all account management services.</dd>
+  <dt>--attributes name=value,name-value...</dt>
+  <dd>Set resource attributes in the form of 'name=value,name=value....'</dd>
+  <dt>--file JSON_FILE</dt>
+  <dd>JSON file of policy definition.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force failure if multiple profiles are found.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>--region REGION</dt>
+  <dd>Region of the policy definition. This option is exclusive with '--file'. For supported regions, run 'ibmcloud regions'.</dd>
+  <dt>--resource RESOURCE</dt>
+  <dd>Resource of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>--resource-group-id RESOURCE_GROUP_ID</dt>
+  <dd>ID of the resource group. '*' means all resource groups. This option is exclusive with '--file' and '--resource-group-name'.</dd>
+  <dt>--resource-group-name RESOURCE_GROUP_NAME</dt>
+  <dd>Name of the resource group. '*' means all resource groups. This option is exclusive with '--file' and '--resource-group-id'.</dd>
+  <dt>--resource-type RESOURCE_TYPE</dt>
+  <dd>Resource type of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>--roles ROLE_NAME1,ROLE_NAME2...</dt>
+  <dd>Role names of the policy definition. For supported roles of a specific service, run 'ibmcloud iam roles --service SERVICE_NAME'. This option is exclusive with '--file'.</dd>
+  <dt>--service-instance SERVICE_INSTANCE_GUID</dt>
+  <dd>GUID of service instance of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>--service-name SERVICE_NAME</dt>
+  <dd>Service name of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>--tags name1:value1,name2:value2...</dt>
+  <dd>Access tags of the resource.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Update policy `85f3a4d6-c2e1-417e-b2d5-7199d610c160` to give trusted profile `my-profile` Administrator role for all account management services:
+```
+ibmcloud iam trusted-profile-policy-update my-profile 85f3a4d6-c2e1-417e-b2d5-7199d610c160 --roles Administrator --acount-management
+```
+{: codeblock}
+
+Update policy `bdf62c30-35dd-4852-bcb8-2f0dd3929701` from `my-profile` with contents in JSON file:
+```
+ibmcloud iam trusted-profile-policy-update my-profile bdf62c30-35dd-4852-bcb8-2f0dd3929701 --file @policy.json 
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-policy-delete
+{: #ibmcloud_iam_trusted_profile_policy_delete}
+
+Delete an access policy for a trusted profile
+```
+ibmcloud iam trusted-profile-policy-delete (NAME|ID) POLICY_ID [-f, --force] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile which contains the policy to delete.</dd>
+  <dt>POLICY_ID (required)</dt>
+  <dd>The ID of the policy to delete.</dd>
+  <dt>-f, --force</dt>
+  <dd>Delete access policy without confirmation.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Delete policy ID `bdf62c30-35dd-4852-bcb8-2f0dd3929701` from `my-profile` without confirmation:
+```
+ibmcloud iam trusted-profile-policy-delete my-profile bdf62c30-35dd-4852-bcb8-2f0dd3929701 -f
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-link-create
+{: #ibmcloud_iam_trusted_profile_link_create}
+
+Create a link to a compute resource for a trusted profile
+```
+ibmcloud iam trusted-profile-link-create (NAME|ID) --name LINK_NAME --cr-type CR_TYPE --link-crn CRN [--link-namespace NAMESPACE --link-name NAME] [--output FORMAT] [-q, --quiet] [-f, --force]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile to link the compute resource to</dd>
+  <dt>--name</dt>
+  <dd>Name for the link</dd>
+  <dt>--cr-type (required)</dt>
+  <dd>The compute resource type. VSI for Virtual Service Instance on VPC, IKS_SA for Service Accounts on Kubernetes clusters, or ROKS_SA for managed Red Hat OpenShift</dd>
+  <dt>--link-crn (required)</dt>
+  <dd>CRN of the VSI instance / cluster instance</dd>
+  <dt>--link-namespace</dt>
+  <dd>Namespace of the service account for IKS_SA or ROKS_SA, required if IKS_SA or ROKS_SA</dd>
+  <dt>--link-name</dt>
+  <dd>Name of the service account for IKS_SA or ROKS_SA, required if IKS_SA or ROKS_SA</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force failure if multiple profiles are found.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Create link named `my_link` for trusted profile `my-profile` for an `IKS_SA` compute resource with service account name `default`, `default` namespace, and `my_compute_resource_crn` CRN:
+```
+ibmcloud iam trusted-profile-link-create my_profile --name my_link --cr-type IKS_SA --link-name default  --link-namespace default --link-crn my_compute_resource_crn
+```
+{: codeblock}
+
+Create link named `my_link` for trusted profile ID `Profile-bdf62c30-35dd-4852-bcb8-2f0dd3929701` for an `IKS_SA` compute resource with service account name `default` in the namespace `my_namespace` and with a CRN of `my_resource_crn`:
+```
+ibmcloud iam trusted-profile-link-create Profile-bdf62c30-35dd-4852-bcb8-2f0dd3929701 --name my_link --cr-type IKS_SA --link-name default --link-namespace my_namespace --link-crn my_resource_crn
+```
+{: codeblock}
+
+
+Create link named `my_link` for trusted profile ID `Profile-bdf62c30-35dd-4852-bcb8-2f0dd3929701` for a `VSI` compute resource with a CRN of `my_resource_crn`:
+```
+ibmcloud iam trusted-profile-link-create Profile-bdf62c30-35dd-4852-bcb8-2f0dd3929701 --name my_link --cr-type VSI --link-crn my_resource_crn
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-links
+{: #ibmcloud_iam_trusted_profile_links}}
+
+List all links to compute resources for a specified trusted profile
+```
+ibmcloud iam trusted-profile-links (NAME|ID) [--id | --output FORMAT] [-f, --force] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the trusted profile to retrieve links</dd>
+  <dt>--id</dt>
+  <dd>Show ID of links only.</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force failure if multiple profiles are found.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Display ID of all links in the trusted profile `my-profile`:
+```
+ibmcloud iam trusted-profile-links my-profile --id
+```
+{: codeblock}
+
+Display all of the links in the trusted profile `my-profile` in JSON format:
+```
+ibmcloud iam trusted-profile-links my-profile --output JSON
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-link-delete
+{: #ibmcloud_iam_trusted_profile_link_delete}
+
+Delete a link to a compute resource for a trusted profile:
+```
+ibmcloud iam trusted-profile-link-delete (NAME|ID) (LINK_NAME|LINK_ID) [-f, --force] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile which contains the link to delete.</dd>
+  <dt>LINK_NAME|LINK_ID (required)</dt>
+  <dd>Name or ID of the link to delete.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force deletion without confirmation.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Delete the link `my_link` from trusted profile `my-profile` without confirmation:
+```
+ibmcloud iam trusted-profile-link-delete my-profile my_link -f
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-rule-create
+{: #ibmcloud_iam_trusted_profile_rule_create}
+
+Create a rule for a trusted profile:
+```
+ibmcloud iam trusted-profile-rule-create (NAME|UUID) --name RULE_NAME --type RULE_TYPE  [--realm-name REALM_NAME] --conditions <LIST_OF_CONDITIONS> [--expiration EXPIRATION_SEC] [--cr-type CR_TYPE] [--output FORMAT] [-q, --quiet] [-f, --force]
+```
+
+To view a full list of valid operator conditions for a claim rule, see [Trusted Profiles API](/apidocs/iam-identity-token-api#create-claim-rule)
+{: note}
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile to create a rule for</dd>
+  <dt>--type (required)</dt>
+  <dd>'Profile-SAML' for a SAML rule or 'Profile-CR' for a compute resource rule</dd>
+  <dt>--conditions (required)</dt>
+  <dd>List of conditions, provided as comma separated list of triple values "claim:CLAIM,operator:OPERATOR,value:VALUE". To specify mutiple conditions, specify the flag multiple times --conditions "claim:CLAIM1,operator:OPERATOR1,value:VALUE1" --conditions "claim:CLAIM2,operator:OPERATOR2,value:VALUE2"</dd>
+  <dt>--expiration</dt>
+  <dd>Specify an expiration in seconds for SAML rules. Must not be provided for trusts established to Compute Resources (type = Profile-CR)</dd>
+  <dt>--name</dt>
+  <dd>Name for the rule</dd>
+  <dt>--cr-type</dt>
+  <dd>The compute resource type the rule applies to, required only if type is specified as 'Profile-CR'. Values are VSI for Virtual Service Instance on VPC, IKS_SA for Service Accounts on Kubernetes clusters, or ROKS_SA for managed Red Hat OpenShift</dd>
+  <dt>--realm-name</dt>
+  <dd>Issuer Id for trusts established via IBMid with federation, or appid:// for trusts established via App ID federation. Must not be provided for trusts established to Compute Resources (type = Profile-CR)</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force failure if multiple profiles are found.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Create a `Profile-SAML` rule with rule name `my-rule`, realm name set to `https://w3id.sso.ibm.com/auth/sps/samlidp2/saml20`, expiration set to `1200` seconds for trusted profile `my-profile` with the rule conditions: `cn EQUALS my_user`
+```
+ibmcloud iam trusted-profile-rule-create my-profile --name my-rule --type Profile-SAML --conditions claim:cn,operator:EQUALS,value:my_user --realm-name https://w3id.sso.ibm.com/auth/sps/samlidp2/saml20 --expiration 1200
+```
+Create a `Profile-SAML` rule with realm name set to `https://w3id.sso.ibm.com/auth/sps/samlidp2/saml20` and expiration set to `1200` seconds for trusted profile `my-profile` with the rule conditions: `cn EQUALS my_user` and `blueGroups NOT_EQUALS jaas_master`
+
+```
+ibmcloud iam trusted-profile-rule-create my-profile --type Profile-SAML --conditions claim:cn,operator:EQUALS,value:my_user --conditions claim:blueGroups,operator:NOT_EQUALS,value:jaas_master --realm-name https://w3id.sso.ibm.com/auth/sps/samlidp2/saml20 --expiration 1200
+```
+
+Create a `Profile-CR` rule with rule name `my-rule`, compute resource type `IKS_SA`, and with the rule conditions: `namespace EQUALS default` and `crn EQUALS crn:test:bluemix:public:containers-kubernetes:us-south:a/test::`
+
+```
+ibmcloud iam trusted-profile-rule-create my-profile --name my-rule --type Profile-CR --conditions claim:namespace,operator:EQUALS,value:default --conditions claim:crn,operator:EQUALS,value:crn:test:bluemix:public:containers-kubernetes:us-south:a/test:: --cr-type IKS_SA
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-rules
+{: #ibmcloud_iam_trusted_profile_rules}
+
+List all rules for a specified trusted profile:
+```
+ibmcloud iam trusted-profile-rules (NAME|ID) [--output FORMAT] [-f, --force] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the trusted profile to retrieve rules for</dd>
+  <dt>--output FORMAT</dt>.
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force failure if multiple profiles are found.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Display all rules in trusted profile `my-profile`:
+```
+ibmcloud iam trusted-profile-rules my-profile 
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-rule-update
+{: #ibmcloud_iam_trusted_profile_rule_update}
+
+Update a rule for a trusted profile:
+```
+ibmcloud iam trusted-profile-rule-update (NAME|ID) (RULE_NAME|RULE_ID) --name RULE_NAME --type RULE_TYPE  [--realm-name REALM_NAME] --conditions <LIST_OF_CONDITIONS> [--cr-type CR_TYPE] [--expiration EXPIRATION_SEC] [--output FORMAT] [-q, --quiet] [-f, --force]
+```
+
+To view a full list of valid operator conditions for a claim rule, see [Trusted Profiles API](/apidocs/iam-identity-token-api#update-claim-rule)
+{: note}
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the trusted profile to to update a rule for</dd>
+  <dt>RULE_NAME|RULE_ID (required)</dt>
+  <dd>The name or ID of the rule to update.</dd>
+  <dt>--type</dt>
+  <dd>'Profile-SAML' for a SAML rule or 'Profile-CR' for a compute resource rule</dd>
+  <dt>--conditions</dt>
+  <dd>List of conditions, provided as comma separated list of triple values "claim:CLAIM,operator:OPERATOR,value:VALUE". To specify mutiple conditions, specify the flag multiple times --conditions "claim:CLAIM1,operator:OPERATOR1,value:VALUE1" --conditions "claim:CLAIM2,operator:OPERATOR2,value:VALUE2"</dd>
+  <dt>--cr-type</dt>
+  <dd>The compute resource type the rule applies to, required only if type is specified as 'Profile-CR'. Values are VSI for Virtual Service Instance on VPC, IKS_SA for Service Accounts on Kubernetes clusters, or ROKS_SA for managed Red Hat OpenShift</dd>
+  <dt>--expiration</dt>
+  <dd>Specify an expiration in seconds for SAML rules. Must not be provided for trusts established to Compute Resources (type = Profile-CR)</dd>
+  <dt>--name</dt>
+  <dd>New name for the rule</dd>
+  <dt>--realm-name</dt>
+  <dd>Issuer Id for trusts established via IBMid with federation, or appid:// for trusts established via App ID federation. Must not be provided for trusts established to Compute Resources (type = Profile-CR)</dd>
+  <dt>--output FORMAT</dt>
+  <dd>Specify output format, only 'JSON' is supported.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force failure if multiple rules are found.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Update rule `ClaimRule-test-id ` in profile `my-profile` with new name `test-rule`:
+```
+ibmcloud iam trusted-profile-rule-update my-profile ClaimRule-test-id --name test-rule
+```
+{: codeblock}
+
+Update `Profile-SAML` rule `my-rule` in profile `my-profile` with new realm name `https://www.example.org/my-nice-idp`:
+```
+ibmcloud iam trusted-profile-rule-update my-profile my-rule --realm-name https://www.example.org/my-nice-idp
+```
+{: codeblock}
+
+Update rule conditions and expiration time for `Profile-SAML` rule `ClaimRule-a448e998-311f-4e23-8af8-66b855c5da11` in profile `my-profile`:
+```
+ibmcloud iam trusted-profile-rule-update my-profile ClaimRule-a448e998-311f-4e23-8af8-66b855c5da11 --conditions claim:cn,operator:EQUALS,value:my_user --expiration 1200
+```
+{: codeblock}
+
+Update rule conditions and compute resource type for `Profile-CR` rule `ClaimRule-cb8e3a2c-2d16-422b-b691-8791355b53bc` in profile `my-profile`:
+```
+ibmcloud iam trusted-profile-rule-update my-profile ClaimRule-cb8e3a2c-2d16-422b-b691-8791355b53bc --conditions claim:crn,operator:EQUALS,value:crn:v1:bluemix:public:containers-redhat:us-south:a/test:: --cr-type ROKS_SA
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-rule-delete
+{: #ibmcloud_iam_trusted_profile_rule_delete}
+
+Delete a rule for a trusted profile:
+```
+ibmcloud iam trusted-profile-rule-delete (NAME|ID) (RULE_NAME|RULE_ID) [-f, --force] [-q, --quiet]
+```
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>NAME|ID (required)</dt>
+  <dd>Name or ID of the profile which contains the rule to delete.</dd>
+  <dt>RULE_NAME|RULE_ID (required)</dt>
+  <dd>The name or ID of the rule to delete.</dd>
+  <dt>-f, --force</dt>
+  <dd>Force deletion without confirmation.</dd>
+  <dt>-q, --quiet</dt>
+  <dd>Suppress verbose output.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Delete rule `my-rule` from trusted profile `my-profile` without confirmation:
+```
+ibmcloud iam trusted-profile-rule-delete my-profile my-rule -f
+```
+{: codeblock}
