@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-29"
+lastupdated: "2021-09-03"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -607,7 +607,8 @@ ibmcloud account audit-logs [--user-name USER_NAME] [--object-type OBJECT_TYPE] 
 ## ibmcloud account users
 {: #ibmcloud_account_users}
 
-Displays users that are associated with the account. This operation must be run by the account owner.
+Displays users that are associated with the account. To view the required permissions to run this command,
+see [Retrieve users in the account](/apidocs/user-management#list-users).
 ```
 ibmcloud account users [-c, --account-id ACCOUNT_ID]
 ```
