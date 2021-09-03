@@ -19,7 +19,6 @@ subcollection: cli
 {:tip: .tip}
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
-
 {:note: .note}
 
 # Getting started with the {{site.data.keyword.cloud_notm}} CLI
