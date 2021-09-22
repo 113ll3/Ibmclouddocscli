@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-06"
+lastupdated: "2021-09-22"
 
 keywords: IBM Cloud CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, private endpoints, shell
 
@@ -31,7 +31,7 @@ The CLI uses the private endpoint support that is provided by the {{site.data.ke
 ## Before you begin
 {: #cli-private-endpoints-prereqs}
 
-You must first enable virtual routing and forwarding in your account, and then you can enable the use of {{site.data.keyword.cloud_notm}} private service endpoints. For more information about setting up your account to support the private connectivity option, see [Enabling VRF and service endpoints](/docs/account?topic=account-vrf-service-endpoint). In addition to enabling VRF, you must be on a private network on `ibmcloud` with either classic infrastructure or a VPC. For more information, see [how to connect to the {{site.data.keyword.cloud_notm}} VPN](https://cloud.ibm.com/docs/iaas-vpn?topic=iaas-vpn-getting-started).
+You must first enable virtual routing and forwarding in your account, and then you can enable the use of {{site.data.keyword.cloud_notm}} private service endpoints. For more information about setting up your account to support the private connectivity option, see [Enabling VRF and service endpoints](/docs/account?topic=account-vrf-service-endpoint). In addition to enabling VRF, you must be on a private network on `ibmcloud` with classic infrastructure. For more information, see [how to connect to the {{site.data.keyword.cloud_notm}} VPN](https://cloud.ibm.com/docs/iaas-vpn?topic=iaas-vpn-getting-started).
 
 To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Secure access to services by using service endpoints](/docs/account?topic=account-service-endpoints-overview).
 

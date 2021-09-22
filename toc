@@ -36,6 +36,7 @@ IBM Cloud CLI
 
 	service-connection.md
 	ha-dr.md
+	cri-token-login.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}

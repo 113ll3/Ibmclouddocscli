@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2021
-lastupdated: "2021-02-10"
+lastupdated: "2021-09-22"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
 
@@ -11,7 +11,6 @@ subcollection: cli
 ---
 
 {:shortdesc: .shortdesc}
-
 {:screen: .screen}
 {:codeblock: .codeblock}  
 {:pre: .pre}
@@ -1115,6 +1114,179 @@ Command parameters that are entered on the command line take precedence over the
 
 * Use this parameter to provide verbose output.
 * Usage: `ibmcloud dev stop --trace`
+
+## tekton-info
+{: #tekton-info}
+
+View the details of a Tekton pipeline.
+
+```
+ibmcloud dev tekton-info [pipelineID] [--verbose][--output JSON]
+```
+{: codeblock}
+
+### tekton-info command parameters
+{: #tekton-info-command-parameters}
+
+The following parameters can be used with the `tekton-info` command.
+
+#### `verbose`
+{: #tekton-info-verbose}
+
+* Use this parameter to provide all details of a pipeline in JSON format.
+* Usage: `ibmcloud dev tekton-info [pipelineID] --verbose`
+
+#### `json`
+{: #json-tekton-info}
+
+* Parameter that is used to output the pipeline details in JSON format.
+* Usage: `ibmcloud dev tekton-info [pipelineID] --output JSON`
+
+#### `trace`
+{: #tekton-info-trace}
+
+* Use this parameter to provide verbose output.
+* Usage: `ibmcloud dev tekton-info [pipelineID] --trace`
+
+## tekton-logs
+{: #tekton-logs}
+
+View recent Tekton pipeline run logs by using the `tekton-logs` command.
+
+* The pipeline run ID is a required argument.
+* If the task name is specified as an argument, only the logs for this task are retrieved.
+
+Usage:
+```
+ibmcloud dev tekton-logs [pipelineID] --run-id [pipelinerunID] [--task-name taskName] [--output JSON]
+```
+{: codeblock}
+
+### tekton-logs command parameters
+{: #tekton-logs-command-parameters}
+
+The following parameters can be used with the `tekton-logs` command.
+
+#### `run-id` (required)
+{: #run-id}
+
+* Parameter that identifies the pipeline run for the log retrieval.
+* Usage: `ibmcloud dev tekton-logs [pipelineID]  --run-id [pipelinerunID]`
+
+#### `task-name`
+{: #task-name}
+
+* Parameter that is used to filter the logs by the pipeline run task name.
+* Usage: `ibmcloud dev tekton-logs [pipelineID]  --run-id [pipelinerunID] --task-name [taskName]`
+
+#### `json`
+{: #json-tekton-logs}
+
+* Parameter that is used to output the log details in JSON format.
+* Usage: `ibmcloud dev tekton-logs [pipelineID]  --run-id [pipelinerunID] --output JSON`
+
+#### `trace`
+{: #tekton-logs-trace}
+
+* Use this parameter to provide verbose output.
+* Usage: `ibmcloud dev tekton-logs [pipelineID]  --run-id [pipelinerunID] --trace`
+
+## tekton-pipelinerun
+{: #tekton-pipelinerun}
+
+View the details of a Tekton pipeline run or use the `ls` parameter to list all pipeline runs for the pipeline.
+
+Usage:
+```
+ibmcloud dev tekton-pipelinerun [pipelineID] --run-id [pipelinerunID] [--output JSON]
+ibmcloud dev tekton-pipelinerun ls [pipelineID]
+```
+{: codeblock}
+
+### tekton-pipelinerun command parameters
+{: #tekton-pipelinerun-command-parameters}
+
+The following parameters can be used with the `tekton-pipelinerun` command.
+
+#### `run-id` (required)
+{: #tekton-pipelinerun-run-id}
+
+* Parameter that identifies the pipeline run to retrieve.
+* Usage: `ibmcloud dev tekton-pipelinerun [pipelineID] --run-id [pipelinerunID]`
+
+#### `json`
+{: #json-tekton-pipelinerun}
+
+* Parameter that is used to output the pipeline run details in JSON format.
+* Usage: `ibmcloud dev tekton-pipelinerun [pipelineID] --run-id [pipelinerunID] --output JSON`
+
+#### `trace`
+{: #tekton-pipelinerun-trace}
+
+* Use this parameter to provide verbose output.
+* Usage: `ibmcloud dev tekton-pipelinerun [pipelineID] --run-id [pipelinerunID] --trace`
+
+## tekton-pipelineruns
+{: #tekton-pipelineruns}
+
+View a list of pipeline runs for a Tekton pipeline.
+
+Usage:
+```
+ibmcloud dev tekton-pipelineruns [pipelineID] --run-id [pipelinerunID] [--output JSON]
+```
+{: codeblock}
+
+### tekton-pipelineruns command parameters
+{: #tekton-pipelineruns-command-parameters}
+
+The following parameters can be used with the `tekton-pipelineruns` command.
+
+#### `json`
+{: #json-tekton-pipelineruns}
+
+* Parameter that is used to output the pipeline runs in JSON format.
+* Usage: `ibmcloud dev tekton-pipelineruns [pipelineID] --output JSON`
+
+#### `trace`
+{: #tekton-pipelineruns-trace}
+
+* Use this parameter to provide verbose output.
+* Usage: `ibmcloud dev tekton-pipelineruns [pipelineID] --trace`
+
+## tekton-trigger
+{: #tekton-trigger}
+
+Run a Tekton pipeline.
+
+Usage:
+```
+ibmcloud dev tekton-trigger [pipelineID] --trigger-name [triggerName] [--output JSON]
+```
+{: codeblock}
+
+### tekton-trigger command parameters
+{: #tekton-trigger-command-parameters}
+
+The following parameters can be used with the `tekton-trigger` command.
+
+#### `trigger-name` (required)
+{: #tekton-trigger-name}
+
+* Use this parameter to indicate the trigger to be run.
+* Usage: `ibmcloud dev tekton-trigger [pipelineID] --trigger-name [triggerName]`
+
+#### `json`
+{: #json-tekton-trigger}
+
+* Parameter that is used to output the trigger results in JSON format.
+* Usage: `ibmcloud dev tekton-trigger [pipelineID] --trigger-name [triggerName] --output JSON`
+
+#### `trace`
+{: #tekton-trigger-trace}
+
+* Use this parameter to provide verbose output.
+* Usage: `ibmcloud dev tekton-trigger [pipelineID] --trigger-name [triggerName] --trace`
 
 ## test
 {: #test}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-29"
+lastupdated: "2021-09-22"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -353,7 +353,7 @@ ibmcloud cf install --restore
 
 Log in to the {{site.data.keyword.cloud_notm}} CLI:
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [--accept] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--cr-token TOKEN | @CR_TOKEN_FILE] [--profile PROFILE_ID | PROFILE_NAME] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [--accept] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE]
 ```
 
 ### Prerequisites
@@ -375,6 +375,10 @@ None.
 <dd>The user password. Optional.</dd>
 <dt>--apikey API_KEY or @API_KEY_FILE_PATH</dt>
 <dd>The API key content or the path of an API key file that is indicated by the @ symbol.</dd>
+<dt>--cr-token TOKEN or @CR_TOKEN_FILE_PATH</dt>
+<dd>The compute resource token content or the path of a compute resource token file that is indicated by the @ symbol. If provided, the `--profile` flag, or `IBMCLOUD_CR_PROFILE` environment variable, must also be provided or set.</dd>
+<dt>--profile PROFILE_ID or PROFILE_NAME</dt>
+<dd>The ID or name of the linked trusted IAM profile to be used when obtaining the IAM access token. If provided, the `--cr-token` flag, or `IBMCLOUD_CR_TOKEN` environment variable, must also be provided or set.</dd>
 <dt>-c ACCOUNT_ID</dt>
 <dd>The ID of the target account. This option is exclusive with the `--no account` option.</dd>
 <dt>--no-account</dt>
@@ -475,6 +479,29 @@ Open the URL in the default browser? [Y/n] >
 {: screen}
 
 Open the link in a browser to get a passcode. Enter the passcode in the console to log in.
+
+#### Log in as a Compute Resource linked to a trusted profile:
+```
+ibmcloud login --cr-token token-string --profile trusted_profile_name_or_id
+```
+{: codeblock}
+
+```
+ibmcloud login --cr-token @filename --profile trusted_profile_name_or_id
+```
+{: codeblock}
+
+```
+IBMCLOUD_CR_TOKEN=@filename ibmcloud login --profile trusted_profile_name_or_id
+```
+{: codeblock}
+
+```
+IBMCLOUD_CR_TOKEN=@filename IBMCLOUD_CR_PROFILE=trusted_profile_name_or_id ibmcloud login
+```
+{: codeblock}
+
+For more information on logging in as a compute resource, see [Logging in with a Compute Resource token](/docs/cli?topic=cli-cri-login).
 
 #### Accept invitation to join a new account:
 ```
