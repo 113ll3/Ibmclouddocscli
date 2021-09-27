@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-09-27"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
 
@@ -1233,7 +1233,7 @@ View a list of pipeline runs for a Tekton pipeline.
 
 Usage:
 ```
-ibmcloud dev tekton-pipelineruns [pipelineID] --run-id [pipelinerunID] [--output JSON]
+ibmcloud dev tekton-pipelineruns [pipelineID] [--output JSON]
 ```
 {: codeblock}
 
