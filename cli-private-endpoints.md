@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-01"
 
 keywords: IBM Cloud CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, private endpoints, shell
 
@@ -43,7 +43,7 @@ The core CLI is supported only on classic infrastructure when the private endpoi
 
 To install the latest CLI for your OS from the shell manually, use the following command for your OS:
 
-  If you don't want to install from the shell because it might use root permissions, you can [download and run the installer](/docs/cli?topic=cli-cli-private-endpoints#downloading-installation-packages-with-private-endpoints).
+  If you don't want to install from the shell because it might use root permissions, you can [download and run the installer](/docs/cli?topic=cli-cli-private-endpoints#cli-private-endpoints-download).
   {: tip}
 
 * For **Mac**, copy and paste the following command to a command line and run it:
