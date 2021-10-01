@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-05-14"
+lastupdated: "2021-10-01"
 
 keywords: IBM Cloud CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, kubernetes, kubectl, git
 
@@ -21,7 +21,7 @@ subcollection: cli
 # Installing the tools and plug-ins manually
 {: #install-devtools-manually}
 
-You can manually install the {{site.data.keyword.cloud}} Command Line Interface if you prefer more granular control for installing the components. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cli-getting-started#step1-install-idt).
+You can manually install the {{site.data.keyword.cloud}} Command Line Interface and other recommended plug-ins and tools for developing applications for {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 ## Before you begin
