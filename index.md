@@ -108,25 +108,25 @@ To manually install the CLI plug-ins and tools, see [installing the tools and pl
 {: step}
 
 1. Log in to {{site.data.keyword.cloud_notm}} with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
-  ```
-  ibmcloud login
-  ```
-  {: codeblock}
+```
+ibmcloud login
+```
+{: codeblock}
 
-  If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
-  {: tip}
+If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
+{: tip}
 
 2. If you plan to access Cloud Foundry services, specify a Cloud Foundry org and space. You can run the following command to interactively identify the org and space:
-  ```
-  ibmcloud target --cf
-  ```
-  {: codeblock}
+```
+ibmcloud target --cf
+```
+{: codeblock}
 
-  Or, if you know which org and space that the service belongs to, you can use the following command:
-  ```
-  ibmcloud target -o <value> -s <value>
-  ```
-  {: codeblock}
+Or, if you know which org and space that the service belongs to, you can use the following command:
+```
+ibmcloud target -o <value> -s <value>
+```
+{: codeblock}
 
 ## Next steps
 {: #next-steps}
