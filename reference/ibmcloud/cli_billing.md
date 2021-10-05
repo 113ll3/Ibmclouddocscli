@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-29"
+lastupdated: "2021-09-09"
 
 keywords: cli, ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
@@ -24,25 +24,25 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 {: #ibmcloud_billing_account_usage}
 
 Show monthly usage of the current account (account admin only):
-```
+```bash
 ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
-<strong>Command options</strong>:
+### Command options
 
-<dl>
-  <dt>-d MONTH_DATE (optional)</dt>
-  <dd>Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format. Accepted inputs are JSON and CSV.</dd>
-  <dt>-q, --quiet (optional)</dt>
-  <dd>Suppress verbose output.</dd>
-</dl>
+-d MONTH_DATE (optional)
+:   Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.
 
-<strong>Examples</strong>:
+--output FORMAT (optional)
+:   Specify output format. Accepted inputs are JSON and CSV.
+
+-q, --quiet (optional)
+:   Suppress verbose output.
+
+### Examples
 
 Show current account's usage and cost report in 2016-06:
-```
+```bash
 ibmcloud billing account-usage -d 2016-06
 ```
 
@@ -50,92 +50,101 @@ ibmcloud billing account-usage -d 2016-06
 {: #ibmcloud_billing_org_usage}
 
 Show monthly usage for an org (account admin or org billing manager only):
-```
+```bash
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
-<strong>Command options</strong>:
+### Command options
 
-<dl>
-  <dt>ORG_NAME (required)</dt>
-  <dd>Name of the org.</dd>
-  <dt>-d MONTH_DATE (optional)</dt>
-  <dd>Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format. Only JSON is supported.</dd>
-  <dt>-q, --quiet (optional)</dt>
-  <dd>Suppress verbose output.</dd>
-</dl>
+ORG_NAME (required)
+:   Name of the org.
+
+-d MONTH_DATE (optional)
+:   Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.
+
+--output FORMAT (optional)
+:   Specify output format. Only JSON is supported.</dd>
+
+-q, --quiet (optional)
+:   Suppress verbose output.
 
 ## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
 Show monthly usage for a resource group (account admin or resource group admin only):
-```
+```bash
 ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
-<strong>Command options</strong>:
+### Command options
 
-<dl>
-  <dt>GROUP_NAME (required)</dt>
-  <dd>Name of the resource group.</dd>
-  <dt>-d MONTH_DATE (optional)</dt>
-  <dd>Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format. Only JSON is supported.</dd>
-  <dt>-q, --quiet (optional)</dt>
-  <dd>Suppress verbose output.</dd>
-</dl>
+GROUP_NAME (required)
+:    Name of the resource group.
+
+-d MONTH_DATE (optional)
+:   Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.
+
+--output FORMAT (optional)
+:   Specify output format. Only JSON is supported.
+
+-q, --quiet (optional)
+:   Suppress verbose output.
 
 ## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
 Show monthly resource instances usage under the current account:
-```
+```bash
 ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
-<strong>Command options</strong>:
+### Command options
 
-<dl>
-  <dt>-o ORG_NAME (optional)</dt>
-  <dd>Filter instances by organization.</dd>
-  <dt>-g GROUP_NAME</dt>
-  <dd>Filter instance by resource group.</dd>
-  <dt>-d MONTH_DATE (optional)</dt>
-  <dd>Display data for month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format. Accepted inputs are JSON and CSV.</dd>
-  <dt>-q, --quiet (optional)</dt>
-  <dd>Suppress verbose output.</dd>
-</dl>
+-o ORG_NAME (optional)
+:   Filter instances by organization.
+
+-g GROUP_NAME
+:   Filter instance by resource group.
+
+-d MONTH_DATE (optional)
+:   Display data for month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.
+
+--output FORMAT (optional)
+:   Specify output format. Accepted inputs are JSON and CSV.
+
+-q, --quiet (optional)
+:   Suppress verbose output.
 
 ## ibmcloud billing enterprise-usage
 {: #ibmcloud_billing_enterprise_usage}
 
 Show enterprise usage reports:
-```
+```bash
 ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --account-group-id ACCOUNT_GROUP_ID | --account ACCOUNT_NAME | --account-id ACCOUNT_ID] [--month MONTH] [--children] [--output FORMAT] [-q, --quiet]
 ```
 
-<strong>Command options</strong>:
+### Command options
 
-<dl>
-  <dt>--account ACCOUNT_NAME (optional)</dt>
-  <dd>Name of target account.</dd>
-  <dt>--account-id ACCOUNT_ID (optional)</dt>
-  <dd>ID of target account.</dd>
-  <dt>--account-group ACCOUNT_GROUP_NAME (optional)</dt>
-  <dd>Name of target account group.</dd>
-  <dt>--account-group-id ACCOUNT_GROUP_ID (optional)</dt>
-  <dd>ID of target account group.</dd>
-  <dt>--children (optional)</dt>
-  <dd>Show children usage reports.</dd>
-  <dt>--month MONTH (optional)</dt>
-  <dd>Target month. Default to current month.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specify output format. Only JSON is supported.</dd>
-  <dt>-q, --quiet (optional)</dt>
-  <dd>Suppress verbose output.</dd>
-</dl>
+--account ACCOUNT_NAME (optional)
+:   Name of target account.
+
+--account-id ACCOUNT_ID (optional)
+:   ID of target account.
+
+--account-group ACCOUNT_GROUP_NAME (optional)
+:   Name of target account group.
+
+--account-group-id ACCOUNT_GROUP_ID (optional)
+:   ID of target account group.
+
+--children (optional)
+:   Show children usage reports.
+
+--month MONTH (optional)
+:   Target month. Default to current month.
+
+--output FORMAT (optional)
+:   Specify output format. Only JSON is supported.
+
+-q, --quiet (optional)
+:   Suppress verbose output.

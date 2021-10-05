@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-05"
 
 keywords: cli, command line, command-line, login, cli login, compute resource, token, iks, trusted profiles, cri
 
@@ -42,30 +42,30 @@ When you use the compute resource token option to log in with a service account 
 You can log in with a compute resource token with the CLI in any of the following ways:
 
 * Call the Compute Resource token directly:
-  1. Specify the `--cr-token` option with the `ibmcloud login` command, and provide the content of the compute resource token.
-  2. Specify the `--profile` option with the `ibmcloud login` command, and provide the ID or name of the trusted IAM profile that the cluster is linked to.
+   1. Specify the `--cr-token` option with the `ibmcloud login` command, and provide the content of the compute resource token.
+   2. Specify the `--profile` option with the `ibmcloud login` command, and provide the ID or name of the trusted IAM profile that the cluster is linked to.
 
-  ```
-  ibmcloud login --cr-token <token_string> --profile <profile_name_or_id_string>
-  ```
-  {: codeblock}
+   ```
+   ibmcloud login --cr-token <token_string> --profile <profile_name_or_id_string>
+   ```
+   {: codeblock}
 
 * Call the Compute Resource token with the token file:
-  1. Specify the `--cr-token` option with the `ibmcloud login` command, and provide the file path of a compute resource token file.
-  2. Specify the `--profile` option with the `ibmcloud login` command, and provide the ID or name of the trusted IAM profile that the cluster is linked to.
+   1. Specify the `--cr-token` option with the `ibmcloud login` command, and provide the file path of a compute resource token file.
+   2. Specify the `--profile` option with the `ibmcloud login` command, and provide the ID or name of the trusted IAM profile that the cluster is linked to.
 
-  ```
-  ibmcloud login --cr-token @token_file_name --profile <profile_name_or_id_string>
-  ```
-  {: codeblock}
+   ```
+   ibmcloud login --cr-token @token_file_name --profile <profile_name_or_id_string>
+   ```
+   {: codeblock}
   
 * Set the `IBMCLOUD_CR_TOKEN` environment variable. 
   
-  Additionally, you can set the environment variable on your system. For example, set `IBMCLOUD_CR_TOKEN=token_string`, where `token_string` is the custom value of the compute resource token, or `IBMCLOUD_CR_TOKEN=@token_file_name`, where `@token_file_name` is the file path of a compute resource token file that contains the contents of the token. After the environment variable is set, you can simply specify `ibmcloud login --profile <profile_name_or_id_string>` from the CLI.
+   Additionally, you can set the environment variable on your system. For example, set `IBMCLOUD_CR_TOKEN=token_string`, where `token_string` is the custom value of the compute resource token, or `IBMCLOUD_CR_TOKEN=@token_file_name`, where `@token_file_name` is the file path of a compute resource token file that contains the contents of the token. After the environment variable is set, you can simply specify `ibmcloud login --profile <profile_name_or_id_string>` from the CLI.
 
 * Set both `IBMCLOUD_CR_TOKEN` and `IBMCLOUD_CR_PROFILE` environment variables.
   
-  Additionally, you can set both environment variables on your system. For example, `IBMCLOUD_CR_TOKEN=token_string`, where `token_string` is the custom value of the compute resource token, and `IBMCLOUD_CR_PROFILE=profile_name_or_id`, where `profile_name_or_id` is the name or ID of the trusted IAM profile that the cluster is linked to. After both environment variables are set, you can simply specify `ibmcloud login` from the CLI.
+   Additionally, you can set both environment variables on your system. For example, `IBMCLOUD_CR_TOKEN=token_string`, where `token_string` is the custom value of the compute resource token, and `IBMCLOUD_CR_PROFILE=profile_name_or_id`, where `profile_name_or_id` is the name or ID of the trusted IAM profile that the cluster is linked to. After both environment variables are set, you can simply specify `ibmcloud login` from the CLI.
 
 The resulting login session is valid for 60 minutes.
 {: note}

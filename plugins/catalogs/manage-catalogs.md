@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-02-10"
+lastupdated: "2021-09-09"
 
 keywords: cli, catalogs management
 
@@ -21,7 +21,7 @@ subcollection: cli
 {: #manage-catalogs-plugin}
 
 The {{site.data.keyword.cloud}} catalogs management command-line interface (CLI) provides extra capabilities for working with products in the {{site.data.keyword.cloud_notm}} catalog and the private catalogs in your account. You can use this CLI plug-in to manage your private catalogs that are only available to users in your account, onboard private software products, and manage catalog visibility between the public catalog and your private catalogs.
-{:shortdesc} 
+{: shortdesc} 
 
 ## Before you begin
 {: #prereqs-managecatalogs}
@@ -35,9 +35,10 @@ The {{site.data.keyword.cloud}} catalogs management command-line interface (CLI)
 
 To install the catalogs management plug-in, run the following command:
 
-```
+```bash
 ibmcloud plugin install catalogs-management
 ```
+{: codeblock}
 
 In the command line, you are notified when updates to the `ibmcloud` CLI and `catalogs-management` CLI plug-in are available. Ensure that you keep your CLI up-to-date so that you can use all the available commands and flags.
 
@@ -54,45 +55,49 @@ Use this command to create a new private catalog in your account. A private cata
 You must target a resource group to create a catalog because the catalog exists in the context of a particular resource group. To get the list of resource groups, you can run the `ibmcloud resource groups` command, and then the `ibmcloud target -g "resource group"` command.
 {: important}
 
-```
+```bash
 ibmcloud catalog create --name CATALOG [--catalog-description "DESCRIPTION"]
 ```
+{: codeblock}
 
 ### Command options
 {: #create-catalog-options}
 
-   <dl>
-   <dt>--name CATALOG</dt>
-   <dd>The catalog name.</dd>
-   <dt>--catalog-description DESCRIPTION (optional)</dt>
-   <dd>Short description for the new catalog.</dd>
-   </dl>
+--name CATALOG
+
+:   The catalog name.
+
+--catalog-description DESCRIPTION (optional)
+
+:   Short description for the new catalog.
+
    
 ### Example
 {: #create-example}
 
 Create a catalog called `dev-catalog` with the description `a catalog for development and testing purpsoses`.
 
-```
+```bash
 ibmcloud catalog create --name dev-catalog --catalog-description "a catalog for development and testing purposes"
 ```
+{: codeblock}
 
 ## ibmcloud catalog list
 {: #get-catalogs}
 
 Run the following command to retrieve the list of catalogs in this particular account.
 
-```
+```bash
 ibmcloud catalog list [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #get-catalogs-options}
 
-  <dl>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example: `--output json`</dd>
-  </dl>
+--output FORMAT (optional)
+
+:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example: `--output json`
 
 ### Output
 {: #get-catalogs-output}
@@ -112,19 +117,22 @@ ABDemoTestCatalog                              7a246530-e191-45e2-87cc-07c8c7033
 
 Run the following command to retrieve information for a particular catalog in the account.
 
-```
+```bash
 ibmcloud catalog get --catalog CATALOG [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #get-catalog-options}
 
-  <dl>
-  <dt>--catalog CATALOG</dt>
-  <dd>The catalog name or ID.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example: `--output json`</dd>
-  </dl>
+
+--catalog CATALOG
+
+:   The catalog name or ID.
+
+--output FORMAT (optional)
+
+:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example: `--output json`
 
 ### Output
 {: #get-catalog-output}
@@ -145,54 +153,76 @@ dev-catalog
 
 Run the following command to delete a particular catalog in the account.
 
-```
+```bash
 ibmcloud catalog delete --catalog CATALOG
 ```
+{: codeblock}
 
 ### Command options
 {: #delete-catalog-options}
 
-  <dl>
-   <dt>--catalog CATALOG</dt>
-  <dd>The catalog name or ID.</dd>
-  </dl>
+--catalog CATALOG
+
+:   The catalog name or ID.
 
 ## ibmcloud catalog search
 {: #search-catalog}
 
 Run the following command to search the public catalog for published products, including services and software.
 
-```
+```bash
 ibmcloud catalog search <QUERY> [--catalog CATALOG] [--type TYPE] [-r, --region REGION] [-k, --kind KIND] [--fields FIELDS] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--global]
 ```
+{: codeblock}
 
 ### Command options
 {: #search-catalog-options}
 
-  <dl>
-  <dt>--type TYPE (optional)</dt>
-    <dd>Optional. Default is `services`. Valid options are `services` and `software`.<dd>
-  <dt>--catalog CATALOG (optional)</dt>
-  <dd>Search for the software published by your account. Specify the catalog name or ID to search by.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. Default is terminal-friendly and the only alternative options are `json` and `csv`.</dd>
-  <dt>--kind KIND (optional)</dt>
-  <dd>Flag is only valid for services search. Provide a comma-separated list of types of products.</dd>
-  <dt>--region REGION (optional)</dt>
-  <dd>Flag is only valid for services search. Provide a comma-separated list of regions. Run `ibmcloud cs regions` to return a valid list.</dd>
-  <dt>--price PRICE (optional)</dt>
-  <dd>Flag is only valid for services search. Provide a comma-separated list of pricing types.</dd>
-  <dt>--tag TAG (optional)</dt>
-  <dd>Flag is only valid for services search. Provide a comma-separated list of tags.</dd>
-  <dt>--global (optional)</dt>
-  <dd>Flag is only valid for services search. Use it to operate in global scope.</dd>
-  <dt>--sort-by TYPE (optional)</dt>
-  <dd>Flag is only valid for services search and used to order the search result. Available options are `name`, `displayname`, `kind`, `provider`, `created`, and `updated`.</dd>
-  <dt>--reverse (optional)</dt>
-  <dd>Flag is only valid for services search. Use it to reverse the sorting order.</dd>
-  <dt>--fields FIELDS (optional)</dt>
-  <dd>Flag is only valid for services search. Customize the table, for example, `--fields name,kind,metadata.service.iam_compatible`.</dd>
-  </dl>
+
+--type TYPE (optional)
+
+:   Optional. Default is `services`. Valid options are `services` and `software`.
+
+--catalog CATALOG (optional)
+
+:   Search for the software published by your account. Specify the catalog name or ID to search by.
+
+--output FORMAT (optional)
+
+:   Specifies output format. Default is terminal-friendly and the only alternative options are `json` and `csv`.
+
+--kind KIND (optional)
+
+:   Flag is only valid for services search. Provide a comma-separated list of types of products.
+
+--region REGION (optional)
+
+:   Flag is only valid for services search. Provide a comma-separated list of regions. Run `ibmcloud cs regions` to return a valid list.
+
+--price PRICE (optional)
+
+:   Flag is only valid for services search. Provide a comma-separated list of pricing types.
+
+--tag TAG (optional)
+
+:   Flag is only valid for services search. Provide a comma-separated list of tags.
+
+--global (optional)
+
+:   Flag is only valid for services search. Use it to operate in global scope.
+
+--sort-by TYPE (optional)
+
+:   Flag is only valid for services search and used to order the search result. Available options are `name`, `displayname`, `kind`, `provider`, `created`, and `updated`.
+
+--reverse (optional)
+
+:   Flag is only valid for services search. Use it to reverse the sorting order.
+
+--fields FIELDS (optional)
+
+:   Flag is only valid for services search. Customize the table, for example, `--fields name,kind,metadata.service.iam_compatible`.
+
 
 ### Output
 {: #search-catalog-output}
@@ -213,21 +243,27 @@ Apache Airflow                             Qml0bmFtaS1haXJmbG93-global          
 
 Run the following command to retrieve filter details for either the account or a particular catalog.
 
-```
+```bash
 ibmcloud catalog filter get --catalog CATALOG [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #get-filter-options}
 
-  <dl>
-  <dt>--catalog CATALOG</dt>
-  <dd>The catalog name or ID.</dd>
-  <dt>--account-group ACCOUNT GROUP</dt>
-  <dd>The account group name or ID. This field applies only to enterprise accounts.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. Default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.</dd>
-  </dl>
+
+--catalog CATALOG
+
+:   The catalog name or ID.
+
+--account-group ACCOUNT GROUP
+
+:   The account group name or ID. This field applies only to enterprise accounts.
+
+--output FORMAT (optional)
+
+:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+
 
 ### Output
 {: #get-filter-output}
@@ -251,122 +287,163 @@ Provider       false     Third Party
 
 Run the following command to create a new filter. If a filter exists, this command overrides the current filter.
 
-```
+```bash
 ibmcloud catalog filter create [--catalog CATALOG] [--category CATEGORY] [--compliance COMPLIANCE] [--deployment-target TARGET] [--exclude-list LIST] [--include-all ALL] [--include-list LIST] [--offering-format FORMAT] [--pricing-plan PLAN] [--provider PROVIDER] [--release RELEASE] [--type TYPE]
 ```
+{: codeblock}
 
 ### Command options
 {: #create-filter-options}
 
-  <dl>
-  <dt>--catalog CATALOG (optional)</dt>
-  <dd>Specify the catalog name or ID. If not specified, the filter is created at the account level.</dd>
-  <dt>--account-group ACCOUNT GROUP</dt>
-  <dd>The account group name or ID. This option applies only to enterprise accounts.</dd>
-  <dt>--hide-ibm-catalog (optional)</dt>
-  <dd>By default, the catalog is visible to all users in this account. By providing this flag, you can make products available only to the users you choose by turning off visibility to the {{site.data.keyword.cloud_notm}} catalog and adding the products to your private catalogs.
-  <dt>--include-all BOOLEAN (optional)</dt>
-  <dd>Default is true if flag not provided. Valid values are `true` and `false`. If set to true, the filter defaults to include the entire public catalog, and subsequent filters are excluded. If set to false, the filter excludes the entire public catalog, and subsequent flags are included. For more information, see [Managing catalog settings](/docs/account?topic=account-filter-account).</dd>
-  <dt>--offering-format FORMAT (optional)</dt>
-  <dt>--category CATEGORY (optional)</dt>
-  <dd>Provide a comma-separated list of category names or tags you want to include or exclude. Run the `ibmcloud catalog offering category-options` command to view all options.</dd>
-  <dt>--compliance TYPE (optional)</dt>
-  <dd>Provide a comma-separated list of compliance categories you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.</dd>
-  <dt>--deployment-target TARGET (optional)</dt>
-  <dd>Provide a comma-separated list of deployment targets you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.</dd>
-  <dt>--exclude-list LIST (optional)</dt>
-  <dd>Provide a comma-separated list of product IDs or names that must be excluded in the filtered public catalog.</dd>
-  <dt>--include-list LIST (optional)</dt>
-  <dd>Provide a comma-separated list of product IDs or names that must be included in the filtered public catalog.</dd>
-  <dd>Provide a comma-separated list of product formats you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.</dd>
-  <dt>--pricing-plan PLAN (options)</dt>
-  <dd>Provide a comma-separated list of pricing plans you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.</dd>
-  <dt>--provider PROVIDER (optional)</dt>
-  <dd>Provide a comma-separated list of providers you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.</dd>
-  <dt>--release RELEASE (optional)</dt>
-  <dd>Provide a comma-separated list of categories you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.</dd>
-  <dt>--type TYPE (optional)</dt>
-  <dd>Provide a comma-separated list of software types you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.</dd>
-  </dl>
+--catalog CATALOG (optional)
+
+:   Specify the catalog name or ID. If not specified, the filter is created at the account level.
+
+--account-group ACCOUNT GROUP
+
+:   The account group name or ID. This option applies only to enterprise accounts.
+
+--hide-ibm-catalog (optional)
+
+:   By default, the catalog is visible to all users in this account. By providing this flag, you can make products available only to the users you choose by turning off visibility to the {{site.data.keyword.cloud_notm}} catalog and adding the products to your private catalogs.
+
+--include-all BOOLEAN (optional)
+
+:   Default is true if flag not provided. Valid values are `true` and `false`. If set to true, the filter defaults to include the entire public catalog, and subsequent filters are excluded. If set to false, the filter excludes the entire public catalog, and subsequent flags are included. For more information, see [Managing catalog settings](/docs/account?topic=account-filter-account).
+
+--offering-format FORMAT (optional)
+  
+--category CATEGORY (optional)
+
+:   Provide a comma-separated list of category names or tags you want to include or exclude. Run the `ibmcloud catalog offering category-options` command to view all options.
+
+--compliance TYPE (optional)
+
+:   Provide a comma-separated list of compliance categories you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+
+--deployment-target TARGET (optional)
+
+:   Provide a comma-separated list of deployment targets you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+
+--exclude-list LIST (optional)
+
+:   Provide a comma-separated list of product IDs or names that must be excluded in the filtered public catalog.
+
+--include-list LIST (optional)
+
+:   Provide a comma-separated list of product IDs or names that must be included in the filtered public catalog.</d
+:   Provide a comma-separated list of product formats you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+
+--pricing-plan PLAN (options)
+
+:   Provide a comma-separated list of pricing plans you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+
+--provider PROVIDER (optional)
+
+:   Provide a comma-separated list of providers you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+
+--release RELEASE (optional)
+
+:   Provide a comma-separated list of categories you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+
+--type TYPE (optional)
+
+:   Provide a comma-separated list of software types you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
 
 ## ibmcloud catalog filter delete
 {: #delete-filter}
 
 Run the following command to delete an applied filter. This filter defaults to the account level unless a catalog is specified. As a result, the filter is reset to include all products in the public catalog.
 
-```
+```bash
 ibmcloud catalog filter delete --catalog CATALOG
 ```
+{: codeblock}
 
 ### Command options
 {: #delete-filter-options}
 
-  <dl>
-  <dt>--catalog CATALOG</dt>
-  <dd>The catalog name or ID.</dd>
-  <dt>--account-group ACCOUNT GROUP</dt>
-  <dd>The account group name or ID. This option applies only to enterprise accounts.</dd>
-  </dl>
+
+--catalog CATALOG
+
+:   The catalog name or ID.
+
+--account-group ACCOUNT GROUP
+
+:   The account group name or ID. This option applies only to enterprise accounts.
 
 ## ibmcloud catalog filter offering
 {: #offering-filter}
 
 Update the filter to include or exclude a particular product and any applicable pricing plans. This filter defaults to the account level unless a catalog or account group is specified.
 
-```
+```bash
 ibmcloud catalog filter offering --offering PRODUCT-NAME
 ```
+{: codeblock}
 
 ### Command options
 {: #get-filter-offering-options}
 
-  <dl>
-  <dt>--catalog CATALOG</dt>
-  <dd>The catalog name or ID.</dd>
-  <dt>--account-group ACCOUNT GROUP</dt>
-  <dd>The account group name or ID. This option applies only to enterprise accounts.</dd>
-  <dt>--plans-list PLANS LIST</dt>
-  <dd>A comma-separated list of plan IDs or names to include or exclude.</dd>
-  <dt>--offering OFFERING</dt>
-  <dd>The product name or ID.</dd>
-  <dt>--include</dt>
-  <dd>The default value is true if a flag is not provided. Valid values are `true` and `false`. If set to true, the product and plans provided are visible to users in the account. If set to false, the product and plans aren't visible to users in the account.<dd>
-  </dl>
+
+--catalog CATALOG
+
+:   The catalog name or ID.
+
+--account-group ACCOUNT GROUP
+
+:   The account group name or ID. This option applies only to enterprise accounts.
+
+--plans-list PLANS LIST
+
+:   A comma-separated list of plan IDs or names to include or exclude.
+
+--offering OFFERING
+
+:   The product name or ID.
+
+--include
+
+:   The default value is true if a flag is not provided. Valid values are `true` and `false`. If set to true, the product and plans provided are visible to users in the account. If set to false, the product and plans aren't visible to users in the acco
+:   
 
 ## ibmcloud catalog filter hide-ibm-public-catalog
 {: #hide-filter}
 
 By default, the {{site.data.keyword.cloud_notm}} catalog is visible to all users in the account. You can make products available only to the users you choose by turning off visibility to the {{site.data.keyword.cloud_notm}} catalog and adding the products to your private catalogs.
 
-```
+```bash
 ibmcloud catalog filter hide-ibm-public-catalog
 ```
+{: codeblock}
 
 ## ibmcloud catalog filter show-ibm-public-catalog
 {: #show-filter}
 
 By default, the {{site.data.keyword.cloud_notm}} catalog is visible to all users in the account. You can make products available only to the users you choose by turning off visibility to the {{site.data.keyword.cloud_notm}} catalog and adding the products to your private catalogs.
 
-```
+```bash
 ibmcloud catalog filter show-ibm-public-catalog
 ```
+{: codeblock}
 
 ## ibmcloud catalog filter options
 {: #options-filter}
 
 Run the following command to retrieve the filter options for each filter category.
 
-```
+```bash
 ibmcloud catalog filter options
 ```
+{: codeblock}
 
 ### Command options
 {: #options-filter-options}
 
-  <dl>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.</dd>
-  </dl>
+
+--output FORMAT (optional)
+
+:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
 
 ### Output
 {: #options-filter-output}
@@ -393,50 +470,58 @@ Service Endpoint Supported   service_endpoint_supported
 
 Run the following command to add a product to a private catalog in the account.
 
-```
+```bash
 ibmcloud catalog offering create --catalog CATALOG --zipurl URL [--include-config]
 ```
+{: codeblock}
 
 ### Command options
 {: #create-offering-options}
 
-  <dl>
-  <dt>--catalog CATALOG_NAME</dt>
-  <dd>The catalog name or ID.</dd>
-  <dt>--zipurl URL</dt>
-  <dd>URL pointing to .zip file of the product.</dd>
-  <dt>--include-config (optional)</dt>
-  <dd>If provided, all configuration values are included and available when you add the product.</dd>
-  </dl>
+--catalog CATALOG_NAME
+
+:   The catalog name or ID.
+
+--zipurl URL
+
+:   URL pointing to .zip file of the product.
+
+--include-config (optional)
+
+:   If provided, all configuration values are included and available when you add the product.
 
 ## ibmcloud catalog offering list
 {: #list-offering}
 
 Run the following command to get details about the products in your private catalogs. This command provides a filter by private catalog, product, and version.
 
-```
+```bash
 ibmcloud catalog offering list [--catalog CATALOG] [--offering OFFERING_NAME] [--version VERSION] [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #list-offering-options}
 
-  <dl>
-  <dt>--catalog CATALOG</dt>
-  <dd>The catalog name or ID.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.</dd>
-  </dl> 
+
+--catalog CATALOG
+
+:   The catalog name or ID.
+
+--output FORMAT (optional)
+
+:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+
   
 ### Example
 {: #get-example}
 
 List all of the products that are in the `dev-catalog` catalog.
 
-```
+```bash
 ibmcloud catalog offering list --catalog dev-catalog
 ```
-
+{: codeblock}
 
 ### Output
 {: #list-offering-output}
@@ -469,33 +554,41 @@ tf_cloudless_sleepy-2.0                c260a67a-1b25-49fc-9896-46e7e6212990
 
 Run the following command to get details about the products in your private catalogs. This command provides a filter by private catalog, product, and version.
 
-```
+```bash
 ibmcloud catalog offering search [--catalog CATALOG] [--offering OFFERING_NAME] [--version VERSION] [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #search-offering-options}
 
-  <dl>
-  <dt>--catalog CATALOG (optional)</dt>
-  <dd>The catalog name or ID.</dd>
-  <dt>--offering OFFERING (optional)</dt>
-  <dd>The product name or ID.</dd>
-  <dt>--version VERSION (optional)</dt>
-  <dd>The version name or ID.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.</dd>
-  </dl> 
+
+--catalog CATALOG (optional)
+
+:   The catalog name or ID.
+
+--offering OFFERING (optional)
+
+:   The product name or ID.
+
+--version VERSION (optional)
+
+:   The version name or ID.
+
+--output FORMAT (optional)
+
+:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+
   
 ### Example
 {: #search-example}
 
 List all of the products that are in the `dev-catalog` catalog.
 
-```
+```bash
 ibmcloud catalog offering list --catalog dev-catalog
 ```
-
+{: codeblock}
 
 ### Output
 {: #search-offering-output}
@@ -519,21 +612,24 @@ dev-catalog
 
 Run the following command to get details about a specific product in the catalog.
 
-```
+```bash
 ibmcloud catalog offering get --catalog CATALOG --offering OFFERING_NAME [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #get-offering-options}
 
-  <dl>
-  <dt>--catalog CATALOG</dt>
-  <dd>The catalog name or ID.</dd>
-  <dt>--offering OFFERING_NAME</dt>
-  <dd>The product name or ID.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.</dd>
-  </dl>
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING_NAME
+:   The product name or ID.
+
+--output FORMAT (optional)
+:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+
 
 ### Output
 {: #get-offering-output}
@@ -554,138 +650,159 @@ dev-offering
 
 Run the following command to import a new version of a product in your private catalog.
 
-```
+```bash
 ibmcloud catalog offering import-version --catalog CATALOG --offering OFFERING_NAME --zipurl URL [--target-version APP_VERSION] [--include-config]
 ```
-      
+{: codeblock}
+
 ### Command options
 {: #import-offering-version-options}
 
-  <dl>
-  <dt>--catalog CATALOG</dt>
-  <dd>The catalog name or ID.</dd>
-  <dt>--offering OFFERING_NAME</dt>
-  <dd>The product name or ID.</dd>
-  <dt>--zipurl URL</dt>
-  <dd>URL pointing to the .zip file of the product.</dd>
-  <dt>--target-version APP_VERSION (optional)</dt>
-  <dd>The application version of the \"tgz\" being imported.</dd>
-  <dt>--include-config (optional)</dt>
-  <dd>If provided, all configurations values are included and available when you import the new version.</dd>
-  </dl> 
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING_NAME
+:   :   The product name or ID.
+
+--zipurl URL
+:   URL pointing to the .zip file of the product.
+
+--target-version APP_VERSION (optional)
+:   The application version of the \"tgz\" being imported.
+
+--include-config (optional)
+:   If provided, all configurations values are included and available when you import the new version.
+
 
 ## ibmcloud catalog offering preinstall
 {: #preinstall-offering}
 
 Run the following command to run the preinstallation script for a particular product.
 
-```
+```bash
 ibmcloud catalog offering preinstall --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME
 ```
+{: codeblock}
 
 ### Command options
 {: #preinstall-offering-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for this product, run the `ibmcloud catalog offering list` command and locate the specified product and version that you'd like to use.</dd>
-  <dt>--cluster CLUSTER_ID</dt>
-  <dd>Provide the cluster ID of the cluster where you want to install the product.</dd>
-  <dt>--namespace NAME</dt>
-  <dd>Provide the namespace you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.</dd>
-  </dl> 
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for this product, run the `ibmcloud catalog offering list` command and locate the specified product and version that you'd like to use.
+
+--cluster CLUSTER_ID
+:   Provide the cluster ID of the cluster where you want to install the product.
+
+--namespace NAME
+:   Provide the namespace you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.
+
   
 ### Example
 {: #preinstall-example}
 
 Run the preinstallation script for a product with a version locator number of `b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4` in cluster with ID `bn5ebho206o7fg45f2e0` in the namespace called `test-namespace`. 
 
-```
+```bash
 ibmcloud catalog offering preinstall --version-locator b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4 --cluster bn5ebho206o7fg45f2e0 --namespace test-namespace
 ```
+{: codeblock}
 
 ## ibmcloud catalog offering preinstall-status
 {: #preinstall-status-offering}
 
 Run the following command to get the status of an ongoing preinstallation.
 
-```
+```bash
 ibmcloud catalog offering preinstall-status --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #preinstall-status-offering-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product and version that you'd like to use.</dd>
-  <dt>--cluster CLUSTER_ID</dt>
-  <dd>Provide the cluster ID of the cluster where the preinstallation was run.</dd>
-  <dt>--namespace NAME</dt>
-  <dd>Provide the namespace used for the preinstallation.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.</dd>
-  </dl> 
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product and version that you'd like to use.
+
+--cluster CLUSTER_ID
+:   Provide the cluster ID of the cluster where the preinstallation was run.
+
+--namespace NAME
+:   Provide the namespace used for the preinstallation.
+
+--output FORMAT (optional)
+:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+
 
 ## ibmcloud catalog offering validate
 {: #validate-offering}
 
 Run the following command to validate a new version of a product in your private catalog. Products must be validated to ensure that they work as expected before they can be published to the account for other users to create an instance from the private catalog.
 
-```
+```bash
 ibmcloud catalog offering validate --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME [--overrride-values VALUES|FILENAME]
 ```
+{: codeblock}
 
 ### Command options
 {: #validate-offering-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product and version you'd like to use.</dd>
-  <dt>--cluster CLUSTER_ID</dt>
-  <dd>Provide the cluster ID of the cluster where you want to install the product.</dd>
-  <dt>--namespace NAME</dt>
-  <dd>Provide the namespace you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.</dd>
-  <dt>--override-values VALUES|FILENAME (optional)</dt>
-  <dd>Provide any custom configurations for the installation. You can provide this value either inline or by using a JSON or TXT file. For example, `override-values values.json`.</dd>
-  </dl> 
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product and version you'd like to use.
+
+--cluster CLUSTER_ID
+:   Provide the cluster ID of the cluster where you want to install the product.
+
+--namespace NAME
+:   Provide the namespace you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.
+
+--override-values VALUES|FILENAME (optional)
+:   Provide any custom configurations for the installation. You can provide this value either inline or by using a JSON or TXT file. For example, `override-values values.json`.
+
   
 ### Example
 {: #validate-example}
 
 Validate a product with the version locator `b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4` in a cluster with the ID `bn5ebho206o7fg45f2e0` within a namespace called `test-namespace`. This installation has custom configurations, so the values are provided by using a `values.json` file.
 
-```
+```bash
 ibmcloud catalog offering validate --version-locator b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4 --cluster bn5ebho206o7fg45f2e0 --namespace test-namespace --overrride-values values.json
 ```
+{: codeblock}
 
 Override values example format from the `values.json` file:
 
-```
+```bash
 {
   "username": "provision-test-1",
   "password": "passw0rd"
 }
 ```
+{: codeblock}
 
 ## ibmcloud catalog offering validate-status
 {: #validate-status-offering}
 
 Run the following command to get the status of an ongoing validation.
 
-```
+```bash
 ibmcloud catalog offering validate-status --version-locator VERSION_NUMBER [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #validate-status-offering-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for the product, run the `ibmcloud catalog offering list`command and locate the specified product or version you want to use.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.</dd>
-  </dl> 
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list`command and locate the specified product or version you want to use.
+
+--output FORMAT (optional)
+:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+
 
 
 ## ibmcloud catalog offering category-options
@@ -693,24 +810,26 @@ ibmcloud catalog offering validate-status --version-locator VERSION_NUMBER [--ou
 
 Run the following command to retrieve the list of category choices.
 
-```
+```bash
 ibmcloud catalog offering category-options [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #category-options-offering-options}
 
-  <dl>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.</dd>
-  </dl>
+
+--output FORMAT (optional)
+:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+
 
 ### Example
 {: #categroy-options-offering-example}
 
-```
+```bash
 ibmcloud catalog offering category-options
 ```
+{: codeblock}
 
 
 ### Output
@@ -733,102 +852,111 @@ Storage                 storage                                               Or
 
 Run the following command to add a category tag to a product. You can provide either the category name or tag, which you can find by running the `ibmcloud catalog offering category-options` command. The products must be placed in a category to be visible in the catalog.
 
-```
+```bash
 ibmcloud catalog offering category-options [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #add-category-offering-options}
 
-  <dl>
-  <dt>--catalog CATALOG</dt>
-  <dd>The catalog name or ID.</dd>
-  <dt>--offering OFFERING</dt>
-  <dd>The product name or ID.</dd>
-  <dt>--category CATEGORY</dt>
-  </dl>category ID</dt>
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+--category CATEGORY
+:   The category ID.
+  
 
 ### Example
 {: #categroy-options-offering-example}
 
-```
+```bash
 ibmcloud catalog offering add-category --catalog dev-catalog --offering dev-offering --category dev_ops
 ```
+{: codeblock}
 
 ## ibmcloud catalog offering create-draft
 {: #create-offering-draft}
 
 Run the following command to create a draft of an existing version. This command is useful for changing an existing version that you want to publish without introducing a new version. Some changes, like changing the source file, require you to revalidate the product.
 
-```
+```bash
 ibmcloud catalog offering create-draft --version-locator VERSION_NUMBER [--output FORMAT]
 ```
+{: codeblock}
 
 ### Command options
 {: #create-offering-draft-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.</dd>
-  </dl> 
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
+
+--output FORMAT (optional)
+:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+
 
 ## ibmcloud catalog offering refresh-version
 {: #refresh-offering-version}
 
 Run the following command to create a change the source file of a draft version. This command is useful for updating an existing version. 
 
-```
+```bash
 ibmcloud catalog offering refresh-version --version-locator VERSION_NUMBER --zipurl URL [--include-config]
 ```
+{: codeblock}
 
 ### Command options
 {: #refresh-offering-version-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.</dd>
-  <dt>--zipurl URL</dt>
-  <dd>URL pointing to the .zip file of the product.</dd>
-  <dt>--include-config (optional)</dt>
-  <dd>If provided, all configuration values are included and available when you add the product.</dd>
-  </dl> 
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
+
+--zipurl URL
+:   URL pointing to the .zip file of the product.
+
+--include-config (optional)
+:   If provided, all configuration values are included and available when you add the product.
+
 
 ## ibmcloud catalog offering merge-draft
 {: #merge-offering-draft-version}
 
 Run the following command to merge a draft version of a product.
 
-```
+```bash
 ibmcloud catalog offering merge-draft --version-locator VERSION_NUMBER
 ```
+{: codeblock}
 
 ### Command options
 {: #merge-offering-draft-version-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.</dd>
-  </dl> 
-
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
 
 ## ibmcloud catalog offering publish-to-account
 {: #publish-offering-to-account}
 
 Run the following command to publish a new version or product from your private catalog to the account. After the product is published, users in the account who have access to the private catalog and its containing resource group can create an instance and start using it.
 
-```
+```bash
 ibmcloud catalog offering publish-to-account --version-locator VERSION_NUMBER
 ```
+{: codeblock}
 
 ### Command options
 {: #publish-offering-to-account-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.</dd>
-  </dl> 
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
+
 
 <!-- These commands below will NOT go public and will always remain internal until we remove them entirely in favor of the provider portal which will be used to onboard content offerings to the public catalog. -->
 
@@ -837,17 +965,18 @@ ibmcloud catalog offering publish-to-account --version-locator VERSION_NUMBER
 
 Run the following command to publish an offering that is already available in your account to all IBMers. This part of the publication process creates a tile in the staging and production catalogs that is visible only to IBMers. By publishing an offering to IBMers, you can test the offering in production before you make it available to all users in the {{site.data.keyword.cloud_notm}} catalog.
 
-```
+```bash
 ibmcloud catalog offering publish-to-ibm --version-locator VERSION_NUMBER
 ```
+{: codeblock}
 
 ### Command options
 {: #publish-offering-to-ibm-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.</dd>
-  </dl> 
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
+
 
 ## ibmcloud catalog offering publish-to-public
 {: #publish-offering-to-public}
@@ -857,48 +986,50 @@ Run the following command to publish your private offering to the {{site.data.ke
 This option does require an approval process from offering management. As soon as your approval is complete, your tile is available for all {{site.data.keyword.cloud_notm}} customers to see and use.
 {: important}
 
-```
+```bash
 ibmcloud catalog offering publish-to-public --version-locator VERSION_NUMBER
 ```
+{: codeblock}
 
 ### Command options
 {: #publish-offering-to-public-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.</dd>
-  </dl> 
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
+
 
 ## ibmcloud catalog offering deprecate
 {: #publish-offering-deprecate}
 
 Run the following command to deprecate a previously published offering version in the {{site.data.keyword.cloud_notm}}  catalog.
 
-```
+```bash
 ibmcloud catalog offering deprecate --version-locator VERSION_NUMBER
 ```
+{: codeblock}
 
 ### Command options
 {: #publish-offering-deprecate-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.</dd>
-  </dl> 
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
+
 
 ## ibmcloud catalog offering restore
 {: #publish-offering-restore}
 
 Run the following command to restore a previously deprecated offering version in the {{site.data.keyword.cloud_notm}} catalog. Restoring it places the version in draft state. After you validate it, you can restore the original version to the published state that it was in before it was deprecated.
 
-```
+```bash
 ibmcloud catalog offering restore --version-locator VERSION_NUMBER
 ```
+{: codeblock}
 
 ### Command options
 {: #publish-offering-restore-options}
 
-  <dl>
-  <dt>--version-locator VERSION_NUMBER</dt>
-  <dd>To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.</dd>
-  </dl> 
+--version-locator VERSION_NUMBER
+:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-06"
+lastupdated: "2021-10-05"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -37,8 +37,8 @@ The simplest way to install the {{site.data.keyword.dev_cli_notm}} extension is 
 
 1. Open the `quick open` command palette by using the following key combinations from within the editor:
 
-  * **Mac:** `cmd + p`
-  * **Windows&trade; / Linux&trade;:** `ctrl + p`
+   * **Mac:** `cmd + p`
+   * **Windows&trade; / Linux&trade;:** `ctrl + p`
 
 2. Enter the `ext install ibm-developer` command, and then press Enter to install the {{site.data.keyword.dev_cli_notm}} extension inside the Visual Studio Code editor.
 

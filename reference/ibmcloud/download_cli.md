@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-21"
+lastupdated: "2021-10-05"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -39,52 +39,52 @@ Use the following steps to install the latest stand-alone {{site.data.keyword.cl
 1. Use a browser to access the official [`ibm-cloud-cli-releases`](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/) GitHub repository, and **select** the installer of your OS to begin the download. The following operating systems are supported: macOS X 64-bit, Windows&trade; 64-bit, Linux&trade; x86 64-bit, and Linux&trade; LE 64-bit (ppc64le).
 
 2. Run the installer:
-  * For Mac and Windows&trade;, run the installer.
-  * For Linux&trade;, extract the package and run the `install` script.
+   * For Mac and Windows&trade;, run the installer.
+   * For Linux&trade;, extract the package and run the `install` script.
 
 3. Log in to {{site.data.keyword.cloud_notm}}:
-  ```
-  ibmcloud login
-  ```
-  {: codeblock}
+   ```
+   ibmcloud login
+   ```
+   {: codeblock}
    
-  Now, you're ready to manage {{site.data.keyword.cloud_notm}} resources. Enter `ibmcloud help` to view the command descriptions.
+   Now, you're ready to manage {{site.data.keyword.cloud_notm}} resources. Enter `ibmcloud help` to view the command descriptions.
 
-  If you're using a federated ID, [log in with a one-time passcode or an API key](/docs/account?topic=account-federated_id).
-  {: tip}
+   If you're using a federated ID, [log in with a one-time passcode or an API key](/docs/account?topic=account-federated_id).
+   {: tip}
 
 ## Installing from the shell
 {: #shell_install}
 
 To install the latest CLI for your OS from the shell manually, use the following command for your OS:
 
-  If you don't want to install from the shell because it might utilize root permissions, you can [download and run the installer](/docs/cli?topic=cli-install-ibmcloud-cli#ibmcloud-cli-installer).
-  {: tip}
+   If you don't want to install from the shell because it might utilize root permissions, you can [download and run the installer](/docs/cli?topic=cli-install-ibmcloud-cli#ibmcloud-cli-installer).
+   {: tip}
 
 * For **Mac**, copy and paste the following command to a terminal and run it:
-  ```
-  curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
-  ```
-  {: codeblock}
+   ```
+   curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
+   ```
+   {: codeblock}
 
 * For **Linux&trade;**, copy and paste the following command to a terminal and run it:
-  ```
-  curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-  ```
-  {: codeblock}
+   ```
+   curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+   ```
+   {: codeblock}
 
 * For **Windows&trade;**, copy and paste the following command to a [Windows&trade; PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: external} terminal console and run it:
-  ```
-  iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
-  ```
-  {: codeblock}
+   ```
+   iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
+   ```
+   {: codeblock}
 
-  If you encounter errors like `The underlying connection was closed: An unexpected error occurred on a send`, make sure you have .Net Framework 4.5 or later installed. Also try to enable TLS 1.2 protocol by running the following command:
+   If you encounter errors like `The underlying connection was closed: An unexpected error occurred on a send`, make sure you have .Net Framework 4.5 or later installed. Also try to enable TLS 1.2 protocol by running the following command:
   
-  ```
-  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-  ```
-  {: codeblock}
+   ```
+   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+   ```
+   {: codeblock}
 
 ## Installing to a custom directory
 {: #install-custom-dir}
@@ -124,9 +124,8 @@ If you install the {{site.data.keyword.cloud_notm}} CLI to a custom directory, t
    {: screen}
 
 3. Add to the `PATH` environment variable and enable shell autocompletion.
-  * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
-  * For shell autocompletion support (Mac and Linux&trade; only), see [Enabling shell autocompletion for IBM Cloud CLI](/docs/cli/reference/ibmcloud?topic=cli-shell-autocomplete#shell-autocomplete).
-
+   * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
+   * For shell autocompletion support (Mac and Linux&trade; only), see [Enabling shell autocompletion for IBM Cloud CLI](/docs/cli/reference/ibmcloud?topic=cli-shell-autocomplete#shell-autocomplete).
 
 ## Updating the {{site.data.keyword.cloud_notm}} CLI
 {: #update-ibmcloud-cli}

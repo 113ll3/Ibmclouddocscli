@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-03"
+  years: 2015, 2021
+lastupdated: "2021-10-05"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -45,19 +45,19 @@ If you previously installed the {{site.data.keyword.cloud_notm}} admin plug-in, 
 Complete the following steps to add the repository and install the plug-in:
 
 1. To add the {{site.data.keyword.cloud_notm}} admin plug-in repository, run the following command:
-  ```
-  cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
-  ```
-  {: codeblock}
+   ```
+   cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
+   ```
+   {: codeblock}
 
-  You can find the same command with the actual endpoint on your admin console CLI page: `https://<customer_console_endpoint>.bluemix.net/cli`.
-  {: note}
+   You can find the same command with the actual endpoint on your admin console CLI page: `https://<customer_console_endpoint>.bluemix.net/cli`.
+   {: note}
 
 2. To install the {{site.data.keyword.cloud_notm}} admin CLI plug-in, run the following command:
-  ```
-  cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
-  ```
-  {: codeblock}
+   ```
+   cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
+   ```
+   {: codeblock}
 
 ## Uninstalling the {{site.data.keyword.cloud_notm}} admin CLI plug-in
 {: #remove-admin-cli}
@@ -65,16 +65,16 @@ Complete the following steps to add the repository and install the plug-in:
 Complete the following steps to uninstall the plug-in. 
 
 1. Uninstall the plug-in:
-  ```
-  cf uninstall-plugin IBMCloudAdminCLI
-  ```
-  {: codeblock}
+   ```
+   cf uninstall-plugin IBMCloudAdminCLI
+   ```
+   {: codeblock}
 
 2. Remove the plug-in repository:
-  ```
-  cf remove-plugin-repo IBMCloudAdmin
-  ```
-  {: codeblock}
+   ```
+   cf remove-plugin-repo IBMCloudAdmin
+   ```
+   {: codeblock}
 
 Then, you can add the updated repository and install the latest plug-in.
 

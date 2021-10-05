@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-05"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -29,16 +29,17 @@ The following commands are supported by the {{site.data.keyword.cloud_notm}} CLI
 
 The prerequisites for each command describe which actions are required before you run the command. The prerequisites can include one or more of the following actions:
 
-<dl>
-<dt>Docker</dt>
-<dd>Install the Docker CLI.</dd>
-<dt>Endpoint</dt>
-<dd>Use the [`ibmcloud api` command](#ibmcloud_api) to set an API endpoint.</dd>
-<dt>Log in</dt>
-<dd>Use the [`ibmcloud login` command](#ibmcloud_login) to log in. If you log in with a federated ID, use the `--sso` option to authenticate with a one time passcode. Or use the `--apikey` option to authenticate with an API key.</dd>
-<dt>Target</dt>
-<dd>Use the [`ibmcloud target` command](#ibmcloud_target) to set an org and space.</dd>
-</dl>
+Docker
+:   Install the Docker CLI.
+
+Endpoint
+:   Use the [`ibmcloud api` command](#ibmcloud_api) to set an API endpoint.
+
+Log in
+:   Use the [`ibmcloud login` command](#ibmcloud_login) to log in. If you log in with a federated ID, use the `--sso` option to authenticate with a one time passcode. Or use the `--apikey` option to authenticate with an API key.
+
+Target
+:   Use the [`ibmcloud target` command](#ibmcloud_target) to set an org and space.
 
 ## Global options
 {: #global-options}
@@ -89,10 +90,8 @@ None.
 ### Command options
 {: #help-options}
 
-<dl>
-<dt>COMMAND|NAMESPACE</dt>
-<dd>The command or namespace that help is displayed for. If not specified, the general help for {{site.data.keyword.cloud_notm}} CLI is shown. Optional.</dd>
-</dl>
+COMMAND|NAMESPACE
+:   The command or namespace that help is displayed for. If not specified, the general help for {{site.data.keyword.cloud_notm}} CLI is shown. Optional.
 
 ### Examples
 {: #help-examples}
@@ -152,14 +151,14 @@ None.
 ### Command options
 {: #api-options}
 
-<dl>
-<dt>API_ENDPOINT</dt>
-<dd>The API endpoint that is targeted, for example, `https://cloud.ibm.com`. If both the `API_ENDPOINT` and `--unset` options aren't specified, the current API endpoint is displayed. Optional.</dd>
-<dt>--skip-ssl-validation</dt>
-<dd>Bypass SSL validation of HTTP requests. Optional.</dd>
-<dt>--unset</dt>
-<dd>Remove the API endpoint setting.</dd>
-</dl>
+API_ENDPOINT
+:   The API endpoint that is targeted, for example, `https://cloud.ibm.com`. If both the `API_ENDPOINT` and `--unset` options aren't specified, the current API endpoint is displayed. Optional.
+
+--skip-ssl-validation
+:   Bypass SSL validation of HTTP requests. Optional.
+
+--unset
+:   Remove the API endpoint setting.
 
 ### Examples
 {: #api-examples}
@@ -206,18 +205,20 @@ None.
 ### Command options
 {: #config-options}
 
-<dl>
-<dt>--check-version</dt>
-<dd>Enable or disable CLI version checking. Valid values are `true` or `false`.</dd>
-<dt>--color</dt>
-<dd>Enable or disable color output. This option is disabled by default. Valid values are `true` or `false`.</dd>
-<dt>--http-timeout</dt>
-<dd>The timeout value for HTTP requests in seconds. The default value is 60 seconds.</dd>
-<dt>--locale</dt>
-<dd>Set a default locale. If no value is specified, the previous locale is deleted. </dd>
-<dt>--trace </dt>
-<dd>Trace HTTP requests to the terminal or specified file. Valid values are `true` or `false`.</dd>
-</dl>
+--check-version
+:   Enable or disable CLI version checking. Valid values are `true` or `false`.
+
+--color
+:   Enable or disable color output. This option is disabled by default. Valid values are `true` or `false`.
+
+--http-timeout
+:   The timeout value for HTTP requests in seconds. The default value is 60 seconds.
+
+--locale<
+:   Set a default locale. If no value is specified, the previous locale is deleted.
+
+--trace
+:   Trace HTTP requests to the terminal or specified file. Valid values are `true` or `false`.
 
 You can specify only one of the options at a time.
 {: tip}
@@ -282,10 +283,8 @@ Run [`ibmcloud cf install`](#ibmcloud_cf_install) to install the Cloud Foundry C
 ### Command options
 {: #info-options}
 
-<dl>
-  <dt>-q, --quiet</dt>
-  <dd>Do not display the invoking message.</dd>
-</dl>
+-q, --quiet
+:   Do not display the invoking message.
 
 ### Examples
 {: #info-examples}
@@ -318,14 +317,14 @@ None.
 ### Command options
 {: #cfinstall-options}
 
-<dl>
-  <dt>-v, --version</dt>
-  <dd>Specify version of Cloud Foundry CLI to install.</dd>
-  <dt>--restore</dt>
-  <dd>Restore to pre-bundled version of Cloud Foundry CLI.</dd>
-  <dt>-f, --force</dt>
-  <dd>Force installation without confirmation.</dd>
-</dl>
+-v, --version<
+:   Specify version of Cloud Foundry CLI to install.
+
+--restore
+:   Restore to pre-bundled version of Cloud Foundry CLI.
+
+-f, --force
+:   Force installation without confirmation.
 
 ### Examples
 {: #cfinstall-examples}
@@ -364,40 +363,53 @@ None.
 ### Command options
 {: #login-options}
 
-<dl>
-<dt>-a API_ENDPOINT</dt>
-<dd>The API endpoint. For example, `cloud.ibm.com`. Or use `private.cloud.ibm.com` to log in using a private endpoint. </dd>
-<dt>--sso</dt>
-<dd>Specify this option to [log in with a federated ID](/docs/account?topic=account-federated_id). Using this option prompts you to authenticate with your single sign-on provider and enter a one-time passcode to log in.</dd>
-<dt>-u USER_NAME</dt>
-<dd>The user name. Optional.</dd>
-<dt>-p PASS_WORD</dt>
-<dd>The user password. Optional.</dd>
-<dt>--apikey API_KEY or @API_KEY_FILE_PATH</dt>
-<dd>The API key content or the path of an API key file that is indicated by the @ symbol.</dd>
-<dt>--cr-token TOKEN or @CR_TOKEN_FILE_PATH</dt>
-<dd>The compute resource token content or the path of a compute resource token file that is indicated by the @ symbol. If provided, the `--profile` flag, or `IBMCLOUD_CR_PROFILE` environment variable, must also be provided or set.</dd>
-<dt>--profile PROFILE_ID or PROFILE_NAME</dt>
-<dd>The ID or name of the linked trusted IAM profile to be used when obtaining the IAM access token. If provided, the `--cr-token` flag, or `IBMCLOUD_CR_TOKEN` environment variable, must also be provided or set.</dd>
-<dt>-c ACCOUNT_ID</dt>
-<dd>The ID of the target account. This option is exclusive with the `--no account` option.</dd>
-<dt>--no-account</dt>
-<dd>Forced login without the account. This option isn't recommended, and it is exclusive with the `-c` option.</dd>
-<dt>--accept</dt>
-<dd>Accept an invitation to join the targeted account. The provided account must be a valid account ID.</dd>
-<dt>-g RESOURCE_GROUP</dt>
-<dd>The name or ID of the target resource group. Optional.</dd>
-<dt>-r REGION</dt>
-<dd>The name of the target region. For example, `us-south` or `eu-gb`.</dd>
-<dt>--no-region</dt>
-<dd>Forced login without targeting a region.</dd>
-<dt>-o ORG</dt>
-<dd>The name of the target organization. This option is deprecated. Use `ibmcloud target -o org_name` instead. Optional.</dd>
-<dt>-s SPACE</dt>
-<dd>The name of the target space. This option is deprecated. Use `ibmcloud target -s space_name` instead. Optional.</dd>
-<dt>--skip-ssl-validation</dt>
-<dd>Bypass the SSL validation of HTTP requests. This option isn't recommended.</dd>
-</dl>
+-a API_ENDPOINT
+:   The API endpoint. For example, `cloud.ibm.com`. Or use `private.cloud.ibm.com` to log in using a private endpoint.
+
+--sso
+:   Specify this option to [log in with a federated ID](/docs/account?topic=account-federated_id). Using this option prompts you to authenticate with your single sign-on provider and enter a one-time passcode to log in.
+
+-u USER_NAME
+:   The user name. Optional.
+
+-p PASS_WORD<
+:   The user password. Optional.
+
+--apikey API_KEY or @API_KEY_FILE_PATH
+:   The API key content or the path of an API key file that is indicated by the @ symbol.
+
+--cr-token TOKEN or @CR_TOKEN_FILE_PATH
+:   The compute resource token content or the path of a compute resource token file that is indicated by the @ symbol. If provided, the `--profile` flag, or `IBMCLOUD_CR_PROFILE` environment variable, must also be provided or set.
+
+--profile PROFILE_ID or PROFILE_NAME
+:   The ID or name of the linked trusted IAM profile to be used when obtaining the IAM access token. If provided, the `--cr-token` flag, or `IBMCLOUD_CR_TOKEN` environment variable, must also be provided or set.
+
+-c ACCOUNT_ID
+:   The ID of the target account. This option is exclusive with the `--no account` option.
+
+--no-account
+:   Forced login without the account. This option isn't recommended, and it is exclusive with the `-c` option.
+
+--accept
+:   Accept an invitation to join the targeted account. The provided account must be a valid account ID.
+
+-g RESOURCE_GROUP<
+:   The name or ID of the target resource group. Optional.
+
+-r REGION
+:   The name of the target region. For example, `us-south` or `eu-gb`.
+
+--no-region
+:   Forced login without targeting a region.
+
+-o ORG
+:   The name of the target organization. This option is deprecated. Use `ibmcloud target -o org_name` instead. Optional.
+
+-s SPACE
+:   The name of the target space. This option is deprecated. Use `ibmcloud target -s space_name` instead. Optional.
+
+--skip-ssl-validation
+:   Bypass the SSL validation of HTTP requests. This option isn't recommended.
 
 ### Examples
 {: #login-examples}
@@ -554,26 +566,32 @@ ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_G
 ### Command options
 {: #target-options}
 
-<dl>
-<dt>-c ACCOUNT_ID</dt>
-<dd>The ID of the target account. Optional.</dd>
-<dt>-r REGION</dt>
-<dd>The name of the target region, for example, us-south or eu-gb. Optional.</dd>
-<dt>-g RESOURCE_GROUP</dt>
-<dd>The name of the target resource group. Optional.</dd>
-<dt>--cf</dt>
-<dd>Interactively specify the target org and space.</dd>
-<dt>--cf-api</dt>
-<dd>The Cloud Foundry API endpoint.</dd>
-<dt>-o ORG</dt>
-<dd>The name of the target organization. Optional. Deprecated, use `ibmcloud target -o ORG`.</dd>
-<dt>-s SPACE</dt>
-<dd>The name of the target space. Optional. Deprecated, use `ibmcloud target -s SPACE`.</dd>
-<dt>--unset-region</dt>
-<dd>Clear the targeted region.</dd>
-<dt>--unset-resource-group</dt>
-<dd>Clear the targeted resource group.</dd>
-</dl>
+-c ACCOUNT_ID
+:   The ID of the target account. Optional.
+
+-r REGION
+:   The name of the target region, for example, us-south or eu-gb. Optional.
+
+-g RESOURCE_GROUP
+:   The name of the target resource group. Optional.
+
+--cf
+:   Interactively specify the target org and space.
+
+--cf-api
+:   The Cloud Foundry API endpoint.
+
+-o ORG
+:   The name of the target organization. Optional. Deprecated, use `ibmcloud target -o ORG`.
+
+>-s SPACE<
+:   The name of the target space. Optional. Deprecated, use `ibmcloud target -s SPACE`.
+
+--unset-region
+:   Clear the targeted region.
+
+--unset-resource-group
+:   Clear the targeted resource group.
 
 If none of the options are specified, the current account, region, org, and space are displayed.
 {: note}
@@ -614,10 +632,8 @@ None.
 ### Command options
 {: #update-options}
 
-<dl>
-  <dt>-f</dt>
-  <dd>Force an update without confirmation. Root privilege is required.</dd>
-</dl>
+-f
+:   Force an update without confirmation. Root privilege is required.
 
 ## General classic infrastructure service commands
 {: #classic-service-commands}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-10-05"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli, IBM Cloud CLI installer, installing IBM Cloud CLI, install IBM Cloud CLI
 content-type: tutorial
@@ -64,26 +64,25 @@ If you need to use a 32-bit version of the CLI, or a previous version other than
 The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when you run the command. As the CLI installs, keep an eye on the command line to authenticate as needed.
 
 * For MacOS, run the following command:
-  ```
-  curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
-  ```
-  {: codeblock}
+   ```
+   curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
+   ```
+   {: codeblock}
 
 * For Linux&trade;, run the following command:
-  ```
-  curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-  ```
-  {: codeblock}
+   ```
+   curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+   ```
+   {: codeblock}
 
 * For Windows&trade; 10 Pro, run the following command in PowerShell as an administrator:
-  ```
-  iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
-  ```
-  {: codeblock}
+   ```
+   iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
+   ```
+   {: codeblock}
 
-  To open PowerShell, right-click the Windows&trade; PowerShell icon, and select **Run as administrator**.
-  {: tip}
-
+   To open PowerShell, right-click the Windows&trade; PowerShell icon, and select **Run as administrator**.
+   {: tip}
 
 ## Verify the installation
 {: #step2-verify-idt}
@@ -137,5 +136,5 @@ Stay up to date with the {{site.data.keyword.cloud_notm}} CLI by subscribing to 
 
 {{site.data.keyword.cloud_notm}} CLI supports a plug-in framework to extend its capability. [Discover and install new CLI plugins](/docs/cli?topic=cli-plug-ins)!
 
-Need a hand with remembering {{site.data.keyword.cloud_notm}} CLI commands? Print the [{{site.data.keyword.cloud_notm}} CLI quick reference](https://cloud.ibm.com/media/docs/downloads/IBM%20Cloud%20CLI%20quick%20reference.pdf){:external} to keep commands for common tasks at your fingertips.
-{:tip}
+Need a hand with remembering {{site.data.keyword.cloud_notm}} CLI commands? Print the [{{site.data.keyword.cloud_notm}} CLI quick reference](https://cloud.ibm.com/media/docs/downloads/IBM%20Cloud%20CLI%20quick%20reference.pdf){: external} to keep commands for common tasks at your fingertips.
+{: tip}

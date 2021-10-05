@@ -1,15 +1,14 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-08-20"
+  years: 2020, 2021
+lastupdated: "2021-10-05"
 
 keywords: cli, classic infrastructure, load balancer, loadbal
 
 subcollection: cli
 
 ---
-
 
 {:shortdesc: .shortdesc}
 {:tip: .tip}
@@ -29,8 +28,9 @@ List active load balancers:
 ```
 ibmcloud sl loadbal list
 ```
-
-**Examples**:
+ 
+### Examples
+{: #examples-}
 ```
 ibmcloud sl loadbal list
 ```
@@ -44,37 +44,50 @@ Order a load balancer:
 ibmcloud sl loadbal order (-n, --name NAME) (-d, --datacenter DATACENTER) (-t, --type PublicToPrivate | PrivateToPrivate | PublicToPublic ) [-l, --label LABEL] [ -s, --subnet SUBNET_ID] [--frontend-protocol PROTOCOL] [--frontend-port PORT] [--backend-protocol PROTOCOL] [--backend-port PORT] [-m, --method METHOD] [-c, --connections CONNECTIONS] [--sticky cookie | source-ip] [--use-public-subnet] [--verify]
 ```
 
-<strong>Command options</strong>:
-<dl>
-    <dt>-n,  --name NAME (required)</dt>
-    <dd>Name for this load balancer.</dd>
-    <dt>-d, --datacenter NAME (required)</dt>
-    <dd>Data center name. It can be found from the keyName in the command `ibmcloud sl order package-locations LBAAS` output.</dd>
-    <dt>-t, --type TYPE (required)</dt>
-    <dd>Load balancer type. Accepted values are PublicToPrivate, PrivateToPrivate, PublicToPublic.</dd>
-    <dt>-s, --subnet ID</dt>
-    <dd>Private subnet ID to order the load balancer. See `ibmcloud sl loadbal order-options`. Only PublicToPrivate and PrivateToPrivate load balancer types are accepted.</dd>
-    <dt>-l, --label LABEL</dt>
-    <dd>A descriptive label for this load balancer.</dd>
-    <dt>--frontend-protocol PROTOCOL</dt>
-    <dd>Frontend protocol. Default: HTTP</dd>
-    <dt>--frontend-port PORT</dt>
-    <dd>Frontend port. Default: 80</dd>
-    <dt>-m, --method METHOD</dt>
-    <dd>Balancing method. Accepted values are ROUNDROBIN | LEASTCONNECTION | WEIGHTED_RR. Default: ROUNDROBIN</dd>
-    <dt>-c, --connections COUNT</dt>
-    <dd>Maximum number of connections.</dd>
-    <dt>--sticky METHOD</dt>
-    <dd>Sticky session method: cookie or source-ip.</dd>
-    <dt>--use-public-subnet</dt>
-    <dd>If this option is specified, the public IP is allocated from a public subnet in this account. Otherwise, it is allocated from the IBM system pool. Only available in PublicToPrivate load balancer type.</dd>
-    <dt>--verify</dt>
-    <dd>Verify an order, but do not create it.</dd>
-    <dt>-f, --force</dt>
-    <dd>Force operation without confirmation.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_order}
 
-**Examples**:
+-n,  --name NAME (required)
+:   Name for this load balancer.
+
+-d, --datacenter NAME (required)
+:   Data center name. It can be found from the keyName in the command `ibmcloud sl order package-locations LBAAS` output.
+
+-t, --type TYPE (required)
+:   Load balancer type. Accepted values are PublicToPrivate, PrivateToPrivate, PublicToPublic.
+
+-s, --subnet ID
+:   Private subnet ID to order the load balancer. See `ibmcloud sl loadbal order-options`. Only PublicToPrivate and PrivateToPrivate load balancer types are accepted.
+
+-l, --label LABEL
+:   A descriptive label for this load balancer.
+
+--frontend-protocol PROTOCOL
+:   Frontend protocol. Default: HTTP
+
+--frontend-port PORT
+:   Frontend port. Default: 80
+
+-m, --method METHOD
+:   Balancing method. Accepted values are ROUNDROBIN | LEASTCONNECTION | WEIGHTED_RR. Default: ROUNDROBIN
+
+-c, --connections COUNT
+:   Maximum number of connections.
+
+--sticky METHOD<
+:   Sticky session method: cookie or source-ip.
+
+--use-public-subnet
+:   If this option is specified, the public IP is allocated from a public subnet in this account. Otherwise, it is allocated from the IBM system pool. Only available in PublicToPrivate load balancer type.
+
+--verify
+:   Verify an order, but do not create it.
+
+-f, --force
+:   Force operation without confirmation.
+ 
+### Examples
+{: #examples-sl_loadbal_order}
 ```
 ibmcloud sl loadbal order -n my-lb -d DALLAS10 -t PublicToPrivate -s 1234567 --frontend-protocol TCP --frontend-port 123 --backend-protocol TCP --backend-port 123 -m LEASTCONNECTION -c 100 --sticky cookie
 ```
@@ -88,13 +101,14 @@ List options for order a load balancer:
 ibmcloud sl loadbal order-options [-d, --datacenter DATACENTER]
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>-d, --datacenter NAME</dt>
-  <dd>Show only the selected data center. Use shortname (dal13) format.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_order-options}
 
-**Examples**:
+-d, --datacenter NAME
+:   Show only the selected data center. Use shortname (dal13) format.
+ 
+### Examples
+{: #examples-sl_loadbal_order-options}
 ```
 ibmcloud sl loadbal order-options
 ```
@@ -108,27 +122,35 @@ Add a load balancer protocol:
 ibmcloud sl loadbal protocol-add (--id LOADBAL_ID) [--front-protocol PROTOCOL] [back-protocol PROTOCOL] [--front-port PORT] [--back-port PORT] [-m, --method METHOD] [-c, --connections CONNECTIONS] [--sticky cookie | source-ip]
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--id ID (required)</dt>
-  <dd>ID for the load balancer.</dd>
-  <dt>--front-protocol TYPE</dt>
-  <dd>Protocol type to use for incoming connections: [HTTP|HTTPS|TCP]. Default: HTTP</dd>
-  <dt>--back-protocol TYPE</dt>
-  <dd>Protocol type to use when connecting to backend servers: [HTTP|HTTPS|TCP]. Defaults to whatever --front-protocol is.</dd>
-  <dt>--front-port PORT</dt>
-  <dd>Internet side port. Default: 80</dd>
-  <dt>--back-port PORT</dt>
-  <dd>Private side port. Default: 80</dd>
-  <dt>-m, --method METHOD</dt>
-  <dd>Balancing method: [ROUNDROBIN|LEASTCONNECTION|WEIGHTED_RR]. Default: ROUNDROBIN</dd>
-  <dt>-c, --connections COUNT</dt>
-  <dd>Maximum number of connections to allow.</dd>
-  <dt>--sticky METHOD</dt>
-  <dd>Use `cookie` or `source-ip` to stick.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_protocol-add}
 
-**Examples**:
+--id ID (required)
+:   ID for the load balancer.
+
+--front-protocol TYPE
+:   Protocol type to use for incoming connections: [HTTP|HTTPS|TCP]. Default: HTTP
+
+--back-protocol TYPE
+:   Protocol type to use when connecting to backend servers: [HTTP|HTTPS|TCP]. Defaults to whatever --front-protocol is.
+
+--front-port PORT
+:   Internet side port. Default: 80
+
+--back-port PORT
+:   Private side port. Default: 80
+
+-m, --method METHOD
+:   Balancing method: [ROUNDROBIN|LEASTCONNECTION|WEIGHTED_RR]. Default: ROUNDROBIN
+
+-c, --connections COUNT
+:   Maximum number of connections to allow.
+
+--sticky METHOD
+:   Use `cookie` or `source-ip` to stick.
+ 
+### Examples
+{: #examples-sl_loadbal_protocol-add}
 ```
 ibmcloud sl loadbal protocol-add --id 123456 -m ROUNDROBIN --sticky cookie
 ```
@@ -142,15 +164,17 @@ Delete a protocol:
 ibmcloud sl loadbal protocol-delete (--lb-id LOADBAL_ID) (--protocol-uuid PROTOCOL_UUID)
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--lb-id ID (required)</dt>
-  <dd>ID for the load balancer.</dd>
-  <dt>--protocol-uuid UUID (required)</dt>
-  <dd>UUID of the protocol.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_protocol-delete}
 
-**Examples**:
+--lb-id ID (required)
+:   ID for the load balancer.
+
+--protocol-uuid UUID (required)
+:   UUID of the protocol.
+ 
+### Examples
+{: #examples-sl_loadbal_protocol-delete}
 ```
 ibmcloud sl loadbal protocol-delete --lb-id 123 --protocol-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd
 ```
@@ -164,15 +188,17 @@ Add a load balancer member:
 ibmcloud sl loadbal member-add (--id LOADBAL_ID) (--ip PRIVATE_IP)
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--id ID (required)</dt>
-  <dd>ID for the load balancer.</dd>
-  <dt>--ip (required)</dt>
-  <dd>Private IP of the new member.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_member-add}
 
-**Examples**:
+--id ID (required)
+:   ID for the load balancer.
+
+--ip (required)
+:   Private IP of the new member.
+ 
+### Examples
+{: #examples-sl_loadbal_member-add}
 ```
 ibmcloud sl loadbal member-add --id 939818 --ip 10.0.0.1
 ```
@@ -186,15 +212,17 @@ Remove a load balancer member:
 ibmcloud sl loadbal member-delete (--lb-id LOADBAL_ID) (-m, --member-uuid MEMBER_UUID)
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--lb-id ID (required)</dt>
-  <dd>ID for the load balancer.</dd>
-  <dt>-m MEMBER_UUID, --member-uuid MEMBER_UUID (required)</dt>
-  <dd>Member UUID.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_member-delete}
 
-**Examples**:
+--lb-id ID (required)<
+:   ID for the load balancer.
+
+-m MEMBER_UUID, --member-uuid MEMBER_UUID (required)
+:   Member UUID.
+ 
+### Examples
+{: #examples-sl_loadbal_member-delete}
 ```
 ibmcloud sl loadbal member-delete --lb-id 123456 --member-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd
 
@@ -209,15 +237,17 @@ Cancel an existing load balancer:
 ibmcloud sl loadbal cancel (--id LOADBAL_ID) [-f, --force]
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--id ID (required)</dt>
-  <dd>ID for the load balancer.</dd>
-  <dt>-f, --force</dt>
-  <dd>Force operation without confirmation.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_cancel}
 
-**Examples**:
+--id ID (required)
+:   ID for the load balancer.
+
+-f, --force<
+:   Force operation without confirmation.
+ 
+### Examples
+{: #examples-sl_loadbal_cancel}
 ```
 ibmcloud sl loadbal cancel --id 123456 -f
 ```
@@ -231,13 +261,14 @@ Get load balancer details:
 ibmcloud sl loadbal detail (--id LOADBAL_ID)
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--id ID (required)</dt>
-  <dd>ID for the load balancer.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_detail}
 
-**Examples**:
+--id ID (required)
+:   ID for the load balancer.
+ 
+### Examples
+{: #examples-sl_loadbal_detail}
 ```
 ibmcloud sl loadbal detail --id 123456
 ```
@@ -251,23 +282,29 @@ Edit load balancer health check:
 ibmcloud sl loadbal health-edit (--lb-id LOADBAL_ID)  (--health-uuid HEALTH_CHECK_UUID) [-i, --interval INTERVAL] [-r, --retry RETRY] [-t, --timeout TIMEOUT] [-u, --url URL]
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--lb-id ID (required)</dt>
-  <dd>ID of the load balancer.</dd>
-  <dt>--health-uuid UUID (required)</dt>
-  <dd>Health check UUID.</dd>
-  <dt>-i, --interval INTERVAL</dt>
-  <dd>Seconds between checks [2-60].</dd>
-  <dt>-r,--retry COUNT</dt>
-  <dd>Number of times before marking as DOWN [1-10].</dd>
-  <dt>-t, --timeout TIMEOUT</dt>
-  <dd>Seconds to wait for a connection [1-59].</dd>
-  <dt>-u, --url URL</dt>
-  <dd>URL path for HTTP/HTTPS checks.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_health-edit}
 
-**Examples**:
+--lb-id ID (required)
+:   ID of the load balancer.
+
+--health-uuid UUID (required)
+:   Health check UUID.
+
+-i, --interval INTERVAL
+:   Seconds between checks [2-60].
+
+-r,--retry COUNT
+:   Number of times before marking as DOWN [1-10].
+
+-t, --timeout TIMEOUT
+:   Seconds to wait for a connection [1-59].
+
+-u, --url URL
+:   URL path for HTTP/HTTPS checks.
+ 
+### Examples
+{: #examples-sl_loadbal_health-edit}
 ```
 ibmcloud sl loadbal health-edit --lb-id 123456  --health-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd -i 2
 ```
@@ -281,17 +318,20 @@ Add a L7 pool member:
 ibmcloud sl loadbal l7member-add (--pool-uuid L7POOL_UUID) (--address IP_ADDRESS) (--port PORT)
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--port-uuid UUID (required)</dt>
-  <dd>UUID for the load balancer pool.</dd>
-  <dt>--address IP_ADDRESS (required)</dt>
-  <dd>Backend servers IP address.</dd>
-  <dt>--port PORT (required)</dt>
-  <dd>Backend servers port.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7member-add}
 
-**Examples**:
+--port-uuid UUID (required)
+:   UUID for the load balancer pool.
+
+--address IP_ADDRESS (required)
+:   Backend servers IP address.
+
+--port PORT (required)
+:   Backend servers port.
+ 
+### Examples
+{: #examples-sl_loadbal_l7member-add}
 ```
 ibmcloud sl loadbal l7member-add --pool-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd --address 10.0.0.1 --port 80
 ```
@@ -305,15 +345,17 @@ Remove a load balancer member:
 ibmcloud sl loadbal l7member-delete (--pool-uuid L7POOL_UUID) (--member-uuid L7MEMBER_UUID)
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--pool-uuid UUID (required)</dt>
-  <dd>UUID for the load balancer pool.</dd>
-  <dt>--member-uuid UUID (required)</dt>
-  <dd>UUID for the load balancer member.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7member-delete}
 
-**Examples**:
+--pool-uuid UUID (required)
+:   UUID for the load balancer pool.
+
+--member-uuid UUID (required)
+:   UUID for the load balancer member.
+ 
+### Examples
+{: #examples-sl_loadbal_l7member-delete}
 ```
 ibmcloud sl loadbal l7member-delete --pool-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd --member-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd
 ```
@@ -327,13 +369,14 @@ List L7 policies:
 ibmcloud sl loadbal l7policies (--protocol-id PROTOCOL_ID)
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--protocol-id ID (required)</dt>
-  <dd>ID for the load balancer protocol.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7polocies}
 
-**Examples**:
+--protocol-id ID (required)
+:   ID for the load balancer protocol.
+ 
+### Examples
+{: #examples-sl_loadbal_l7polocies}
 ```
 ibmcloud sl loadbal l7policies --protocol-id 123456
 ```
@@ -347,21 +390,26 @@ Add a L7 policy:
 ibmcloud sl loadbal l7policy-add (--protocol-uuid PROTOCOL_UUID) (-n, --name NAME) (-a,--action REJECT | REDIRECT_POOL | REDIRECT_URL) [-r,--redirect REDIRECT] [-p,--priority PRIORITY]
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--protocol-uuid UUID (required)</dt>
-  <dd>UUID for the load balancer protocol.</dd>
-  <dt>-n, --name NAME</dt>
-  <dd>Policy name.</dd>
-  <dt>-a, --action TYPE</dt>
-  <dd>Policy action: REJECT | REDIRECT_POOL | REDIRECT_URL.</dd>
-  <dt>-r, --redirect INPUT</dt>
-  <dd>URL or POOL_UUID. It's only available in REDIRECT_POOL | REDIRECT_URL action.</dd>
-  <dt>-p --priority PRIORITY</dt>
-  <dd>Policy priority.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7policy-add}
 
-**Examples**:
+--protocol-uuid UUID (required)
+:   UUID for the load balancer protocol.
+
+-n, --name NAME
+:   Policy name.
+
+-a, --action TYPE
+:   Policy action: REJECT | REDIRECT_POOL | REDIRECT_URL.
+
+-r, --redirect INPUT
+:   URL or POOL_UUID. It's only available in REDIRECT_POOL | REDIRECT_URL action.
+
+-p --priority PRIORITY
+:   Policy priority.
+ 
+### Examples
+{: #examples-sl_loadbal_l7policy-add}
 ```
 ibmcloud sl loadbal l7policy-add --protocol-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd -n my-policy -a REJECT
 ```
@@ -375,15 +423,17 @@ Delete a L7 pool:
 ibmcloud sl loadbal l7policy-delete (--policy-id POLICY_ID) [-f, --force]
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--policy-id ID (required)</dt>
-  <dd>ID for the load balancer policy.</dd>
-  <dt>-f, --force</dt>
-  <dd>Force operation without confirmation.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7policy-delete}
 
-**Examples**:
+--policy-id ID (required)
+:   ID for the load balancer policy.
+
+-f, --force
+:   Force operation without confirmation.
+ 
+### Examples
+{: #examples-sl_loadbal_l7policy-delete}
 ```
 ibmcloud sl loadbal l7policy-delete --policy-id 27204f2c-1853-4fd2-9c97-1654cd536edd -f
 ```
@@ -397,31 +447,41 @@ Add a L7 pool:
 ibmcloud sl loadbal l7pool-add (--id LOADBAL_ID) (-n, --name NAME) [-m, --method METHOD] [-s, --server BACKEND_IP:PORT] [-p, --protocol PROTOCOL] [--health-path PATH] [--health-interval INTERVAL] [--health-retry RETRY] [--health-timeout TIMEOUT] [--sticky cookie | source-ip]
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--id ID (required)</dt>
-  <dd>ID for the load balancer.</dd>
-  <dt>-n, --name NAME (required)</dt>
-  <dd>Name for this L7 pool.</dd>
-  <dt>-m, --method</dt>
-  <dd>Balancing method: [ROUNDROBIN|LEASTCONNECTION|WEIGHTED_RR]. [default: ROUNDROBIN]</dd>
-  <dt>-p, --protocol PROTOCOL</dt>
-  <dd>Protocol type to use for incoming connections. [default: HTTP]</dd>
-  <dt>-s, --server SERVER</dt>
-  <dd>Backend servers that are part of this pool. Format: BACKEND_IP:PORT. For example, 10.0.0.1:80 (multiple occurrences permitted).</dd>
-  <dt>--health-path PATH</dt>
-  <dd>Health check path. [default: /]</dd>
-  <dt>--health-internal INTERVAL</dt>
-  <dd>Health check interval between checks. [default: 5]</dd>
-  <dt>--health-retry COUNT</dt>
-  <dd>Health check number of times before marking as DOWN. [default: 2]</dd>
-  <dt>--health-time TIMEOUT</dt>
-  <dd>Health check timeout. [default: 2]</dd>
-  <dt>--sticky METHOD</dt>
-  <dd>Use `cookie` or `source-ip` to stick.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7pool-add}
 
-**Examples**:
+--id ID (required)
+:   ID for the load balancer.
+
+-n, --name NAME (required)
+:   Name for this L7 pool.
+
+-m, --method
+:   Balancing method: [ROUNDROBIN|LEASTCONNECTION|WEIGHTED_RR]. [default: ROUNDROBIN]
+
+-p, --protocol PROTOCOL
+:   Protocol type to use for incoming connections. [default: HTTP]
+
+-s, --server SERVER
+:   Backend servers that are part of this pool. Format: BACKEND_IP:PORT. For example, 10.0.0.1:80 (multiple occurrences permitted).
+
+--health-path PATH
+:   Health check path. [default: /]
+
+--health-internal INTERVAL
+:   Health check interval between checks. [default: 5]
+
+--health-retry COUNT
+:   Health check number of times before marking as DOWN. [default: 2]
+
+--health-time TIMEOUT
+:   Health check timeout. [default: 2]
+
+--sticky METHOD
+:   Use `cookie` or `source-ip` to stick.
+ 
+### Examples
+{: #examples-sl_loadbal_l7pool-add}
 ```
 ibmcloud sl loadbal l7pool-add --id 123 -n my-pool -m ROUNDROBIN
 ```
@@ -435,13 +495,14 @@ Delete a L7 pool:
 ibmcloud sl loadbal l7pool-delete (--pool-id L7POOL_ID)
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--pool-id ID (required)</dt>
-  <dd>ID for the load balancer pool.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7pool-delete}
 
-**Examples**:
+--pool-id ID (required)
+:   ID for the load balancer pool.
+ 
+### Examples
+{: #examples-sl_loadbal_l7pool-delete}
 ```
 ibmcloud sl loadbal l7pool-delete --pool-id 123456
 ```
@@ -455,13 +516,14 @@ Show L7 pool details:
 ibmcloud sl loadbal l7pool-detail (--pool-id L7POOL_ID)
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--pool-id ID (required)</dt>
-  <dd>ID for the load balancer pool.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7pool-detail}
 
-**Examples**:
+--pool-id ID (required)
+:   ID for the load balancer pool.
+ 
+### Examples
+{: #examples-sl_loadbal_l7pool-detail}
 ```
 ibmcloud sl loadbal l7pool-detail --pool-id 123456
 ```
@@ -475,29 +537,38 @@ Edit a L7 pool:
 ibmcloud sl loadbal l7pool-edit (--pool-uuid L7POOL_UUID) [-m, --method METHOD] [-s, --server BACKEND_IP:PORT] [-p, --protocol PROTOCOL] [--health-path PATH] [--health-interval INTERVAL] [--health-retry RETRY] [--health-timeout TIMEOUT] [--sticky cookie | source-ip]
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--pool-uuid UUID</dt>
-  <dd>UUID for the load balancer pool.</dd>
-  <dt>-m, --method</dt>
-  <dd>Balancing method: [ROUNDROBIN|LEASTCONNECTION|WEIGHTED_RR]. [default: ROUNDROBIN]</dd>
-  <dt>-p, --protocol PROTOCOL</dt>
-  <dd>Protocol type to use for incoming connections. [default: HTTP]</dd>
-  <dt>-s, --server SERVER</dt>
-  <dd>Backend servers that are part of this pool. Format: BACKEND_IP:PORT. For example, 10.0.0.1:80 (multiple occurrences permitted).</dd>
-  <dt>--health-path PATH</dt>
-  <dd>Health check path. [default: /]</dd>
-  <dt>--health-internal INTERVAL</dt>
-  <dd>Health check interval between checks. [default: 5]</dd>
-  <dt>--health-retry COUNT</dt>
-  <dd>Health check number of times before marking as DOWN. [default: 2]</dd>
-  <dt>--health-time TIMEOUT</dt>
-  <dd>Health check timeout. [default: 2]</dd>
-  <dt>--sticky METHOD</dt>
-  <dd>Use `cookie` or `source-ip` to stick.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7pool-edit}
 
-**Examples**:
+--pool-uuid UUID
+:   UUID for the load balancer pool.
+
+-m, --method
+:   Balancing method: [ROUNDROBIN|LEASTCONNECTION|WEIGHTED_RR]. [default: ROUNDROBIN]
+
+-p, --protocol PROTOCOL
+:   Protocol type to use for incoming connections. [default: HTTP]
+
+-s, --server SERVER
+:   Backend servers that are part of this pool. Format: BACKEND_IP:PORT. For example, 10.0.0.1:80 (multiple occurrences permitted).
+
+--health-path PATH
+:   Health check path. [default: /]
+
+--health-internal INTERVAL
+:   Health check interval between checks. [default: 5]
+
+--health-retry COUNT
+:   Health check number of times before marking as DOWN. [default: 2]
+
+--health-time TIMEOUT
+:   Health check timeout. [default: 2]
+
+--sticky METHOD
+:   Use `cookie` or `source-ip` to stick.
+ 
+### Examples
+{: #examples-sl_loadbal_l7pool-edit}
 ```
 ibmcloud sl loadbal l7pool-edit --pool-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd -m ROUNDROBIN
 ```
@@ -511,21 +582,26 @@ Add a L7 rule:
 ibmcloud sl loadbal l7rule-add (--policy-uuid L7POLICY_UUID) (-t, --type HOST_NAME | FILE_TYPE | HEADER | COOKIE | PATH ) (-c, --compare-type EQUAL_TO | ENDS_WITH | STARTS_WITH | REGEX | CONTAINS) (-v,--value VALUE) [-k,--key KEY] [--invert 0 | 1]
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--policy-uuid UUID (required)</dt>
-  <dd>UUID for the load balancer policy.</dd>
-  <dt>-t, --type TYPE (required)</dt>
-  <dd>Rule type: HOST_NAME | FILE_TYPE | HEADER | COOKIE | PATH</dd>
-  <dt>-c, --compare-type COMPARE_TYPE (required)</dt>
-  <dd>Compare type: EQUAL_TO | ENDS_WITH | STARTS_WITH | REGEX | CONTAINS</dd>
-  <dt>-v, --value COMPARE_VALUE (required)</dt>
-  <dd>Compared value.</dd>
-  <dt>-k, --key KEY</dt>
-  <dd>Key name. Available only in HEADER or COOKIE type.</dd>
-  <dt>--invert VALUE</dt>
-  <dd>Invert rule: 0 | 1</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7rule-add}
+
+--policy-uuid UUID (required)
+:   UUID for the load balancer policy.
+
+-t, --type TYPE (required)
+:   Rule type: HOST_NAME | FILE_TYPE | HEADER | COOKIE | PATH
+
+-c, --compare-type COMPARE_TYPE (required)
+:   Compare type: EQUAL_TO | ENDS_WITH | STARTS_WITH | REGEX | CONTAINS
+
+-v, --value COMPARE_VALUE (required)
+:   Compared value.
+
+-k, --key KEY
+:   Key name. Available only in HEADER or COOKIE type.
+
+--invert VALUE
+:   Invert rule: 0 | 1
 
 ## ibmcloud sl loadbal l7rule-delete
 {: #sl_loadbal_l7rule-delete}
@@ -535,17 +611,20 @@ Delete a L7 rule:
 ibmcloud sl loadbal l7rule-delete (--policy-uuid L7POLICY_UUID) (--rule-uuid L7RULE_UUID) [-f, --force]
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--policy-uuid UUID (required)</dt>
-  <dd>UUID for the load balancer policy.</dd>
-  <dt>--rule-uuid UUID (required)</dt>
-  <dd>UUID for the load balancer rule.</dd>
-  <dt>-f, --force</dt>
-  <dd>Force operation without confirmation.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7rule-delete}
 
-**Examples**:
+--policy-uuid UUID (required)
+:   UUID for the load balancer policy.
+
+--rule-uuid UUID (required)
+:   UUID for the load balancer rule.
+
+-f, --force
+:   Force operation without confirmation.
+ 
+### Examples
+{: #examples-sl_loadbal_l7rule-delete}
 ```
 ibmcloud sl loadbal l7rule-delete --policy-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd --rule-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd -f
 
@@ -560,13 +639,14 @@ List L7 rules:
 ibmcloud sl loadbal l7rules (--policy-id Policy_ID)
 ```
 
-<strong>Command options</strong>:
-<dl>
-  <dt>--policy-id ID (required)</dt>
-  <dd>ID for the load balancer policy.</dd>
-</dl>
+### Command options 
+{: #options-sl_loadbal_l7rules}
 
-**Examples**:
+--policy-id ID (required)
+:   ID for the load balancer policy.
+ 
+### Examples
+{: #examples-sl_loadbal_l7rules}
 ```
 ibmcloud sl loadbal l7rules --policy-id 27204f2c-1853-4fd2-9c97-1654cd536edd
 ```

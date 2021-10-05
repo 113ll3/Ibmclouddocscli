@@ -2,6 +2,7 @@
 toc:
   properties:
     subcollection: cli
+    version: 2
     category: platform_services
     audience: platform
     href: /docs/cli

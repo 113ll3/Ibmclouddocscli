@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-08-03"
+  years: 2017, 2021
+lastupdated: "2021-10-05"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -31,10 +31,10 @@ Steps to enable the debugging tool for a Java&trade; app:
 
 1. From the root directory of your app project, run the following command:
 
-  ```
-  ibmcloud dev debug
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev debug
+   ```
+   {: codeblock}
 
 2. Connecting the debugger to your app:
 
@@ -61,10 +61,10 @@ Steps to enable the debugging tool for a Java&trade; app:
 Steps to enable the debugging tool for a Node.js app:
 
 1. From your app project's root directory, run the following command:
-  ```
-  ibmcloud dev debug
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev debug
+   ```
+   {: codeblock}
 
 2. Connecting the debugger to your app:
 	* [VSCode](https://blog.docker.com/2016/07/live-debugging-docker/){: external}

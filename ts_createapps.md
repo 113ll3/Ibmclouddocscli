@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-07-20"
+lastupdated: "2021-10-05"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -374,12 +374,12 @@ To resolve the issue, set the client's version to the same as the cluster's vers
 
 * For Windows&trade;: As an administrator, download and install the `helm` binary from [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: external}.
   
-  From the PowerShell terminal, use the following commands:
-  ```
-  Set-Location Env:
-  Set-Item HELM_HOME C:\.helm\
-  ```
-  {: codeblock}
+   From the PowerShell terminal, use the following commands:
+   ```
+   Set-Location Env:
+   Set-Item HELM_HOME C:\.helm\
+   ```
+   {: codeblock}
 
 ## Why does the Helm init command fail during app deployment to my Kubernetes cluster?
 {: #ts-cli-helm-error}
