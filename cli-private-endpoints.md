@@ -76,7 +76,7 @@ If you don't want to install from the shell because it might use root permission
 
 Use the following steps to install the latest stand-alone {{site.data.keyword.cloud_notm}} CLI:
 
-1. Select the installer of your OS to begin the download. The following operating systems are supported: macOS X 64-bit, Windows™ 64-bit, Linux&trade; x86 64-bit, Linux&trade; LE 64-bit (ppc64le), and S/390 Linux&trade;.
+1. Select the installer of your OS to begin the download. The following operating systems are supported: macOS X 64-bit, Windows™ 64-bit, Linux&trade; x86 64-bit, Linux&trade; LE 64-bit (ppc64le), and System/390 Linux&trade;.
 
 2. Run the installer:
    * For Mac and Windows&trade;, run the installer.
@@ -89,7 +89,7 @@ Use the following steps to install the latest stand-alone {{site.data.keyword.cl
    - [Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/IBM_Cloud_CLI_2.0.0_amd64.tar.gz)
    - [Linux&trade; 32-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/IBM_Cloud_CLI_2.0.0_386.tar.gz)
    - [PowerLinux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/IBM_Cloud_CLI_2.0.0_ppc64le.tar.gz)
-   - [S/390 Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/IBM_Cloud_CLI_2.0.0_s390x.tar.gz)
+   - [System/390 Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/IBM_Cloud_CLI_2.0.0_s390x.tar.gz)
   
 3. Log in to {{site.data.keyword.cloud_notm}} by using the CLI:
    ```
@@ -102,7 +102,7 @@ Use the following steps to install the latest stand-alone {{site.data.keyword.cl
    If you're using a federated ID, [log in with a one-time passcode or an API key](/docs/account?topic=account-federated_id).
    {: tip}
 
-## Installing packages from previous releases
+## Installing packages from previous releases for private endpoints
 {: #cli-private-endpoints-previous}
 
 If you want to install these packages from previous releases, follow this template to construct the private endpoint link of the package that you want to download, replacing *release_tag* with the release version that you want to download.
@@ -157,7 +157,7 @@ To view previous releases, access the official [ibm-cloud-cli-releases](https://
    ```
    {: codeblock}
 
-### S/390 Linux&trade; 64-bit
+### System/390 Linux&trade; 64-bit
 {: #cli-private-endpoints-s390linux64}
 
    ```
@@ -205,60 +205,76 @@ If you install the {{site.data.keyword.cloud_notm}} CLI to a custom directory, t
    * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
    * For shell autocompletion support (Mac and Linux&trade; only), see [Enabling shell autocompletion for IBM Cloud CLI](/docs/cli/reference/ibmcloud?topic=cli-shell-autocomplete#shell-autocomplete).
 
-   **Binary files**
+### Binary files
+{: #install-custom-binary-files}
+
    - [Mac OS X 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/binaries/IBM_Cloud_CLI_2.0.0_macos.tgz)
    - [Windows&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/binaries/IBM_Cloud_CLI_2.0.0_windows_amd64.zip)
    - [Windows&trade; 32-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/binaries/IBM_Cloud_CLI_2.0.0_windows_386.zip)
    - [Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/binaries/IBM_Cloud_CLI_2.0.0_linux_amd64.tgz)
    - [Linux&trade; 32-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/binaries/IBM_Cloud_CLI_2.0.0_linux_386.tgz)
    - [PowerLinux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/binaries/IBM_Cloud_CLI_2.0.0_linux_ppc64le.tgz)
-   - [S/390 Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/binaries/IBM_Cloud_CLI_2.0.0_linux_s390x.tgz)
+   - [System/390 Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.0.0/binaries/IBM_Cloud_CLI_2.0.0_linux_s390x.tgz)
 
    If you want to install binaries from previous releases, follow this template to construct the private endpoint link of the binary that you want to download, replacing *release_tag* with the release version that you want to download.
 
    To view previous releases, access the official [ibm-cloud-cli-releases](https://github.com/IBM-Cloud/ibm-cloud-cli-release/tags) Github repository. 
 
-   **Mac OS X 64-bit**
-       ```
-       https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_macos.tgz
-       ```
-       {: codeblock}
+#### Mac OS X 64-bit
+{: #binary-mac64}
 
-   **Windows 64-bit**
-       ```
-       https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_windows_amd64.zip
-       ```
-       {: codeblock}
+   ```
+   https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_macos.tgz
+   ```
+   {: codeblock}
 
-   **Windows 32-bit**
-       ```
-       https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_windows_386.zip
-       ```
-       {: codeblock}
+#### Windows 64-bit
+{: #binary-windows64}
 
-   **Linux 64-bit**
-       ```
-       https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_linux_amd64.tgz
-       ```
-       {: codeblock}
+   ```
+   https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_windows_amd64.zip
+   ```
+   {: codeblock}
 
-   **Linux 32-bit**
-       ```
-       https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_linux_386.tgz
-       ```
-       {: codeblock}
+#### Windows 32-bit
+{: #binary-windows32}
 
-   **Power Linux 64-bit**
-       ```
-       https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_linux_ppc64le.tgz
-       ```
-       {: codeblock}
+   ```
+   https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_windows_386.zip
+   ```
+   {: codeblock}
 
-   **System/390 Linux 64-bit**
-       ```
-       https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_linux_s390x.tgz
-       ```
-       {: codeblock}
+#### Linux 64-bit
+{: #binary-linux64}
+
+   ```
+   https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_linux_amd64.tgz
+   ```
+   {: codeblock}
+
+#### Linux 32-bit
+{: #binary-linux32}
+
+   ```
+   https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_linux_386.tgz
+   ```
+   {: codeblock}
+
+#### Power Linux 64-bit
+{: #binary-powerlinux64}
+
+   ```
+   https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_linux_ppc64le.tgz
+   ```
+   {: codeblock}
+
+#### System/390 Linux 64-bit
+{: #binary-s390linux64}
+
+   ```
+   https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/<release_tag>/binaries/IBM_Cloud_CLI_<release_tag>_linux_s390x.tgz
+   ```
+   {: codeblock}
 
 ## Using private endpoints in the CLI
 {: #cli-private-endpoints-using}
