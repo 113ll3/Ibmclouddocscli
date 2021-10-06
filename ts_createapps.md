@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-05"
+lastupdated: "2021-10-06"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -30,6 +30,26 @@ content-type: troubleshoot
 See solutions to common problems with using the {{site.data.keyword.cloud}} Command Line Interface. In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
 
+## Why do I get a failure when updating the CLI, updating a plug-in, or installing a plug-in?
+{: #ts-cli-version-1-failure}
+{: troubleshoot}
+{: support}
+
+If you are attempting to update the {{site.data.keyword.cloud_notm}} CLI, or update or install a plug-in with a CLI version lower than 2.0.0, you see an error similar to the following message.
+{: tsSymptoms}
+
+```text
+An error occurred when fetching latest CLI info:
+invalid character '<' looking for beginning of value
+```
+{: screen}
+
+This error is caused by the older CLI version attempting to reach the deprecated CLI repo infrastructure.
+{: tsCauses}
+
+Download and install or replace the older CLI with the latest CLI version by using these [instructions](/docs/cli?topic=cli-install-ibmcloud-cli).
+{: tsResolve}
+
 ## Why do I get a host name error when I create an application with a non-mobile pattern?
 {: #ts-cli-hostname-error}
 {: troubleshoot}
@@ -38,7 +58,7 @@ See solutions to common problems with using the {{site.data.keyword.cloud}} Comm
 The following error might be displayed if you use the {{site.data.keyword.cloud_notm}} CLI to deploy an application to Cloud Foundry. If you enter a unique host name, you might still see this message.
 {: tsSymptoms}
 
-```
+```text
 The hostname <myHostname> is taken.
 ```
 {: screen}
@@ -50,7 +70,7 @@ This error is caused by an expired login token.
 Log in again by running the following command:
 {: tsResolve}
 
-```
+```text
 ibmcloud login
 ```
 {: codeblock}
@@ -62,7 +82,7 @@ ibmcloud login
 {: support}
 
 The following error might be displayed if you use the `create`, `delete`, `list`, or `code` commands:
-```
+```text
 Failed to <command> app.
 ```
 {: screen}
@@ -72,7 +92,7 @@ This error is caused by an expired login token.
 {: tsCauses}
 
 Log in again by running the following command:
-```
+```text
 ibmcloud login
 ```
 {: codeblock}
@@ -83,7 +103,7 @@ ibmcloud login
 {: troubleshoot}
 
 When you try to `ibmcloud dev run` an app without building it first, the following error might be displayed.
-```
+```text
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -98,14 +118,14 @@ Error: No such image: ibmcloud-dev-testProject
 {: tsSymptoms}
 
 You must build an app before you run it. Run the following command in your current app directory:
-```
+```text
 ibmcloud dev build
 ```
 {: codeblock}
 {: tsCauses}
 
 Run the following command in your current app directory to start your app:
-```
+```text
 ibmcloud dev run
 ```
 {: tsResolve}
@@ -116,7 +136,7 @@ ibmcloud dev run
 
 The following error might be displayed if you use the CLI to create two apps with the {{site.data.keyword.objectstorageshort}} capability:
 
-```
+```text
 FAILED
 Service broker error: {"description"=>"You can not create this Object Storage instance. Each organization using the Object Storage service is limited to one instance of the Free plan."}
 ```
@@ -134,7 +154,7 @@ Select a different plan.
 {: troubleshoot}
 
 The following error might be displayed when you use the CLI to create an app:
-```
+```text
 FAILED                            
 App created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
@@ -149,7 +169,7 @@ Use one of the following ways to get the code:
 
 * Run the following command:
 
-   ```
+   ```text
    ibmcloud dev code <your-app-name>
    ```
    {: codeblock}
@@ -169,7 +189,7 @@ Use one of the following ways to get the code:
 
 The following error might be displayed if you run the `ibmcloud dev run` command for Node.js web or BFF apps:
 
-```
+```text
 module.js:597
   return process.dlopen(module, path._makeLong(filename));
                  ^
@@ -208,7 +228,7 @@ You might not be logged in to your account.
 {: tsCauses}
 
 Run the following command to log in and try again.
-```
+```text
 ibmcloud login
 ```
 {: tsResolve}
@@ -219,7 +239,7 @@ ibmcloud login
 {: support}
 
 The following failure might be displayed after you're prompted for your cluster name:
-```
+```text
 FAILED
 Failed to execute the action:  exit status 1:
 
@@ -230,14 +250,14 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 {: tsSymptoms}
 
 The problem is most likely due to a cluster name that's not valid. You can confirm the cause by running the same command with `--trace`, and the following details might be included in the error output:
-```
+```text
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 {: screen}
 {: tsCauses}
 
 Be sure that you are using the correct cluster and that it is configured for deployment by running:
-```
+```text
 ibmcloud ks cluster config <cluster-name>
 ```
 {: codeblock}
@@ -248,7 +268,7 @@ ibmcloud ks cluster config <cluster-name>
 {: troubleshoot}
 
 The following failure might be displayed after you're prompted for the deployment image target:
-```
+```text
 FAILED
 Failed to execute the action:  exit status 1:denied: requested access to the resource is denied
 
@@ -263,7 +283,7 @@ The problem is most likely due to a deployment image target that's not valid. Mo
 {: tsCauses}
 
 Be sure that the namespace in the deployment image target matches one of the namespaces that are displayed when you run the following command:
-```
+```text
 ibmcloud cr namespaces
 ```
 {: codeblock}
@@ -274,7 +294,7 @@ ibmcloud cr namespaces
 {: troubleshoot}
 
 The following failure might be displayed when you start your app:
-```
+```text
 FAILED
 Could not determine the language of your app.
 
@@ -302,14 +322,12 @@ You might encounter various failures to [build](/docs/cli?topic=cli-idt-cli#buil
 These failures have many possible causes. For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js apps for cloud deployment](/docs/node?topic=node-enable_existing#enable_existing).
 {: tsResolve}
 
-<!-- - For more information about resolving such problems with a Spring app, see [Enabling existing Spring Boot apps for cloud deployment](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).-->
-
 ## Why can't I build the Docker image?
 {: #ts-cli-docker}
 {: troubleshoot}
 
 If you see the following the error: 
-```
+```text
 FAILED
 An error exit status 1 was encountered while building the Docker 
 image.
@@ -332,7 +350,7 @@ Be sure that Docker is installed and running:
 {: troubleshoot}
 
 You can run into the following error due to role-based access control (RBAC) issues:
-```
+```text
 FAILED
 Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
 configmaps is forbidden: User "system:serviceaccount:kube-system:default" 
@@ -344,7 +362,7 @@ cannot list resource "configmaps" in API group "" in the namespace
 To resolve the issue, run the following command:
 {: tsResolve}
 
-```
+```text
 kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:default -n kube-system
 ```
 {: codeblock}
@@ -354,7 +372,7 @@ kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceac
 {: troubleshoot}
 
 If the client and server Helm versions are not in sync, you might see the following errors:
-```
+```text
 FAILED
 The 'helm upgrade ' command failed to complete due to: exit status 1
 ```
@@ -364,18 +382,18 @@ To resolve the issue, set the client's version to the same as the cluster's vers
 {: tsResolve}
 
 * For Mac and Linux&trade;, run the following commands:
-  ```
-  export DESIRED_VERSION=v2.8.1
-
-  curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
-
-  export HELM_HOME=~/.helm
-  ```
+   ```text
+   export DESIRED_VERSION=v2.8.1
+ 
+   curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+ 
+   export HELM_HOME=~/.helm
+   ```
 
 * For Windows&trade;: As an administrator, download and install the `helm` binary from [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: external}.
   
    From the PowerShell terminal, use the following commands:
-   ```
+   ```text
    Set-Location Env:
    Set-Item HELM_HOME C:\.helm\
    ```
@@ -389,7 +407,7 @@ To resolve the issue, set the client's version to the same as the cluster's vers
 When I try to deploy my app to a Kubernetes cluster by using the `ic dev deploy -t container` command, the following error occurs:
 {: tsSymptoms}
 
-```
+```text
 Executing helm init
 $HELM_HOME has been configured at /Users/username/.helm.
 FAILED
@@ -408,7 +426,7 @@ Update Helm to 2.16.0 or later.
 {: troubleshoot}
 
 During the image build process, your user name is used for the user in the Docker tools image. If the user name contains any special characters like '@' or '-', then the Docker image build process fails with the following error:
-```
+```text
 Image will have user johnsmith@acme.com with id 501 added
 
 Executing docker image build  --file Dockerfile-tools --tag pythonmicroservicewithflaskfnzat-flask-tools --rm --pull --build-arg bx_dev_userid=501 --build-arg bx_dev_user=johnsmith@acme.com .
@@ -421,7 +439,7 @@ Dumping output from the command:
 {: screen}
 
 To resolve the issue, change your user name to not include any special characters, or specify the following flag to use the root user instead:
-```
+```text
 ibmcloud dev build --use-root-user-tools
 ```
 {: codeblock}
@@ -432,7 +450,7 @@ ibmcloud dev build --use-root-user-tools
 {: troubleshoot}
 
 Running the `ibmcloud dev build` command displays the following error:
-```
+```text
 FAILED
 An error exit status 100 was encountered while building the Docker image.
 ```
@@ -445,7 +463,7 @@ There is a problem with mapping the OS user into the container due to a UID conf
 Resolve the OS user's UID conflict. To work around the issue, you can run the following command:
 {: tsResolve}
 
-```
+```text
 ibmcloud dev build --use-root-user-tools
 ```
 {: codeblock}
@@ -455,7 +473,7 @@ ibmcloud dev build --use-root-user-tools
 {: troubleshoot}
 
 Running the `ibmcloud catalog search` command displays the following error:
-```
+```text
 FAILED
 'search' is not a registered command. See 'C:\Program Files\IBM\Cloud\bin\ibmcloud.exe catalog help'.
 ```
