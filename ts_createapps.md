@@ -24,7 +24,7 @@ content-type: troubleshoot
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 
-# Troubleshooting for the {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.dev_cli_short}}
+# Troubleshooting for the {{site.data.keyword.cloud_notm}} CLI
 {: #troubleshoot}
 
 See solutions to common problems with using the {{site.data.keyword.cloud}} Command Line Interface. In many cases, you can recover from these problems by following a few easy steps.
