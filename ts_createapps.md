@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-26"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -48,6 +48,41 @@ This error is caused by the older CLI version attempting to reach the deprecated
 {: tsCauses}
 
 Download and install or replace the older CLI with the latest CLI version by using these [instructions](/docs/cli?topic=cli-install-ibmcloud-cli).
+{: tsResolve}
+
+## Why does a command fail when using an API key that begins with the `-` character?
+{: #ts-cli-apikey-failure}
+{: troubleshoot}
+{: support}
+
+If you are using an API key that begins with a dash, you might encounter failures, depending on the order of the parameters in the command. For example: `ibmcloud login -r us-east --apikey -some-api-key -a https://cloud.ibm.com` produces the following error:
+{: tsSymptoms}
+
+```text
+FAILED
+Incorrect Usage.
+
+NAME:
+  login - Log user in
+
+USAGE:
+  ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--cr-token TOKEN | @CR_TOKEN_FILE] [--profile PROFILE_ID | PROFILE_NAME] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [--accept] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE] [-q, --quiet]
+
+WARNING:
+   Providing your password as a command line option is not recommended
+   Your password might be visible to others and might be recorded in your shell history
+   
+```
+{: screen}
+
+This error is caused by the underlying flag parsing of Golang being confused by the leading `-` in the API key. 
+{: tsCauses}
+
+Reorder the commands so that the last parameter is the API key. This solution resolves the confusion and allows the command to work correctly. In the previous example, the new order is: 
+
+```text
+ibmcloud login -r us-east -a https://cloud.ibm.com --apikey -some-api-key
+```
 {: tsResolve}
 
 ## Why do I get a host name error when I create an application with a non-mobile pattern?
