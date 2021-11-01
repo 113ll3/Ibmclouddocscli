@@ -61,8 +61,7 @@ For complete usage examples, see the `BMSCore` GitHub [README](https://github.co
 
 2. Create a network request.
 
-	### Swift 3.0
-	{: #ios-swift3 notoc}
+	**Swift 3.0**
 
 	```Swift
 	let customResourceURL = "<your resource URL>"
@@ -79,8 +78,7 @@ For complete usage examples, see the `BMSCore` GitHub [README](https://github.co
 	```
 	{: codeblock}
 
-	### Swift 2.2
-	{: #ios-swift22 notoc}
+	**Swift 2.2**
 
 	```Swift
 	let customResourceURL = "<your resource URL>"
