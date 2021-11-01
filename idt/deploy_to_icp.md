@@ -40,13 +40,13 @@ You need a new or existing app that is ready for {{site.data.keyword.cloud_notm}
 Once the app is ready, configure `kubectl` and `helm` locally to deploy to the {{site.data.keyword.cloud_notm}} Private environment. For {{site.data.keyword.cloud_notm}} Private 3.2.0, follow these instructions to install [cloudctl](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.2.0/manage_cluster/install_cli.html){: external} then afterward, log in to configure `kubectl` and `helm`.
 
 To log in with `cloudctl`, run:
-```
+```bash
 cloudctl login -a https://<Cluster Master Host>:<Cluster Master API Port> --skip-ssl-validation
 ```
 {: codeblock}
 
 To verify that `kubectl` and `helm` are configured correctly, run the following command:
-```
+```bash
 helm version --tls
 ```
 {: codeblock}
@@ -69,7 +69,7 @@ Next, configure the service account in the {{site.data.keyword.cloud_notm}} Priv
 
 The first technique is to edit the `serviceaccounts` directly with `kubectl edit serviceaccounts` and add or update the following section by substituting `<the user>` with the actual user name:
 
-```
+```bash
 imagePullSecrets:
   - name: <the user>.registrykey
 ```
@@ -77,7 +77,7 @@ imagePullSecrets:
 
 The second technique uses [`jq`](https://stedolan.github.io/jq/){: external}, which can be installed by using `brew` (Mac), `yum` (Red Hat Linux&trade;), or `apt` (Ubuntu Linux&trade;).
 
-```
+```bash
 kubectl get serviceaccounts default -o json |
 jq  'del(.metadata.resourceVersion)'|
 jq 'setpath(["imagePullSecrets"];[{"name":"admin.registrykey"}])' |
@@ -105,7 +105,7 @@ The `deploy-target` value instructs the CLI to target a Kubernetes or container 
 For public {{site.data.keyword.cloud_notm}} users, run `ibmcloud logout` before you deploy to {{site.data.keyword.cloud_notm}} Private.
 {: tip}
 
-```
+```bash
 ibmcloud dev deploy -t container
 ```
 {: codeblock}
