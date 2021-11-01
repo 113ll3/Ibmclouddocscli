@@ -96,7 +96,7 @@ To create and manage Kubernetes clusters in {{site.data.keyword.containerlong}}:
    ```
    {: codeblock}
 
-For more information, see the [{{site.data.keyword.containershort_notm}} command reference](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli).
+For more information, see the [{{site.data.keyword.containershort_notm}} command reference](/docs/containers?topic=containers-kubernetes-service-cli).
 
 ## Installing Helm
 {: #idt-install-helm}
