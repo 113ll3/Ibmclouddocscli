@@ -624,6 +624,7 @@ Update the CLI to the most recent version:
 ```
 ibmcloud update [-f]
 ```
+
 ### Prerequisites
 {: #update-prereqs}
 
