@@ -696,7 +696,7 @@ ibmcloud dev pipeline-get [pipelineID] [--output JSON]
 * Usage: `ibmcloud dev pipeline-get [pipelineID] --output JSON`
 
 ### pipeline-get command parameters
-{: #pipeget-parameters}
+{: #pipelineget-parameters}
 
 The following parameter can be used with the `pipeline-get` command or by updating the app's `cli-config.yml` file directly.
 
