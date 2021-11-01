@@ -1589,9 +1589,9 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
 ### Examples
 
 Rename access group `example_group` to `hello_world_group`:
-```
+```bash
 ibmcloud iam access-group-update example_group --name "hello_world_group"
-```bsh
+```
 {: codeblock}
 
 ## ibmcloud iam access-group-delete
@@ -1613,7 +1613,6 @@ ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive] [-a,
 
 -a, --all
 :   Force to delete access groups with the same name.
-
 
 ### Examples
 
