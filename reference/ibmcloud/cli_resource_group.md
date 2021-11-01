@@ -35,7 +35,6 @@ ibmcloud resource groups [--default]
 --default
 :   Get the default group of the current account.
 
-
 ### Examples
 
 List all resource groups under the currently targeted account:
@@ -95,8 +94,6 @@ ibmcloud resource group-create NAME
 
 NAME (required)
 :   Name of the resource group
-
-
 
 ### Examples
 
@@ -680,8 +677,6 @@ ID
 -g RESOURCE_GROUP
 :   Resource group name
 
-
-
 ### Examples
 
 Show details of service keys `my-service-key`:
@@ -690,7 +685,6 @@ ibmcloud resource service-key my-service-key
 ```
 {: codeblock}
 
-### Examples
 Show details of service key with ID `crn:v1:bluemix:public:cloudantnosqldb:us-south:a/537860630a5ba7115be954e8d5aa5689:cc2a6d6c-8f5e-4038-b975-b09b51d1d8dc:resource-key:9057f12e-fbf5-421d-8865-764422217a79`:
 
 ```bash
