@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-05"
+lastupdated: "2021-11-03"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli, IBM Cloud CLI installer, installing IBM Cloud CLI, install IBM Cloud CLI
 content-type: tutorial
@@ -64,19 +64,19 @@ If you need to use a 32-bit version of the CLI, or a previous version other than
 The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when you run the command. As the CLI installs, keep an eye on the command line to authenticate as needed.
 
 * For MacOS, run the following command:
-   ```
+   ```curl
    curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
    ```
    {: codeblock}
 
 * For Linux&trade;, run the following command:
-   ```
+   ```curl
    curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
    ```
    {: codeblock}
 
 * For Windows&trade; 10 Pro, run the following command in PowerShell as an administrator:
-   ```
+   ```curl
    iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
    ```
    {: codeblock}
@@ -84,12 +84,17 @@ The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when
    To open PowerShell, right-click the Windows&trade; PowerShell icon, and select **Run as administrator**.
    {: tip}
 
+* For WSL2 on Windows&trade;, run the following command:
+   ```curl
+   curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+   ```
+
 ## Verify the installation
 {: #step2-verify-idt}
 {: step}
 
 To verify that the CLI was installed successfully, run the `help` command:
-```
+```text
 ibmcloud help
 ```
 {: codeblock}
@@ -107,7 +112,7 @@ To manually install the CLI plug-ins and tools, see [installing the tools and pl
 {: step}
 
 1. Log in to {{site.data.keyword.cloud_notm}} with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
-    ```
+    ```text
     ibmcloud login
     ```
     {: codeblock}
@@ -116,13 +121,13 @@ To manually install the CLI plug-ins and tools, see [installing the tools and pl
     {: tip}
 
 2. If you plan to access Cloud Foundry services, specify a Cloud Foundry org and space. You can run the following command to interactively identify the org and space:
-    ```
+    ```text
     ibmcloud target --cf
     ```
     {: codeblock}
 
     Or, if you know which org and space that the service belongs to, you can use the following command:
-    ```
+    ```text
     ibmcloud target -o <value> -s <value>
     ```
     {: codeblock}
