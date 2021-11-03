@@ -30,11 +30,13 @@ ibmcloud sl order category-list [OPTIONS] PACKAGE_KEYNAME
 {: codeblock}
 
 ### Command options
+{: #sl_order_category_list_options}
 
 --required<
 :   List only the required categories for the package.
 
 ### Examples
+{: #sl_order_category_list_examples}
 
 This command lists the categories of Bare Metal servers.
 
@@ -55,6 +57,7 @@ ibmcloud sl order item-list [OPTIONS] PACKAGE_KEYNAME
 ```
 
 ### Command options
+{: #sl_order_item_list_options}
 
 --keyword
 :   A word (or string) that is used to filter item names.
@@ -63,6 +66,7 @@ ibmcloud sl order item-list [OPTIONS] PACKAGE_KEYNAME
 :   Category code that is used to filter items.
 
 ### Examples
+{: #sl_order_item_list_examples}
 
 This command lists all items in the VSI package.
 
@@ -82,6 +86,7 @@ ibmcloud sl order package-list [OPTIONS]
 ```
 
 ### Command options
+{: #sl_order_package_list_options}
 
 --keyword
 :   A word (or string) that is used to filter package names.
@@ -90,6 +95,7 @@ ibmcloud sl order package-list [OPTIONS]
 :   The keyname for the type of package. For example, BARE_METAL_CPU.
 
 ### Examples
+{: #sl_order_package_list_examples}
 
 This command list out all packages for ordering.
 
@@ -120,6 +126,7 @@ ibmcloud sl order place PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,ORDER_I
 
 
 ### Command options
+{: #sl_order_place_options}
 
 --preset
 :   The order preset (if required by the package).<
@@ -144,6 +151,7 @@ ibmcloud sl order place PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,ORDER_I
 :   Force operation without confirmation.
 
 ### Examples
+{: #sl_order_place_examples}
 
 This command orders an hourly VSI with 4 CPU, 16 GB RAM, 100 GB SAN disk, Ubuntu 16.04, and 1 Gbps public & private uplink in datacenter `dal13`.
 
@@ -161,7 +169,7 @@ ibmcloud sl order place-quote PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,O
 ```
 
 ### Command options
-
+{: #sl_order_place_quote_options}
 
 --preset
 :   The order preset (if required by the package).
@@ -197,12 +205,14 @@ ibmcloud sl order preset-list [OPTIONS] PACKAGE_KEYNAME
 ```
 
 ### Command options
+{: #sl_order_preset_list_options}
 
 --keyword
 :   A word (or string) used to filter presets.
 
 
 ### Examples
+{: #sl_order_preset_list_examples}
 
 This command lists the presets for Bare Metal servers.
 

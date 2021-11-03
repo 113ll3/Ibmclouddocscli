@@ -31,11 +31,13 @@ ibmcloud resource groups [--default]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_groups_options}
 
 --default
 :   Get the default group of the current account.
 
 ### Examples
+{: #ibmcloud_resource_groups_examples}
 
 List all resource groups under the currently targeted account:
 ```bash
@@ -59,6 +61,7 @@ ibmcloud resource group NAME [--id]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_group_options}
 
 NAME (required)
 :   Name of the resource group
@@ -68,6 +71,7 @@ NAME (required)
 
 
 ### Examples
+{: #ibmcloud_resource_group_examples}
 
 Show resource group `example-group`:
 ```bash
@@ -91,11 +95,13 @@ ibmcloud resource group-create NAME
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_group_create_options}
 
 NAME (required)
 :   Name of the resource group
 
 ### Examples
+{: #ibmcloud_resource_group_create_examples}
 
 Create a resource group `example-group`:
 ```bash
@@ -113,6 +119,7 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-f, --force]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_group_update_options}
 
 NAME (required)
 :   Name of the target resource group
@@ -126,6 +133,7 @@ NAME (required)
 
 
 ### Examples
+{: #ibmcloud_resource_group_update_examples}
 
 Rename resource group `example-group` to `trial-group`:
 ```bash
@@ -143,6 +151,7 @@ ibmcloud resource group-delete NAME [-f, --force]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_group_delete_options}
 
 NAME (required)
 :   Name of the target resource group
@@ -153,6 +162,7 @@ NAME (required)
 
 
 ### Examples
+{: #ibmcloud_resource_group_delete_examples}
 
 Delete resource group `example-group`:
 ```bash
@@ -170,6 +180,7 @@ ibmcloud resource quotas
 {: codeblock}
 
 ### Examples
+{: #ibmcloud_resource_quotas_examples}
 
 List all quota definitions:
 ```bash
@@ -187,6 +198,7 @@ ibmcloud resource quota NAME
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_quota_options}
 
 NAME (required)
 :   Name of the quota
@@ -194,6 +206,7 @@ NAME (required)
 
 
 ### Examples
+{: #ibmcloud_resource_quota_examples}
 
 Show details of quota `free`:
 ```bash
@@ -211,6 +224,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_cf_service_instance_migrate_options}
 
 SERVICE_INSTANCE_NAME or SERVICE_INSTANCE_ID (required)
 :   Name or ID of the service instance
@@ -236,6 +250,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_instances_options}
 
 --service-name *SERVICE_NAME*
 :   Name of belonging service
@@ -258,6 +273,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 
 
 ### Examples
+{: #ibmcloud_resource_service_instances_examples}
 
 List service instances of service `test-service`:
 ```bash
@@ -276,6 +292,7 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_instance_options}
 
 NAME (required), exclusive with ID
 :   Name of the service instance
@@ -292,6 +309,7 @@ ID (required), exclusive with NAME
 
 
 ### Examples
+{: #ibmcloud_resource_service_instance_examples}
 
 Show details of service instance `my-service-instance`:
 ```bash
@@ -309,6 +327,7 @@ ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVI
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_instance_create_options}
 
 NAME (required)
 :   Name of the service instance
@@ -343,6 +362,7 @@ LOCATION (required)
 
 
 ### Examples
+{: #ibmcloud_resource_service_instance_create_examples}
 
 Create a service instance that is named `my-service-instance`, that uses service plan `test-service-plan` of service `test-service` on location `eu-gb`:
 ```bash
@@ -360,6 +380,7 @@ ibmcloud resource service-instance-update ( NAME | ID ) [-n, --name NEW_NAME] [-
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_instance_update_options}
 
 Name (required)
 :   Name of the service instance, exclusive with ID
@@ -388,6 +409,7 @@ ID (required)
 
 
 ### Examples
+{: #ibmcloud_resource_service_instance_update_examples}
 
 Update service instance `my-service-instance`, change its name to `new-service-instance`:
 ```bash
@@ -405,6 +427,7 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_instance_delete_options}
 
 Name (required)
 :   Name of the service instance, exclusive with ID
@@ -421,6 +444,7 @@ ID (required)
 
 
 ### Examples
+{: #ibmcloud_resource_service_instance_delete_examples}
 
 Delete resource service-instance `my-service-instance`:
 ```bash
@@ -438,6 +462,7 @@ ibmcloud resource service-instance-lock ( NAME | ID ) [-g RESOURCE_GROUP] [-f, -
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_instance_lock_options}
 
 Name (required)
 :   Name of the service instance, exclusive with ID
@@ -454,6 +479,7 @@ ID (required)
 
 
 ### Examples
+{: #ibmcloud_resource_service_instance_lock_examples}
 
 Lock resource service-instance `my-service-instance`:
 ```bash
@@ -471,6 +497,7 @@ ibmcloud resource service-instance-unlock ( NAME | ID ) [-g RESOURCE_GROUP] [-f,
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_instance_unlock_options}
 
 Name (required)
 :   Name of the service instance, exclusive with ID
@@ -487,6 +514,7 @@ ID (required)
 
 
 ### Examples
+{: #ibmcloud_resource_service_instance_unlock_examples}
 
 Unlock resource service-instance `my-service-instance`:
 ```bash
@@ -504,12 +532,14 @@ ibmcloud resource service-bindings SERVICE_ALIAS
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_bindings_options}
 
 SERVICE_ALIAS (required)
 :   Service alias name
 
 
 ### Examples
+{: #ibmcloud_resource_service_bindings_examples}
 
 Show resource bindings to service alias `my-service-alias`:
 ```bash
@@ -527,6 +557,7 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_binding_options}
 
 ALIAS_NAME (required)
 :   Service alias name
@@ -540,6 +571,7 @@ APP_NAME
 
 
 ### Examples
+{: #ibmcloud_resource_service_binding_examples}
 
 Show details of service binding between service alias `my-service-alias` and app `my-app`:
 ```bash
@@ -557,6 +589,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_binding_create_options}
 
 SERVICE_ALIAS_NAME (required)
 :   Service alias name
@@ -582,6 +615,7 @@ ROLE_NAME (required)
 
 
 ### Examples
+{: #ibmcloud_resource_service_binding_create_examples}
 
 Create a service binding between service alias `my-service-alias` and app `my-app` with role `Administrator`:
 ```bash
@@ -599,6 +633,7 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_binding_delete_options}
 
 SERVICE_ALIAS_NAME (required)
 :   Service alias name
@@ -612,6 +647,8 @@ APP_NAME
 
 
 ### Examples
+{: #ibmcloud_resource_service_binding_delete_examples}
+
 Delete the service binding between service alias `my-service-alias` and app `my-app`:
 ```bash
 ibmcloud resource service-binding-delete my-service-alias my-app
@@ -628,6 +665,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_keys_options}
 
 --instance-id
 :   Service Instance ID
@@ -644,6 +682,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
 
 
 ### Examples
+{: #ibmcloud_resource_service_keys_examples}
 
 List service keys of service instance `my-service-instance`:
 ```bash
@@ -661,6 +700,7 @@ ibmcloud resource service-key (NAME | ID) [-g RESOURCE_GROUP] [--id]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_key_options}
 
 NAME
 :   Name of the key
@@ -678,6 +718,7 @@ ID
 :   Resource group name
 
 ### Examples
+{: #ibmcloud_resource_service_key_examples}
 
 Show details of service keys `my-service-key`:
 ```bash
@@ -702,6 +743,7 @@ ibmcloud resource service-key-create NAME [ROLE_NAME] ( --instance-id SERVICE_IN
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_key_create_options}
 
 NAME (required)
 :   Name of the key.
@@ -745,6 +787,7 @@ ROLE_NAME (optional)
 
 
 ### Examples
+{: #ibmcloud_resource_service_key_create_examples}
 
 Create a service key named `my-service-key` with role `Administrator` for service instance `my-service-instance`:
 ```bash
@@ -768,6 +811,7 @@ ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RES
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_key_update_options}
 
 NAME | ID
 :   Name or ID of the key
@@ -784,6 +828,7 @@ NAME | ID
 
 
 ### Examples
+{: #ibmcloud_resource_service_key_update_examples}
 
 Update a service key named `my-service-key`, give it a new name `my-service-key-2`:
 ```bash
@@ -801,6 +846,7 @@ ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --force]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_key_delete_options}
 
 KEY_NAME | KEY_ID
 :   Name of the key or the ID of the key
@@ -811,6 +857,7 @@ KEY_NAME | KEY_ID
 
 
 ### Examples
+{: #ibmcloud_resource_service_key_delete_examples}
 
 Delete service key `my-service-key`:
 ```bash
@@ -828,6 +875,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_aliases_options}
 
 --instance-id
 :   ID of the belonging service instance.
@@ -838,6 +886,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
 
 
 ### Examples
+{: #ibmcloud_resource_service_aliases_examples}
 
 List service aliases for service instance `my-service-instance`:
 ```bash
@@ -855,6 +904,7 @@ ibmcloud resource service-alias ALIAS_NAME [--id]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_alias_options}
 
 ALIAS_NAME (required)
 :   Name of the service alias
@@ -865,6 +915,7 @@ ALIAS_NAME (required)
 
 
 ### Examples
+{: #ibmcloud_resource_service_alias_examples}
 
 Show details of service alias `my-service-alias`:
 ```bash
@@ -882,6 +933,7 @@ ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instanc
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_alias_create_options}
 
 ALIAS_NAME (required)
 :   Name of the service alias
@@ -904,6 +956,7 @@ ALIAS_NAME (required)
 
 
 ### Examples
+{: #ibmcloud_resource_service_alias_create_examples}
 
 Create a service alias named `my-service-alias` of service instance `my-service-instance`:
 ```bash
@@ -921,6 +974,7 @@ ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --t
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_alias_update_options}
 
 ALIAS_NAME (required)
 :   Name of the service alias
@@ -940,6 +994,7 @@ ALIAS_NAME (required)
 
 
 ### Examples
+{: #ibmcloud_resource_service_alias_update_examples}
 
 Update service alias `my-service-alias`, change its name to `new-service-alias`:
 ```bash
@@ -957,6 +1012,7 @@ ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_service_alias_delete_options}
 
 ALIAS_NAME (required)
 :   Name of the service alias
@@ -967,6 +1023,7 @@ ALIAS_NAME (required)
 
 
 ### Examples
+{: #ibmcloud_resource_service_alias_delete_examples}
 
 Delete service alias `my-service-alias`:
 ```bash
@@ -984,6 +1041,7 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_search_options}
 
 -o, -offset
 :   Starting resource position number
@@ -998,6 +1056,7 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
 :   Display classic infrastructure resources. The only supported value is `classic-infrastructure`.
 
 ### Searchable attributes
+{: #ibmcloud_resource_search_attributes}
 
 You can search for the following attributes:
 
@@ -1037,9 +1096,8 @@ _objectType
 tags, tagReferences.tag.name
 :   The tag attached to a resource. Use tagReferences.tag.name when searching for tags attached to classic infrastructure resources 
  
-
-
 ### Examples
+{: #ibmcloud_resource_search_examples}
 
 Search for Cloud Foundry apps whose name starts with a specified text:
 ```bash
@@ -1130,6 +1188,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT]  [-p, --provide
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_tags_options}
 
 --offset value, -o value
 :   Starting resource position number (default: 0).
@@ -1158,9 +1217,6 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT]  [-p, --provide
 -q, --quiet
 :   Suppress verbose output.
 
-
-
-
 ## ibmcloud resource tag-create
 {: #ibmcloud_resource_tag_create}
 
@@ -1171,14 +1227,13 @@ ibmcloud resource tag-create --tag-names TAG_NAMES
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_tag_create_options}
 
 --tag-names value
 :   Comma separated list of tag names.
 
 -q, --quiet 
 :   Suppress verbose output.
-
-
 
 This command is only valid for access management tags. For example:
 
@@ -1187,7 +1242,6 @@ This command is only valid for access management tags. For example:
    ibmcloud resource tag-create —tag-names “project:myproject”
    ```
    {: codeblock}
-
 
 ## ibmcloud resource tag-attach
 {: #ibmcloud_resource_tag_attach}
@@ -1199,6 +1253,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_tag_attach_options}
 
 --tag-names value
 :   Comma-separated list of tag names.
@@ -1221,9 +1276,8 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
 -q, --quiet
 :   Suppress verbose output.
 
-
-
 ### Examples
+{: #ibmcloud_resource_tag_attach_examples}
 
 * To attach the user tag `MyTag` to a Kubernetes cluster named `MyCluster`, first look for the CRN of the cluster you would like to tag:
     ```bash
@@ -1280,6 +1334,7 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES (--resource-name NAME | --res
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_tag_detach_options}
 
 --tag-names value
 :   Comma-separated list of tag names.
@@ -1302,9 +1357,8 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES (--resource-name NAME | --res
 -q, --quiet
 :   Suppress verbose output.
 
-
-
 ### Examples
+{: #ibmcloud_resource_tag_detach_examples}
 
 * To detach the user tag `MyTag` from a Kubernetes cluster named `MyCluster`, first look for the CRN of the cluster you would like to detach the tag from:
     ```bash
@@ -1362,6 +1416,7 @@ ibmcloud resource tag-delete (--tag-name TAG_NAME | -a, --all  [-f, --force]) [-
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_tag_delete_options}
 
 --tag-name value
 :   Tag name to be deleted.
@@ -1389,6 +1444,7 @@ account-id value
 A tag can be deleted only if it isn't attached to any resource.
 
 ### Examples
+{: #ibmcloud_resource_tag_delete_examples}
 
 * To delete the user tag `MyTag` from the account:
     ```bash
@@ -1425,13 +1481,13 @@ ibmcloud resource reclamations [--resource-instance-id INSTANCE_ID]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_reclamations_options}
 
 --resource-instance-id
 :   The globally unique ID (GUID) of the resource instance
 
-
-
 ### Examples
+{: #ibmcloud_resource_reclamations_examples}
 
 List all resource reclamations:
 ```bash
@@ -1455,12 +1511,14 @@ ibmcloud resource reclamation RECLAMATION_ID
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_reclamation_options}
 
 RECLAMATION_ID
 :   Resource reclamation ID
 
 
 ### Examples
+{: #ibmcloud_resource_reclamation_examples}
 
 Show details of a resource reclamation:
 ```bash
@@ -1478,6 +1536,7 @@ ibmcloud resource reclamation-restore ID [--comment COMMENT]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_reclamation_restore_options}
 
 ID
 :   ID of the resource reclamation
@@ -1486,8 +1545,8 @@ ID
 :   Comments about the action
 
 
-
 ### Examples
+{: #ibmcloud_resource_reclamation_restore_examples}
 
 Restore a resource reclamation with ID `d9fendfwlw`:
 ```bash
@@ -1511,6 +1570,7 @@ ibmcloud resource reclamation-delete ID [--comment COMMENT] [--f, --force]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_resource_reclamation_delete_options}
 
 ID
 :   ID of the resource reclamation
@@ -1523,6 +1583,7 @@ ID
 
 
 ### Examples
+{: #ibmcloud_resource_reclamation_delete_examples}
 
 Delete a resource reclamation with ID `d9fendfwlw`:
 ```bash

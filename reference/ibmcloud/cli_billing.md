@@ -29,6 +29,7 @@ ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
 ### Command options
+{: #ibmcloud_billing_account_usage_options}
 
 -d MONTH_DATE (optional)
 :   Display data for the month and date that is specified by using the YYYY-MM format. If not specified, usage of the current month is shown.
@@ -40,6 +41,7 @@ ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 :   Suppress verbose output.
 
 ### Examples
+{: #ibmcloud_billing_account_usage_examples}
 
 Show current account's usage and cost report in 2016-06:
 ```bash
@@ -55,6 +57,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT] [-q, --quiet]
 ```
 
 ### Command options
+{: #ibmcloud_billing_org_usage_options}
 
 ORG_NAME (required)
 :   Name of the org.
@@ -77,6 +80,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT] 
 ```
 
 ### Command options
+{: #ibmcloud_billing_resource_group_usage_options}
 
 GROUP_NAME (required)
 :    Name of the resource group.
@@ -99,6 +103,7 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
 ```
 
 ### Command options
+{: #ibmcloud_billing_resource_instances_usage_options}
 
 -o ORG_NAME (optional)
 :   Filter instances by organization.
@@ -124,6 +129,7 @@ ibmcloud billing enterprise-usage [--account-group ACCOUNT_GROUP_NAME | --accoun
 ```
 
 ### Command options
+{: #ibmcloud_billing_enterprise_usage_options}
 
 --account ACCOUNT_NAME (optional)
 :   Name of target account.

@@ -21,7 +21,7 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 {: shortdesc}
 
 ## ibmcloud enterprise create
-{: #ibmcloud_enterprise_create} 
+{: #ibmcloud_enterprise_create}
 
 Create an enterprise.
 ```bash
@@ -30,6 +30,7 @@ ibmcloud enterprise create NAME [-d, --domain DOMAIN_NAME] [--primary-contact-id
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_create_options}
 
 NAME (required)
 :   Enterprise name.
@@ -40,10 +41,8 @@ NAME (required)
 --primary-contact-id PRIMARY_CONTACT_USER_ID (optional)
 :   Primary contact user ID of the enterprise.
 
-
-
 ## ibmcloud enterprise update
-{: #ibmcloud_enterprise_update} 
+{: #ibmcloud_enterprise_update}
 
 Update enterprise information.
 ```bash
@@ -52,6 +51,7 @@ ibmcloud enterprise update (-n, --name NEW_NAME) [-f, --force]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_update_options}
 
 -f, --force (optional)
 :   Update without confirmation.
@@ -59,10 +59,8 @@ ibmcloud enterprise update (-n, --name NEW_NAME) [-f, --force]
 -n, --name NEW_NAME (required)
 :   New name of the enterprise.
 
-
-
 ## ibmcloud enterprise show
-{: #ibmcloud_enterprise_show} 
+{: #ibmcloud_enterprise_show}
 
 Display details of the enterprise.
 ```bash
@@ -71,7 +69,7 @@ ibmcloud enterprise show
 {: codeblock}
 
 ## ibmcloud enterprise account-group-create
-{: #ibmcloud_enterprise_account_group_create} 
+{: #ibmcloud_enterprise_account_group_create}
 
 Create an account group.
 ```bash
@@ -80,6 +78,7 @@ ibmcloud enterprise account-group-create NAME [--parent-account-group ACCOUNT_GR
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_account_group_create_options}
 
 NAME (required)
 :   Account group name.
@@ -91,7 +90,7 @@ NAME (required)
 :   Primary contact user ID of the account group.
 
 ## ibmcloud enterprise account-group-update
-{: #ibmcloud_enterprise_account_group_update} 
+{: #ibmcloud_enterprise_account_group_update}
 
 Update an account group.
 ```bash
@@ -100,6 +99,7 @@ ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_account_group_update_options}
 
 --id ID (required)
 :   ID of target account group. This option is exclusive with `-n, --name`.
@@ -110,10 +110,8 @@ ibmcloud enterprise account-group-update (-n, --name NAME | --id ID) (--new-name
 --new-name NEW_NAME (required)
 :   New name of target account group.
 
-
-
 ## ibmcloud enterprise account-group
-{: #ibmcloud_enterprise_account_group} 
+{: #ibmcloud_enterprise_account_group}
 
 Display details of account group.
 ```bash
@@ -122,6 +120,7 @@ ibmcloud enterprise account-group (-n, --name NAME | --id ID)
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_account_group_options}
 
 --id ID (required)
 :   ID of the account group. This option is exclusive with `-n, --name`.
@@ -130,7 +129,7 @@ ibmcloud enterprise account-group (-n, --name NAME | --id ID)
 :   Name of the account group. This option is exclusive with `--id`.
 
 ## ibmcloud enterprise account-groups
-{: #ibmcloud_enterprise_account_groups} 
+{: #ibmcloud_enterprise_account_groups}
 
 List account groups.
 ```bash
@@ -139,6 +138,7 @@ ibmcloud enterprise account-groups [--parent-account-group ACCOUNT_GROUP_NAME | 
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_account_groups_options}
 
 --parent-account-group ACCOUNT_GROUP_NAME (optional)
 :   Name of the parent account group. This option is exclusive with `--parent-account-group-id`.
@@ -150,7 +150,7 @@ ibmcloud enterprise account-groups [--parent-account-group ACCOUNT_GROUP_NAME | 
 :   Show descendant account groups.
 
 ## ibmcloud enterprise account-create
-{: #ibmcloud_enterprise_account_create} 
+{: #ibmcloud_enterprise_account_create}
 
 Create an account.
 ```bash
@@ -159,6 +159,7 @@ ibmcloud enterprise account-create NAME [--parent-account-group ACCOUNT_GROUP_NA
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_account_create_options}
 
 NAME (required)
 :   Account group name.
@@ -170,7 +171,7 @@ NAME (required)
 :   Name of the parent account group. If omitted, the parent would be the current enterprise.
 
 ## ibmcloud enterprise account-move
-{: #ibmcloud_enterprise_account_move} 
+{: #ibmcloud_enterprise_account_move}
 
 Move an account under different parent.
 ```bash
@@ -179,6 +180,7 @@ ibmcloud enterprise account-move (-n, --name NAME | --id ID) (--parent-account-g
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_account_move_options}
 
 --id ID (required)
 :   ID of target account. This option is exclusive with `-n, --name`.
@@ -196,7 +198,7 @@ ibmcloud enterprise account-move (-n, --name NAME | --id ID) (--parent-account-g
 :   Set enterprise as the parent. This option is exclusive with `--parent-account-group` and `--parent-account-group-id`.
 
 ## ibmcloud enterprise account-show
-{: #ibmcloud_enterprise_account_show} 
+{: #ibmcloud_enterprise_account_show}
 
 Display details of an account.
 ```bash
@@ -205,6 +207,7 @@ ibmcloud enterprise account-show (-n, --name NAME | --id ID)
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_account_show_options}
 
 --id ID (required)
 :   ID of the account. This option is exclusive with `-n, --name`.
@@ -213,7 +216,7 @@ ibmcloud enterprise account-show (-n, --name NAME | --id ID)
 :   Name of the account. This option is exclusive with `--id`.
 
 ## ibmcloud enterprise accounts
-{: #ibmcloud_enterprise_accounts} 
+{: #ibmcloud_enterprise_accounts}
 
 List accounts.
 ```bash
@@ -222,6 +225,7 @@ ibmcloud enterprise accounts [--parent-account-group ACCOUNT_GROUP_NAME | --pare
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_accounts_options}
 
 --parent-account-group ACCOUNT_GROUP_NAME (optional)
 :   Name of the parent account group. This option is exclusive with `--parent-account-group-id`.
@@ -233,7 +237,7 @@ ibmcloud enterprise accounts [--parent-account-group ACCOUNT_GROUP_NAME | --pare
 :   Show descendant accounts.
 
 ## ibmcloud enterprise account-import
-{: #ibmcloud_enterprise_account_import} 
+{: #ibmcloud_enterprise_account_import}
 
 Import a stand-alone account.
 ```bash
@@ -242,6 +246,7 @@ ibmcloud enterprise account-import (--account-id ID) [--parent-account-group ACC
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_enterprise_account_import_options}
 
 --account-id
 :   ID of source account.

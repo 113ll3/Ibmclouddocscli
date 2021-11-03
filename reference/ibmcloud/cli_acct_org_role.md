@@ -33,6 +33,7 @@ ibmcloud account orgs [-r REGION_NAME] [--guid] [-c ACCOUNT_ID] [-u ACCOUNT_OWNE
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_orgs_options}
 
 -r REGION_NAME
 :   Region name. List the organizations in the region specified. Default to current region if not specified. If set to 'all', list the organizations in all regions.
@@ -47,6 +48,7 @@ ibmcloud account orgs [-r REGION_NAME] [--guid] [-c ACCOUNT_ID] [-u ACCOUNT_OWNE
 :   Account owner name. List the organizations under the accounts that are owned by the user. Default to current account if not specified. If set to 'all', list organizations under all accounts. This option is exclusive with `-c`.
 
 ### Examples
+{: #iibmcloud_account_orgs_examples}
 
 List all the organizations in region `us-south` with the GUID displayed:
 ```bash
@@ -70,6 +72,7 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_org_options}
 
 ORG_NAME (required)
 :   The name of the organization.
@@ -81,6 +84,7 @@ ORG_NAME (required)
 :   Retrieve and display the org's guid. All other output for the org is suppressed. This option is exclusive with `--output`.
 
 ### Examples
+{: #ibmcloud_account_org_examples}
 
 Show the information of organization `IBM` with the GUID displayed:
 ```bash
@@ -98,6 +102,7 @@ ibmcloud account org-create ORG_NAME [-r, --region REGION]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_org_create_options}
 
 ORG_NAME (required)
 :   The name of the organization to be created.
@@ -107,6 +112,7 @@ ORG_NAME (required)
 
 
 ### Examples
+{: #ibmcloud_account_org_create_examples}
 
 Create an organization named `IBM`:
 ```bash
@@ -124,6 +130,7 @@ ibmcloud account org-replicate ORG_NAME REGION_NAME [-r, --region SOURCE_REGION]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_org_replicate_options}
 
 ORG_NAME (required)
 :   The name of the existing org that is to be replicated.
@@ -135,6 +142,7 @@ REGION_NAME (required)
 :   Region name. Default to current region if not specified.
 
 ### Examples
+{: #ibmcloud_account_org_replicate_examples}
 
 Replicate the org `myorg` to the region `eu-gb`:
 ```bash
@@ -152,6 +160,7 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME [-r, --region REGION]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_org_rename_options}
 
 OLD_ORG_NAME (required)
 :   The old name of the org that is to be renamed.
@@ -172,6 +181,7 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_spaces_options}
 
 -o ORG_NAME (optional)
 :   Organization name. List the spaces under the organization specified. Default to current organization if not specified.
@@ -180,6 +190,7 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME]
 :   Region name. List the spaces under the region specified. Default to current region if not specified.
 
 ### Examples
+{: #ibmcloud_account_spaces_examples}
 
 List all spaces:
 ```bash
@@ -203,6 +214,7 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid] [--security-group-rules
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_space_options}
 
 SPACE_NAME (required)
 :   Name of space to be shown.
@@ -217,6 +229,7 @@ SPACE_NAME (required)
 :   Retrieve the rules for all the security groups associated with the space.
 
 ### Examples
+{: #ibmcloud_account_space_examples}
 
 Show the information of space `space_example`:
 ```bah
@@ -267,6 +280,7 @@ ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_org_users_options}
 
 ORG_NAME (required)
 :   The name of the organization.
@@ -288,6 +302,8 @@ ibmcloud account org-user-add USER_NAME ORG [-r, --region REGION]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_org_user_add_options}
+
 USER_NAME (required)
 :   The name of the user.
 ORG (required)
@@ -306,6 +322,8 @@ ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
 ```
 
 ### Command options
+{: #ibmcloud_account_org_user_remove_options}
+
 --force, -f
 :   Force deletion without confirmation.
 
@@ -320,7 +338,7 @@ ibmcloud account org-roles [-r, --region REGION] [-u USER_ID]
 {: codeblock}
 
 ### Command options
-
+{: #ibmcloud_account_org_roles_options}
 
 -u
 :   User ID. If not specified, default to current user.
@@ -339,7 +357,7 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE [-r, --region REGION]
 {: codeblock}
 
 ### Command options
-
+{: #ibmcloud_account_org_role_set_options}
 
 USER_NAME (required)
 :   The name of the user to be assigned.
@@ -363,6 +381,7 @@ ORG_ROLE (required)
   
 
 ### Examples
+{: #ibmcloud_account_org_role_set_examples}
 
 Assign user `Mary` to the organization `IBM` as `OrgManager` role:
 ```bash
@@ -386,6 +405,7 @@ ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE [-r, --region REGION
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_org_role_unset_options}
 
 USER_NAME (required)
 :   The name of the user to be removed.
@@ -408,6 +428,7 @@ ORG_ROLE (required)
 :   Region name. Default to current region if not specified.
 
 ### Examples
+{: #ibmcloud_account_org_role_unset_examples}
 
 Remove user `Mary` from the organization `IBM` as `OrgManager` role:
 ```bash
@@ -425,6 +446,7 @@ ibmcloud account space-users ORG_NAME SPACE_NAME [-r, --region REGION]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_space_users_options}
 
 ORG_NAME (required)
 :   The name of the organization.
@@ -445,6 +467,7 @@ ibmcloud account space-roles ORG [-r, --region REGION]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_space_roles_options}
 
 ORG (required)
 :   The name of the organization.
@@ -462,7 +485,7 @@ ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE [-r, --
 {: codeblock}
 
 ### Command options
-
+{: #ibmcloud_account_space_role_set_options}
 
 USER_NAME (required)
 :   The name of the user to be assigned.
@@ -486,6 +509,7 @@ SPACE_ROLE (required)
 :   Region name. Default to current region if not specified.
 
 ### Examples
+{: #ibmcloud_account_space_role_set_examples}
 
 Assign user `Mary` to the organization `IBM` and space `Cloud` as `SpaceManager` role:
 ```bash
@@ -503,6 +527,7 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE [-r, 
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_space_role_unset_options}
 
 USER_NAME (required)
 :   The name of the user to be removed.
@@ -528,6 +553,7 @@ SPACE_ROLE (required)
     
 
 ### Examples
+{: #ibmcloud_account_space_role_unset_examples}
 
 Remove user `Mary` from the organization `IBM` and space `Cloud` as `SpaceManager` role:
 ```bash
@@ -554,6 +580,7 @@ ibmcloud account org-account ORG_NAME [-r, --region REGION] [--guid]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_org_account_options}
 
 -r (optional)
 :   Region name. Default to current region if not specified.
@@ -571,6 +598,7 @@ ibmcloud account show
 {: codeblock}
 
 ### Examples
+{: #ibmcloud_account_show_examples}
 
 Show details of currently targeted account:
 ```bash
@@ -588,12 +616,14 @@ ibmcloud account update (--service-endpoint-enable true | false)
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_update_options}
 
 --service-endpoint-enable true | false
 :   Enable or disable service endpoints connectivity for a SoftLayer account.
 
 
 ### Examples
+{: #ibmcloud_account_update_examples}
 
 Enable service endpoint connectivity for current account:
 ```bash
@@ -611,6 +641,8 @@ account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [
 {: codeblock}
 
 ### Command options
+{: #classic_account_audit_logs_options}
+
 -a, --action *ACTION*  
 :   Action. List audit logs with the action.
 
@@ -630,6 +662,7 @@ u, --user-name *USER_NAME*
 :   User name. List audit logs with the user name.
 
 ### Examples
+{: #classic_account_audit_logs_examples}
 
 List audit logs:
 ```bash
@@ -647,6 +680,7 @@ ibmcloud account audit-logs [--user-name USER_NAME] [--object-type OBJECT_TYPE] 
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_audit_logs_options}
 
 --user-name *USER_NAME* (optional)
 :   List audit logs with the user name.
@@ -678,6 +712,7 @@ ibmcloud account users [-c, --account-id ACCOUNT_ID]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_users_options}
 
 -c (optional)
 :   Account ID. If not specified, default to current account.
@@ -692,6 +727,7 @@ ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_user_remove_options}
 
 USER_ID (required)
 :   User ID
@@ -712,6 +748,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_user_invite_options}
 
 USER_EMAIL (required)
 :   The email of the user to be invited.
@@ -745,6 +782,7 @@ ibmcloud account user-reinvite USER_EMAIL
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_user_reinvite_options}
 
 USER_EMAIL (required)
 :   The email of the user to be invited again.
@@ -768,6 +806,7 @@ ibmcloud account user-preference-update (--position NEW_POSITION)
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_user_preference_update_options}
 
 --position *NEW_POSITION* (optional)
 :   Set a user's position, such as `manager` or `student`.
@@ -783,6 +822,7 @@ ibmcloud account platform-notification-subscribe (--type TYPE)
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_platform_notification_subscribe_options}
 
 --type *TYPE* (optional)
 :   Notification type, one of `unplanned_events`, `planned_maintenance`.
@@ -797,6 +837,7 @@ ibmcloud account platform-notification-unsubscribe (--type TYPE)
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_platform_notification_unsubscribe_options}
 
 --type *TYPE* (optional)
 :   Notification type, one of `unplanned_events`, `planned_maintenance`.
@@ -812,10 +853,13 @@ ibmcloud account domain-cert DOMAIN_NAME
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_domain_cert_options}
+
 DOMAIN_NAME (required)
 :   The domain that hosts the certificate.
 
 ### Examples
+{: #ibmcloud_account_domain_cert_examples}
 
 View the certificate information of the domain `ibmcxo-eventconnect.com`:
 ```bash
@@ -833,6 +877,7 @@ ibmcloud account domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PAS
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_domain_cert_add_options}
 
 DOMAIN (required)
 :   The domain that the certificate is added to.
@@ -853,6 +898,7 @@ DOMAIN (required)
 :   The truststore file.
 
 ### Examples
+{: #ibmcloud_account_domain_cert_add_examples}
 
 Add a certificate to the domain `ibmcxo-eventconnect.com`:
 ```bash
@@ -870,6 +916,7 @@ ibmcloud account domain-cert-remove DOMAIN [-f]
 {: codeblock}
 
 ### Command options
+{: #ibmcloud_account_domain_cert_remove_options}
 
 DOMAIN (required)
 :   Domain to remove the certificate from.

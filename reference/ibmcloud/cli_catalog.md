@@ -35,7 +35,8 @@ ibmcloud catalog entry ID [--children] [--global]
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_entry_options}
 
 --children
 :   Get all children for the catalog entry
@@ -43,9 +44,8 @@ ibmcloud catalog entry ID [--children] [--global]
 --global
 :   Operate in global scope
 
-
-
 ### Examples
+{: #ibmcloud_catalog_entry_examples}
 
 Get entry with ID `a0ef1-d3b4j0`:
 ```bash
@@ -62,7 +62,8 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_entry_create_options}
 
 -p, --parent
 :   Parent ID of the object
@@ -73,8 +74,8 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
 --global
 :   Operate in global scope
 
-
 ### Examples
+{: #ibmcloud_catalog_entry_create_examples}
 
 Create resource from JSON file with parent ID `a0ef1-d3b4j0`:
 ```bash
@@ -91,7 +92,8 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_entry_update_options}
 
 -c
 :   Valid JSON object that contains catalog-specific configuration parameters, provided either inline or in a file. For a list of supported configuration parameters, see documentation for the particular catalog entry.
@@ -99,8 +101,8 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 --global
 :   Operate in global scope
 
-
 ### Examples
+{: #ibmcloud_catalog_entry_update_examples}
 
 Update resource `j402-dnf1i` from JSON file:
 ```bash
@@ -117,13 +119,14 @@ ibmcloud catalog entry-delete ID [--global]
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_entry_delete_options}
 
 --global
 :   Operate in global scope
 
-
 ### Examples
+{: #ibmcloud_catalog_entry_delete_examples}
 
 Delete resource `j402-dnf1i`:
 ```bash
@@ -140,13 +143,14 @@ ibmcloud catalog entry-visibility ID [--global]
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_entry_visibility_options}
 
 --global
 :   Operate in global scope
 
-
 ### Examples
+{: #ibmcloud_catalog_entry_visibility_examples}
 
 Get visibility of resource `j402-dnf1i` in global scope:
 ```bash
@@ -163,7 +167,8 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_entry_visibility_set_options}
 
 --includes-add
 :   Adding an account (or list of comma-separated accounts) to the includes list, granting visibility to the entry. Email or Account GUIDs are acceptable.
@@ -192,8 +197,8 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 --global
 :   Operate in global scope
 
-
 ### Examples
+{: #ibmcloud_catalog_entry_visibility_set_examples}
 
 Set visibility of resource `j402-dnf1i` from JSON file:
 ```bash
@@ -210,7 +215,8 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_service_marketplace_options}
 
 --cf
 :   Show Cloud Foundry services only
@@ -221,8 +227,8 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 --global
 :   Operate in global scope
 
-
 ### Examples
+{: #ibmcloud_catalog_service_marketplace_examples}
 
 Show service offerings in global scope:
 ```bash
@@ -239,14 +245,14 @@ View details of a service in the catalog, including a description, tags, compati
 ibmcloud catalog service NAME_OR_ID [--global]
 ```
 
-### Command Options
-
+### Command options
+{: #ibmcloud_catalog_service_options}
 
 --global
 :   Operate in a global scope
 
-
 ### Examples
+{: #ibmcloud_catalog_service_examples}
 
 Show details of the `container-kubernetes` service:
 ```bash
@@ -262,7 +268,8 @@ View the boilerplate templates on {{site.data.keyword.cloud_notm}}.
 ibmcloud catalog templates [-d]
 ```
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_templates_options}
 
  -d (optional)
  :   If the *-d* option is specified, the description of each template is also displayed. Otherwise, only the ID and name of each template is shown.
@@ -277,12 +284,14 @@ ibmcloud catalog template TEMPLATE_ID
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_template_options}
 
  TEMPLATE_ID (required)
  :   The ID of the boilerplate template. Use *ibmcloud templates* to view all templates' IDs.
 
 ### Examples
+{: #ibmcloud_catalog_template_examples}
 
 View details of the template `mobileBackendStarter`:
 ```bash
@@ -300,7 +309,8 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_template_run_options}
 
  TEMPLATE_ID (required)
  :   The template that the application is based on during creation. Use *ibmcloud templates* to see all templates' ID.
@@ -320,8 +330,8 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
  --no-start (optional)
  :   Don't start the application automatically after creation. If not specified, the application is started automatically after creation.
 
-
 ### Examples
+{: #ibmcloud_catalog_template_run_examples}
 
 Create a `cf` app that is named `my-app` based on a `javaHelloWorld` template:
 ```bash
@@ -350,7 +360,8 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--gl
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_locations_options}
 
 -i, --id
 :   Specify geography by id.
@@ -367,7 +378,6 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--gl
 --csv
 :   Output CSV file
 
-
 ## ibmcloud catalog runtime
 {: #ibmcloud_catalog_runtime}
 
@@ -378,6 +388,7 @@ ibmcloud catalog runtime RUNTIME_ID
 {: codeblock}
 
 ### Examples
+{: #ibmcloud_catalog_locations_examples}
 
 Show details of runtime "nodejsHelloWorld":
 ```bash
@@ -394,17 +405,17 @@ ibmcloud catalog runtimes [-d]
 ```
 {: codeblock}
 
-### Command Options
+### Command options
+{: #ibmcloud_catalog_runtimes_options}
 
 -d
 :   Show the description of each runtime
 
 ### Examples
+{: #ibmcloud_catalog_runtimes_examples}
 
 List all runtimes along with their descriptions:
 ```bash
 ibmcloud catalog runtimes -d
 ```
 {: codeblock}
-
-
