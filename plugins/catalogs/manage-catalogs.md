@@ -824,7 +824,7 @@ ibmcloud catalog offering category-options [--output FORMAT]
 
 
 ### Example
-{: #categroy-options-offering-example}
+{: #category-options-offering-example}
 
 ```bash
 ibmcloud catalog offering category-options
@@ -872,7 +872,7 @@ ibmcloud catalog offering category-options [--output FORMAT]
   
 
 ### Example
-{: #categroy-options-offering-example}
+{: #add-category-offering-example}
 
 ```bash
 ibmcloud catalog offering add-category --catalog dev-catalog --offering dev-offering --category dev_ops
