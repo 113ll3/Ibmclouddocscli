@@ -374,7 +374,7 @@ chart-path: "chart/myapp"
 
 deploy-target: "container"
 
-deploy-image-target: "registry.<{{site.data.keyword.cloud_notm}} Region>.icr.io/<Container Registry Namespace>/<App-Name>"
+deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
 
 ibm-cluster: "mycluster"
 ```
