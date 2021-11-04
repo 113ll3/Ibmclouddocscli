@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-09-09"
+lastupdated: "2021-11-04"
 
 keywords: cli, catalogs management
 
@@ -315,7 +315,7 @@ ibmcloud catalog filter create [--catalog CATALOG] [--category CATEGORY] [--comp
   
 --category CATEGORY (optional)
 
-:   Provide a comma-separated list of category names or tags you want to include or exclude. Run the `ibmcloud catalog offering category-options` command to view all options.
+:   Provide a comma-separated list of category names or tags you want to include or exclude. Run the `ibmcloud catalog offering category-options` command to view all options. Default is `Developer tools`.
 
 --compliance TYPE (optional)
 
@@ -404,8 +404,7 @@ ibmcloud catalog filter offering --offering PRODUCT-NAME
 
 --include
 
-:   The default value is true if a flag is not provided. Valid values are `true` and `false`. If set to true, the product and plans provided are visible to users in the account. If set to false, the product and plans aren't visible to users in the acco
-:   
+:   The default value is true if a flag is not provided. Valid values are `true` and `false`. If set to true, the product and plans provided are visible to users in the account. If set to false, the product and plans aren't visible to users in the account.
 
 ## ibmcloud catalog filter hide-ibm-public-catalog
 {: #hide-filter}
@@ -464,14 +463,13 @@ Service Endpoint Supported   service_endpoint_supported
 ```
 {: screen}
 
-
 ## ibmcloud catalog offering create
 {: #create-offering}
 
 Run the following command to add a product to a private catalog in the account.
 
 ```bash
-ibmcloud catalog offering create --catalog CATALOG --zipurl URL [--include-config]
+ibmcloud catalog offering create [--catalog CATALOG_NAME] [--zipurl URL] [--include-config] [--target-version VERSION] [--token TOKEN]
 ```
 {: codeblock}
 
@@ -486,9 +484,17 @@ ibmcloud catalog offering create --catalog CATALOG --zipurl URL [--include-confi
 
 :   URL pointing to .zip file of the product.
 
+--target-version VERSION
+
+:   Specify the version of the product. 
+
 --include-config (optional)
 
 :   If provided, all configuration values are included and available when you add the product.
+
+--token TOKEN (optional)
+
+:   Specify the personal access token for a private repository. 
 
 ## ibmcloud catalog offering list
 {: #list-offering}
@@ -742,7 +748,7 @@ ibmcloud catalog offering preinstall-status --version-locator VERSION_NUMBER --c
 Run the following command to validate a new version of a product in your private catalog. Products must be validated to ensure that they work as expected before they can be published to the account for other users to create an instance from the private catalog.
 
 ```bash
-ibmcloud catalog offering validate --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME [--overrride-values VALUES|FILENAME]
+ibmcloud catalog offering validate --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME [--timeout TIMEOUT] [--wait WAIT] [--override-values VALUES|FILENAME] 
 ```
 {: codeblock}
 
@@ -759,9 +765,14 @@ ibmcloud catalog offering validate --version-locator VERSION_NUMBER --cluster CL
 --namespace NAME
 :   Provide the namespace you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.
 
+--timeout TIMEOUT
+:   Specify in seconds how long the schematics workspace should wait before installing. Default is `180`.
+
+--wait WAIT
+:   Wait and track the progress of the schematics workspace job. If `true`, installation waits. If `false`, the software installs immediately. Default is `true`.
+
 --override-values VALUES|FILENAME (optional)
 :   Provide any custom configurations for the installation. You can provide this value either inline or by using a JSON or TXT file. For example, `override-values values.json`.
-
   
 ### Example
 {: #validate-example}
@@ -769,7 +780,7 @@ ibmcloud catalog offering validate --version-locator VERSION_NUMBER --cluster CL
 Validate a product with the version locator `b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4` in a cluster with the ID `bn5ebho206o7fg45f2e0` within a namespace called `test-namespace`. This installation has custom configurations, so the values are provided by using a `values.json` file.
 
 ```bash
-ibmcloud catalog offering validate --version-locator b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4 --cluster bn5ebho206o7fg45f2e0 --namespace test-namespace --overrride-values values.json
+ibmcloud catalog offering validate --version-locator b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4 --cluster bn5ebho206o7fg45f2e0 --namespace test-namespace --override-values values.json
 ```
 {: codeblock}
 
@@ -850,7 +861,7 @@ Storage                 storage                                               Or
 ## ibmcloud catalog offering add-category
 {: #add-category-offering}
 
-Run the following command to add a category tag to a product. You can provide either the category name or tag, which you can find by running the `ibmcloud catalog offering category-options` command. The products must be placed in a category to be visible in the catalog.
+Run the following command to add a category tag to a product. You can provide either the category name or tag, which you can find by running the `ibmcloud catalog offering category-options` command. The products must be placed in a category to be visible in the catalog. Default is `Developer tools`.
 
 ```bash
 ibmcloud catalog offering category-options [--output FORMAT]
@@ -957,6 +968,71 @@ ibmcloud catalog offering publish-to-account --version-locator VERSION_NUMBER
 --version-locator VERSION_NUMBER
 :   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
 
+## ibmcloud catalog offering workspaces
+{: #get-workspaces}
+
+Run the following command to get the schematics workspaces for a product version.
+
+```bash
+ibmcloud catalog offering workspaces [--version-locator VERSION_NUMBER] [output FORMAT] 
+```
+{: codeblock}
+
+### Command options
+{: #get-workspaces-options}
+
+--version-locator VERSION_NUMBER
+
+:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified version that you want to use.
+
+--output FORMAT (optional)
+
+:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example, `--output json`.
+
+## ibmcloud catalog install
+{: #install-software-version}
+
+Run the following command to install a software version from the {{site.data.keyword.cloud_notm}} catalog.
+
+```bash
+ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_ID] [--namespace NAME] [--override-values VALUES] [--timeout TIMEOUT] [--wait WAIT] [--workspace-name NAME] [--workspace-tags TAGS]
+```
+{: codeblock}
+
+### Command options
+{: #install-software-version-options}
+
+--version-locator VERSION_NUMBER
+
+:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the version that you want to use.
+
+--cluster CLUSTER_ID
+
+:   Specify the cluster name or ID. 
+
+--namespace NAME
+
+:   Specify the namespace you'd like to use.
+
+--override-values VALUES
+
+:   Provide any custom configurations for the installation. You can provide this value either inline or by using a JSON or TXT file. For example, `override-values values.json`.
+
+--timeout TIMEOUT
+
+:   Specify in seconds how long the schematics workspace should wait before installing. Default is `180`.
+
+--wait WAIT
+
+:   Wait and track the progress of the schematics workspace job. If `true`, installation waits. If `false`, the software installs immediately. Default is `true`.
+
+--workspace-name NAME (optional)
+
+:   Provide a workspace name. Default is `OfferingName-Date`.
+
+--workspace-tags TAGS (optional)
+
+:   Provide a comma-separated list of tags.
 
 <!-- These commands below will NOT go public and will always remain internal until we remove them entirely in favor of the provider portal which will be used to onboard content offerings to the public catalog. -->
 
@@ -1031,5 +1107,5 @@ ibmcloud catalog offering restore --version-locator VERSION_NUMBER
 {: #publish-offering-restore-options}
 
 --version-locator VERSION_NUMBER
-:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
 
+:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
