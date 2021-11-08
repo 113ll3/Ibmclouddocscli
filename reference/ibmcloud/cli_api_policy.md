@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-09-10"
+lastupdated: "2021-11-08"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -730,7 +730,7 @@ SERVICE_ID_UUID (required)
 {: #ibmcloud_iam_service_api_key_unlock_examples}
 
 Unlock service API key `sample-key` of service ID `sample-service`:
-```
+```bash
 ibmcloud iam service-api-key-unlock sample-key sample-service
 ```
 {: codeblock}
@@ -1893,7 +1893,7 @@ ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 
 Create an access group policy:
 ```bash
-ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]}
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--tags name1:value1,name2:value2...] [--account-management] [--attributes name=value,name=value...]}
 ```
 {: codeblock}
 
@@ -1926,6 +1926,9 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
 
 -resource-group-id
 :   ID of the resource group. `*` means all resource groups. This option is exclusive with the `--file` and `--resource-group-name` option.
+
+-tags
+:   Access tags of the resource. Use tags to organize, track usage costs, or manage access to your resources. For more information on tags, see [Working with tags](/docs/account?topic=topic=account-tag).
 
 --account-management
 :   Give access to all account management services.
@@ -1994,6 +1997,12 @@ ibmcloud iam access-group-policy-create example_group --roles Viewer
 Give `example_group` `Viewer` role for service `is` resources with attribute `instanceId` equal to `*`:
 ```bash
 ibmcloud iam access-group-policy-create example_group --roles Viewer --service-name is --attributes "instanceId=*"
+```
+{: codeblock}
+
+Create access tags for the resource:
+```bash
+ibmcloud iam access-group-policy-create --tags env:dev,env:test
 ```
 {: codeblock}
 
@@ -2077,7 +2086,7 @@ ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7a
 {: codeblock}
 
 Update access group policy `b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4` to give `example_group` `Viewer` role for members of resource group `sample-resource-group`:
-```
+```bash
 ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-name sample-resource-group
 ```bash
 {: codeblock}
@@ -2872,7 +2881,7 @@ RULE_NAME|RULE_ID (required)
 ### Examples
 {: #ibmcloud_iam_trusted_profile_rule_update_examples}
 
-Update rule `ClaimRule-test-id ` in profile `my-profile` with new name `test-rule`:
+Update rule `ClaimRule-test-id` in profile `my-profile` with new name `test-rule`:
 ```bash
 ibmcloud iam trusted-profile-rule-update my-profile ClaimRule-test-id --name test-rule
 ```
