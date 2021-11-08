@@ -44,7 +44,7 @@ In the command line, you are notified when updates to the `ibmcloud` CLI and `ca
 
 If you want to view the current version of your `catalogs-management` CLI plug-in, run `ibmcloud plugin list`.
 
-Don't put personal information in your catalog names or catalog descriptions.
+To maintain privacy and security, don't put personal information in your catalog names or catalog descriptions.
 {: important}
 
 ## ibmcloud catalog create
@@ -104,7 +104,7 @@ ibmcloud catalog list [--output FORMAT]
 
 The command returns the following output:
 
-```
+```bash
 Name                                           ID                                     Description                   Last Updated
 dev-catalog                                    93f592fb-e09b-4a53-bbd9-92f6ab9e253b   short-description             2019-11-21 21:28:28.347 +0000 UTC         
 ABDemoTestCatalog                              7a246530-e191-45e2-87cc-07c8c7033d2b   short-description             2019-08-19 17:43:48.59 +0000 UTC
@@ -139,7 +139,7 @@ ibmcloud catalog get --catalog CATALOG [--output FORMAT]
 
 The command returns the following output:
 
-```
+```bash
 Name                                     Current State   Version Locator
 dev-catalog
 |__dev-offering
@@ -229,7 +229,7 @@ ibmcloud catalog search <QUERY> [--catalog CATALOG] [--type TYPE] [-r, --region 
 
 The command returns the following output:
 
-```
+```bash
 Name                                       ID                                                    Category
 2 Zone VPC                                 f10d9ae9-ac94-4718-b24a-3994241ae2a4-global           Networking
 Apache                                     Qml0bmFtaS1hcGFjaGU=-global                           Developer Tools
@@ -449,7 +449,7 @@ ibmcloud catalog filter options
 
 The command returns the following output:
 
-```
+```bash
 Offering format   ID
 Cloud Paks        cloud_pak
 Helm charts       helm
@@ -534,7 +534,7 @@ ibmcloud catalog offering list --catalog dev-catalog
 
 The command returns the following output:
 
-```
+```bash
 Name                                   ID                                     Current State   Version Locator
 Cloud Pak for Automation               cb90274e-398b-4373-9b28-d6428d3302df
 |__OpenShift
@@ -601,7 +601,7 @@ ibmcloud catalog offering list --catalog dev-catalog
 
 The command returns the following output:
 
-```
+```bash
 Name                                     Current State          Version Locator
 dev-catalog
 |__dev-offering
@@ -642,7 +642,7 @@ ibmcloud catalog offering get --catalog CATALOG --offering OFFERING_NAME [--outp
 
 The command returns the following output:
 
-```
+```bash
 Name           Current State   Version Locator
 dev-offering
 |__
@@ -848,7 +848,7 @@ ibmcloud catalog offering category-options
 
 The command returns the following output:
 
-```
+```bash
 Name                    Tags                                                  Description
 VPC Infrastructure      vpc                                                   Fully customizable, software-defined virtual network with superior isolation.
 Compute                 compute,content,containers,openwhisk,vmware,runtime   Build your virtual environments
