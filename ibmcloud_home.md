@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-02-10"
+lastupdated: "2021-11-09"
 
 keywords: IBM Cloud CLI, IBMCLOUD_HOME, ibmcloud cli, ibmcloud
 
@@ -38,7 +38,7 @@ To run multiple {{site.data.keyword.cloud_notm}} CLI sessions in parallel, use d
 
 For your first environment, enter the following command:
 
-```
+```bash
   export IBMCLOUD_HOME=/home/myuser/.ibmcloudenv1
   ibmcloud login
 ```
@@ -46,10 +46,10 @@ For your first environment, enter the following command:
 
 For your second environment, enter the following command:
 
-```
+```bash
 export IBMCLOUD_HOME=/home/myuser/.ibmcloudenv2
 ibmcloud login
 ```
 {: codeblock}
 
-For more information about environment variables for the {{site.data.keyword.cloud_notm}} CLI, see [Tips and Tricks for Using the {{site.data.keyword.cloud_notm}} CLI](https://www.ibm.com/cloud/blog/tips-and-tricks-for-using-the-ibm-cloud-cli){: external}.
+For more information about environment variables for the {{site.data.keyword.cloud_notm}} CLI, see [Tips and Tricks for Using the {{site.data.keyword.cloud_notm}} CLI](https://www.ibm.com/cloud/blog/tips-and-tricks-for-using-the-ibm-cloud-cli){: external} and [{{site.data.keyword.cloud_notm}} CLI (ibmcloud) environment variables](/docs/cli?topic=cli-ibmcloud_env_var).
