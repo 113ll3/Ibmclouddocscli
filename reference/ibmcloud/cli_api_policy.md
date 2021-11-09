@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-11-08"
+lastupdated: "2021-11-09"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli
 
@@ -1928,7 +1928,7 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
 :   ID of the resource group. `*` means all resource groups. This option is exclusive with the `--file` and `--resource-group-name` option.
 
 -tags
-:   Access tags of the resource. Use tags to organize, track usage costs, or manage access to your resources. For more information on tags, see [Working with tags](/docs/account?topic=account-tag).
+:   Access tags of the resource. Use tags to organize, track usage costs, or manage access to your resources. For more information on tags, see [Working with tags](/docs/account?topic=account-tag&interface=cli).
 
 --account-management
 :   Give access to all account management services.
