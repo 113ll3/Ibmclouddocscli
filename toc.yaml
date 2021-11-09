@@ -24,7 +24,6 @@ toc:
       - install-devtools-manually.md
       - cli-private-endpoints.md
       - reference/ibmcloud/extend_cli.md
-      - reference/ibmcloud/env_var_cli.md
       - ibmcloud_home.md
       - reference/ibmcloud/enable_cli_autocompletion.md
       - quote-strings.md
@@ -133,6 +132,7 @@ toc:
           topics:
           - sdk/sdk_BMSClient.md
           - sdk/sdk_network_request.md
+      - reference/ibmcloud/env_var_cli.md
 
   - navgroup:
       id: help
