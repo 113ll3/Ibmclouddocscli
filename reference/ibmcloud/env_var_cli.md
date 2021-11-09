@@ -16,10 +16,10 @@ subcollection: cli
 {:note: .note}
 {:codeblock: .codeblock}
 
-# Customizing your {{site.data.keyword.cloud_notm}} CLI (ibmcloud) environment
+# {{site.data.keyword.cloud_notm}} CLI (ibmcloud) environment variables
 {: #ibmcloud_env_var}
 
-Use the {{site.data.keyword.cloud_notm}} CLI (ibmcloud) environment variables to customize your {{site.data.keyword.cloud}} CLI environment to suit your needs. For example, you can simplify API key-based login to have multiple different CLI sessions in parallel. 
+Use the {{site.data.keyword.cloud}} CLI (ibmcloud) environment variables to customize your {{site.data.keyword.cloud_notm}} CLI environment to suit your needs. For example, you can simplify API key-based login to have multiple different CLI sessions in parallel.
 {: shortdesc}
 
 ## Get help on the {{site.data.keyword.cloud_notm}} CLI (ibmcloud) environment variables
