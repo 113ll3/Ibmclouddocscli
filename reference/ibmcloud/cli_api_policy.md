@@ -1928,7 +1928,7 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
 :   ID of the resource group. `*` means all resource groups. This option is exclusive with the `--file` and `--resource-group-name` option.
 
 -tags
-:   Access tags of the resource. Use tags to organize, track usage costs, or manage access to your resources. For more information on tags, see [Working with tags](/docs/account?topic=topic=account-tag).
+:   Access tags of the resource. Use tags to organize, track usage costs, or manage access to your resources. For more information on tags, see [Working with tags](/docs/account?topic=account-tag).
 
 --account-management
 :   Give access to all account management services.
