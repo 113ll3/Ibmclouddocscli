@@ -75,4 +75,6 @@ Appends API request diagnostics to a log file. This variable prints many useful 
 ## IBMCLOUD_HOME=path/to/dir
 {: #IBMCLOUD_PATH_TO_DIR}
 
-Specifies the path to the configuration directory. The `ibmcloud` command reads and writes its session metadata to and from the specified path. Use the variable to work with multiple accounts or multiple sessions at the same time. 
+Specifies the path to the configuration directory. The `ibmcloud` command reads and writes its session metadata to and from the specified path. Use the variable to work with multiple accounts or multiple sessions at the same time.
+
+For more information about this environment variable, see [Working with multiple sessions with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-ibmcloud-home).
