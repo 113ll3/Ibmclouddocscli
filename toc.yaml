@@ -24,6 +24,7 @@ toc:
       - install-devtools-manually.md
       - cli-private-endpoints.md
       - reference/ibmcloud/extend_cli.md
+      - reference/ibmcloud/env_var_cli.md
       - ibmcloud_home.md
       - reference/ibmcloud/enable_cli_autocompletion.md
       - quote-strings.md
