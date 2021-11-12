@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-02"
+lastupdated: "2021-11-12"
 
 keywords: IBM Cloud CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, private endpoints, shell
 
@@ -89,7 +89,7 @@ Use the following steps to install the latest stand-alone {{site.data.keyword.cl
    - [System/390 Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.1.1/IBM_Cloud_CLI_2.1.1_s390x.tar.gz)
   
 3. Log in to {{site.data.keyword.cloud_notm}} by using the CLI:
-   ```
+   ```bash
    ibmcloud login
    ```
    {: codeblock}
