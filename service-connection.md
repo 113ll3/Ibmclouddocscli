@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-17"
+  years: 2020, 2021
+lastupdated: "2021-11-01"
 
 keywords: isolation for IBM Cloud CLI, service endpoints for IBM Cloud CLI, private network for IBM Cloud CLI, network isolation in IBM Cloud CLI, non-public routes for IBM Cloud CLI, private connection for IBM Cloud CLI, private endpoints, regions that support private endpoints, private service endpoints
 
@@ -27,7 +27,7 @@ To ensure that you have enhanced control and security over your data when you us
 
 The CLI leverages the private endpoint support that is provided by the {{site.data.keyword.cloud_notm}} platform. Platform services that are used by the core CLI, such as IAM, provide private endpoint support.
 
-Regional support is provided for a limited number of CLI commands. The following regions support private endpoints:
+If your deployment uses the VPC environment of {{site.data.keyword.cloud_notm}}, private endpoints are exposed through global endpoints. If your deployment uses the Classic environment, regional support is provided for a limited number of CLI commands. The following regions support private endpoints in Classic environments:
 * `us-south`
 * `us-east`
 
@@ -41,22 +41,33 @@ To learn more about private connections on {{site.data.keyword.cloud_notm}}, see
 ## Logging in to the CLI with a private endpoint
 {: #cli-private-login}
 
-Use the following command to [log in](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) to a private endpoint by using the CLI:
+You can log in to either a private endpoint for Classic or for VPC. To log in using Classic infrastructure, [log in](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) to a private endpoint by using the CLI as follows:
 
-```
+```text
 ibmcloud login -a private.cloud.ibm.com
 ```
 
-## Targeting a supported region
+To [log in](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) by using the VPC infrastructure, add the `--vpc` flag to the command as follows:
+
+```text
+ibmcloud login -a private.cloud.ibm.com --vpc
+```
+
+## Targeting a supported region (required for Classic use)
 {: #cli-private-region}
 
-A region must be targeted when a private endpoint is set in the {{site.data.keyword.cloud_notm}} CLI.
+To use private endpoints for deployments in the Classic environment, a region must be targeted when a private endpoint is set in the {{site.data.keyword.cloud_notm}} CLI.
 
-Use the following command to [target](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) a supported region:
+To [target](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) a supported region, use the following command:
 
-```
+```text
 ibmcloud target -r [region]
 ```
+
+## Configuring a private endpoint gateway (required for VPC use)
+{: #cli-private-vpc}
+
+To use private endpoints for deployments in the VPC environment, you must configure a virtual private endpoint gateway. For guidance for this step, see [About virtual private endpoint gateways](/docs/vpc?topic=vpc-about-vpe).
 
 ## Determining which CLI plug-ins support private endpoints
 {: #cli-private-plugins}
@@ -84,7 +95,7 @@ If the CLI is set to access private endpoints and you try to run a command or pl
 
 The following core commands do not yet support private endpoints:
 
-```
+```text
 resource
 	cf-service-instance-migrate
 	service-alias

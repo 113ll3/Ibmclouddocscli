@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-05"
+lastupdated: "2021-11-02"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -155,7 +155,10 @@ API_ENDPOINT
 :   The API endpoint that is targeted, for example, `https://cloud.ibm.com`. If both the `API_ENDPOINT` and `--unset` options aren't specified, the current API endpoint is displayed. Optional.
 
 --skip-ssl-validation
-:   Bypass SSL validation of HTTP requests. Optional.
+:   Bypass SSL validation of HTTP requests. This option isn't recommended.
+
+--vpc 
+:   Use a VPC connection for a private API endpoint.
 
 --unset
 :   Remove the API endpoint setting.
@@ -410,6 +413,9 @@ None.
 
 --skip-ssl-validation
 :   Bypass the SSL validation of HTTP requests. This option isn't recommended.
+
+--vpc
+:   Use a VPC connection for a private API endpoint.
 
 ### Examples
 {: #login-examples}

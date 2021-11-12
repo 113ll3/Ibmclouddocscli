@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-11-01"
+  years: 2021
+lastupdated: "2021-11-10"
 
 keywords: IBM Cloud CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, kubernetes, kubectl, git
 
@@ -21,24 +21,29 @@ subcollection: cli
 # Installing the tools and plug-ins manually
 {: #install-devtools-manually}
 
-You can manually install the {{site.data.keyword.cloud}} Command Line Interface and other recommended plug-ins and tools for developing applications for {{site.data.keyword.cloud_notm}}.
+You can manually install the {{site.data.keyword.cloud}} Command Line Interface and other plug-ins and tools for developing applications for {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 ## Before you begin
 {: #cli-before-you-begin}
 
-* Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#install-ibmcloud-cli) to get support for installing command-line plug-ins for {{site.data.keyword.cloud_notm}}.
+* Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#install-ibmcloud-cli) to get support for installing command line plug-ins for {{site.data.keyword.cloud_notm}}.
 * Install the [curl](https://curl.haxx.se/download.html){: external} command for downloading packages through the command line.
+
+## Installing the command line interface by using Homebrew
+{: #install-devtools-homebrew}
+
+You can also install the {{site.data.keyword.cloud_notm}} CLI by using Homebrew. For more information, see [Homebrew ibm-cloud-cli](https://formulae.brew.sh/cask/ibm-cloud-cli){: external}.
 
 ## Installing Docker
 {: #install-devtools-docker}
 
-For running and debugging apps locally, install [Docker](https://www.docker.com/get-started){: external}.
+To run and debug apps locally, install [Docker](https://www.docker.com/get-started){: external}.
 
-## Installing the Kubernetes command-line tool
+## Installing the Kubernetes command line tool
 {: #idt-install-kube}
 
-To view a local version of the Kubernetes dashboard, and to deploy apps into your clusters, install the [Kubernetes command-line tool](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} for your platform:
+To view a local version of the Kubernetes dashboard, and to deploy apps into your clusters, install the [Kubernetes command line tool](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} for your platform:
 
 * Mac:
    ```curl
@@ -58,11 +63,12 @@ To view a local version of the Kubernetes dashboard, and to deploy apps into you
    ```
    {: codeblock}
 
-The prefix for running commands by using the Kubernetes command-line tool is `kubectl`. For more information, see [Setting up the CLI and API](/docs/containers?topic=containers-cs_cli_install).
+The prefix for running commands by using the Kubernetes command line tool is `kubectl`. For more information, see [Setting up the CLI and API](/docs/containers?topic=containers-cs_cli_install).
 
 ## Installing {{site.data.keyword.cos_full_notm}} CLI plug-in
+{: #install-cos-cli-plugin}
 
-The {{site.data.keyword.cos_full_notm}} plug-in extends the {{site.data.keyword.cloud_notm}} command-line interface (CLI) with an API wrapper for working with Object Storage resources.
+The {{site.data.keyword.cos_full_notm}} plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with Object Storage resources.
 
 * To install the {{site.data.keyword.cos_full_notm}} plug-in, run the following command:
    ```text
@@ -140,4 +146,4 @@ For more information, see the [{{site.data.keyword.bplong_notm}} command referen
 ## Installing Git
 {: #idt-install-git}
 
-You can download and install Git for macOS, Linux, and Windows. For more information, see [Git downloads](https://git-scm.com/downloads){: external}.
+You can download and install Git. For more information, see [Git downloads](https://git-scm.com/downloads){: external}.
