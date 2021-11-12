@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-12"
 
 keywords: IBM Cloud CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, kubernetes, kubectl, git
 
@@ -29,11 +29,6 @@ You can manually install the {{site.data.keyword.cloud}} Command Line Interface 
 
 * Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#install-ibmcloud-cli) to get support for installing command line plug-ins for {{site.data.keyword.cloud_notm}}.
 * Install the [curl](https://curl.haxx.se/download.html){: external} command for downloading packages through the command line.
-
-## Installing the command line interface by using Homebrew
-{: #install-devtools-homebrew}
-
-You can also install the {{site.data.keyword.cloud_notm}} CLI by using Homebrew. For more information, see [Homebrew ibm-cloud-cli](https://formulae.brew.sh/cask/ibm-cloud-cli){: external}.
 
 ## Installing Docker
 {: #install-devtools-docker}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-10-05"
+  years: 2021
+lastupdated: "2021-11-12"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -43,7 +43,7 @@ Use the following steps to install the latest stand-alone {{site.data.keyword.cl
    * For Linux&trade;, extract the package and run the `install` script.
 
 3. Log in to {{site.data.keyword.cloud_notm}}:
-   ```
+   ```bash
    ibmcloud login
    ```
    {: codeblock}
@@ -62,29 +62,34 @@ To install the latest CLI for your OS from the shell manually, use the following
    {: tip}
 
 * For **Mac**, copy and paste the following command to a terminal and run it:
-   ```
+   ```bash
    curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
    ```
    {: codeblock}
 
 * For **Linux&trade;**, copy and paste the following command to a terminal and run it:
-   ```
+   ```bash
    curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
    ```
    {: codeblock}
 
 * For **Windows&trade;**, copy and paste the following command to a [Windows&trade; PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: external} terminal console and run it:
-   ```
+   ```bash
    iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
    ```
    {: codeblock}
 
    If you encounter errors like `The underlying connection was closed: An unexpected error occurred on a send`, make sure you have .Net Framework 4.5 or later installed. Also try to enable TLS 1.2 protocol by running the following command:
   
-   ```
+   ```bash
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    ```
    {: codeblock}
+
+## Installing the command line interface by using Homebrew
+{: #install-devtools-homebrew}
+
+You can also install the {{site.data.keyword.cloud_notm}} CLI by using Homebrew. For more information, see [Homebrew ibm-cloud-cli](https://formulae.brew.sh/cask/ibm-cloud-cli){: external}.
 
 ## Installing to a custom directory
 {: #install-custom-dir}
@@ -101,7 +106,7 @@ If you install the {{site.data.keyword.cloud_notm}} CLI to a custom directory, t
    You can see the following extracted content:
 
    For Linux&trade; and Mac:
-   ```
+   ```bash
    IBM_Cloud_CLI
    ├── LICENSE
    ├── NOTICE
@@ -114,7 +119,7 @@ If you install the {{site.data.keyword.cloud_notm}} CLI to a custom directory, t
    {: screen}
 
    For Windows&trade;:
-   ```
+   ```bash
    IBM_Cloud_CLI
    ├── LICENSE
    ├── NOTICE
@@ -132,19 +137,19 @@ If you install the {{site.data.keyword.cloud_notm}} CLI to a custom directory, t
 
 You must use the latest version of the CLI. If you aren't using the latest version, run the following command to update your CLI:
 
-```
+```bash
 ibmcloud update
 ```
 {: codeblock}
 
 To determine your {{site.data.keyword.cloud_notm}} CLI version, run the following command:
-```
+```bash
 ibmcloud -v
 ```
 {: codeblock}
 
 If you are running the current release, the following output is displayed:
-```
+```bash
 Checking for updates...
 No update required. Your CLI is already up-to-date.
 ```
