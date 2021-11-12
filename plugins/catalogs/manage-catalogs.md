@@ -270,7 +270,7 @@ ibmcloud catalog filter get --catalog CATALOG [--output FORMAT]
 
 The command returns the following output:
 
-```
+```text
 Account: The IBM Cloud catalog is visible to all users in this account.
 
 Filter:
@@ -1109,3 +1109,277 @@ ibmcloud catalog offering restore --version-locator VERSION_NUMBER
 --version-locator VERSION_NUMBER
 
 :   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
+
+<!-- These commands below are internal and will NOT go public -->
+
+## ibmcloud catalog object create vpe
+{: #create-object}
+
+Run the following command to add an object to a private catalog in the account.
+
+```bash
+ibmcloud catalog object create vpe [--catalog CATALOG] [--crn CRN] [endpoint-type TYPE] [--fqdn FQDN] [--name NAME] [--region REGION]
+```
+{: codeblock}
+
+## Command options
+{: #create-object-options}
+
+--catalog CATALOG
+
+:   Specify the catalog name or ID.
+
+--crn CRN
+
+:   Provide the Cloud Resource Name (CRN).
+
+--endpoint-type TYPE
+
+:   Specify the VPE endpoint type.
+
+--fqdn FQDN
+
+:   Provide a comma-separated list of fully qualified domain names.
+
+--name NAME
+
+:   Specify the name of the object.
+
+--region REGION
+
+:   Specify the region for the VPE endpoint.
+
+## ibmcloud catalog object delete
+{: #delete-object}
+
+Run the following command to delete the object. 
+
+```bash
+ibmcloud catalog object delete [--catalog CATALOG] [--name NAME]
+```
+{: codeblock}
+
+### Command options
+{: #delete-object-options}
+
+--catalog CATALOG
+
+:   Specify the catalog name or ID.
+
+--name NAME
+
+:   Provide the name of the object.
+
+## ibmcloud catalog object update vpe
+{: #update-object}
+
+Run the following command to update the object. 
+
+```bash
+ibmcloud catalog object update vpe [--catalog CATALOG] [--name NAME] [--crn CRN] [--endpoint-type TYPE] [--fqdn FQDN] [--region REGION]
+```
+{: codeblock}
+
+### Command options
+{: #update-object-options}
+
+--catalog CATALOG
+
+:   Specify the catalog name or ID.
+
+--name NAME
+
+:   Specify the name of the object.
+
+--crn CRN (optional)
+
+:   Provide the Cloud Resource Name (CRN).
+
+--endpoint-type TYPE (optional)
+
+:   Specify the VPE endpoint type.
+
+--fqdn FQDN (optional)
+
+:   Provide a comma-separated list of fully qualified domain names.
+
+--region REGION (optional)
+
+:   Specify the region for the VPE endpoint.
+
+
+## ibmcloud catalog object get
+{: #get-object}
+
+Run the following command to retrieve information for a particular object.
+
+```bash
+ibmcloud catalog object get [--catalog CATALOG] [--name NAME] [--output OUTPUT] 
+```
+{: codeblock}
+
+### Command options
+{: #get-object-options}
+
+--catalog CATALOG
+
+:   Specify the catalog name or ID.
+
+--name NAME
+
+:   Provide the name of the object.
+
+--output OUTPUT (optional)
+
+: Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example, `--output json`
+
+## ibmcloud catalog object list
+{: #list-object}
+
+Run the following command to retrieve a list of objects in a catalog.
+
+```bash
+ibmcloud catalog object list [--catalog CATALOG] [--output OUTPUT]
+```
+{: codeblock}
+
+### Command options
+{: #list-object-options}
+
+--catalog CATALOG
+
+:   Specify the catalog name or ID.
+
+--output OUTPUT (optional)
+
+:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example, `--output json`
+
+## ibmcloud catalog object search
+{: #search-object}
+
+Run the following command to search objects by using Lucene query syntax.
+
+```bash
+ibmcloud catalog object search [--query QUERY] [--output OUTPUT]
+```
+{: codeblock}
+
+### Command options
+{: #search-object-options}
+
+--query QUERY
+
+:   Provide the Lucene query string.
+
+--output OUTPUT (optional)
+
+:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example,: `--output json`
+
+## ibmcloud catalog object publish 
+{: #publish-object}
+
+Run the following command to publish the object to an access list, your account, IBM employees, or {{site.data.keyword.cloud_notm}} catalog for all users to see and use.
+
+```bash
+ibmcloud catalog object publish COMMAND [--catalog CATALOG] [--name NAME]
+```
+{: codeblock}
+
+### Command options
+{: #publish-object-options}
+
+Command
+
+:   Specify where you want to publish the object. Valid values are `accesslist`, `account`, `ibm`, or `public`. 
+
+--catalog CATALOG
+
+:   Specify the catalog name or ID.
+
+--name NAME
+
+:   Provide the name of the object.
+
+### Example
+{: #publish-object-example}
+
+Publish an object called `dev-object` that's in the catalog `dev-catalog` to IBM employees.
+```bash
+ibmcloud catalog object publish ibm --catalog dev-catalog --name dev-object
+```
+{: codeblock} 
+
+## ibmcloud catalog object access-list add
+{: #add-accesslist-object}
+
+Run the following command to add account IDs to an object's access list. 
+
+```bash
+ibmcloud catalog object access-list add [--account-id ID] [--catalog CATALOG] [--name NAME]
+```
+{: codeblock}
+
+### Command options
+{: #add-accesslist-object-options}
+
+--account-id ID  
+
+:   Provide a comma-separated list of account IDs.
+
+--catalog CATALOG
+
+:   Specify the catalog name or ID.
+
+--name NAME
+
+:   Specify the name of object.
+
+## ibmcloud catalog object access-list get
+{: #get-accesslist-object}
+
+Run the following command to retrieve information for a particular access list for an object.
+
+```bash
+ibmcloud catalog object access-list get [--catalog CATALOG] [--name NAME] [--output OUTPUT]
+```
+{: codeblock}
+
+### Command options
+{: #get-accesslist-object-options}
+
+--catalog CATALOG
+
+:   Specify the catalog name or ID.
+
+--name NAME               
+
+:   Specify the name of object.
+
+--output OUTPUT (optional)
+
+:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example,: `--output json`
+
+## ibmcloud catalog object access-list rm
+{: #remove-object-accesslist}
+
+Run the following command to remove account IDs from the object's access list. 
+
+```bash
+ibmcloud catalog object access-list rm [--account-id ID] [--catalog CATALOG] [--name NAME]
+```
+{: codeblock}
+
+### Command options
+{: #remove-object-accesslist-options}
+
+--account-id ID  
+
+:   Provide a comma-separated list of account IDs.
+
+--catalog CATALOG
+
+:   Specify the catalog name or ID.
+
+--name NAME
+
+:   Specify the name of object.
