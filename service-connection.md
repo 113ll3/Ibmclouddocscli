@@ -67,7 +67,15 @@ ibmcloud target -r [region]
 ## Configuring a private endpoint gateway (required for VPC use)
 {: #cli-private-vpc}
 
-To use private endpoints for deployments in the VPC environment, you must configure a virtual private endpoint gateway. For guidance for this step, see [About virtual private endpoint gateways](/docs/vpc?topic=vpc-about-vpe).
+To use private endpoints for deployments in the VPC environment, you must configure a virtual private endpoint gateway. For guidance for this step, see [About virtual private endpoint gateways](/docs/vpc?topic=vpc-about-vpe). A list of all IBM Cloud services configurable through a virtual private endpoint gateway is at [VPE Supported Services](/docs/vpc?topic=vpc-vpe-supported-services). To ensure basic CLI capability against the private endpoint, you will need to configure the gateway to include these services:
+* Global Catalog ([Endpoint URLs](https://{DomainName}/apidocs/resource-catalog/global-catalog#endpoint-url))
+* Global Search ([Endpoint URLs](https://{DomainName}/apidocs/search#endpoint-url))
+* Global Tagging ([Endpoint URLs](https://{DomainName}/apidocs/tagging#endpoint-url))
+* Usage Metering ([Endpoint URLs](https://{DomainName}/apidocs/usage-metering#endpoint))
+* Enterprise Management ([Endpoint URLs](https://{DomainName}/apidocs/enterprise-apis/enterprise#endpoint-urls))
+* Resource Controller ([Endpoint URLs](https://{DomainName}/apidocs/resource-controller/resource-controller#endpoint-urls))
+* User Management ([Endpoint URLs](https://{DomainName}/apidocs/user-management#endpoint-urls))
+
 
 ## Determining which CLI plug-ins support private endpoints
 {: #cli-private-plugins}
