@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-13"
 
 keywords: isolation for IBM Cloud CLI, service endpoints for IBM Cloud CLI, private network for IBM Cloud CLI, network isolation in IBM Cloud CLI, non-public routes for IBM Cloud CLI, private connection for IBM Cloud CLI, private endpoints, regions that support private endpoints, private service endpoints
 
@@ -25,7 +25,7 @@ subcollection: cli
 To ensure that you have enhanced control and security over your data when you use the {{site.data.keyword.cloud}} Command Line Interface, you have the option of using private routes to {{site.data.keyword.cloud_notm}} endpoints. Private routes are not accessible or reachable over the internet. By using the {{site.data.keyword.cloud_notm}} private endpoints feature, you can protect your data from threats from the public network and logically extend your private network.
 {: shortdesc}
 
-The CLI leverages the private endpoint support that is provided by the {{site.data.keyword.cloud_notm}} platform. Platform services that are used by the core CLI, such as IAM, provide private endpoint support.
+The CLI uses the private endpoint support that is provided by the {{site.data.keyword.cloud_notm}} platform. Platform services that are used by the core CLI, such as IAM, provide private endpoint support.
 
 If your deployment uses the VPC environment of {{site.data.keyword.cloud_notm}}, private endpoints are exposed through global endpoints. If your deployment uses the Classic environment, regional support is provided for a limited number of CLI commands. The following regions support private endpoints in Classic environments:
 * `us-south`
@@ -41,13 +41,13 @@ To learn more about private connections on {{site.data.keyword.cloud_notm}}, see
 ## Logging in to the CLI with a private endpoint
 {: #cli-private-login}
 
-You can log in to either a private endpoint for Classic or for VPC. To log in using Classic infrastructure, [log in](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) to a private endpoint by using the CLI as follows:
+You can log in to either a private endpoint for Classic or for VPC. To log in using Classic infrastructure, [log in](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) to a private endpoint by using the CLI by using the following command:
 
 ```text
 ibmcloud login -a private.cloud.ibm.com
 ```
 
-To [log in](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) by using the VPC infrastructure, add the `--vpc` flag to the command as follows:
+To [log in](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) by using the VPC infrastructure, add the `--vpc` flag to the command:
 
 ```text
 ibmcloud login -a private.cloud.ibm.com --vpc
@@ -67,7 +67,11 @@ ibmcloud target -r [region]
 ## Configuring a private endpoint gateway (required for VPC use)
 {: #cli-private-vpc}
 
-To use private endpoints for deployments in the VPC environment, you must configure a virtual private endpoint gateway. For guidance for this step, see [About virtual private endpoint gateways](/docs/vpc?topic=vpc-about-vpe). A list of all IBM Cloud services configurable through a virtual private endpoint gateway is at [VPE Supported Services](/docs/vpc?topic=vpc-vpe-supported-services). To ensure basic CLI capability against the private endpoint, you will need to configure the gateway to include these services:
+To use private endpoints for deployments in the VPC environment, you must configure a virtual private endpoint gateway. For more information, see [About virtual private endpoint gateways](/docs/vpc?topic=vpc-about-vpe).
+
+A list of all {{site.data.keyword.cloud_notm}} services that are configurable through a virtual private endpoint gateway is at [VPE Supported Services](/docs/vpc?topic=vpc-vpe-supported-services).
+
+To ensure basic CLI capability against the private endpoint, you must configure the gateway to include these services:
 * Global Catalog ([Endpoint URLs](https://{DomainName}/apidocs/resource-catalog/global-catalog#endpoint-url))
 * Global Search ([Endpoint URLs](https://{DomainName}/apidocs/search#endpoint-url))
 * Global Tagging ([Endpoint URLs](https://{DomainName}/apidocs/tagging#endpoint-url))
@@ -75,7 +79,6 @@ To use private endpoints for deployments in the VPC environment, you must config
 * Enterprise Management ([Endpoint URLs](https://{DomainName}/apidocs/enterprise-apis/enterprise#endpoint-urls))
 * Resource Controller ([Endpoint URLs](https://{DomainName}/apidocs/resource-controller/resource-controller#endpoint-urls))
 * User Management ([Endpoint URLs](https://{DomainName}/apidocs/user-management#endpoint-urls))
-
 
 ## Determining which CLI plug-ins support private endpoints
 {: #cli-private-plugins}
