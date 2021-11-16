@@ -79,7 +79,7 @@ Use the following steps to install the latest stand-alone {{site.data.keyword.cl
    * For Mac and Windows&trade;, run the installer.
    * For Linux&trade;, extract the package and run the `install` script.
 
-   **Installers**
+   **Installers:**
    - [Mac OS X 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.2.0/IBM_Cloud_CLI_2.2.0.pkg)
    - [Windows&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.2.0/IBM_Cloud_CLI_2.2.0_amd64.exe)
    - [Windows&trade; 32-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.2.0/IBM_Cloud_CLI_2.2.0_386.exe)
