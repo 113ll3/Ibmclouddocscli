@@ -72,13 +72,14 @@ To use private endpoints for deployments in the VPC environment, you must config
 A list of all {{site.data.keyword.cloud_notm}} services that are configurable through a virtual private endpoint gateway is at [VPE Supported Services](/docs/vpc?topic=vpc-vpe-supported-services).
 
 To ensure basic CLI capability against the private endpoint, you must configure the gateway to include these services:
-* Global Catalog ([Endpoint URLs](https://{DomainName}/apidocs/resource-catalog/global-catalog#endpoint-url))
-* Global Search ([Endpoint URLs](https://{DomainName}/apidocs/search#endpoint-url))
-* Global Tagging ([Endpoint URLs](https://{DomainName}/apidocs/tagging#endpoint-url))
-* Usage Metering ([Endpoint URLs](https://{DomainName}/apidocs/usage-metering#endpoint))
-* Enterprise Management ([Endpoint URLs](https://{DomainName}/apidocs/enterprise-apis/enterprise#endpoint-urls))
-* Resource Controller ([Endpoint URLs](https://{DomainName}/apidocs/resource-controller/resource-controller#endpoint-urls))
-* User Management ([Endpoint URLs](https://{DomainName}/apidocs/user-management#endpoint-urls))
+* Account Management: (Endpoint URL https://private.accounts.cloud.ibm.com)
+* Global Catalog ([Endpoint URL](https://{DomainName}/apidocs/resource-catalog/global-catalog#endpoint-url))
+* Global Search ([Endpoint URL](https://{DomainName}/apidocs/search#endpoint-url))
+* Global Tagging ([Endpoint URL](https://{DomainName}/apidocs/tagging#endpoint-url))
+* Usage Metering ([Endpoint URL](https://{DomainName}/apidocs/usage-metering#endpoint))
+* Enterprise Management ([Endpoint URL](https://{DomainName}/apidocs/enterprise-apis/enterprise#endpoint-urls))
+* Resource Controller ([Endpoint URL](https://{DomainName}/apidocs/resource-controller/resource-controller#endpoint-urls))
+* User Management ([Endpoint URL](https://{DomainName}/apidocs/user-management#endpoint-urls))
 
 ## Determining which CLI plug-ins support private endpoints
 {: #cli-private-plugins}
