@@ -34,7 +34,7 @@ FAQs for the {{site.data.keyword.cloud}} Command Line Interface include question
 
 Yes, you must use the latest version. You can check which version you are using by running the following command:
 
-```
+```bash
 ibmcloud -v
 ```
 {: codeblock}
@@ -46,7 +46,7 @@ ibmcloud -v
 
 Run the following command to update to the latest version of the CLI:
 
-```
+```bash
 ibmcloud update
 ```
 {: codeblock}
