@@ -31,7 +31,7 @@ Cancel a hardware server:
 ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-i, --immediate</dt>
 <dd>Cancels the server immediately (instead of on the billing anniversary).</dd>
@@ -59,7 +59,7 @@ Order/create a hardware server:
 ibmcloud sl hardware create [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-H, --hostname</dt>
 <dd>Required. Host portion of the FQDN.</dd>
@@ -117,7 +117,7 @@ Get details for a hardware server:
 ibmcloud sl hardware detail IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-p, --passwords</dt>
 <dd>Show passwords (check over your shoulder!).</dd>
@@ -133,7 +133,7 @@ Edit hardware server details:
 ibmcloud sl hardware edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-H, --hostname</dt>
 <dd>Host portion of the FQDN.</dd>
@@ -159,7 +159,7 @@ List hardware servers:
 ibmcloud sl hardware list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-c, --cpu</dt>
 <dd>Filter by number of CPU cores.</dd>
@@ -197,7 +197,7 @@ Power cycle a server:
 ibmcloud sl hardware power-cycle IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -211,7 +211,7 @@ Power off an active server:
 ibmcloud sl hardware power-off IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -233,7 +233,7 @@ Reboot an active server:
 ibmcloud sl hardware reboot IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--hard</dt>
 <dd>Perform a hard reboot.</dd>
@@ -251,7 +251,7 @@ Reload operating system on a server:
 ibmcloud sl hardware reload IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-i, --postinstall</dt>
 <dd>Post-install script to download, only HTTPS executes, HTTP leaves file in /root.</dd>
@@ -273,7 +273,7 @@ Reboot server into a rescue image:
 ibmcloud sl hardware rescue IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -287,7 +287,7 @@ Toggle the IPMI interface on and off. This command is asynchronous.
 ibmcloud sl hardware toggle-ipmi IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--enable</dt>
 <dd>Enable the IPMI interface.</dd>
@@ -305,7 +305,7 @@ Update server firmware:
 ibmcloud sl hardware update-firmware IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>

@@ -33,7 +33,7 @@ Add a new SSH key:
 ibmcloud sl security sshkey-add LABEL [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --in-file</dt>
 <dd>The id_rsa.pub file to import for this key.</dd>
@@ -59,7 +59,7 @@ Edit an SSH key:
 ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--label</dt>
 <dd>The new label for the key.</dd>
@@ -83,7 +83,7 @@ List SSH keys on your account:
 ibmcloud sl security sshkey-list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--sortby</dt>
 <dd>Column to sort by. Options are: id,label,fingerprint,note.</dd>
@@ -105,7 +105,7 @@ Prints out an SSH key to the screen:
 ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --out-file</dt>
 <dd>The public SSH key is written to this file.</dd>
@@ -127,7 +127,7 @@ Permanently removes an SSH key:
 ibmcloud sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -149,7 +149,7 @@ Add and upload SSL certificate details:
 ibmcloud sl security cert-add [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--crt</dt>
 <dd>Certificate file.</dd>
@@ -179,7 +179,7 @@ Edit SSL certificate:
 ibmcloud sl security cert-edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--crt</dt>
 <dd>Certificate file.</dd>
@@ -225,7 +225,7 @@ List SSL certificates on your account:
 ibmcloud sl security cert-list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--status</dt>
 <dd>Show certificates with this status, default is: all, options are: all,valid,expired.</dd>
@@ -249,7 +249,7 @@ Remove SSL certificate:
 ibmcloud sl security cert-remove IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>

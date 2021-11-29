@@ -61,7 +61,7 @@ Edit the details of an image:
 ibmcloud sl image edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--name</dt>
 <dd>Name of the image.</dd>
@@ -87,7 +87,7 @@ List all images on your account:
 ibmcloud sl image list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--name</dt>
 <dd>Filter on image name.</dd>

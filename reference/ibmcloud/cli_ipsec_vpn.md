@@ -30,7 +30,7 @@ Cancel a IPSec VPN tunnel context:
 ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--immediate</dt>
 <dd>Cancel the IPSec immediately instead of on the billing anniversary.</dd>
@@ -56,7 +56,7 @@ List IPSec VPN tunnel context details:
 ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-i, --include</dt>
 <dd>Include extra resources. Options are: at,is,rs,sr,ss.</dd>
@@ -70,7 +70,7 @@ List IPSec VPN tunnel contexts:
 ibmcloud sl ipsec list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--order</dt>
 <dd>Filter by ID of the order that purchased the IPSec.</dd>
@@ -84,7 +84,7 @@ Order a IPSec VPN tunnel:
 ibmcloud sl ipsec order [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-d, --datacenter</dt>
 <dd>Required. Short name of the datacenter for the IPSec. For example, `dal09`.</dd>
@@ -98,7 +98,7 @@ Add a subnet to an IPSec tunnel context:
 ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-s, --subnet-id</dt>
 <dd>Subnet identifier to add, required.</dd>
@@ -124,7 +124,7 @@ Add an address translation to an IPSec tunnel:
 ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-s, --static-ip</dt>
 <dd>Required. Static IP address.</dd>
@@ -150,7 +150,7 @@ Update an address translation for an IPSec:
 ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-s, --static-ip</dt>
 <dd>Required. Static IP address.</dd>
@@ -168,7 +168,7 @@ Update tunnel context properties:
 ibmcloud sl ipsec update CONTEXT_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-n, --name</dt>
 <dd>Friendly name.</dd>

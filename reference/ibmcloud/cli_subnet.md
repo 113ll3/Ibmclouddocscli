@@ -25,18 +25,18 @@ A subnet is a logical partition of an IP network into multiple, smaller network 
 {: #sl_subnet_cancel}
 
 Cancel a subnet:
-```
+```bash
 ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
 
 **Examples**:
-```
+```bash
 ibmcloud sl subnet cancel 12345678 -f
 ```
 {: codeblock}
@@ -47,11 +47,12 @@ This command cancels subnet with ID `12345678` without asking for confirmation.
 {: #sl_subnet_create}
 
 Add a new subnet to your account:
-```
+```bash
 ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
+
 <dl>
 <dt>--v6, --ipv6</dt>
 <dd>Order IPv6 Addresses.</dd>

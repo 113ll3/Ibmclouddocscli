@@ -25,11 +25,11 @@ Use the following command from the {{site.data.keyword.cloud}} Command Line Inte
 {: #sl_call_api}
 
 Call arbitrary API endpoints:
-```
+```bash
 ibmcloud sl call-api SERVICE METHOD [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--init</dt>
 <dd>Init parameter.</dd>
@@ -46,7 +46,7 @@ ibmcloud sl call-api SERVICE METHOD [OPTIONS]
 </dl>
 
 **Examples**:
-```
+```bash
 ibmcloud sl call-api SoftLayer_Network_Storage editObject --init 57328245 --parameters '[{"notes":"Testing."}]'
 ```
 {: codeblock}

@@ -31,7 +31,7 @@ Cancel virtual server instance:
 ibmcloud sl vs cancel IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -53,7 +53,7 @@ Capture virtual server instance into an image:
 ibmcloud sl vs capture IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-n, --name</dt>
 <dd>Required. Name of the image.</dd>
@@ -79,7 +79,7 @@ Create virtual server instance:
 ibmcloud sl vs create [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-H, --hostname</dt>
 <dd>Required. Host portion of the FQDN.</dd>
@@ -185,7 +185,7 @@ Get details for a virtual server instance:
 ibmcloud sl vs detail IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--passwords</dt>
 <dd>Show passwords (check over your shoulder!).</dd>
@@ -209,7 +209,7 @@ Synchronize DNS records for a virtual server instance:
 ibmcloud sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-a, --a-record</dt>
 <dd>Sync the A record for the host.</dd>
@@ -239,7 +239,7 @@ Edit a virtual server instance's details:
 ibmcloud sl vs edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-D, --domain</dt>
 <dd>Domain portion of the FQDN.</dd>
@@ -273,7 +273,7 @@ Create a host for dedicated virtual servers:
 ibmcloud sl vs host-create [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-H, --hostname</dt>
 <dd>Required. Host portion of the FQDN.</dd>
@@ -299,7 +299,7 @@ List dedicated hosts on your account:
 ibmcloud sl vs host-list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-n, --name</dt>
 <dd>Filter by name of the dedicated host.</dd>
@@ -319,7 +319,7 @@ List virtual server instances on your account:
 ibmcloud sl vs list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-c, --cpu</dt>
 <dd>Filter by number of CPU cores.</dd>
@@ -385,7 +385,7 @@ Pause an active virtual server instance:
 ibmcloud sl vs pause IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -407,7 +407,7 @@ Power off an active virtual server instance:
 ibmcloud sl vs power-off IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--hard</dt>
 <dd>Perform a hard shutdown.</dd>
@@ -433,7 +433,7 @@ Power on a virtual server instance:
 ibmcloud sl vs power-on IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -455,7 +455,7 @@ Check whether a virtual server instance is ready for use:
 ibmcloud sl vs ready IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--wait</dt>
 <dd>Wait until the virtual server is finished provisioning for up to X seconds.</dd>
@@ -477,7 +477,7 @@ Reboot an active virtual server instance:
 ibmcloud sl vs reboot IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--hard</dt>
 <dd>Perform a hard reboot.</dd>
@@ -503,7 +503,7 @@ Reload operating system on a virtual server instance:
 ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-i, --postinstall</dt>
 <dd>Post-install script to download.</dd>
@@ -533,7 +533,7 @@ Reboot a virtual server instance into a rescue image:
 ibmcloud sl vs rescue IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -555,7 +555,7 @@ Resume a paused virtual server instance:
 ibmcloud sl vs resume IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -577,7 +577,7 @@ Upgrade a virtual server instance:
 ibmcloud sl vs upgrade IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-c, --cpu</dt>
 <dd>Number of CPU cores.</dd>

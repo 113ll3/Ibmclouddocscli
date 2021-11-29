@@ -47,7 +47,7 @@ Cancel a global IP:
 ibmcloud sl globalip cancel IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -69,7 +69,7 @@ Create a global IP:
 ibmcloud sl globalip create [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--v6</dt>
 <dd>Order an IPv6 IP address.</dd>
@@ -95,7 +95,7 @@ List all global IPs on your account:
 ibmcloud sl globalip list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--v4</dt>
 <dd>Display IPv4 IPs only.</dd>

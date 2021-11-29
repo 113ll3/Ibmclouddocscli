@@ -31,7 +31,7 @@ Authorize hosts to access a volume:
 ibmcloud sl file access-authorize VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-d, --hardware-id</dt>
 <dd>The ID of one hardware server to authorize.</dd>
@@ -61,7 +61,7 @@ List hosts that are authorized to access the volume:
 ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--sortby</dt>
 <dd>Column to sort by. Options are: id,name,type,private_ip_address,source_subnet,host_iqn,username,password,allowed_host_id.</dd>
@@ -85,7 +85,7 @@ Revoke authorization for hosts that access a specific volume:
 ibmcloud sl file access-revoke VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-d, --hardware-id</dt>
 <dd>The ID of one hardware server to revoke.</dd>
@@ -163,7 +163,7 @@ Order a file storage replica volume:
 ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-s, --snapshot-schedule</dt>
 <dd>Required. Snapshot schedule to use for replication. Options are: HOURLY,DAILY,WEEKLY.</dd>
@@ -209,7 +209,7 @@ Cancel existing snapshot space for a given volume:
 ibmcloud sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--reason</dt>
 <dd>An optional reason for cancellation.</dd>
@@ -235,7 +235,7 @@ Create a snapshot on a given volume:
 ibmcloud sl file snapshot-create VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-n, --note</dt>
 <dd>Notes to set on the new snapshot.</dd>
@@ -257,7 +257,7 @@ Disable snapshots on the specified schedule for a given volume:
 ibmcloud sl file snapshot-disable VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-s, --schedule-type</dt>
 <dd>Required. Snapshot schedule , options are: HOURLY,DAILY,WEEKLY.</dd>
@@ -279,7 +279,7 @@ Enable snapshots for a given volume on the specified schedule:
 ibmcloud sl file snapshot-enable VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-s, --schedule-type</dt>
 <dd>Required. Snapshot schedule, options are: HOURLY,DAILY,WEEKLY.</dd>
@@ -325,7 +325,7 @@ List file storage snapshots:
 ibmcloud sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--sortby</dt>
 <dd>Column to sort by. Options are: id,name,created,size_bytes.</dd>
@@ -347,7 +347,7 @@ Order snapshot space for a file storage volume:
 ibmcloud sl file snapshot-order VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-s, --size</dt>
 <dd>Required. Size of snapshot space to create in GB  .</dd>
@@ -409,7 +409,7 @@ Cancel an existing file storage volume:
 ibmcloud sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--reason</dt>
 <dd>An optional reason for cancellation.</dd>
@@ -435,7 +435,7 @@ List number of file storage volumes per datacenter:
 ibmcloud sl file volume-count [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-d, --datacenter</dt>
 <dd>Filter by datacenter shortname.</dd>
@@ -465,7 +465,7 @@ List file storage:
 ibmcloud sl file volume-list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-u, --username</dt>
 <dd>Filter by volume username.</dd>
@@ -529,7 +529,7 @@ Order a file volume by duplicating an existing volume:
 ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-o, --origin-snapshot-id</dt>
 <dd>ID of an original volume snapshot to use for duplication.</dd>
@@ -563,7 +563,7 @@ Order a file storage volume:
 ibmcloud sl file volume-order [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-t, --storage-type</dt>
 <dd>Required. Type of storage volume, options are: performance, endurance.</dd>
@@ -599,7 +599,7 @@ Modify an existing file storage volume:
 ibmcloud sl file volume-modify VOLUME_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-c, --new-size</dt>
 <dd>New Size of file volume in GB. ***If no size is given, the original size of volume is used.*** Potential Sizes: [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] Minimum: [the original size of the volume]</dd>

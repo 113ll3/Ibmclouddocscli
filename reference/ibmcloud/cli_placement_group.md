@@ -29,7 +29,7 @@ Create a placement group:
 ibmcloud sl placement-group create (--name NAME) (-b, --backend-router-id BACKENDROUTER) (-r, --rule-id RULE)
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-n, --name</dt>
 <dd>Required. Name for this new placement group.</dd>
@@ -55,7 +55,7 @@ Delete a placement group:
 ibmcloud sl placement-group delete (--id PLACEMENTGROUP_ID) [-f, --force]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--id</dt>
 <dd>Required. ID for the placement group.</dd>
@@ -71,7 +71,7 @@ View details of a placement group:
 ibmcloud sl placement-group detail (--id PLACEMENTGROUP_ID)
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--id</dt>
 <dd>Required. ID for the placement group.</dd>

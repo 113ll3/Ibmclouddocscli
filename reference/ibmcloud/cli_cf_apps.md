@@ -10,7 +10,6 @@ subcollection: cli
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:codeblock: .codeblock}
@@ -125,22 +124,22 @@ This command has the same function and options as the [cf create-app-manifest](h
 {: #cf-list-domain-cert}
 
 List the certificate information of a domain.
-```
+```bash
 ibmcloud app domain-cert DOMAIN_NAME
 ```
 
-<strong>Command options</strong>:
+**Command options**:
+
 <dl>
 <dt>DOMAIN_NAME (required)</dt>
 <dd>The domain that hosts the certificate.</dd>
 </dl>
 
-
-<strong>Examples</strong>:
+**Examples:**
 
 View the certificate information of the domain `ibmcxo-eventconnect.com`:
 
-```
+```bash
 ibmcloud app domain-cert ibmcxo-eventconnect.com
 ```
 
@@ -149,11 +148,11 @@ ibmcloud app domain-cert ibmcxo-eventconnect.com
 
 Add a certificate to the specified domain in the current org.
 
-```
+```bash
 ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
    <dl>
    <dt>DOMAIN (required)</dt>
    <dd>The domain that the certificate is added to.</dd>
@@ -169,12 +168,11 @@ ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWOR
    <dd>The truststore file.</dd>
    </dl>
 
-
-<strong>Examples</strong>:
+**Examples:**
 
 Add a certificate to the domain `ibmcxo-eventconnect.com`:
 
-```
+```bash
 ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
 
@@ -183,11 +181,11 @@ ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_fil
 
 Remove a certificate from the specified domain in current org.
 
-```
+```bash
 ibmcloud app domain-cert-remove DOMAIN [-f]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 
    <dl>
    <dt>DOMAIN (required)</dt>
@@ -211,11 +209,11 @@ This command has the same function and options as the [cf check-route](http://cl
 
 Map a route to an existing cf application or container group that has the specified domain and host name.
 
-```
+```bash
 ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 
    <dl>
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (required)</dt>
@@ -226,16 +224,16 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
    <dd>The host name of the route. If not provided, the host name is set to the app name or container group name by default.</dd>
    </dl>
 
-<strong>Examples</strong>:
+**Examples:**
 
 Map a route to `my-app` with specified domain:
-```
+```bash
 ibmcloud app route-map my-app mybluemix.net
 ```
 {: codeblock}
 
 Map a route to 'my-container-group' with specified domain and host name:
-```
+```bash
 ibmcloud app route-map my-container-group bluemix.net -n abc
 ```
 {: codeblock}
@@ -247,11 +245,11 @@ The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another d
 {: #ibmcloud_app_route_unmap}
 
 Unmap the specified route from an existing cf application or container group.
-```
+```bash
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 
    <dl>
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (required)</dt>
@@ -262,16 +260,16 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
    <dd>The host name of the route. If not provided, the host name is set to app name or container group name by default.</dd>
    </dl>
 
-<strong>Examples</strong>:
+**Examples:**
 
 Unmap `my-app.mybluemix.net` from `my-app`:
-```
+```bash
 ibmcloud app route-unmap my-app mybluemix.net
 ```
 {: codeblock}
 
 Unmap `abc.bluexmix.net` from `my-container-group`:
-```
+```bash
 ibmcloud app route-unmap my-container-group bluemix.net -n abc
 ```
 {: codeblock}

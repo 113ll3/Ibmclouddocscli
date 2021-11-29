@@ -29,7 +29,7 @@ Attach devices to a ticket:
 ibmcloud sl ticket attach TICKETID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--hardware</dt>
 <dd>The identifier for hardware to attach.</dd>
@@ -51,7 +51,7 @@ Create a support ticket:
 ibmcloud sl ticket create [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--attachment</dt>
 <dd>Initial object ID number to attach to ticket.</dd>
@@ -83,7 +83,7 @@ Detach devices from a ticket:
 ibmcloud sl ticket detach TICKETID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--hardware</dt>
 <dd>The identifier for hardware to detach.</dd>
@@ -110,7 +110,7 @@ Get details for a ticket:
 ibmcloud sl ticket detail TICKETID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--count</dt>
 <dd>Number of updates.</dd>
@@ -135,7 +135,7 @@ List tickets:
 ibmcloud sl ticket list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--open</dt>
 <dd>Display only open tickets.</dd>
@@ -182,7 +182,7 @@ Adds an attachment to an existing ticket:
 ibmcloud sl ticket upload TICKETID FILEPATH
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--name</dt>
 <dd>The name of the attachment shown in the ticket.</dd>

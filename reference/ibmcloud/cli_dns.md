@@ -31,7 +31,7 @@ Import a zone based off a BIND zone file:
 ibmcloud sl dns import ZONEFILE [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--dry-run</dt>
 <dd>Don't actually create records.</dd>
@@ -53,7 +53,7 @@ Add resource record in a zone:
 ibmcloud sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--ttl</dt>
 <dd>TTL(Time-To-Live) in seconds, such as: 86400. The default is: 7200.</dd>
@@ -75,7 +75,7 @@ Update resource records in a zone:
 ibmcloud sl dns record-edit ZONE [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--by-record</dt>
 <dd>Edit by host record, such as www.</dd>
@@ -103,7 +103,7 @@ List all the resource records in a zone:
 ibmcloud sl dns record-list ZONE [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--data</dt>
 <dd>Filter by record data, such as an IP address.</dd>

@@ -30,7 +30,7 @@ Create a security group:
 ibmcloud sl securitygroup create [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-n, --name</dt>
 <dd>The name of the security group.</dd>
@@ -46,7 +46,7 @@ Delete the security group:
 ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -68,7 +68,7 @@ Edit details of a security group:
 ibmcloud sl securitygroup edit SECURITYGROUP_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-n, --name</dt>
 <dd>The name of the security group.</dd>
@@ -84,7 +84,7 @@ Attach an interface to a security group:
 ibmcloud sl securitygroup interface-add SECURITYGROUP_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-n, --network-component</dt>
 <dd>The network component ID to associate with the security group.</dd>
@@ -102,7 +102,7 @@ List interfaces associated with security group:
 ibmcloud sl securitygroup interface-list SECURITYGROUP_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--sortby</dt>
 <dd>Column to sort by. Options are: id,virtualServerId,hostname.</dd>
@@ -116,7 +116,7 @@ Detach an interface from a security group:
 ibmcloud sl securitygroup interface-remove SECURITYGROUP_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-n, --network-component</dt>
 <dd>The network component to remove from the security group.</dd>
@@ -134,7 +134,7 @@ List security groups:
 ibmcloud sl securitygroup list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--sortby</dt>
 <dd>Column to sort by. Options are: id,name,description,created.</dd>
@@ -148,7 +148,7 @@ Add a security group rule to a security group:
 ibmcloud sl securitygroup rule-add SECURITYGROUP_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-r, --remote-ip</dt>
 <dd>The remote IP/CIDR to enforce.</dd>
@@ -174,7 +174,7 @@ Edit a security group rule in a security group:
 ibmcloud sl securitygroup rule-edit SECURITYGROUP_ID RULE_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-r, --remote-ip</dt>
 <dd>The remote IP/CIDR to enforce.</dd>
@@ -200,7 +200,7 @@ List security group rules:
 ibmcloud sl securitygroup rule-list SECURITYGROUP_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--sortby</dt>
 <dd>Column to sort by. Options are: id,remoteIp,remoteGroupId,direction,ethertype,portRangeMin,portRangeMax,protocol.</dd>
@@ -214,7 +214,7 @@ Remove a rule from a security group:
 ibmcloud sl securitygroup rule-remove SECURITYGROUP_ID RULE_ID [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>

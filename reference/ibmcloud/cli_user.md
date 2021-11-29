@@ -29,7 +29,7 @@ Creates a user:
 ibmcloud sl user create USERNAME [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--email</dt>
 <dd>Email address for this user. Required for creation.</dd>
@@ -65,7 +65,7 @@ Sets a user's status to `CANCEL_PENDING`, which immediately disables the account
 ibmcloud sl user delete IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
@@ -88,7 +88,7 @@ View a user's details:
 ibmcloud sl user detail IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--keys</dt>
 <dd>Show the users API key.</dd>
@@ -113,7 +113,7 @@ Edit a user's details:
 ibmcloud sl user detail-edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--template</dt>
 <dd>A JSON string that describes https://softlayer.github.io/reference/datatypes/SoftLayer_User_Customer/.</dd>
@@ -135,7 +135,7 @@ To list users:
 ibmcloud sl user list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--column</dt>
 <dd>Column to display. options are: id,username,email,displayName,status,hardwareCount,virtualGuestCount. This option can be specified multiple times.</dd>
@@ -149,7 +149,7 @@ Enable or disable specific user permissions:
 ibmcloud sl user permission-edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
+**Command options**:
 <dl>
 <dt>--enable</dt>
 <dd>Enable or disable selected permissions. Accepted inputs are `true` and `false`. The default is `true`.</dd>
