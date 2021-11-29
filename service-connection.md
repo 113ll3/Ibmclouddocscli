@@ -72,7 +72,7 @@ To use private endpoints for deployments in the VPC environment, you must config
 A list of all {{site.data.keyword.cloud_notm}} services that are configurable through a virtual private endpoint gateway is at [VPE Supported Services](/docs/vpc?topic=vpc-vpe-supported-services).
 
 To ensure basic CLI capability against the private endpoint, you must configure the gateway to include these services:
-* Account Management: ([Endpoint URL](https://private.accounts.cloud.ibm.com))
+* Account Management: Endpoint URL (https://private.accounts.cloud.ibm.com)
 * Global Catalog ([Endpoint URL](https://{DomainName}/apidocs/resource-catalog/global-catalog#endpoint-url))
 * Global Search ([Endpoint URL](https://{DomainName}/apidocs/search#endpoint-url))
 * Global Tagging ([Endpoint URL](https://{DomainName}/apidocs/tagging#endpoint-url))
