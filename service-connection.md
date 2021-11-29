@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-11-15"
+lastupdated: "2021-11-29"
 
 keywords: isolation for IBM Cloud CLI, service endpoints for IBM Cloud CLI, private network for IBM Cloud CLI, network isolation in IBM Cloud CLI, non-public routes for IBM Cloud CLI, private connection for IBM Cloud CLI, private endpoints, regions that support private endpoints, private service endpoints
 
@@ -72,7 +72,7 @@ To use private endpoints for deployments in the VPC environment, you must config
 A list of all {{site.data.keyword.cloud_notm}} services that are configurable through a virtual private endpoint gateway is at [VPE Supported Services](/docs/vpc?topic=vpc-vpe-supported-services).
 
 To ensure basic CLI capability against the private endpoint, you must configure the gateway to include these services:
-* Account Management: (Endpoint URL https://private.accounts.cloud.ibm.com)
+* Account Management: ([Endpoint URL](https://private.accounts.cloud.ibm.com))
 * Global Catalog ([Endpoint URL](https://{DomainName}/apidocs/resource-catalog/global-catalog#endpoint-url))
 * Global Search ([Endpoint URL](https://{DomainName}/apidocs/search#endpoint-url))
 * Global Tagging ([Endpoint URL](https://{DomainName}/apidocs/tagging#endpoint-url))
