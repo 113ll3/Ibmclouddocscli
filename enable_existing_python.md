@@ -27,7 +27,7 @@ You can generate the files that are needed to enable your Python application to 
 {: #enable-app-python}
 
 Enter the following command from the root directory of your Python project:
-```
+```bash
 ibmcloud dev enable
 ```
 {: codeblock}
@@ -37,7 +37,7 @@ ibmcloud dev enable
 * The `enable` command can also create services and bind them to your app. For this basic example, reply `n`.
 
 See the following sample output:
-```
+```text
 > ibmcloud dev enable
 The enable feature is currently in Beta.
 Please provide your experience and feedback at: https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/
@@ -112,13 +112,13 @@ into the current directory.
 {: #build-deploy-python}
 
 Next, build your app with the [`build`](/docs/cli?topic=cli-idt-cli#build) command:
-```
+```bash
 ibmcloud dev build
 ```
 {: codeblock}
 
 If the build completes successfully, you can deploy your app to {{site.data.keyword.cloud_notm}} with the following [`deploy`](/docs/cli?topic=cli-idt-cli#deploy) command:
-```
+```bash
 ibmcloud dev deploy
 ```
 {: codeblock}
@@ -127,7 +127,7 @@ ibmcloud dev deploy
 {: #build-failure-python}
 
 Not all apps are successfully enabled by the `enable` command. For example, the following error might occur when the project name differs from the directory name that contains the `wsgi.py` and `settings.py` files:
-```
+```text
 ImportError: No module named <projectname>.wsgi
 ```
 {: screen}
@@ -142,13 +142,13 @@ If your app does not build or deploy after you run `ibmcloud dev enable`, you ca
 To enable Python apps that use the Django framework, update the `CMD` line in the Dockerfile to the command that you normally use to run your project.
 
 For example, if the command that you use to run the project is:
-```
+```bash
 gunicorn -b 0.0.0.0:3000 --env DJANGO_SETTINGS_MODULE=<projectname>.settings.production <projectname>.wsgi
 ```
 {: codeblock}
 
 Update the `CMD` entry in your Dockerfile like so:
-```
+```bash
 CMD ["gunicorn", "-b", "0.0.0.0:3000", "--env", "DJANGO_SETTINGS_MODULE=<projectname>.settings.production", "<projectname>.wsgi"]
 ```
 {: codeblock}
