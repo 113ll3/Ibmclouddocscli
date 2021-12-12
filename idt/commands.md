@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2021
-lastupdated: "2021-09-27"
+lastupdated: "2021-12-10"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy
 
@@ -39,7 +39,7 @@ The `build-cmd-debug` configuration element is used to build the app for all use
 To build with multiple containers, your app must have a [Compose](https://docs.docker.com/compose/overview/){: external} file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one.
 
 Run the following command in your current app directory to begin building:  
-```
+```bash
 ibmcloud dev build [--debug]
 ```
 {: codeblock}
@@ -127,7 +127,7 @@ Command parameters that are entered on the command line take precedence over the
 Use the `code` command to download a previously created app with app template code and configuration files for the {{site.data.keyword.cloud_notm}}. You can use this command when you need to extract a second copy of an app.
 
 Run the following command to download the code from a specified app.
-```
+```bash
 ibmcloud dev code <appName>
 ```
 {: codeblock}
@@ -154,7 +154,7 @@ Use the `console` command to open a web browser to your app's web console on {{s
 You can provide an app name and the CLI skips matching based on the folder or app name. In this case, the CLI opens the named app's console in a web browser.  
 
 Run the following command to open a web browser to your app's web console.
-```
+```bash
 ibmcloud dev console [appName]
 ```
 {: codeblock}
@@ -165,7 +165,7 @@ ibmcloud dev console [appName]
 Create an app that prompts for all information, including resource group, app type, language, and starter kit. You are prompted to enter a name for your app, and you can select services to add to the app. You can also select DevOps toolchain options for automatic deployment, or you can select manual deployment. The app is created in the current directory. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
 
 To create an app in the current directory and to associate services with it, run the following command:
-```
+```bash
 ibmcloud dev create
 ```
 {: codeblock}
@@ -194,13 +194,13 @@ If you're using Windows&trade;, you must run Windows&trade; 10 Pro or later.
 You can debug your app through the `debug` command. A build must first be completed against the app by using the build command with the `--debug` argument. When you start the `debug` command, a container is started which provides a debug port or ports as defined by the `container-port-map-debug` value in the cli-config.yml or specified on the command line. Connect your favorite debugging tool to the port or ports, and you can debug your app as normal.
 
 First, compile your app:
-```
+```bash
 ibmcloud dev build --debug
 ```
 {: codeblock}
 
 To begin, run the following command in your current app directory to begin debugging:
-```
+```bash
 ibmcloud dev debug
 ```
 {: codeblock}
@@ -310,7 +310,7 @@ Command parameters that are entered on the command line take precedence over the
 Use the `delete` command to remove apps from your {{site.data.keyword.cloud_notm}} space. You can run the command without parameters to list available apps and select the app from the numbered list to delete. App code and directories aren't removed from your local disk space.
 
 Run the following command to delete your app from {{site.data.keyword.cloud_notm}}:
-```
+```bash
 ibmcloud dev delete [appName] [--force,-f]
 ```
 {: codeblock}
@@ -344,13 +344,13 @@ Command parameters that are entered on the command line take precedence over the
 You can deploy an app as a {{site.data.keyword.cloud_notm}} Foundry app or as a container.
 
 Run the following command in your current app directory to build your app:  
-```
+```bash
 ibmcloud dev build
 ```
 {: codeblock}
 
 Run the following command in your current app directory to deploy your app:
-```
+```bash
 ibmcloud dev deploy
 ```
 {: codeblock}
@@ -402,7 +402,7 @@ First, create or enable an app. You must have an OpenShift cluster. For more inf
 
 After those prerequisites are met, you can deploy the app by typing the following command from the app folder:
 
-```
+```bash
 ibmcloud dev deploy -t container
 ```
 {: codeblock}
@@ -489,7 +489,7 @@ Command parameters that are entered on the command line take precedence over the
 The `diag` command is used as a diagnostic to display the version information of installed dependencies for the {{site.data.keyword.dev_cli_notm}} commands. Running `diag` is helpful to determine whether you're missing any dependencies or to help in debugging problems.
 
 Run the following command to display the versions of your installed dependencies:
-```
+```bash
 ibmcloud dev diag
 ```
 {: codeblock}
@@ -514,7 +514,7 @@ Edit your app with options such as connecting it with an existing {{site.data.ke
  * Select manual deployment. The deployment files that are relevant for your choice of deployment target are created.
 
 Run the following command in the root of your app directory:
-```
+```bash
 ibmcloud dev edit
 ```
 {: codeblock}
@@ -559,7 +559,7 @@ While logged in to {{site.data.keyword.cloud_notm}}, you can connect this local 
 The `enable` command is a Beta feature. If you have trouble with the `enable` command, see [troubleshooting](/docs/cli?topic=cli-troubleshoot). In particular, `enable` isn't intended for mobile apps or frameworks. For complex apps that produce several deployable assets, each component of the app must be enabled individually. 
 
 Run the following command to enable an existing app in the current directory:
-```
+```bash
 ibmcloud dev enable
 ```
 {: codeblock}
@@ -646,7 +646,7 @@ Command parameters that are entered on the command line take precedence over the
 By default, if no action or arguments are passed in, or if the 'help' action is provided, this command shows a general "Help" text. General help displayed includes a description of the base arguments and a listing of the available actions.  
 
 Run the following command to display General help information:
-```
+```bash
 ibmcloud dev help
 ```
 {: codeblock}
@@ -657,7 +657,7 @@ ibmcloud dev help
 You can list all {{site.data.keyword.cloud_notm}} apps in a resource group.
 
 Run the following command to list your apps:
-```
+```bash
 ibmcloud dev list
 ```
 {: codeblock}
@@ -681,8 +681,8 @@ Command parameters that are entered on the command line take precedence over the
 
 View the details of a Classic pipeline.
 
-```
-ibmcloud dev pipeline-get [pipelineID] [--output JSON]
+```bash
+ibmcloud dev pipeline-get [PIPELINE_ID] [--output JSON]
 ```
 {: codeblock}
 
@@ -693,7 +693,7 @@ ibmcloud dev pipeline-get [pipelineID] [--output JSON]
 {: #json-get}
 
 * Parameter that is used to output the pipeline details in JSON format.
-* Usage: `ibmcloud dev pipeline-get [pipelineID] --output JSON`
+* Usage: `ibmcloud dev pipeline-get [PIPELINE_ID] --output JSON`
 
 The following parameter can be used with the `pipeline-get` command or by updating the app's `cli-config.yml` file directly.
 
@@ -704,14 +704,14 @@ Command parameters that are entered on the command line take precedence over the
 {: #pipeline-get-trace}
 
 * Use this parameter to provide verbose output.
-* Usage: `ibmcloud dev pipeline-get [pipelineID] --trace`
+* Usage: `ibmcloud dev pipeline-get [PIPELINE_ID] --trace`
 
 ## pipeline-run
 {: #pipeline-run}
 
 Run a Classic pipeline.
-```
-ibmcloud dev pipeline-run [pipelineID] [--stage-id stageID] [--output JSON] 
+```bash
+ibmcloud dev pipeline-run [PIPELINE_ID] [--stage-id stageID] [--output JSON] 
 ```
 {: codeblock}
 
@@ -727,19 +727,19 @@ Command parameters that are entered on the command line take precedence over the
 {: #run-stage-id}
 
 * Parameter optionally used to select a pipeline's stage to run
-* Usage: `ibmcloud dev pipeline-run [pipelineID] --stage-id [stageID]`
+* Usage: `ibmcloud dev pipeline-run [PIPELINE_ID] --stage-id [stageID]`
 
 #### `json`
 {: #json-run}
 
 * Parameter that is used to output the pipeline's invocation details in JSON format.
-* Usage: `ibmcloud dev pipeline-run [pipelineID] --output JSON`
+* Usage: `ibmcloud dev pipeline-run [PIPELINE_ID] --output JSON`
 
 #### `trace`
 {: #pipeline-run-trace}
 
 * Use this parameter to provide verbose output.
-* Usage: `ibmcloud dev pipeline-run [pipelineID] --trace`
+* Usage: `ibmcloud dev pipeline-run [PIPELINE_ID] --trace`
 
 ## pipeline-log
 {: #pipeline-log}
@@ -752,8 +752,8 @@ View recent Classic pipeline logs by using the `pipeline-log` command.
 * If the job execution ID is specified along with the stage ID and job ID, a search is done among all available logs that match the job execution ID specified.
 
 Usage:
-```
-ibmcloud dev pipeline-log [pipelineID] [--stage-id stageID] [--job-id jobID] [--job-exec-id jobExecutionID]
+```bash
+ibmcloud dev pipeline-log [PIPELINE_ID] [--stage-id stageID] [--job-id jobID] [--job-exec-id jobExecutionID]
 ```
 {: codeblock}
 
@@ -770,7 +770,7 @@ Command parameters that are entered on the command line take precedence over the
 
 * Parameter that is used to filter the logs by the job ID.
 * Requires the `stage-id` flag.
-* Usage: `ibmcloud dev pipeline-log [pipelineID]  --stage-id [stageID] --job-id [jobID]`
+* Usage: `ibmcloud dev pipeline-log [PIPELINE_ID]  --stage-id [stageID] --job-id [jobID]`
 
 #### `job-exec-id`
 {: #job-exec-id}
@@ -778,26 +778,26 @@ Command parameters that are entered on the command line take precedence over the
 * Parameter that is used to filter the logs by the job execution ID.
 * Requires the `stage-id` flag.
 * Requires the `job-id` flag.
-* Usage: `ibmcloud dev pipeline-log [pipelineID]  --stage-id [stageID] --job-id [jobID] --job-exec-id [jobExecutionID]`
+* Usage: `ibmcloud dev pipeline-log [PIPELINE_ID]  --stage-id [stageID] --job-id [jobID] --job-exec-id [jobExecutionID]`
 
 #### `stage-id`
 {: #log-stage-id}
 
 * Parameter that is used to filter the logs by the stage ID.
-* Usage: `ibmcloud dev pipeline-log [pipelineID]  --stage-id [stageID]`
+* Usage: `ibmcloud dev pipeline-log [PIPELINE_ID]  --stage-id [stageID]`
 
 #### `trace`
 {: #pipelog-trace}
 
 * Use this parameter to provide verbose output.
-* Usage: `ibmcloud dev pipeline-log [pipelineID] --trace`
+* Usage: `ibmcloud dev pipeline-log [PIPELINE_ID] --trace`
 
 ## pipeline-open
 {: #pipeline-open}
 
 View the URL for the Classic pipeline through the `pipeline-open` command. The `pipeline-open` command also opens the URL in your default browser.
-```
-ibmcloud dev pipeline-open [pipelineID]
+```bash
+ibmcloud dev pipeline-open [PIPELINE_ID]
 ```
 {: codeblock}
 
@@ -813,7 +813,7 @@ Command parameters that are entered on the command line take precedence over the
 {: #pipeline-open-trace}
 
 * Use this parameter to provide verbose output.
-* Usage: `ibmcloud dev pipeline-open [pipelineID] --trace`
+* Usage: `ibmcloud dev pipeline-open [PIPELINE_ID] --trace`
 
 ## run
 {: #run}
@@ -825,13 +825,13 @@ You can run your app through the `run` command. A build must first be completed 
 To run with multiple containers, your app must contain a [Compose](https://docs.docker.com/compose/overview/){: external} file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one.
 
 First, compile your app:
-```
+```bash
 ibmcloud dev build
 ```
 {: codeblock}
 
 Run the following command in your current app directory to start your app:
-```
+```bash
 ibmcloud dev run
 ```
 {: codeblock}
@@ -962,7 +962,7 @@ If you're using Windows&trade;, you must be run Windows&trade; 10 Pro or later.
 You can open the shell inside the run or tools container with the `shell` command.
 
 By running the following command:
-```
+```bash
 ibmcloud dev shell
 ```
 {: codeblock}
@@ -1028,7 +1028,7 @@ If you are using Windows&trade;, you must be running Windows&trade; 10 Pro or la
 You can query the status of the containers that are used by the {{site.data.keyword.dev_cli_short}} commands as defined by `container-name-run` and `container-name-tools`.
 
 Run the following command in your current app directory to check container status:
-```
+```bash
 ibmcloud dev status
 ```
 {: codeblock}
@@ -1073,7 +1073,7 @@ If you're using Windows&trade;, you must be run Windows&trade; 10 Pro or later.
 You can stop your containers through the `stop` command.
 
 To stop the tools and run containers as defined in your `cli-config.yml` file, run:
-```
+```bash
 ibmcloud dev stop
 ```
 {: codeblock}
@@ -1117,8 +1117,8 @@ Command parameters that are entered on the command line take precedence over the
 
 View the details of a Tekton pipeline.
 
-```
-ibmcloud dev tekton-info [pipelineID] [--verbose][--output JSON]
+```bash
+ibmcloud dev tekton-info [PIPELINE_ID] [--verbose][--output JSON]
 ```
 {: codeblock}
 
@@ -1131,19 +1131,19 @@ The following parameters can be used with the `tekton-info` command.
 {: #tekton-info-verbose}
 
 * Use this parameter to provide all details of a pipeline in JSON format.
-* Usage: `ibmcloud dev tekton-info [pipelineID] --verbose`
+* Usage: `ibmcloud dev tekton-info [PIPELINE_ID] --verbose`
 
 #### `json`
 {: #json-tekton-info}
 
 * Parameter that is used to output the pipeline details in JSON format.
-* Usage: `ibmcloud dev tekton-info [pipelineID] --output JSON`
+* Usage: `ibmcloud dev tekton-info [PIPELINE_ID] --output JSON`
 
 #### `trace`
 {: #tekton-info-trace}
 
 * Use this parameter to provide verbose output.
-* Usage: `ibmcloud dev tekton-info [pipelineID] --trace`
+* Usage: `ibmcloud dev tekton-info [PIPELINE_ID] --trace`
 
 ## tekton-logs
 {: #tekton-logs}
@@ -1154,8 +1154,8 @@ View recent Tekton pipeline run logs by using the `tekton-logs` command.
 * If the task name is specified as an argument, only the logs for this task are retrieved.
 
 Usage:
-```
-ibmcloud dev tekton-logs [pipelineID] --run-id [pipelinerunID] [--task-name taskName] [--output JSON]
+```bash
+ibmcloud dev tekton-logs [PIPELINE_ID] --run-id [pipelinerunID] [--task-name taskName] [--output JSON]
 ```
 {: codeblock}
 
@@ -1168,25 +1168,25 @@ The following parameters can be used with the `tekton-logs` command.
 {: #run-id}
 
 * Parameter that identifies the pipeline run for the log retrieval.
-* Usage: `ibmcloud dev tekton-logs [pipelineID]  --run-id [pipelinerunID]`
+* Usage: `ibmcloud dev tekton-logs [PIPELINE_ID]  --run-id [pipelinerunID]`
 
 #### `task-name`
 {: #task-name}
 
 * Parameter that is used to filter the logs by the pipeline run task name.
-* Usage: `ibmcloud dev tekton-logs [pipelineID]  --run-id [pipelinerunID] --task-name [taskName]`
+* Usage: `ibmcloud dev tekton-logs [PIPELINE_ID]  --run-id [pipelinerunID] --task-name [taskName]`
 
 #### `json`
 {: #json-tekton-logs}
 
 * Parameter that is used to output the log details in JSON format.
-* Usage: `ibmcloud dev tekton-logs [pipelineID]  --run-id [pipelinerunID] --output JSON`
+* Usage: `ibmcloud dev tekton-logs [PIPELINE_ID]  --run-id [pipelinerunID] --output JSON`
 
 #### `trace`
 {: #tekton-logs-trace}
 
 * Use this parameter to provide verbose output.
-* Usage: `ibmcloud dev tekton-logs [pipelineID]  --run-id [pipelinerunID] --trace`
+* Usage: `ibmcloud dev tekton-logs [PIPELINE_ID]  --run-id [pipelinerunID] --trace`
 
 ## tekton-pipelinerun
 {: #tekton-pipelinerun}
@@ -1194,9 +1194,9 @@ The following parameters can be used with the `tekton-logs` command.
 View the details of a Tekton pipeline run or use the `ls` parameter to list all pipeline runs for the pipeline.
 
 Usage:
-```
-ibmcloud dev tekton-pipelinerun [pipelineID] --run-id [pipelinerunID] [--output JSON]
-ibmcloud dev tekton-pipelinerun ls [pipelineID]
+```bash
+ibmcloud dev tekton-pipelinerun [PIPELINE_ID] --run-id [pipelinerunID] [--output JSON]
+ibmcloud dev tekton-pipelinerun ls [PIPELINE_ID]
 ```
 {: codeblock}
 
@@ -1209,19 +1209,19 @@ The following parameters can be used with the `tekton-pipelinerun` command.
 {: #tekton-pipelinerun-run-id}
 
 * Parameter that identifies the pipeline run to retrieve.
-* Usage: `ibmcloud dev tekton-pipelinerun [pipelineID] --run-id [pipelinerunID]`
+* Usage: `ibmcloud dev tekton-pipelinerun [PIPELINE_ID] --run-id [pipelinerunID]`
 
 #### `json`
 {: #json-tekton-pipelinerun}
 
 * Parameter that is used to output the pipeline run details in JSON format.
-* Usage: `ibmcloud dev tekton-pipelinerun [pipelineID] --run-id [pipelinerunID] --output JSON`
+* Usage: `ibmcloud dev tekton-pipelinerun [PIPELINE_ID] --run-id [pipelinerunID] --output JSON`
 
 #### `trace`
 {: #tekton-pipelinerun-trace}
 
 * Use this parameter to provide verbose output.
-* Usage: `ibmcloud dev tekton-pipelinerun [pipelineID] --run-id [pipelinerunID] --trace`
+* Usage: `ibmcloud dev tekton-pipelinerun [PIPELINE_ID] --run-id [pipelinerunID] --trace`
 
 ## tekton-pipelineruns
 {: #tekton-pipelineruns}
@@ -1229,8 +1229,8 @@ The following parameters can be used with the `tekton-pipelinerun` command.
 View a list of pipeline runs for a Tekton pipeline.
 
 Usage:
-```
-ibmcloud dev tekton-pipelineruns [pipelineID] [--output JSON]
+```bash
+ibmcloud dev tekton-pipelineruns [PIPELINE_ID] [--output JSON]
 ```
 {: codeblock}
 
@@ -1243,13 +1243,13 @@ The following parameters can be used with the `tekton-pipelineruns` command.
 {: #json-tekton-pipelineruns}
 
 * Parameter that is used to output the pipeline runs in JSON format.
-* Usage: `ibmcloud dev tekton-pipelineruns [pipelineID] --output JSON`
+* Usage: `ibmcloud dev tekton-pipelineruns [PIPELINE_ID] --output JSON`
 
 #### `trace`
 {: #tekton-pipelineruns-trace}
 
 * Use this parameter to provide verbose output.
-* Usage: `ibmcloud dev tekton-pipelineruns [pipelineID] --trace`
+* Usage: `ibmcloud dev tekton-pipelineruns [PIPELINE_ID] --trace`
 
 ## tekton-trigger
 {: #tekton-trigger}
@@ -1257,8 +1257,8 @@ The following parameters can be used with the `tekton-pipelineruns` command.
 Run a Tekton pipeline.
 
 Usage:
-```
-ibmcloud dev tekton-trigger [pipelineID] --trigger-name [triggerName] [--output JSON]
+```bash
+ibmcloud dev tekton-trigger PIPELINE_ID --trigger-name triggerName [--trigger-properties propertiesJSON] [--trigger-header headerJSON] [--trigger-body bodyJSON] [--output JSON]
 ```
 {: codeblock}
 
@@ -1271,19 +1271,37 @@ The following parameters can be used with the `tekton-trigger` command.
 {: #tekton-trigger-name}
 
 * Use this parameter to indicate the trigger to be run.
-* Usage: `ibmcloud dev tekton-trigger [pipelineID] --trigger-name [triggerName]`
+* Usage: `ibmcloud dev tekton-trigger PIPELINE_ID --trigger-name triggerName`
+
+#### `trigger-properties` (optional)
+{: #tekton-trigger-properties}
+
+* Optional. Use this parameter to override or append to defined trigger properties. For example,`'{"pipeline-debug":"true"}'`.
+* Usage: `ibmcloud dev tekton-trigger pipePIPELINE_IDlineID --trigger-name triggerName --trigger-properties propertiesJSON`
+
+#### `trigger-header` (optional)
+{: #tekton-trigger-header}
+
+* Optional. Use this parameter to specify the header that is used in triggerBinding of a Tekton pipelineRun. For example,`'{"source":"cli"}'`.
+* Usage: `ibmcloud dev tekton-trigger PIPELINE_ID --trigger-name triggerName --trigger-header headerJSON`
+
+#### `trigger-body` (optional)
+{: #tekton-trigger-body}
+
+* Optional. Use this parameter to specify the body that is used in triggerBinding of a Tekton pipelineRun. For example,`'{"message":"hello world","flag":"enable"}'`.
+* Usage: `ibmcloud dev tekton-trigger PIPELINE_ID --trigger-name triggerName --trigger-body bodyJSON`
 
 #### `json`
 {: #json-tekton-trigger}
 
-* Parameter that is used to output the trigger results in JSON format.
-* Usage: `ibmcloud dev tekton-trigger [pipelineID] --trigger-name [triggerName] --output JSON`
+* Use this parameter to output the trigger results in JSON format.
+* Usage: `ibmcloud dev tekton-trigger PIPELINE_ID --trigger-name triggerName --output JSON`
 
 #### `trace`
 {: #tekton-trigger-trace}
 
 * Use this parameter to provide verbose output.
-* Usage: `ibmcloud dev tekton-trigger [pipelineID] --trigger-name [triggerName] --trace`
+* Usage: `ibmcloud dev tekton-trigger PIPELINE_ID --trigger-name triggerName --trace`
 
 ## test
 {: #test}
@@ -1293,13 +1311,13 @@ If you're using Windows&trade;, you must run Windows&trade; 10 Pro or later.
 You can test your app through the `test` command. A build must first be completed against the app by using the `build --debug` command. The tools container is then used to start the `test-cmd` for the app.
 
 First, compile your app:
-```
+```bash
 ibmcloud dev build --debug
 ```
 {: codeblock}
 
 Run the following command to test your app:
-```
+```bash
 ibmcloud dev test
 ```
 {: codeblock}
@@ -1387,7 +1405,7 @@ Command parameters that are entered on the command line take precedence over the
 Delete a toolchain. If no toolchain name is provided, you can select one from a list. The list of toolchains depends on the currently targeted resource group and region.
 
 The targeted Resource Group is found in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_cli#ibmcloud_target).
-```
+```bash
 ibmcloud dev toolchain-delete [toolchainName] [--force,-f]
 ```
 {: codeblock}
@@ -1418,7 +1436,7 @@ Command parameters that are entered on the command line take precedence over the
 View the details of a toolchain. If no toolchain name is provided, you can select one from a list. 
 
 Uses the targeted resource group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry-based toolchains might not be compatible with this command.
-```
+```bash
 ibmcloud dev toolchain-get [toolchainName] [--output JSON]
 ```
 {: codeblock}
@@ -1447,7 +1465,7 @@ Command parameters that are entered on the command line take precedence over the
 {: #toolchain-open}
 
 View the URL for the toolchain through the `toolchain-open` command. The `toolchain-open` command also opens the URL in your default browser. If no toolchain name is provided, a list of toolchains is provided to select from.
-```
+```bash
 ibmcloud dev toolchain-open [toolchainName]
 ```
 {: codeblock}
@@ -1472,7 +1490,8 @@ Command parameters that are entered on the command line take precedence over the
 View a list of toolchains in the current resource group. 
 
 Uses the targeted Resource Group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry-based toolchains might not be compatible with this command.
-```
+
+```bash
 ibmcloud dev toolchains [--output JSON]
 ```
 {: codeblock}
@@ -1507,7 +1526,8 @@ For apps that are deployed to {{site.data.keyword.cloud_notm}} Foundry, the URL 
 For apps that are deployed to {{site.data.keyword.containerlong_notm}}, the URL consists of the IP address of the node it is deployed to, and the public port. If the command determines that the app was deployed to Kubernetes, the CLI tool prompts for confirmation. If you specify that the app wasn't deployed to Kubernetes, then the {{site.data.keyword.cloud_notm}} Foundry URL is shown. If you expected the command to show the URL for a Kubernetes-deployed app, ensure that the `cli-config.yml` contains an entry for `chart-path` or supply it through command line as shown [here](#chart-path).
 
 Run the following command from the app directory to view your app:
-```
+
+```bash
 ibmcloud dev view
 ```
 {: codeblock}
@@ -1560,7 +1580,8 @@ Command parameters that are entered on the command line take precedence over the
 {: #compound}
 
 You are able to run several commands in one command-line statement by separating the {{site.data.keyword.dev_cli_notm}} commands with the `/` delimiter. More command-line flags can be used after you specify the compound commands. The following commands are examples of how you can use compound commands:
-```
+
+```bash
 ibmcloud dev build/run
 ibmcloud dev build/deploy --trace -t buildpack
 ibmcloud dev build/debug --debug --trace

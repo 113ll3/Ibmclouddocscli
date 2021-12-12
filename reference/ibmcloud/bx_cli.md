@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-12-10"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -55,7 +55,8 @@ Specifies an output format. Only JSON is currently supported.
 {: #global-option-output-examples}
 
 Print available resource groups in JSON format:
-```
+
+```bash
 ibmcloud resource groups --output json
 ```
 {: codeblock}
@@ -69,7 +70,8 @@ Suppresses verbose messages. Prompt messages like `Getting information from... a
 {: #global-option-quiet-examples}
 
 Print available resource groups in quiet mode:
-```
+
+```bash
 ibmcloud resource groups -q
 ```
 {: codeblock}
@@ -78,7 +80,8 @@ ibmcloud resource groups -q
 {: #ibmcloud_help}
 
 Displays the general help for first-level built-in commands and supported namespaces of {{site.data.keyword.cloud_notm}} CLI, or the help for a specific built-in command or namespace.
-```
+
+```bash
 ibmcloud help [COMMAND|NAMESPACE]
 ```
 
@@ -97,13 +100,15 @@ COMMAND|NAMESPACE
 {: #help-examples}
 
 Display general help for the {{site.data.keyword.cloud_notm}} CLI:
-```
+
+```bash
 ibmcloud help
 ```
 {: codeblock}
 
 Display help for the `dev` command:
-```
+
+```bash
 ibmcloud help dev
 ```
 {: codeblock}
@@ -112,7 +117,8 @@ ibmcloud help dev
 {: #ibmcloud_version}
 
 Print the version of the {{site.data.keyword.cloud_notm}} CLI.
-```
+
+```bash
 ibmcloud version
 ```
 
@@ -130,7 +136,8 @@ None.
 {: #version-examples}
 
 Print the version of the {{site.data.keyword.cloud_notm}} CLI:
-```
+
+```bash
 ibmcloud version
 ```
 {: codeblock}
@@ -139,8 +146,9 @@ ibmcloud version
 {: #ibmcloud_api}
 
 Set or view the {{site.data.keyword.cloud_notm}} API endpoint.
-```
-ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
+
+```bash
+ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation] [--vpc]
 ```
 
 ### Prerequisites
@@ -167,25 +175,29 @@ API_ENDPOINT
 {: #api-examples}
 
 Set the API endpoint to cloud.ibm.com:
-```
+
+```bash
 ibmcloud api cloud.ibm.com
 ```
 {: codeblock}
 
 Set the API endpoint to cloud.ibm.com and bypass SSL validation.
-```
+
+```bash
 ibmcloud api https://cloud.ibm.com --skip-ssl-validation
 ```
 {: codeblock}
 
 View the current API endpoint:
-```
+
+```bash
 ibmcloud api
 ```
 {: codeblock}
 
 Remove the API endpoint:
-```
+
+```bash
 ibmcloud api --unset
 ```
 {: codeblock}
@@ -195,7 +207,7 @@ ibmcloud api --unset
 
 Writes default values to the configuration file.
 
-```
+```bash
 ibmcloud config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/file) | 
          --color (true|false) | --locale (LOCALE|CLEAR) | --check-version (true|false)
 ```
@@ -230,37 +242,43 @@ You can specify only one of the options at a time.
 {: #config-examples}
 
 Set HTTP request timeout to 30 seconds:
-```
+
+```bash
 ibmcloud config --http-timeout 30
 ```
 {: codeblock}
 
 Enable trace output for HTTP requests:
-```
+
+```bash
 ibmcloud config --trace true
 ```
 {: codeblock}
 
 Trace HTTP requests to the `/home/usera/my_trace` file:
-```
+
+```bash
 ibmcloud config --trace /home/usera/my_trace
 ```
 {: codeblock}
 
 Disable color output:
-```
+
+```bash
 ibmcloud config --color false
 ```
 {: codeblock}
 
 Set the locale to `zh_Hans`:
-```
+
+```bash
 ibmcloud config --locale zh_Hans
 ```
 {: codeblock}
 
 Clear the locale settings:
-```
+
+```bash
 ibmcloud config --locale CLEAR
 ```
 {: codeblock}
@@ -274,7 +292,8 @@ When you use the `ibmcloud cf` command, authentication is handled by the {{site.
 {: tip}
 
 Invoke the Cloud Foundry CLI.
-```
+
+```bash
 ibmcloud [-q, --quiet] cf COMMAND...
 ```
 
@@ -293,12 +312,14 @@ Run [`ibmcloud cf install`](#ibmcloud_cf_install) to install the Cloud Foundry C
 {: #info-examples}
 
 List Cloud Foundry apps:
-```
+
+```bash
 ibmcloud cf apps
 ```
 
 List Cloud Foundry services without displaying the `Invoking cf command...` message:
-```
+
+```bash
 ibmcloud -q cf services
 ```
 {: codeblock}
@@ -308,7 +329,7 @@ ibmcloud -q cf services
 
 Install the Cloud Foundry CLI for the {{site.data.keyword.cloud_notm}} CLI, or update an existing installation.
 
-```
+```bash
 ibmcloud cf install [-v, --version VERSION] [--restore] [-f, --force]
 ```
 
@@ -333,19 +354,22 @@ None.
 {: #cfinstall-examples}
 
 Install Cloud Foundry CLI `6.44.1`:
-```
+
+```bash
 ibmcloud cf install -v 6.44.1
 ```
 {: codeblock}
 
 Install the most recent version of the Cloud Foundry CLI without confirmation:
-```
+
+```bash
 ibmcloud cf install -f
 ```
 {: codeblock}
 
 Restore to the default bundled Cloud Foundry CLI:
-```
+
+```bash
 ibmcloud cf install --restore
 ```
 {: codeblock}
@@ -354,9 +378,11 @@ ibmcloud cf install --restore
 {: #ibmcloud_login}
 
 Log in to the {{site.data.keyword.cloud_notm}} CLI:
+
+```bash
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--cr-token TOKEN | @CR_TOKEN_FILE] [--profile PROFILE_ID | PROFILE_NAME] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [--accept] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE] [--vpc]
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--cr-token TOKEN | @CR_TOKEN_FILE] [--profile PROFILE_ID | PROFILE_NAME] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [--accept] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE]
-```
+{: codeblock}
 
 ### Prerequisites
 {: #login-prereqs}
@@ -420,62 +446,70 @@ None.
 ### Examples
 {: #login-examples}
 
-#### Log in interactively:
-```
+**Log in interactively:**
+
+```bash
 ibmcloud login
 ```
 {: codeblock}
 
-#### Log in to a private endpoint:
-```
+**Log in to a private endpoint:**
+
+```bash
 ibmcloud login -a private.cloud.ibm.com
 ```
 {: codeblock}
 
 Two regions are currently supported: `us-south` and `us-east`.
 
-#### Log in with a user name and password, and set a target account, org, and space:
-```
+**Log in with a user name and password, and set a target account, org, and space:**
+
+```bash
 ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ```
 {: codeblock}
 
-#### Log in with federated ID, and set a target account and Cloud Foundry org and space:
-```
+**Log in with federated ID, and set a target account and Cloud Foundry org and space:**
+
+```bash
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 {: codeblock}
 
-#### Set your Cloud Foundry org and space. You can run the following command to interactively identify the org and space:
-```
+**Set your Cloud Foundry org and space. You can run the following command to interactively identify the org and space:**
+
+```bash
 ibmcloud target --cf
 ```
 {: codeblock}
 
 Or, if you know which org and space that the service belongs to, you can use the following command:
-```
+
+```bash
 ibmcloud target -o <value> -s <value>
 ```
 {: codeblock}
 
-#### Use an API key with an associated account:
-```
+**Use an API key with an associated account:**
+
+```bash
 ibmcloud login --apikey api-key-string -o MyOrg -s MySpace
 ```
 {: codeblock}
 
-```
+```bash
 ibmcloud login --apikey @filename -o MyOrg -s MySpace
 ```
 {: codeblock}
 
-#### Use an API key with no associated account:
-```
+**Use an API key with no associated account:**
+
+```bash
 ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 ```
 {: codeblock}
 
-```
+```bash
 ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 {: codeblock}
@@ -483,14 +517,16 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 If the API key has an associated account, switching to another account isn't supported.
 {: note}
 
-#### Log in as a specific user with a federated ID:
-```
-ibmcloud login -u UserID --sso
+**Log in as a specific user with a federated ID:**
+
+```bash
+ibmcloud login -u UserID --ssobash
 ```
 {: codeblock}
 
 Then, the CLI provides a URL link and prompts you for the passcode:
-```
+
+```text
 Get One Time Code from https://identity-1.us-south.iam.cloud.ibm.com/identity/passcode to proceed.
 Open the URL in the default browser? [Y/n] > 
 ```
@@ -498,31 +534,33 @@ Open the URL in the default browser? [Y/n] >
 
 Open the link in a browser to get a passcode. Enter the passcode in the console to log in.
 
-#### Log in as a Compute Resource linked to a trusted profile:
-```
+**Log in as a Compute Resource linked to a trusted profile:**
+
+```bash
 ibmcloud login --cr-token token-string --profile trusted_profile_name_or_id
 ```
 {: codeblock}
 
-```
+```bash
 ibmcloud login --cr-token @filename --profile trusted_profile_name_or_id
 ```
 {: codeblock}
 
-```
+```bash
 IBMCLOUD_CR_TOKEN=@filename ibmcloud login --profile trusted_profile_name_or_id
 ```
 {: codeblock}
 
-```
+```bash
 IBMCLOUD_CR_TOKEN=@filename IBMCLOUD_CR_PROFILE=trusted_profile_name_or_id ibmcloud login
 ```
 {: codeblock}
 
 For more information on logging in as a compute resource, see [Logging in with a Compute Resource token](/docs/cli?topic=cli-cri-login).
 
-#### Accept invitation to join a new account:
-```
+**Accept invitation to join a new account:**
+
+```bash
 ibmcloud login -c TargetedAccountID --accept
 ```
 {: codeblock}
@@ -531,7 +569,8 @@ ibmcloud login -c TargetedAccountID --accept
 {: #ibmcloud_logout}
 
 Log out of the CLI:
-```
+
+```bash
 ibmcloud logout
 ```
 {: codeblock}
@@ -545,7 +584,8 @@ None.
 {: #ibmcloud_regions}
 
 View the information for all regions on {{site.data.keyword.cloud_notm}}:
-```
+
+```bash
 ibmcloud regions
 ```
 {: codeblock}
@@ -559,7 +599,8 @@ Use the `ibmcloud api` command to set an API endpoint.
 {: #ibmcloud_target}
 
 Set or view the target account, region, organization, or space:
-```
+
+```bash
 ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE]
 ```
 
@@ -606,19 +647,22 @@ If none of the options are specified, the current account, region, org, and spac
 {: #target-examples}
 
 Set the current account, organization, and space:
-```
+
+```bash
 ibmcloud target -c MyAccountID -o MyOrg -s MySpace
 ```
 {: codeblock}
 
 Switch to a new region:
-```
+
+```bash
 ibmcloud target -r eu-gb
 ```
 {: codeblock}
 
 View the current account, region, org, and space:
-```
+
+```bash
 ibmcloud target
 ```
 {: codeblock}
@@ -627,7 +671,8 @@ ibmcloud target
 {: #ibmcloud_update}
 
 Update the CLI to the most recent version:
-```
+
+```bash
 ibmcloud update [-f]
 ```
 
@@ -649,7 +694,7 @@ Use classic infrastructure commands in the {{site.data.keyword.cloud_notm}} CLI 
 
 Run the `ibmcloud sl` command to see the list of available commands:
 
-```
+```text
 USAGE:
    ibmcloud sl command [arguments...] [options...]
 
@@ -676,7 +721,8 @@ COMMANDS:
 {: screen}
 
 To view help information about a command, run the following command:
-```
+
+```bash
 ibmcloud sl [command] -h
 ```
 
@@ -689,7 +735,8 @@ The `ibmcloud sl init` command is no longer available as of CLI version `0.14`. 
 {: #sl_help}
 
 View help information for all commands to operate the classic infrastructure environment:
-```
+
+```bash
 ibmcloud sl help
 ```
 {: codeblock}
