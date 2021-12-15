@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-03"
+  years: 2015, 2021
+lastupdated: "2021-12-15"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
@@ -53,19 +53,19 @@ Update Available   cloud-functions                             1.0.32, 1.0.30, 1
 
 Use the `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` command to install the plug-in. For example, use the following command to install a plug-in from the official IBM plug-in repo 'IBM Cloud':
 ```bash
-ibmcloud plugin install auto-scaling
+ibmcloud plugin install code-engine
 ```
 {: codeblock}
 
 ```text
-Looking up 'auto-scaling' from repository 'IBM Cloud'...
-Plug-in 'auto-scaling 0.2.7' found in repository 'IBM Cloud'
+Looking up 'code-engine' from repository 'IBM Cloud'...
+Plug-in 'code-engine 1.23.2' found in repository 'IBM Cloud'
 Attempting to download the binary file...
- 7.28 MiB / 7.28 MiB [============================================] 100.00% 1s
-7636608 bytes downloaded
+ 54.29 MiB / 54.29 MiB [============================================] 100.00% 10s
+56929376  bytes downloaded
 Installing binary...
 OK
-Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bluemix/plugins/auto-scaling. Use 'ibmcloud plugin show auto-scaling' to show its details.
+Plug-in 'code-engine 1.23.2' was successfully installed into /Users/username/.bluemix/plugins/code-engine. Use 'ibmcloud plugin show code-engine' to show its details.
 ```
 {: screen}
 
@@ -74,14 +74,14 @@ Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bl
 
 Use the `ibmcloud plugin install LOCAL_FILE_NAME` command to install a plug-in binary on your local machine. For example:
 ```bash
-ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.7
+ibmcloud plugin install ./code-engine-darwin-amd64-1.23.2
 ```
 {: codeblock}
 
 ```text
-Installing plugin './auto-scaling-darwin-amd64-0.2.7'...
+Installing plugin './code-engine-darwin-amd64-1.23.2'...
 OK
-Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bluemix/plugins/auto-scaling. Use 'ibmcloud plugin show auto-scaling' to show its details.
+Plug-in 'code-engine 1.23.2' was successfully installed into /Users/username/.bluemix/plugins/code-engine. Use 'ibmcloud plugin show code-engine' to show its details.
 $
 ```
 {: screen}
