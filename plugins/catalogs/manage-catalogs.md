@@ -270,7 +270,7 @@ ibmcloud catalog filter get --catalog CATALOG [--output FORMAT]
 
 The command returns the following output:
 
-```
+```text
 Account: The IBM Cloud catalog is visible to all users in this account.
 
 Filter:
@@ -1048,79 +1048,3 @@ You need version 1.2.7 or higher of the catalogs management CLI plug-in to run t
 ibmcloud catalog netrc
 ```
 {: codeblock}
-
-<!-- These commands below will NOT go public and will always remain internal until we remove them entirely in favor of the provider portal which will be used to onboard content offerings to the public catalog. -->
-
-## ibmcloud catalog offering publish-to-ibm
-{: #publish-offering-to-ibm}
-
-Run the following command to publish an offering that is already available in your account to all IBMers. This part of the publication process creates a tile in the staging and production catalogs that is visible only to IBMers. By publishing an offering to IBMers, you can test the offering in production before you make it available to all users in the {{site.data.keyword.cloud_notm}} catalog.
-
-```bash
-ibmcloud catalog offering publish-to-ibm --version-locator VERSION_NUMBER
-```
-{: codeblock}
-
-### Command options
-{: #publish-offering-to-ibm-options}
-
-
---version-locator VERSION_NUMBER
-:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
-
-
-## ibmcloud catalog offering publish-to-public
-{: #publish-offering-to-public}
-
-Run the following command to publish your private offering to the {{site.data.keyword.cloud_notm}} catalog for all users to see and use. To get to this step in the publication process, you must first publish the offering to your account and to all IBMers to complete the testing process. After your testing is complete, you can run this command. 
-
-This option does require an approval process from offering management. As soon as your approval is complete, your tile is available for all {{site.data.keyword.cloud_notm}} customers to see and use.
-{: important}
-
-```bash
-ibmcloud catalog offering publish-to-public --version-locator VERSION_NUMBER
-```
-{: codeblock}
-
-### Command options
-{: #publish-offering-to-public-options}
-
-
---version-locator VERSION_NUMBER
-:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
-
-
-## ibmcloud catalog offering deprecate
-{: #publish-offering-deprecate}
-
-Run the following command to deprecate a previously published offering version in the {{site.data.keyword.cloud_notm}}  catalog.
-
-```bash
-ibmcloud catalog offering deprecate --version-locator VERSION_NUMBER
-```
-{: codeblock}
-
-### Command options
-{: #publish-offering-deprecate-options}
-
-
---version-locator VERSION_NUMBER
-:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
-
-
-## ibmcloud catalog offering restore
-{: #publish-offering-restore}
-
-Run the following command to restore a previously deprecated offering version in the {{site.data.keyword.cloud_notm}} catalog. Restoring it places the version in draft state. After you validate it, you can restore the original version to the published state that it was in before it was deprecated.
-
-```bash
-ibmcloud catalog offering restore --version-locator VERSION_NUMBER
-```
-{: codeblock}
-
-### Command options
-{: #publish-offering-restore-options}
-
---version-locator VERSION_NUMBER
-
-:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified offering or version you want to use.
