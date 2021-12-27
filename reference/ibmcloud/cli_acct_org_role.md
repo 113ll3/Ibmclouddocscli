@@ -389,11 +389,8 @@ ibmcloud account org-role-set Mary IBM OrgManager
 ```
 {: codeblock}
 
-<!-- Begin Staging URL vs Prod URL -->
 You can set org and space roles by using the CLI, but if you want to set the other permissions, you must use the UI. For more information, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 {: note}
-
-<!-- Begin Staging URL vs Prod URL -->
 
 ## ibmcloud account org-role-unset
 {: #ibmcloud_account_org_role_unset}
