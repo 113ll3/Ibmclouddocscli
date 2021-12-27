@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2021-12-15"
 
 keywords: cli, classic infrastructure, ipsec, vpn, ibmcloud sl ipsec, tunnel, vpn access, encryption, vpn tunnel cli, ipsec vpn tunnel
 
@@ -25,26 +25,27 @@ Use the following commands from the {{site.data.keyword.cloud_notm}} Command Lin
 ## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
-Cancel a IPSec VPN tunnel context:
-```
+Cancel an IPSec VPN tunnel context:
+```bash
 ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--immediate</dt>
-<dd>Cancel the IPSec immediately instead of on the billing anniversary.</dd>
-<dt>--reason</dt>
-<dd>An optional reason for cancellation.</dd>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+--immediate
+:   Cancel the IPSec immediately instead of on the billing anniversary.
+
+--reason
+:   An optional reason for cancellation.
+
+-f, --force
+:   Force operation without confirmation.
 
 ## ibmcloud sl ipsec config
 {: #sl_ipsec_config}
 
 Request configuration of a tunnel context:
-```
+```bash
 ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
 ```
 
@@ -52,67 +53,66 @@ ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
 {: #sl_ipsec_detail}
 
 List IPSec VPN tunnel context details:
-```
+```bash
 ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-i, --include</dt>
-<dd>Include extra resources. Options are: at,is,rs,sr,ss.</dd>
-</dl>
+
+-i, --include
+:   Include extra resources. Options are: at,is,rs,sr,ss.
 
 ## ibmcloud sl ipsec list
 {: #sl_ipsec_list}
 
 List IPSec VPN tunnel contexts:
-```
+```bash
 ibmcloud sl ipsec list [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--order</dt>
-<dd>Filter by ID of the order that purchased the IPSec.</dd>
-</dl>
+
+--order
+:   Filter by ID of the order that purchased the IPSec.
+
 
 ## ibmcloud sl ipsec order
 {: #sl_ipsec_order}
 
-Order a IPSec VPN tunnel:
-```
+Order an IPSec VPN tunnel:
+```bash
 ibmcloud sl ipsec order [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-d, --datacenter</dt>
-<dd>Required. Short name of the datacenter for the IPSec. For example, `dal09`.</dd>
-</dl>
+
+-d, --datacenter
+:   Required. Short name of the datacenter for the IPSec. For example, `dal09`.
 
 ## ibmcloud sl ipsec subnet-add
 {: #sl_ipsec_subnet_add}
 
 Add a subnet to an IPSec tunnel context:
-```
+```bash
 ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-s, --subnet-id</dt>
-<dd>Subnet identifier to add, required.</dd>
-<dt>-t, --subnet-type</dt>
-<dd>Required. Subnet type to add. Options are: internal,remote,service.</dd>
-<dt>-n, --network</dt>
-<dd>Subnet network identifier to create.</dd>
-</dl>
+
+-s, --subnet-id
+:   Subnet identifier to add, required.
+
+-t, --subnet-type
+:   Required. Subnet type to add. Options are: internal,remote,service.
+
+-n, --network
+:   Subnet network identifier to create.
 
 ## ibmcloud sl ipsec subnet-remove
 {: #sl_ipsec_subnet_remove}
 
 Remove a subnet from an IPSEC tunnel context:
-```
+```bash
 ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE
 ```
 
@@ -120,25 +120,26 @@ ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE
 {: #sl_ipsec_translation_add}
 
 Add an address translation to an IPSec tunnel:
-```
+```bash
 ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-s, --static-ip</dt>
-<dd>Required. Static IP address.</dd>
-<dt>-r, --remote-ip</dt>
-<dd>Required. Remote IP address.</dd>
-<dt>-n, --note</dt>
-<dd>Note.</dd>
-</dl>
+
+-s, --static-ip
+:   Required. Static IP address.
+
+-r, --remote-ip
+:   Required. Remote IP address.
+
+-n, --note
+:   Note.
 
 ## ibmcloud sl ipsec translation-remove
 {: #sl_ipsec_translation_remove}
 
 Remove a translation entry from an IPSec:
-```
+```bash
 ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID
 ```
 
@@ -146,53 +147,63 @@ ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID
 {: #sl_ipsec_translation_update}
 
 Update an address translation for an IPSec:
-```
+```bash
 ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-s, --static-ip</dt>
-<dd>Required. Static IP address.</dd>
-<dt>-r, --remote-ip</dt>
-<dd>Required. Remote IP address.</dd>
-<dt>-n, --note</dt>
-<dd>Note.</dd>
-</dl>
+
+-s, --static-ip
+:   Required. Static IP address.
+
+-r, --remote-ip
+:   Required. Remote IP address.
+
+-n, --note
+:   Note.
 
 ## ibmcloud sl ipsec update
 {: #sl_ipsec_update}
 
 Update tunnel context properties:
-```
+```bash
 ibmcloud sl ipsec update CONTEXT_ID [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-n, --name</dt>
-<dd>Friendly name.</dd>
-<dt>-r, --remote-peer</dt>
-<dd>Remote peer IP address.</dd>
-<dt>-k, --preshared-key</dt>
-<dd>Preshared key.</dd>
-<dt>-a, --phase1-auth</dt>
-<dd>Phase 1 authentication. Options are: MD5,SHA1,SHA256.</dd>
-<dt>-c, --phase1-crypto</dt>
-<dd>Phase 1 encryption. Options are: DES,3DES,AES128,AES192,AES256.</dd>
-<dt>-d, --phase1-dh</dt>
-<dd>Phase 1 Diffie-Hellman group. Options are: 0,1,2,5.</dd>
-<dt>-t, --phase1-key-ttl</dt>
-<dd>Phase 1 key life. Range is `120-172800`.</dd>
-<dt>-u, --phase2-auth</dt>
-<dd>Phase 2 authentication. Options are: MD5,SHA1,SHA256.</dd>
-<dt>-y, --phase2-crypto</dt>
-<dd>Phase 2 encryption. Options are: DES,3DES,AES128,AES192,AES256.</dd>
-<dt>-e, --phase2-dh</dt>
-<dd>Phase 2 Diffie-Hellman group. Options are: 0,1,2,5.</dd>
-<dt>-f, --phase2-forward-secrecy</dt>
-<dd>Phase 2 perfect forward secrecy. Range is `0-1`.</dd>
-<dt>-l, --phase2-key-ttl</dt>
-<dd>Phase 2 key life. Range is `120-172800`.</dd>
-</dl>
 
+-n, --name
+:   Friendly name.
+
+-r, --remote-peer
+:   Remote peer IP address.
+
+-k, --preshared-key
+:   Preshared key.
+
+-a, --phase1-auth
+:   Phase 1 authentication. Options are: MD5, SHA1, SHA256.
+
+-c, --phase1-crypto
+:   Phase 1 encryption. Options are: DES, 3DES, AES128, AES192, AES256.
+
+-d, --phase1-dh
+:   Phase 1 Diffie-Hellman group. Options are: 0, 1, 2, 5.
+
+-t, --phase1-key-ttl
+:   Phase 1 key life. Range is `120-172800`.
+
+-u, --phase2-auth
+:   Phase 2 authentication. Options are: MD5, SHA1, SHA256.
+
+-y, --phase2-crypto
+:   Phase 2 encryption. Options are: DES, 3DES, AES128, AES192, AES256.
+
+-e, --phase2-dh
+:   Phase 2 Diffie-Hellman group. Options are: 0, 1, 2, 5.
+
+-f, --phase2-forward-secrecy
+:   Phase 2 perfect forward secrecy. Range is `0-1`.
+
+-l, --phase2-key-ttl
+:   Phase 2 key life. Range is `120-172800`.

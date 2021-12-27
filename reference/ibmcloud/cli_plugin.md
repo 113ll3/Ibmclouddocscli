@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-12-10"
+lastupdated: "2021-12-15"
 
 keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
@@ -42,13 +42,11 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
 
 **Command options**:
 
-   <dl>
-   <dt>REPO_NAME (required)</dt>
-   <dd>The name of the repository to be added. You can define your own name for each repository.</dd>
-   <dt>REPO_URL (required)</dt>
-   <dd>The URL of the repository to be added. The repository URL must contain the protocol (for example, `https://plugins.cloud.ibm.com` instead of `plugins.cloud.ibm.com`). https://plugins.cloud.ibm.com is the official plug-in repository of {{site.data.keyword.cloud_notm}} CLI.</dd>
-    </dl>
+  REPO_NAME (required)
+   :   The name of the repository to be added. You can define your own name for each repository.
 
+  REPO_URL (required)
+   :   The URL of the repository to be added. The repository URL must contain the protocol (for example, `https://plugins.cloud.ibm.com` instead of `plugins.cloud.ibm.com`). https://plugins.cloud.ibm.com is the official plug-in repository of {{site.data.keyword.cloud_notm}} CLI.
 
 **Examples**:
 
@@ -70,10 +68,9 @@ ibmcloud plugin repo-remove REPO_NAME
 {: codeblock}
 
 **Command options**:
-   <dl>
-   <dt>REPO_NAME (required)</dt>
-   <dd>The name of the repository to be removed.</dd>
-   </dl>
+
+REPO_NAME (required)
+:   The name of the repository to be removed.
 
 **Examples**:
 
@@ -95,10 +92,8 @@ ibmcloud plugin repo-plugins [-r REPO_NAME]
 
 **Command options**:
 
-<dl>
-   <dt>-r <i>REPO_NAME</i> (optional)</dt>
-   <dd>List only the plug-ins in the specified repository.</dd>
-</dl>
+-r <i>REPO_NAME</i> (optional)
+:   List only the plug-ins in the specified repository.
 
 **Examples**:
 
@@ -127,10 +122,8 @@ ibmcloud plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 
 **Command options**:
 
-<dl>
-   <dt>-r <i>REPO_NAME</i> (optional)</dt>
-   <dd>The name of the repository. If no repository is specified, the command uses the default plug-in repository.å</dd>
-</dl>
+-r <i>REPO_NAME</i> (optional)
+:   The name of the repository. If no repository is specified, the command uses the default plug-in repository.å
 
 **Examples**:
 
@@ -186,19 +179,20 @@ If no repository is specified, the command uses the default plug-in repository `
 
 **Command options**:
 
-   <dl>
-   <dt>PLUGIN_PATH|PLUGIN_NAME</dt>
-   <dd>If -r <i>REPO_NAME</i> is not specified, plug-in is installed from the specified local path or remote URL.</dd>
-   <dt>-a, --all (optional)</dt>
-   <dd>Install all latest available plugins in the repository.</dd>
-   <dt>-r <i>REPO_NAME</i> (optional)</dt>
-   <dd>The name of the repository where the plug-in binary is located. If no repository is specified, the command uses the default plug-in repository `IBM Cloud`.</dd>
-   <dt>-v <i>VERSION</i> (optional)</dt>
-   <dd>Version of the plug-in to be installed. Accepts specific semantic version or constraint.</dd>
-   <dt>-f </dt>
-   <dd>Force installs the plug-in without confirmation.</dd>
-   </dl>
+PLUGIN_PATH|PLUGIN_NAME
+:   If -r <i>REPO_NAME</i> is not specified, plug-in is installed from the specified local path or remote URL.
 
+-a, --all (optional)
+:   Install all latest available plugins in the repository.
+
+-r <i>REPO_NAME</i> (optional)
+:   The name of the repository where the plug-in binary is located. If no repository is specified, the command uses the default plug-in repository `IBM Cloud`.
+
+-v <i>VERSION</i> (optional)
+:   Version of the plug-in to be installed. Accepts specific semantic version or constraint.
+
+-f 
+:   Force installs the plug-in without confirmation.
 
 The {{site.data.keyword.cloud_notm}} CLI has the official repository name of `IBM Cloud`.
 
@@ -262,16 +256,19 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 If no repository is specified, the command uses the default plug-in repository `IBM Cloud`. If no version is specified, the command selects the latest available version to install.
 
 **Command options**:
-<dl>
- <dt>PLUGIN NAME</dt>
- <dd>Name of the plug-in to update. If not specified, the command checks upgrades for all plug-ins installed.</dd>
- <dt>-r REPO_NAME</dt>
- <dd>The name of the repository where the plug-in binary is located. If not specified, the command uses the default plug-in repository `IBM Cloud`.</dd>
- <dt>-v <i>VERSION</i> (optional)</dt>
- <dd>The version of the plug-in to be updated to. If not provided, update the plug-in to the most recent version.</dd>
- <dt>--all</dt>
- <dd>Update all available plug-ins</dd>
-</dl>
+
+PLUGIN NAME
+:   Name of the plug-in to update. If not specified, the command checks upgrades for all plug-ins installed.
+
+-r REPO_NAME
+:   The name of the repository where the plug-in binary is located. If not specified, the command uses the default plug-in repository `IBM Cloud`.
+
+-v <i>VERSION</i> (optional)
+:   The version of the plug-in to be updated to. If not provided, update the plug-in to the most recent version.
+
+--all
+:   Update all available plugins.
+
 
 **Examples**:
 
@@ -314,10 +311,9 @@ ibmcloud plugin uninstall PLUGIN_NAME
 
 **Command options**:
 
-   <dl>
-   <dt>PLUGIN_NAME (required)</dt>
-   <dd>The name of the plug-in to be uninstalled.</dd>
-    </dl>
+PLUGIN_NAME (required)
+:   The name of the plug-in to be uninstalled.
+
 
 **Examples**:
 

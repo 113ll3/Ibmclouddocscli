@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-29"
+lastupdated: "2021-12-15"
 
 keywords: cli, cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
@@ -130,10 +130,8 @@ ibmcloud app domain-cert DOMAIN_NAME
 
 **Command options**:
 
-<dl>
-<dt>DOMAIN_NAME (required)</dt>
-<dd>The domain that hosts the certificate.</dd>
-</dl>
+DOMAIN_NAME (required)
+:   The domain that hosts the certificate.
 
 **Examples:**
 
@@ -153,20 +151,24 @@ ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWOR
 ```
 
 **Command options**:
-   <dl>
-   <dt>DOMAIN (required)</dt>
-   <dd>The domain that the certificate is added to.</dd>
-   <dt>-k <i>PRIVATE_KEY_FILE</i> (required)</dt>
-   <dd>The private key file path.</dd>
-   <dt>-c <i>CERT_FILE</i> (required)</dt>
-   <dd>The certificate file path.</dd>
-   <dt>-p <i>PASSWORD</i> (optional)</dt>
-   <dd>The password for the certificate.</dd>
-   <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (optional)</dt>
-   <dd>The intermediate certificate file path.</dd>
-   <dt>-t <i>TRUST_STORE_FILE</i> (optional)</dt>
-   <dd>The truststore file.</dd>
-   </dl>
+
+DOMAIN (required)
+:   The domain that the certificate is added to.
+
+-k *PRIVATE_KEY_FILE* (required)
+:   The private key file path.
+
+-c *CERT_FILE* (required)
+:   The certificate file path.
+
+-p *PASSWORD* (optional)
+:   The password for the certificate.
+
+-i *INTERMEDIATE_CERT_FILE* (optional)
+:   The intermediate certificate file path.
+
+-t *TRUST_STORE_FILE* (optional)
+:   The truststore file.
 
 **Examples:**
 
@@ -187,12 +189,11 @@ ibmcloud app domain-cert-remove DOMAIN [-f]
 
 **Command options**:
 
-   <dl>
-   <dt>DOMAIN (required)</dt>
-   <dd>Domain to remove the certificate from.</dd>
-   <dt>-f  (optional)</dt>
-   <dd>Force deletion without confirmation.</dd>
-   </dl>
+DOMAIN (required)
+:   Domain to remove the certificate from.
+
+-f  (optional)
+:   Force deletion without confirmation.
 
 ## ibmcloud app routes
 {: #ibmcloud_app_routes}
@@ -215,14 +216,14 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 
 **Command options**:
 
-   <dl>
-   <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (required)</dt>
-   <dd>The name of the cf application or container group to be mapped with a route.</dd>
-   <dt>DOMAIN (required)</dt>
-   <dd>The domain of the route. For example, mybluemix.net.</dd>
-   <dt>-n <i>HOST_NAME</i> (optional)</dt>
-   <dd>The host name of the route. If not provided, the host name is set to the app name or container group name by default.</dd>
-   </dl>
+CF_APP_NAME|CONTAINER_GROUP_NAME (required)
+:   The name of the cf application or container group to be mapped with a route.
+
+DOMAIN (required)
+:   The domain of the route. For example, mybluemix.net.
+
+-n *HOST_NAME* (optional)
+:   The host name of the route. If not provided, the host name is set to the app name or container group name by default.
 
 **Examples:**
 
@@ -251,14 +252,14 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
 
 **Command options**:
 
-   <dl>
-   <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (required)</dt>
-   <dd>The name of the cf application or container group.</dd>
-   <dt>DOMAIN (required)</dt>
-   <dd>The domain of the route. For example, mybluemix.net.</dd>
-   <dt>-n <i>HOST_NAME</i> (optional)</dt>
-   <dd>The host name of the route. If not provided, the host name is set to app name or container group name by default.</dd>
-   </dl>
+CF_APP_NAME|CONTAINER_GROUP_NAME (required)
+:   The name of the cf application or container group.
+
+DOMAIN (required)
+:   The domain of the route. For example, mybluemix.net.
+
+-n *HOST_NAME* (optional)
+:   The host name of the route. If not provided, the host name is set to app name or container group name by default.
 
 **Examples:**
 

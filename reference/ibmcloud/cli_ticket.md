@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2021-12-15"
 
 keywords: cli, manage softlayer tickets, softlayer, classic infrastructure, user management, ibmcloud sl ticket
 
@@ -25,20 +25,20 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 {: #sl_ticket_attach}
 
 Attach devices to a ticket:
-```
+```bash
 ibmcloud sl ticket attach TICKETID [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--hardware</dt>
-<dd>The identifier for hardware to attach.</dd>
-<dt>--virtual</dt>
-<dd>The identifier for a virtual server to attach.</dd>
-</dl>
+
+--hardware
+:   The identifier for hardware to attach.
+
+--virtual
+:   The identifier for a virtual server to attach.
 
 **Examples**:
-```
+```bash
 ibmcloud sl ticket attach 7676767 --hardware 8675654
 ```
 {: codeblock}
@@ -47,30 +47,35 @@ ibmcloud sl ticket attach 7676767 --hardware 8675654
 {: #sl_ticket_create}
 
 Create a support ticket:
-```
+```bash
 ibmcloud sl ticket create [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--attachment</dt>
-<dd>Initial object ID number to attach to ticket.</dd>
-<dt>--rootpwd</dt>
-<dd>Root password that is associated with the attached device ID.</dd>
-<dt>--subject-id</dt>
-<dd>Required. The subject ID to use for the ticket, issue `ibmcloud sl ticket subjects` to get the list.</dd>
-<dt>--title</dt>
-<dd>Required. The title of the ticket.</dd>
-<dt>--body</dt>
-<dd>The ticket body.</dd>
-<dt>--priority</dt>
-<dd>Ticket priority [1|2|3|4], from 1 (Critical) to 4 (Minimal Impact). Only settable with Advanced and Premium support. See https://www.ibm.com/cloud/support.</dd>
-<dt>--attachment-type</dt>
-<dd>Specify the type of attachment，hardware or virtual. The default is hardware.</dd>
-</dl>
+
+--attachment
+:   Initial object ID number to attach to ticket.
+
+--rootpwd
+:   Root password that is associated with the attached device ID.
+
+--subject-id
+:   Required. The subject ID to use for the ticket, issue `ibmcloud sl ticket subjects` to get the list.
+
+--title
+:   Required. The title of the ticket.
+
+--body
+:   The ticket body.
+
+--priority
+:   Ticket priority [1|2|3|4], from 1 (Critical) to 4 (Minimal Impact). Only settable with Advanced and Premium support. See https://www.ibm.com/cloud/support.
+
+--attachment-type
+:   Specify the type of attachment，hardware or virtual. The default is hardware.
 
 **Examples**:
-```
+```bash
 ibmcloud sl ticket create --title "Example title" --subject-id 1522 --body "This is an example ticket. Please disregard."
 ```
 {: codeblock}
@@ -79,25 +84,25 @@ ibmcloud sl ticket create --title "Example title" --subject-id 1522 --body "This
 {: #sl_ticket_detach}
 
 Detach devices from a ticket:
-```
+```bash
 ibmcloud sl ticket detach TICKETID [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--hardware</dt>
-<dd>The identifier for hardware to detach.</dd>
-<dt>--virtual</dt>
-<dd>The identifier for a virtual server to detach.</dd>
-</dl>
+
+--hardware
+:   The identifier for hardware to detach.
+
+--virtual
+:   The identifier for a virtual server to detach.
 
 **Examples**:
-```
+```bash
 ibmcloud sl ticket detach 767676 --hardware 8675654
 ```
 {: codeblock}
 
-```
+```bash
 ibmcloud sl ticket detach 767676 --virtual 1234567
 ```
 {: codeblock}
@@ -106,23 +111,22 @@ ibmcloud sl ticket detach 767676 --virtual 1234567
 {: #sl_ticket_detail}
 
 Get details for a ticket:
-```
+```bash
 ibmcloud sl ticket detail TICKETID [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--count</dt>
-<dd>Number of updates.</dd>
-</dl>
+
+--count
+:   Number of updates.
 
 **Examples**:
-```
+```bash
 ibmcloud sl ticket detail 767676
 ```
 {: codeblock}
 
-```
+```bash
 ibmcloud sl ticket detail 767676 --count 10
 ```
 {: codeblock}
@@ -131,23 +135,23 @@ ibmcloud sl ticket detail 767676 --count 10
 {: #sl_ticket_list}
 
 List tickets:
-```
+```bash
 ibmcloud sl ticket list [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--open</dt>
-<dd>Display only open tickets.</dd>
-<dt>--closed</dt>
-<dd>Display only closed tickets.</dd>
-</dl>
+
+--open
+:   Display only open tickets.
+
+--closed
+:   Display only closed tickets.
 
 ## ibmcloud sl ticket subjects
 {: #sl_ticket_subjects}
 
 List Subject IDs for ticket creation:
-```
+```bash
 ibmcloud sl ticket subjects
 ```
 {: codeblock}
@@ -156,7 +160,7 @@ ibmcloud sl ticket subjects
 {: #sl_ticket_summary}
 
 View the summary information about tickets:
-```
+```bash
 ibmcloud sl ticket summary
 ```
 
@@ -164,12 +168,12 @@ ibmcloud sl ticket summary
 {: #sl_ticket_update}
 
 Adds an update to an existing ticket:
-```
+```bash
 ibmcloud sl ticket update TICKETID ["CONTENTS"]
 ```
 
 **Examples**:
-```
+```bash
 ibmcloud sl ticket update 767676 "A problem has been detected."
 ```
 {: codeblock}
@@ -178,18 +182,17 @@ ibmcloud sl ticket update 767676 "A problem has been detected."
 {: #sl_ticket_upload}
 
 Adds an attachment to an existing ticket:
-```
+```bash
 ibmcloud sl ticket upload TICKETID FILEPATH
 ```
 
 **Command options**:
-<dl>
-<dt>--name</dt>
-<dd>The name of the attachment shown in the ticket.</dd>
-</dl>
+
+--name
+:   The name of the attachment shown in the ticket.
 
 **Examples**:
-```
+```bash
 ibmcloud sl ticket upload 767676 "/home/user/screenshot.png"
 ```
 {: codeblock}

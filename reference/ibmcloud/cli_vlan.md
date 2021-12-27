@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2021-12-15"
 
 keywords: cli, classic infrastructure cli, vlan cli, classic vlan cli, ibmcloud sl vlan, manage virtual network cli
 
@@ -32,18 +32,21 @@ ibmcloud sl vlan create [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-t, --vlan-type</dt>
-<dd>The type of the VLAN, either public or private.</dd>
-<dt>-r, --router</dt>
-<dd>The host name of the router.</dd>
-<dt>-d, --datacenter</dt>
-<dd>The short name of the datacenter.</dd>
-<dt>-n, --name</dt>
-<dd>The name of the VLAN.</dd>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-t, --vlan-type
+:   The type of the VLAN, either public or private.
+
+-r, --router
+:   The host name of the router.
+
+-d, --datacenter
+:   The short name of the datacenter.
+
+-n, --name
+:   The name of the VLAN.
+
+-f, --force
+:   Force operation without confirmation.
 
 **Examples**:
 ```bash
@@ -62,10 +65,9 @@ ibmcloud sl vlan cancel IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-f, --force
+:   Force operation without confirmation.
 
 **Examples**:
 ```bash
@@ -84,12 +86,12 @@ ibmcloud sl vlan detail IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--no-vs</dt>
-<dd>Hide virtual server listing.</dd>
-<dt>--no-hardware</dt>
-<dd>Hide hardware listing.</dd>
-</dl>
+
+--no-vs
+:   Hide virtual server listing.
+
+--no-hardware
+:   Hide hardware listing.
 
 **Examples**:
 ```bash
@@ -108,10 +110,9 @@ ibmcloud sl vlan edit IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-n, --name</dt>
-<dd>The name of the VLAN.</dd>
-</dl>
+
+-n, --name
+:   The name of the VLAN.
 
 **Examples**:
 ```bash
@@ -130,18 +131,21 @@ ibmcloud sl vlan list [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--sortby</dt>
-<dd>Column to sort by. Options are: id,number,name,firewall,datacenter,hardware,virtual_servers,public_ips.</dd>
-<dt>-d, --datacenter</dt>
-<dd>Filter by datacenter shortname.</dd>
-<dt>-n, --number</dt>
-<dd>Filter by VLAN number.</dd>
-<dt>--name</dt>
-<dd>Filter by VLAN name.</dd>
-<dt>--order</dt>
-<dd>Filter by ID of the order that purchased the VLAN.</dd>
-</dl>
+
+--sortby
+:   Column to sort by. Options are: id, number, name, firewall, datacenter, hardware, virtual_servers, public_ips.
+
+-d, --datacenter
+:   Filter by datacenter shortname.
+
+-n, --number
+:   Filter by VLAN number.
+
+--name
+:   Filter by VLAN name.
+
+--order
+:   Filter by ID of the order that purchased the VLAN.
 
 **Examples**:
 ```bash

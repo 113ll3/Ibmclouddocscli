@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-12-17"
+lastupdated: "2021-12-17"
 
 keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
@@ -27,27 +27,29 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 {: #sl_hardware_cancel}
 
 Cancel a hardware server:
-```
+```bash
 ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-i, --immediate</dt>
-<dd>Cancels the server immediately (instead of on the billing anniversary).</dd>
-<dt>-r, --reason</dt>
-<dd>An optional cancellation reason. See `ibmcloud sl hardware cancel-reasons` for a list of available options.</dd>
-<dt>-c, --comment</dt>
-<dd>An optional comment to add to the cancellation ticket.</dd>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-i, --immediate
+:   Cancels the server immediately (instead of on the billing anniversary).
+
+-r, --reason
+:   An optional cancellation reason. See `ibmcloud sl hardware cancel-reasons` for a list of available options.
+
+-c, --comment
+:   An optional comment to add to the cancellation ticket.
+
+-f, --force
+:   Force operation without confirmation.
 
 ## ibmcloud sl hardware cancel-reasons
 {: #sl_hardware_cancel_reasons}
 
 Display a list of cancellation reasons:
-```
+```bash
 ibmcloud sl hardware cancel-reasons
 ```
 
@@ -55,49 +57,62 @@ ibmcloud sl hardware cancel-reasons
 {: #sl_hardware_create}
 
 Order/create a hardware server:
-```
+```bash
 ibmcloud sl hardware create [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-H, --hostname</dt>
-<dd>Required. Host portion of the FQDN.</dd>
-<dt>-D, --domain</dt>
-<dd>Required. Domain portion of the FQDN.</dd>
-<dt>-s, --size</dt>
-<dd>Required. Hardware size.</dd>
-<dt>-o, --os</dt>
-<dd>Required. OS installation code.</dd>
-<dt>-d, --datacenter</dt>
-<dd>Required. Datacenter shortname.</dd>
-<dt>-p, --port-speed</dt>
-<dd>Required. Port speed.</dd>
-<dt>-b, --billing</dt>
-<dd>Billing rate, either hourly or monthly, default is hourly if not specified.</dd>
-<dt>-i, --post-install</dt>
-<dd>Post-install script to download.</dd>
-<dt>-k, --key</dt>
-<dd>SSH keys to add to the root user, multiple occurrence allowed.</dd>
-<dt>-n, --no-public</dt>
-<dd>Private network only.</dd>
-<dt>-e, --extra</dt>
-<dd>Extra options, multiple occurrence allowed.</dd>
-<dt>-t, --test</dt>
-<dd>Do not actually create the virtual server.</dd>
-<dt>-m, --template</dt>
-<dd>A template file that defaults the command line options.</dd>
-<dt>-x, --export</dt>
-<dd>Exports options to a template file.</dd>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-H, --hostname
+:   Required. Host portion of the FQDN.
+
+-D, --domain
+:   Required. Domain portion of the FQDN.
+
+-s, --size
+:   Required. Hardware size.
+
+-o, --os
+:   Required. OS installation code.
+
+-d, --datacenter
+:   Required. Datacenter shortname.
+
+-p, --port-speed
+:   Required. Port speed.
+
+-b, --billing
+:   Billing rate, either hourly or monthly, default is hourly if not specified.
+
+-i, --post-install
+:   Post-install script to download.
+
+-k, --key
+:   SSH keys to add to the root user, multiple occurrence allowed.
+
+-n, --no-public
+:   Private network only.
+
+-e, --extra
+:   Extra options, multiple occurrence allowed.
+
+-t, --test
+:   Do not actually create the virtual server.
+
+-m, --template
+:   A template file that defaults the command line options.
+
+-x, --export
+:   Exports options to a template file.
+
+-f, --force
+:   Force operation without confirmation.
 
 ## ibmcloud sl hardware create-options
 {: #sl_hardware_create_options}
 
 View the server order options for a chassis:
-```
+```bash
 ibmcloud sl hardware create-options
 ```
 
@@ -105,7 +120,7 @@ ibmcloud sl hardware create-options
 {: #sl_hardware_credentials}
 
 List hardware server credentials:
-```
+```bash
 ibmcloud sl hardware credentials IDENTIFIER
 ```
 
@@ -113,115 +128,129 @@ ibmcloud sl hardware credentials IDENTIFIER
 {: #sl_hardware_detail}
 
 Get details for a hardware server:
-```
+```bash
 ibmcloud sl hardware detail IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-p, --passwords</dt>
-<dd>Show passwords (check over your shoulder!).</dd>
-<dt>-c, --price</dt>
-<dd>Show associated prices.</dd>
-</dl>
+
+-p, --passwords
+:   Show passwords (check over your shoulder!).
+
+-c, --price
+:   Show associated prices.
 
 ## ibmcloud sl hardware edit
 {: #sl_hardware_edit}
 
 Edit hardware server details:
-```
+```bash
 ibmcloud sl hardware edit IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-H, --hostname</dt>
-<dd>Host portion of the FQDN.</dd>
-<dt>-D, --domain</dt>
-<dd>Domain portion of the FQDN.</dd>
-<dt>-g, --tag</dt>
-<dd>Tags to set or empty string to remove all.</dd>
-<dt>-F, --userfile</dt>
-<dd>Read user data from a file.</dd>
-<dt>-u, --userdata</dt>
-<dd>User defined metadata string.</dd>
-<dt>-p, --public-speed</dt>
-<dd>Public port speed, options are: 0,10,100,1000,10000.</dd>
-<dt>-v, --private-speed</dt>
-<dd>Private port speed, options are: 0,10,100,1000,10000.</dd>
-</dl>
+
+-H, --hostname
+:   Host portion of the FQDN.
+
+-D, --domain
+:   Domain portion of the FQDN.
+
+-g, --tag
+:   Tags to set or empty string to remove all.
+
+-F, --userfile
+:   Read user data from a file.
+
+-u, --userdata
+:   User defined metadata string.
+
+-p, --public-speed
+:   Public port speed, options are: 0,10,100,1000,10000.
+
+-v, --private-speed
+:   Private port speed, options are: 0,10,100,1000,10000.
 
 ## ibmcloud sl hardware list
 {: #sl_hardware_list}
 
 List hardware servers:
-```
+```bash
 ibmcloud sl hardware list [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-c, --cpu</dt>
-<dd>Filter by number of CPU cores.</dd>
-<dt>-D, --domain</dt>
-<dd>Filter by domain.</dd>
-<dt>-H, --hostname</dt>
-<dd>Filter by host name.</dd>
-<dt>-d, --datacenter</dt>
-<dd>Filter by datacenter.</dd>
-<dt>-m, --memory</dt>
-<dd>Filter by memory in gigabytes.</dd>
-<dt>-n, --network</dt>
-<dd>Filter by network port speed in Mbps.</dd>
-<dt>-g, --tag</dt>
-<dd>Filter by tags. You can specify more than one.</dd>
-<dt>-p, --public-ip</dt>
-<dd>Filter by public IP address.</dd>
-<dt>-v, --private-ip</dt>
-<dd>Filter by private IP address.</dd>
-<dt>-o, --order</dt>
-<dd>Filter by the ID of the order that purchased the hardware server.</dd>
-<dt>--owner</dt>
-<dd>Filter by ID of the owner.</dd>
-<dt>--sortby</dt>
-<dd>Column to sort by, default:hostname, option:id,guid,hostname,domain,public_ip,private_ip,cpu,memory,os,datacenter,status,ipmi_ip,created,created_by.</dd>
-<dt>--column</dt>
-<dd>Column to display,  options are: id,hostname,domain,public_ip,private_ip,datacenter,status,guid,cpu,memory,os,ipmi_ip,created,created_by,tags. This option can be specified multiple times.</dd>
-</dl>
+
+-c, --cpu
+:   Filter by number of CPU cores.
+
+-D, --domain
+:   Filter by domain.
+
+-H, --hostname
+:   Filter by host name.
+
+-d, --datacenter
+:   Filter by datacenter.
+
+-m, --memory
+:   Filter by memory in GB.
+
+-n, --network
+:   Filter by network port speed in Mbps.
+
+-g, --tag
+:   Filter by tags. You can specify more than one.
+
+-p, --public-ip
+:   Filter by public IP address.
+
+-v, --private-ip
+:   Filter by private IP address.
+
+-o, --order
+:   Filter by the ID of the order that purchased the hardware server.
+
+--owner
+:   Filter by ID of the owner.
+
+--sortby
+:   Column to sort by, default:hostname, option:id,guid,hostname,domain,public_ip,private_ip,cpu,memory,os,datacenter,status,ipmi_ip,created,created_by.
+
+--column
+:   Column to display,  options are: id,hostname,domain,public_ip,private_ip,datacenter,status,guid,cpu,memory,os,ipmi_ip,created,created_by,tags. This option can be specified multiple times.
 
 ## ibmcloud sl hardware power-cycle
 {: #sl_hardware_power_cycle}
 
 Power cycle a server:
-```
+```bash
 ibmcloud sl hardware power-cycle IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-f, --force
+:   Force operation without confirmation.
 
 ## ibmcloud sl hardware power-off
 {: #sl_hardware_power_off}
 
 Power off an active server:
-```
+```bash
 ibmcloud sl hardware power-off IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-f, --force
+:   Force operation without confirmation.
 
 ## ibmcloud sl hardware power-on
 {: #sl_hardware_power_on}
 
 Power on a server:
-```
+```bash
 ibmcloud sl hardware power-on IDENTIFIER
 ```
 
@@ -229,85 +258,89 @@ ibmcloud sl hardware power-on IDENTIFIER
 {: #sl_hardware_reboot}
 
 Reboot an active server:
-```
+```bash
 ibmcloud sl hardware reboot IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--hard</dt>
-<dd>Perform a hard reboot.</dd>
-<dt>--soft</dt>
-<dd>Perform a soft reboot.</dd>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+--hard
+:   Perform a hard reboot.
+
+--soft
+:   Perform a soft reboot.
+
+-f, --force
+:   Force operation without confirmation.
 
 ## ibmcloud sl hardware reload
 {: #sl_hardware_reload}
 
 Reload operating system on a server:
-```
+```bash
 ibmcloud sl hardware reload IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-i, --postinstall</dt>
-<dd>Post-install script to download, only HTTPS executes, HTTP leaves file in /root.</dd>
-<dt>-k, --key</dt>
-<dd>IDs of SSH key to add to the root user. You can specify more than one.</dd>
-<dt>-b, --upgrade-bios</dt>
-<dd>Upgrade BIOS.</dd>
-<dt>-w, --upgrade-firmware</dt>
-<dd>Upgrade all hard disk drive firmware.</dd>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-i, --postinstall
+:   Post-install script to download, only HTTPS executes, HTTP leaves file in /root.
+
+-k, --key
+:   IDs of SSH key to add to the root user. You can specify more than one.
+
+-b, --upgrade-bios
+:   Upgrade BIOS.
+
+-w, --upgrade-firmware
+:   Upgrade all hard disk drive firmware.
+
+-f, --force
+:   Force operation without confirmation.
 
 ## ibmcloud sl hardware rescue
 {: #sl_hardware_rescue}
 
 Reboot server into a rescue image:
-```
+```bash
 ibmcloud sl hardware rescue IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-f, --force
+:   Force operation without confirmation.
 
 ## ibmcloud sl hardware toggle-ipmi
 {: #sl_hardware_toggle-ipmi}
 
 Toggle the IPMI interface on and off. This command is asynchronous.
-```
+```bash
 ibmcloud sl hardware toggle-ipmi IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--enable</dt>
-<dd>Enable the IPMI interface.</dd>
-<dt>--disable</dt>
-<dd>Disable the IPMI interface.</dd>
-<dt>-q, --quiet</dt>
-<dd>Suppress verbose output.</dd>
-</dl>
+
+--enable
+:   Enable the IPMI interface.
+
+--disable
+:   Disable the IPMI interface.
+
+-q, --quiet
+:   Suppress verbose output.
 
 ## ibmcloud sl hardware update-firmware
 {: #sl_hardware_update_firmware}
 
 Update server firmware:
-```
+```bash
 ibmcloud sl hardware update-firmware IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-f, --force
+:   Force operation without confirmation.
+
 

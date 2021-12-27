@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-10-05"
+lastupdated: "2021-12-15"
 
 keywords: cli, classic infrastructure, load balancer, loadbal
 
@@ -25,13 +25,14 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 {: #sl_loadbal_list}
 
 List active load balancers:
-```
+```bash
 ibmcloud sl loadbal list
 ```
  
 ### Examples
 {: #examples-}
-```
+
+```bash
 ibmcloud sl loadbal list
 ```
 {: codeblock}
@@ -40,7 +41,7 @@ ibmcloud sl loadbal list
 {: #sl_loadbal_order}
 
 Order a load balancer:
-```
+```bash
 ibmcloud sl loadbal order (-n, --name NAME) (-d, --datacenter DATACENTER) (-t, --type PublicToPrivate | PrivateToPrivate | PublicToPublic ) [-l, --label LABEL] [ -s, --subnet SUBNET_ID] [--frontend-protocol PROTOCOL] [--frontend-port PORT] [--backend-protocol PROTOCOL] [--backend-port PORT] [-m, --method METHOD] [-c, --connections CONNECTIONS] [--sticky cookie | source-ip] [--use-public-subnet] [--verify]
 ```
 
@@ -88,7 +89,8 @@ ibmcloud sl loadbal order (-n, --name NAME) (-d, --datacenter DATACENTER) (-t, -
  
 ### Examples
 {: #examples-sl_loadbal_order}
-```
+
+```bash
 ibmcloud sl loadbal order -n my-lb -d DALLAS10 -t PublicToPrivate -s 1234567 --frontend-protocol TCP --frontend-port 123 --backend-protocol TCP --backend-port 123 -m LEASTCONNECTION -c 100 --sticky cookie
 ```
 {: codeblock}
@@ -97,7 +99,7 @@ ibmcloud sl loadbal order -n my-lb -d DALLAS10 -t PublicToPrivate -s 1234567 --f
 {: #sl_loadbal_order-options}
 
 List options for order a load balancer:
-```
+```bash
 ibmcloud sl loadbal order-options [-d, --datacenter DATACENTER]
 ```
 
@@ -109,7 +111,8 @@ ibmcloud sl loadbal order-options [-d, --datacenter DATACENTER]
  
 ### Examples
 {: #examples-sl_loadbal_order-options}
-```
+
+```bash
 ibmcloud sl loadbal order-options
 ```
 {: codeblock}
@@ -118,7 +121,7 @@ ibmcloud sl loadbal order-options
 {: #sl_loadbal_protocol-add}
 
 Add a load balancer protocol:
-```
+```bash
 ibmcloud sl loadbal protocol-add (--id LOADBAL_ID) [--front-protocol PROTOCOL] [back-protocol PROTOCOL] [--front-port PORT] [--back-port PORT] [-m, --method METHOD] [-c, --connections CONNECTIONS] [--sticky cookie | source-ip]
 ```
 
@@ -151,7 +154,8 @@ ibmcloud sl loadbal protocol-add (--id LOADBAL_ID) [--front-protocol PROTOCOL] [
  
 ### Examples
 {: #examples-sl_loadbal_protocol-add}
-```
+
+```bash
 ibmcloud sl loadbal protocol-add --id 123456 -m ROUNDROBIN --sticky cookie
 ```
 {: codeblock}
@@ -160,7 +164,7 @@ ibmcloud sl loadbal protocol-add --id 123456 -m ROUNDROBIN --sticky cookie
 {: #sl_loadbal_protocol-delete}
 
 Delete a protocol:
-```
+```bash
 ibmcloud sl loadbal protocol-delete (--lb-id LOADBAL_ID) (--protocol-uuid PROTOCOL_UUID)
 ```
 
@@ -175,7 +179,8 @@ ibmcloud sl loadbal protocol-delete (--lb-id LOADBAL_ID) (--protocol-uuid PROTOC
  
 ### Examples
 {: #examples-sl_loadbal_protocol-delete}
-```
+
+```bash
 ibmcloud sl loadbal protocol-delete --lb-id 123 --protocol-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd
 ```
 {: codeblock}
@@ -184,7 +189,7 @@ ibmcloud sl loadbal protocol-delete --lb-id 123 --protocol-uuid 27204f2c-1853-4f
 {: #sl_loadbal_member-add}
 
 Add a load balancer member:
-```
+```bash
 ibmcloud sl loadbal member-add (--id LOADBAL_ID) (--ip PRIVATE_IP)
 ```
 
@@ -199,7 +204,8 @@ ibmcloud sl loadbal member-add (--id LOADBAL_ID) (--ip PRIVATE_IP)
  
 ### Examples
 {: #examples-sl_loadbal_member-add}
-```
+
+```bash
 ibmcloud sl loadbal member-add --id 939818 --ip 10.0.0.1
 ```
 {: codeblock}
@@ -208,7 +214,7 @@ ibmcloud sl loadbal member-add --id 939818 --ip 10.0.0.1
 {: #sl_loadbal_member-delete}
 
 Remove a load balancer member:
-```
+```bash
 ibmcloud sl loadbal member-delete (--lb-id LOADBAL_ID) (-m, --member-uuid MEMBER_UUID)
 ```
 
@@ -223,7 +229,8 @@ ibmcloud sl loadbal member-delete (--lb-id LOADBAL_ID) (-m, --member-uuid MEMBER
  
 ### Examples
 {: #examples-sl_loadbal_member-delete}
-```
+
+```bash
 ibmcloud sl loadbal member-delete --lb-id 123456 --member-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd
 
 ```
@@ -233,7 +240,7 @@ ibmcloud sl loadbal member-delete --lb-id 123456 --member-uuid 27204f2c-1853-4fd
 {: #sl_loadbal_cancel}
 
 Cancel an existing load balancer:
-```
+```bash
 ibmcloud sl loadbal cancel (--id LOADBAL_ID) [-f, --force]
 ```
 
@@ -248,7 +255,8 @@ ibmcloud sl loadbal cancel (--id LOADBAL_ID) [-f, --force]
  
 ### Examples
 {: #examples-sl_loadbal_cancel}
-```
+
+```bash
 ibmcloud sl loadbal cancel --id 123456 -f
 ```
 {: codeblock}
@@ -257,7 +265,7 @@ ibmcloud sl loadbal cancel --id 123456 -f
 {: #sl_loadbal_detail}
 
 Get load balancer details:
-```
+```bash
 ibmcloud sl loadbal detail (--id LOADBAL_ID)
 ```
 
@@ -269,7 +277,8 @@ ibmcloud sl loadbal detail (--id LOADBAL_ID)
  
 ### Examples
 {: #examples-sl_loadbal_detail}
-```
+
+```bash
 ibmcloud sl loadbal detail --id 123456
 ```
 {: codeblock}
@@ -278,7 +287,7 @@ ibmcloud sl loadbal detail --id 123456
 {: #sl_loadbal_health-edit}
 
 Edit load balancer health check:
-```
+```bash
 ibmcloud sl loadbal health-edit (--lb-id LOADBAL_ID)  (--health-uuid HEALTH_CHECK_UUID) [-i, --interval INTERVAL] [-r, --retry RETRY] [-t, --timeout TIMEOUT] [-u, --url URL]
 ```
 
@@ -305,7 +314,8 @@ ibmcloud sl loadbal health-edit (--lb-id LOADBAL_ID)  (--health-uuid HEALTH_CHEC
  
 ### Examples
 {: #examples-sl_loadbal_health-edit}
-```
+
+```bash
 ibmcloud sl loadbal health-edit --lb-id 123456  --health-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd -i 2
 ```
 {: codeblock}
@@ -313,8 +323,8 @@ ibmcloud sl loadbal health-edit --lb-id 123456  --health-uuid 27204f2c-1853-4fd2
 ## ibmcloud sl loadbal l7member-add
 {: #sl_loadbal_l7member-add}
 
-Add a L7 pool member:
-```
+Add an L7 pool member:
+```bash
 ibmcloud sl loadbal l7member-add (--pool-uuid L7POOL_UUID) (--address IP_ADDRESS) (--port PORT)
 ```
 
@@ -332,7 +342,8 @@ ibmcloud sl loadbal l7member-add (--pool-uuid L7POOL_UUID) (--address IP_ADDRESS
  
 ### Examples
 {: #examples-sl_loadbal_l7member-add}
-```
+
+```bash
 ibmcloud sl loadbal l7member-add --pool-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd --address 10.0.0.1 --port 80
 ```
 {: codeblock}
@@ -341,7 +352,7 @@ ibmcloud sl loadbal l7member-add --pool-uuid 27204f2c-1853-4fd2-9c97-1654cd536ed
 {: #sl_loadbal_l7member-delete}
 
 Remove a load balancer member:
-```
+```bash
 ibmcloud sl loadbal l7member-delete (--pool-uuid L7POOL_UUID) (--member-uuid L7MEMBER_UUID)
 ```
 
@@ -356,7 +367,8 @@ ibmcloud sl loadbal l7member-delete (--pool-uuid L7POOL_UUID) (--member-uuid L7M
  
 ### Examples
 {: #examples-sl_loadbal_l7member-delete}
-```
+
+```bash
 ibmcloud sl loadbal l7member-delete --pool-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd --member-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd
 ```
 {: codeblock}
@@ -365,7 +377,7 @@ ibmcloud sl loadbal l7member-delete --pool-uuid 27204f2c-1853-4fd2-9c97-1654cd53
 {: #sl_loadbal_l7polocies}
 
 List L7 policies:
-```
+```bash
 ibmcloud sl loadbal l7policies (--protocol-id PROTOCOL_ID)
 ```
 
@@ -377,7 +389,8 @@ ibmcloud sl loadbal l7policies (--protocol-id PROTOCOL_ID)
  
 ### Examples
 {: #examples-sl_loadbal_l7polocies}
-```
+
+```bash
 ibmcloud sl loadbal l7policies --protocol-id 123456
 ```
 {: codeblock}
@@ -385,8 +398,8 @@ ibmcloud sl loadbal l7policies --protocol-id 123456
 ## ibmcloud sl loadbal l7policy-add
 {: #sl_loadbal_l7policy-add}
 
-Add a L7 policy:
-```
+Add an L7 policy:
+```bash
 ibmcloud sl loadbal l7policy-add (--protocol-uuid PROTOCOL_UUID) (-n, --name NAME) (-a,--action REJECT | REDIRECT_POOL | REDIRECT_URL) [-r,--redirect REDIRECT] [-p,--priority PRIORITY]
 ```
 
@@ -410,7 +423,8 @@ ibmcloud sl loadbal l7policy-add (--protocol-uuid PROTOCOL_UUID) (-n, --name NAM
  
 ### Examples
 {: #examples-sl_loadbal_l7policy-add}
-```
+
+```bash
 ibmcloud sl loadbal l7policy-add --protocol-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd -n my-policy -a REJECT
 ```
 {: codeblock}
@@ -418,8 +432,8 @@ ibmcloud sl loadbal l7policy-add --protocol-uuid 27204f2c-1853-4fd2-9c97-1654cd5
 ## ibmcloud sl loadbal l7policy-delete
 {: #sl_loadbal_l7policy-delete}
 
-Delete a L7 pool:
-```
+Delete an L7 pool:
+```bash
 ibmcloud sl loadbal l7policy-delete (--policy-id POLICY_ID) [-f, --force]
 ```
 
@@ -434,7 +448,8 @@ ibmcloud sl loadbal l7policy-delete (--policy-id POLICY_ID) [-f, --force]
  
 ### Examples
 {: #examples-sl_loadbal_l7policy-delete}
-```
+
+```bash
 ibmcloud sl loadbal l7policy-delete --policy-id 27204f2c-1853-4fd2-9c97-1654cd536edd -f
 ```
 {: codeblock}
@@ -442,8 +457,8 @@ ibmcloud sl loadbal l7policy-delete --policy-id 27204f2c-1853-4fd2-9c97-1654cd53
 ## ibmcloud sl loadbal l7pool-add
 {: #sl_loadbal_l7pool-add}
 
-Add a L7 pool:
-```
+Add an L7 pool:
+```bash
 ibmcloud sl loadbal l7pool-add (--id LOADBAL_ID) (-n, --name NAME) [-m, --method METHOD] [-s, --server BACKEND_IP:PORT] [-p, --protocol PROTOCOL] [--health-path PATH] [--health-interval INTERVAL] [--health-retry RETRY] [--health-timeout TIMEOUT] [--sticky cookie | source-ip]
 ```
 
@@ -482,7 +497,8 @@ ibmcloud sl loadbal l7pool-add (--id LOADBAL_ID) (-n, --name NAME) [-m, --method
  
 ### Examples
 {: #examples-sl_loadbal_l7pool-add}
-```
+
+```bash
 ibmcloud sl loadbal l7pool-add --id 123 -n my-pool -m ROUNDROBIN
 ```
 {: codeblock}
@@ -490,8 +506,8 @@ ibmcloud sl loadbal l7pool-add --id 123 -n my-pool -m ROUNDROBIN
 ## ibmcloud sl loadbal l7pool-delete
 {: #sl_loadbal_l7pool-delete}
 
-Delete a L7 pool:
-```
+Delete an L7 pool:
+```bash
 ibmcloud sl loadbal l7pool-delete (--pool-id L7POOL_ID)
 ```
 
@@ -503,7 +519,8 @@ ibmcloud sl loadbal l7pool-delete (--pool-id L7POOL_ID)
  
 ### Examples
 {: #examples-sl_loadbal_l7pool-delete}
-```
+
+```bash
 ibmcloud sl loadbal l7pool-delete --pool-id 123456
 ```
 {: codeblock}
@@ -512,7 +529,7 @@ ibmcloud sl loadbal l7pool-delete --pool-id 123456
 {: #sl_loadbal_l7pool-detail}
 
 Show L7 pool details:
-```
+```bash
 ibmcloud sl loadbal l7pool-detail (--pool-id L7POOL_ID)
 ```
 
@@ -524,7 +541,8 @@ ibmcloud sl loadbal l7pool-detail (--pool-id L7POOL_ID)
  
 ### Examples
 {: #examples-sl_loadbal_l7pool-detail}
-```
+
+```bash
 ibmcloud sl loadbal l7pool-detail --pool-id 123456
 ```
 {: codeblock}
@@ -532,8 +550,8 @@ ibmcloud sl loadbal l7pool-detail --pool-id 123456
 ## ibmcloud sl loadbal l7pool-edit
 {: #sl_loadbal_l7pool-edit}
 
-Edit a L7 pool:
-```
+Edit an L7 pool:
+```bash
 ibmcloud sl loadbal l7pool-edit (--pool-uuid L7POOL_UUID) [-m, --method METHOD] [-s, --server BACKEND_IP:PORT] [-p, --protocol PROTOCOL] [--health-path PATH] [--health-interval INTERVAL] [--health-retry RETRY] [--health-timeout TIMEOUT] [--sticky cookie | source-ip]
 ```
 
@@ -569,7 +587,8 @@ ibmcloud sl loadbal l7pool-edit (--pool-uuid L7POOL_UUID) [-m, --method METHOD] 
  
 ### Examples
 {: #examples-sl_loadbal_l7pool-edit}
-```
+
+```bash
 ibmcloud sl loadbal l7pool-edit --pool-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd -m ROUNDROBIN
 ```
 {: codeblock}
@@ -577,8 +596,8 @@ ibmcloud sl loadbal l7pool-edit --pool-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd
 ## ibmcloud sl loadbal l7rule-add
 {: #sl_loadbal_l7rule-add}
 
-Add a L7 rule:
-```
+Add an L7 rule:
+```bash
 ibmcloud sl loadbal l7rule-add (--policy-uuid L7POLICY_UUID) (-t, --type HOST_NAME | FILE_TYPE | HEADER | COOKIE | PATH ) (-c, --compare-type EQUAL_TO | ENDS_WITH | STARTS_WITH | REGEX | CONTAINS) (-v,--value VALUE) [-k,--key KEY] [--invert 0 | 1]
 ```
 
@@ -606,8 +625,8 @@ ibmcloud sl loadbal l7rule-add (--policy-uuid L7POLICY_UUID) (-t, --type HOST_NA
 ## ibmcloud sl loadbal l7rule-delete
 {: #sl_loadbal_l7rule-delete}
 
-Delete a L7 rule:
-```
+Delete an L7 rule:
+```bash
 ibmcloud sl loadbal l7rule-delete (--policy-uuid L7POLICY_UUID) (--rule-uuid L7RULE_UUID) [-f, --force]
 ```
 
@@ -625,7 +644,8 @@ ibmcloud sl loadbal l7rule-delete (--policy-uuid L7POLICY_UUID) (--rule-uuid L7R
  
 ### Examples
 {: #examples-sl_loadbal_l7rule-delete}
-```
+
+```bash
 ibmcloud sl loadbal l7rule-delete --policy-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd --rule-uuid 27204f2c-1853-4fd2-9c97-1654cd536edd -f
 
 ```
@@ -635,7 +655,7 @@ ibmcloud sl loadbal l7rule-delete --policy-uuid 27204f2c-1853-4fd2-9c97-1654cd53
 {: #sl_loadbal_l7rules}
 
 List L7 rules:
-```
+```bash
 ibmcloud sl loadbal l7rules (--policy-id Policy_ID)
 ```
 
@@ -647,7 +667,8 @@ ibmcloud sl loadbal l7rules (--policy-id Policy_ID)
  
 ### Examples
 {: #examples-sl_loadbal_l7rules}
-```
+
+```bash
 ibmcloud sl loadbal l7rules --policy-id 27204f2c-1853-4fd2-9c97-1654cd536edd
 ```
 {: codeblock}

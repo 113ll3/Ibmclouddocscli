@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2021-12-15"
 
 keywords: cli, ibmcloud sl call-api, classic infrastructure, API endpoints
 
@@ -30,20 +30,25 @@ ibmcloud sl call-api SERVICE METHOD [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--init</dt>
-<dd>Init parameter.</dd>
-<dt>--mask</dt>
-<dd>Object mask: use to limit fields returned.</dd>
-<dt>--parameters</dt>
-<dd>Append parameters to web call.</dd>
-<dt>--limit</dt>
-<dd>Result limit.</dd>
-<dt>--offset</dt>
-<dd>Result offset.</dd>
-<dt>--filter</dt>
-<dd>Object filters.</dd>
-</dl>
+
+--init
+:   Init parameter.
+
+--mask
+:   Object mask: use to limit fields returned.
+
+--parameters
+:   Append parameters to web call.
+
+--limit
+:   Result limit.
+
+--offset
+:   Result offset.
+
+--filter
+:   Object filters.
+
 
 **Examples**:
 ```bash

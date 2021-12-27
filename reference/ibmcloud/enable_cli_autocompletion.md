@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-05"
+lastupdated: "2021-12-15"
 
 keywords: cli, shell autocompletion, bash, linux shell, macos shell, autocompletion, autocompletion support, shell
 
@@ -25,20 +25,24 @@ Starting from version `0.7.0`, the {{site.data.keyword.cloud}} Command Line Inte
 ## Enabling autocompletion for Linux
 {: #shell-autocomplete-linux}
 
-* If you're using `Bash`, add 
+* If you're using `Bash`, add:
+
 `[[ -f /usr/local/ibmcloud/autocomplete/bash_autocomplete ]] && source /usr/local/ibmcloud/autocomplete/bash_autocomplete` into one of the following files:
 
-   * For Login shell: `~/.bash_profile`
-   * For Non-login shell: `~/.bashrc
+* For Login shell: `~/.bash_profile`
+* For Non-login shell: `~/.bashrc
   
-* If you're using `Zsh`: add 
+* If you're using `Zsh`: add:
+
 `source /usr/local/ibmcloud/autocomplete/zsh_autocomplete` into `~/.zshrc`.
 
 ## Enabling autocompletion support for macOS
 {: #shell-autocomplete-macos}
 
-* If you're using `Bash`: add 
+* If you're using `Bash`: add:
+
 `source /usr/local/ibmcloud/autocomplete/bash_autocomplete` into `~/.bash_profile`.
 
-* If you're using `Zsh`: add 
+* If you're using `Zsh`: add:
+
 `source /usr/local/ibmcloud/autocomplete/zsh_autocomplete` into `~/.zshrc`.

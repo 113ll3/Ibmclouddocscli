@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-12-15"
 
 keywords: cli, security cli, ssh keys cli, ssl cli, ibmcloud sl security, certificate cli, ibmcloud sl, sshkey-add, manage security cli
 
@@ -29,22 +29,24 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 {: #sl_security_sshkey_add}
 
 Add a new SSH key:
-```
+```bash
 ibmcloud sl security sshkey-add LABEL [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --in-file</dt>
-<dd>The id_rsa.pub file to import for this key.</dd>
-<dt>-k, --key</dt>
-<dd>The actual SSH key.</dd>
-<dt>--note</dt>
-<dd>Extra note to be associated with the key.</dd>
-</dl>
+
+-f, --in-file
+:   The id_rsa.pub file to import for this key.
+
+-k, --key
+:   The actual SSH key.
+
+--note
+:   Extra note to be associated with the key.
 
 **Examples**:
-```
+
+```bash
 ibmcloud sl security sshkey-add my_sshkey -f ~/.ssh/id_rsa.pub --note mykey
 ```
 {: codeblock}
@@ -55,20 +57,20 @@ This command adds an SSH key named `my_sshkey` from file ~/.ssh/id_rsa.pub with 
 {: #sl_security_sshkey_edit}
 
 Edit an SSH key:
-```
+```bash
 ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--label</dt>
-<dd>The new label for the key.</dd>
-<dt>--note</dt>
-<dd>New notes for the key.</dd>
-</dl>
+
+--label
+:   The new label for the key.
+
+--note
+:   New notes for the key.
 
 **Examples**:
-```
+```bash
 ibmcloud sl security sshkey-edit 12345678 --label IBMCloud --note testing
 ```
 {: codeblock}
@@ -79,18 +81,17 @@ This command updates the SSH key with ID `12345678` and sets label to `IBMCloud`
 {: #sl_security_sshkey_list}
 
 List SSH keys on your account:
-```
+```bash
 ibmcloud sl security sshkey-list [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--sortby</dt>
-<dd>Column to sort by. Options are: id,label,fingerprint,note.</dd>
-</dl>
+
+--sortby
+:   Column to sort by. Options are: id,label,fingerprint,note.
 
 **Examples**:
-```
+```bash
 ibmcloud sl security sshkey-list --sortby label
 ```
 {: codeblock}
@@ -101,18 +102,17 @@ This command lists all SSH keys on current account and sorts them by label.
 {: #sl_security_sshkey_print}
 
 Prints out an SSH key to the screen:
-```
+```bash
 ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --out-file</dt>
-<dd>The public SSH key is written to this file.</dd>
-</dl>
+
+-f, --out-file
+:   The public SSH key is written to this file.
 
 **Examples**:
-```
+```bash
 ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
 {: codeblock}
@@ -123,18 +123,17 @@ This command shows the ID, label and notes of SSH key with ID 12345678 and write
 {: #sl_security_sshkey_remove}
 
 Permanently removes an SSH key:
-```
+```bash
 ibmcloud sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-f, --force
+:   Force operation without confirmation.
 
 **Examples**:
-```
+```bash
 ibmcloud sl security sshkey-remove 12345678 -f
 ```
 {: codeblock}
@@ -145,26 +144,29 @@ This command removes the SSH key with ID `12345678` without asking for confirmat
 {: #sl_security_cert_add}
 
 Add and upload SSL certificate details:
-```
+```bash
 ibmcloud sl security cert-add [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--crt</dt>
-<dd>Certificate file.</dd>
-<dt>--csr</dt>
-<dd>Certificate Signing Request file.</dd>
-<dt>--icc</dt>
-<dd>Intermediate Certificate file.</dd>
-<dt>--key</dt>
-<dd>Private Key file.</dd>
-<dt>--notes</dt>
-<dd>Add extra notes.</dd>
-</dl>
+
+--crt
+:   Certificate file.
+
+--csr
+:   Certificate Signing Request file.
+
+--icc
+:   Intermediate Certificate file.
+
+--key
+:   Private Key file.
+
+--notes
+:   Add extra notes.
 
 **Examples**:
-```
+```bash
 ibmcloud sl security cert-add --crt ~/ibm.com.cert --key ~/ibm.com.key
 ```
 {: codeblock}
@@ -175,26 +177,29 @@ This command adds certificate file: ~/ibm.com.cert and private key file ~/ibm.co
 {: #sl_security_cert_edit}
 
 Edit SSL certificate:
-```
+```bash
 ibmcloud sl security cert-edit IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--crt</dt>
-<dd>Certificate file.</dd>
-<dt>--csr</dt>
-<dd>Certificate Signing Request file.</dd>
-<dt>--icc</dt>
-<dd>Intermediate Certificate file.</dd>
-<dt>--key</dt>
-<dd>Private Key file.</dd>
-<dt>--notes</dt>
-<dd>Add extra notes.</dd>
-</dl>
+
+--crt
+:   Certificate file.
+
+--csr
+:   Certificate Signing Request file.
+
+--icc
+:   Intermediate Certificate file.
+
+--key
+:   Private Key file.
+
+--notes
+:   Add extra notes.
 
 **Examples**:
-```
+```bash
 ibmcloud sl security cert-edit 12345678 --key ~/ibm.com.key
 ```
 {: codeblock}
@@ -205,12 +210,12 @@ This command edits certificate with ID 12345678 and updates its private key with
 {: #sl_security_cert_download}
 
 Download SSL certificate and key files:
-```
+```bash
 ibmcloud sl security cert-download IDENTIFIER 
 ```
 
 **Examples**:
-```
+```bash
 ibmcloud sl security cert-download 12345678
 ```
 {: codeblock}
@@ -221,20 +226,20 @@ This command downloads four files to current directory for certificate with ID 1
 {: #sl_security_cert_list}
 
 List SSL certificates on your account:
-```
+```bash
 ibmcloud sl security cert-list [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--status</dt>
-<dd>Show certificates with this status, default is: all, options are: all,valid,expired.</dd>
-<dt>--sortby</dt>
-<dd>Column to sort by. Options are: id,common_name,days_until_expire,note.</dd>
-</dl>
+
+--status
+:   Show certificates with this status, default is: all, options are: all,valid,expired.
+
+--sortby
+:   Column to sort by. Options are: id,common_name,days_until_expire,note.
 
 **Examples**:
-```
+```bash
 ibmcloud sl security cert-list --status valid --sortby days_until_expire
 ```
 {: codeblock}
@@ -245,18 +250,17 @@ This command lists all valid certificates on current account and sort them by va
 {: #sl_security_cert_remove}
 
 Remove SSL certificate:
-```
+```bash
 ibmcloud sl security cert-remove IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-f, --force
+:   Force operation without confirmation.
 
 **Examples**:
-```
+```bash
 ibmcloud sl security cert-remove 12345678
 ```
 {: codeblock}

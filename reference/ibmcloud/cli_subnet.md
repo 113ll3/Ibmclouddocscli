@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-12-15"
 
-keywords: cli, manage subnet cli, classic infrastructure cli, subnet cli, ibmcloud sl subnet, subnet cli, newtork cli
+keywords: cli, manage subnet cli, classic infrastructure cli, subnet cli, ibmcloud sl subnet, subnet cli, network cli
 
 subcollection: cli
 
@@ -30,10 +30,9 @@ ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-f, --force
+Force operation without confirmation.
 
 **Examples**:
 ```bash
@@ -53,17 +52,18 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 
 **Command options**:
 
-<dl>
-<dt>--v6, --ipv6</dt>
-<dd>Order IPv6 Addresses.</dd>
-<dt>--test</dt>
-<dd>Do not order the subnet; just get a quote.</dd>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+--v6, --ipv6
+:   Order IPv6 Addresses.
+
+--test
+:   Do not order the subnet; just get a quote.
+
+-f, --force
+:   Force operation without confirmation.
 
 **Examples**:
-```
+```bash
 ibmcloud sl subnet create public 16 567
 ```
 {: codeblock}
@@ -74,20 +74,20 @@ This command creates a public subnet with 16 IPv4 addresses and places it on VLA
 {: #sl_subnet_detail}
 
 Get details of a subnet:
-```
+```bash
 ibmcloud sl subnet detail IDENTIFIER [OPTIONS]
 ```
 
-<strong>Command options</strong>:
-<dl>
-<dt>--no-vs</dt>
-<dd>Hide virtual server listing.</dd>
-<dt>--no-hardware</dt>
-<dd>Hide hardware listing.</dd>
-</dl>
+**Command options**:
+
+--no-vs
+:   Hide virtual server listing.
+
+--no-hardware
+:   Hide hardware listing.
 
 **Examples**:
-```
+```bash
 ibmcloud sl subnet detail 12345678
 ```
 {: codeblock}
@@ -98,32 +98,38 @@ This command shows detailed information about subnet with ID `12345678`, includi
 {: #sl_subnet_list}
 
 List all subnets on your account:
-```
+```bash
 ibmcloud sl subnet list [OPTIONS]
 ```
 
-<strong>Command options</strong>:
-<dl>
-<dt>--sortby</dt>
-<dd>Column to sort by. Options are: id,identifier,type,network_space,datacenter,vlan_id,IPs,hardware,vs.</dd>
-<dt>-d, --datacenter</dt>
-<dd>Filter by datacenter shortname.</dd>
-<dt>--identifier</dt>
-<dd>Filter by network identifier.</dd>
-<dt>-t, --subnet-type</dt>
-<dd>Filter by subnet type.</dd>
-<dt>--network-space</dt>
-<dd>Filter by network space.</dd>
-<dt>--v4, --ipv4</dt>
-<dd>Display only IPv4 subnets.</dd>
-<dt>--v6, --ipv6</dt>
-<dd>Display only IPv6 subnets.</dd>
-<dt>--order</dt>
-<dd>Filter by the ID of order that purchased the subnets.</dd>
-</dl>
+**Command options**:
+
+--sortby
+:   Column to sort by. Options are: id, identifier, type, network_space, datacenter, vlan_id, IPs, hardware ,vs.
+
+-d, --datacenter
+:   Filter by datacenter shortname.
+
+--identifier
+:   Filter by network identifier.
+
+-t, --subnet-type
+:   Filter by subnet type.
+
+--network-space
+:   Filter by network space.
+
+--v4, --ipv4
+:   Display only IPv4 subnets.
+
+--v6, --ipv6
+:   Display only IPv6 subnets.
+
+--order
+:   Filter by the ID of order that purchased the subnets.
 
 **Examples**:
-```
+```bash
 ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 {: codeblock}
@@ -134,12 +140,12 @@ This command lists IPv4 subnets on the current account, and filters by datacente
 {: #sl_subnet_lookup}
 
 Find an IP address and display its subnet and device information:
-```
+```bash
 ibmcloud sl subnet lookup IP_ADDRESS [OPTIONS]
 ```
 
 **Examples**:
-```
+```bash
 ibmcloud sl subnet lookup 9.125.235.255
 ```
 {: codeblock}

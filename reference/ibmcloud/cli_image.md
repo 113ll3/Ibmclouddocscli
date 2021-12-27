@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2021-12-15"
 
 keywords: cli, classic infrastructure, ibmcloud sl image, manage compute images, create compute image cli, compute image cli
 
@@ -25,12 +25,12 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 {: #sl_image_delete}
 
 Delete an image:
-```
+```bash
 ibmcloud sl image delete IDENTIFIER
 ```
 
 **Examples**:
-```
+```bash
 ibmcloud sl image delete 12345678
 ```
 {: codeblock}
@@ -41,12 +41,12 @@ This command deletes image with ID `12345678`.
 {: #sl_image_detail}
 
 Get details for an image:
-```
+```bash
 ibmcloud sl image detail IDENTIFIER 
 ```
 
 **Examples**:
-```
+```bash
 ibmcloud sl image detail 12345678
 ```
 {: codeblock}
@@ -57,22 +57,23 @@ This command gets details for image with ID `12345678`.
 {: #sl_image_edit}
 
 Edit the details of an image:
-```
+```bash
 ibmcloud sl image edit IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--name</dt>
-<dd>Name of the image.</dd>
-<dt>--note</dt>
-<dd>Add notes for the image.</dd>
-<dt>--tag</dt>
-<dd>Tags for the image.</dd>
-</dl>
+
+--name
+:   Name of the image.
+
+--note
+:   Add notes for the image.
+
+--tag
+:   Tags for the image.
 
 **Examples**:
-```
+```bash
 ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
 {: codeblock}
@@ -83,22 +84,23 @@ This command edits an image with ID `12345678` and set its name to `ubuntu16`, n
 {: #sl_image_list}
 
 List all images on your account:
-```
+```bash
 ibmcloud sl image list [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--name</dt>
-<dd>Filter on image name.</dd>
-<dt>--public</dt>
-<dd>Display only public images.</dd>
-<dt>--private</dt>
-<dd>Display only private images.</dd>
-</dl>
+
+--name
+:   Filter on image name.
+
+--public
+:   Display only public images.
+
+--private
+:   Display only private images.
 
 **Examples**:
-```
+```bash
 ibmcloud sl image list --public
 ```
 {: codeblock}

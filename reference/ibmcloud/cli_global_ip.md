@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2021-12-15"
 
 keywords: cli, classic infrastructure, ibmcloud sl globalip, globalip, global ip addresses, assign global ip
 
@@ -27,12 +27,12 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 {: #sl_globalip_assign}
 
 Assign a global IP to a target router or device:
-```
+```bash
 ibmcloud sl globalip assign IDENTIFIER TARGET [OPTIONS]
 ```
 
 **Examples**:
-```
+```bash
 ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
 {: codeblock}
@@ -43,18 +43,17 @@ This command assigns IP address with ID `12345678` to a target device whose IP a
 {: #sl_globalip_cancel}
 
 Cancel a global IP:
-```
+```bash
 ibmcloud sl globalip cancel IDENTIFIER [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+-f, --force
+:   Force operation without confirmation.
 
 **Examples**:
-```
+```bash
 ibmcloud sl globalip cancel 12345678
 ```
 {: codeblock}
@@ -65,22 +64,23 @@ This command cancels IP address with ID `12345678`.
 {: #sl_globalip_create}
 
 Create a global IP:
-```
+```bash
 ibmcloud sl globalip create [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--v6</dt>
-<dd>Order an IPv6 IP address.</dd>
-<dt>--test</dt>
-<dd>Test order.</dd>
-<dt>-f, --force</dt>
-<dd>Force operation without confirmation.</dd>
-</dl>
+
+--v6
+:   Order an IPv6 IP address.
+
+--test
+:   Test order.
+
+-f, --force
+:   Force operation without confirmation.
 
 **Examples**:
-```
+```bash
 ibmcloud sl globalip create --v6
 ```
 {: codeblock}
@@ -91,22 +91,23 @@ This command creates an IPv6 address.
 {: #sl_globalip_list}
 
 List all global IPs on your account:
-```
+```bash
 ibmcloud sl globalip list [OPTIONS]
 ```
 
 **Command options**:
-<dl>
-<dt>--v4</dt>
-<dd>Display IPv4 IPs only.</dd>
-<dt>--v6</dt>
-<dd>Display IPv6 IPs only.</dd>
-<dt>--order</dt>
-<dd>Filter by the ID of order that purchased this IP address.</dd>
-</dl>
+
+--v4
+:   Display IPv4 IPs only.
+
+--v6
+:   Display IPv6 IPs only.
+
+--order
+:   Filter by the ID of order that purchased this IP address.
 
 **Examples**:
-```
+```bash
 ibmcloud sl globalip list --v4
 ```
 {: codeblock}
@@ -117,12 +118,12 @@ This command lists all IPv4 addresses on the current account.
 {: #sl_globalip_unassign}
 
 Unassign a global IP from a target router or device:
-```
+```bash
 ibmcloud sl globalip unassign IDENTIFIER [OPTIONS]
 ```
 
 **Examples**:
-```
+```bash
 ibmcloud sl globalip unassign 12345678
 ```
 {: codeblock}
