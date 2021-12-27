@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2018, 2020
+  years: 2018, 2021
 lastupdated: "2021-12-15"
 
 keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
@@ -9,7 +9,6 @@ keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, s
 subcollection: cli
 
 ---
-
 
 {:shortdesc: .shortdesc}
 {:tip: .tip}
@@ -27,9 +26,11 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 {: #sl_file_access_authorize}
 
 Authorize hosts to access a volume:
+
 ```bash
 ibmcloud sl file access-authorize VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -60,9 +61,11 @@ This command authorizes virtual server with ID `87654321` to access volume with 
 {: #sl_file_access_list}
 
 List hosts that are authorized to access the volume:
+
 ```bash
 ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -84,9 +87,11 @@ This command lists all hosts that are authorized to access volume with ID `12345
 {: #sl_file_access_revoke}
 
 Revoke authorization for hosts that access a specific volume:
+
 ```bash
 ibmcloud sl file access-revoke VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -117,9 +122,11 @@ This command revokes access of virtual server with ID `87654321` to volume with 
 {: #sl_file_replica_failback}
 
 Fail back a file volume from replica:
+
 ```bash
 ibmcloud sl file replica-failback VOLUME_ID
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -133,9 +140,11 @@ This command performs failback operation for volume with ID `12345678`.
 {: #sl_file_replica_failover}
 
 Fail over a file volume to the specified replica volume:
+
 ```bash
 ibmcloud sl file replica-failover VOLUME_ID REPLICA_ID
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -152,6 +161,7 @@ List suitable replication datacenters for the specified volume:
 ```bash
 ibmcloud sl file replica-locations VOLUME_ID
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -168,6 +178,7 @@ Order a file storage replica volume:
 ```bash
 ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -201,6 +212,7 @@ List existing replicant volumes for a file volume:
 ```bash
 ibmcloud sl file replica-partners VOLUME_ID
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -217,6 +229,7 @@ Cancel existing snapshot space for a given volume:
 ```bash
 ibmcloud sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -244,6 +257,7 @@ Create a snapshot on a given volume:
 ```bash
 ibmcloud sl file snapshot-create VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -265,6 +279,7 @@ Disable snapshots on the specified schedule for a given volume:
 ```bash
 ibmcloud sl file snapshot-disable VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -286,6 +301,7 @@ Enable snapshots for a given volume on the specified schedule:
 ```bash
 ibmcloud sl file snapshot-enable VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -319,6 +335,7 @@ Delete a snapshot on a given volume:
 ```bash
 ibmcloud sl file snapshot-delete SNAPSHOT_ID
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -335,6 +352,7 @@ List file storage snapshots:
 ```bash
 ibmcloud sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -356,6 +374,7 @@ Order snapshot space for a file storage volume:
 ```bash
 ibmcloud sl file snapshot-order VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -389,6 +408,7 @@ Restore a file volume by using a specified snapshot:
 ```bash
 ibmcloud sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -405,6 +425,7 @@ List snapshot schedules for a volume:
 ```bash
 ibmcloud sl file snapshot-schedule-list VOLUME_ID 
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -421,6 +442,7 @@ Cancel an existing file storage volume:
 ```bash
 ibmcloud sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -448,6 +470,7 @@ List number of file storage volumes per datacenter:
 ```bash
 ibmcloud sl file volume-count [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -461,6 +484,7 @@ Display the global maximum volume count for the account and the number of {{site
 ```bash
 ibmcloud sl file volume-limits
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -477,6 +501,7 @@ List file storage:
 ```bash
 ibmcloud sl file volume-list [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -513,6 +538,7 @@ Convert a dependent duplicate volume to an independent volume:
 ```bash
 ibmcloud sl file volume-convert VOLUME_ID
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -529,6 +555,7 @@ Display details for a specified volume:
 ```bash
 ibmcloud sl file volume-detail VOLUME_ID 
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -545,6 +572,7 @@ Order a file volume by duplicating an existing volume:
 ```bash
 ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -584,6 +612,7 @@ Order a file storage volume:
 ```bash
 ibmcloud sl file volume-order [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -626,6 +655,7 @@ Modify an existing file storage volume:
 ```bash
 ibmcloud sl file volume-modify VOLUME_ID [OPTIONS]
 ```
+{: codeblock}
 
 **Command options**:
 
@@ -663,6 +693,7 @@ List all options for ordering a file storage:
 ```bash
 ibmcloud sl file volume-options
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -679,6 +710,7 @@ Refresh a dependent duplicate volume with a snapshot from its parent:
 ```bash
 ibmcloud sl file volume-refresh VOLUME_ID SNAPSHOT_ID
 ```
+{: codeblock}
 
 **Examples**:
 ```bash
@@ -687,3 +719,38 @@ ibmcloud sl file volume-refresh 123 456
 {: codeblock}
 
 Refresh a dependent duplicate 123 with a snapshot from its parent 456.
+
+## ibmcloud sl file snapshot-get-notification-status
+{: #sl_file_snapshot_get_notification_status}
+
+This feature will be availble in the January 2022 release of the `ibmcloud` tool. Until then, the following command will perform the same action.
+
+`12345` here is the ID of the block or file volume you want to see the Notification Status for.
+
+```bash
+ibmcloud sl call-api SoftLayer_Network_Storage getSnapshotNotificationStatus --init=12345
+```
+{: codeblock}
+
+Values can be either `0` for disabled, or `1` and ``(null, empty string) for enabled.
+
+## ibmcloud sl file snapshot-set-notification
+{: #sl_file_snapshot_set_notification}
+
+This feature will be available in the January 2022 release of the `ibmcloud` tool. Until then, the following command will perform the same action.
+
+`12345` here is the ID of the block or file volume you want to see the Notification Status for.
+
+Enable snapshot notification:
+
+```bash
+ibmcloud sl call-api SoftLayer_Network_Storage setSnapshotNotification --init=12345 --parameters '[1]'
+```
+{: codeblock}
+
+Disable snapshot notification:
+
+```bash
+ibmcloud sl call-api SoftLayer_Network_Storage setSnapshotNotification --init=12345 --parameters '[0]'
+```
+{: codeblock}

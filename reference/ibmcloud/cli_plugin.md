@@ -10,7 +10,6 @@ subcollection: cli
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:tip: .tip}
@@ -39,14 +38,15 @@ Add a new plug-in repository to {{site.data.keyword.cloud_notm}} CLI.
 ```bash
 ibmcloud plugin repo-add REPO_NAME REPO_URL
 ```
+{: codeblock}
 
 **Command options**:
 
-  REPO_NAME (required)
-   :   The name of the repository to be added. You can define your own name for each repository.
+REPO_NAME (required)
+:   The name of the repository to be added. You can define your own name for each repository.
 
-  REPO_URL (required)
-   :   The URL of the repository to be added. The repository URL must contain the protocol (for example, `https://plugins.cloud.ibm.com` instead of `plugins.cloud.ibm.com`). https://plugins.cloud.ibm.com is the official plug-in repository of {{site.data.keyword.cloud_notm}} CLI.
+REPO_URL (required)
+:   The URL of the repository to be added. The repository URL must contain the protocol (for example, `https://plugins.cloud.ibm.com` instead of `plugins.cloud.ibm.com`). https://plugins.cloud.ibm.com is the official plug-in repository of {{site.data.keyword.cloud_notm}} CLI.
 
 **Examples**:
 
@@ -89,10 +89,11 @@ List all available plug-ins in all added repositories or a specific repository.
 ```bash
 ibmcloud plugin repo-plugins [-r REPO_NAME]
 ```
+{: codeblock}
 
 **Command options**:
 
--r <i>REPO_NAME</i> (optional)
+-r REPO_NAME (optional)
 :   List only the plug-ins in the specified repository.
 
 **Examples**:
@@ -119,10 +120,11 @@ Show the details of a plug-in in the repository.
 ```bash
 ibmcloud plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 ```
+{: codeblock}
 
 **Command options**:
 
--r <i>REPO_NAME</i> (optional)
+-r REPO_NAME (optional)
 :   The name of the repository. If no repository is specified, the command uses the default plug-in repository.å
 
 **Examples**:
@@ -132,12 +134,14 @@ List details of plug-in "IBM-Containers" in repository "sample-repo":
 ```bash
 ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ```
+{: codeblock}
 
 List details of plug-in "IBM-Containers" in default repository
 
 ```bash
 ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ```
+{: codeblock}
 
 ## ibmcloud plugin list
 {: #ibmcloud_plugin_list}
@@ -157,6 +161,7 @@ Show details of an installed plug-in.
 ```bash
 ibmcloud plugin show PLUGIN-NAME
 ```
+{: codeblock}
 
 ## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
@@ -166,29 +171,32 @@ Install a specific version of a plug-in to {{site.data.keyword.cloud_notm}} CLI 
 ```bash
 ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION] [-f]
 ```
+{: codeblock}
 
 ```bash
 ibmcloud plugin install [-a, --all] [-r REPO_NAME] [-f]
 ```
+{: codeblock}
 
 ```bash
 ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
+{: codeblock}
 
 If no repository is specified, the command uses the default plug-in repository `IBM Cloud`. If you are installing a single plugin, and no version is specified, the command selects the latest available version to install. If the '-a, --all' flag is specified, the command installs all latest available plugins in the repository.
 
 **Command options**:
 
 PLUGIN_PATH|PLUGIN_NAME
-:   If -r <i>REPO_NAME</i> is not specified, plug-in is installed from the specified local path or remote URL.
+:   If -r REPO_NAME is not specified, the plug-in is installed from the specified local path or remote URL.
 
 -a, --all (optional)
 :   Install all latest available plugins in the repository.
 
--r <i>REPO_NAME</i> (optional)
+-r REPO_NAME (optional)
 :   The name of the repository where the plug-in binary is located. If no repository is specified, the command uses the default plug-in repository `IBM Cloud`.
 
--v <i>VERSION</i> (optional)
+-v VERSION (optional)
 :   Version of the plug-in to be installed. Accepts specific semantic version or constraint.
 
 -f 
@@ -203,12 +211,14 @@ Install a plug-in from the local file:
 ```bash
 ibmcloud plugin install /downloads/new_plugin
 ```
+{: codeblock}
 
 Install a plug-in from the remote URL:
 
 ```bash
 ibmcloud plugin install http://example.com/downloads/my-plugin
 ```
+{: codeblock}
 
 Install the `container-service` plug-in of the latest version from the `IBM Cloud` repository:
 
@@ -249,9 +259,11 @@ ibmcloud plugin install --all -f
 {: #ibmcloud_plugin_update}
 
 Upgrade the plug-in from a repository.
+
 ```bash
 ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
+{: codeblock}
 
 If no repository is specified, the command uses the default plug-in repository `IBM Cloud`. If no version is specified, the command selects the latest available version to install.
 
@@ -263,12 +275,11 @@ PLUGIN NAME
 -r REPO_NAME
 :   The name of the repository where the plug-in binary is located. If not specified, the command uses the default plug-in repository `IBM Cloud`.
 
--v <i>VERSION</i> (optional)
+-v VERSION (optional)
 :   The version of the plug-in to be updated to. If not provided, update the plug-in to the most recent version.
 
 --all
 :   Update all available plugins.
-
 
 **Examples**:
 
@@ -308,12 +319,12 @@ Uninstall the specified plug-in from {{site.data.keyword.cloud_notm}} CLI.
 ```bash
 ibmcloud plugin uninstall PLUGIN_NAME
 ```
+{: codeblock}
 
 **Command options**:
 
 PLUGIN_NAME (required)
 :   The name of the plug-in to be uninstalled.
-
 
 **Examples**:
 
