@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-12-17"
+  years: 2019, 2021
+lastupdated: "2021-12-29"
 
-keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
+keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help, cli private endpoints
 
 subcollection: cli
 

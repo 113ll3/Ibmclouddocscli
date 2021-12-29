@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-12-10"
+lastupdated: "2021-12-29"
 
-keywords: IBM Cloud CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, private endpoints, shell
+keywords: IBM Cloud CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, private endpoints, shell, cli private endpoints
 
 subcollection: cli
 
