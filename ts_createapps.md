@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-26"
+lastupdated: "2021-12-30"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -480,11 +480,12 @@ ibmcloud dev build --use-root-user-tools
 {: codeblock}
 {: tsResolve}
 
-## Why is `ibmcloud dev build` failing with "exit status 100"?
+## Why is `ibmcloud dev build` failing with exit status 100?
 {: #ts-cli-build-error}
 {: troubleshoot}
 
 Running the `ibmcloud dev build` command displays the following error:
+
 ```text
 FAILED
 An error exit status 100 was encountered while building the Docker image.
@@ -503,11 +504,12 @@ ibmcloud dev build --use-root-user-tools
 ```
 {: codeblock}
 
-## Why does the 'ibmcloud catalog search' command fail?
+## Why does the ibmcloud catalog search command fail?
 {: #ts-cli-catalog-search-error}
 {: troubleshoot}
 
 Running the `ibmcloud catalog search` command displays the following error:
+
 ```text
 FAILED
 'search' is not a registered command. See 'C:\Program Files\IBM\Cloud\bin\ibmcloud.exe catalog help'.

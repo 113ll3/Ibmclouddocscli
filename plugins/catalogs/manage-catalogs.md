@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-12-13"
+lastupdated: "2021-12-30"
 
 keywords: cli, catalogs management
 
@@ -556,7 +556,7 @@ tf_cloudless_sleepy-2.0                c260a67a-1b25-49fc-9896-46e7e6212990
 {: screen}
 
 ## ibmcloud catalog offering search
-{: #search-offering-options}
+{: #search-catalog-offering-search}
 
 Run the following command to get details about the products in your private catalogs. This command provides a filter by private catalog, product, and version.
 
@@ -1033,18 +1033,3 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 --workspace-tags TAGS (optional)
 
 :   Provide a comma-separated list of tags.
-
-## ibmcloud catalog netrc
-{: #generate-netrc}
-
-Run the following command to create a .netrc file, generate the machine name in your .netrc file, or update the credential in your .netrc file. A .netrc file stores the required login information that is needed to use Terraform modules from the {{site.data.keyword.cloud_notm}} catalog.
-
-By running this command, you configure a .netrc file for the machine name `cm.globalcatalog.cloud.ibm.com` with `iamtoken` as the username and your IAM token as the password.
-
-You need version 1.2.7 or higher of the catalogs management CLI plug-in to run the .netrc command.
-{: note}
-
-```bash
-ibmcloud catalog netrc
-```
-{: codeblock}

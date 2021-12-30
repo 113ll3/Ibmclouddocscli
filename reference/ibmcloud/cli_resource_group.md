@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-09-24"
+lastupdated: "2021-12-30"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -1554,7 +1554,8 @@ ibmcloud resource reclamation-restore "d9fendfwlw"
 ```
 {: codeblock}
 
-Restore a resource reclamation with ID `d9fendfwlw`, leave a comment of "need to use for another 3 months", and show JSON output:
+Restore a resource reclamation with ID `d9fendfwlw`, leave a comment of `need to use for another 3 months`, and show JSON output:
+
 ```bash
 ibmcloud resource reclamation-restore "d9fendfwlw" --comment "need to use for another 3 months" --output JSON
 ```
@@ -1591,7 +1592,8 @@ ibmcloud resource reclamation-delete "d9fendfwlw"
 ```
 {: codeblock}
 
-Delete a resource reclamation with ID `d9fendfwlw` and leave a comment of "no longer needed" without confirmation:
+Delete a resource reclamation with ID `d9fendfwlw` and leave a comment of `no longer needed` without confirmation:
+
 ```bash
 ibmcloud resource reclamation-delete "d9fendfwlw" --comment "no longer needed" -f
 ```
