@@ -1,15 +1,14 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-12-29"
+  years: 2018, 2022
+lastupdated: "2022-01-21"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
 subcollection: cli
 
 ---
-
 
 {:shortdesc: .shortdesc}
 {:tip: .tip}
@@ -20,7 +19,7 @@ subcollection: cli
 # Managing IAM access, API keys, trusted profiles, service IDs, and access groups (ibmcloud iam)
 {: #ibmcloud_commands_iam}
 
-Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage API keys, service IDs, access groups, and authorization policies for users, services, and access groups.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage API keys, service IDs, access groups, and authorization policies for users, services, trusted profiles, and access groups.
 {: shortdesc}
 
 ## ibmcloud iam service-ids
@@ -37,7 +36,6 @@ ibmcloud iam service-ids [--uuid]
 
 --uuid
 :   Show UUID of service IDs only.
-
 
 ### Examples
 {: #ibmcloud_iam_service_ids_examples}
@@ -104,7 +102,6 @@ NAME (required)
 --lock
 :   Lock the service ID during creation.
 
-
 ### Examples
 {: #ibmcloud_iam_service_id_create_examples}
 
@@ -146,7 +143,6 @@ UUID (required)
 
 -f, --force
 :   Update without confirmation.
-
 
 ### Examples
 {: #ibmcloud_iam_service_id_update_examples}
@@ -190,7 +186,6 @@ UUID (required)
 -f, --force
 :   Delete without confirmation.
 
-
 ### Examples
 {: #ibmcloud_iam_service_id_delete_examples}
 
@@ -226,7 +221,6 @@ UUID (required)
 
 -f, --force
 :   Lock without confirmation.
-
 
 ### Examples
 {: #ibmcloud_iam_service_id_lock_examples}
@@ -264,7 +258,6 @@ UUID (required)
 -f, --force
 :   Unlock without confirmation.
 
-
 ### Examples
 {: #ibmcloud_iam_service_id_unlock_examples}
 
@@ -294,7 +287,6 @@ ibmcloud iam api-keys [--uuid]
 
 --uuid
 :   Show UUID of the API key.
-
 
 ## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
@@ -395,7 +387,6 @@ UUID (required)
 -f, --force
 :   Force deletion without confirmation.
 
-
 ## ibmcloud iam api-key-lock
 {: #ibmcloud_iam_api_key_lock}
 
@@ -416,7 +407,6 @@ UUID (required)
 
 -f, --force
 :   Force lock without confirmation.
-
 
 ### Examples
 {: #ibmcloud_iam_api_key_lock_examples}
@@ -454,7 +444,6 @@ UUID (required)
 -f, --force
 :   Unlock an API key without confirmation.
 
-
 ### Examples
 {: #ibmcloud_iam_api_key_unlock_examples}
 
@@ -490,7 +479,6 @@ SERVICE_ID_UUID (required)
 
 -f, --force
 :   Display service API keys without confirmation.
-
 
 ### Examples
 {: #ibmcloud_iam_service_api_keys_examples}
@@ -571,7 +559,6 @@ SERVICE_ID_UUID (required)
 -f, --force
 :   Force creation without confirmation.
 
-
 ### Examples
 {: #ibmcloud_iam_service_api_key_create_examples}
 
@@ -614,7 +601,6 @@ SERVICE_ID_UUID (required)
 -f, --force
 :   Update without confirmation.
 
-
 ### Examples
 {: #ibmcloud_iam_service_api_key_update_examples}
 
@@ -650,7 +636,6 @@ SERVICE_ID_UUID (required)
 
 -f, --force
 :   Delete without confirmation.
-
 
 ### Examples
 {: #ibmcloud_iam_service_api_key_delete_examples}
@@ -688,7 +673,6 @@ SERVICE_ID_UUID (required)
 -f, --force
 :   Lock without confirmation.
 
-
 ### Examples
 {: #ibmcloud_iam_service_api_key_lock_examples}
 
@@ -724,7 +708,6 @@ SERVICE_ID_UUID (required)
 
 -f, --force
 :   Unlock without confirmation.
-
 
 ### Examples
 {: #ibmcloud_iam_service_api_key_unlock_examples}
@@ -777,7 +760,6 @@ USER_NAME (required)
 POLICY_ID (required)
 :   ID of the policy.
 
-
 ### Examples
 {: #ibmcloud_iam_user_policy_examples}
 
@@ -803,7 +785,7 @@ USER_NAME (required)
 :   User name to whom the policy belongs to.
 
 --file *FILE* (optional)
-:   JSON file of policy definition. You can use advanced operators in a JSON policy document to grant access to resources that satisfy specific naming conventions. For more information about using advanced operators to create wildcard policies, see [Assigning access by using wildcard policies](/docs/account?topic=account-wildcard).
+:   JSON file of policy definition. You can use advanced operators in a JSON policy document to grant access to resources that satisfy specific naming conventions. For more information about using advanced operators to create wildcard policies, see [Assigning access by using wildcard policies](/docs/account?topic=account-wildcard).
 
 --roles *ROLE_NAME1,ROLE_NAME2...* (optional)
 :   Role names of the policy definition. For supported roles of a specific service, run `ibmcloud iam roles --service SERVICE_NAME`. This option is exclusive with the `--file` option.
@@ -834,7 +816,6 @@ USER_NAME (required)
 
 --attributes *name=value,name=value...*
 :   Set resource attributes in the form of `name=value,name=value....`
-
 
 ### Examples
 {: #ibmcloud_iam_user_policy_create_examples}
@@ -1105,7 +1086,7 @@ SERVICE_ID (required)
 :   Name or UUID of service ID.
 
 --file
-:   JSON file of policy definition. This option is exclusive with the `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `--resource-group-name` and `--resource-group-id` options.  You can use advanced operators in a JSON policy document to grant access to resources that satisfy specific naming conventions. For more information about using advanced operators to create wildcard policies, see [Assigning access by using wildcard policies](/docs/account?topic=account-wildcard).
+:   JSON file of policy definition. This option is exclusive with the `-r, --roles`, `--service-name`, `--service-instance`, `--region`, `--resource-type`, `--resource`, `--resource-group-name` and `--resource-group-id` options.  You can use advanced operators in a JSON policy document to grant access to resources that satisfy specific naming conventions. For more information about using advanced operators to create wildcard policies, see [Assigning access by using wildcard policies](/docs/account?topic=account-wildcard).
 
 -r, --roles
 :   Role names of the policy definition. For supported roles of a specific service, run `ibmcloud iam roles --service SERVICE_NAME` option. This option is exclusive with the `--file` option.
@@ -1139,7 +1120,6 @@ SERVICE_ID (required)
 
 -f, --force
 :   Create service policy without confirmation.
-
 
 ### Examples
 {: #ibmcloud_iam_service_policy_create_examples}
@@ -1404,7 +1384,6 @@ ibmcloud iam access-policies [-t, --type user | service_id | access_group | trus
 -t, --type ACCESS_POLICY_TYPE
 :   List all access policies under current account filtered by policy type. Valid options are: `user` | `service_id` | `access_group` | `trusted_profile`
 
-
 ### Examples
 {: #ibmcloud_iam_access_policies_examples}
 
@@ -1452,7 +1431,6 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 
 -f, --force
 :   Force disconnect without confirmation.
-
 
 ## ibmcloud iam authorization-policy-create
 {: #ibmcloud_iam_authorization_policy_create}
@@ -1507,7 +1485,6 @@ ROLE_NAME1,ROLE_NAME2...
 --file FILE
 :   JSON file of policy definition.
 
-
 Currently, some combination of `--source-service` and `--service` might fail under private endpoints. Use `--file` as a workaround, or you can create the policy from public endpoints or the UI console.
 {: note}
 
@@ -1529,7 +1506,6 @@ AUTHORIZATION_POLICY_ID
 -f, --force
 :   Delete without confirmation.
 
-
 ## ibmcloud iam authorization-policy
 {: #ibmcloud_iam_authorization_policy}
 
@@ -1545,7 +1521,6 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 AUTHORIZATION_POLICY_ID
 :   ID of authorization policy to show.
  
-
 ## ibmcloud iam authorization-policies
 {: #ibmcloud_iam_authorization_policies}
 
@@ -1560,7 +1535,7 @@ ibmcloud iam authorization-policies
 
 List access groups under current account:
 ```bash
-ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
+ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME | -p (PROFILE_NAME | PROFILE_ID)] [--output FORMAT] [-q, --quiet]
 ```
 {: codeblock}
 
@@ -1568,11 +1543,19 @@ ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
 {: #ibmcloud_iam_access_groups_options}
 
 -u
-:   List access groups the user belongs to. This option is exclusive to '-s'.
+:   List access groups the user belongs to. This option is exclusive to '-s' and '-p'.
 
 -s
-:   List access groups the service ID belongs to. This option is exclusive to '-u'.
+:   List access groups the service ID belongs to. This option is exclusive to '-u' and '-p'.
 
+-p
+:   List access groups the trusted profile belongs to. This option is exclusive to '-s' and '-u'.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
 
 ### Examples
 {: #ibmcloud_iam_access_groups_examples}
@@ -1580,6 +1563,12 @@ ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
 List all access groups:
 ```bash
 ibmcloud iam access-groups
+```
+{: codeblock}
+
+List all access groups the trusted profile `test_profile` belongs to:
+```bash
+ibmcloud iam access-groups -p test_profile
 ```
 {: codeblock}
 
@@ -1623,7 +1612,6 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 -d, --description
 :   Description of access group.
 
-
 ### Examples
 {: #ibmcloud_iam_access_group_create_examples}
 
@@ -1653,7 +1641,6 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
 
 -f, --force
 :   Force update without confirmation.
-
 
 ### Examples
 {: #ibmcloud_iam_access_group_update_examples}
@@ -1852,6 +1839,133 @@ ibmcloud iam access-group-service-id-purge example --force
 ```
 {: codeblock}
 
+## ibmcloud iam access-group-trusted-profiles
+{: #ibmcloud_iam_access_group_trusted_profiles}
+
+List trusted profiles of an access group:
+```bash
+ibmcloud iam access-group-trusted-profiles GROUP_NAME [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_trusted_profiles_options}
+
+GROUP_NAME (required)
+:   Name of the access group.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_trusted_profiles_examples}
+
+List all trusted profiles in access group `example_group`:
+```bash
+ibmcloud iam access-group-trusted-profiles example_group
+```
+{: codeblock}
+
+## ibmcloud iam access-group-trusted-profile-add
+{: #ibmcloud_iam_access_group_trusted_profile_add}
+
+Add trusted profile(s) to an access group:
+```bash
+ibmcloud iam access-group-trusted-profile-add GROUP_NAME (PROFILE_NAME | PROFILE_ID) [PROFILE_NAME2 | PROFILE_ID2...] [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_trusted_profile_add_options}
+
+GROUP_NAME (required)
+:   Name of the access group.
+
+PROFILE_NAME | PROFILE_ID (required)
+:   Name(s) or ID(s) of the trusted profiles to add to the access group.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_trusted_profile_add_examples}
+
+Add trusted profile `my-profile` to access group `example_group`:
+```bash
+ibmcloud iam access-group-trusted-profile-add example_group my-profile
+```
+{: codeblock}
+
+## ibmcloud iam access-group-trusted-profile-remove
+{: #ibmcloud_iam_access_group_trusted_profile_remove}
+
+Remove a trusted profile from an access group:
+```bash
+ibmcloud iam access-group-trusted-profile-remove GROUP_NAME (PROFILE_NAME | PROFILE_ID) [-f, --force] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_trusted_profile_remove_options}
+
+GROUP_NAME (required)
+:   Name of the access group.
+
+PROFILE_NAME | PROFILE_ID (required)
+:   Name or ID of the trusted profile to remove from the access group.
+
+-f, --force
+:   Remove without confirmation.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_trusted_profile_remove_examples}
+
+Remove trusted profile `my-profile` from access group `example_group`:
+```bash
+ibmcloud iam access-group-trusted-profile-remove example_group my-profile
+```
+{: codeblock}
+
+## ibmcloud iam access-group-trusted-profile-purge
+{: #ibmcloud_iam_access_group_trusted_profile_purge}
+
+Remove a trusted profile from all access groups:
+```bash
+ibmcloud iam access-group-trusted-profile-purge (PROFILE_NAME | PROFILE_ID) [-f, --force] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_trusted_profile_purge_options}
+
+
+PROFILE_NAME | PROFILE_ID (required)
+:   Name or ID of the trusted profile to remove from all access groups.
+
+-f, --force
+:   Purge without confirmation.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_trusted_profile_purge_examples}
+
+Remove trusted profile `my-profile` from all access groups:
+```bash
+ibmcloud iam access-group-trusted-profile-purge my-profile
+```
+{: codeblock}
+
 ## ibmcloud iam access-group-policies
 {: #ibmcloud_iam_access_group_policies}
 
@@ -1901,7 +2015,7 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
 {: #ibmcloud_iam_access_group_policy_create_options}
 
 --file
-:   JSON file of policy definition. You can use advanced operators in a JSON policy document to grant access to resources that satisfy specific naming conventions. For more information about using advanced operators to create wildcard policies, see [Assigning access by using wildcard policies](/docs/account?topic=account-wildcard).
+:   JSON file of policy definition. You can use advanced operators in a JSON policy document to grant access to resources that satisfy specific naming conventions. For more information about using advanced operators to create wildcard policies, see [Assigning access by using wildcard policies](/docs/account?topic=account-wildcard).
 
 -roles
 :   Role names of the policy definition. For supported roles of a specific service, run `ibmcloud iam roles --service SERVICE_NAME`. This option is exclusive with the `--file` option.
@@ -1935,7 +2049,6 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
 
 --attributes *name=value,name=value...*
 :   Set resource attributes in the form of 'name=value,name=value....'
-
 
 ### Examples
 {: #ibmcloud_iam_access_group_policy_create_examples}
@@ -2051,7 +2164,6 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
 --attributes *name=value,name=value...*
 :   Set resource attributes in the form of 'name=value,name=value....'
 
-
 ### Examples
 {: #ibmcloud_iam_access_group_policy_update_examples}
 
@@ -2122,6 +2234,7 @@ Delete an access group policy:
 ```bash
 ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```
+{: codeblock}
 
 ### Command options
 {: #ibmcloud_iam_access_group_policy_delete_options}
@@ -2158,11 +2271,10 @@ NAME (required)
 :   Description of the profile.
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_create_examples}
@@ -2192,11 +2304,10 @@ NAME|ID (required)
 :   Show ID of the profile only.
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_examples}
@@ -2229,11 +2340,10 @@ ibmcloud iam trusted-profiles [--id | --output FORMAT] [-q, --quiet]
 :   Show ID of profiles only.
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profiles_examples}
@@ -2266,14 +2376,13 @@ NAME|ID (required)
 :   New description of the profile. Providing an empty description will clear the description of the profile.
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -f, --force
 :   Force failure if multiple profiles are found.
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_update_examples}
@@ -2310,7 +2419,6 @@ NAME|ID (required)
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_delete_examples}
@@ -2349,7 +2457,7 @@ NAME|ID (required)
 :   Force failure if multiple profiles are found.
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 --region REGION
 :   Region of the policy definition. This option is exclusive with '--file'. For supported regions, run 'ibmcloud regions'.
@@ -2380,7 +2488,6 @@ NAME|ID (required)
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_policy_create_examples}
@@ -2425,11 +2532,10 @@ POLICY_ID (required)
 :   Force failure if multiple profiles are found.
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_policy_examples}
@@ -2459,11 +2565,10 @@ NAME|ID (required)
 :   Force failure if multiple profiles are found.
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_policies_examples}
@@ -2505,7 +2610,7 @@ POLICY_ID (required)
 :   Force failure if multiple profiles are found.
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 --region REGION
 :   Region of the policy definition. This option is exclusive with '--file'. For supported regions, run 'ibmcloud regions'.
@@ -2536,7 +2641,6 @@ POLICY_ID (required)
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_policy_update_examples}
@@ -2576,7 +2680,6 @@ POLICY_ID (required)
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_policy_delete_examples}
@@ -2618,7 +2721,7 @@ NAME|ID (required)
 :   Name of the service account for IKS_SA or ROKS_SA, required if IKS_SA or ROKS_SA.
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -f, --force
 :   Force failure if multiple profiles are found.
@@ -2641,7 +2744,6 @@ Create link named `my_link` for trusted profile ID `Profile-bdf62c30-35dd-4852-b
 ibmcloud iam trusted-profile-link-create Profile-bdf62c30-35dd-4852-bcb8-2f0dd3929701 --name my_link --cr-type IKS_SA --link-name default --link-namespace my_namespace --link-crn my_resource_crn
 ```
 {: codeblock}
-
 
 Create link named `my_link` for trusted profile ID `Profile-bdf62c30-35dd-4852-bcb8-2f0dd3929701` for a `VSI` compute resource with a CRN of `my_resource_crn`:
 ```bash
@@ -2668,14 +2770,13 @@ NAME|ID (required)
 :   Show ID of links only.
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -f, --force
 :   Force failure if multiple profiles are found.
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_links_examples}
@@ -2715,7 +2816,6 @@ LINK_NAME|LINK_ID (required)
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_link_delete_examples}
@@ -2763,14 +2863,13 @@ NAME|ID (required)
 :   Issuer Id for trusts established via IBMid with federation, or appid:// for trusts established via App ID federation. Must not be provided for trusts established to Compute Resources (type = Profile-CR).
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -f, --force
 :   Force failure if multiple profiles are found.
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_rule_create_examples}
@@ -2811,14 +2910,13 @@ NAME|ID (required)
 :   Name or ID of the trusted profile to retrieve rules for.
 
 --output FORMAT.
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -f, --force
 :   Force failure if multiple profiles are found.
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_rules_examples}
@@ -2869,7 +2967,7 @@ RULE_NAME|RULE_ID (required)
 :   Issuer Id for trusts established via IBMid with federation, or appid:// for trusts established via App ID federation. Must not be provided for trusts established to Compute Resources (type = Profile-CR).
 
 --output FORMAT
-:   Specify output format, only 'JSON' is supported.
+:   Specify output format. Only 'JSON' is supported.
 
 -f, --force
 :   Force failure if multiple rules are found.
@@ -2928,7 +3026,6 @@ RULE_NAME|RULE_ID (required)
 
 -q, --quiet
 :   Suppress verbose output.
-
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_rule_delete_examples}
