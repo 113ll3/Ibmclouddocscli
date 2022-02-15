@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2021
+  years: 2018, 2021
 lastupdated: "2021-11-09"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud, cli commands, update, environment variables
