@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-12-29"
+  years: 2020, 2022
+lastupdated: "2022-02-22"
 
 keywords: isolation for IBM Cloud CLI, service endpoints for IBM Cloud CLI, private network for IBM Cloud CLI, network isolation in IBM Cloud CLI, non-public routes for IBM Cloud CLI, private connection for IBM Cloud CLI, private endpoints, regions that support private endpoints, private service endpoints, cli private endpoints
 
@@ -72,14 +72,14 @@ To use private endpoints for deployments in the VPC environment, you must config
 A list of all {{site.data.keyword.cloud_notm}} services that are configurable through a virtual private endpoint gateway is at [VPE Supported Services](/docs/vpc?topic=vpc-vpe-supported-services).
 
 To ensure basic CLI capability against the private endpoint, you must configure the gateway to include these services:
-* Account Management: Endpoint URL (https://private.accounts.cloud.ibm.com)
-* Global Catalog ([Endpoint URL](https://{DomainName}/apidocs/resource-catalog/global-catalog#endpoint-url))
-* Global Search ([Endpoint URL](https://{DomainName}/apidocs/search#endpoint-url))
-* Global Tagging ([Endpoint URL](https://{DomainName}/apidocs/tagging#endpoint-url))
-* Usage Metering ([Endpoint URL](https://{DomainName}/apidocs/usage-metering#endpoint))
-* Enterprise Management ([Endpoint URL](https://{DomainName}/apidocs/enterprise-apis/enterprise#endpoint-urls))
-* Resource Controller ([Endpoint URL](https://{DomainName}/apidocs/resource-controller/resource-controller#endpoint-urls))
-* User Management ([Endpoint URL](https://{DomainName}/apidocs/user-management#endpoint-urls))
+* Account Management: Endpoint URL `(https://private.accounts.cloud.ibm.com)`{: external}
+* Global Catalog: [Endpoint URL](/apidocs/resource-catalog/global-catalog#endpoint-url)
+* Global Search: [Endpoint URL](/apidocs/search#endpoint-url)
+* Global Tagging: [Endpoint URL](/apidocs/tagging#endpoint-url)
+* Usage Metering: [Endpoint URL](/apidocs/usage-metering#endpoint)
+* Enterprise Management: [Endpoint URL](/apidocs/enterprise-apis/enterprise#endpoint-urls)
+* Resource Controller: [Endpoint URL](/apidocs/resource-controller/resource-controller#endpoint-urls)
+* User Management: [Endpoint URL](/apidocs/user-management#endpoint-urls)
 
 ## Determining which CLI plug-ins support private endpoints
 {: #cli-private-plugins}
@@ -109,19 +109,19 @@ The following core commands do not yet support private endpoints:
 
 ```text
 resource
-	cf-service-instance-migrate
-	service-alias
-  	service-alias-create
-  	service-alias-delete
-  	service-alias-update
-  	service-aliases
-  	service-binding
-  	service-binding-create
-  	service-binding-delete
-  	service-bindings
+  cf-service-instance-migrate
+  service-alias
+    service-alias-create
+    service-alias-delete
+    service-alias-update
+    service-aliases
+    service-binding
+    service-binding-create
+    service-binding-delete
+    service-bindings
 account
   domain-cert
-	domain-cert-add
+  domain-cert-add
   domain-cert-remove
   org
   org-account
@@ -129,7 +129,7 @@ account
   org-rename
   org-replicate
   org-role-set
- 	org-role-unset
+  org-role-unset
   org-roles
   org-user-add
   org-user-remove
