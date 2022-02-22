@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-09"
+  years: 2021, 2022
+lastupdated: "2022-02-22"
 
 keywords: IBM Cloud CLI, IBMCLOUD_HOME, ibmcloud cli, ibmcloud
 
@@ -28,7 +28,7 @@ With the IBMCLOUD_HOME environment variable, you can set a path for the session 
 ## Before you begin
 {: #ibmcloud-home-prereq}
 
-* Set up your [{{site.data.keyword.cloud}} account](https://{DomainName}/registration){: external}. For more information, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
+* Set up your [{{site.data.keyword.cloud}} account](/registration){: external}. For more information, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
 * [Install the {{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started).
 
 ## Setting the IBMCLOUD_HOME environment variable
