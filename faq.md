@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-12-29"
+  years: 2019, 2022
+lastupdated: "2022-02-22"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help, cli private endpoints
 
@@ -11,7 +11,6 @@ subcollection: cli
 content-type: faq
 
 ---
-
 
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -25,7 +24,7 @@ content-type: faq
 # FAQs for the {{site.data.keyword.cloud_notm}} CLI
 {: #ibm-cli-faq}
 
-FAQs for the {{site.data.keyword.cloud}} Command Line Interface include questions about CLI versioning, updates, and working with apps. To find all FAQs for {{site.data.keyword.cloud_notm}}, see our [FAQ library](https://{DomainName}/docs/faqs).
+FAQs for the {{site.data.keyword.cloud}} Command Line Interface include questions about CLI versioning, updates, and working with apps. To find all FAQs for {{site.data.keyword.cloud_notm}}, see our [FAQ library](/docs/faqs).
 {: shortdesc}
 
 ## Is it required to use the latest version of the {{site.data.keyword.cloud_notm}} CLI?
