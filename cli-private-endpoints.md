@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-29"
+  years: 2021, 2022
+lastupdated: "2022-02-25"
 
 keywords: IBM Cloud CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, private endpoints, shell, cli private endpoints
 
@@ -80,13 +80,14 @@ Use the following steps to install the latest stand-alone {{site.data.keyword.cl
    * For Linux&trade;, extract the package and run the `install` script.
 
    **Installers:**
-   - [Mac OS X 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.3.0/IBM_Cloud_CLI_2.3.0.pkg)
-   - [Windows&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.3.0/IBM_Cloud_CLI_2.3.0_amd64.exe)
-   - [Windows&trade; 32-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.3.0/IBM_Cloud_CLI_2.3.0_386.exe)
-   - [Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.3.0/IBM_Cloud_CLI_2.3.0_amd64.tar.gz)
-   - [Linux&trade; 32-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.3.0/IBM_Cloud_CLI_2.3.0_386.tar.gz)
-   - [PowerLinux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.3.0/IBM_Cloud_CLI_2.3.0_ppc64le.tar.gz)
-   - [System/390 Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.3.0/IBM_Cloud_CLI_2.3.0_s390x.tar.gz)
+   - [Mac OS X 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.5.0/IBM_Cloud_CLI_2.5.0.pkg)
+   - [Mac OS X M1/ARM](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.5.0/IBM_Cloud_CLI_2.5.0_arm64.pkg) **(provided as-is)**
+   - [Windows&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.5.0/IBM_Cloud_CLI_2.5.0_amd64.exe)
+   - [Windows&trade; 32-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.5.0/IBM_Cloud_CLI_2.5.0_386.exe)
+   - [Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.5.0/IBM_Cloud_CLI_2.5.0_amd64.tar.gz)
+   - [Linux&trade; 32-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.5.0/IBM_Cloud_CLI_2.5.0_386.tar.gz)
+   - [PowerLinux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.5.0/IBM_Cloud_CLI_2.5.0_ppc64le.tar.gz)
+   - [System/390 Linux&trade; 64-bit](https://ibm-cloud-cli.s3.private.us.cloud-object-storage.appdomain.cloud/2.5.0/IBM_Cloud_CLI_2.5.0_s390x.tar.gz)
 
 3. Log in to {{site.data.keyword.cloud_notm}} by using the CLI:
    ```bash
