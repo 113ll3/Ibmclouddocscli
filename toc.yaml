@@ -101,6 +101,7 @@ toc:
           - /databases-cli-plugin/databases-cli-plugin-cdb-reference
           - /cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
           - /cloud-object-storage-cli-plugin/cloud-object-storage-cli-plugin-ic-cos-cli
+          - /codeengine/codeengine-cli
           - /code-risk-analyzer-cli-plugin/code-risk-analyzer-cli-plugin-cra-cli-plugin
           - /devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
           - /dl-cli-plugin/dl-cli-plugin-dl-cli
