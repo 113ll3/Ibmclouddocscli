@@ -47,6 +47,7 @@ toc:
       - service-connection.md
       - ha-dr.md
       - cri-token-login.md
+      - vpc-cri-login.md
 
   - navgroup:
       id: reference
