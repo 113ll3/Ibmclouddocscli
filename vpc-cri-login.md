@@ -45,7 +45,7 @@ You can log in as a VSI compute resource using the CLI in any of the following w
    1. Specify the `--vpc-cri` option with the `ibmcloud login` command.
    2. Specify the `--profile` option with the `ibmcloud login` command, and provide the ID or CRN of the trusted IAM profile that the instance is linked to.
 
-   ```
+   ```bash
    ibmcloud login --vpc-cri --profile <profile_id_or_crn_string>
    ```
    {: codeblock}
@@ -57,14 +57,14 @@ You can log in as a VSI compute resource using the CLI in any of the following w
 * Use the Virtual Service Instance's default linked trusted profile:
    1. Specify the `--vpc-cri` option with the `ibmcloud login` command.
 
-   ```
+   ```bash
    ibmcloud login --vpc-cri
    ```
    {: codeblock}
 
 If you wish to log in as a VSI compute resource using private endpoints for VPC, you must also provide the ``--vpc`` flag
 and set the API endpoint to ``private.cloud.ibm.com``. In the example below, the trusted profile was provided by setting the environment variable `IBMCLOUD_CR_PROFILE=profile_id_or_crn`:
- ```
+ ```bash
    ibmcloud login --vpc-cri --vpc -a private.cloud.ibm.com
    ```
    {: codeblock}
