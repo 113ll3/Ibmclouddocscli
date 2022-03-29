@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-12-30"
+  years: 2019, 2022
+lastupdated: "2022-03-24"
 
 keywords: cli, catalogs management
 
@@ -681,13 +681,13 @@ ibmcloud catalog offering import-version --catalog CATALOG --offering OFFERING_N
 :   If provided, all configurations values are included and available when you import the new version.
 
 
-## ibmcloud catalog offering preinstall
+## ibmcloud catalog offering version preinstall
 {: #preinstall-offering}
 
 Run the following command to run the preinstallation script for a particular product.
 
 ```bash
-ibmcloud catalog offering preinstall --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME
+ibmcloud catalog offering version preinstall --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME
 ```
 {: codeblock}
 
@@ -711,17 +711,17 @@ ibmcloud catalog offering preinstall --version-locator VERSION_NUMBER --cluster 
 Run the preinstallation script for a product with a version locator number of `b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4` in cluster with ID `bn5ebho206o7fg45f2e0` in the namespace called `test-namespace`. 
 
 ```bash
-ibmcloud catalog offering preinstall --version-locator b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4 --cluster bn5ebho206o7fg45f2e0 --namespace test-namespace
+ibmcloud catalog offering version preinstall --version-locator b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4 --cluster bn5ebho206o7fg45f2e0 --namespace test-namespace
 ```
 {: codeblock}
 
-## ibmcloud catalog offering preinstall-status
+## ibmcloud catalog offering version preinstall-status
 {: #preinstall-status-offering}
 
 Run the following command to get the status of an ongoing preinstallation.
 
 ```bash
-ibmcloud catalog offering preinstall-status --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME [--output FORMAT]
+ibmcloud catalog offering version preinstall-status --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME [--output FORMAT]
 ```
 {: codeblock}
 
@@ -742,13 +742,13 @@ ibmcloud catalog offering preinstall-status --version-locator VERSION_NUMBER --c
 :   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
 
 
-## ibmcloud catalog offering validate
+## ibmcloud catalog offering version validate
 {: #validate-offering}
 
 Run the following command to validate a new version of a product in your private catalog. Products must be validated to ensure that they work as expected before they can be published to the account for other users to create an instance from the private catalog.
 
 ```bash
-ibmcloud catalog offering validate --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME [--timeout TIMEOUT] [--wait WAIT] [--override-values VALUES|FILENAME] 
+ibmcloud catalog offering version validate --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME [--timeout TIMEOUT] [--wait WAIT] [--override-values VALUES|FILENAME] 
 ```
 {: codeblock}
 
@@ -766,10 +766,10 @@ ibmcloud catalog offering validate --version-locator VERSION_NUMBER --cluster CL
 :   Provide the namespace you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.
 
 --timeout TIMEOUT
-:   Specify in seconds how long the schematics workspace should wait before installing. Default is `180`.
+:   Specify in seconds how long the {{site.data.keyword.bpshort}} workspace should wait before installing. Default is `180`.
 
 --wait WAIT
-:   Wait and track the progress of the schematics workspace job. If `true`, installation waits. If `false`, the software installs immediately. Default is `true`.
+:   Wait and track the progress of the {{site.data.keyword.bpshort}} workspace job. If `true`, installation waits. If `false`, the software installs immediately. Default is `true`.
 
 --override-values VALUES|FILENAME (optional)
 :   Provide any custom configurations for the installation. You can provide this value either inline or by using a JSON or TXT file. For example, `override-values values.json`.
@@ -780,7 +780,7 @@ ibmcloud catalog offering validate --version-locator VERSION_NUMBER --cluster CL
 Validate a product with the version locator `b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4` in a cluster with the ID `bn5ebho206o7fg45f2e0` within a namespace called `test-namespace`. This installation has custom configurations, so the values are provided by using a `values.json` file.
 
 ```bash
-ibmcloud catalog offering validate --version-locator b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4 --cluster bn5ebho206o7fg45f2e0 --namespace test-namespace --override-values values.json
+ibmcloud catalog offering version validate --version-locator b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4 --cluster bn5ebho206o7fg45f2e0 --namespace test-namespace --override-values values.json
 ```
 {: codeblock}
 
@@ -794,13 +794,13 @@ Override values example format from the `values.json` file:
 ```
 {: codeblock}
 
-## ibmcloud catalog offering validate-status
+## ibmcloud catalog offering version validate-status
 {: #validate-status-offering}
 
 Run the following command to get the status of an ongoing validation.
 
 ```bash
-ibmcloud catalog offering validate-status --version-locator VERSION_NUMBER [--output FORMAT]
+ibmcloud catalog offering version validate-status --version-locator VERSION_NUMBER [--output FORMAT]
 ```
 {: codeblock}
 
@@ -890,13 +890,13 @@ ibmcloud catalog offering add-category --catalog dev-catalog --offering dev-offe
 ```
 {: codeblock}
 
-## ibmcloud catalog offering create-draft
+## ibmcloud catalog offering version create-draft
 {: #create-offering-draft}
 
 Run the following command to create a draft of an existing version. This command is useful for changing an existing version that you want to publish without introducing a new version. Some changes, like changing the source file, require you to revalidate the product.
 
 ```bash
-ibmcloud catalog offering create-draft --version-locator VERSION_NUMBER [--output FORMAT]
+ibmcloud catalog offering version create-draft --version-locator VERSION_NUMBER [--output FORMAT]
 ```
 {: codeblock}
 
@@ -910,14 +910,50 @@ ibmcloud catalog offering create-draft --version-locator VERSION_NUMBER [--outpu
 --output FORMAT (optional)
 :   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
 
+## ibmcloud catalog offering version delete-version
+{: #offering-delete-version}
 
-## ibmcloud catalog offering refresh-version
+Run the following command to delete a version of a product. 
+
+```bash
+ibmcloud catalog offering version delete-version --version-locator VERSION_NUMBER [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: ##offering-delete-version-options}
+
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
+
+--output FORMAT (optional)
+:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+
+## ibmcloud catalog offering version deprecate-version
+{: #publish-version-deprecate}
+
+Run the following command to deprecate a previously published product version from the {{site.data.keyword.cloud_notm}} catalog.
+
+```bash
+ibmcloud catalog offering version deprecate-version --version-locator VERSION_NUMBER
+```
+{: codeblock}
+
+### Command options
+{: #publish-version-deprecate-options}
+
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
+
+## ibmcloud catalog offering version refresh-version
 {: #refresh-offering-version}
 
 Run the following command to create a change the source file of a draft version. This command is useful for updating an existing version. 
 
 ```bash
-ibmcloud catalog offering refresh-version --version-locator VERSION_NUMBER --zipurl URL [--include-config]
+ibmcloud catalog offering version refresh-version --version-locator VERSION_NUMBER --zipurl URL [--include-config]
 ```
 {: codeblock}
 
@@ -935,13 +971,13 @@ ibmcloud catalog offering refresh-version --version-locator VERSION_NUMBER --zip
 :   If provided, all configuration values are included and available when you add the product.
 
 
-## ibmcloud catalog offering merge-draft
+## ibmcloud catalog offering version merge-draft
 {: #merge-offering-draft-version}
 
 Run the following command to merge a draft version of a product.
 
 ```bash
-ibmcloud catalog offering merge-draft --version-locator VERSION_NUMBER
+ibmcloud catalog offering version merge-draft --version-locator VERSION_NUMBER
 ```
 {: codeblock}
 
@@ -951,27 +987,167 @@ ibmcloud catalog offering merge-draft --version-locator VERSION_NUMBER
 --version-locator VERSION_NUMBER
 :   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
 
-## ibmcloud catalog offering publish-to-account
-{: #publish-offering-to-account}
+## ibmcloud catalog offering enable-sharing
+{: #share-offering}
 
-Run the following command to publish a new version or product from your private catalog to the account. After the product is published, users in the account who have access to the private catalog and its containing resource group can create an instance and start using it.
+Run the following command to enable your product to be shared. 
 
 ```bash
-ibmcloud catalog offering publish-to-account --version-locator VERSION_NUMBER
+ibmcloud catalog offering enable-sharing --catalog CATALOG --offering OFFERING
+```
+{: codeblock}
+
+### Command options
+{: #share-offering-options}
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+## ibmcloud catalog offering ready
+{: #ready-offering}
+
+Run the following command to mark your product as ready to share or publish. 
+
+```bash
+ibmcloud catalog offering ready --version-locator VERSION_NUMBER
+```
+{: codeblock}
+
+### Command options
+{: #ready-offering-options}
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
+
+## ibmcloud catalog offering delete
+{: #delete-offering}
+
+Run the following command to delete a product from your private catalog. You cannot delete a product that is published in the {{site.data.keyword.cloud_notm}} catalog. To deprecate a published product from the {{site.data.keyword.cloud_notm}} catalog, see [`ibmcloud catalog offering deprecate-offering`](/docs/cli?topic=cli-manage-catalogs-plugin#publish-offering-deprecate). 
+
+```bash
+ibmcloud catalog offering delete --catalog CATALOG --offering OFFERING
+```
+{: codeblock}
+
+### Command options
+{: #delete-offering-options}
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+
+
+## ibmcloud catalog offering publish account
+{: #publish-offering-to-account}
+
+Run the following command to publish a product from your private catalog to an account. After the product is published, users in the account that have access to the private catalog and its containing resource group can create an instance and start using it.
+
+```bash
+ibmcloud catalog offering publish account [--catalog CATALOG][--offering OFFERING]
 ```
 {: codeblock}
 
 ### Command options
 {: #publish-offering-to-account-options}
 
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+## ibmcloud catalog offering publish allowlist
+{: #publish-offering-allowllist}
+
+Run the following command to publish a product from your private catalog to a set of allowlisted accounts. After the product is published, users in the allowlisted accounts can create an instance and start using it.
+
+```bash
+ibmcloud catalog offering publish allowlsit [--catalog CATALOG][--offering OFFERING][--account-ids ACCOUNT-IDS]
+```
+{: codeblock}
+
+### Command options
+{: #publish-offering-allowlist-options}
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+--account-ids ACCOUNT-IDS
+:   The account IDS.
+
+
+## ibmcloud catalog offering publish enterprise
+{: #publish-offering-enterprise}
+
+Run the following command to publish a product to an enterprise. After the product is published, users within the enterprise can create an instance of the product.
+
+```bash
+ibmcloud catalog offering publish enterprise [--catalog CATALOG][--offering OFFERING]
+```
+{: codeblock}
+
+### Command options
+{: #publish-offering-enterprise-options}
+
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+## ibmcloud catalog offering suspend-offering
+{: #suspend-offering}
+
+Run the following command to suspend a product from the catalog. You can suspend it for a short time without permanently deleting or deprecating it. Suspending a product can be useful if, for example, you discover a bug or a vulnerability in your product that must be investigated before more customers install it.
+
+```bash
+ibmcloud catalog offering suspend-offering [--catalog CATALOG][--offering OFFERING]
+```
+{: codeblock}
+
+### Command options
+{: #suspend-offering-options}
+
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+## ibmcloud catalog offering version suspend-version
+{: #suspend-version}
+
+Run the following command to suspend a version of a product from the catalog. You can suspend the version for a short time without permanently deleting or deprecating it.
+
+```bash
+ibmcloud catalog offering version suspend-version [--version-locator VERSION_NUMBER]
+```
+{: codeblock}
+
+### Command options
+{: #suspend-version-options}
+
 
 --version-locator VERSION_NUMBER
-:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
+
+:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the version that you want to use.
+
 
 ## ibmcloud catalog offering workspaces
 {: #get-workspaces}
 
-Run the following command to get the schematics workspaces for a product version.
+Run the following command to get the {{site.data.keyword.bpshort}} workspaces for a product version.
 
 ```bash
 ibmcloud catalog offering workspaces [--version-locator VERSION_NUMBER] [output FORMAT] 
@@ -982,12 +1158,9 @@ ibmcloud catalog offering workspaces [--version-locator VERSION_NUMBER] [output 
 {: #get-workspaces-options}
 
 --version-locator VERSION_NUMBER
-
 :   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified version that you want to use.
 
---output FORMAT (optional)
-
-:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example, `--output json`.
+:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified version that you want to use.
 
 ## ibmcloud catalog install
 {: #install-software-version}
@@ -1020,11 +1193,11 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 
 --timeout TIMEOUT
 
-:   Specify in seconds how long the schematics workspace should wait before installing. Default is `180`.
+:   Specify in seconds how long the {{site.data.keyword.bpshort}} workspace should wait before installing. Default is `180`.
 
 --wait WAIT
 
-:   Wait and track the progress of the schematics workspace job. If `true`, installation waits. If `false`, the software installs immediately. Default is `true`.
+:   Wait and track the progress of the {{site.data.keyword.bpshort}} workspace job. If `true`, installation waits. If `false`, the software installs immediately. Default is `true`.
 
 --workspace-name NAME (optional)
 
@@ -1034,7 +1207,7 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 
 :   Provide a comma-separated list of tags.
 
-## ibmcloud catalog netrc
+## ibmcloud catalog utility netrc
 {: #generate-netrc}
 
 Run the following command to create a .netrc file, generate the machine name in your .netrc file, or update the credential in your .netrc file. A .netrc file stores the required login information that is needed to use Terraform modules from the {{site.data.keyword.cloud_notm}} catalog.
@@ -1048,3 +1221,163 @@ You need version 1.2.7 or higher of the catalogs management CLI plug-in to run t
 ibmcloud catalog netrc
 ```
 {: codeblock}
+
+## ibmcloud catalog utility update-module-references
+{: #utility-module-references}
+
+Run the following command to check your working directory's Terraform modules for updates from the catalog and update the source attribute to the latest version. The README.md is also updated. 
+
+```bash
+ibmcloud catalog utility update-module-references
+```
+{: codeblock}
+
+## ibmcloud catalog offering unpublish account
+{: #unpublish-offering-account}
+
+Run the following command to unpublish a product from your account. After the product is unpublished, users in your account cannot create an instance of the product. 
+
+```bash
+ibmcloud catalog offering unpublish account [--catalog CATALOG][--offering OFFERING]
+```
+{: codeblock}
+
+### Command options
+{: #unpublish-offering-account-options}
+
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+## ibmcloud catalog offering unpublish allowlist
+{: #unpublish-offering-allowlist}
+
+Run the following command to remove account IDs from the product's allowlist. Accounts that are removed from the allowlist cannot create an instance of the product. 
+
+```bash
+ibmcloud catalog offering unpublish allowlist [--catalog CATALOG][--offering OFFERING][--account-ids ACCOUNT-IDS]
+```
+{: codeblock}
+
+### Command options
+{: #unpublish-offering-allowlist-options}
+
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+--account-ids ACCOUNT-IDS
+:   The account IDS.
+
+## ibmcloud catalog offering unpublish enterprise
+{: #unpublish-offering-enterprise}
+
+Run the following command to unpublish a product from an enterprise. After the product is unpublished, the enterprise cannot create an instance of the product. 
+
+```bash
+ibmcloud catalog offering unpublish enterprise [--catalog CATALOG][--offering OFFERING]
+```
+{: codeblock}
+
+### Command options
+{: #unpublish-offering-enterprise-options}
+
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+
+## ibmcloud catalog offering publish public
+{: #publish-offering-to-public}
+
+Run the following command to publish your private offering to the {{site.data.keyword.cloud_notm}} catalog for all users to see and use. To get to this step in the publication process, you must first publish the offering to your account and to all IBMers to complete the testing process. After your testing is complete, you can run this command. 
+
+This option does require an approval process from offering management. As soon as your approval is complete, your tile is available for all {{site.data.keyword.cloud_notm}} customers to see and use.
+{: important}
+
+```bash
+ibmcloud catalog offering publish public [--catalog CATALOG][--offering OFFERING]
+```
+{: codeblock}
+
+### Command options
+{: #publish-offering-to-public-options}
+
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+## ibmcloud catalog offering deprecate-offering
+{: #publish-offering-deprecate}
+
+Run the following command to deprecate a previously published offering version in the {{site.data.keyword.cloud_notm}}  catalog.
+
+```bash
+ibmcloud catalog offering deprecate-offering [--catalog CATALOG][--offering OFFERING]
+```
+{: codeblock}
+
+### Command options
+{: #publish-offering-deprecate-options}
+
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+## ibmcloud catalog offering restore-offering
+{: #publish-offering-restore}
+
+Run the following command to restore a previously deprecated product in the {{site.data.keyword.cloud_notm}} catalog. After you validate a version of your product, you can restore it to the published state that it was in before it was deprecated.
+
+```bash
+ibmcloud catalog offering restore-offering [--catalog CATALOG][--offering OFFERING]
+```
+{: codeblock}
+
+### Command options
+{: #publish-offering-restore-options}
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+
+## ibmcloud catalog offering version restore-version
+{: #publish-version-restore}
+
+Run the following command to restore a previously deprecated version of a product in the {{site.data.keyword.cloud_notm}} catalog. Restoring it places the version in draft state. After you validate it, you can restore the original version to the published state that it was in before it was deprecated.
+
+```bash
+ibmcloud catalog offering version restore-version [--catalog CATALOG][--offering OFFERING] [--include-config]
+```
+{: codeblock}
+
+### Command options
+{: #publish-version-restore-options}
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+--include-config (optional)
+
+:   If provided, all configuration values are included and available when you add the product.
