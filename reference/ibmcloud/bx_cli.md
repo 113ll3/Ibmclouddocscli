@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-12-10"
+  years: 2018, 2022
+lastupdated: "2022-03-17"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -380,7 +380,7 @@ ibmcloud cf install --restore
 Log in to the {{site.data.keyword.cloud_notm}} CLI:
 
 ```bash
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--cr-token TOKEN | @CR_TOKEN_FILE] [--profile PROFILE_ID | PROFILE_NAME] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [--accept] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE] [--vpc]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--cr-token (TOKEN | @CR_TOKEN_FILE) | --vpc-cri] [--profile PROFILE_ID | PROFILE_NAME | PROFILE_CRN] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [--accept] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE] [--vpc]
 ```
 {: codeblock}
 
@@ -410,8 +410,11 @@ None.
 --cr-token TOKEN or @CR_TOKEN_FILE_PATH
 :   The compute resource token content or the path of a compute resource token file that is indicated by the @ symbol. If provided, the `--profile` flag, or `IBMCLOUD_CR_PROFILE` environment variable, must also be provided or set.
 
---profile PROFILE_ID or PROFILE_NAME
-:   The ID or name of the linked trusted IAM profile to be used when obtaining the IAM access token. If provided, the `--cr-token` flag, or `IBMCLOUD_CR_TOKEN` environment variable, must also be provided or set.
+--vpc-cri
+:   Login as a VPC VSI compute resource identity.
+
+--profile PROFILE_ID, PROFILE_NAME, or PROFILE_CRN
+:   The name, ID, or CRN of the linked trusted IAM profile to be used when obtaining the IAM access token. If provided, the `--cr-token` flag, `IBMCLOUD_CR_TOKEN` environment variable, or `--vpc-cri` flag must also be provided or set. If authenticating as a VPC VSI compute resource, specifying only a trusted profile CRN or ID is supported.
 
 -c ACCOUNT_ID
 :   The ID of the target account. This option is exclusive with the `--no account` option.
@@ -534,29 +537,48 @@ Open the URL in the default browser? [Y/n] >
 
 Open the link in a browser to get a passcode. Enter the passcode in the console to log in.
 
-**Log in as a Compute Resource linked to a trusted profile:**
-
-```bash
-ibmcloud login --cr-token token-string --profile trusted_profile_name_or_id
+#### Log in as an IKS Compute Resource linked to a trusted profile:
+```
+ibmcloud login --cr-token token-string --profile trusted_profile_name_id_or_crn
 ```
 {: codeblock}
 
-```bash
-ibmcloud login --cr-token @filename --profile trusted_profile_name_or_id
+```
+ibmcloud login --cr-token @filename --profile trusted_profile_name_id_or_crn
 ```
 {: codeblock}
 
-```bash
-IBMCLOUD_CR_TOKEN=@filename ibmcloud login --profile trusted_profile_name_or_id
+```
+IBMCLOUD_CR_TOKEN=@filename ibmcloud login --profile trusted_profile_name_id_or_crn
 ```
 {: codeblock}
 
-```bash
-IBMCLOUD_CR_TOKEN=@filename IBMCLOUD_CR_PROFILE=trusted_profile_name_or_id ibmcloud login
+```
+IBMCLOUD_CR_TOKEN=@filename IBMCLOUD_CR_PROFILE=trusted_profile_name_id_or_crn ibmcloud login
 ```
 {: codeblock}
 
-For more information on logging in as a compute resource, see [Logging in with a Compute Resource token](/docs/cli?topic=cli-cri-login).
+For more information about logging in as an IKS compute resource, see [Logging in with a Compute Resource token](/docs/cli?topic=cli-cri-login).
+
+#### Log in as a VPC VSI Compute Resource using the default trusted profile linked during instance provisioning:
+```
+ibmcloud login --vpc-cri
+```
+{: codeblock}
+
+#### Log in as a VPC VSI Compute Resource linked to the specified trusted profile:
+
+```
+ibmcloud login --vpc-cri --profile trusted_profile_id_or_crn
+```
+{: codeblock}
+
+```
+IBMCLOUD_CR_PROFILE=trusted_profile_id_or_crn ibmcloud login --vpc-cri
+```
+{: codeblock}
+
+For more information about logging in as a VPC VSI compute resource, see [Logging in as a Virtual Server Instance Compute Resource Identity](/docs/cli?topic=vpc-cri-login).
 
 **Accept invitation to join a new account:**
 
