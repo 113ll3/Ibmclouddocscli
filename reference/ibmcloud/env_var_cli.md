@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-11-09"
+  years: 2018, 2022
+lastupdated: "2022-03-17"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud, cli commands, update, environment variables
 
@@ -60,7 +60,12 @@ The compute resource token used for login, which can either be a token string or
 ## IBMCLOUD_CR_PROFILE=profile_value
 {: #IBMCLOUD_CR_PROFILE}
 
-The name or ID of the linked trusted IAM profile to be used when you get the IAM access token.
+The name, ID, or CRN of the linked trusted IAM profile to be used when obtaining the IAM access token. If authenticating as a VPC VSI compute resource, specifying only a trusted profile CRN or ID is supported.
+
+## IBMCLOUD_CR_VPC_URL=url_value
+{: #IBMCLOUD_CR_VPC_URL}
+
+The custom server URL to use when obtaining an instance identity token and IAM token as a VPC VSI compute resource. This value replaces the default server endpoint of the VPC VSI instance identity token service.
 
 ## IBMCLOUD_TRACE=true
 {: #IBMCLOUD_TRACE}
