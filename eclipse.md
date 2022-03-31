@@ -1,46 +1,61 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-04-05"
+  years: 2021, 2022
+lastupdated: "2022-03-31"
 
-keywords: cli, developer extension, eclipse ide
+keywords: cli, developer extension, eclipse ide, IBM cloud cli
 
 subcollection: cli
 
 ---
 
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:note: .note}
+{:table: .aria-labeledby="caption"}
 {:external: target="_blank" .external}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:download: .download}
+{:help: data-hd-content-type='help'}
+{:term: .term}
+{:support: data-reuse='support'}
 
-# {{site.data.keyword.dev_cli_notm}} for Eclipse IDE plug-ins
+# {{site.data.keyword.cloud_notm}} CLI for Eclipse IDE plug-in (preview)
 {: #eclipse-ide-plugins}
 
-{{site.data.keyword.cloud}} provides extensions for Eclipse integrated development environments (IDEs). These Eclipse IDE plug-ins support the deployment of applications into VMs by using Cloud Foundry and Red Hat OpenShift on {{site.data.keyword.cloud_notm}}.
+This preview release of {{site.data.keyword.cloud}} CLI for Eclipse plug-in provides extensions for Eclipse integrated development environments (IDEs). This Eclipse IDE plug-in enables developers to manage their {{site.data.keyword.cloud_notm}} account, resources, and applications within the Eclipse IDE.
 {: shortdesc}
 
-The following Eclipse plug-ins are provided:
+This plug-in provides functions that are provided by the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli). The {{site.data.keyword.cloud_notm}} CLI allows developers to work with {{site.data.keyword.cloud_notm}} resources, apps, and containers.
 
-* [Eclipse Tools for Cloud Foundry](https://marketplace.eclipse.org/content/eclipse-tools-cloud-foundry#group-details){: external} for deployment to [Cloud Foundry on {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started).
-* [Red Hat CodeReady Studio (formerly Developer Studio)](https://marketplace.eclipse.org/content/red-hat-codeready-studio-formerly-developer-studio){: external} for deployment to [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started).
+![IBM Cloud CLI Eclipse plug-in](images/eclipse.png "IBM Cloud CLI Eclipse plug-in"){: caption="Figure 1. IBM Cloud CLI Eclipse plug-in" caption-side="bottom"}
 
-## Installing the Eclipse Tools for Cloud Foundry plug-in
-{: #eclipse-ide-cf}
+This plug-in supports running `ibmcloud` CLI commands from within the Eclipse environment.
 
-To install the Eclipse Tools for Cloud Foundry plug-in, complete these steps:
+The {{site.data.keyword.dev_cli_notm}} plug-in for Eclipse is an open source project that is available on [GitHub](https://github.com/IBM-Cloud/eclipse-ibmcloud-cli){: external}.
+{: note}
 
-1. In Eclipse, open **Help** > **Eclipse Marketplace**.
-2. Search for **Eclipse Tools for Cloud Foundry** in the **Find** search bar.
-3. On the Eclipse Tools for Cloud Foundry plug-in, click **Install** and complete the installation.
+## Before you begin
+{: #eclipse-ide-prereqs}
 
-## Installing the Red Hat CodeReady Studio plug-in
-{: #eclipse-ide-codeready}
+To use the Eclipse plug-in, install the following software:
 
-To install the Red Hat CodeReady Studio plug-in, complete these steps:
+-	[Eclipse](https://www.eclipse.org/downloads/){: external}
+-	[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli)
+- [{{site.data.keyword.containerlong_notm}} CLI plug-in](/docs/cli?topic=cli-install-devtools-manually#idt-install-kubernetes-cli-plugin)
 
-1. In Eclipse, open **Help** > **Eclipse Marketplace**.
-2. Search for **Red Hat CodeReady Studio** in the **Find** search bar.
-3. On the Red Hat CodeReady Studio plug-in, click **Install** and complete the installation.
+If you install the {{site.data.keyword.cloud_notm}} CLI in a custom directory, set the system property `ibmcloud_eclipse_cli_path` to the custom location of the {{site.data.keyword.cloud_notm}} CLI installation. For example, `-Dcom.ibmcloud.eclipse.cli.path=<path-to-ibmcloud-cli-installation>`. Specify this location in the `eclipse.ini` file under `vmargs`.
+
+## Installing the {{site.data.keyword.cloud_notm}} CLI plug-in
+{: #eclipse-ide-install}
+
+The {{site.data.keyword.cloud_notm}} CLI plug-in can be installed from the [Eclipse marketplace](https://marketplace.eclipse.org/content/ibm-cloud-dev-tools-eclipse){: external}. Follow the instructions in the marketplace to complete the installation of the plug-in.
+
+## Reporting issues
+{: #eclipse-ide-report-issues}
+
+If you want to report bugs or enhancement requests, open a work item in the [GitHub repo](https://github.com/IBM-Cloud/eclipse-ibmcloud-cli/issues).{: external}
