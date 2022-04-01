@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-03-31"
 
 keywords: cli, catalogs management
 
@@ -748,7 +748,7 @@ ibmcloud catalog offering version preinstall-status --version-locator VERSION_NU
 Run the following command to validate a new version of a product in your private catalog. Products must be validated to ensure that they work as expected before they can be published to the account for other users to create an instance from the private catalog.
 
 ```bash
-ibmcloud catalog offering version validate --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME [--timeout TIMEOUT] [--wait WAIT] [--override-values VALUES|FILENAME] 
+ibmcloud catalog offering version validate --version-locator VERSION_NUMBER --cluster CLUSTER_ID --namespace NAME [--timeout TIMEOUT] [--wait WAIT] [--override-values VALUES|FILENAME] [--workspace-tf-version VERSION] [--workspace-region REGION] [--workspace-rg-id ID][--schematics-destroy][--schematics-delete]
 ```
 {: codeblock}
 
@@ -763,7 +763,7 @@ ibmcloud catalog offering version validate --version-locator VERSION_NUMBER --cl
 :   Provide the cluster ID of the cluster where you want to install the product.
 
 --namespace NAME
-:   Provide the namespace you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.
+:   Provide the namespace that you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.
 
 --timeout TIMEOUT
 :   Specify in seconds how long the {{site.data.keyword.bpshort}} workspace should wait before installing. Default is `180`.
@@ -773,6 +773,21 @@ ibmcloud catalog offering version validate --version-locator VERSION_NUMBER --cl
 
 --override-values VALUES|FILENAME (optional)
 :   Provide any custom configurations for the installation. You can provide this value either inline or by using a JSON or TXT file. For example, `override-values values.json`.
+
+--workspace-tf-version VERSION (optional)
+:   Provide a workspace terraform version.
+
+--workspace-region REGION (optional)
+:   Provide a workspace region.
+
+--workspace-rg-id ID (optional)
+:   Provide a workspace resource group ID.
+
+--schematics-destroy (optional)
+:   Provide this flag to destroy the workspace resources after validation and installation.
+
+--schematics-delete VALUE (optional)
+:   Provide this flag to delete the {{site.data.keyword.bpshort}} workspace after validation and installation.
   
 ### Example
 {: #validate-example}
@@ -889,6 +904,67 @@ ibmcloud catalog offering category-options [--output FORMAT]
 ibmcloud catalog offering add-category --catalog dev-catalog --offering dev-offering --category dev_ops
 ```
 {: codeblock}
+
+## ibmcloud catalog offering version get-controls
+{: #version-get-controls}
+
+Run the following command to get the security and compliance controls from a version. Controls are safeguards that are used to meet security and compliance requirements. 
+
+```bash
+ibmcloud catalog offering version get-controls [--version-locator VERSION_NUMBER] [--output OUTPUT]
+```
+{: codeblock}
+
+### Command options
+{: #version-get-controls-options}
+
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified version that you want to use.
+
+--output FORMAT (optional)
+:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+
+## ibmcloud catalog offering version add-controls
+{: #version-add-controls}
+
+Run the following command to add security and compliance controls to a version. Controls are safeguards that are used to meet security and compliance requirements. 
+
+```bash
+ibmcloud catalog offering version add-controls [--version-locator VERSION_NUMBER] [--controls CONTROLS]
+```
+{: codeblock}
+
+### Command options
+{: #version-add-controls-options}
+
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified version that you want to use.
+
+--controls CONTROLS 
+:   Provide the controls as a JSON array. You can provide values as a JSON file or inline JSON. For example, `[{"NIST": "AC-4"}, {"NIST": "AC-2"}]`.
+
+## ibmcloud catalog offering version delete-controls
+{: #version-delete-controls}
+
+Run the following command to delete security and compliance controls from a version. Controls are safeguards that are used to meet security and compliance requirements. 
+
+```bash
+ibmcloud catalog offering version delete-controls [--version-locator VERSION_NUMBER] [--controls CONTROLS]
+```
+{: codeblock}
+
+### Command options
+{: #version-delete-controls-options}
+
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified version that you want to use.
+
+--controls CONTROLS 
+:   Provide the controls as a JSON array. You can provide values as a JSON file or inline JSON. For example, `[{"NIST": "AC-4"}, {"NIST": "AC-2"}]`.
+
 
 ## ibmcloud catalog offering version create-draft
 {: #create-offering-draft}
@@ -1168,7 +1244,7 @@ ibmcloud catalog offering workspaces [--version-locator VERSION_NUMBER] [output 
 Run the following command to install a software version from the {{site.data.keyword.cloud_notm}} catalog.
 
 ```bash
-ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_ID] [--namespace NAME] [--override-values VALUES] [--timeout TIMEOUT] [--wait WAIT] [--workspace-name NAME] [--workspace-tags TAGS]
+ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_ID] [--namespace NAME] [--override-values VALUES] [--timeout TIMEOUT] [--wait WAIT] [--workspace-name NAME] [--workspace-tags TAGS] [--workspace-tf-version VERSION] [--workspace-region REGION] [--workspace-rg-id ID] [schematics-delete VALUE]
 ```
 {: codeblock}
 
@@ -1185,7 +1261,7 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 
 --namespace NAME
 
-:   Specify the namespace you'd like to use.
+:   Specify the namespace that you'd like to use.
 
 --override-values VALUES
 
@@ -1204,8 +1280,19 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 :   Provide a workspace name. Default is `OfferingName-Date`.
 
 --workspace-tags TAGS (optional)
-
 :   Provide a comma-separated list of tags.
+
+--workspace-tf-version VERSION (optional)
+:   Provide a workspace terraform version.
+
+--workspace-region REGION (optional)
+:   Provide a workspace region.
+
+--workspace-rg-id ID (optional)
+:   Provide a workspace resource group ID.
+
+--schematics-delete VALUE (optional)
+:   Provide this flag to delete the {{site.data.keyword.bpshort}} workspace after validation and installation.
 
 ## ibmcloud catalog utility netrc
 {: #generate-netrc}
