@@ -692,7 +692,6 @@ Run the `offering update` command.
 
 ```bash
 ibmcloud catalog offering update -c <CATALOGID> -o <OFFERINGID> --updated-offering <UPDATED_OFFERING.json>
-
 ```
 {: codeblock}
 
