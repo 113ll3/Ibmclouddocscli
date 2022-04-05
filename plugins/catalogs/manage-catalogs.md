@@ -4,23 +4,18 @@ copyright:
   years: 2019, 2022
 lastupdated: "2022-04-05"
 
-keywords: cli, catalogs management
+keywords: cli, catalogs management, catalog
 
 subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:note: .note}
-{:important: .important}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Catalogs management CLI plug-in
 {: #manage-catalogs-plugin}
 
-The {{site.data.keyword.cloud}} catalogs management command-line interface (CLI) provides extra capabilities for working with products in the {{site.data.keyword.cloud_notm}} catalog and the private catalogs in your account. You can use this CLI plug-in to manage your private catalogs that are only available to users in your account, onboard private software products, and manage catalog visibility between the public catalog and your private catalogs.
+The {{site.data.keyword.cloud}} catalogs management command-line interface (CLI) provides extra capabilities for working with products in the {{site.data.keyword.cloud_notm}} catalog and the private catalogs in your account. You can use this CLI plug-in to manage your private catalogs, onboard private software products, and manage catalog visibility between the public catalog and your private catalogs.
 {: shortdesc} 
 
 ## Before you begin
@@ -40,7 +35,7 @@ ibmcloud plugin install catalogs-management
 ```
 {: codeblock}
 
-In the command line, you are notified when updates to the `ibmcloud` CLI and `catalogs-management` CLI plug-in are available. Ensure that you keep your CLI up-to-date so that you can use all the available commands and flags.
+In the command line, you are notified when updates to the `ibmcloud` CLI and `catalogs-management` CLI plug-in are available. Ensure that you keep your CLI up to date so that you can use all the available commands and flags.
 
 If you want to view the current version of your `catalogs-management` CLI plug-in, run `ibmcloud plugin list`.
 
@@ -97,7 +92,7 @@ ibmcloud catalog list [--output FORMAT]
 
 --output FORMAT (optional)
 
-:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example: `--output json`
+:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example, `--output json`.
 
 ### Output
 {: #get-catalogs-output}
@@ -132,7 +127,7 @@ ibmcloud catalog get --catalog CATALOG [--output FORMAT]
 
 --output FORMAT (optional)
 
-:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example: `--output json`
+:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example, `--output json`.
 
 ### Output
 {: #get-catalog-output}
@@ -319,11 +314,11 @@ ibmcloud catalog filter create [--catalog CATALOG] [--category CATEGORY] [--comp
 
 --compliance TYPE (optional)
 
-:   Provide a comma-separated list of compliance categories you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+:   Provide a comma-separated list of compliance categories that you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
 
 --deployment-target TARGET (optional)
 
-:   Provide a comma-separated list of deployment targets you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+:   Provide a comma-separated list of deployment targets that you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
 
 --exclude-list LIST (optional)
 
@@ -332,23 +327,23 @@ ibmcloud catalog filter create [--catalog CATALOG] [--category CATEGORY] [--comp
 --include-list LIST (optional)
 
 :   Provide a comma-separated list of product IDs or names that must be included in the filtered public catalog.</d
-:   Provide a comma-separated list of product formats you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+:   Provide a comma-separated list of product formats that you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
 
 --pricing-plan PLAN (options)
 
-:   Provide a comma-separated list of pricing plans you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+:   Provide a comma-separated list of pricing plans that you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
 
 --provider PROVIDER (optional)
 
-:   Provide a comma-separated list of providers you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+:   Provide a comma-separated list of providers that you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
 
 --release RELEASE (optional)
 
-:   Provide a comma-separated list of categories you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+:   Provide a comma-separated list of categories that you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
 
 --type TYPE (optional)
 
-:   Provide a comma-separated list of software types you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
+:   Provide a comma-separated list of software types that you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
 
 ## ibmcloud catalog filter delete
 {: #delete-filter}
@@ -681,6 +676,28 @@ ibmcloud catalog offering import-version --catalog CATALOG --offering OFFERING_N
 :   If provided, all configurations values are included and available when you import the new version.
 
 
+## ibmcloud catalog offering update
+{: #update-offering}
+
+To update a product in your private catalog, you first need get the product and then you can update.  
+
+Run the `offering get` command. For more information, see [ibmcloud catalog offering get](#get-offering). 
+
+```bash
+ibmcloud catalog offering get -c <CATALOGID> -o <OFFERINGID> --output json
+```
+{: codeblock}
+
+Run the `offering update` command.
+
+```bash
+ibmcloud catalog offering update -c <CATALOGID> -o <OFFERINGID> --updated-offering <UPDATED_OFFERING.json>
+
+```
+{: codeblock}
+
+
+
 ## ibmcloud catalog offering version preinstall
 {: #preinstall-offering}
 
@@ -702,7 +719,7 @@ ibmcloud catalog offering version preinstall --version-locator VERSION_NUMBER --
 :   Provide the cluster ID of the cluster where you want to install the product.
 
 --namespace NAME
-:   Provide the namespace you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.
+:   Provide the namespace that you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.
 
   
 ### Example
@@ -766,7 +783,7 @@ ibmcloud catalog offering version validate --version-locator VERSION_NUMBER --cl
 :   Provide the namespace that you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.
 
 --timeout TIMEOUT
-:   Specify in seconds how long the {{site.data.keyword.bpshort}} workspace should wait before installing. Default is `180`.
+:   Specify in seconds how long the {{site.data.keyword.bpshort}} workspace waits it installs. Default is `180`.
 
 --wait WAIT
 :   Wait and track the progress of the {{site.data.keyword.bpshort}} workspace job. If `true`, installation waits. If `false`, the software installs immediately. Default is `true`.
@@ -965,7 +982,6 @@ ibmcloud catalog offering version delete-controls [--version-locator VERSION_NUM
 --controls CONTROLS 
 :   Provide the controls as a JSON array. You can provide values as a JSON file or inline JSON. For example, `[{"NIST": "AC-4"}, {"NIST": "AC-2"}]`.
 
-
 ## ibmcloud catalog offering version create-draft
 {: #create-offering-draft}
 
@@ -1118,7 +1134,6 @@ ibmcloud catalog offering delete --catalog CATALOG --offering OFFERING
 :   The product name or ID.
 
 
-
 ## ibmcloud catalog offering publish account
 {: #publish-offering-to-account}
 
@@ -1219,7 +1234,6 @@ ibmcloud catalog offering version suspend-version [--version-locator VERSION_NUM
 
 :   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the version that you want to use.
 
-
 ## ibmcloud catalog offering workspaces
 {: #get-workspaces}
 
@@ -1234,9 +1248,12 @@ ibmcloud catalog offering workspaces [--version-locator VERSION_NUMBER] [output 
 {: #get-workspaces-options}
 
 --version-locator VERSION_NUMBER
-:   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified version that you want to use.
 
 :   To get the version locator for this offering, run `ibmcloud catalog offering list` and locate the specified version that you want to use.
+
+--output FORMAT (optional)
+
+:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example, `--output json`.
 
 ## ibmcloud catalog install
 {: #install-software-version}
@@ -1269,7 +1286,7 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 
 --timeout TIMEOUT
 
-:   Specify in seconds how long the {{site.data.keyword.bpshort}} workspace should wait before installing. Default is `180`.
+:   Specify in seconds how long the {{site.data.keyword.bpshort}} workspace waits before it installs. Default is `180`.
 
 --wait WAIT
 
@@ -1297,11 +1314,11 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 ## ibmcloud catalog utility netrc
 {: #generate-netrc}
 
-Run the following command to create a .netrc file, generate the machine name in your .netrc file, or update the credential in your .netrc file. A .netrc file stores the required login information that is needed to use Terraform modules from the {{site.data.keyword.cloud_notm}} catalog.
+Run the following command to create a `.netrc` file, generate the machine name in your `.netrc` file, or update the credential in your `.netrc` file. A `.netrc` file stores the required login information that is needed to use Terraform modules from the {{site.data.keyword.cloud_notm}} catalog.
 
 By running this command, you configure a .netrc file for the machine name `cm.globalcatalog.cloud.ibm.com` with `iamtoken` as the username and your IAM token as the password.
 
-You need version 1.2.7 or higher of the catalogs management CLI plug-in to run the .netrc command.
+You need version 1.2.7 or higher of the catalogs management CLI plug-in to run the `.netrc` command.
 {: note}
 
 ```bash
