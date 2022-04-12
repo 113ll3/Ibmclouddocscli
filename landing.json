@@ -1,0 +1,36 @@
+{
+    "title": "IBM Cloud CLI docs",
+    "lastupdated": "2022-04-12",
+    "introduction": "Use IBM Cloud's powerful CLIs and tooling to interact with your applications, containers, infrastructure, and other services",
+    "section_devtools": {
+      "cli": "/docs/cli?topic=cli-ibmcloud_cli"
+    },
+    "section_recommended": [
+      {
+        "title": "Getting started with the IBM Cloud CLI",
+        "description": "Install the IBM Cloud Command Line Interface, along with the option to install popular plug-ins and tools so that you can work with apps.",
+        "href": "/docs/cli?topic=cli-getting-started"
+      },
+      {
+        "title": "IBM Cloud CLI commands",
+        "description": "IBM Cloud CLI commands to create, manage, deploy, debug, and test applications.",
+        "href": "/docs/cli?topic=cli-idt-cli"
+      },
+            {
+        "title": "Getting started with IBM Cloud Shell",
+        "description": "IBM Cloud Shell is a cloud-based shell workspace that's preconfigured with the full IBM Cloud CLI and several plug-ins and tools.",
+        "href": "/docs/cloud-shell?topic=cloud-shell-getting-started"
+      },
+      {
+        "title": "Troubleshooting for the IBM Cloud CLI",
+        "description": "See solutions to common problems with using the IBM Cloud Command Line Interface.",
+        "href": "/docs/cli?topic=cli-troubleshoot"
+      }
+    ],
+    "section_learn": {
+      "developer": "https://developer.ibm.com/depmodels/cloud/",
+      "architecture": "https://www.ibm.com/cloud/architecture",
+      "training": "https://www.ibm.com/training/cloud",
+      "community": "https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/"
+    }
+  }
