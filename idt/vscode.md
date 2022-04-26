@@ -1,53 +1,58 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-10-05"
+  years: 2017, 2022
+lastupdated: "2022-04-26"
 
-keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
+keywords: cli, ibm cloud developer tools, visual studio code, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
 subcollection: cli
 
 ---
 
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:screen: .screen}
-
+{:codeblock: .codeblock}
+{:pre: .pre}
 {:note: .note}
+{:deprecated: .deprecated}
+{:important: .important}
+{:tip: .tip}
 {:external: target="_blank" .external}
 
-# {{site.data.keyword.dev_cli_notm}} for Microsoft Visual Studio Code
+# {{site.data.keyword.cloud_notm}} CLI for Microsoft Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-The {{site.data.keyword.dev_cli_long}} extension for Microsoft&reg; Visual Studio Code provides access to capabilities from the {{site.data.keyword.cloud}} Command Line Interface directly within the Visual Studio Code editor’s command palette. The extension supports the deployment of applications into VMs by using [Cloud Foundry on {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started), [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started), or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). The extension can be used for app deployment, starting/stopping/restarting apps on {{site.data.keyword.cloud}}, viewing remote app logs, and more – all without the need to leave the editor’s context.
+The {{site.data.keyword.cloud}} CLI extension for Microsoft&reg; Visual Studio Code provides access to capabilities from the {{site.data.keyword.cloud_notm}} Command Line Interface directly within the VS Code editor’s command palette.
 {: shortdesc}
 
-![Screen capture of the {{site.data.keyword.dev_cli_notm}} extension download screen.](../images/vscode.png "Extension download screen within Visual Studio Code"){: caption="Figure 1. Extension download screen within Visual Studio Code." caption-side="bottom"}
+The extension supports the deployment of applications into VMs by using [Cloud Foundry on {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started), [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started), or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). The extension can be used for app deployment, starting/stopping/restarting apps on {{site.data.keyword.cloud_notm}}, viewing remote app logs, and more – all without the need to leave the editor’s context.
+
+![Screen capture of the {{site.data.keyword.cloud_notm}} CLI extension download screen.](../images/vscode.png "Extension download screen within Visual Studio Code"){: caption="Figure 1. Extension download screen within Visual Studio Code." caption-side="bottom"}
 
 ## Dependencies
 {: #vscode-dependencies}
 
-To use the {{site.data.keyword.dev_cli_notm}} extension for Visual Studio Code, you need the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) installed on your system.
+To use the {{site.data.keyword.cloud_notm}} CLI extension for Visual Studio Code, you need the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) installed on your system.
 
 ## Installation
 {: #vscode-installation}
 
-The simplest way to install the {{site.data.keyword.dev_cli_notm}} extension is to use Visual Studio Code’s `quick open` command:
+The simplest way to install the {{site.data.keyword.cloud_notm}} CLI extension is to use Visual Studio Code’s `quick open` command:
 
 1. Open the `quick open` command palette by using the following key combinations from within the editor:
 
    * **Mac:** `cmd + p`
    * **Windows&trade; / Linux&trade;:** `ctrl + p`
 
-2. Enter the `ext install ibm-developer` command, and then press Enter to install the {{site.data.keyword.dev_cli_notm}} extension inside the Visual Studio Code editor.
+2. Enter the `ext install ibm-developer` command, and then press Enter to install the {{site.data.keyword.cloud_notm}} CLI extension inside the Visual Studio Code editor.
 
-Or, you can install the {{site.data.keyword.dev_cli_notm}} extension through the "Extensions" management window:
+Or, you can install the {{site.data.keyword.cloud_notm}} CLI extension through the "Extensions" management window:
 
 1. Open the **Extensions** sidebar in the Visual Studio Code editor, and then search by using the string `publisher:IBM Developer`. The {{site.data.keyword.dev_cli_notm}} extension is displayed in the search results.  
 2. Click **Install** to begin the installation.
 
-You can also access the [{{site.data.keyword.dev_cli_notm}} extension directly within the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer){: external}.
+You can also access the [{{site.data.keyword.cloud_notm}} CLI extension directly within the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer){: external}.
 
 ## Usage
 {: #vscode-usage}
