@@ -49,7 +49,7 @@ The simplest way to install the {{site.data.keyword.cloud_notm}} CLI extension i
 
 Or, you can install the {{site.data.keyword.cloud_notm}} CLI extension through the "Extensions" management window:
 
-1. Open the **Extensions** sidebar in the Visual Studio Code editor, and then search by using the string `publisher:IBM Developer`. The {{site.data.keyword.dev_cli_notm}} extension is displayed in the search results.  
+1. Open the **Extensions** sidebar in the Visual Studio Code editor, and then search by using the string `publisher:IBM Developer`. The {{site.data.keyword.cloud_notm}} CLI extension is displayed in the search results.  
 2. Click **Install** to begin the installation.
 
 You can also access the [{{site.data.keyword.cloud_notm}} CLI extension directly within the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer){: external}.
