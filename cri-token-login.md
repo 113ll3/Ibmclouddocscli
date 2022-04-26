@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-04-26"
 
-keywords: cli, command line, command-line, login, cli login, compute resource, token, iks, trusted profiles, cri
+keywords: cli, command line, command-line, login, cli login, compute resource, token, iks, trusted profiles, cri, IBM Cloud
 
 subcollection: cli
 
@@ -42,7 +42,7 @@ You can log in with a compute resource token with the CLI in any of the followin
    1. Specify the `--cr-token` option with the `ibmcloud login` command, and provide the content of the compute resource token.
    2. Specify the `--profile` option with the `ibmcloud login` command, and provide the ID, name, or CRN of the IAM trusted profile that the cluster is linked to.
 
-   ```
+   ```text
    ibmcloud login --cr-token <token_string> --profile <profile_id_name_or_crn_string>
    ```
    {: codeblock}
@@ -51,7 +51,7 @@ You can log in with a compute resource token with the CLI in any of the followin
    1. Specify the `--cr-token` option with the `ibmcloud login` command, and provide the file path of a compute resource token file.
    2. Specify the `--profile` option with the `ibmcloud login` command, and provide the ID, name, or CRN of the IAM trusted profile that the cluster is linked to.
 
-   ```
+   ```text
    ibmcloud login --cr-token @token_file_name --profile <profile_id_name_or_crn_string>
    ```
    {: codeblock}

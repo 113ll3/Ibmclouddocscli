@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-04-26"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -538,22 +538,23 @@ Open the URL in the default browser? [Y/n] >
 Open the link in a browser to get a passcode. Enter the passcode in the console to log in.
 
 #### Log in as an IKS Compute Resource linked to a trusted profile:
-```
+
+```text
 ibmcloud login --cr-token token-string --profile trusted_profile_name_id_or_crn
 ```
 {: codeblock}
 
-```
+```text
 ibmcloud login --cr-token @filename --profile trusted_profile_name_id_or_crn
 ```
 {: codeblock}
 
-```
+```text
 IBMCLOUD_CR_TOKEN=@filename ibmcloud login --profile trusted_profile_name_id_or_crn
 ```
 {: codeblock}
 
-```
+```text
 IBMCLOUD_CR_TOKEN=@filename IBMCLOUD_CR_PROFILE=trusted_profile_name_id_or_crn ibmcloud login
 ```
 {: codeblock}
@@ -561,19 +562,20 @@ IBMCLOUD_CR_TOKEN=@filename IBMCLOUD_CR_PROFILE=trusted_profile_name_id_or_crn i
 For more information about logging in as an IKS compute resource, see [Logging in with a Compute Resource token](/docs/cli?topic=cli-cri-login).
 
 #### Log in as a VPC VSI Compute Resource using the default trusted profile linked during instance provisioning:
-```
+
+```text
 ibmcloud login --vpc-cri
 ```
 {: codeblock}
 
 #### Log in as a VPC VSI Compute Resource linked to the specified trusted profile:
 
-```
+```text
 ibmcloud login --vpc-cri --profile trusted_profile_id_or_crn
 ```
 {: codeblock}
 
-```
+```text
 IBMCLOUD_CR_PROFILE=trusted_profile_id_or_crn ibmcloud login --vpc-cri
 ```
 {: codeblock}
