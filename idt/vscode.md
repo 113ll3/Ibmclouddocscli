@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-27"
 
 keywords: cli, ibm cloud developer tools, visual studio code, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -45,11 +45,11 @@ The simplest way to install the {{site.data.keyword.cloud_notm}} CLI extension i
    * **Mac:** `cmd + p`
    * **Windows&trade; / Linux&trade;:** `ctrl + p`
 
-2. Enter the `ext install ibm-developer` command, and then press Enter to install the {{site.data.keyword.cloud_notm}} CLI extension inside the Visual Studio Code editor.
+2. Enter the `ext install IBM Cloud CLI` command, and then press Enter to install the {{site.data.keyword.cloud_notm}} CLI extension inside the Visual Studio Code editor.
 
 Or, you can install the {{site.data.keyword.cloud_notm}} CLI extension through the "Extensions" management window:
 
-1. Open the **Extensions** sidebar in the Visual Studio Code editor, and then search by using the string `publisher:IBM Developer`. The {{site.data.keyword.cloud_notm}} CLI extension is displayed in the search results.  
+1. Open the **Extensions** sidebar in the Visual Studio Code editor, and then search by using the string `IBM Cloud CLI`. The {{site.data.keyword.cloud_notm}} CLI extension is displayed in the search results.  
 2. Click **Install** to begin the installation.
 
 You can also access the [{{site.data.keyword.cloud_notm}} CLI extension directly within the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer){: external}.
