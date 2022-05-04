@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2017, 2021
-lastupdated: "2021-12-29"
+   years: 2017, 2022
+lastupdated: "2022-05-04"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy, cli private endpoints
 
@@ -374,7 +374,7 @@ chart-path: "chart/myapp"
 
 deploy-target: "container"
 
-deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
+deploy-image-target: "<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
 
 ibm-cluster: "mycluster"
 ```
