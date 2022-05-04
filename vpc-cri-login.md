@@ -27,7 +27,7 @@ You can use a trusted profile to set up fine-grained authorization for applicati
 For more information about managing trusted profiles and establishing trust with compute resources, see [Establishing trust with compute resources](/docs/account?topic=account-create-trusted-profile&interface=ui#create-profile-compute).
 
 ## Using the CLI to log in
-{: #usingthecli_login}
+{: #vpc-cli-login}
 
 To use the {{site.data.keyword.cloud_notm}} CLI Virtual Server Instance for VPC compute resource identity login feature, you must enable the Instance Metadata service for VPC service on the VSI and link the instance to a trusted profile. For more information about enabling the Instance Metadata service, see [About Instance Metadata for VPC](/docs/vpc?topic=vpc-imd-about&interface=ui). Once enabled and the VSI has been linked to a trusted profile, the CLI can use the [Instance Identity token service](/docs/vpc?topic=vpc-imd-about&interface=ui#imd-vpc-access-token) to acquire a JSON web token and exchange it for an IAM token.
 

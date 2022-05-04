@@ -27,7 +27,7 @@ You can use a trusted profile to set up fine-grained authorization for applicati
 For more information about managing trusted profiles and establishing trust with compute resources, see [Establishing trust with compute resources](/docs/account?topic=account-create-trusted-profile&interface=ui#create-profile-compute).
 
 ## Using the CLI to log in
-{: #usingthecli_login}
+{: #cri-cli-login}
 
 To use the {{site.data.keyword.cloud_notm}} CLI Kubernetes Service compute resource login feature, you must give application pods that run in your {{site.data.keyword.cloud_notm}} Kubernetes Service cluster access to {{site.data.keyword.cloud_notm}} services. For more information, see [Authorizing pods in your cluster to {{site.data.keyword.cloud_notm}} services with IAM trusted profiles](/docs/containers?topic=containers-pod-iam-identity&interface=ui). For Red Hat OpenShift clusters, see [Authorizing pods in your OpenShift cluster to {{site.data.keyword.cloud_notm}} services with IAM trusted profiles](/docs/openshift?topic=openshift-pod-iam-identity&interface=ui).
 
