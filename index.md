@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-22"
+lastupdated: "2022-05-04"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli, IBM Cloud CLI installer, installing IBM Cloud CLI, install IBM Cloud CLI
 content-type: tutorial
@@ -88,6 +88,9 @@ The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when
    ```curl
    curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
    ```
+
+For more information about installing the Mac OS X M1/ARM or Linux 64-bit ARM versions of the CLI, see the {{site.data.keyword.cloud_notm}} CLI [release notes](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/). These versions are provided as-is and are not fully supported.
+{: tip}
 
 ## Verify the installation
 {: #step2-verify-idt}
