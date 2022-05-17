@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-27"
+lastupdated: "2022-05-17"
 
-keywords: cli, ibm cloud developer tools, visual studio code, developer extension, vscode cli, vscode plugin, cloud foundry vscode
+keywords: cli, ibm cloud developer tools, visual studio code, developer extension, vscode cli, vscode plugin, vscode
 
 subcollection: cli
 
@@ -26,7 +26,7 @@ subcollection: cli
 The {{site.data.keyword.cloud}} CLI extension for Microsoft&reg; Visual Studio Code provides access to capabilities from the {{site.data.keyword.cloud_notm}} Command Line Interface directly within the VS Code editor’s command palette.
 {: shortdesc}
 
-The extension supports the deployment of applications into VMs by using [Cloud Foundry on {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started), [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started), or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). The extension can be used for app deployment, starting/stopping/restarting apps on {{site.data.keyword.cloud_notm}}, viewing remote app logs, and more – all without the need to leave the editor’s context.
+The extension supports the deployment of applications into VMs by using [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started) or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). The extension can be used for app deployment, starting/stopping/restarting apps on {{site.data.keyword.cloud_notm}}, viewing remote app logs, and more – all without the need to leave the editor’s context.
 
 ![Screen capture of the {{site.data.keyword.cloud_notm}} CLI extension download screen.](../images/vscode.png "Extension download screen within Visual Studio Code"){: caption="Figure 1. Extension download screen within Visual Studio Code." caption-side="bottom"}
 
