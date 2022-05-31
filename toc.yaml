@@ -123,7 +123,6 @@ toc:
           - /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
           - /vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
           - /power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
-          - /whcs-cli-plugin/whcs-cli-plugin-whcs-annotator-for-clinical-data-cli
           - /tg-cli-plugin/tg-cli-plugin-transit-gateway-cli
       - topicgroup:
           label: Plug-ins for the standalone Cloud Foundry CLI
