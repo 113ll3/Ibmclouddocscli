@@ -90,11 +90,6 @@ toc:
           - reference/ibmcloud/cli_vlan.md
       - idt/commands.md
       - topicgroup:
-          label: IBM Cloud CLI Cloud Foundry commands
-          topics:
-          - reference/ibmcloud/cli_cf_apps.md
-          - reference/ibmcloud/cli_cf_services.md
-      - topicgroup:
           label: Plug-ins for the IBM Cloud CLI
           topics:
           - /analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
