@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2022
-lastupdated: "2022-05-04"
+lastupdated: "2022-06-03"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy, cli private endpoints
 
@@ -18,10 +18,10 @@ subcollection: cli
 {:note: .note}
 {:external: target="_blank" .external}
 
-# {{site.data.keyword.dev_cli_notm}} commands (ibmcloud dev)
+# {{site.data.keyword.cloud_notm}} CLI {{dev_cli_short}} (`ibmcloud dev`) commands
 {: #idt-cli}
 
-The {{site.data.keyword.cloud}} Command Line Interface includes the `ibmcloud dev` or `ic dev` {{site.data.keyword.dev_cli_short}} commands to create, manage, deploy, debug, and test applications.
+The {{site.data.keyword.cloud}} Command Line Interface includes the {{dev_cli_short}} (`ibmcloud dev`) or (`ic dev`) commands to create, manage, deploy, debug, and test applications.
 {: shortdesc}
 
 Run multiple commands in a single command-line statement by using [compound commands](#compound).
@@ -389,7 +389,7 @@ You can deploy your app to a {{site.data.keyword.openshiftlong}} container by us
 #### Toolchain deployment to OpenShift
 {: #deploy-openshift-toolchain}
 
-[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) provides toolchain deployment support for [OpenShift](/docs/openshift?topic=openshift-getting-started) clusters. To use this feature, you need an OpenShift cluster. With this prerequisite met, an OpenShift deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_notm}} commands.
+[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) provides toolchain deployment support for [OpenShift](/docs/openshift?topic=openshift-getting-started) clusters. To use this feature, you need an OpenShift cluster. With this prerequisite met, an OpenShift deployment option is available for the `create` and `edit` capabilities of the {{dev_cli_short}} commands.
 
 By selecting the **OpenShift** option, you can create a toolchain that deploys to the OpenShift cluster that you specify through the dialog.
 
@@ -486,7 +486,7 @@ Command parameters that are entered on the command line take precedence over the
 ## diag
 {: #diag}
 
-The `diag` command is used as a diagnostic to display the version information of installed dependencies for the {{site.data.keyword.dev_cli_notm}} commands. Running `diag` is helpful to determine whether you're missing any dependencies or to help in debugging problems.
+The `diag` command is used as a diagnostic to display the version information of installed dependencies for the {{dev_cli_short}} commands. Running `diag` is helpful to determine whether you're missing any dependencies or to help in debugging problems.
 
 Run the following command to display the versions of your installed dependencies:
 ```bash
@@ -1025,7 +1025,7 @@ Command parameters that are entered on the command line take precedence over the
 
 If you are using Windows&trade;, you must be running Windows&trade; 10 Pro or later.
 
-You can query the status of the containers that are used by the {{site.data.keyword.dev_cli_short}} commands as defined by `container-name-run` and `container-name-tools`.
+You can query the status of the containers that are used by the {{dev_cli_short}} commands as defined by `container-name-run` and `container-name-tools`.
 
 Run the following command in your current app directory to check container status:
 ```bash
@@ -1579,7 +1579,7 @@ Command parameters that are entered on the command line take precedence over the
 ## compound commands
 {: #compound}
 
-You are able to run several commands in one command-line statement by separating the {{site.data.keyword.dev_cli_notm}} commands with the `/` delimiter. More command-line flags can be used after you specify the compound commands. The following commands are examples of how you can use compound commands:
+You are able to run several commands in one command-line statement by separating the {{dev_cli_short}} commands with the `/` delimiter. More command-line flags can be used after you specify the compound commands. The following commands are examples of how you can use compound commands:
 
 ```bash
 ibmcloud dev build/run

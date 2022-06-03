@@ -1,15 +1,14 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-04-29"
+  years: 2019, 2022
+lastupdated: "2022-06-03"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help, ic dev enable
 
 subcollection: cli
 
 ---
-
 
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -156,4 +155,4 @@ CMD ["gunicorn", "-b", "0.0.0.0:3000", "--env", "DJANGO_SETTINGS_MODULE=<project
 ## Next steps
 {: #next_steps_existing_python notoc}
 
-For more information, see [{{site.data.keyword.dev_cli_notm}} commands](/docs/cli?topic=cli-idt-cli).
+For more information, see the [{{site.data.keyword.cloud_notm}} CLI {{dev_cli_short}} (`ibmcloud dev`) commands](/docs/cli?topic=cli-idt-cli).
