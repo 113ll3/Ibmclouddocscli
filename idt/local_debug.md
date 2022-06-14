@@ -18,7 +18,7 @@ subcollection: cli
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Local app debugging for the {{site.data.keyword.cloud_notm}} CLI {{dev_cli_short}} (`ibmcloud dev`) commands
+# Local app debugging for the {{site.data.keyword.cloud_notm}} CLI {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands
 {: #local-debug}
 
 In the {{site.data.keyword.cloud}} Command Line Interface, tools are provided to help you debug your application in Java&trade; and Node.js in {{site.data.keyword.cloud_notm}}.

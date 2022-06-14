@@ -36,7 +36,7 @@ This plug-in provides functions that are provided by the [{{site.data.keyword.cl
 
 This plug-in supports running `ibmcloud` CLI commands from within the Eclipse environment.
 
-The {{site.data.keyword.cloud_notm}} CLI {{dev_cli_short}} `eclipse-ibmcloud-cli` plug-in for Eclipse is an open source project that is available on [GitHub](https://github.com/IBM-Cloud/eclipse-ibmcloud-cli){: external}.
+The {{site.data.keyword.cloud_notm}} CLI {{site.data.keyword.dev_cli_short}} `eclipse-ibmcloud-cli` plug-in for Eclipse is an open source project that is available on [GitHub](https://github.com/IBM-Cloud/eclipse-ibmcloud-cli){: external}.
 {: note}
 
 ## Before you begin
