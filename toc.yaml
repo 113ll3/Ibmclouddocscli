@@ -119,6 +119,7 @@ toc:
           - /vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
           - /power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
           - /tg-cli-plugin/tg-cli-plugin-transit-gateway-cli
+          - plugins/cbr/context-based-restrictions.md
       - topicgroup:
           label: Plug-ins for the standalone Cloud Foundry CLI
           topics:
