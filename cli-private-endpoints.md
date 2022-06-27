@@ -26,7 +26,7 @@ subcollection: cli
 To ensure that you have enhanced control and security over your data when you use the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI), you have the option of using private routes to {{site.data.keyword.cloud_notm}} endpoints. Private routes are not accessible or reachable over the internet. By using the {{site.data.keyword.cloud_notm}} private endpoints feature, you can protect your data from threats from the public network and logically extend your private network.
 {: shortdesc}
 
-The CLI uses the private endpoint support that is provided by the {{site.data.keyword.cloud_notm}} platform. Platform services that are used by the core CLI provide private endpoint support.
+The CLI uses the private endpoint support that is provided by the {{site.data.keyword.cloud}} platform. Platform services that are used by the core CLI provide private endpoint support.
 
 ## Before you begin
 {: #cli-private-endpoints-prereqs}
