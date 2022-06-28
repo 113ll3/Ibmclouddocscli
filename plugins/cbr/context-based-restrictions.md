@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-28"
 
 keywords: cli, context-based restrictions plugin
 
@@ -35,7 +35,7 @@ ibmcloud plugin install cbr
 ```
 {: codeblock}
 
-In the command line, you are notified when updates to the `ibmcloud` CLI and `cbr` CLI plug-in are available. Ensure that you keep your CLI up-to-date so that you can use all the available commands and flags.
+In the command line, you are notified when updates to the `ibmcloud` CLI and `cbr` CLI plug-in are available. Ensure that you keep your CLI up to date so that you can use all the available commands and flags.
 
 If you want to view the current version of your `cbr` CLI plug-in, run `ibmcloud plugin list`.
 
@@ -52,6 +52,7 @@ This operation creates a network zone for the specified account.
 ```sh
 ibmcloud cbr zone-create [--name NAME] [--description DESCRIPTION] [--addresses ADDRESSES] [--excluded EXCLUDED] [--vpc VPC] [--service-ref SERVICE-REF] [--file FILE]
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-cli-zone-create-example}
@@ -61,6 +62,7 @@ ibmcloud cbr zone-create --name example-zone --description "Example zone descrip
 ibmcloud cbr zone-create --name example-zone-with-service-ref --service-ref serviceName=kms
 ibmcloud cbr zone-create --name example-zone-with-vpc --vpc crn:v1:staging:public:is:us-south:a/12ab34cd56ef78ab90cd12ef34ab56cd::vpc:r123-abc456de-f789-abc1-23de-f456abc789ab
 ```
+{: codeblock}
 
 #### Command options
 {: #cbr-zone-create-cli-options}
@@ -84,7 +86,7 @@ ibmcloud cbr zone-create --name example-zone-with-vpc --vpc crn:v1:staging:publi
 :   The VPCs allowed in the zone. Input in the form `value,value,...`.
 
 --file (string)
-:   The supplied file is used to create the zone. This flag is unique and cannot be used with other flags. The file should follow the JSON schema for the zone create API documented [here](/apidocs/context-based-restrictions#create-zone-request){: external}.
+:   The supplied file is used to create the zone. This flag is unique and cannot be used with other flags. The file needs to follow the JSON schema for the zone create API. For more information, see the [Context-based restrictions API](/apidocs/context-based-restrictions#create-zone-request){: external}.
 
 
 ### ibmcloud cbr zones
@@ -95,6 +97,7 @@ This operation lists network zones in the specified account.
 ```sh
 ibmcloud cbr zones [--name NAME] [--sort SORT] 
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-cli-zones-example}
@@ -102,6 +105,7 @@ ibmcloud cbr zones [--name NAME] [--sort SORT]
 ```sh
 ibmcloud cbr zones
 ```
+{: codeblock}
 
 #### Command options
 {: #cbr-zones-cli-options}
@@ -116,11 +120,12 @@ ibmcloud cbr zones
 ### ibmcloud cbr zone
 {: #cbr-cli-zone-command}
 
-This operation retrieves the network zone identified by the specified zone ID.
+This operation retrieves the network zone that is identified by the specified zone ID.
 
 ```sh
 ibmcloud cbr zone ZONE-ID  
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-cli-zone-example}
@@ -128,15 +133,17 @@ ibmcloud cbr zone ZONE-ID
 ```sh
 ibmcloud cbr zone 65810ac762004f22ac19f8f8edf70a34
 ```
+{: codeblock}
 
 ### ibmcloud cbr zone-update
 {: #cbr-cli-zone-update-command}
 
-This operation replaces the network zone identified by the specified zone ID. Partial updates are not supported and the entire network zone object is replaced.
+This operation replaces the network zone that is identified by the specified zone ID. Partial updates are not supported and the entire network zone object is replaced.
 
 ```sh
 ibmcloud cbr zone-update ZONE-ID [--name NAME] [--description DESCRIPTION] [--addresses ADDRESSES] [--excluded EXCLUDED] [--vpc VPC] [--service-ref SERVICE-REF] [--file FILE]
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-zone-update-example}
@@ -146,6 +153,7 @@ ibmcloud cbr zone-update 65810ac762004f22ac19f8f8edf70a34 --name 'Example Zone N
 ibmcloud cbr zone-update 65810ac762004f22ac19f8f8edf70a34 --name example-zone-with-service-ref --service-ref serviceName=kms
 ibmcloud cbr zone-update 65810ac762004f22ac19f8f8edf70a34 --name example-zone-with-vpc --vpc crn:v1:staging:public:is:us-south:a/12ab34cd56ef78ab90cd12ef34ab56cd::vpc:r123-abc456de-f789-abc1-23de-f456abc789ab
 ```
+{: codeblock}
 
 #### Command options
 {: #cbr-zone-update-cli-options}
@@ -169,17 +177,18 @@ ibmcloud cbr zone-update 65810ac762004f22ac19f8f8edf70a34 --name example-zone-wi
 :   The VPCs allowed in the zone. Input in the form `value,value,...`.
 
 --file (string)
-:   The supplied file is used to create the zone. This flag is unique and cannot be used with other flags. The file should follow the JSON schema for the zone update API documented [here](/apidocs/context-based-restrictions#replace-zone-request){: external}.
+:   The supplied file is used to update the zone. This flag is unique and cannot be used with other flags. The file needs to follow the JSON schema for the zone update API. For more information, see the [Context-based restrictions API](/apidocs/context-based-restrictions#replace-zone-request){: external}.
 
 
 ### ibmcloud cbr zone-delete
 {: #cbr-cli-zone-delete-command}
 
-This operation deletes the network zone identified by the specified zone ID.
+This operation deletes the network zone that is identified by the specified zone ID.
 
 ```sh
 ibmcloud cbr zone-delete ZONE-ID  
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-cli-zone-delete-example}
@@ -187,6 +196,7 @@ ibmcloud cbr zone-delete ZONE-ID
 ```sh
 ibmcloud cbr zone-delete 65810ac762004f22ac19f8f8edf70a34
 ```
+{: codeblock}
 
 ### ibmcloud cbr service-ref-targets
 {: #cbr-cli-service-ref-targets-command}
@@ -196,6 +206,7 @@ This operation lists all of the available service reference targets.
 ```sh
 ibmcloud cbr service-ref-targets [--type TYPE] 
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-cli-service-ref-targets-example}
@@ -203,6 +214,7 @@ ibmcloud cbr service-ref-targets [--type TYPE]
 ```sh
 ibmcloud cbr service-ref-targets
 ```
+{: codeblock}
 
 #### Command options
 {: #cbr-service-ref-targets-cli-options}
@@ -224,6 +236,7 @@ This operation creates a rule for the specified account.
 ```sh
 ibmcloud cbr rule-create [--description DESCRIPTION] [--context-attributes CONTEXT-ATTRIBUTES] [--resource-attributes RESOURCE-ATTRIBUTES] [--region REGION] [--resource RESOURCE] [--resource-group-id RESOURCE-GROUP-ID] [--resource-type RESOURCE-TYPE] [--service-instance SERVICE-INSTANCE] [--service-name SERVICE-NAME] [--zone-id ZONE-ID] [--tags TAGS] [--file FILE]
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-cli-rule-create-example}
@@ -231,6 +244,7 @@ ibmcloud cbr rule-create [--description DESCRIPTION] [--context-attributes CONTE
 ```sh
 ibmcloud cbr rule-create --description 'Example Rule Description' --service-name kms --context-attributes endpointType=private --zone-id 93de8d3f588ab2c457ff576c364d1145
 ```
+{: codeblock}
 
 #### Command options
 {: #cbr-rule-create-cli-options}
@@ -269,7 +283,7 @@ ibmcloud cbr rule-create --description 'Example Rule Description' --service-name
 :   The access tags of the resource in the form of `name:value,name:value,...`.
 
 --file (string)
-:   The supplied file is used to create the rule. This flag is unique and cannot be used with other flags. The file should follow the JSON schema for the rule create API documented [here](/apidocs/context-based-restrictions#create-rule-request){: external}.
+:   The supplied file is used to create the rule. This flag is unique and cannot be used with other flags. The file needs to follow the JSON schema for the rule create API. For more information, see the [Context-based restrictions API](/apidocs/context-based-restrictions#create-rule-request){: external}.
 
 
 ### ibmcloud cbr rules
@@ -280,6 +294,7 @@ This operation lists rules in the specified account.
 ```sh
 ibmcloud cbr rules [--region REGION] [--resource RESOURCE] [--resource-type RESOURCE-TYPE] [--service-instance SERVICE-INSTANCE] [--service-name SERVICE-NAME] [--zone-id ZONE-ID] [--sort SORT] 
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-cli-rules-example}
@@ -287,6 +302,7 @@ ibmcloud cbr rules [--region REGION] [--resource RESOURCE] [--resource-type RESO
 ```sh
 ibmcloud cbr rules
 ```
+{: codeblock}
 
 #### Command options
 {: #cbr-rules-cli-options}
@@ -316,11 +332,12 @@ ibmcloud cbr rules
 ### ibmcloud cbr rule
 {: #cbr-cli-rule-command}
 
-This operation retrieves the rule identified by the specified rule ID.
+This operation retrieves the rule that is identified by the specified rule ID.
 
 ```sh
 ibmcloud cbr rule RULE-ID  
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-cli-rule-example}
@@ -328,15 +345,17 @@ ibmcloud cbr rule RULE-ID
 ```sh
 ibmcloud cbr rule 30fd58c9b75f40e854b89c432318b4a2
 ```
+{: codeblock}
 
 ### ibmcloud cbr rule-update
 {: #cbr-cli-rule-update-command}
 
-This operation replaces the rule identified by the specified rule ID. Partial updates are not supported and the entire rule object is replaced.
+This operation replaces the rule that is identified by the specified rule ID. Partial updates are not supported and the entire rule object is replaced.
 
 ```sh
 ibmcloud cbr rule-update RULE-ID [--description DESCRIPTION] [--context-attributes CONTEXT-ATTRIBUTES] [--resource-attributes RESOURCE-ATTRIBUTES] [--region REGION] [--resource RESOURCE] [--resource-group-id RESOURCE-GROUP-ID] [--resource-type RESOURCE-TYPE] [--service-instance SERVICE-INSTANCE] [--service-name SERVICE-NAME] [--zone-id ZONE-ID] [--tags TAGS] [--file FILE]
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-cli-rule-update-example}
@@ -344,6 +363,7 @@ ibmcloud cbr rule-update RULE-ID [--description DESCRIPTION] [--context-attribut
 ```sh
 ibmcloud cbr rule-update 30fd58c9b75f40e854b89c432318b4a2 --description 'Example rule description' --service-name kms --context-attributes endpointType=private --zone-id 93de8d3f588ab2c457ff576c364d1145
 ```
+{: codeblock}
 
 #### Command options
 {: #cbr-rule-update-cli-options}
@@ -382,17 +402,18 @@ ibmcloud cbr rule-update 30fd58c9b75f40e854b89c432318b4a2 --description 'Example
 :   The access tags of the resource in the form of `name:value,name:value,...`.
 
 --file (string)
-:   The supplied file is used to update the rule. This flag is unique and cannot be used with other flags. The file should follow the JSON schema for the rule update API documented [here](/apidocs/context-based-restrictions#replace-rule-request){: external}.
+:   The supplied file is used to update the rule. This flag is unique and cannot be used with other flags. The file needs to follow the JSON schema for the rule update API. For more information, see the [Context-based restrictions API](/apidocs/context-based-restrictions#replace-rule-request){: external}.
 
 
 ### ibmcloud cbr rule-delete
 {: #cbr-cli-rule-delete-command}
 
-This operation deletes the rule identified by the specified rule ID.
+This operation deletes the rule that is identified by the specified rule ID.
 
 ```sh
 ibmcloud cbr rule-delete RULE-ID  
 ```
+{: codeblock}
 
 #### Example
 {: #cbr-cli-rule-delete-example}
@@ -400,3 +421,4 @@ ibmcloud cbr rule-delete RULE-ID
 ```sh
 ibmcloud cbr rule-delete 30fd58c9b75f40e854b89c432318b4a2
 ```
+{: codeblock}
