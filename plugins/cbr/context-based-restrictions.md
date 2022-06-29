@@ -12,7 +12,7 @@ subcollection: cli
 
 {{site.data.keyword.attribute-definition-list}}
 
-# context-based restrictions CLI plug-in
+# Context-based restrictions CLI plug-in
 {: #cbr-plugin}
 
 The {{site.data.keyword.cloud}} context-based restrictions command-line interface (CLI) provides extra capabilities for context-based restrictions. You can use this CLI plug-in to manage access restrictions for {{site.data.keyword.cloud}} resources based on the network location of access requests.
