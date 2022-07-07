@@ -92,34 +92,34 @@ toc:
       - topicgroup:
           label: Plug-ins for the IBM Cloud CLI
           topics:
+          - /activity-tracker-cli-plugin/activity-tracker-cli-plugin-activity-tracker-cli
           - /analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
           - plugins/catalogs/manage-catalogs.md
+          - /cis-cli-plugin/cis-cli-plugin-cis-cli
           - /databases-cli-plugin/databases-cli-plugin-cdb-reference
           - /cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
-          - /cloud-object-storage-cli-plugin/cloud-object-storage-cli-plugin-ic-cos-cli
+          - /Cloudant-cli-plugin/Cloudant-cli-plugin-cloudant-cli
           - /codeengine/codeengine-cli
           - /code-risk-analyzer-cli-plugin/code-risk-analyzer-cli-plugin-cra-cli-plugin
+          - /container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
+          - plugins/cbr/context-based-restrictions.md
           - /devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
           - /dl-cli-plugin/dl-cli-plugin-dl-cli
-          - /container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
-          - /containers/containers-kubernetes-service-cli
-          - /Cloudant-cli-plugin/Cloudant-cli-plugin-cloudant-cli
-          - /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
-          - /log-analysis-cli-plugin/log-analysis-cli-plugin-log-analysis-cli
-          - /activity-tracker-cli-plugin/activity-tracker-cli-plugin-activity-tracker-cli
-          - /schematics-cli-plugin/schematics-cli-plugin-schematics-cli-reference
-          - /satellite/satellite-satellite-cli-reference
+          - /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
+          - /hs-crypto-cli-plugin/hs-crypto-cli-plugin-hpcs-cli-plugin
           - /dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
           - /hpvs-cli-plugin/hpvs-cli-plugin-hpvs_cli_plugin
-          - /hs-crypto-cli-plugin/hs-crypto-cli-plugin-hpcs-cli-plugin
           - /key-protect-cli-plugin/key-protect-cli-plugin-key-protect-cli-reference
-          - /mobilepush-cli-plugin/mobilepush-cli-plugin-mobilepush-cli
-          - /cis-cli-plugin/cis-cli-plugin-cis-cli
-          - /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
-          - /vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
+          - /containers/containers-kubernetes-service-cli
+          - /log-analysis-cli-plugin/log-analysis-cli-plugin-log-analysis-cli
+          - /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
+          - /cloud-object-storage-cli-plugin/cloud-object-storage-cli-plugin-ic-cos-cli
           - /power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
+          - /mobilepush-cli-plugin/mobilepush-cli-plugin-mobilepush-cli
+          - /satellite/satellite-satellite-cli-reference
+          - /schematics-cli-plugin/schematics-cli-plugin-schematics-cli-reference
           - /tg-cli-plugin/tg-cli-plugin-transit-gateway-cli
-          - plugins/cbr/context-based-restrictions.md
+          - /vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
       - topicgroup:
           label: Plug-ins for the standalone Cloud Foundry CLI
           topics:
