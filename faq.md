@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-03"
+lastupdated: "2022-08-03"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help, cli private endpoints
 
@@ -50,11 +50,13 @@ ibmcloud update
 ```
 {: codeblock}
 
-## How do I manually install the {{site.data.keyword.cloud_notm}} CLI {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands?
+## How do I install the {{site.data.keyword.cloud_notm}} CLI along with developer plug-ins and tools?
 {: #cli-install-devtools-manually}
 {: faq}
 
-To manually install the {{site.data.keyword.cloud_notm}} CLI {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands, see [Installing the tools and plug-ins manually](/docs/cli?topic=cli-install-devtools-manually).
+To install the latest IBM Cloud CLI and recommended plug-ins and tools for developing applications for IBM Cloud, follow the steps in [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started) and [Installing the tools and plug-ins manually](/docs/cli?topic=cli-install-devtools-manually).
+
+To install only the standalone IBM Cloud CLI without any plug-ins or tools, see [Installing the stand-alone IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
 ## How can I be notified about new CLI releases?
 {: #cli-get-notified}
