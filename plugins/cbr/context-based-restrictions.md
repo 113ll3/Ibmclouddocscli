@@ -283,7 +283,7 @@ ibmcloud cbr rule-create --description 'Example Rule Description' --service-name
 :   The access tags of the resource in the form of `name:value,name:value,...`.
 
 --enforcement-mode (string)
-:   How the rule will be enforced. (default: enabled) See https://ibm.biz/cbr-enforcement-modes for more details.
+:   How the rule is enforced. The CLI accepts the values `enabled` (default), `disabled`, and `report`. For more informaiton about enforcement, see [Rule enforcement](/docs/account?topic=account-context-restrictions-whatis#rule-enforcement).
 
 --file (string)
 :   The supplied file is used to create the rule. This flag is unique and cannot be used with other flags. The file needs to follow the JSON schema for the rule create API. For more information, see the [Context-based restrictions API](/apidocs/context-based-restrictions#create-rule-request){: external}.
@@ -311,7 +311,7 @@ ibmcloud cbr rules
 {: #cbr-rules-cli-options}
 
 --enforcement-mode (string)
-:   The enforcement mode of the rule. See https://ibm.biz/cbr-enforcement-modes for more details.
+:   How the rule is enforced. The CLI accepts the values `enabled` (default), `disabled`, and `report`. For more informaiton about enforcement, see [Rule enforcement](/docs/account?topic=account-context-restrictions-whatis#rule-enforcement).
 
 --region (string)
 :   The `region` resource attribute.
@@ -408,7 +408,7 @@ ibmcloud cbr rule-update 30fd58c9b75f40e854b89c432318b4a2 --description 'Example
 :   The access tags of the resource in the form of `name:value,name:value,...`.
 
 --enforcement-mode (string)
-:   How the rule will be enforced. (default: enabled) See https://ibm.biz/cbr-enforcement-modes for more details.
+:   How the rule is enforced. The CLI accepts the values `enabled` (default), `disabled`, and `report`. For more informaiton about enforcement, see [Rule enforcement](/docs/account?topic=account-context-restrictions-whatis#rule-enforcement).
 
 --file (string)
 :   The supplied file is used to update the rule. This flag is unique and cannot be used with other flags. The file needs to follow the JSON schema for the rule update API. For more information, see the [Context-based restrictions API](/apidocs/context-based-restrictions#replace-rule-request){: external}.
