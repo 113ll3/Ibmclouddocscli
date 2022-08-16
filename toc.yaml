@@ -94,6 +94,7 @@ toc:
           topics:
           - /activity-tracker-cli-plugin/activity-tracker-cli-plugin-activity-tracker-cli
           - /analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
+          - /app-configuration-cli-plugin/app-configuration-cli-plugin-app-configuration-cli
           - plugins/catalogs/manage-catalogs.md
           - /cis-cli-plugin/cis-cli-plugin-cis-cli
           - /databases-cli-plugin/databases-cli-plugin-cdb-reference
@@ -106,6 +107,7 @@ toc:
           - /devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
           - /dl-cli-plugin/dl-cli-plugin-dl-cli
           - /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
+          - /event-notifications-cli-plugin/event-notifications-cli-plugin-event-notifications-cli
           - /hs-crypto-cli-plugin/hs-crypto-cli-plugin-hpcs-cli-plugin
           - /dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
           - /hpvs-cli-plugin/hpvs-cli-plugin-hpvs_cli_plugin
