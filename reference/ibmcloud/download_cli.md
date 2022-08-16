@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-08-16"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -85,11 +85,6 @@ To install the latest CLI for your OS from the shell manually, use the following
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    ```
    {: codeblock}
-
-## Installing the command line interface by using Homebrew
-{: #install-devtools-homebrew}
-
-You can also install the {{site.data.keyword.cloud_notm}} CLI by using Homebrew. For more information, see [Homebrew ibm-cloud-cli](https://formulae.brew.sh/cask/ibm-cloud-cli){: external}.
 
 ## Installing to a custom directory
 {: #install-custom-dir}
