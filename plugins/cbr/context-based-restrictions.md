@@ -80,7 +80,8 @@ ibmcloud cbr zone-create --name example-zone-with-vpc --vpc crn:v1:staging:publi
 :   The list of excluded addresses in the zone. Only addresses of type `ipAddress`, `ipRange`, and `subnet` are allowed in a comma delimited format.
 
 --service-ref (string)
-:   The service refs in the zone. Input in the form `name=value,name=value,...`.
+:   The service refs in the zone. Input in the form `service_name=VALUE,service_name=VALUE,...`.
+:   To find a list of available service refs, run the `ibmcloud cbr service-ref-targets` [command](#cbr-cli-service-ref-targets-command).
 
 --vpc (string)
 :   The VPCs allowed in the zone. Input in the form `value,value,...`.
