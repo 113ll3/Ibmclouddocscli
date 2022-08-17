@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-08-17"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -393,15 +393,15 @@ None.
 {: #login-options}
 
 -a API_ENDPOINT
-:   The API endpoint. For example, `cloud.ibm.com`. Or use `private.cloud.ibm.com` to log in using a private endpoint.
+:   The API endpoint. For example, `cloud.ibm.com`. Or, use `private.cloud.ibm.com` to log in by using a private endpoint. Using this flag saves the API endpoint to the configuration file.
 
 --sso
 :   Specify this option to [log in with a federated ID](/docs/account?topic=account-federated_id). Using this option prompts you to authenticate with your single sign-on provider and enter a one-time passcode to log in.
 
--u USER_NAME
+-u USERNAME
 :   The user name. Optional.
 
--p PASS_WORD<
+-p PASSWORD
 :   The user password. Optional.
 
 --apikey API_KEY or @API_KEY_FILE_PATH
