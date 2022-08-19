@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-12-15"
+  years: 2018, 2022
+lastupdated: "2022-8-19"
 
 keywords: cli, classic cli, orders, quotes, ibmcloud sl order, item-list, package-locations, manage orders cli, manage quotes cli
 
@@ -187,7 +187,7 @@ ibmcloud sl order place-quote PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,O
 :   JSON string that denotes extra data needs to be sent with the order.
 
 
-### Examples**
+### Examples
 {: #sl_examples}
 
 This command places a quote for a VSI with 4 CPU, 16 GB RAM, 100 GB SAN disk, Ubuntu 16.04, and 1 Gbps public & private uplink in datacenter `dal13`.
