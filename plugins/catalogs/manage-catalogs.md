@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-05"
+lastupdated: "2022-08-30"
 
 keywords: cli, catalogs management, catalog
 
@@ -464,7 +464,7 @@ Service Endpoint Supported   service_endpoint_supported
 Run the following command to add a product to a private catalog in the account.
 
 ```bash
-ibmcloud catalog offering create [--catalog CATALOG_NAME] [--zipurl URL] [--include-config] [--target-version VERSION] [--token TOKEN]
+ibmcloud catalog offering create [--catalog CATALOG_NAME] [--zipurl URL] [--include-config] [--target-version VERSION] [--token TOKEN] [--vpc-body BODY]
 ```
 {: codeblock}
 
@@ -475,7 +475,7 @@ ibmcloud catalog offering create [--catalog CATALOG_NAME] [--zipurl URL] [--incl
 
 :   The catalog name or ID.
 
---zipurl URL
+--zipurl URL (optional)
 
 :   URL pointing to .zip file of the product.
 
@@ -490,6 +490,10 @@ ibmcloud catalog offering create [--catalog CATALOG_NAME] [--zipurl URL] [--incl
 --token TOKEN (optional)
 
 :   Specify the personal access token for a private repository. 
+
+--vpc-body BODY (optional)
+
+:   Provide the information to import a virtual server image for VPC, including a name, label, install kind, target kind, version, sha, tags, and metadata.
 
 ## ibmcloud catalog offering list
 {: #list-offering}
@@ -652,7 +656,7 @@ dev-offering
 Run the following command to import a new version of a product in your private catalog.
 
 ```bash
-ibmcloud catalog offering import-version --catalog CATALOG --offering OFFERING_NAME --zipurl URL [--target-version APP_VERSION] [--include-config]
+ibmcloud catalog offering import-version --catalog CATALOG --offering OFFERING_NAME --zipurl URL [--target-version APP_VERSION] [--include-config] [--vpc-body BODY]
 ```
 {: codeblock}
 
@@ -666,7 +670,7 @@ ibmcloud catalog offering import-version --catalog CATALOG --offering OFFERING_N
 --offering OFFERING_NAME
 :   :   The product name or ID.
 
---zipurl URL
+--zipurl URL (optional)
 :   URL pointing to the .zip file of the product.
 
 --target-version APP_VERSION (optional)
@@ -675,6 +679,8 @@ ibmcloud catalog offering import-version --catalog CATALOG --offering OFFERING_N
 --include-config (optional)
 :   If provided, all configurations values are included and available when you import the new version.
 
+--vpc-body BODY (optional)
+:   Provide the information to import a virtual server image for VPC, including a name, label, install kind, target kind, version, sha, tags, and metadata.
 
 ## ibmcloud catalog offering update
 {: #update-offering}
