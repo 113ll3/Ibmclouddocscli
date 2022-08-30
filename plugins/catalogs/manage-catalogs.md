@@ -656,7 +656,7 @@ dev-offering
 Run the following command to import a new version of a product in your private catalog.
 
 ```bash
-ibmcloud catalog offering import-version --catalog CATALOG --offering OFFERING_NAME --zipurl URL [--target-version APP_VERSION] [--include-config] [--vpc-body BODY]
+ibmcloud catalog offering import-version --catalog CATALOG --offering OFFERING_NAME [--zipurl URL] [--target-version APP_VERSION] [--include-config] [--vpc-body BODY]
 ```
 {: codeblock}
 
