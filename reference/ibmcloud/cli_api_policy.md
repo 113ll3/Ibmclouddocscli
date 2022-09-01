@@ -1372,7 +1372,7 @@ ibmcloud iam roles --source-service cloud-object-storage --service kms
 ## ibmcloud iam role-create
 {: #ibmcloud_iam_role_create}
 
-Create a role
+Create a role:
 ```bash
 ibmcloud iam role-create ROLE_NAME --display-name DISPLAY_NAME --service-name SERVICE_NAME [-a, --actions ROLE_ACTION1 [ROLE_ACTION2...]] [-d, --description DESCRIPTION] [--output FORMAT] [-q --quiet]
 ```
