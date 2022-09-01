@@ -1474,6 +1474,48 @@ ibmcloud iam access-policies --type trusted_profile
 ```
 {: codeblock}
 
+## ibmcloud iam account-policies
+{: #ibmcloud_iam_account_policies}
+
+List all account policies under current account:
+```bash
+ibmcloud iam account-policies [-t, --type access | auth]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_policies_options}
+
+-t, --type access | auth
+:   List all policies under current account filtered by policy type. Valid options are: `access` | `auth`
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_account_policies_examples}
+
+List all account policies under current account:
+```bash
+ibmcloud iam account-policies
+```
+{: codeblock}
+
+List all authorization policies under current account. Provides the same list as `ibmcloud iam authorization-policies`:
+```bash
+ibmcloud iam account-policies -t auth
+```
+{: codeblock}
+
+List all access policies under current account. Provides the same list as `ibmcloud iam access-policies`:
+```bash
+ibmcloud iam account-policies -t access
+```
+{: codeblock}
+
 ## ibmcloud iam dedicated-id-disconnect
 {: #ibmcloud_iam_dedicated_id_disconnect}
 
