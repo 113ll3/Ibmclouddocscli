@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-04"
+lastupdated: "2022-09-01"
 
 keywords: cli, shell autocompletion, bash, linux shell, macos shell, autocompletion, autocompletion support, shell
 
@@ -30,7 +30,7 @@ Starting from version `0.7.0`, the {{site.data.keyword.cloud}} Command Line Inte
    `[[ -f /usr/local/ibmcloud/autocomplete/bash_autocomplete ]] && source /usr/local/ibmcloud/autocomplete/bash_autocomplete` into one of the following files:
 
 * For Login shell: `~/.bash_profile`
-* For Non-login shell: `~/.bashrc
+* For Non-login shell: `~/.bashrc`
   
 * If you're using `Zsh`: add:
 
