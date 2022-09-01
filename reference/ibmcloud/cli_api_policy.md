@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-09-01"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -1309,7 +1309,7 @@ ibmcloud iam roles [--service SERVICE_NAME [--resource-type RESOURCE_TYPE] [--so
 {: codeblock}
 
 ### Command options
-{: #ibmcloud_iam_oauth_tokens_options}
+{: #ibmcloud_iam_roles_options}
 
 --resource-type
 :   Resource type of the service. '--service' must be set along with this option.
@@ -1325,7 +1325,7 @@ ibmcloud iam roles [--service SERVICE_NAME [--resource-type RESOURCE_TYPE] [--so
 
 
 ### Examples
-{: #ibmcloud_iam_oauth_tokens_examples}
+{: #ibmcloud_iam_roles_examples}
 
 List platform default access roles and custom roles:
 ```bash
@@ -1369,10 +1369,67 @@ ibmcloud iam roles --source-service cloud-object-storage --service kms
 ```
 {: codeblock}
 
+## ibmcloud iam role-create
+{: #ibmcloud_iam_role_create}
+
+Create a role
+```bash
+ibmcloud iam role-create ROLE_NAME --display-name DISPLAY_NAME --service-name SERVICE_NAME [-a, --actions ROLE_ACTION1 [ROLE_ACTION2...]] [-d, --description DESCRIPTION] [--output FORMAT] [-q --quiet]
+```
+{: codeblock}
+
+## Command options
+{: #ibmcloud_iam_role_create_options}
+
+--display-name DISPLAY_NAME
+:   The display name of the role that is shown in the console.
+
+--service-name SERVICE_NAME
+:   The name of the service.
+
+-a, --actions ROLE_ACTION1,ROLE_ACTION2...
+:   The actions of the role. For more information, see [IAM roles and actions](/docs/account?topic=account-iam-service-roles-actions).
+
+-d, --description DESCRIPTION
+:   The description of the role.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_role_create_examples}
+
+Create a role to perform any Cloudant database action:
+```bash
+ibmcloud iam role-create CloudDBAdmin --display-name "Cloudant DB Administrator" --service-name cloudantnosqldb --actions cloudantnosqldb.db.any
+```
+{: codeblock}
+
+Create a role for read-only access to Certificate Manager by using multiple role actions:
+```bash
+ibmcloud iam role-create ReadonlyCertManager --display-name "Readonly Certificate Manager" --service-name cloudcerts --actions cloudcerts.certificate-metadata.read,cloudcerts.notifications-channel.list
+```
+{: codeblock}
+
+Create a role to view toolchain dashboards and return the role in JSON format:
+```bash
+ibmcloud iam role-create PreviewCDCI --display-name "Preview Toolchains" --service-name toolchain --actions toolchain.dashboard.view --output JSON
+```
+{: codeblock}
+
+Create a role that has a description:
+```bash
+ibmcloud iam role-create ServiceIDCreator --display-name "Service ID Creator" --service-name iam-identity --actions iam-identity.serviceid.create --description "Can only create service keys"
+ ```
+{: codeblock}
+
 ## ibmcloud iam access-policies
 {: #ibmcloud_iam_access_policies}
 
-List all access policies under current account:
+List all access policies under the current account:
 ```bash
 ibmcloud iam access-policies [-t, --type user | service_id | access_group | trusted_profile]
 ```
@@ -1387,31 +1444,31 @@ ibmcloud iam access-policies [-t, --type user | service_id | access_group | trus
 ### Examples
 {: #ibmcloud_iam_access_policies_examples}
 
-List all access policies under current account:
+List all access policies under the current account:
 ```bash
 ibmcloud iam access-policies
 ```
 {: codeblock}
 
-List all user access policies under current account:
+List all user access policies under the current account:
 ```bash
 ibmcloud iam access-policies --type user
 ```
 {: codeblock}
 
-List all service ID access policies under current account:
+List all service ID access policies under the current account:
 ```bash
 ibmcloud iam access-policies --type service_id
 ```
 {: codeblock}
 
-List all access group access policies under current account:
+List all access group access policies under the current account:
 ```bash
 ibmcloud iam access-policies --type access_group
 ```
 {: codeblock}
 
-List all trusted profile access policies under current account:
+List all trusted profile access policies under the current account:
 ```bash
 ibmcloud iam access-policies --type trusted_profile
 ```
