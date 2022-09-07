@@ -749,7 +749,7 @@ NAME (required)
 :   Name of the key.
 
 ROLE_NAME (optional)
-:   Name of the IAM service role. The specified role cannot be one of the default platform roles. You can verify eligibility of any role for use with this option by running `ibmcloud iam roles --service` and checking that serviceRole appears in the role's CRN.
+:   Name of the IAM service role. The specified role cannot be one of the default platform roles. You can verify eligibility of any role for use with this option by running `ibmcloud iam roles --service` and checking that `serviceRole` appears in the role's CRN.
 
 --instance-id *SERVICE_INSTANCE_ID*
 :   Service instance ID.
