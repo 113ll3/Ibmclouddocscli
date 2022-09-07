@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-12-30"
+  years: 2018, 2022
+lastupdated: "2022-09-07"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -749,7 +749,7 @@ NAME (required)
 :   Name of the key.
 
 ROLE_NAME (optional)
-:   Name of the user role.
+:   Name of the user role. The specified role must be a service role (it cannot be one of the default platform roles). You can verify eligibility of any role for use with this option by running `ibmcloud iam roles --service <your-service>` and checking that `serviceRole` appears in the role's CRN.
 
 --instance-id *SERVICE_INSTANCE_ID*
 :   Service instance ID.
