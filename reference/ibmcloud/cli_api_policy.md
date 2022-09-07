@@ -464,12 +464,15 @@ ibmcloud iam api-key-unlock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 
 List all API keys of a service:
 ```bash
-ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
+ibmcloud iam service-api-keys ([-a, --all], SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 {: codeblock}
 
 ### Command options
 {: #ibmcloud_iam_service_api_keys_options}
+
+-a, --all
+:   Display all API keys that are associated with all services.
 
 SERVICE_ID_NAME (required)
 :   Name of the service ID, exclusive with SERVICE_ID_UUID.
