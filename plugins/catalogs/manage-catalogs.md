@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-08-30"
+lastupdated: "2022-09-08"
 
 keywords: cli, catalogs management, catalog
 
@@ -16,7 +16,7 @@ subcollection: cli
 {: #manage-catalogs-plugin}
 
 The {{site.data.keyword.cloud}} catalogs management command-line interface (CLI) provides extra capabilities for working with products in the {{site.data.keyword.cloud_notm}} catalog and the private catalogs in your account. You can use this CLI plug-in to manage your private catalogs, onboard private software products, and manage catalog visibility between the public catalog and your private catalogs.
-{: shortdesc} 
+{: shortdesc}
 
 ## Before you begin
 {: #prereqs-managecatalogs}
@@ -66,7 +66,7 @@ ibmcloud catalog create --name CATALOG [--catalog-description "DESCRIPTION"]
 
 :   Short description for the new catalog.
 
-   
+
 ### Example
 {: #create-example}
 
@@ -101,7 +101,7 @@ The command returns the following output:
 
 ```bash
 Name                                           ID                                     Description                   Last Updated
-dev-catalog                                    93f592fb-e09b-4a53-bbd9-92f6ab9e253b   short-description             2019-11-21 21:28:28.347 +0000 UTC         
+dev-catalog                                    93f592fb-e09b-4a53-bbd9-92f6ab9e253b   short-description             2019-11-21 21:28:28.347 +0000 UTC
 ABDemoTestCatalog                              7a246530-e191-45e2-87cc-07c8c7033d2b   short-description             2019-08-19 17:43:48.59 +0000 UTC
 ```
 {: screen}
@@ -307,7 +307,7 @@ ibmcloud catalog filter create [--catalog CATALOG] [--category CATEGORY] [--comp
 :   Default is true if flag not provided. Valid values are `true` and `false`. If set to true, the filter defaults to include the entire public catalog, and subsequent filters are excluded. If set to false, the filter excludes the entire public catalog, and subsequent flags are included. For more information, see [Managing catalog settings](/docs/account?topic=account-filter-account).
 
 --offering-format FORMAT (optional)
-  
+
 --category CATEGORY (optional)
 
 :   Provide a comma-separated list of category names or tags you want to include or exclude. Run the `ibmcloud catalog offering category-options` command to view all options. Default is `Developer tools`.
@@ -481,7 +481,7 @@ ibmcloud catalog offering create [--catalog CATALOG_NAME] [--zipurl URL] [--incl
 
 --target-version VERSION
 
-:   Specify the version of the product. 
+:   Specify the version of the product.
 
 --include-config (optional)
 
@@ -489,11 +489,46 @@ ibmcloud catalog offering create [--catalog CATALOG_NAME] [--zipurl URL] [--incl
 
 --token TOKEN (optional)
 
-:   Specify the personal access token for a private repository. 
+:   Specify the personal access token for a private repository.
 
 --vpc-body BODY (optional)
 
 :   Provide the information to import a virtual server image for VPC, including a name, label, install kind, target kind, version, sha, tags, and metadata.
+
+### Virtual server image for VPC Example
+{: #import-offering-example}
+
+Import a virtual server image for VPC as an offering to a catalog with ID `51c9e0db-2911-45a6-adb0-ac5332d27cf2`.
+
+```bash
+ibmcloud catalog offering create --catalog 51c9e0db-2911-45a6-adb0-ac5332d27cf2 --vpc-body '{
+    "name": "virtual-server-image",
+    "label": "virtual server image",
+    "install_kind": "instance",
+    "target_kinds": ["vpc-x86"],
+    "version": "0.0.10",
+    "sha": "64245e5f3f1e9c4048b18db3abd1450d4b6f9e263ac1b33df6fc1ae96fcbdebb",
+    "tags": ["virtualservers"],
+    "metadata": {
+        "operating_system": {
+            "dedicated_host_only": false,
+            "vendor": "CentOS",
+            "name": "centos-7-amd64",
+            "href": "https://us-south-stage01.iaasdev.cloud.ibm.com/v1/operating_systems/centos-7-amd64",
+            "display_name": "CentOS 7.x - Minimal Install (amd64)",
+            "family": "CentOS",
+            "version": "7.x - Minimal Install",
+            "architecture": "amd64"
+        },
+        "minimum_provisioned_size": 100,
+        "file": {
+            "size": 1
+        },
+        "images": [{"id": "r134-14903434-faf0-4a66-b861-7b35198de393", "name": "virtual-server-image", "region": "us-south"}]
+    }
+}'
+```
+{: codeblock}
 
 ## ibmcloud catalog offering list
 {: #list-offering}
@@ -517,7 +552,7 @@ ibmcloud catalog offering list [--catalog CATALOG] [--offering OFFERING_NAME] [-
 
 :   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
 
-  
+
 ### Example
 {: #get-example}
 
@@ -584,7 +619,7 @@ ibmcloud catalog offering search [--catalog CATALOG] [--offering OFFERING_NAME] 
 
 :   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
 
-  
+
 ### Example
 {: #search-example}
 
@@ -682,12 +717,47 @@ ibmcloud catalog offering import-version --catalog CATALOG --offering OFFERING_N
 --vpc-body BODY (optional)
 :   Provide the information to import a virtual server image for VPC, including a name, label, install kind, target kind, version, sha, tags, and metadata.
 
+### Virtual server image for VPC example
+{: #import-version-example}
+
+Import a virtual server image for VPC to an existing offerng with to a catalog with ID `51c9e0db-2911-45a6-adb0-ac5332d27cf2` and offering ID `97cdaf1b-62b2-48e2-8589-10b31023866d`.
+
+```bash
+ibmcloud catalog offering import-version --catalog 51c9e0db-2911-45a6-adb0-ac5332d27cf2 --offering 97cdaf1b-62b2-48e2-8589-10b31023866d --vpc-body '{
+    "name": "virtual-server-image",
+    "label": "virtual server image",
+    "install_kind": "instance",
+    "target_kinds": ["vpc-x86"],
+    "version": "0.0.10",
+    "sha": "64245e5f3f1e9c4048b18db3abd1450d4b6f9e263ac1b33df6fc1ae96fcbdebb",
+    "tags": ["virtualservers"],
+    "metadata": {
+        "operating_system": {
+            "dedicated_host_only": false,
+            "vendor": "CentOS",
+            "name": "centos-7-amd64",
+            "href": "https://us-south-stage01.iaasdev.cloud.ibm.com/v1/operating_systems/centos-7-amd64",
+            "display_name": "CentOS 7.x - Minimal Install (amd64)",
+            "family": "CentOS",
+            "version": "7.x - Minimal Install",
+            "architecture": "amd64"
+        },
+        "minimum_provisioned_size": 100,
+        "file": {
+            "size": 1
+        },
+        "images": [{"id": "r134-14903434-faf0-4a66-b861-7b35198de393", "name": "virtual-server-image", "region": "us-south"}]
+    }
+}''
+```
+{: codeblock}
+
 ## ibmcloud catalog offering update
 {: #update-offering}
 
-To update a product in your private catalog, you first need get the product and then you can update.  
+To update a product in your private catalog, you first need get the product and then you can update.
 
-Run the `offering get` command. For more information, see [ibmcloud catalog offering get](#get-offering). 
+Run the `offering get` command. For more information, see [ibmcloud catalog offering get](#get-offering).
 
 ```bash
 ibmcloud catalog offering get -c <CATALOGID> -o <OFFERINGID> --output json
@@ -726,11 +796,11 @@ ibmcloud catalog offering version preinstall --version-locator VERSION_NUMBER --
 --namespace NAME
 :   Provide the namespace that you'd like to use. You can specify a new one and it is automatically created as part of the preinstallation.
 
-  
+
 ### Example
 {: #preinstall-example}
 
-Run the preinstallation script for a product with a version locator number of `b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4` in cluster with ID `bn5ebho206o7fg45f2e0` in the namespace called `test-namespace`. 
+Run the preinstallation script for a product with a version locator number of `b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4` in cluster with ID `bn5ebho206o7fg45f2e0` in the namespace called `test-namespace`.
 
 ```bash
 ibmcloud catalog offering version preinstall --version-locator b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4 --cluster bn5ebho206o7fg45f2e0 --namespace test-namespace
@@ -794,7 +864,9 @@ ibmcloud catalog offering version validate --version-locator VERSION_NUMBER --cl
 :   Wait and track the progress of the {{site.data.keyword.bpshort}} workspace job. If `true`, installation waits. If `false`, the software installs immediately. Default is `true`.
 
 --override-values VALUES|FILENAME (optional)
-:   Provide any custom configurations for the installation. You can provide this value either inline or by using a JSON or TXT file. For example, `override-values values.json`.
+:   Provide any custom configurations for the installation. You can provide this value either inline or by using a JSON or TXT file.
+For example, `override-values values.json`. When validating a virtual server image for VPC, the following fields must be provided:
+vsi_instance_name, vsi_id, vpc_profile, subnet_id, vpc_id, subnet_zone, ssh_key_id, vpc_region
 
 --workspace-tf-version VERSION (optional)
 :   Provide a workspace terraform version.
@@ -810,8 +882,8 @@ ibmcloud catalog offering version validate --version-locator VERSION_NUMBER --cl
 
 --schematics-delete VALUE (optional)
 :   Provide this flag to delete the {{site.data.keyword.bpshort}} workspace after validation and installation.
-  
-### Example
+
+### Example validating a product using a cluster
 {: #validate-example}
 
 Validate a product with the version locator `b636d651-8489-4425-bd6a-f30af1603577.18aad484-c78b-4269-808b-52027621abd4` in a cluster with the ID `bn5ebho206o7fg45f2e0` within a namespace called `test-namespace`. This installation has custom configurations, so the values are provided by using a `values.json` file.
@@ -827,6 +899,25 @@ Override values example format from the `values.json` file:
 {
   "username": "provision-test-1",
   "password": "passw0rd"
+}
+```
+{: codeblock}
+
+### Virtual server image for VPC example
+{: #validate-example}
+
+Validate a product with the version locator `51c9e0db-2911-45a6-adb0-ac5332d27cf2.ecebffdc-f1f8-4a85-965f-9cbe31920542` in
+a VPC with the ID `r134-476cbb67-a6c2-4957-9806-3fcbac3498be`.
+```bash
+ibmcloud catalog offering version validate --version-locator 51c9e0db-2911-45a6-adb0-ac5332d27cf2.ecebffdc-f1f8-4a85-965f-9cbe31920542 --workspace-region=us-south --workspace-rg-id Default --override-values '{
+  "vsi_instance_name": "instance-name-1",
+  "vsi_id": "r134-14903434-faf0-4a66-b861-7b35198de393",
+  "vpc_profile": "bx2-2x8",
+  "subnet_id": "0716-d799c449-466c-4844-902c-a5d3f8948d7d",
+  "vpc_id": "r134-476cbb67-a6c2-4957-9806-3fcbac3498be",
+  "subnet_zone": "us-south-1",
+  "ssh_key_id": "r134-0c53e7f2-771f-4d0e-a19e-39f2e6e6949c",
+  "vpc_region": "us-south"
 }
 ```
 {: codeblock}
@@ -917,7 +1008,7 @@ ibmcloud catalog offering category-options [--output FORMAT]
 
 --category CATEGORY
 :   The category ID.
-  
+
 
 ### Example
 {: #add-category-offering-example}
@@ -930,7 +1021,7 @@ ibmcloud catalog offering add-category --catalog dev-catalog --offering dev-offe
 ## ibmcloud catalog offering version get-controls
 {: #version-get-controls}
 
-Run the following command to get the security and compliance controls from a version. Controls are safeguards that are used to meet security and compliance requirements. 
+Run the following command to get the security and compliance controls from a version. Controls are safeguards that are used to meet security and compliance requirements.
 
 ```bash
 ibmcloud catalog offering version get-controls [--version-locator VERSION_NUMBER] [--output OUTPUT]
@@ -950,7 +1041,7 @@ ibmcloud catalog offering version get-controls [--version-locator VERSION_NUMBER
 ## ibmcloud catalog offering version add-controls
 {: #version-add-controls}
 
-Run the following command to add security and compliance controls to a version. Controls are safeguards that are used to meet security and compliance requirements. 
+Run the following command to add security and compliance controls to a version. Controls are safeguards that are used to meet security and compliance requirements.
 
 ```bash
 ibmcloud catalog offering version add-controls [--version-locator VERSION_NUMBER] [--controls CONTROLS]
@@ -964,13 +1055,13 @@ ibmcloud catalog offering version add-controls [--version-locator VERSION_NUMBER
 --version-locator VERSION_NUMBER
 :   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified version that you want to use.
 
---controls CONTROLS 
+--controls CONTROLS
 :   Provide the controls as a JSON array. You can provide values as a JSON file or inline JSON. For example, `[{"NIST": "AC-4"}, {"NIST": "AC-2"}]`.
 
 ## ibmcloud catalog offering version delete-controls
 {: #version-delete-controls}
 
-Run the following command to delete security and compliance controls from a version. Controls are safeguards that are used to meet security and compliance requirements. 
+Run the following command to delete security and compliance controls from a version. Controls are safeguards that are used to meet security and compliance requirements.
 
 ```bash
 ibmcloud catalog offering version delete-controls [--version-locator VERSION_NUMBER] [--controls CONTROLS]
@@ -984,7 +1075,7 @@ ibmcloud catalog offering version delete-controls [--version-locator VERSION_NUM
 --version-locator VERSION_NUMBER
 :   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified version that you want to use.
 
---controls CONTROLS 
+--controls CONTROLS
 :   Provide the controls as a JSON array. You can provide values as a JSON file or inline JSON. For example, `[{"NIST": "AC-4"}, {"NIST": "AC-2"}]`.
 
 ## ibmcloud catalog offering version create-draft
@@ -1010,7 +1101,7 @@ ibmcloud catalog offering version create-draft --version-locator VERSION_NUMBER 
 ## ibmcloud catalog offering version delete-version
 {: #offering-delete-version}
 
-Run the following command to delete a version of a product. 
+Run the following command to delete a version of a product.
 
 ```bash
 ibmcloud catalog offering version delete-version --version-locator VERSION_NUMBER [--output FORMAT]
@@ -1047,7 +1138,7 @@ ibmcloud catalog offering version deprecate-version --version-locator VERSION_NU
 ## ibmcloud catalog offering version refresh-version
 {: #refresh-offering-version}
 
-Run the following command to create a change the source file of a draft version. This command is useful for updating an existing version. 
+Run the following command to create a change the source file of a draft version. This command is useful for updating an existing version.
 
 ```bash
 ibmcloud catalog offering version refresh-version --version-locator VERSION_NUMBER --zipurl URL [--include-config]
@@ -1087,7 +1178,7 @@ ibmcloud catalog offering version merge-draft --version-locator VERSION_NUMBER
 ## ibmcloud catalog offering enable-sharing
 {: #share-offering}
 
-Run the following command to enable your product to be shared. 
+Run the following command to enable your product to be shared.
 
 ```bash
 ibmcloud catalog offering enable-sharing --catalog CATALOG --offering OFFERING
@@ -1106,7 +1197,7 @@ ibmcloud catalog offering enable-sharing --catalog CATALOG --offering OFFERING
 ## ibmcloud catalog offering ready
 {: #ready-offering}
 
-Run the following command to mark your product as ready to share or publish. 
+Run the following command to mark your product as ready to share or publish.
 
 ```bash
 ibmcloud catalog offering ready --version-locator VERSION_NUMBER
@@ -1122,7 +1213,7 @@ ibmcloud catalog offering ready --version-locator VERSION_NUMBER
 ## ibmcloud catalog offering delete
 {: #delete-offering}
 
-Run the following command to delete a product from your private catalog. You cannot delete a product that is published in the {{site.data.keyword.cloud_notm}} catalog. To deprecate a published product from the {{site.data.keyword.cloud_notm}} catalog, see [`ibmcloud catalog offering deprecate-offering`](/docs/cli?topic=cli-manage-catalogs-plugin#publish-offering-deprecate). 
+Run the following command to delete a product from your private catalog. You cannot delete a product that is published in the {{site.data.keyword.cloud_notm}} catalog. To deprecate a published product from the {{site.data.keyword.cloud_notm}} catalog, see [`ibmcloud catalog offering deprecate-offering`](/docs/cli?topic=cli-manage-catalogs-plugin#publish-offering-deprecate).
 
 ```bash
 ibmcloud catalog offering delete --catalog CATALOG --offering OFFERING
@@ -1245,7 +1336,7 @@ ibmcloud catalog offering version suspend-version [--version-locator VERSION_NUM
 Run the following command to get the {{site.data.keyword.bpshort}} workspaces for a product version.
 
 ```bash
-ibmcloud catalog offering workspaces [--version-locator VERSION_NUMBER] [output FORMAT] 
+ibmcloud catalog offering workspaces [--version-locator VERSION_NUMBER] [output FORMAT]
 ```
 {: codeblock}
 
@@ -1279,7 +1370,7 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 
 --cluster CLUSTER_ID
 
-:   Specify the cluster name or ID. 
+:   Specify the cluster name or ID.
 
 --namespace NAME
 
@@ -1334,7 +1425,7 @@ ibmcloud catalog netrc
 ## ibmcloud catalog utility update-module-references
 {: #utility-module-references}
 
-Run the following command to check your working directory's Terraform modules for updates from the catalog and update the source attribute to the latest version. The README.md is also updated. 
+Run the following command to check your working directory's Terraform modules for updates from the catalog and update the source attribute to the latest version. The README.md is also updated.
 
 ```bash
 ibmcloud catalog utility update-module-references
@@ -1344,7 +1435,7 @@ ibmcloud catalog utility update-module-references
 ## ibmcloud catalog offering unpublish account
 {: #unpublish-offering-account}
 
-Run the following command to unpublish a product from your account. After the product is unpublished, users in your account cannot create an instance of the product. 
+Run the following command to unpublish a product from your account. After the product is unpublished, users in your account cannot create an instance of the product.
 
 ```bash
 ibmcloud catalog offering unpublish account [--catalog CATALOG][--offering OFFERING]
@@ -1364,7 +1455,7 @@ ibmcloud catalog offering unpublish account [--catalog CATALOG][--offering OFFER
 ## ibmcloud catalog offering unpublish allowlist
 {: #unpublish-offering-allowlist}
 
-Run the following command to remove account IDs from the product's allowlist. Accounts that are removed from the allowlist cannot create an instance of the product. 
+Run the following command to remove account IDs from the product's allowlist. Accounts that are removed from the allowlist cannot create an instance of the product.
 
 ```bash
 ibmcloud catalog offering unpublish allowlist [--catalog CATALOG][--offering OFFERING][--account-ids ACCOUNT-IDS]
@@ -1387,7 +1478,7 @@ ibmcloud catalog offering unpublish allowlist [--catalog CATALOG][--offering OFF
 ## ibmcloud catalog offering unpublish enterprise
 {: #unpublish-offering-enterprise}
 
-Run the following command to unpublish a product from an enterprise. After the product is unpublished, the enterprise cannot create an instance of the product. 
+Run the following command to unpublish a product from an enterprise. After the product is unpublished, the enterprise cannot create an instance of the product.
 
 ```bash
 ibmcloud catalog offering unpublish enterprise [--catalog CATALOG][--offering OFFERING]
@@ -1408,7 +1499,7 @@ ibmcloud catalog offering unpublish enterprise [--catalog CATALOG][--offering OF
 ## ibmcloud catalog offering publish public
 {: #publish-offering-to-public}
 
-Run the following command to publish your private offering to the {{site.data.keyword.cloud_notm}} catalog for all users to see and use. To get to this step in the publication process, you must first publish the offering to your account and to all IBMers to complete the testing process. After your testing is complete, you can run this command. 
+Run the following command to publish your private offering to the {{site.data.keyword.cloud_notm}} catalog for all users to see and use. To get to this step in the publication process, you must first publish the offering to your account and to all IBMers to complete the testing process. After your testing is complete, you can run this command.
 
 This option does require an approval process from offering management. As soon as your approval is complete, your tile is available for all {{site.data.keyword.cloud_notm}} customers to see and use.
 {: important}
