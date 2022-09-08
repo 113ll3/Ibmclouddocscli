@@ -918,7 +918,7 @@ ibmcloud catalog offering version validate --version-locator 51c9e0db-2911-45a6-
   "subnet_zone": "us-south-1",
   "ssh_key_id": "r134-0c53e7f2-771f-4d0e-a19e-39f2e6e6949c",
   "vpc_region": "us-south"
-}`
+}'
 ```
 {: codeblock}
 
