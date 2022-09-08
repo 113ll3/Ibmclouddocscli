@@ -70,7 +70,7 @@ The {{site.data.keyword.cos_full_notm}} plug-in extends the {{site.data.keyword.
    ```
    {: codeblock}
 
-For more information, see the [{{site.data.keyword.cos_full_notm}} command reference](/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
+For more information, see the [{{site.data.keyword.cos_full_notm}} command reference](/docs/cloud-object-storage?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
 
 ## Installing {{site.data.keyword.registrylong_notm}} CLI plug-in
 {: #idt-install-container-registry-cli-plugin}
