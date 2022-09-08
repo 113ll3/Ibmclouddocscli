@@ -748,7 +748,7 @@ ibmcloud catalog offering import-version --catalog 51c9e0db-2911-45a6-adb0-ac533
         },
         "images": [{"id": "r134-14903434-faf0-4a66-b861-7b35198de393", "name": "virtual-server-image", "region": "us-south"}]
     }
-}'
+}''
 ```
 {: codeblock}
 
@@ -918,7 +918,7 @@ ibmcloud catalog offering version validate --version-locator 51c9e0db-2911-45a6-
   "subnet_zone": "us-south-1",
   "ssh_key_id": "r134-0c53e7f2-771f-4d0e-a19e-39f2e6e6949c",
   "vpc_region": "us-south"
-}
+}`
 ```
 {: codeblock}
 
