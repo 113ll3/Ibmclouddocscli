@@ -498,7 +498,7 @@ ibmcloud catalog offering create [--catalog CATALOG_NAME] [--zipurl URL] [--incl
 ### Virtual server image for VPC Example
 {: #import-offering-example}
 
-Import a virtual server image for VPC as an offering to a catalog with ID `51c9e0db-2911-45a6-adb0-ac5332d27cf2`.
+Import a virtual server image for VPC as an offering to a catalog with an ID `51c9e0db-2911-45a6-adb0-ac5332d27cf2`.
 
 ```bash
 ibmcloud catalog offering create --catalog 51c9e0db-2911-45a6-adb0-ac5332d27cf2 --vpc-body '{
