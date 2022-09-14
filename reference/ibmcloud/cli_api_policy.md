@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-01"
+lastupdated: "2022-09-14"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -1536,7 +1536,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 
 Create an authorization policy to allow a service instance access to another service instance:
 ```bash
-ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-group-id RESOURCE_GROUP_ID] [--source-resource-type RESOURCE_TYPE] [--source-resource RESOURCE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--target-resource-group-id RESOURCE_GROUP_ID] [--target-resource-type RESOURCE_TYPE] [--target-resource RESOURCE] | --file FILE}
+ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-service-account ACCOUNT_GUID] [--source-resource-group-id RESOURCE_GROUP_ID] [--source-resource-type RESOURCE_TYPE] [--source-resource RESOURCE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--target-resource-group-id RESOURCE_GROUP_ID] [--target-resource-type RESOURCE_TYPE] [--target-resource RESOURCE] | --file FILE}
 ```
 {: codeblock}
 
@@ -1553,10 +1553,13 @@ ROLE_NAME1,ROLE_NAME2...
 :   The roles that provide access for the source service.
 
 --source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME
-:   Source service instance name, mutually exclusive with `--source-service-instance-id`. If not specified, all instances of the source service are authorized to access.
+:   Source service instance name, mutually exclusive with `--source-service-instance-id` and `--source-service-account`. If source service instance not specified, all instances of source service will be authorized to access.
 
 --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID
 :   Source service instance ID, mutually exclusive with `--source-service-instance-name`. If not specified, all instances of the source service are authorized to access.
+
+--source-service-account ACCOUNT_GUID
+:   Account GUID of source service, mutually exclusive with `--source-service-instance-name`. Use this option if source service is from another account.
 
 --source-resource-group-id RESOURCE_GROUP_ID
 :   Source resource group ID, mutually exclusive with '--source-service-instance-id'.
