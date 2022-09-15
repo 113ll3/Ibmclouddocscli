@@ -903,8 +903,8 @@ Override values example format from the `values.json` file:
 ```
 {: codeblock}
 
-### Virtual server image for VPC example
-{: #validate-example}
+### Virtual server image for VPC Example
+{: #vs-image-example}
 
 Validate a product with the version locator `51c9e0db-2911-45a6-adb0-ac5332d27cf2.ecebffdc-f1f8-4a85-965f-9cbe31920542` in
 a VPC with the ID `r134-476cbb67-a6c2-4957-9806-3fcbac3498be`.
