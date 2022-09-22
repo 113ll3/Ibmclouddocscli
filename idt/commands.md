@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2022
-lastupdated: "2022-06-03"
+lastupdated: "2022-09-23"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy, cli private endpoints
 
