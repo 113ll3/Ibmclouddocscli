@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-10-03"
 
 keywords: cli, context-based restrictions plugin
 
@@ -235,7 +235,7 @@ Operations on context-based restriction rules.
 This operation creates a rule for the specified account.
 
 ```sh
-ibmcloud cbr rule-create [--description DESCRIPTION] [--context-attributes CONTEXT-ATTRIBUTES] [--resource-attributes RESOURCE-ATTRIBUTES] [--region REGION] [--resource RESOURCE] [--resource-group-id RESOURCE-GROUP-ID] [--resource-type RESOURCE-TYPE] [--service-instance SERVICE-INSTANCE] [--service-name SERVICE-NAME] [--zone-id ZONE-ID] [--tags TAGS] [--enforcement-mode ENFORCEMENT-MODE] [--file FILE]
+ibmcloud cbr rule-create [--description DESCRIPTION] [--context-attributes CONTEXT-ATTRIBUTES] [--resource-attributes RESOURCE-ATTRIBUTES] [--region REGION] [--resource RESOURCE] [--resource-group-id RESOURCE-GROUP-ID] [--resource-type RESOURCE-TYPE] [--service-instance SERVICE-INSTANCE-GUID] [--service-name SERVICE-NAME] [--zone-id ZONE-ID] [--tags TAGS] [--enforcement-mode ENFORCEMENT-MODE] [--file FILE]
 ```
 {: codeblock}
 
@@ -271,8 +271,8 @@ ibmcloud cbr rule-create --description 'Example Rule Description' --service-name
 --resource-type (string)
 :   Shorthand for creating IBM Cloud resource attribute `resourceType`.
 
---service-instance (string)
-:   Shorthand for creating IBM Cloud resource attribute `serviceInstance`.
+--service-instance SERVICE_INSTANCE_GUID (string)
+:   GUID of the service instance. This option is exclusive with the --file option.
 
 --service-name (string)
 :   Shorthand for creating IBM Cloud resource attribute `serviceName`.
@@ -296,7 +296,7 @@ ibmcloud cbr rule-create --description 'Example Rule Description' --service-name
 This operation lists rules in the specified account.
 
 ```sh
-ibmcloud cbr rules [--enforcement-mode ENFORCEMENT-MODE] [--region REGION] [--resource RESOURCE] [--resource-type RESOURCE-TYPE] [--service-instance SERVICE-INSTANCE] [--service-name SERVICE-NAME] [--zone-id ZONE-ID] [--sort SORT]
+ibmcloud cbr rules [--enforcement-mode ENFORCEMENT-MODE] [--region REGION] [--resource RESOURCE] [--resource-type RESOURCE-TYPE] [--service-instance SERVICE-INSTANCE-GUID] [--service-name SERVICE-NAME] [--zone-id ZONE-ID] [--sort SORT]
 ```
 {: codeblock}
 
@@ -323,8 +323,8 @@ ibmcloud cbr rules
 --resource-type (string)
 :   The `resourceType` resource attribute.
 
---service-instance (string)
-:   The `serviceInstance` resource attribute.
+--service-instance SERVICE_INSTANCE_GUID (string)
+:   GUID of the service instance. This option is exclusive with the --file option.
 
 --service-name (string)
 :   The `serviceName` resource attribute.
@@ -360,7 +360,7 @@ ibmcloud cbr rule 30fd58c9b75f40e854b89c432318b4a2
 This operation replaces the rule that is identified by the specified rule ID. Partial updates are not supported and the entire rule object is replaced.
 
 ```sh
-ibmcloud cbr rule-update RULE-ID [--description DESCRIPTION] [--context-attributes CONTEXT-ATTRIBUTES] [--resource-attributes RESOURCE-ATTRIBUTES] [--region REGION] [--resource RESOURCE] [--resource-group-id RESOURCE-GROUP-ID] [--resource-type RESOURCE-TYPE] [--service-instance SERVICE-INSTANCE] [--service-name SERVICE-NAME] [--zone-id ZONE-ID] [--tags TAGS] [--enforcement-mode ENFORCEMENT-MODE] [--file FILE]
+ibmcloud cbr rule-update RULE-ID [--description DESCRIPTION] [--context-attributes CONTEXT-ATTRIBUTES] [--resource-attributes RESOURCE-ATTRIBUTES] [--region REGION] [--resource RESOURCE] [--resource-group-id RESOURCE-GROUP-ID] [--resource-type RESOURCE-TYPE] [--service-instance SERVICE-INSTANCE-GUID] [--service-name SERVICE-NAME] [--zone-id ZONE-ID] [--tags TAGS] [--enforcement-mode ENFORCEMENT-MODE] [--file FILE]
 ```
 {: codeblock}
 
@@ -396,8 +396,8 @@ ibmcloud cbr rule-update 30fd58c9b75f40e854b89c432318b4a2 --description 'Example
 --resource-type (string)
 :   Shorthand for creating IBM Cloud resource attribute `resourceType`.
 
---service-instance (string)
-:   Shorthand for creating IBM Cloud resource attribute `serviceInstance`.
+--service-instance SERVICE_INSTANCE_GUID (string)
+:   GUID of the service instance. This option is exclusive with the --file option.
 
 --service-name (string)
 :   Shorthand for creating IBM Cloud resource attribute `serviceName`.
