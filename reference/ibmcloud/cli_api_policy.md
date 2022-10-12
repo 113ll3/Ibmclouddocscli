@@ -735,7 +735,7 @@ USER_NAME (required)
 
 ### Examples
 {: #ibmcloud_iam_user_policies_examples}
- 
+
 List policies of user `name@example.com`:
 ```bash
 ibmcloud iam user-policies name@example.com
@@ -995,7 +995,7 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id
 {: codeblock}
 
 Delete policies `user-policy-id` of user `name@example.com` without confirmation:
-```bash 
+```bash
 ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 ```
 {: codeblock}
@@ -1109,7 +1109,7 @@ SERVICE_ID (required)
 --resource-group-name
 :   Name of the resource group. `*` means all resource groups. This option is exclusive with the `--file` and `--resource-group-id` options.
 
---resource-group-id 
+--resource-group-id
 :   ID of the resource group. `*` means all resource groups. This option is exclusive with the `--file` and `--resource-group-name` options.
 
 --account-management (optional)
@@ -1117,6 +1117,9 @@ SERVICE_ID (required)
 
 --account-management (optional)
 :   Give access to all account management services.
+
+--attributes *name=value,name=value...*
+:   Set resource attributes in the form of 'name=value,name=value....'
 
 -f, --force
 :   Create service policy without confirmation.
@@ -1202,7 +1205,7 @@ POLICY_ID (required)
 --resource-group-name
 :   Name of the resource group. `*` means all resource groups. This option is exclusive with the `--file` and `--resource-group-id` options.
 
---resource-group-id 
+--resource-group-id
 :   ID of the resource group. `*` means all resource groups. This option is exclusive with the `--file` and `--resource-group-name` options.
 
 --account-management (optional)
@@ -1622,7 +1625,7 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 
 AUTHORIZATION_POLICY_ID
 :   ID of authorization policy to show.
- 
+
 ## ibmcloud iam authorization-policies
 {: #ibmcloud_iam_authorization_policies}
 
@@ -2383,7 +2386,7 @@ NAME (required)
 
 Create trusted profile with name `sample-test` and description "sample trusted profile":
 ```bash
-ibmcloud iam trusted-profile-create sample-test -d "sample trusted profile" 
+ibmcloud iam trusted-profile-create sample-test -d "sample trusted profile"
 ```
 {: codeblock}
 
@@ -2755,7 +2758,7 @@ ibmcloud iam trusted-profile-policy-update my-profile 85f3a4d6-c2e1-417e-b2d5-71
 
 Update policy `bdf62c30-35dd-4852-bcb8-2f0dd3929701` from `my-profile` with contents in JSON file:
 ```bash
-ibmcloud iam trusted-profile-policy-update my-profile bdf62c30-35dd-4852-bcb8-2f0dd3929701 --file @policy.json 
+ibmcloud iam trusted-profile-policy-update my-profile bdf62c30-35dd-4852-bcb8-2f0dd3929701 --file @policy.json
 ```
 {: codeblock}
 
@@ -3025,7 +3028,7 @@ NAME|ID (required)
 
 Display all rules in trusted profile `my-profile`:
 ```bash
-ibmcloud iam trusted-profile-rules my-profile 
+ibmcloud iam trusted-profile-rules my-profile
 ```
 {: codeblock}
 
