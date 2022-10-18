@@ -117,7 +117,6 @@ toc:
           - /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
           - /cloud-object-storage-cli-plugin/cloud-object-storage-cli-plugin-ic-cos-cli
           - /power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
-          - /mobilepush-cli-plugin/mobilepush-cli-plugin-mobilepush-cli
           - /satellite/satellite-satellite-cli-reference
           - /schematics-cli-plugin/schematics-cli-plugin-schematics-cli-reference
           - /tg-cli-plugin/tg-cli-plugin-transit-gateway-cli
