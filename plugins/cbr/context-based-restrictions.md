@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-03"
+lastupdated: "2022-10-21"
 
 keywords: cli, context-based restrictions plugin
 
@@ -58,7 +58,7 @@ ibmcloud cbr zone-create [--name NAME] [--description DESCRIPTION] [--addresses 
 {: #cbr-cli-zone-create-example}
 
 ```sh
-ibmcloud cbr zone-create --name example-zone --description "Example zone description" --addresses 192.0.2.1,192.2.3.5-192.2.3.10
+ibmcloud cbr zone-create --name example-zone --description "Example zone description" --addresses 192.0.2.1,3ffe:1900:fe21:4545::,192.2.3.5-192.2.3.10,3ffe:1900:fe21:4547::-3ffe:1900:fe21:6767:
 ibmcloud cbr zone-create --name example-zone-with-service-ref --service-ref service_name=kms
 ibmcloud cbr zone-create --name example-zone-with-vpc --vpc crn:v1:staging:public:is:us-south:a/12ab34cd56ef78ab90cd12ef34ab56cd::vpc:r123-abc456de-f789-abc1-23de-f456abc789ab
 ```
@@ -74,7 +74,7 @@ ibmcloud cbr zone-create --name example-zone-with-vpc --vpc crn:v1:staging:publi
 :   The description of the zone.
 
 --addresses (string)
-:   The list of addresses in the zone. Only addresses of type `ipAddress`, `ipRange`, and `subnet` are allowed in a comma delimited format.
+:   The list of addresses in the zone. Only addresses of type `ipAddress`, `ipRange`, and `subnet` are allowed in a comma delimited format. IPv4 and IPv6 are supported.
 
 --excluded (string)
 :   The list of excluded addresses in the zone. Only addresses of type `ipAddress`, `ipRange`, and `subnet` are allowed in a comma delimited format.
@@ -150,7 +150,7 @@ ibmcloud cbr zone-update ZONE-ID [--name NAME] [--description DESCRIPTION] [--ad
 {: #cbr-zone-update-example}
 
 ```shell
-ibmcloud cbr zone-update 65810ac762004f22ac19f8f8edf70a34 --name 'Example Zone Name' --addresses 166.22.23.0-166.22.23.108 --excluded 166.22.23.100
+ibmcloud cbr zone-update 65810ac762004f22ac19f8f8edf70a34 --name 'Example Zone Name' --addresses 166.22.23.0-166.22.23.108,3ffe:1900:fe21:4545:: --excluded 166.22.23.100 --excluded 166.22.23.100
 ibmcloud cbr zone-update 65810ac762004f22ac19f8f8edf70a34 --name example-zone-with-service-ref --service-ref service_name=kms
 ibmcloud cbr zone-update 65810ac762004f22ac19f8f8edf70a34 --name example-zone-with-vpc --vpc crn:v1:staging:public:is:us-south:a/12ab34cd56ef78ab90cd12ef34ab56cd::vpc:r123-abc456de-f789-abc1-23de-f456abc789ab
 ```
@@ -166,7 +166,7 @@ ibmcloud cbr zone-update 65810ac762004f22ac19f8f8edf70a34 --name example-zone-wi
 :   The description of the zone.
 
 --addresses (string)
-:   The list of addresses in the zone. Only addresses of type `ipAddress`, `ipRange`, and `subnet` are allowed in a comma delimited format.
+:   The list of addresses in the zone. Only addresses of type `ipAddress`, `ipRange`, and `subnet` are allowed in a comma delimited format. IPv4 and IPv6 are supported.
 
 --excluded (string)
 :   The list of excluded addresses in the zone. Only addresses of type `ipAddress`, `ipRange`, and `subnet` are allowed in a comma delimited format.
