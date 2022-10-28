@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-07-29"
+  years: 2018, 2022
+lastupdated: "2022-10-28"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -106,7 +106,7 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 
 Update resource `j402-dnf1i` from JSON file:
 ```bash
-ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
+ibmcloud catalog entry-update 'j402-dnf1i' -c update
 ```
 {: codeblock}
 
