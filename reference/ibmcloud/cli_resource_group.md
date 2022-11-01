@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-10-31"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -146,7 +146,7 @@ ibmcloud resource group-update example-group -n trial-group
 
 Delete an existing resource group
 ```bash
-ibmcloud resource group-delete NAME [-f, --force] 
+ibmcloud resource group-delete NAME [-f, --force]
 ```
 {: codeblock}
 
@@ -420,7 +420,7 @@ ibmcloud resource service-instance-update my-service-instance -n new-service-ins
 ## ibmcloud resource service-instance-delete
 {: #ibmcloud_resource_service_instance_delete}
 
-Delete service instance.
+Delete service instance. If provisioning is in progress, the command attempts to cancel the provisioning process. Some services might not support cancellation.
 ```bash
 ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ```
@@ -686,7 +686,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
 
 List service keys of service instance `my-service-instance`:
 ```bash
-ibmcloud resource service-keys --instance-name my-service-instance 
+ibmcloud resource service-keys --instance-name my-service-instance
 ```
 {: codeblock}
 
@@ -1088,14 +1088,14 @@ creation_date
 :   The date on which the resource is created.
 
 modification_date
-:   The last modification date of the resource. It is in the format yyyy-mm-ddThh:mm:ssZ 
+:   The last modification date of the resource. It is in the format yyyy-mm-ddThh:mm:ssZ
 
 _objectType
-:   The type of the classic infrastructure resource. Allowed values are SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. 
+:   The type of the classic infrastructure resource. Allowed values are SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest.
 
 tags, tagReferences.tag.name
-:   The tag attached to a resource. Use tagReferences.tag.name when searching for tags attached to classic infrastructure resources 
- 
+:   The tag attached to a resource. Use tagReferences.tag.name when searching for tags attached to classic infrastructure resources
+
 ### Examples
 {: #ibmcloud_resource_search_examples}
 
@@ -1196,7 +1196,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT]  [-p, --provide
 --limit value, -l value
 :   Number of resources to return (maximum 1000) (default: 100).
 
---provider value, -p value 
+--provider value, -p value
 :   Display Classic Infrastructure resources, only value allowed is: classic-infrastructure. Use it for resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan.
 
 --details value, -d value
@@ -1232,7 +1232,7 @@ ibmcloud resource tag-create --tag-names TAG_NAMES
 --tag-names value
 :   Comma separated list of tag names.
 
--q, --quiet 
+-q, --quiet
 :   Suppress verbose output.
 
 This command is only valid for access management tags. For example:
@@ -1285,7 +1285,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
     ```
     {: codeblock}
 
-    Take note of the CRN, which is a string similar to the following example: 
+    Take note of the CRN, which is a string similar to the following example:
     ```bash
     crn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
     ```
@@ -1293,7 +1293,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
 
     To attach the tag, run the following command:
     ```bash
-    ibmcloud resource tag-attach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a:: 
+    ibmcloud resource tag-attach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
     ```
     {: codeblock}
 
@@ -1302,8 +1302,8 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
     ibmcloud resource tag-attach --tag-name MyTag --resource-name  'MyResource'
     ```
     {: codeblock}
-  
-  
+
+
 * To attach the user tag `MyTag` to a classic infrastructure virtual guest named `MyVM`, first look for the ID of the virtual guest you would like to tag:
     ```bash
     ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
@@ -1314,13 +1314,13 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES (--resource-name NAME | --res
 
     To attach the tag, run the following command:
     ```bash
-    ibmcloud resource tag-attach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest  
+    ibmcloud resource tag-attach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest
     ```
     {: codeblock}
-  
+
 * To attach the access management tag `project:myproject`, that you previously created, to an instance of IBM Cloud Object Storage called `Project data`, run the following command:
     ```bash
-    ibmcloud resource tag-attach --tag-names "project:myproject" --resource-name Project data -—tag-type access  
+    ibmcloud resource tag-attach --tag-names "project:myproject" --resource-name Project data -—tag-type access
     ```
     {: codeblock}
 
@@ -1366,7 +1366,7 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES (--resource-name NAME | --res
     ```
     {: codeblock}
 
-    Take note of the CRN, which is a string similar to the following example: 
+    Take note of the CRN, which is a string similar to the following example:
     ```bash
     crn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
     ```
@@ -1374,7 +1374,7 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES (--resource-name NAME | --res
 
 * To detach the tag, run the following command:
     ```bash
-    ibmcloud resource tag-detach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a:: 
+    ibmcloud resource tag-detach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
     ```
     {: codeblock}
 
@@ -1383,8 +1383,8 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES (--resource-name NAME | --res
     ibmcloud resource tag-detach --tag-name MyTag --resource-name 'MyResource'
     ```
     {: codeblock}
-  
-  
+
+
 * To detach the user tag `MyTag` to a classic infrastructure virtual guest named `MyVM`, first look for the ID of the virtual guest you would like to detach the tag from:
     ```bash
     ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
@@ -1395,16 +1395,16 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES (--resource-name NAME | --res
 
 * To detach the tag, run the following command:
     ```bash
-    ibmcloud resource tag-detach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest  
+    ibmcloud resource tag-detach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest
     ```
     {: codeblock}
-  
+
 * To detach the access management tag `project:myproject` from an instance of IBM Cloud Object Storage called `Project data`, run the following command:
     ```bash
-    ibmcloud resource tag-detach --tag-names "project:myproject" --resource-name Project data -—tag-type access  
+    ibmcloud resource tag-detach --tag-names "project:myproject" --resource-name Project data -—tag-type access
     ```
     {: codeblock}
-  
+
 
 ## ibmcloud resource tag-delete
 {: #ibmcloud_resource_tag_delete}
@@ -1421,7 +1421,7 @@ ibmcloud resource tag-delete (--tag-name TAG_NAME | -a, --all  [-f, --force]) [-
 --tag-name value
 :   Tag name to be deleted.
 
---provider value, -p value 
+--provider value, -p value
 :   Delete the tag in the specified provider (only supported value is classic-infrastructure). Use it for resources of type SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress or SoftLayer_Network_Vlan.
 
 --tag-type value
@@ -1451,26 +1451,26 @@ A tag can be deleted only if it isn't attached to any resource.
     ibmcloud resource tag-delete --tag-name "MyTag"
     ```
     {: codeblock}
-  
+
 * To delete the access management tag `project:myproject` from the account:
     ```bash
     ibmcloud resource tag-delete --tag-name "project:myproject" --tag-type access
     ```
     {: codeblock}
-  
+
 * To delete all unused user tags from the account:
     ```bash
-    ibmcloud resource tag-delete -a 
+    ibmcloud resource tag-delete -a
     ```
     {: codeblock}
-  
+
 * To delete all unused access management tags from the account:
     ```bash
     ibmcloud resource tag-delete -a --tag-type access
     ```
     {: codeblock}
-    
-  
+
+
 ## ibmcloud resource reclamations
 {: #ibmcloud_resource_reclamations}
 
