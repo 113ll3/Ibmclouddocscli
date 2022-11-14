@@ -32,7 +32,6 @@ toc:
           label: Creating and deploying apps
           topics: 
           - /apps/apps-create-deploy-app-cli
-          - idt/deploy_to_icp.md
       - topicgroup: 
           label: IBM Cloud CLI IDE Extensions
           topics: 
