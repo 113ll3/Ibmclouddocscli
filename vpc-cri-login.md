@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-11-10"
 
 keywords: cli, command line, command-line, login, cli login, compute resource, compute resource identity, compute resource identities, vsi, vpc, trusted profiles, cri
 
@@ -63,7 +63,7 @@ You can log in as a VSI compute resource using the CLI in any of the following w
    {: codeblock}
 
 If you wish to log in as a VSI compute resource using private endpoints for VPC, you must also provide the ``--vpc`` flag
-and set the API endpoint to ``private.cloud.ibm.com``. In the example below, the trusted profile was provided by setting the environment variable `IBMCLOUD_CR_PROFILE=profile_id_or_crn`:
+and set the API endpoint to ``private.cloud.ibm.com``. In the example, the trusted profile was provided by setting the environment variable `IBMCLOUD_CR_PROFILE=profile_id_or_crn`:
  ```bash
    ibmcloud login --vpc-cri --vpc -a private.cloud.ibm.com
    ```
