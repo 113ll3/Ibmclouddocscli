@@ -23,15 +23,12 @@ toc:
       - reference/ibmcloud/download_cli.md
       - install-devtools-manually.md
       - cli-private-endpoints.md
+      - /apps/apps-create-deploy-app-cli
       - reference/ibmcloud/extend_cli.md
       - ibmcloud_home.md
       - reference/ibmcloud/enable_cli_autocompletion.md
       - quote-strings.md
       - reference/ibmcloud/uninstall_cli.md
-      - topicgroup: 
-          label: Creating and deploying apps
-          topics: 
-          - /apps/apps-create-deploy-app-cli
       - topicgroup: 
           label: IBM Cloud CLI IDE Extensions
           topics: 
