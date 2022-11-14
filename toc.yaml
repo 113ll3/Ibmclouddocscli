@@ -17,13 +17,17 @@ toc:
       topics:
       - index.md
 
+  - navgroup:
+      id: tutorial
+      topics:
+      - /apps/apps-create-deploy-app-cli
+
   - navgroup: 
       id: howto
       topics:
       - reference/ibmcloud/download_cli.md
       - install-devtools-manually.md
       - cli-private-endpoints.md
-      - /apps/apps-create-deploy-app-cli
       - reference/ibmcloud/extend_cli.md
       - ibmcloud_home.md
       - reference/ibmcloud/enable_cli_autocompletion.md
