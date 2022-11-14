@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-12-15"
+  years: 2015, 2022
+lastupdated: "2022-11-14"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -32,7 +32,7 @@ The Cloud Foundry CLI is not supported by Cygwin. Use the Cloud Foundry CLI in a
 {{site.data.keyword.cloud_notm}} admin CLI is only for use with {{site.data.keyword.cloud_notm}} Local and {{site.data.keyword.cloud_notm}} Dedicated environments. It is not supported by {{site.data.keyword.cloud_notm}} public.
 {: note}
 
-Only the `cf` commands that are part of the admin CLI plug-in are described in this reference. To list all of the **`cf`** commands and associated help information, run the **`cf help`** command. To view detailed help information for a particular command, run the **`cf command_name -h`** command. For more information about Cloud Foundry CLI commands, see the [Cloud Foundry CLI reference guide](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: external}.
+Only the `cf` commands that are part of the admin CLI plug-in are described in this reference. To list all of the `cf` commands and associated help information, run the `cf help` command. To view detailed help information for a particular command, run the `cf command_name -h` command. For more information about Cloud Foundry CLI commands, see the [Cloud Foundry CLI reference guide](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: external}.
 
 ## Adding the {{site.data.keyword.cloud_notm}} admin CLI plug-in
 {: #add-admin-cli}
@@ -91,7 +91,7 @@ cf ba add-user user_name organization first_name last_name
 ```
 {: codeblock}
 
-To add a user to a specific organization, you must be an admin with the users.write (or Superuser) permission. If you're an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the **`enable-managers-add-users`** command. For more information, see [Enabling managers to add users](#clius_emau).
+To add a user to a specific organization, you must be an admin with the users.write (or Superuser) permission. If you're an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the `enable-managers-add-users` command. For more information, see [Enabling managers to add users](#clius_emau).
 
 user_name
 :   The name of the user in the LDAP registry.
@@ -105,7 +105,7 @@ first_name
 last_name
 :   The last name of the user to be added to the organization.
 
-You can also use **`ba au`** as an alias for the longer **`ba add-user`** command name.
+You can also use `ba au` as an alias for the longer `ba add-user` command name.
 {: tip}
 
 ### Inviting a user from {{site.data.keyword.Bluemix_dedicated_notm}}
@@ -136,7 +136,7 @@ public_org_id
 ### Listing users who are invited from {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-If you invite Dedicated environment users to your {{site.data.keyword.cloud_notm}} account with the [**`invite-users-to-public`** command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users with an existing IBMid have an ACTIVE status. Invited users that didn't have an existing IBMid have a status of either PENDING or ACTIVE, depending on whether the invitation was accepted.
+If you invite Dedicated environment users to your {{site.data.keyword.cloud_notm}} account with the [`invite-users-to-public` command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users with an existing IBMid have an ACTIVE status. Invited users that didn't have an existing IBMid have a status of either PENDING or ACTIVE, depending on whether the invitation was accepted.
 
 To list the users in your {{site.data.keyword.cloud_notm}} account:
 ```bash
@@ -161,7 +161,7 @@ cf ba remove-user user_name
 user_name
 :   The name of the user in {{site.data.keyword.cloud_notm}}.
 
-You can also use the **`ba ru`** as an alias for the longer **`ba remove-user`** command name.
+You can also use the `ba ru` as an alias for the longer `ba remove-user` command name.
 {: tip}
 
 ### Enabling managers to add users
@@ -175,7 +175,7 @@ cf ba enable-managers-add-users
 ```
 {: codeblock}
 
-You can also use the **`ba emau`** as an alias for the longer **`ba enable-managers-add-users`** command name.
+You can also use the `ba emau` as an alias for the longer `ba enable-managers-add-users` command name.
 {: tip}
 
 ### Disabling managers from adding users
@@ -187,7 +187,7 @@ cf ba disable-managers-add-users
 ```
 {: codeblock}
 
-You can also use the **`ba dmau`** command as an alias for the longer **`ba disable-managers-add-users`** command name.
+You can also use the `ba dmau` command as an alias for the longer `ba disable-managers-add-users` command name.
 {: tip}
 
 ## Administering organizations
@@ -208,7 +208,7 @@ organization
 :   manager
 :   The user name of the manager for the org.
 
-You can also use **`ba co`** as an alias for the longer **`ba create-org`** command name.
+You can also use `ba co` as an alias for the longer `ba create-org` command name.
 {: tip}
 
 ### Deleting an organization
@@ -223,7 +223,7 @@ cf ba delete-org organization
 organization
 :   The name or GUID of the {{site.data.keyword.cloud_notm}} org to delete.
 
-You can also use **`ba do`** as an alias for the longer **`ba delete-org`** command name.
+You can also use `ba do` as an alias for the longer `ba delete-org` command name.
 {: tip}
 
 ### Assigning a user to an organization
@@ -244,7 +244,7 @@ organization
 role
 :   The role of the user. Valid values are OrgManager, BillingManager, OrgAuditor. See [Roles](/docs/account?topic=account-userroles#userroles) for the role descriptions.
 
-You can also use **`ba so`** as an alias for the longer **`ba set-org`** command name.
+You can also use `ba so` as an alias for the longer `ba set-org` command name.
 {: tip}
 
 ### Unassigning a user from an organization
@@ -265,7 +265,7 @@ organization
 role
 :   The role of the user. Valid values are OrgManager, BillingManager, OrgAuditor. See [Roles](/docs/account?topic=account-userroles#userroles) for the role descriptions.
 
-You can also use **`ba uo`** as an alias for the longer **`ba unset-org`** command name.
+You can also use `ba uo` as an alias for the longer `ba unset-org` command name.
 {: tip}
 
 ### Setting a quota for an organization
@@ -283,7 +283,7 @@ organization
 plan
 :   The quota plan for an organization.
 
-You can also use **`ba sq`** as an alias for the longer **`ba set-quota`** command name.
+You can also use `ba sq` as an alias for the longer `ba set-quota` command name.
 {: tip}
 
 
@@ -299,7 +299,7 @@ cf ibmcloud-admin containers-quota organization
 organization
 :   The name or ID of the organization in {{site.data.keyword.cloud_notm}}. This parameter is required.
 
-You can also use **`ba cq`** as an alias for the longer **`ibmcloud-admin containers-quota`** command name.
+You can also use `ba cq` as an alias for the longer `ibmcloud-admin containers-quota` command name.
 {: tip}
 
 ### Setting container quotas for an organization
@@ -320,7 +320,7 @@ organization
 options
 :   The choices are floating-ips-max value (short name fim), memory-max value (short name mm), memory-space-default value (short name msd), or image-limit value (short name il). The value must be an integer.
 
-Optionally, you can provide a file that contains specific configuration parameters in a valid JSON object. If you use the **`-file`** option, it takes precedence and the other options are ignored.
+Optionally, you can provide a file that contains specific configuration parameters in a valid JSON object. If you use the `-file` option, it takes precedence and the other options are ignored.
 
 To provide a file instead of setting the options, use the following command:
 ```bash
@@ -340,7 +340,7 @@ See the following JSON example:
 ```
 {: pre}
 
-You can also use **`ba scq`** as an alias for the longer **`ibmcloud-admin set-containers-quota`** command name.
+You can also use `ba scq` as an alias for the longer `ibmcloud-admin set-containers-quota` command name.
 {: tip}
 
 ## Administering spaces
@@ -361,7 +361,7 @@ organization
 space_name
 :   The name of the space that you are adding to the org.
 
-You can also use **`ba cs`** as an alias for the longer **`ba create-space`** command name.
+You can also use `ba cs` as an alias for the longer `ba create-space` command name.
 {: tip}
 
 ### Deleting a space from the organization
@@ -379,7 +379,7 @@ organization
 space_name
 :   The name of the space that you are removing from the org.
 
-You can also use **`ba cs`** as an alias for the longer **`ba delete-space`** command name.
+You can also use `ba cs` as an alias for the longer `ba delete-space` command name.
 {: tip}
 
 ### Adding a user to a space with a role
@@ -403,7 +403,7 @@ user_name
 role
 :   The role of the user. Valid values are Manager, Developer, or Auditor.
 
-You can also use **`ba ss`** as an alias for the longer **`ba set-space`** command name.
+You can also use `ba ss` as an alias for the longer `ba set-space` command name.
 {: tip}
 
 
@@ -428,7 +428,7 @@ user_name
 role
 :   The role of the user. Valid values are Manager, Developer, or Auditor.
 
-You can also use **`ba us`** as an alias for the longer **`ba unset-space`** command name.
+You can also use `ba us` as an alias for the longer `ba unset-space` command name.
 {: tip}
 
 ## Administering the catalog
@@ -445,9 +445,9 @@ cf ba enable-service-plan plan_identifier
 {: codeblock}
 
 plan_identifier
-:   The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select **`Add`** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service. 
+:   The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service. 
 
-You can also use **`ba esp`** as an alias for the longer **`ba enable-service-plan`** command name.
+You can also use `ba esp` as an alias for the longer `ba enable-service-plan` command name.
 {: tip}
 
 ### Disabling services for all organizations
@@ -460,9 +460,9 @@ cf ba disable-service-plan plan_identifier
 {: codeblock}
 
 plan_identifier
-:   The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select **`Add`** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.
+:   The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.
 
-You can also use **`ba dsp`** as an alias for the longer **`ba disable-service-plan`** command name.
+You can also use `ba dsp` as an alias for the longer `ba disable-service-plan` command name.
 {: tip}
 
 ### Adding service visibility for organizations
@@ -477,12 +477,12 @@ cf ba add-service-plan-visibility plan_identifier organization
 {: codeblock}
 
 plan_identifier
-:   The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select </b>**`Add`** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.
+:   The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.
 
 organization
 :   The name or GUID of the org to add to the service's visibility list.
 
-You can also use **`ba aspv`** as an alias for the longer **`ba add-service-plan-visibility`** command name.
+You can also use `ba aspv` as an alias for the longer `ba add-service-plan-visibility` command name.
 {: tip}
 
 ### Removing service visibility for organizations
@@ -498,12 +498,12 @@ cf ba remove-service-plan-visibility plan_identifier organization
 {: codeblock}
 
 plan_identifier
-:   The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select **`Add`** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.
+:   The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.
 
 organization
 :   The name or GUID of the org to remove from the service's visibility list.
 
-You can also use **`ba rspv`** as an alias for the longer **`ba remove-service-plan-visibility`** command name.
+You can also use `ba rspv` as an alias for the longer `ba remove-service-plan-visibility` command name.
 {: tip}
 
 ### Editing service visibility for organizations
@@ -521,12 +521,12 @@ cf ba edit-service-plan-visibilities plan_identifier organization_1 optional_org
 This command replaces existing visible services for the specified organizations with the service that you specify in the command.
 
 plan_identifier
-:   The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select **`Add`** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.
+:   The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted to select a service plan. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.
 
 organization
 :   The name or GUID of the org to add visibility for. You can enable visibility of the service for more than one organization by entering more organization names or GUIDs in the command.
 
-You can also use **`ba espv`** as an alias for the longer **`ba edit-service-plan-visibility`** command name.
+You can also use `ba espv` as an alias for the longer `ba edit-service-plan-visibility` command name.
 {: tip}
 
 ## Administering reports
@@ -541,7 +541,7 @@ cf ba add-report category date PDF|TXT|LOG RTF
 ```
 {: codeblock}
 
-If you have write access for the reports permission, you can create a new category and add a report in any of the accepted formats for your users. Enter the new category name for the **`category`** parameter, or add your new report to an existing category.
+If you have write access for the reports permission, you can create a new category and add a report in any of the accepted formats for your users. Enter the new category name for the `category` parameter, or add your new report to an existing category.
 
 category
 :   The category for the report. If there's a space in the name, use quotation marks.
@@ -555,7 +555,7 @@ PDF|TXT|LOG
 RTF
 :   An option to include a Rich Text Format (RTF) version of the PDF. This option applies only if you include a path to the report PDF. The RTF version is used for indexing and searching.
 
-You can also use **`ba ar`** as an alias for the longer **`ba add-report`** command name.
+You can also use `ba ar` as an alias for the longer `ba add-report` command name.
 {: tip}
 
 ### Deleting reports
@@ -576,7 +576,7 @@ date
 name
 :   The name of the report.
 
-You can also use **`ba d`r** as an alias for the longer **`ba delete-report`** command name.
+You can also use `ba dr` as an alias for the longer `ba delete-report` command name.
 {: tip}
 
 ### Retrieving reports
@@ -592,7 +592,7 @@ search
 :   The file name of the report. If there is a space in the name, use quotation marks around the
 name.
 
-You can also use **`ba rr`** as an alias for the longer **`ba retrieve-report`** command name.
+You can also use `ba rr` as an alias for the longer `ba retrieve-report` command name.
 {: tip}
 
 ## Viewing resource metric information
@@ -606,7 +606,7 @@ cf ba resource-metrics
 ```
 {: codeblock}
 
-You can also use **`ba rsm`** as an alias for the longer **`ba resource-metrics`** command name.
+You can also use `ba rsm` as an alias for the longer `ba resource-metrics` command name.
 {: tip}
 
 ## Viewing resource metric history
@@ -657,7 +657,7 @@ You can view the previous list of command parameters and examples by using the f
 cf ba resource-metrics-history -help
 ```
 
-You can also use **`ba rsmh`** as an alias for the longer **`ba resource-metrics-history`** command name.
+You can also use `ba rsmh` as an alias for the longer `ba resource-metrics-history` command name.
 {: tip}
 
 ## Administering service brokers
@@ -672,12 +672,12 @@ cf ba service-brokers broker_name
 ```
 {: codeblock}
 
-To list all service brokers, enter the command without the **`broker_name`** parameter.
+To list all service brokers, enter the command without the `broker_name` parameter.
 
 broker_name
 :   The name of the custom service broker. Use this parameter, if you want to get information for a specific service broker. Optional.
 
-You can also use **`ba sb`** as an alias for the longer **`ba service-brokers`** command name.
+You can also use `ba sb` as an alias for the longer `ba service-brokers` command name.
 {: tip}
 
 ### Adding a service broker
@@ -701,7 +701,7 @@ password
 broker_url
 :   The URL for the service broker.
 
-You can also use **`ba asb`** as an alias for the longer **`ba add-service-broker`** command name.
+You can also use `ba asb` as an alias for the longer `ba add-service-broker` command name.
 {: tip}
 
 ### Deleting a service broker
@@ -717,7 +717,7 @@ cf ba delete-service-broker service_broker
 service_broker
 :   The name or GUID of the custom service broker.
 
-You can also use **`ba dsb`** as an alias for the longer **`ba delete-service-broker`** command name.
+You can also use `ba dsb` as an alias for the longer `ba delete-service-broker` command name.
 {: tip}
 
 ### Updating a service broker
@@ -741,7 +741,7 @@ password
 broker_url
 :   The URL for the service broker.
 
-You can also use **`ba usb`** as an alias for the longer **`ba update-service-broker`** command name.
+You can also use `ba usb` as an alias for the longer `ba update-service-broker` command name.
 {: tip}
 
 ## Administering application security groups
@@ -776,7 +776,7 @@ cf ba security-groups security-group
 Security group
 :   The name of the security group.
 
-You can also use **`ba sg`** as an alias for the longer **`ba security-groups`** command name.
+You can also use `ba sg` as an alias for the longer `ba security-groups` command name.
 {: tip}
 
 ### Creating a security group
@@ -796,7 +796,7 @@ security-group
 path-to-rules-file
 :   The absolute or relative path to a rules file.
 
-You can also use **`ba csg`** as an alias for the longer **`ba create-security-group`** command name.
+You can also use `ba csg` as an alias for the longer `ba create-security-group` command name.
 {: tip}
 
 For more information about creating security groups and the rules that define outgoing traffic, see [Creating Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: external}.
@@ -816,7 +816,7 @@ security-group
 path-to-rules-file
 :   The absolute or relative path to a rules file.
 
-You can also use **`ba usg`** as an alias for the longer **`ba update-security-group`** command name.
+You can also use `ba usg` as an alias for the longer `ba update-security-group` command name.
 {: tip}
 
 ### Deleting a security group
@@ -831,7 +831,7 @@ cf ba delete-security-group security-group
 Security group
 :   Name of your security group
 
-You can also use **`ba dsg`** as an alias for the longer **`ba delete-security-group`** command name.
+You can also use `ba dsg` as an alias for the longer `ba delete-security-group` command name.
 {: tip}
 
 ### Binding security groups
@@ -846,7 +846,7 @@ cf ba bind-staging-security-group security-group
 Security group
 :   Name of your security group
 
-You can also use **`ba bssg`** as an alias for the longer **`ba bind-staging-security-group`** command name.
+You can also use `ba bssg` as an alias for the longer `ba bind-staging-security-group` command name.
 {: tip}
 
 To bind to the Default Running security group set, use the following command:
@@ -858,7 +858,7 @@ cf ba bind-running-security-group security-group
 Security group
 :   Name of your security group
 
-You can also use **`ba brsg`** as an alias for the longer **`ba bind-running-security-group`** command name.
+You can also use `ba brsg` as an alias for the longer `ba bind-running-security-group` command name.
 {: tip}
 
 To bind a security group to a space, use the following command:
@@ -875,7 +875,7 @@ org
 
 :   The name of the space within the organization to bind the security group to.
 
-You can also use **`ba bsg`** as an alias for the longer **`ba bind-security-group`** command name.
+You can also use `ba bsg` as an alias for the longer `ba bind-security-group` command name.
 {: tip}
 
 For more information about binding security groups, see [Binding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: external}.
@@ -894,7 +894,7 @@ cf ba unbind-staging-security-group security-group
 Security group
 :   The name of your security group.
 
-You can also use **`ba ussg`** as an alias for the longer **`ba unbind-staging-security-group`** command name.
+You can also use `ba ussg` as an alias for the longer `ba unbind-staging-security-group` command name.
 {: tip}
 
 Unbinding the Default Running group set from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network and must be used with caution and understanding of the ramifications it has on all running apps in your environment.
@@ -908,7 +908,7 @@ cf ba unbind-running-security-group security-group
 Security group
 :   The name of your security group.
 
-You can also use **`ba brsg`** as an alias for the longer **`ba unbind-running-security-group`** command name.
+You can also use `ba brsg` as an alias for the longer `ba unbind-running-security-group` command name.
 {: tip}
 
 To unbind a security group to a space, use the following command:
@@ -926,7 +926,7 @@ org
 space
 :   The name of the space within the organization to unbind the security group from.
 
-You can also use **`ba usg`** as an alias for the longer **`ba unbind-security-group`** command name.
+You can also use `ba usg` as an alias for the longer `ba unbind-security-group` command name.
 {: tip}
 
 For more information about unbinding security groups, see [Unbinding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: external}.
@@ -948,7 +948,7 @@ cf ba buildpacks buildpack_name
 buildpack_name
 :   An optional parameter to specify a particular buildpack to view.
 
-You can also use **`ba lb`** as an alias for the longer **`ba buildpacks`** command name.
+You can also use `ba lb` as an alias for the longer `ba buildpacks` command name.
 {: tip}
 
 ### Creating and uploading a buildpack
@@ -971,7 +971,7 @@ file_path
 position
 :   The order in which the buildpacks are checked during buildpack auto-detection.
 
-You can also use **`ba cb`** as an alias for the longer **`ba create-buildpack`** command name.
+You can also use `ba cb` as an alias for the longer `ba create-buildpack` command name.
 {: tip}
 
 ### Updating a buildpack
@@ -997,7 +997,7 @@ enabled
 locked
 :   Indicates whether the buildpack is locked to prevent updates.
 
-You can also use **`ba ub`** as an alias for the longer **`ba update-buildpack`** command name.
+You can also use `ba ub` as an alias for the longer `ba update-buildpack` command name.
 {: tip}
 
 ### Deleting a buildpack
@@ -1014,5 +1014,5 @@ cf ba delete-buildpack buildpack_name
 buildpack_name
 :   The name of the buildpack to delete.
 
-You can also use **`ba db`** as an alias for the longer **`ba delete-buildpack`** command name.
+You can also use `ba db` as an alias for the longer `ba delete-buildpack` command name.
 {: tip}
