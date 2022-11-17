@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-12-15"
+  years: 2015, 2022
+lastupdated: "2022-11-17"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
@@ -10,20 +10,14 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:download: .download}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Extending {{site.data.keyword.cloud_notm}} CLI with plug-ins
 {: #plug-ins}
 
 The {{site.data.keyword.cloud}} Command Line Interface supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally.
 
-For more commands to manage plug-ins, run `ibmcloud plugin` to see the help messages.
+For more commands to manage plug-ins, run `ibmcloud plugin` to see the help messages. For more information, see also [Adding and removing IBM Cloud CLI plug-ins](/docs/cli?topic=cli-ibmcloud_commands_settings).
 {: tip}
 
 ## Installing a plug-in from the {{site.data.keyword.cloud_notm}} CLI repository
@@ -72,7 +66,7 @@ Plug-in 'code-engine 1.23.2' was successfully installed into /Users/username/.bl
 ## Installing a plug-in locally
 {: #install-plugin-locally}
 
-Use the `ibmcloud plugin install LOCAL_FILE_NAME` command to install a plug-in binary on your local machine. For example:
+Use the `ibmcloud plugin install LOCAL_FILE_NAME` command to install a plug-in binary on your local computer. For example:
 ```bash
 ibmcloud plugin install ./code-engine-darwin-amd64-1.23.2
 ```
