@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-21"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -10,22 +10,22 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-
-{:note: .note}
-{:important: .important}
-{:tip: .tip}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.cloud_notm}} admin CLI
 {: #ibmcloud-admincli}
 
+{{site.data.keyword.ibmcf_full}} is deprecated. As of 30 November 2022 new {{site.data.keyword.ibmcf_full}} applications cannot be created and only existing users will be able to deploy applications. End-of-support happens on 1 June 2023. Any instances that still exist on 1 June 2023 will be deleted. 
+{: deprecated}
+
+
 You can manage your {{site.data.keyword.cloud}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command line interface (CLI) with the {{site.data.keyword.cloud_notm}} admin CLI plug-in. For example, you can add users from an LDAP registry.
 
 Before you begin, install the [Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: external}. The {{site.data.keyword.cloud_notm}} admin CLI plug-in
-requires `cf` version 6.11.2 or later. Note that the admin CLI can only be installed into the standalone Cloud Foundry CLI (`cf`), and it can't be used with the Cloud Foundry CLI that's embedded in the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud cf`).
+requires `cf` version 6.11.2 or later. Note the admin CLI can only be installed into the stand-alone Cloud Foundry CLI (`cf`), and it can't be used with the Cloud Foundry CLI that's embedded in the {{site.data.keyword.cloud_notm}} CLI (`ibmcloud cf`).
+
+{{site.data.keyword.ibmcf_full}} is deprecated. As of 30 November 2022 new {{site.data.keyword.ibmcf_full}} applications cannot be created and only existing users will be able to deploy applications. End-of-support happens on 1 June 2023. Any instances that still exist on 1 June 2023 will be deleted. 
+{: deprecated}
 
 The Cloud Foundry CLI is not supported by Cygwin. Use the Cloud Foundry CLI in a command line window other than the Cygwin command line window.
 
