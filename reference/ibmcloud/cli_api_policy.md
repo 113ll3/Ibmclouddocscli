@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-12-02"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -1521,63 +1521,6 @@ List all access policies under current account. Provides the same list as `ibmcl
 ibmcloud iam account-policies -t access
 ```
 {: codeblock}
-
-## ibmcloud iam account-settings
-{: #ibmcloud_iam_account_settings}
-
-List account settings values:
-```bash
-ibmcloud iam account-settings
-```
-{: #codeblock}
-
-### Command options
-{: #ibmcloud_iam_account_settings_options}
-
---output FORMAT
-:   Specify output format. Only 'JSON' is supported.
-
--q, --quiet
-:   Suppress verbose output.
-
-## ibmcloud iam account-settings-update
-{: #ibmcloud_iam_account_settings_update}
-
-Update any account setting attributes:
-```bash
-ibmcloud iam account-settings-update [--restrict-create-service-id RESTRICTION_ID] [--restrict-create-platform-apikey RESTRICTION_KEY] [--allowed-ip-addresses ADDRESS] [--mfa MFA] [--session-expiration-in-seconds SECONDS_EXP] [--session-invalidation-in-seconds SECONDS_INV] [--max-sessions-per-identity SESSIONS_MAX] [--output FORMAT] [-q, --quiet]
-```
-{: #codeblock}
-
-### Command options
-{: #ibmcloud_iam_account_settings_update_options}
-
-RESTRICTION_ID
-:   The restriction level on Service ID creation (one of "RESTRICTED", "NOT_RESTRICTED", or "NOT_SET").
-
-RESTRICTION_KEY
-:   The restriction level on API Key creation (one of "RESTRICTED", "NOT_RESTRICTED", or "NOT_SET").
-
-ADDRESS
-:   The IP addresses and subnets from which IAM tokens can be created (default is "").
-
-MFA
-:   The type of MFA on the account (one of "NONE", "TOTP", "TOTP4ALL", "LEVEL1", "LEVEL2", or "LEVEL3").
-
-SECONDS_EXP
-:   The number of seconds after which the session expires (can also be "NOT_SET", which resets the value to the default).
-
-SECONDS_INV
-:   The number of seconds of inactivity after which a session will be invalidated (can also be "NOT_SET", which resets value to the default).
-
-SESSIONS_MAX
-:   The maximum number of sessions per identity on the account (can also be "NOT_SET", which resets the value to the default).
-
---output FORMAT
-:   Specify output format. Only 'JSON' is supported.
-
--q, --quiet
-:   Suppress verbose output.
 
 ## ibmcloud iam dedicated-id-disconnect
 {: #ibmcloud_iam_dedicated_id_disconnect}
