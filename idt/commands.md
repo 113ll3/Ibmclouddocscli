@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-10-05"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy, cli private endpoints
 
@@ -341,7 +341,7 @@ Command parameters that are entered on the command line take precedence over the
 ## deploy
 {: #deploy}
 
-You can deploy an app as a {{site.data.keyword.cloud_notm}} Foundry app or as a container.
+You can deploy an app as a container.
 
 Run the following command in your current app directory to build your app:  
 ```bash
@@ -351,12 +351,9 @@ ibmcloud dev build
 
 Run the following command in your current app directory to deploy your app:
 ```bash
-ibmcloud dev deploy
+ibmcloud dev deploy -t container
 ```
 {: codeblock}
-
-Before you deploy a Cloud Foundry app to {{site.data.keyword.cloud_notm}}, a `manifest.yml` file must be present in your app's root directory.
-{: tip}
 
 For more information, see [Deploying your app](/docs/apps?topic=apps-create-deploy-app-cli).
 
@@ -447,18 +444,6 @@ Command parameters that are entered on the command line take precedence over the
 * Parameter that is used with a container deployment as the target image name for the deployment. The value must not include a version. For example, image-name:{version} because the version is automatically incremented and appended by `deploy`.
 * Usage: `ibmcloud dev deploy --deploy-image-target [image-name]`
 
-#### `domain`
-{: #domain}
-
-* Parameter that is used to define the domain of the app when you deploy to {{site.data.keyword.cloud_notm}} Foundry.
-* Usage: `ibmcloud dev deploy --domain [domain]`
-
-#### `host`
-{: #host}
-
-* Parameter that is used to define the hostname of the app when you deploy to {{site.data.keyword.cloud_notm}} Foundry.
-* Usage: `ibmcloud dev deploy --host [hostname]`
-
 #### `ibm-cluster`
 {: #ibm-cluster}
 
@@ -475,7 +460,7 @@ Command parameters that are entered on the command line take precedence over the
 {: #deploy-target}
 
 * Parameter that is used to indicate the type of deployment to be completed. The default deployment type is buildpack.
-* Usage: `ibmcloud dev deploy -t|--target buildpack|container`
+* Usage: `ibmcloud dev deploy -t|--target container`
 
 #### `trace`
 {: #deploy-trace}
