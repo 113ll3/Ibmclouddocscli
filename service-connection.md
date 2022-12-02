@@ -146,8 +146,6 @@ account
   spaces
     audit-logs
     update
-iam
-  dedicated-id-disconnect 
 billing
   org-usage
 catalog
