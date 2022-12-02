@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-10-05"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help, cli private endpoints
 
@@ -90,7 +90,7 @@ For more information about regions, see [Locations for resource deployment](/doc
 
 Applications that are created or enabled from the CLI come with pre-configured settings encapsulated in the `cli-config.yml` file. The `cli-config.yml` contains default entries that are used by the commands of the CLI that can be overridden by values that are passed through the command line.
 
-Apps that are deployed to a DevOps toolchain can also contain files such as `toolchain.yml` and `pipeline.yml`. Apps that are being manually deployed can contain a `manifest.yml` and Helm chart files (for deployment to Cloud Foundry or Kubernetes, for example).
+Apps that are deployed to a DevOps toolchain can also contain files such as `toolchain.yml` and `pipeline.yml`. Apps that are being manually deployed can contain Helm chart files (for deployment to Kubernetes, for example).
 
 ## How are local containers used?
 {: #cli-faq-containers}
