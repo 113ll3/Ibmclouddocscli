@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-12-02"
+
+lastupdated: "2022-12-03"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -1521,21 +1522,6 @@ List all access policies under current account. Provides the same list as `ibmcl
 ibmcloud iam account-policies -t access
 ```
 {: codeblock}
-
-## ibmcloud iam dedicated-id-disconnect
-{: #ibmcloud_iam_dedicated_id_disconnect}
-
-Disconnect the public IBMid with dedicated non-IBMid:
-```bash
-ibmcloud iam dedicated-id-disconnect [-f, --force]
-```
-{: codeblock}
-
-### Command options
-{: #ibmcloud_iam_dedicated_id_disconnect_options}
-
--f, --force
-:   Force disconnect without confirmation.
 
 ## ibmcloud iam authorization-policy-create
 {: #ibmcloud_iam_authorization_policy_create}
