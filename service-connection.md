@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-12-03"
+lastupdated: "2022-12-06"
 
 keywords: isolation for IBM Cloud CLI, service endpoints for IBM Cloud CLI, private network for IBM Cloud CLI, network isolation in IBM Cloud CLI, non-public routes for IBM Cloud CLI, private connection for IBM Cloud CLI, private endpoints, regions that support private endpoints, private service endpoints, cli private endpoints
 
@@ -84,7 +84,7 @@ To ensure basic CLI capability against the private endpoint, you must configure 
 ## Determining which CLI plug-ins support private endpoints
 {: #cli-private-plugins}
 
-The [**plugin list**](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_list) command reports whether an installed CLI plug-in supports private endpoints. If a plug-in that you use does not show private support, you must continue to use it with your API set to the public endpoint `cloud.ibm.com`.
+The [plugin list](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_list) command reports whether an installed CLI plug-in supports private endpoints. If a plug-in that you use does not show private support, you must continue to use it with your API set to the public endpoint `cloud.ibm.com`.
 
 ## Determining which commands support private endpoints
 {: #cli-private-commands}

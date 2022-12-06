@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2022
-lastupdated: "2022-10-05"
+lastupdated: "2022-12-06"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy, cli private endpoints
 
@@ -88,7 +88,8 @@ Command parameters that are entered on the command line take precedence over the
 {: #build-container-mounts-tools}
 
 * Use this option to define mounts between the host system and the tools container.
-* The `host-path-tools` and `container-path-tools` values are inserted at the beginning this list.* As a best practice and to prevent unexpected results, you can build and debug by using the same mount settings.
+* The `host-path-tools` and `container-path-tools` values are inserted at the beginning this list.
+* As a best practice and to prevent unexpected results, you can build and debug by using the same mount settings.
 * Usage: `ibmcloud dev build --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `container-port-map`
@@ -162,7 +163,7 @@ ibmcloud dev console [appName]
 ## create
 {: #create}
 
-Create an app that prompts for all information, including resource group, app type, language, and starter kit. You are prompted to enter a name for your app, and you can select services to add to the app. You can also select DevOps toolchain options for automatic deployment, or you can select manual deployment. The app is created in the current directory. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
+Create an app that prompts for all information, including resource group, app type, language, and starter kit. You are prompted to enter a name for your app, and you can select services to add to the app. You can also select DevOps toolchain options for automatic deployment, or you can select manual deployment. The app is created in the current directory. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [`ibmcloud dev edit`](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
 
 To create an app in the current directory and to associate services with it, run the following command:
 ```bash
@@ -191,7 +192,7 @@ Command parameters that are entered on the command line take precedence over the
 
 If you're using Windows&trade;, you must run Windows&trade; 10 Pro or later.
 
-You can debug your app through the `debug` command. A build must first be completed against the app by using the build command with the `--debug` argument. When you start the `debug` command, a container is started which provides a debug port or ports as defined by the `container-port-map-debug` value in the cli-config.yml or specified on the command line. Connect your favorite debugging tool to the port or ports, and you can debug your app as normal.
+You can debug your app through the `debug` command. A build must first be completed against the app by using the build command with the `--debug` argument. When you start the `debug` command, a container is started which provides a debug port or ports as defined by the `container-port-map-debug` value in `cli-config.yml` or specified on the command line. Connect your favorite debugging tool to the port or ports, and you can debug your app as normal.
 
 First, compile your app:
 ```bash
@@ -383,19 +384,19 @@ In the `cli-config.yml`, you can define the location of a Helm chart in the `cha
 
 You can deploy your app to a {{site.data.keyword.openshiftlong}} container by using a DevOps toolchain or by using the `deploy` command.
 
-#### Toolchain deployment to OpenShift
+#### Toolchain deployment to Red Hat OpenShift
 {: #deploy-openshift-toolchain}
 
-[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) provides toolchain deployment support for [OpenShift](/docs/openshift?topic=openshift-getting-started) clusters. To use this feature, you need an OpenShift cluster. With this prerequisite met, an OpenShift deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_short}} commands.
+[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) provides toolchain deployment support for [Red Hat OpenShift](/docs/openshift?topic=openshift-getting-started) clusters. To use this feature, you need a Red Hat OpenShift cluster. With this prerequisite met, a Red Hat OpenShift deployment option is available for the `create` and `edit` capabilities of the {{site.data.keyword.dev_cli_short}} commands.
 
-By selecting the **OpenShift** option, you can create a toolchain that deploys to the OpenShift cluster that you specify through the dialog.
+By selecting the **OpenShift** option, you can create a toolchain that deploys to the Red Hat OpenShift cluster that you specify through the dialog.
 
-#### Manual deployment to OpenShift
+#### Manual deployment to Red Hat OpenShift
 {: #deploy-openshift-manual}
 
-For manual deployment to an OpenShift container, the syntax is the same as for deploying your app to any other Helm-based Kubernetes cluster.
+For manual deployment to an Red Hat OpenShift container, the syntax is the same as for deploying your app to any other Helm-based Kubernetes cluster.
 
-First, create or enable an app. You must have an OpenShift cluster. For more information about configuring your cluster, see [Creating OpenShift clusters](/docs/openshift?topic=openshift-clusters).
+First, create or enable an app. You must have an Red Hat OpenShift cluster. For more information about configuring your cluster, see [Preparing to create clusters](/docs/openshift?topic=openshift-clusters).
 
 After those prerequisites are met, you can deploy the app by typing the following command from the app folder:
 
@@ -441,7 +442,7 @@ Command parameters that are entered on the command line take precedence over the
 #### `deploy-image-target`
 {: #deploy-image-target}
 
-* Parameter that is used with a container deployment as the target image name for the deployment. The value must not include a version. For example, image-name:{version} because the version is automatically incremented and appended by `deploy`.
+* Parameter that is used with a container deployment as the target image name for the deployment. The value must not include a version. For example, `image-name:{version}` because the version is automatically incremented and appended by `deploy`.
 * Usage: `ibmcloud dev deploy --deploy-image-target [image-name]`
 
 #### `ibm-cluster`
@@ -537,7 +538,7 @@ Command parameters that are entered on the command line take precedence over the
 ## enable
 {: #enable}
 
-Enable an existing app for {{site.data.keyword.cloud_notm}} deployment. The `enable` command attempts to automatically detect the language of an existing app and then prompt for necessary additional information. All deployment environments can be used through a manual `deploy` or by using a DevOps toolchain. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
+Enable an existing app for {{site.data.keyword.cloud_notm}} deployment. The `enable` command attempts to automatically detect the language of an existing app and then prompt for necessary additional information. All deployment environments can be used through a manual `deploy` or by using a DevOps toolchain. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [`ibmcloud dev edit`](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
 
 While logged in to {{site.data.keyword.cloud_notm}}, you can connect this local app with an app that is already in {{site.data.keyword.cloud_notm}} or create a new {{site.data.keyword.cloud_notm}} app. To take advantage of {{site.data.keyword.cloud_notm}} features such as services and DevOps toolchains, an app in {{site.data.keyword.cloud_notm}} is necessary. When an {{site.data.keyword.cloud_notm}} app is created for an app that is cloned from a Git repository, the {{site.data.keyword.cloud_notm}} app includes this repository in its configuration. 
 
@@ -990,7 +991,7 @@ Command parameters that are entered on the command line take precedence over the
 #### `container-shell`
 {: #container-shell}
 
-* Specifies which shell to run inside the container (default is /bin/sh).
+* Specifies which shell to run inside the container (default is `/bin/sh`).
 * Usage: `ibmcloud dev shell --container-shell [path/to/shell]`
 
 #### `trace`
@@ -1264,6 +1265,13 @@ The following parameters can be used with the `tekton-trigger` command.
 * Optional. Use this parameter to override or append to defined trigger properties. For example,`'{"pipeline-debug":"true"}'`.
 * Usage: `ibmcloud dev tekton-trigger pipePIPELINE_IDlineID --trigger-name triggerName --trigger-properties propertiesJSON`
 
+#### `secure-trigger-properties` (optional)
+{: #tekton-secure-trigger-properties}
+
+* Optional. Use this parameter to override or append to defined trigger properties whose values should be concealed behind dots or asterisks in later outputs. For example, `'{"deployer-api-key":"s0mEThING_v3Ry_s3CReT"}'`
+* Usage: `ibmcloud dev tekton-trigger pipePIPELINE_IDlineID --trigger-name triggerName --secure-trigger-properties securePropertiesJSON`
+
+
 #### `trigger-header` (optional)
 {: #tekton-trigger-header}
 
@@ -1504,7 +1512,7 @@ Command parameters that are entered on the command line take precedence over the
 ## view
 {: #view}
 
-You can view the URL to which your app is deployed through the `view` command. Run this command in the root directory of the app you want to view. The `view` command also opens the URL in your default browser.
+You can view the URL to which your app is deployed through the `view` command. Run this command in the root directory of the app that you want to view. The `view` command also opens the URL in your default browser.
 
 For apps that are deployed to {{site.data.keyword.cloud_notm}} Foundry, the URL consists of the app's hostname and the app's domain.
 

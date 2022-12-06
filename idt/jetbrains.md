@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-05"
+lastupdated: "2022-12-06"
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -23,7 +23,7 @@ The {{site.data.keyword.dev_cli_long}} extension for JetBrains IDEs, which inclu
 {{site.data.keyword.cloud}} CLI commands from within the IDE. You can access a subset of `ibmcloud dev` commands for Docker workflows, including commands for application deployment, and starting, stopping, and restarting apps on {{site.data.keyword.cloud_notm}}. There are also commands for viewing remote app logs. The commands are available without leaving the editor’s context.
 {: shortdesc}
 
-![The {{site.data.keyword.dev_cli_notm}} running within WebStorm IDE.](../images/jetbrains.png "The IBM Cloud Developer Tools running within WebStorm IDE"){: caption="Figure 1. The IBM Cloud Developer Tools running within WebStorm IDE." caption-side="bottom"}
+![The {{site.data.keyword.dev_cli_notm}} running within WebStorm IDE](../images/jetbrains.png "The IBM Cloud Developer Tools running within WebStorm IDE"){: caption="Figure 1. The IBM Cloud Developer Tools running within WebStorm IDE." caption-side="bottom"}
 
 ## Dependencies
 {: #jetbrains-dependencies}
@@ -42,4 +42,4 @@ You can either start with an existing server-side app, and enable it for {{site.
 
 To cloud-enable a generic server-side app, select **Tools** > **{{site.data.keyword.dev_cli_notm}}** > **Enable app for {{site.data.keyword.cloud_notm}}**. All the required files are checked, and added (if needed) for deployment within a Kubernetes cluster.
 
-Develop your cloud-native app by using the basic build, run, and deploy actions from the {{site.data.keyword.dev_cli_short}} menu. If you need to perform actions that aren't in the menu, simply open a terminal tab and enter the commands manually.
+Develop your cloud-native app by using the basic build, run, and deploy actions from the {{site.data.keyword.dev_cli_short}} menu. If you need to perform actions that aren't in the menu, open a terminal tab and enter the commands manually.
