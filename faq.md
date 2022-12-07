@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-12-06"
+lastupdated: "2022-12-07"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help, cli private endpoints
 
@@ -70,7 +70,7 @@ When you run an {{site.data.keyword.cloud_notm}} CLI command, you're notified if
 {: faq}
 {: support}
 
-To find out which installed CLI plug-ins support private endpoints, use the [IBM cloud plugin list](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_list) command.
+To find out which installed CLI plug-ins support private endpoints, use the [`ibmcloud plugin list`](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_list) command.
 
 ## Which regions support private endpoints?
 {: #cli-private-endpoint-faq}
