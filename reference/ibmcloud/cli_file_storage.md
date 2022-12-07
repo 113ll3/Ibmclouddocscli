@@ -728,6 +728,7 @@ ibmcloud sl file volume-set-note [OPTIONS] VOLUME_ID
 {: codeblock}
 
 **Command options**:
+
 -n value, --note value
 :   Public notes related to a Storage volume [required]
 
