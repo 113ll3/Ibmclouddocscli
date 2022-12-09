@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2022
-lastupdated: "2022-12-06"
+lastupdated: "2022-12-09"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy, cli private endpoints
 
@@ -535,78 +535,6 @@ Command parameters that are entered on the command line take precedence over the
 * Use this parameter to provide verbose output.
 * Usage: `ibmcloud dev edit --trace`
 
-## enable
-{: #enable}
-
-Enable an existing app for {{site.data.keyword.cloud_notm}} deployment. The `enable` command attempts to automatically detect the language of an existing app and then prompt for necessary additional information. All deployment environments can be used through a manual `deploy` or by using a DevOps toolchain. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [`ibmcloud dev edit`](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
-
-While logged in to {{site.data.keyword.cloud_notm}}, you can connect this local app with an app that is already in {{site.data.keyword.cloud_notm}} or create a new {{site.data.keyword.cloud_notm}} app. To take advantage of {{site.data.keyword.cloud_notm}} features such as services and DevOps toolchains, an app in {{site.data.keyword.cloud_notm}} is necessary. When an {{site.data.keyword.cloud_notm}} app is created for an app that is cloned from a Git repository, the {{site.data.keyword.cloud_notm}} app includes this repository in its configuration. 
-
-The `enable` command is a Beta feature. If you have trouble with the `enable` command, see [troubleshooting](/docs/cli?topic=cli-troubleshoot). In particular, `enable` isn't intended for mobile apps or frameworks. For complex apps that produce several deployable assets, each component of the app must be enabled individually. 
-
-Run the following command to enable an existing app in the current directory:
-```bash
-ibmcloud dev enable
-```
-{: codeblock}
-
-The presence of necessary files provides app language detection for a valid project structure.  
-
-* The presence of a `package.json` file identifies a Node.js app.
-* The presence of a `package.swift` file identifies a Swift app.
-* The presence of either a `setup.py` or `requirements.txt` file identifies a Python app.
-* The presence of either a `pom.xml` or `build.gradle` file identifies a Java&trade; app.
-	* The presence of a `pom.xml` identifies a Maven app.
-	* The presence of a `build.gradle` identifies a Gradle app.
-
-You can also override the detected app language by using the `--language` argument. Only valid and complete apps are supported. The enable command doesn't modify your source code.
-
-### enable language options
-{: #enable-language-options}
-
-Language options include:
-* Go
-* Java EE (interpreted as Java&trade; - Java&trade; EE)
-* Java-mp (interpreted as Java&trade; - Java&trade; MicroProfile)
-* Java-spring (interpreted as Java&trade; - Spring Framework)
-* Node
-* Python
-* Swift
-
-Files that are created by using the `ibmcloud dev enable` command are saved with a `.merge` file extension if name conflicts occur with existing files in the app folder.
-
-### enable command parameters
-{: #enable-parameters}
-
-The following parameters can be used with the `enable` command or by updating the app's `cli-config.yml` file directly.
-
-Command parameters that are entered on the command line take precedence over the `cli-config.yml` configuration.
-{: note}
-
-#### `config-file`  
-{: #config-file-enable}
-
-* Specify a `cli-config.yml` file to use for a command.
-* Usage: `ibmcloud dev enable --config-file cli-config.yml`
-
-#### `force`
-{: #enable-force}
-
-* Parameter that is used to force reenabling an already enabled app.
-* Usage: `ibmcloud dev enable -f|--force`
-
-#### `language`
-{: #enable-language}
-
-* Parameter that is used to specify the language of the app to be enabled.
-* Usage: `ibmcloud dev enable -l|--language [language]`
-
-#### `trace`
-{: #trace-enable}
-
-* Use this parameter to provide verbose output.
-* Usage: `ibmcloud dev enable --trace`
-
 ## get-credentials
 {: #get-credentials}
 
@@ -615,7 +543,7 @@ Get credentials are required by the app to enable the use of connected services.
 ### get-credentials command parameters
 {: #creds-parameters}
 
-The following parameter can be used with the `enable` command or by updating the app's `cli-config.yml` file directly.
+The following parameter can be used by updating the app's `cli-config.yml` file directly.
 
 Command parameters that are entered on the command line take precedence over the `cli-config.yml` configuration.
 {: note}

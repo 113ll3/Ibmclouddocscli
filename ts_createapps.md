@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-12-30"
+  years: 2015, 2022
+lastupdated: "2022-12-09"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -322,29 +322,6 @@ Be sure that the namespace in the deployment image target matches one of the nam
 ibmcloud cr namespaces
 ```
 {: codeblock}
-{: tsResolve}
-
-## Why can't the app language be determined?
-{: #ts-cli-determine-language}
-{: troubleshoot}
-
-The following failure might be displayed when you start your app:
-```text
-FAILED
-Could not determine the language of your app.
-
-Try using the --language flag to specify the language of your app 
-directly. 
-```
-{: screen}
-{: tsSymptoms}
-
-This error might be due to one of the following causes:
-- Running the [enable](/docs/cli?topic=cli-idt-cli#enable) command from a directory that is not the source directory of your app.
-- Running the [enable](/docs/cli?topic=cli-idt-cli#enable) command for an app of a language that is not recognized.
-{: tsCauses}
-
-Be sure that you run the command from the app directory that contains source code for the app. If the issue is not resolved, and the language is one of the [supported languages](/docs/cli?topic=cli-idt-cli#enable-language-options), use the `--language` parameter to specify the language.
 {: tsResolve}
 
 ## Why can't I build or run a Node.js app that is enabled for cloud deployment?

@@ -43,7 +43,6 @@ toc:
           label: Debugging
           topics: 
           - idt/local_debug.md
-          - enable_existing_python.md
       - service-connection.md
       - ha-dr.md
       - cri-token-login.md
