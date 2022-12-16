@@ -11,8 +11,8 @@ toc:
     path: cli
     label: IBM Cloud CLI
 
-  entries: 
-  - navgroup: 
+  entries:
+  - navgroup:
       id: learn
       topics:
       - index.md
@@ -20,9 +20,9 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - /apps/apps-create-deploy-app-cli
+      - include: ../apps/create-deploy-cli.md
 
-  - navgroup: 
+  - navgroup:
       id: howto
       topics:
       - reference/ibmcloud/download_cli.md
@@ -33,15 +33,15 @@ toc:
       - reference/ibmcloud/enable_cli_autocompletion.md
       - quote-strings.md
       - reference/ibmcloud/uninstall_cli.md
-      - topicgroup: 
+      - topicgroup:
           label: IBM Cloud CLI IDE Extensions
-          topics: 
+          topics:
           - idt/vscode.md
           - idt/jetbrains.md
           - eclipse.md
-      - topicgroup: 
+      - topicgroup:
           label: Debugging
-          topics: 
+          topics:
           - idt/local_debug.md
       - service-connection.md
       - ha-dr.md
@@ -91,35 +91,35 @@ toc:
       - topicgroup:
           label: Plug-ins for the IBM Cloud CLI
           topics:
-          - /activity-tracker-cli-plugin/activity-tracker-cli-plugin-activity-tracker-cli
-          - /analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
-          - /app-configuration-cli-plugin/app-configuration-cli-plugin-app-configuration-cli
+          - include: ../activity-tracker-cli-plugin/activity-tracker-cli.md
+          - include: ../analytics-engine-cli-plugin/analytics-engine-serverless-cli.md
+          - include: ../app-configuration-cli-plugin/app-configuration-cli-plugin/app-configuration-cli.md
           - plugins/catalogs/manage-catalogs.md
-          - /cis-cli-plugin/cis-cli-plugin-cis-cli
-          - /databases-cli-plugin/databases-cli-plugin-cdb-reference
-          - /cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
-          - /Cloudant-cli-plugin/Cloudant-cli-plugin-cloudant-cli
-          - /codeengine/codeengine-cli
-          - /code-risk-analyzer-cli-plugin/code-risk-analyzer-cli-plugin-cra-cli-plugin
-          - /container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
+          - include: ../cis-cli-plugin/cis-cli-plugin.md
+          - include: ../databases-cli-plugin/cloud-databases-cli.md
+          - include: ../cloud-functions-cli-plugin/functions-cli.md
+          - include: ../Cloudant-cli-plugin/cloudant-cli.md
+          - include: ../codeengine/cmd_defs.md
+          - include: ../code-risk-analyzer-cli-plugin/cra-cli.md
+          - include: ../container-registry-cli-plugin/container-registry-cli.md
           - plugins/cbr/context-based-restrictions.md
-          - /devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
-          - /dl-cli-plugin/dl-cli-plugin-dl-cli
-          - /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
-          - /event-notifications-cli-plugin/event-notifications-cli-plugin-event-notifications-cli
-          - /hs-crypto-cli-plugin/hs-crypto-cli-plugin-hpcs-cli-plugin
-          - /dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
-          - /hpvs-cli-plugin/hpvs-cli-plugin-hpvs_cli_plugin
-          - /key-protect-cli-plugin/key-protect-cli-plugin-key-protect-cli-reference
-          - /containers/containers-kubernetes-service-cli
-          - /log-analysis-cli-plugin/log-analysis-cli-plugin-log-analysis-cli
-          - /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
-          - /cloud-object-storage-cli-plugin/cloud-object-storage-cli-plugin-ic-cos-cli
-          - /power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
-          - /satellite/satellite-satellite-cli-reference
-          - /schematics-cli-plugin/schematics-cli-plugin-schematics-cli-reference
-          - /tg-cli-plugin/tg-cli-plugin-transit-gateway-cli
-          - /vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
+          - include: ../devops-insights-cli-plugin/devops-insights-cli.md
+          - include: ../dl-cli-plugin/direct-link-cli.md
+          - include: ../dns-svcs-cli-plugin/dns-svcs-cli-plugin.md
+          - include: ../event-notifications-cli-plugin/event-notifications-cli.md
+          - include: ../hs-crypto-cli-plugin/hs-crypto-cli.md
+          - include: ../dbaas-cli-plugin/dbaas_cli.md
+          - include: ../hpvs-cli-plugin/hpvs_cli.md
+          - include: ../key-protect-cli-plugin/key-protect-cli-commands.md
+          - include: ../containers/cli-ks-plugin.md
+          - include: ../log-analysis-cli-plugin/log-analysis-cli.md
+          - include: ../monitor-cli-plugin/monitor-cli.md
+          - include: ../cloud-object-storage-cli-plugin/cloud-object-storage-cli-reference.md
+          - include: ../power-iaas-cli-plugin/power-iaas-cli.md
+          - include: ../satellite/satellite-cli-reference.md
+          - include: ../schematics-cli-plugin/cli-reference.md
+          - include: ../tg-cli-plugin/transit-gateway-cli.md
+          - include: ../vpc-infrastructure-cli-plugin/vpc-cli-reference.md
       - topicgroup:
           label: Plug-ins for the standalone Cloud Foundry CLI
           topics:
@@ -133,7 +133,7 @@ toc:
 
   - navgroup:
       id: help
-      topics: 
+      topics:
       - faq.md
       - ts_createapps.md
       - getting-help.md
