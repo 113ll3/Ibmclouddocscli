@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-12-16"
 
 keywords: cli, ibm cloud developer tools, visual studio code, developer extension, vscode cli, vscode plugin, vscode
 
@@ -43,7 +43,7 @@ The simplest way to install the {{site.data.keyword.cloud_notm}} CLI extension i
 1. Open the `quick open` command palette by using the following key combinations from within the editor:
 
    * **Mac:** `cmd + p`
-   * **Windows&trade; / Linux&trade;:** `ctrl + p`
+   * **Windows&trade; or Linux&trade;:** `ctrl + p`
 
 2. Enter the `ext install IBM Cloud CLI` command, and then press Enter to install the {{site.data.keyword.cloud_notm}} CLI extension inside the Visual Studio Code editor.
 
@@ -62,7 +62,7 @@ Start the extension commands by using Visual Studio Code’s command palette.
 First, open the command palette by using the following key combination:
 
 * **Mac:** `cmd + shift + p`
-* **Windows&trade; / Linux&trade;:** `ctrl + shift + p`
+* **Windows&trade; or Linux&trade;:** `ctrl + shift + p`
 
 Next, either enter or select the command that you want to start. You can type `dev` within the command palette to see the list of all available commands.
 
