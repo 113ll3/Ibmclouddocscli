@@ -10,11 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:note: .note}
-{:codeblock: .codeblock}
+{{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.cloud_notm}} CLI (ibmcloud) environment variables
 {: #ibmcloud_env_var}

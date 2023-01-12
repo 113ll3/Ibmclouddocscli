@@ -10,11 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:note: .note}
-{:codeblock: .codeblock}
+{{site.data.keyword.attribute-definition-list}}
 
 # Searching and managing the {{site.data.keyword.cloud_notm}} catalog (ibmcloud catalog)
 {: #ibmcloud_catalog}

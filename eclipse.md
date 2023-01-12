@@ -10,19 +10,7 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
-{:help: data-hd-content-type='help'}
-{:term: .term}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.cloud_notm}} CLI for Eclipse IDE plug-in (preview)
 {: #eclipse-ide-plugins}

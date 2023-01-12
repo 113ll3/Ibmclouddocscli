@@ -10,11 +10,7 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:screen: .screen}
-{:pre: .pre}
+{{site.data.keyword.attribute-definition-list}}
 
 # Using quotation marks with strings in {{site.data.keyword.cloud_notm}} CLI
 {: #quote-strings}

@@ -12,14 +12,7 @@ content-type: faq
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQs for the {{site.data.keyword.cloud_notm}} CLI
 {: #ibm-cli-faq}

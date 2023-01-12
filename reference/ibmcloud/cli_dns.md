@@ -10,10 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:codeblock: .codeblock}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing domains with the DNS service (ibmcloud sl dns)
 {: #sl-manage-domains}

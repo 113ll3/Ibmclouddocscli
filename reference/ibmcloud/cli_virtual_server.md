@@ -10,10 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Creating and working with virtual servers (ibmcloud sl vs)
 {: #cli-virtual-servers}

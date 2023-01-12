@@ -10,14 +10,7 @@ subcollection: cli
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:note: .note}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Securing your connection when using the {{site.data.keyword.cloud_notm}} CLI
 {: #service-connection}

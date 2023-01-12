@@ -10,10 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Working with resources and resource groups (ibmcloud resource)
 {: #ibmcloud_commands_resource}

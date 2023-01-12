@@ -10,10 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:codeblock: .codeblock}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing classic infrastructure placement groups (ibmcloud sl placement-group)
 {: #sl-manage-placement-group}

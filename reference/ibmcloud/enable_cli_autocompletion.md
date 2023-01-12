@@ -10,9 +10,7 @@ subcollection: cli
 
 ---
 
-{:codeblock: .codeblock} 
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux and macOS only)
 {: #shell-autocomplete}

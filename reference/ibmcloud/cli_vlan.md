@@ -10,10 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing classic infrastructure VLANs (ibmcloud sl vlan)
 {: #manage-classic-vlans}

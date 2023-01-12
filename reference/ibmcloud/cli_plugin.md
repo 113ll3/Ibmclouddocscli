@@ -10,9 +10,7 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding and removing {{site.data.keyword.cloud_notm}} CLI plug-ins (ibmcloud plugin)
 {: #ibmcloud_commands_settings}

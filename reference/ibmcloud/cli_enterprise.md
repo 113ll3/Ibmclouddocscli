@@ -10,9 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing enterprises, account groups, and accounts (ibmcloud enterprise)
 {: #ibmcloud_enterprise}

@@ -11,11 +11,7 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:codeblock: .codeblock}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing IAM access, API keys, trusted profiles, service IDs, and access groups (ibmcloud iam)
 {: #ibmcloud_commands_iam}

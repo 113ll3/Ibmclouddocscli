@@ -10,10 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:codeblock: .codeblock}
+{{site.data.keyword.attribute-definition-list}}
 
 # Creating and working with bare metal servers (ibmcloud sl hardware)
 {: #sl-manage-bare-metal}

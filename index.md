@@ -13,13 +13,7 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:tip: .tip}
-{:external: target="_blank" .external}
-{:step: data-tutorial-type='step'}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting started with the {{site.data.keyword.cloud_notm}} CLI
 {: #getting-started}

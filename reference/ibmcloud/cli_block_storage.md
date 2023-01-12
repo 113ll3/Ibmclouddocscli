@@ -10,9 +10,7 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:codeblock: .codeblock}
+{{site.data.keyword.attribute-definition-list}}
 
 # Working with the {{site.data.keyword.blockstorageshort}} service (ibmcloud sl block)
 {: #sl-block-storage}

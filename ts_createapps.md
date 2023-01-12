@@ -12,17 +12,7 @@ content-type: troubleshoot
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:note: .deprecated}
-{:external: target="_blank" .external}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Troubleshooting for the {{site.data.keyword.cloud_notm}} CLI
 {: #troubleshoot}

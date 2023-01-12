@@ -10,11 +10,7 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.dev_cli_notm}} extension for JetBrains IDEs
 {: #ibm-dev-tools-for-jetbrains}

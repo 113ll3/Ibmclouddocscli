@@ -10,12 +10,7 @@ subcollection: cli
 
 ---
 
-{:codeblock: .codeblock}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:tip: .tip}
-{:external: target="_blank" .external}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI
 {: #install-ibmcloud-cli}

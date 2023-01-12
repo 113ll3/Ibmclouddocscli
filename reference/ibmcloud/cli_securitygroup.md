@@ -10,9 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing security groups for virtual server traffic (ibmcloud sl securitygroup)
 {: #sl-manage-securitygroups}

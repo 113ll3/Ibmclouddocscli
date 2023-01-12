@@ -10,14 +10,7 @@ subcollection: cli
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:note: .note}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Understanding high availability and disaster recovery for the {{site.data.keyword.cloud_notm}} CLI
 {: #ha-dr}

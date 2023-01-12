@@ -10,10 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing classic infrastructure SSH keys and SSL certificates (ibmcloud sl security)
 {: #sl-manage-security-keys}

@@ -10,13 +10,7 @@ subcollection: cli
 
 ---
 
-{:codeblock: .codeblock}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:external: target="_blank" .external}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Logging in as a Virtual Server Instance Compute Resource Identity
 {: #vsi-cri-login}

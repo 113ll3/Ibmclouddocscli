@@ -10,12 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:note: .note}
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing accounts, users, and Cloud Foundry orgs (ibmcloud account)
 {: #ibmcloud_commands_account}

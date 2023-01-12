@@ -10,10 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:codeblock: .codeblock}
+{{site.data.keyword.attribute-definition-list}}
 
 # Creating, editing, and deleting compute images (ibmcloud sl image)
 {: #sl-manage-compute-images}

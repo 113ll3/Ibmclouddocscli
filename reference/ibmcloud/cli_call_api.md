@@ -10,10 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:codeblock: .codeblock}
+{{site.data.keyword.attribute-definition-list}}
 
 # Calling arbitrary classic infrastructure API endpoints (ibmcloud sl call-api)
 {: #sl-all-api}

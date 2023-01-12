@@ -10,12 +10,7 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
+{{site.data.keyword.attribute-definition-list}}
 
 # Uninstalling the stand-alone {{site.data.keyword.cloud_notm}} CLI
 {: #uninstall-ibmcloud-cli}

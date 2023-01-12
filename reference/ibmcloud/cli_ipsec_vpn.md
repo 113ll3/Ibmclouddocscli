@@ -10,9 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing IPSec VPN tunnels (ibmcloud sl ipsec)
 {: #sl-manage-ipsec-vpn-tunnels}

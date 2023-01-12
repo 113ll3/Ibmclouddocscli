@@ -10,9 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing classic infrastructure orders and quotes (ibmcloud sl order)
 {: #sl-manage-classic-orders}

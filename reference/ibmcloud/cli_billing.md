@@ -10,9 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Viewing billing and usage information (ibmcloud billing)
 {: #ibmcloud_billing}

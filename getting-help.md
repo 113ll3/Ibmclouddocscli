@@ -10,10 +10,7 @@ subcollection: cli
 
 ---
 
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:external: target="_blank" .external}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting help and support
 {: #getting-help}

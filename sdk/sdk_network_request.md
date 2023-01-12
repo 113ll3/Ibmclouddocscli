@@ -10,11 +10,7 @@ subcollection: cli
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Making a network request
 {: #sdk-network-request}
