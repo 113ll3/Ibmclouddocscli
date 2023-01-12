@@ -720,6 +720,7 @@ Refresh a dependent duplicate 123 with a snapshot from its parent 456.
 
 ## ibmcloud sl file volume-set-note
 {: #sl_file_volume_setnote}
+
 Set a note for an existing file storage volume:
 
 ```bash
