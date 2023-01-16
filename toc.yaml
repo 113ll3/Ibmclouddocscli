@@ -93,7 +93,7 @@ toc:
           topics:
           - include: ../activity-tracker-cli-plugin/activity-tracker-cli.md
           - include: ../analytics-engine-cli-plugin/analytics-engine-serverless-cli.md
-          - include: ../app-configuration-cli-plugin/app-configuration-cli-plugin/app-configuration-cli.md
+          - include: ../app-configuration-cli-plugin/app-configuration-cli.md
           - plugins/catalogs/manage-catalogs.md
           - include: ../cis-cli-plugin/cis-cli-plugin.md
           - include: ../databases-cli-plugin/cloud-databases-cli.md
@@ -107,6 +107,7 @@ toc:
           - include: ../dl-cli-plugin/direct-link-cli.md
           - include: ../dns-svcs-cli-plugin/dns-svcs-cli-plugin.md
           - include: ../event-notifications-cli-plugin/event-notifications-cli.md
+          - include: ../EventStreams/eventstreams-cli.md
           - include: ../hs-crypto-cli-plugin/hs-crypto-cli.md
           - include: ../dbaas-cli-plugin/dbaas_cli.md
           - include: ../hpvs-cli-plugin/hpvs_cli.md
@@ -116,10 +117,14 @@ toc:
           - include: ../monitor-cli-plugin/monitor-cli.md
           - include: ../cloud-object-storage-cli-plugin/cloud-object-storage-cli-reference.md
           - include: ../power-iaas-cli-plugin/power-iaas-cli.md
+          - include: ../privileged-access-gateway/pag-cli-commands.md
+          - include: ../quantum-computing-cli-plugin/quantum-services-cli.md
+          - include: ../secrets-manager-cli-plugin/secrets-manager-cli.md
           - include: ../satellite/satellite-cli-reference.md
           - include: ../schematics-cli-plugin/cli-reference.md
           - include: ../tg-cli-plugin/transit-gateway-cli.md
           - include: ../vpc-infrastructure-cli-plugin/vpc-cli-reference.md
+          - include: ../watson-query-cli-plugin/watson-query-cli.md
       - topicgroup:
           label: Plug-ins for the standalone Cloud Foundry CLI
           topics:
