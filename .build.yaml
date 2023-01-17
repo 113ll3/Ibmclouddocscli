@@ -14,6 +14,7 @@ includes:
   - https://github.ibm.com/cloud-docs/dl-cli-plugin
   - https://github.ibm.com/cloud-docs/dns-svcs-cli-plugin
   - https://github.ibm.com/cloud-docs/event-notifications-cli-plugin
+  - https://github.ibm.com/cloud-docs/EventStreams
   - https://github.ibm.com/cloud-docs/hs-crypto-cli-plugin
   - https://github.ibm.com/cloud-docs/hpvs-cli-plugin
   - https://github.ibm.com/cloud-docs/dbaas-cli-plugin
@@ -23,7 +24,11 @@ includes:
   - https://github.ibm.com/cloud-docs/monitor-cli-plugin
   - https://github.ibm.com/cloud-docs/cloud-object-storage-cli-plugin
   - https://github.ibm.com/cloud-docs/power-iaas-cli-plugin
+  - https://github.ibm.com/cloud-docs/privileged-access-gateway
+  - https://github.ibm.com/cloud-docs/quantum-computing-cli-plugin
+  - https://github.ibm.com/cloud-docs/secrets-manager
   - https://github.ibm.com/cloud-docs/satellite
   - https://github.ibm.com/cloud-docs/schematics-cli-plugin
   - https://github.ibm.com/cloud-docs/tg-cli-plugin
   - https://github.ibm.com/cloud-docs/vpc-infrastructure-cli-plugin
+  - https://github.ibm.com/cloud-docs/watson-query-cli-plugin
