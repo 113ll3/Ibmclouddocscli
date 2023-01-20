@@ -1,8 +1,9 @@
 ---
 
-copyright:
-  years: 2018, 2022
-lastupdated: "2022-12-06"
+copyright: 
+  years: 2018, 2023
+lastupdated: "2023-01-20"
+
 
 keywords: cli, ibm cloud developer tools, jetbrains, jetbrains ides, intellij, webstorm, android studio, ibmcloud dev, view remote logs, ibmcloud docker commands
 
@@ -14,6 +15,9 @@ subcollection: cli
 
 # {{site.data.keyword.dev_cli_notm}} extension for JetBrains IDEs
 {: #ibm-dev-tools-for-jetbrains}
+
+The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created, and the starter kits will be removed from the catalog. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the Applications Details page will no longer be accessible, but you will still be able to access your application code and toolchains through your [{{site.data.keyword.cloud_notm}} Resource List](https://cloud.ibm.com/resources). For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
+{: deprecated}
 
 The {{site.data.keyword.dev_cli_long}} extension for JetBrains IDEs, which includes `IntelliJ`, `WebStorm`, `Android Studio`, and more, provides new menu entries to access 
 {{site.data.keyword.cloud}} CLI commands from within the IDE. You can access a subset of `ibmcloud dev` commands for Docker workflows, including commands for application deployment, and starting, stopping, and restarting apps on {{site.data.keyword.cloud_notm}}. There are also commands for viewing remote app logs. The commands are available without leaving the editor’s context.
