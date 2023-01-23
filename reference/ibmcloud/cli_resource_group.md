@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-10-31"
+  years: 2018, 2023
+lastupdated: "2023-01-23"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -1033,12 +1033,15 @@ ibmcloud resource service-alias-delete my-service-alias
 
 Search resources by using Lucene query syntax.
 ```bash
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)] [-p, --provider PROVIDER]
+ibmcloud resource search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)] [-p, --provider PROVIDER] [-ir, --is-reclaimed (false, true, any)] [--output FORMAT]
 ```
 {: codeblock}
 
 ### Command options
 {: #ibmcloud_resource_search_options}
+
+-ir, --is-reclaimed
+:   Search for account resources that have been reclaimed. By default the search returns only active resources, however you can set is-reclaimed to any to search for resources whether they have been reclaimed or not. Set this option to `true` to apply the search criteria only to reclaimed resources. Set this option to `false` to search only for active resources. `false` is the default behavior.
 
 -o, -offset
 :   Starting resource position number
