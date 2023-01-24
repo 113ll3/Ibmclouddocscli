@@ -3125,3 +3125,79 @@ Delete rule `my-rule` from trusted profile `my-profile` without confirmation:
 ibmcloud iam trusted-profile-rule-delete my-profile my-rule -f
 ```
 {: codeblock}
+
+## ibmcloud iam account-settings
+{: #ibmcloud_iam_account_settings}
+
+List account setting values: 
+
+```bash
+ibmcloud iam account-settings [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+## ibmcloud iam account-settings-update
+{: #ibmcloud_iam_account_settings_update}
+
+Update settings under current acount:
+
+```bash
+ibmcloud iam account-settings-update [--restrict-create-service-id RESTRICTION_ID] [--restrict-create-platform-apikey RESTRICTION_SETTING] [--allowed-ip-addresses ADDRESS_LIST] [--mfa MFA] [--session-expiration-in-seconds SECONDS_EXP] [--session-invalidation-in-seconds SECONDS_INV] [--max-sessions-per-identity SESSIONS_MAX] [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_update_options}
+
+--restrict-create-service-id RESTRICTION_ID
+:   The restriction level on Service ID creation (one of `RESTRICTED`, `NOT_RESTRICTED`, or `NOT_SET`).
+
+--restrict-create-platform-apikey RESTRICTION_SETTING
+:   The restriction level on API Key creation (one of `RESTRICTED`, `NOT_RESTRICTED`, or `NOT_SET`).
+
+--allowed-ip-addresses ADDRESS_LIST
+:   The IP addresses and subnets from which IAM tokens can be created (default is "").
+
+--session-expiration-in-seconds SECONDS_EXP
+:   The number of seconds after which the session expires (can also be `NOT_SET`, which resets the value to default).
+
+--session-invalidation-in-seconds SECONDS_INV
+:   The number of seconds of inactivity after which a session is invalidated (can also be "NOT_SET", which resets the value to default).
+
+--max-sessions-per-identity SESSIONS_MAX
+:   The maximum number of sessions per identity on the account (can also be `NOT_SET`, which resets the value to default).
+
+--mfa MFA``
+:   The type of MFA on the account (one of `NONE`, `TOTP`, `TOTP4ALL`, `LEVEL1`, `LEVEL2`, or `LEVEL3`).
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_account_settings_update_examples}
+
+Update the multi-factor authentication setting of an account to `LEVEL3`:
+
+```bash
+ibmcloud iam account-settings-update --mfa LEVEL3
+```
+{: codeblock}
+
+Update the number of seconds after which a session expires to default (with `NOT_SET`):
+
+```bash
+ibmcloud iam account-settings-update --session-expiration-in-seconds NOT_SET
+```
+{: codeblock}

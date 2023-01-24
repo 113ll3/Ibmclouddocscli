@@ -164,7 +164,7 @@ ibmcloud plugin show PLUGIN-NAME
 ## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
 
-Install a specific version of a plug-in to {{site.data.keyword.cloud_notm}} CLI from the specified path or repository, or all latest available plugins in the repository.
+Install a specific version of a plug-in to {{site.data.keyword.cloud_notm}} CLI from the specified path or repository, or all latest available plug-ins in the repository.
 
 ```bash
 ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION] [-f]
@@ -181,7 +181,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 {: codeblock}
 
-If no repository is specified, the command uses the default plug-in repository `IBM Cloud`. If you are installing a single plugin, and no version is specified, the command selects the latest available version to install. If the '-a, --all' flag is specified, the command installs all latest available plugins in the repository.
+If no repository is specified, the command uses the default plug-in repository `IBM Cloud`. If you are installing a single plug-in, and no version is specified, the command selects the latest available version to install. If the '-a, --all' flag is specified, the command installs all latest available plug-ins in the repository.
 
 **Command options**:
 
@@ -189,7 +189,7 @@ PLUGIN_PATH|PLUGIN_NAME
 :   If -r REPO_NAME is not specified, the plug-in is installed from the specified local path or remote URL.
 
 -a, --all (optional)
-:   Install all latest available plugins in the repository.
+:   Install all latest available plug-ins in the repository.
 
 -r REPO_NAME (optional)
 :   The name of the repository where the plug-in binary is located. If no repository is specified, the command uses the default plug-in repository `IBM Cloud`.
@@ -239,17 +239,109 @@ ibmcloud plugin install container-service -v 0.1.425
 ```
 {: codeblock}
 
-Install all latest available plugins from the official plug-in repository:
+Install all latest available plug-ins from the official plug-in repository:
 
 ```bash
 ibmcloud plugin install --all
 ```
 {: codeblock}
 
-Install all latest available plugins from the official plug-in repository without confirmation:
+Install all latest available plug-ins from the official plug-in repository without confirmation:
 
 ```bash
 ibmcloud plugin install --all -f
+```
+{: codeblock}
+
+## ibmcloud plugin download
+{: #ibmcloud_plugin_download}
+
+Download a specific version of a plug-in to {{site.data.keyword.cloud_notm}} CLI from the specified repository, or all latest available plug-ins in the repository.
+
+```bash
+ibmcloud plugin download PLUGIN_NAME [-r REPO_NAME] [-v VERSION] [-d, --dest DOWNLOAD_DIRECTORY] [-f]
+```
+{: codeblock}
+
+```bash
+ibmcloud plugin download [-a, --all] [-r REPO_NAME] [-f]
+```
+{: codeblock}
+
+```bash
+ibmcloud plugin download URL [-f] [-d DOWNLOAD_DIRECTORY]
+```
+{: codeblock}
+
+If no repository is specified, the command uses the default plug-in repository `IBM Cloud`. If you are downloading a single plug-in, and no version is specified, the command selects the latest available version to download. If the '-a, --all' flag is specified, the command downloads all latest available plug-ins in the repository.
+
+**Command options**:
+
+-a, --all (optional)
+:   Downloads all latest available plug-ins in the repository.
+
+-r REPO_NAME (optional)
+:   The name of the repository where the plug-in binary is located. If no repository is specified, the command uses the default plug-in repository `IBM Cloud`.
+
+-v VERSION (optional)
+:   Version of the plug-in to be downloaded. Accepts specific semantic version or constraint.
+
+-d, --dest DOWNLOAD_DIRECTORY (optional)
+:   The destination directory for the downloaded plug-in. If not specified, this is the working directory.
+
+-f 
+:   Force downloads the plug-in without confirmation.
+
+The {{site.data.keyword.cloud_notm}} CLI has the official repository name of `IBM Cloud`.
+
+**Examples**:
+
+Download a plug-in from the remote URL:
+
+```bash
+ibmcloud plugin download http://example.com/downloads/my-plugin
+```
+{: codeblock}
+
+Download the `container-service` plug-in of the latest version from the `IBM Cloud` repository:
+
+```bash
+ibmcloud plugin download container-service -r "IBM Cloud"
+```
+{: codeblock}
+
+Or you can run:
+
+```bash
+ibmcloud plugin download container-service
+```
+{: codeblock}
+
+Download the `container-service` plug-in with the version `0.1.425` from the official plug-in repository:
+
+```bash
+ibmcloud plugin download container-service -v 0.1.425
+```
+{: codeblock}
+
+Download the `container-service` plug-in with the version `0.1.425` from the official plug-in repository, into the `~/my_downloads` directory:
+
+```bash
+ibmcloud plugin download container-service -v 0.1.425 -d ~/my_downloads
+```
+{: codeblock}
+
+Download all latest available plug-ins from the official plug-in repository:
+
+```bash
+ibmcloud plugin download --all
+```
+{: codeblock}
+
+Download all latest available plug-ins from the official plug-in repository without confirmation:
+
+```bash
+ibmcloud plugin download --all -f
 ```
 {: codeblock}
 
@@ -277,7 +369,7 @@ PLUGIN NAME
 :   The version of the plug-in to be updated to. If not provided, update the plug-in to the most recent version.
 
 --all
-:   Update all available plugins.
+:   Update all available plug-ins.
 
 **Examples**:
 
@@ -295,14 +387,14 @@ ibmcloud plugin update
 ```
 {: codeblock}
 
-Upgrade the plug-in 'container-service' in the official plug-in repository to the most recent:
+Upgrade the plug-in `container-service` in the official plug-in repository to the most recent:
 
 ```bash
 ibmcloud plugin update container-service
 ```
 {: codeblock}
 
-Update the plug-in 'container-service' in the official plug-in repository to version '0.1.440':
+Update the plug-in `container-service` in the official plug-in repository to version '0.1.440':
 
 ```bash
 ibmcloud plugin update container-service -v 0.1.440
