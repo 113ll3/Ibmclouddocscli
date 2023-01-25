@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-12-29"
+  years: 2018, 2023
+lastupdated: "2023-01-25"
 
 keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update, cli private endpoints
 
@@ -123,7 +123,7 @@ ibmcloud plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 **Command options**:
 
 -r REPO_NAME (optional)
-:   The name of the repository. If no repository is specified, the command uses the default plug-in repository.å
+:   The name of the repository. If no repository is specified, the command uses the default plug-in repository.
 
 **Examples**:
 

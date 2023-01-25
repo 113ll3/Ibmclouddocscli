@@ -3,7 +3,7 @@
 copyright:
   years: 2018, 2022
 
-lastupdated: "2022-12-03"
+lastupdated: "2023-01-25"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -2737,7 +2737,7 @@ POLICY_ID (required)
 
 Update policy `85f3a4d6-c2e1-417e-b2d5-7199d610c160` to give trusted profile `my-profile` Administrator role for all account management services:
 ```bash
-ibmcloud iam trusted-profile-policy-update my-profile 85f3a4d6-c2e1-417e-b2d5-7199d610c160 --roles Administrator --acount-management
+ibmcloud iam trusted-profile-policy-update my-profile 85f3a4d6-c2e1-417e-b2d5-7199d610c160 --roles Administrator --account-management
 ```
 {: codeblock}
 
@@ -3176,7 +3176,7 @@ ibmcloud iam account-settings-update [--restrict-create-service-id RESTRICTION_I
 --max-sessions-per-identity SESSIONS_MAX
 :   The maximum number of sessions per identity on the account (can also be `NOT_SET`, which resets the value to default).
 
---mfa MFA``
+--mfa MFA
 :   The type of MFA on the account (one of `NONE`, `TOTP`, `TOTP4ALL`, `LEVEL1`, `LEVEL2`, or `LEVEL3`).
 
 --output FORMAT
