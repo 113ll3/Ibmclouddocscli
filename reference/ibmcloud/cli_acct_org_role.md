@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-12-14"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -111,7 +111,7 @@ ORG_NAME (required)
 
 Create an organization named `IBM`:
 ```bash
-ibmcloud account org-create IBM 
+ibmcloud account org-create IBM
 ```
 {: codeblock}
 
@@ -285,7 +285,7 @@ ORG_NAME (required)
 
 -r, --region REGION (optional)
 :   Region name. Default to current region if not specified.
- 
+
 
 ## ibmcloud account org-user-add
 {: #ibmcloud_account_org_user_add}
@@ -306,7 +306,7 @@ ORG (required)
 
 -r, --region REGION (optional)
 :   Region name. Default to current region if not specified.
-  
+
 
 ## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
@@ -340,7 +340,7 @@ ibmcloud account org-roles [-r, --region REGION] [-u USER_ID]
 
 -r, --region REGION (optional)
 :   Region name. Default to current region if not specified.
-  
+
 
 ## ibmcloud account org-role-set
 {: #ibmcloud_account_org_role_set}
@@ -369,11 +369,11 @@ ORG_ROLE (required)
 
  OrgAuditor: This role has read-only access to org information and reports.
 
-   
+
 
 -r, --region REGION (optional)
 :   Region name. Default to current region if not specified.
-  
+
 
 ### Examples
 {: #ibmcloud_account_org_role_set_examples}
@@ -414,7 +414,7 @@ ORG_ROLE (required)
 
  OrgAuditor: This role has read-only access to org information and reports.
 
-   
+
 
 -r, --region REGION (optional)
 :   Region name. Default to current region if not specified.
@@ -542,7 +542,7 @@ SPACE_ROLE (required)
 
 -r, --region REGION (optional)
 :   Region name. Default to current region if not specified.
-    
+
 
 ### Examples
 {: #ibmcloud_account_space_role_unset_examples}
@@ -635,22 +635,22 @@ account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [
 ### Command options
 {: #classic_account_audit_logs_options}
 
--a, --action *ACTION*  
+-a, --action *ACTION*
 :   Action. List audit logs with the action.
 
--e, --end-date *END_DATE*  
+-e, --end-date *END_DATE*
 :   End date. List audit logs before the end date. Supported formats are yyyy-MM-ddTHH:mm:ss.
 
-o, --object *OBJECT*  
+o, --object *OBJECT*
 :   Object. List audit logs with the object.
 
-t, --object-type *OBJECT_TYPE*  
+t, --object-type *OBJECT_TYPE*
 :   Object type. List audit logs with the object type.
 
-s, --start-date *START_DATE*  
+s, --start-date *START_DATE*
 :   Start date. List audit logs after the start date. Supported formats are yyyy-MM-ddTHH:mm:ss.
 
-u, --user-name *USER_NAME*  
+u, --user-name *USER_NAME*
 :   User name. List audit logs with the user name.
 
 ### Examples
@@ -803,6 +803,58 @@ ibmcloud account user-preference-update (--position NEW_POSITION)
 --position *NEW_POSITION* (optional)
 :   Set a user's position, such as `manager` or `student`.
 
+## ibmcloud account user-status
+{: #ibmcloud_account_user_status}
+
+Show user's status:
+```bash
+ibmcloud account user-status [USER_ID] [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_account_user_status_options}
+
+USER_ID
+:   User ID. If not specified, default to current user. Required if `--status` is used.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+## ibmcloud account user-status-update
+{: #ibmcloud_account_user_status_update}
+
+Update user's status:
+```bash
+ibmcloud account user-status-update USER_ID NEW_STATUS [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_account_user_status_update_options}
+
+USER_ID (required)
+:   User ID.
+
+NEW_STATUS (required)
+:   Set a user's status, such as `SUSPENDED` or `ACTIVE`. For more information, see [User account status](https://cloud.ibm.com/apidocs/user-management#user-states) for a list of possible statuses. This option can also take in values in lowercase such as `suspended` or `active`.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_account_user_status_update_examples}
+
+Suspend user `user@ibm.com`:
+```bash
+ibmcloud account user-status-update user@ibm.com SUSPENDED
+```
 
 ## ibmcloud account platform-notification-subscribe
 {: #ibmcloud_account_platform_notification_subscribe}
