@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-09-08"
+  years: 2019, 2023
+lastupdated: "2023-01-30"
 
 keywords: cli, catalogs management, catalog
 
@@ -92,7 +92,7 @@ ibmcloud catalog list [--output FORMAT]
 
 --output FORMAT (optional)
 
-:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example, `--output json`.
+:   Specifies output format. Default is terminal compatible and the only supported alternative is JSON. For example, `--output json`.
 
 ### Output
 {: #get-catalogs-output}
@@ -127,7 +127,7 @@ ibmcloud catalog get --catalog CATALOG [--output FORMAT]
 
 --output FORMAT (optional)
 
-:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example, `--output json`.
+:   Specifies output format. Default is terminal compatible and the only supported alternative is JSON. For example, `--output json`.
 
 ### Output
 {: #get-catalog-output}
@@ -184,7 +184,7 @@ ibmcloud catalog search <QUERY> [--catalog CATALOG] [--type TYPE] [-r, --region 
 
 --output FORMAT (optional)
 
-:   Specifies output format. Default is terminal-friendly and the only alternative options are `json` and `csv`.
+:   Specifies output format. Default is terminal compatible and the only alternative options are `json` and `csv`.
 
 --kind KIND (optional)
 
@@ -257,7 +257,7 @@ ibmcloud catalog filter get --catalog CATALOG [--output FORMAT]
 
 --output FORMAT (optional)
 
-:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. Default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 
 ### Output
@@ -266,10 +266,10 @@ ibmcloud catalog filter get --catalog CATALOG [--output FORMAT]
 The command returns the following output:
 
 ```text
-Account: The IBM Cloud catalog is visible to all users in this account.
+Account: The {{site.data.keyword.cloud_notm}} catalog is visible to all users in this account.
 
 Filter:
-Including IBM Cloud catalog
+Including {{site.data.keyword.cloud_notm}} catalog
 
 Type           Include   Tags
 Pricing plan   false     Free
@@ -310,7 +310,7 @@ ibmcloud catalog filter create [--catalog CATALOG] [--category CATEGORY] [--comp
 
 --category CATEGORY (optional)
 
-:   Provide a comma-separated list of category names or tags you want to include or exclude. Run the `ibmcloud catalog offering category-options` command to view all options. Default is `Developer tools`.
+:   Provide the category that best fits how users might use your product. Categories are used to organize products in the catalog based on common solutions, function, or use. You can select only one category. Run the `ibmcloud catalog offering category-options` command to view all options. Default is `Developer tools`.
 
 --compliance TYPE (optional)
 
@@ -326,7 +326,7 @@ ibmcloud catalog filter create [--catalog CATALOG] [--category CATEGORY] [--comp
 
 --include-list LIST (optional)
 
-:   Provide a comma-separated list of product IDs or names that must be included in the filtered public catalog.</d
+:   Provide a comma-separated list of product IDs or names that must be included in the filtered public catalog.
 :   Provide a comma-separated list of product formats that you want to include or exclude. Run the `ibmcloud catalog filter options` command to view all options.
 
 --pricing-plan PLAN (options)
@@ -437,7 +437,7 @@ ibmcloud catalog filter options
 
 --output FORMAT (optional)
 
-:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 ### Output
 {: #options-filter-output}
@@ -498,7 +498,7 @@ ibmcloud catalog offering create [--catalog CATALOG_NAME] [--zipurl URL] [--incl
 ### Virtual server image for VPC Example
 {: #import-offering-example}
 
-Import a virtual server image for VPC as an offering to a catalog with an ID `51c9e0db-2911-45a6-adb0-ac5332d27cf2`.
+Import a virtual server image for VPC as an offering to a catalog with ID `51c9e0db-2911-45a6-adb0-ac5332d27cf2`.
 
 ```bash
 ibmcloud catalog offering create --catalog 51c9e0db-2911-45a6-adb0-ac5332d27cf2 --vpc-body '{
@@ -550,7 +550,7 @@ ibmcloud catalog offering list [--catalog CATALOG] [--offering OFFERING_NAME] [-
 
 --output FORMAT (optional)
 
-:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 
 ### Example
@@ -617,7 +617,7 @@ ibmcloud catalog offering search [--catalog CATALOG] [--offering OFFERING_NAME] 
 
 --output FORMAT (optional)
 
-:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 
 ### Example
@@ -668,7 +668,7 @@ ibmcloud catalog offering get --catalog CATALOG --offering OFFERING_NAME [--outp
 :   The product name or ID.
 
 --output FORMAT (optional)
-:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 
 ### Output
@@ -831,7 +831,7 @@ ibmcloud catalog offering version preinstall-status --version-locator VERSION_NU
 :   Provide the namespace used for the preinstallation.
 
 --output FORMAT (optional)
-:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 
 ## ibmcloud catalog offering version validate
@@ -878,7 +878,7 @@ vsi_instance_name, vsi_id, vpc_profile, subnet_id, vpc_id, subnet_zone, ssh_key_
 :   Provide a workspace resource group ID.
 
 --schematics-destroy (optional)
-:   Provide this flag to destroy the workspace resources after validation and installation.
+:   Provide this flag to delete the workspace resources after validation and installation.
 
 --schematics-delete VALUE (optional)
 :   Provide this flag to delete the {{site.data.keyword.bpshort}} workspace after validation and installation.
@@ -908,6 +908,7 @@ Override values example format from the `values.json` file:
 
 Validate a product with the version locator `51c9e0db-2911-45a6-adb0-ac5332d27cf2.ecebffdc-f1f8-4a85-965f-9cbe31920542` in
 a VPC with the ID `r134-476cbb67-a6c2-4957-9806-3fcbac3498be`.
+
 ```bash
 ibmcloud catalog offering version validate --version-locator 51c9e0db-2911-45a6-adb0-ac5332d27cf2.ecebffdc-f1f8-4a85-965f-9cbe31920542 --workspace-region=us-south --workspace-rg-id Default --override-values '{
   "vsi_instance_name": "instance-name-1",
@@ -940,7 +941,7 @@ ibmcloud catalog offering version validate-status --version-locator VERSION_NUMB
 :   To get the version locator for the product, run the `ibmcloud catalog offering list`command and locate the specified product or version you want to use.
 
 --output FORMAT (optional)
-:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 
 
@@ -959,7 +960,7 @@ ibmcloud catalog offering category-options [--output FORMAT]
 
 
 --output FORMAT (optional)
-:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 
 ### Example
@@ -989,7 +990,7 @@ Storage                 storage                                               Or
 ## ibmcloud catalog offering add-category
 {: #add-category-offering}
 
-Run the following command to add a category tag to a product. You can provide either the category name or tag, which you can find by running the `ibmcloud catalog offering category-options` command. The products must be placed in a category to be visible in the catalog. Default is `Developer tools`.
+Run the following command to add a category tag to a product. You can provide the category name, which you can find by running the `ibmcloud catalog offering category-options` command. The products must be placed in a category to be visible in the catalog. Default is `Developer tools`.
 
 ```bash
 ibmcloud catalog offering category-options [--output FORMAT]
@@ -1007,7 +1008,7 @@ ibmcloud catalog offering category-options [--output FORMAT]
 :   The product name or ID.
 
 --category CATEGORY
-:   The category ID.
+:  Provide the category that best fits how users might use your product. Categories are used to organize products in the catalog based on common solutions, function, or use. You can select only one category. Run the `ibmcloud catalog offering category-options` command to view all options. Default is `Developer tools`.
 
 
 ### Example
@@ -1017,6 +1018,39 @@ ibmcloud catalog offering category-options [--output FORMAT]
 ibmcloud catalog offering add-category --catalog dev-catalog --offering dev-offering --category dev_ops
 ```
 {: codeblock}
+
+## ibmcloud catalog offering categories
+{: #categories-offering}
+
+Run the following command to retrieve the category of a product version.
+
+```bash
+ibmcloud catalog offering version categories [--catalog CATALOG] [--offering OFFERING] [--output OUTPUT]
+```
+{: codeblock}
+
+### Command options
+{: #categories-offering-options}
+
+--catalog CATALOG
+:   The catalog name or ID.
+
+--offering OFFERING
+:   The product name or ID.
+
+--output FORMAT (optional)
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
+
+### Example
+{: #categories-offering-example}
+
+Retrieve the category of a product that is called `dev-offering` and located in the `dev-catalog`.
+
+```bash
+ibmcloud catalog offering version categories --catalog dev-catalog --offering dev-offering
+```
+{: codeblock}
+
 
 ## ibmcloud catalog offering version get-controls
 {: #version-get-controls}
@@ -1036,7 +1070,7 @@ ibmcloud catalog offering version get-controls [--version-locator VERSION_NUMBER
 :   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified version that you want to use.
 
 --output FORMAT (optional)
-:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 ## ibmcloud catalog offering version add-controls
 {: #version-add-controls}
@@ -1078,6 +1112,89 @@ ibmcloud catalog offering version delete-controls [--version-locator VERSION_NUM
 --controls CONTROLS
 :   Provide the controls as a JSON array. You can provide values as a JSON file or inline JSON. For example, `[{"NIST": "AC-4"}, {"NIST": "AC-2"}]`.
 
+## ibmcloud catalog offering version cra
+{: #version-cra}
+
+Run the following command to run a Code Risk Analyzer scan. The Code Risk Analyzer scans your source code and identifies any security vulnerabilities. You must add controls and validate your version before you can run the scan.
+
+```bash
+ibmcloud catalog offering version cra [--version-locator VERSION_NUMBER] [--wait WAIT] [--timeout TIMEOUT]
+```
+{: codeblock}
+
+### Command options
+{: #version-cra-options}
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified version that you want to use.
+
+--wait WAIT
+
+:   Wait and track the progress of the {{site.data.keyword.bpshort}} workspace job. If `true`, installation waits. If `false`, the software installs immediately. Default is `true`.
+
+--timeout TIMEOUT
+
+:   Specify in seconds how long the {{site.data.keyword.bpshort}} workspace waits before it installs. Default is `180`.
+
+## ibmcloud catalog offering version cra-status
+{: #version-cra-status}
+
+Run the following command to retrieve the status of a Code Risk Analyzer scan.
+
+```bash
+ibmcloud catalog offering version cra-status [--version-locator VERSION_NUMBER] [--output OUTPUT]
+```
+{: codeblock}
+
+### Command options
+{: #version-cra-status-options}
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified version that you want to use.
+
+--output FORMAT (optional)
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
+
+## ibmcloud catalog offering version scc
+{: #version-scc}
+
+Run the following command to add a scan that you previously ran in Security and Compliance Center to a version. Each scan is limited to a single profile. For more information, see [What is a profile?](/docs/security-compliance?topic=security-compliance-profiles).
+
+You must add controls and validate your version before you can add a scan.
+
+```bash
+ibmcloud catalog offering version scc [--profile PROFILE] [--scan SCAN] [--version-locator VERSION_NUMBER]
+```
+{: codeblock}
+
+### Command options
+{: #version-scc-options}
+
+--profile PROFILE
+:   Specifies the ID of the profile that you scanned.
+
+--scan SCAN
+:   Specifies the ID of the Security and Compliance Center scan that you previously ran in Security and Compliance Center.
+
+--version-locator VERSION_NUMBER
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified version that you want to use.
+
+## ibmcloud catalog offering get-scan-results
+{: #get-scan-results}
+
+Run the following command to generate a report of your version's Code Risk Analyzer and Security and Compliance Center scan results. To generate a full report, you must run the Code Risk Analyzer and Security and Compliance Center scans. For more information, see [ibmcloud catalog offering version cra](#version-cra) and [ibmcloud catalog offering version scc](#version-scc).
+
+```bash
+ibmcloud catalog offering get-scan-results [--version-locator LOCATOR]
+```
+{: codeblock}
+
+### Command options
+{: #get-scan-results-options}
+
+--version-locator LOCATOR
+:   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
+
 ## ibmcloud catalog offering version create-draft
 {: #create-offering-draft}
 
@@ -1096,7 +1213,7 @@ ibmcloud catalog offering version create-draft --version-locator VERSION_NUMBER 
 :   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
 
 --output FORMAT (optional)
-:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 ## ibmcloud catalog offering version delete-version
 {: #offering-delete-version}
@@ -1116,7 +1233,7 @@ ibmcloud catalog offering version delete-version --version-locator VERSION_NUMBE
 :   To get the version locator for the product, run the `ibmcloud catalog offering list` command and locate the specified product or version you want to use.
 
 --output FORMAT (optional)
-:   Specifies output format. The default is terminal-friendly and the only supported alternative is JSON, for example, `--output json`.
+:   Specifies output format. The default is terminal compatible and the only supported alternative is JSON, for example, `--output json`.
 
 ## ibmcloud catalog offering version deprecate-version
 {: #publish-version-deprecate}
@@ -1255,7 +1372,7 @@ ibmcloud catalog offering publish account [--catalog CATALOG][--offering OFFERIN
 Run the following command to publish a product from your private catalog to a set of allowlisted accounts. After the product is published, users in the allowlisted accounts can create an instance and start using it.
 
 ```bash
-ibmcloud catalog offering publish allowlsit [--catalog CATALOG][--offering OFFERING][--account-ids ACCOUNT-IDS]
+ibmcloud catalog offering publish allowlist [--catalog CATALOG][--offering OFFERING][--account-ids ACCOUNT-IDS]
 ```
 {: codeblock}
 
@@ -1269,7 +1386,7 @@ ibmcloud catalog offering publish allowlsit [--catalog CATALOG][--offering OFFER
 :   The product name or ID.
 
 --account-ids ACCOUNT-IDS
-:   The account IDS.
+:   The account IDs.
 
 
 ## ibmcloud catalog offering publish enterprise
@@ -1349,7 +1466,7 @@ ibmcloud catalog offering workspaces [--version-locator VERSION_NUMBER] [output 
 
 --output FORMAT (optional)
 
-:   Specifies output format. Default is terminal-friendly and the only supported alternative is JSON. For example, `--output json`.
+:   Specifies output format. Default is terminal compatible and the only supported alternative is JSON. For example, `--output json`.
 
 ## ibmcloud catalog install
 {: #install-software-version}
@@ -1412,7 +1529,7 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 
 Run the following command to create a `.netrc` file, generate the machine name in your `.netrc` file, or update the credential in your `.netrc` file. A `.netrc` file stores the required login information that is needed to use Terraform modules from the {{site.data.keyword.cloud_notm}} catalog.
 
-By running this command, you configure a .netrc file for the machine name `cm.globalcatalog.cloud.ibm.com` with `iamtoken` as the username and your IAM token as the password.
+By running this command, you configure a `.netrc` file for the machine name `cm.globalcatalog.cloud.ibm.com` with `iamtoken` as the username and your IAM token as the password.
 
 You need version 1.2.7 or higher of the catalogs management CLI plug-in to run the `.netrc` command.
 {: note}
@@ -1473,7 +1590,7 @@ ibmcloud catalog offering unpublish allowlist [--catalog CATALOG][--offering OFF
 :   The product name or ID.
 
 --account-ids ACCOUNT-IDS
-:   The account IDS.
+:   The account IDs.
 
 ## ibmcloud catalog offering unpublish enterprise
 {: #unpublish-offering-enterprise}
@@ -1488,20 +1605,18 @@ ibmcloud catalog offering unpublish enterprise [--catalog CATALOG][--offering OF
 ### Command options
 {: #unpublish-offering-enterprise-options}
 
-
 --catalog CATALOG
 :   The catalog name or ID.
 
 --offering OFFERING
 :   The product name or ID.
 
-
 ## ibmcloud catalog offering publish public
 {: #publish-offering-to-public}
 
 Run the following command to publish your private offering to the {{site.data.keyword.cloud_notm}} catalog for all users to see and use. To get to this step in the publication process, you must first publish the offering to your account and to all IBMers to complete the testing process. After your testing is complete, you can run this command.
 
-This option does require an approval process from offering management. As soon as your approval is complete, your tile is available for all {{site.data.keyword.cloud_notm}} customers to see and use.
+This option requires approval. As soon as your approval is complete, your tile is available for all {{site.data.keyword.cloud_notm}} customers.
 {: important}
 
 ```bash
@@ -1522,7 +1637,7 @@ ibmcloud catalog offering publish public [--catalog CATALOG][--offering OFFERING
 ## ibmcloud catalog offering deprecate-offering
 {: #publish-offering-deprecate}
 
-Run the following command to deprecate a previously published offering version in the {{site.data.keyword.cloud_notm}}  catalog.
+Run the following command to deprecate a previously published offering version in the {{site.data.keyword.cloud_notm}} catalog.
 
 ```bash
 ibmcloud catalog offering deprecate-offering [--catalog CATALOG][--offering OFFERING]
