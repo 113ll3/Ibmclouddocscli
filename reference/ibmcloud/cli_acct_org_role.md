@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-12-14"
+  years: 2018, 2023
+lastupdated: "2023-01-27"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -816,7 +816,7 @@ ibmcloud account user-status [USER_ID] [--output FORMAT] [-q, --quiet]
 {: #ibmcloud_account_user_status_options}
 
 USER_ID
-:   User ID. If not specified, default to current user. Required if `--status` is used.
+:   User ID. If not specified, default to current user.
 
 --output FORMAT
 :   Specify output format. Only 'JSON' is supported.
