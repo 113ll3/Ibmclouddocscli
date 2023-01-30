@@ -3,7 +3,7 @@
 copyright:
   years: 2018, 2022
 
-lastupdated: "2023-01-25"
+lastupdated: "2023-01-30"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -3151,14 +3151,14 @@ ibmcloud iam account-settings [--output FORMAT] [-q, --quiet]
 Update settings under current acount:
 
 ```bash
-ibmcloud iam account-settings-update [--restrict-create-service-id RESTRICTION_ID] [--restrict-create-platform-apikey RESTRICTION_SETTING] [--allowed-ip-addresses ADDRESS_LIST] [--mfa MFA] [--session-expiration-in-seconds SECONDS_EXP] [--session-invalidation-in-seconds SECONDS_INV] [--max-sessions-per-identity SESSIONS_MAX] [--output FORMAT] [-q, --quiet]
+ibmcloud iam account-settings-update [--restrict-create-service-id RESTRICTION_SETTING] [--restrict-create-platform-apikey RESTRICTION_SETTING] [--allowed-ip-addresses ADDRESS_LIST] [--mfa MFA] [--session-expiration-in-seconds SECONDS_EXP] [--session-invalidation-in-seconds SECONDS_INV] [--max-sessions-per-identity SESSIONS_MAX] [--output FORMAT] [-q, --quiet]
 ```
 {: codeblock}
 
 ### Command options
 {: #ibmcloud_iam_account_settings_update_options}
 
---restrict-create-service-id RESTRICTION_ID
+--restrict-create-service-id RESTRICTION_SETTING
 :   The restriction level on Service ID creation (one of `RESTRICTED`, `NOT_RESTRICTED`, or `NOT_SET`).
 
 --restrict-create-platform-apikey RESTRICTION_SETTING
