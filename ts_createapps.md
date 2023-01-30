@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-09"
+  years: 2015, 2023
+lastupdated: "2023-01-27"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, command line, command-line, developer tools troubleshoot
 
@@ -208,39 +208,6 @@ Use one of the following ways to get the code:
 	2. Click **Download Code**.
 {: tsResolve}
 
-## Why can't I run the `ibmcloud dev run` command for Node.js apps?
-{: #ts-cli-node}
-{: troubleshoot}
-
-The following error might be displayed if you run the `ibmcloud dev run` command for Node.js web or BFF apps:
-
-```text
-module.js:597
-  return process.dlopen(module, path._makeLong(filename));
-                 ^
-
-Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
-    at Error (native)
-    at Object.Module._extensions..node (module.js:597:18)
-    at Module.load (module.js:487:32)
-    at tryModuleLoad (module.js:446:12)
-
-    at Function.Module._load (module.js:438:3)
-    at Module.require (module.js:497:17)
-    at require (internal/module.js:20:19)
-    at Object.<anonymous> (/app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/index.js:25:13)
-    at Module._compile (module.js:570:32)
-    at Object.Module._extensions..js (module.js:579:10)
-```
-{: screen}
-{: tsSymptoms}
-
-This error occurs when the `appmetrics` module is installed on a different architecture. Native `npm` modules that are installed on one architecture do not work on another. The included Docker images are based on the Linux&trade; kernel.
-{: tsCauses}
-
-Delete the `node_modules` folder and run the `ibmcloud dev run` command again.
-{: tsResolve}
-
 ## Why can't I deploy to {{site.data.keyword.cloud_notm}}?
 {: #ts-cli-deploy-issues}
 {: troubleshoot}
@@ -312,16 +279,6 @@ Be sure that the namespace in the deployment image target matches one of the nam
 ibmcloud cr namespaces
 ```
 {: codeblock}
-{: tsResolve}
-
-## Why can't I build or run a Node.js app that is enabled for cloud deployment?
-{: #ts-cli-cloud-enabled-apps}
-{: troubleshoot}
-
-You might encounter various failures to [build](/docs/cli?topic=cli-idt-cli#build) or [run](/docs/cli?topic=cli-idt-cli#run) an app that is enabled for cloud deployment.
-{: tsSymptoms}
-
-These failures have many possible causes. For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js apps for cloud deployment](/docs/node?topic=node-enable_existing#enable_existing).
 {: tsResolve}
 
 ## Why can't I build the Docker image?
