@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-30"
+lastupdated: "2023-02-07"
 
 keywords: cli, catalogs management, catalog
 
@@ -266,10 +266,10 @@ ibmcloud catalog filter get --catalog CATALOG [--output FORMAT]
 The command returns the following output:
 
 ```text
-Account: The {{site.data.keyword.cloud_notm}} catalog is visible to all users in this account.
+Account: The IBM Cloud catalog is visible to all users in this account.
 
 Filter:
-Including {{site.data.keyword.cloud_notm}} catalog
+Including IBM Cloud catalog
 
 Type           Include   Tags
 Pricing plan   false     Free
