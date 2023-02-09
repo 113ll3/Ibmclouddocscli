@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-11-21"
+  years: 2018, 2023
+lastupdated: "2023-02-07"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -413,7 +413,7 @@ None.
 :   The compute resource token content or the path of a compute resource token file that is indicated by the @ symbol. If provided, the `--profile` flag, or `IBMCLOUD_CR_PROFILE` environment variable, must also be provided or set.
 
 --vpc-cri
-:   Login as a VPC VSI compute resource identity.
+:   Log in as a VPC VSI compute resource identity. For more information, see [Logging in as a Virtual Server Instance Compute Resource Identity](/docs/cli?topic=cli-vsi-cri-login).
 
 --profile PROFILE_ID, PROFILE_NAME, or PROFILE_CRN
 :   The name, ID, or CRN of the linked trusted IAM profile to be used when obtaining the IAM access token. If provided, the `--cr-token` flag, `IBMCLOUD_CR_TOKEN` environment variable, or `--vpc-cri` flag must also be provided or set. If authenticating as a VPC VSI compute resource, specifying only a trusted profile CRN or ID is supported.
