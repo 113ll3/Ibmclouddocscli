@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-03-01"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help, cli private endpoints
 
@@ -78,26 +78,3 @@ Regions that support private endpoints are `us-east` and `us-south`.
 A region must be targeted when a private endpoint is set in the {{site.data.keyword.cloud_notm}} CLI.
 
 For more information about regions, see [Locations for resource deployment](/docs/overview?topic=overview-locations) and [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
-
-## What is the file structure for {{site.data.keyword.cloud_notm}} applications?
-{: #cli-file-structure}
-{: faq}
-{: support}
-
-Applications that are created or enabled from the CLI come with pre-configured settings encapsulated in the `cli-config.yml` file. The `cli-config.yml` contains default entries that are used by the commands of the CLI that can be overridden by values that are passed through the command line.
-
-Apps that are deployed to a DevOps toolchain can also contain files such as `toolchain.yml` and `pipeline.yml`. Apps that are being manually deployed can contain Helm chart files (for deployment to Kubernetes, for example).
-
-## How are local containers used?
-{: #cli-faq-containers}
-{: faq}
-
-The {{site.data.keyword.cloud_notm}} CLI {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands use two containers to facilitate building and testing your app. The first is the tools container, which contains the necessary utilities to build and test your app. The `Dockerfile` for this container is defined by the [`dockerfile-tools`](/docs/cli?topic=cli-idt-cli#build-dockerfile-tools) parameter. You might think of it as a development container, as it contains the tools that are normally used for development of a particular runtime.
-
-The second container is the run container, which closely mimics the actual runtime environment of your app when it is deployed to the cloud. This container is in a form that is suitable to be deployed for use, for example, in {{site.data.keyword.cloud_notm}}. As a result, an entry point is defined that starts your app. When you select to run your app through the {{site.data.keyword.cloud_notm}} CLI {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands, it uses this container. The `Dockerfile` for this container is defined by the [`dockerfile-run`](/docs/cli?topic=cli-idt-cli#run) parameter.
-
-## How do I deploy existing code?
-{: #faq-deploy-existing-code}
-{: faq}
-
-To deploy an existing code base, see [Generating deployment and cloud enablement assets](/docs/apps?topic=apps-create-deploy-app-cli#byoc-cli).
