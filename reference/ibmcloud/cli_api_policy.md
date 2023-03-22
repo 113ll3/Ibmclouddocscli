@@ -3,7 +3,7 @@
 copyright:
   years: 2018, 2022
 
-lastupdated: "2023-01-30"
+lastupdated: "2023-03-23"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -747,7 +747,7 @@ ibmcloud iam user-policies name@example.com
 
 Display details of an access policy for a user:
 ```bash
-ibmcloud iam user-policy USER_NAME POLICY_ID
+ibmcloud iam user-policy USER_NAME POLICY_ID [--output FORMAT] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -759,6 +759,15 @@ USER_NAME (required)
 
 POLICY_ID (required)
 :   ID of the policy.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_user_policy_examples}
@@ -774,7 +783,7 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 
 Create an access policy for the specified user in the current account:
 ```bash
-ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]}
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -816,6 +825,16 @@ USER_NAME (required)
 
 --attributes *name=value,name=value...*
 :   Set resource attributes in the form of `name=value,name=value....`
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
+
 
 ### Examples
 {: #ibmcloud_iam_user_policy_create_examples}
@@ -873,7 +892,7 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --service-name i
 
 Update an access policy for the specified user in the current account:
 ```bash
-ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]}
+ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -918,6 +937,14 @@ POLICY_ID (required)
 --attributes *name=value,name=value...*
 :   Set resource attributes in the form of 'name=value,name=value....'
 
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_user_policy_update_examples}
@@ -975,7 +1002,7 @@ ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer -
 
 Delete an access policy for the specified user:
 ```bash
-ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
+ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -984,6 +1011,12 @@ ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
 
 -f, --force
 :   Delete user policy without confirmation.
+
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_user_policy_delete_examples}
@@ -1005,7 +1038,7 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 
 List all access policies for a specified service ID:
 ```bash
-ibmcloud iam service-policies SERVICE_ID [-f, --force]
+ibmcloud iam service-policies SERVICE_ID [-f, --force] [-q, --quiet] [--api-version v1 | v2]
 ```
 
 ### Command options
@@ -1016,6 +1049,15 @@ SERVICE_ID (required)
 
 -f, --force (optional)
 :   Display service policies without confirmation.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 
 ### Examples
@@ -1038,7 +1080,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 
 Display details of an access policy for a specified service ID:
 ```bash
-ibmcloud iam service-policy SERVICE_ID POLICY_ID [-f, --force]
+ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -1051,9 +1093,17 @@ SERVICE_ID (required)
 POLICY_ID (required)
 :   ID of the service policy.
 
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
 -f, --force (optional)
 :   Display service policy without confirmation.
 
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_service_policy_examples}
@@ -1075,7 +1125,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 
 Create an access policy and assign it to a service ID:
 ```bash
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [-f, --force]
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [-f, --force] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -1121,8 +1171,17 @@ SERVICE_ID (required)
 --attributes *name=value,name=value...*
 :   Set resource attributes in the form of 'name=value,name=value....'
 
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
 -f, --force
 :   Create service policy without confirmation.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_service_policy_create_examples}
@@ -1168,7 +1227,7 @@ ibmcloud iam service-policy-create sample-service --roles Viewer --service-name 
 
 Update an access policy for a service ID:
 ```bash
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [-f, --force]
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [-f, --force] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -1214,8 +1273,17 @@ POLICY_ID (required)
 --attributes *name=value,name=value...*
 :   Set resource attributes in the form of 'name=value,name=value....'
 
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
 -f, --force
 :   Update service policy without confirmation.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_service_policy_update_examples}
@@ -1261,7 +1329,7 @@ ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer --servic
 
 Delete an access policy for a service ID:
 ```bash
-ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
+ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -1277,6 +1345,14 @@ POLICY_ID (required)
 -f, --force
 :   Delete without confirmation.
 
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_service_policy_delete_examples}
@@ -1434,7 +1510,7 @@ ibmcloud iam role-create ServiceIDCreator --display-name "Service ID Creator" --
 
 List all access policies under the current account:
 ```bash
-ibmcloud iam access-policies [-t, --type user | service_id | access_group | trusted_profile]
+ibmcloud iam access-policies [-t, --type user | service_id | access_group | trusted_profile] [--output FORMAT] [-q, --quiet ] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -1443,6 +1519,15 @@ ibmcloud iam access-policies [-t, --type user | service_id | access_group | trus
 
 -t, --type ACCESS_POLICY_TYPE
 :   List all access policies under current account filtered by policy type. Valid options are: `user` | `service_id` | `access_group` | `trusted_profile`
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_access_policies_examples}
@@ -1482,7 +1567,7 @@ ibmcloud iam access-policies --type trusted_profile
 
 List all account policies under current account:
 ```bash
-ibmcloud iam account-policies [-t, --type access | auth]
+ibmcloud iam account-policies [-t, --type access | auth] [--output FORMAT] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -1497,6 +1582,9 @@ ibmcloud iam account-policies [-t, --type access | auth]
 
 -q, --quiet
 :   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_account_policies_examples}
@@ -1524,7 +1612,7 @@ ibmcloud iam account-policies -t access
 
 Create an authorization policy to allow a service instance access to another service instance:
 ```bash
-{ SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [--source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-service-account ACCOUNT_GUID] [--source-resource-group-id RESOURCE_GROUP_ID] [--source-resource-type RESOURCE_TYPE] [--source-resource RESOURCE] [--target-service-instance-name TARGET_SERVICE_INSTANCE_NAME | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--target-resource-group-id RESOURCE_GROUP_ID] [--target-resource-type RESOURCE_TYPE] [--target-resource RESOURCE] | --file JSON_FILE }
+ibmcloud iam authorization-policy-create { SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [--source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-service-account ACCOUNT_GUID] [--source-resource-group-id RESOURCE_GROUP_ID] [--source-resource-type RESOURCE_TYPE] [--source-resource RESOURCE] [--target-service-instance-name TARGET_SERVICE_INSTANCE_NAME | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--target-resource-group-id RESOURCE_GROUP_ID] [--target-resource-type RESOURCE_TYPE] [--target-resource RESOURCE] | --file JSON_FILE } [--output FORMAT] [-q, --quiet]
 ```
 {: codeblock}
 
@@ -1574,6 +1662,12 @@ ROLE_NAME1,ROLE_NAME2...
 
 --file FILE
 :   JSON file of policy definition.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
 
 Currently, some combination of `--source-service` and `--service` might fail under private endpoints. Use `--file` as a workaround, or you can create the policy from public endpoints or the UI console.
 {: note}
@@ -2061,9 +2155,24 @@ ibmcloud iam access-group-trusted-profile-purge my-profile
 
 List policies of an access group:
 ```bash
-ibmcloud iam access-group-policies GROUP_NAME
+ibmcloud iam access-group-policies GROUP_NAME [--output FORMAT] [-q, --quiet] [--api-version v1 |v2]
 ```
 {: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_policies_options}
+
+GROUP_NAME
+:   Name of the access group.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_access_group_policies_examples}
@@ -2079,9 +2188,27 @@ ibmcloud iam access-group-policies example_group
 
 Show details of an access group policy:
 ```bash
-ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
+ibmcloud iam access-group-policy GROUP_NAME POLICY_ID [--output FORMAT] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_policy_options}
+
+GROUP_NAME
+:   Name of the access group.
+
+POLICY_ID
+:   The ID of the policy to retrieve.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_access_group_policy_examples}
@@ -2097,7 +2224,7 @@ ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 
 Create an access group policy:
 ```bash
-ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--tags name1:value1,name2:value2...] [--account-management] [--attributes name=value,name=value...]}
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--tags name1:value1,name2:value2...] [--account-management] [--attributes name=value,name=value...]}} [--output FORMAT] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -2139,6 +2266,15 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
 
 --attributes *name=value,name=value...*
 :   Set resource attributes in the form of 'name=value,name=value....'
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_access_group_policy_create_examples}
@@ -2214,7 +2350,7 @@ ibmcloud iam access-group-policy-create --tags env:dev,env:test
 
 Update an access group policy:
 ```bash
-ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]}
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [--api-version v1| v2]
 ```
 {: codeblock}
 
@@ -2253,6 +2389,15 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
 
 --attributes *name=value,name=value...*
 :   Set resource attributes in the form of 'name=value,name=value....'
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_access_group_policy_update_examples}
@@ -2322,15 +2467,21 @@ ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7a
 
 Delete an access group policy:
 ```bash
-ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
+ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force] [-q, --quiet] [--api-version v1 |v2]
 ```
 {: codeblock}
 
 ### Command options
 {: #ibmcloud_iam_access_group_policy_delete_options}
 
+--api-version
+:   Version of the access policy API.
+
 -f, --force
 :   Force deletion without confirmation.
+
+-q, --quiet
+:   Suppress verbose output.
 
 
 ### Examples
@@ -2524,7 +2675,7 @@ ibmcloud iam trusted-profile-delete sample-test
 
 Create an access policy and assign it to a trusted profile
 ```bash
-ibmcloud iam trusted-profile-policy-create (NAME|ID) {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--tags name1:value1,name2:value2...] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [-f, --force]
+ibmcloud iam trusted-profile-policy-create (NAME|ID) {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--tags name1:value1,name2:value2...] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [-f, --force] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -2536,6 +2687,9 @@ NAME|ID (required)
 
 --account-management
 :   Give access to all account management services.
+
+--api-version
+:   Version of the access policy API.
 
 --attributes name=value,name-value...
 :   Set resource attributes in the form of 'name=value,name=value....'
@@ -2567,6 +2721,9 @@ NAME|ID (required)
 --roles ROLE_NAME1,ROLE_NAME2...
 :   Role names of the policy definition. For supported roles of a specific service, run 'ibmcloud iam roles --service SERVICE_NAME'. This option is exclusive with '--file'.
 
+-q, --quiet
+:   Suppress verbose output.
+
 --service-instance SERVICE_INSTANCE_GUID
 :   GUID of service instance of the policy definition. This option is exclusive with '--file'.
 
@@ -2575,9 +2732,6 @@ NAME|ID (required)
 
 --tags name1:value1,name2:value2...
 :   Access tags of the resource.
-
--q, --quiet
-:   Suppress verbose output.
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_policy_create_examples}
@@ -2605,7 +2759,7 @@ iam trusted-profile-policy-create my-profile --roles Viewer
 
 Display details of an access policy for a specified trusted profile
 ```bash
-ibmcloud iam trusted-profile-policy (NAME|ID) POLICY_ID [--output FORMAT] [-f, --force] [-q, --quiet]
+ibmcloud iam trusted-profile-policy (NAME|ID) POLICY_ID [--output FORMAT] [-f, --force] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -2627,6 +2781,9 @@ POLICY_ID (required)
 -q, --quiet
 :   Suppress verbose output.
 
+--api-version
+:   Version of the access policy API.
+
 ### Examples
 {: #ibmcloud_iam_trusted_profile_policy_examples}
 
@@ -2641,7 +2798,7 @@ ibmcloud iam trusted-profile-policy my-profile bdf62c30-35dd-4852-bcb8-2f0dd3929
 
 List all access policies for a specified trusted profile
 ```bash
-ibmcloud iam trusted-profile-policies (NAME|ID) [--output FORMAT] [-f, --force] [-q, --quiet]
+ibmcloud iam trusted-profile-policies (NAME|ID) [--output FORMAT] [-f, --force] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -2660,6 +2817,9 @@ NAME|ID (required)
 -q, --quiet
 :   Suppress verbose output.
 
+--api-version
+:   Version of the access policy API.
+
 ### Examples
 {: #ibmcloud_iam_trusted_profile_policies_examples}
 
@@ -2674,7 +2834,7 @@ ibmcloud iam trusted-profile-policies Profile-bdf62c30-35dd-4852-bcb8-2f0dd39297
 
 Update an access policy for a trusted profile
 ```bash
-ibmcloud iam trusted-profile-policy-update (NAME|ID) POLICY_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--tags name1:value1,name2:value2...] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [-f, --force]
+ibmcloud iam trusted-profile-policy-update (NAME|ID) POLICY_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--tags name1:value1,name2:value2...] [--account-management] [--attributes name=value,name=value...]} [--output FORMAT] [-q, --quiet] [-f, --force] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -2732,6 +2892,9 @@ POLICY_ID (required)
 -q, --quiet
 :   Suppress verbose output.
 
+--api-version
+:   Version of the access policy API.
+
 ### Examples
 {: #ibmcloud_iam_trusted_profile_policy_update_examples}
 
@@ -2752,7 +2915,7 @@ ibmcloud iam trusted-profile-policy-update my-profile bdf62c30-35dd-4852-bcb8-2f
 
 Delete an access policy for a trusted profile
 ```bash
-ibmcloud iam trusted-profile-policy-delete (NAME|ID) POLICY_ID [-f, --force] [-q, --quiet]
+ibmcloud iam trusted-profile-policy-delete (NAME|ID) POLICY_ID [-f, --force] [-q, --quiet] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -2770,6 +2933,9 @@ POLICY_ID (required)
 
 -q, --quiet
 :   Suppress verbose output.
+
+--api-version
+:   Version of the access policy API.
 
 ### Examples
 {: #ibmcloud_iam_trusted_profile_policy_delete_examples}
@@ -3129,7 +3295,7 @@ ibmcloud iam trusted-profile-rule-delete my-profile my-rule -f
 ## ibmcloud iam account-settings
 {: #ibmcloud_iam_account_settings}
 
-List account setting values: 
+List account setting values:
 
 ```bash
 ibmcloud iam account-settings [--output FORMAT] [-q, --quiet]
