@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-09-08"
+  years: 2015, 2023
+lastupdated: "2022-03-22"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli, IBM Cloud CLI installer, installing IBM Cloud CLI, install IBM Cloud CLI
 content-type: tutorial
@@ -131,7 +131,7 @@ To manually install the CLI plug-ins and tools, see [installing the tools and pl
 ## Next steps
 {: #next-steps}
 
-If you installed the CLI plug-ins and tools, you're now ready to develop and deploy your first app. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli#create-deploy-app-cli).
+If you installed the CLI plug-ins and tools, you can start using {{site.data.keyword.cloud_notm}} resources and services on the CLI. For more information, see [General IBM Cloud CLI (ibmcloud) commands](/docs/cli?topic=cli-ibmcloud_cli). Also, keep in mind the [Getting help and support](/docs/cli?topic=cli-getting-help) page if you have questions or problems.
 
 Stay up to date with the {{site.data.keyword.cloud_notm}} CLI by subscribing to the [{{site.data.keyword.cloud_notm}} CLI releases repository](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}. You'll receive notifications about new {{site.data.keyword.cloud_notm}} CLI releases.
 

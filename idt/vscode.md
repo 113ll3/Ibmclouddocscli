@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-16"
+  years: 2017, 2023
+lastupdated: "2023-03-22"
 
 keywords: cli, ibm cloud developer tools, visual studio code, developer extension, vscode cli, vscode plugin, vscode
 
@@ -60,5 +60,3 @@ First, open the command palette by using the following key combination:
 * **Windows&trade; or Linux&trade;:** `ctrl + shift + p`
 
 Next, either enter or select the command that you want to start. You can type `dev` within the command palette to see the list of all available commands.
-
-From here, you can develop and deploy your application. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli#create-deploy-app-cli).
