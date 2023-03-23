@@ -1103,7 +1103,7 @@ The following parameters can be used with the `tekton-logs` command.
 ## tekton-pipeline-cancel
 {: #tekton-pipeline-cancel}
 
-Cancels an ongoing Tekton pipeline run.
+Cancel an ongoing Tekton pipeline run.
 
 ```bash
 ibmcloud dev tekton-pipeline-cancel [PIPELINE_ID] --run-id [pipelinerunID] [--trace]`
