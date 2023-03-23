@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-03-23"
 
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy, cli private endpoints
@@ -1099,6 +1099,33 @@ The following parameters can be used with the `tekton-logs` command.
 
 * Use this parameter to provide verbose output.
 * Usage: `ibmcloud dev tekton-logs [PIPELINE_ID]  --run-id [pipelinerunID] --trace`
+
+## tekton-pipeline-cancel
+{: #tekton-pipeline-cancel}
+
+Cancels an ongoing Tekton pipeline run.
+
+```bash
+ibmcloud dev tekton-pipeline-cancel [PIPELINE_ID] --run-id [pipelinerunID] [--trace]`
+```
+{: codeblock}
+
+### tekton-pipeline-cancel command parameters
+{: #tekton-pipeline-cancel-command-parameters}
+
+The following parameters can be used with the `tekton-pipeline-cancel` command.
+
+#### `run-id` (required)
+{: #tekton-pipeline-cancel-run-id}
+
+* Parameter that identifies the pipeline run to cancel.
+* Usage: `ibmcloud dev tekton-pipeline-cancel [PIPELINE_ID] --run-id [pipelinerunID]`
+
+#### `trace`
+{: #tekton-pipeline-cancel-trace}
+
+* Use this parameter to provide verbose output.
+* Usage: `ibmcloud dev tekton-pipeline-cancel [PIPELINE_ID] --run-id [pipelinerunID] --trace`
 
 ## tekton-pipelinerun
 {: #tekton-pipelinerun}
