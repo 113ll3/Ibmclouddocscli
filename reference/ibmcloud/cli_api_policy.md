@@ -1510,7 +1510,7 @@ ibmcloud iam role-create ServiceIDCreator --display-name "Service ID Creator" --
 
 List all access policies under the current account:
 ```bash
-ibmcloud iam access-policies [-t, --type user | service_id | access_group | trusted_profile] [--output FORMAT] [-q, --quiet ] [--api-version v1 | v2]
+ibmcloud iam access-policies [-t, --type user | service_id | access_group | trusted_profile] [--sort-by id | type | href | created_at | created_by_id | last_modified_at | last_modified_by_id | state ] [--output FORMAT] [-q, --quiet ] [--api-version v1 | v2]
 ```
 {: codeblock}
 
@@ -1519,6 +1519,9 @@ ibmcloud iam access-policies [-t, --type user | service_id | access_group | trus
 
 -t, --type ACCESS_POLICY_TYPE
 :   List all access policies under current account filtered by policy type. Valid options are: `user` | `service_id` | `access_group` | `trusted_profile`
+
+--sort-by ATTRIBUTE
+:   Sort the policies based on attributes. Valid options are: id | type | href | created_at | created_by_id | last_modified_at | last_modified_by_id | state. Prepend a minus (for example, `-id`, `-type`) for reverse sorting.
 
 --output FORMAT
 :   Specify output format. Only 'JSON' is supported.
@@ -1559,6 +1562,18 @@ ibmcloud iam access-policies --type access_group
 List all trusted profile access policies under the current account:
 ```bash
 ibmcloud iam access-policies --type trusted_profile
+```
+{: codeblock}
+
+List all trusted profile access policies sorted by `created_at` in ascending order under the current account:
+```bash
+ibmcloud iam access-policies --type trusted_profile --sort-by created_at
+```
+{: codeblock}
+
+List all trusted user policies sorted by `last_modified_at` in descending order under the current account:
+```bash
+ibmcloud iam access-policies --type user --sort-by -last_modified_at
 ```
 {: codeblock}
 
@@ -3296,7 +3311,6 @@ ibmcloud iam trusted-profile-rule-delete my-profile my-rule -f
 {: #ibmcloud_iam_account_settings}
 
 List account setting values:
-
 ```bash
 ibmcloud iam account-settings [--output FORMAT] [-q, --quiet]
 ```
