@@ -4,7 +4,6 @@ copyright:
   years: 2017, 2023
 lastupdated: "2023-03-23"
 
-
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, ic dev deploy, cli private endpoints
 
 subcollection: cli
@@ -1197,7 +1196,7 @@ Run a Tekton pipeline.
 
 Usage:
 ```bash
-ibmcloud dev tekton-trigger PIPELINE_ID --trigger-name triggerName [--trigger-properties propertiesJSON] [--trigger-header headerJSON] [--trigger-body bodyJSON] [--output JSON]
+ibmcloud dev tekton-trigger PIPELINE_ID --trigger-name triggerName [--trigger-properties propertiesJSON] [--secure-trigger-properties securePropertiesJSON] [--trigger-headers headerJSON] [--trigger-body bodyJSON] [--output JSON]
 ```
 {: codeblock}
 
@@ -1225,11 +1224,11 @@ The following parameters can be used with the `tekton-trigger` command.
 * Usage: `ibmcloud dev tekton-trigger pipePIPELINE_IDlineID --trigger-name triggerName --secure-trigger-properties securePropertiesJSON`
 
 
-#### `trigger-header` (optional)
+#### `trigger-headers` (optional)
 {: #tekton-trigger-header}
 
-* Optional. Use this parameter to specify the header that is used in triggerBinding of a Tekton pipelineRun. For example,`'{"source":"cli"}'`.
-* Usage: `ibmcloud dev tekton-trigger PIPELINE_ID --trigger-name triggerName --trigger-header headerJSON`
+* Optional. Use this parameter to specify the headers that are used in triggerBinding of a Tekton pipelineRun. For example,`'{"source":"cli","flag":"enable"}'`.
+* Usage: `ibmcloud dev tekton-trigger PIPELINE_ID --trigger-name triggerName --trigger-headers headerJSON`
 
 #### `trigger-body` (optional)
 {: #tekton-trigger-body}
