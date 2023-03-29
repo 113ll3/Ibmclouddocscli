@@ -31,10 +31,10 @@ The installation command in this tutorial installs the latest stand-alone {{site
 * `Helm`
 * `kubectl`
 * `curl` (Linux&trade; only)
-* [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} plug-in](/docs/cli?topic=cloud-functions-cli-plugin-functions-cli)
-* [{{site.data.keyword.cos_full_notm}} plug-in](/docs/cli?topic=cloud-object-storage-cli-plugin-ic-cos-cli)
-* [{{site.data.keyword.registrylong_notm}} plug-in](/docs/cli?topic=container-registry-cli-plugin-containerregcli)
-* [{{site.data.keyword.containerlong_notm}} plug-in](/docs/cli?topic=containers-kubernetes-service-cli)
+* [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} plug-in](/docs/cli?topic=cli-install-devtools-manually#idt-install-functions)
+* [{{site.data.keyword.cos_full_notm}} plug-in](/docs/cli?topic=cli-install-devtools-manually#install-cos-cli-plugin)
+* [{{site.data.keyword.registrylong_notm}} plug-in](/docs/cli?topic=cli-install-devtools-manually#idt-install-container-registry-cli-plugin)
+* [{{site.data.keyword.containerlong_notm}} plug-in](/docs/cli?topic=cli-install-devtools-manually#idt-install-kubernetes-cli-plugin)
 
 Want to start working with the {{site.data.keyword.cloud_notm}} CLI? Try out {{site.data.keyword.cloud-shell_notm}}, which gives you a personal cloud-based shell workspace with the full {{site.data.keyword.cloud_notm}} CLI and tons of command-line tools - no installation needed. To get started, click the {{site.data.keyword.cloud-shell_short}} icon ![{{site.data.keyword.cloud-shell_notm}} icon](../icons/terminal-cloud-shell.svg) in the {{site.data.keyword.cloud_notm}} console menu bar. For more information, see [Getting started with {{site.data.keyword.cloud-shell_notm}}](/docs/cloud-shell?topic=cloud-shell-getting-started).
 {: tip}
@@ -68,7 +68,7 @@ The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when
    ```
    {: codeblock}
 
-* For Windows&trade;, run the following command in PowerShell as an administrator:
+* For Windows&trade; Pro, run the following command in PowerShell as an administrator:
    ```curl
    iex (New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
    ```
