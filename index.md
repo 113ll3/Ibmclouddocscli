@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2022-03-22"
+lastupdated: "2022-03-29"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli, IBM Cloud CLI installer, installing IBM Cloud CLI, install IBM Cloud CLI
 content-type: tutorial
@@ -68,7 +68,7 @@ The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when
    ```
    {: codeblock}
 
-* For Windows&trade; 10 Pro, run the following command in PowerShell as an administrator:
+* For Windows&trade;, run the following command in PowerShell as an administrator:
    ```curl
    iex (New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
    ```
