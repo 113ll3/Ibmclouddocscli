@@ -107,6 +107,7 @@ toc:
           - include: ../monitor-cli-plugin/monitor-cli.md
           - include: ../cloud-object-storage-cli-plugin/cloud-object-storage-cli-reference.md
           - include: ../power-iaas-cli-plugin/power-iaas-cli.md
+          - plugins/projects/projects-cli.md
           - include: ../privileged-access-gateway/pag-cli-commands.md
           - include: ../quantum-computing-cli-plugin/quantum-services-cli.md
           - include: ../secrets-manager-cli-plugin/secrets-manager-cli.md
