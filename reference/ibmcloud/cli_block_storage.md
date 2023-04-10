@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-12-15"
+  years: 2018, 2023
+lastupdated: "2023-04-10"
 
 keywords: classic infrastructure, block storage, mpio, ibmcloud sl block, volume-options, snapshot, datacenter, replica, cli, storage type, size
 
@@ -693,31 +693,31 @@ ibmcloud sl block volume-order [OPTIONS]
 **Command options**:
 
 -t, --storage-type
-:   Required. Type of storage volume. Options are: performance,endurance.
+:  Required. Type of storage volume. Options are: performance,endurance.
 
 -s, --size
-:   Required. Size of storage volume in GB.
+:  Required. Size of storage volume in GB.
 
 -i, --iops
-:   Performance Storage IOPs. Range between [100-6000], and in multiples of 100 [required for storage-type performance].
+:  Performance Storage IOPs. Range between [100-6000], and in multiples of 100 [required for storage-type performance].
 
 -e, --tier
-:   Endurance Storage Tier (IOP per GB) [required for storage-type endurance], options are: 0.25,2,4,10.
+:  Endurance Storage Tier (IOP per GB) [required for storage-type endurance], options are: 0.25,2,4,10.
 
 -o, --os-type
-:   Required. Operating System. Options are: HYPER_V,LINUX,VMWARE,WINDOWS_2008,WINDOWS_GPT,WINDOWS,XEN.
+:  Required. Operating System. Options are: HYPER_V,LINUX,VMWARE,WINDOWS_2008,WINDOWS_GPT,WINDOWS,XEN.
 
 -d, --datacenter
-:   Required. Datacenter short name.
+:  Required. Datacenter short name.
 
 -n, --snapshot-size
-:   Optional parameter for ordering snapshot space along with endurance block storage; specifies the size (in GB) of snapshot space to order.
+:  Optional parameter for ordering snapshot space along with endurance block storage; specifies the size (in GB) of snapshot space to order.
 
 -b, --billing
-:   Optional parameter for Billing rate (default to monthly), options are: hourly, monthly.
+:  Optional parameter for Billing rate (default to monthly), options are: hourly, monthly.
 
 -f, --force
-:   Force operation without confirmation.
+:  Force operation without confirmation.
 
 **Examples**:
 ```bash
@@ -751,9 +751,17 @@ This command lists all options for creating a block storage volume, including st
 Refresh a dependent duplicate volume with a snapshot from its parent:
 
 ```bash
-ibmcloud sl block volume-refresh VOLUME_ID SNAPSHOT_ID
+ibmcloud sl block volume-refresh VOLUME_ID SNAPSHOT_ID [OPTIONS]
 ```
 {: codeblock}
+
+**Command options**:
+
+-f, --force-refresh
+:  Force the volume refresh. The new operation cancels any ongoing transactions.
+
+--output value
+:  Specify output format. Only JSON is supported now.
 
 **Examples**:
 ```bash
@@ -766,13 +774,23 @@ Refresh a dependent duplicate 123 with a snapshot from its parent 456.
 ## ibmcloud sl block snapshot-get-notification-status
 {: #sl_block_snapshot_get_notification_status}
 
-This feature will be availble in the January 2022 release of the `ibmcloud` tool. Until then, the following command will perform the same action.
+Get snapshots space usage threshold warning flag setting for a given volume.
 
+```bash
+ibmcloud sl block snapshot-get-notification-status IDENTIFIER
+```
+
+**Command options**:
+  
+--output value
+:  Specify output format. Only JSON is supported now.
+
+**Examples**:
 
 `12345` here is the ID of the block or file volume you want to see the Notification Status for.
 
 ```bash
-ibmcloud sl call-api SoftLayer_Network_Storage getSnapshotNotificationStatus --init=12345
+ibmcloud sl block snapshot-get-notification-status 12345
 ```
 {: codeblock}
 
@@ -781,20 +799,33 @@ Values can be either `0` for disabled, or `1` and ``(null, empty string) for ena
 ## ibmcloud sl block snapshot-set-notification
 {: #sl_block_snapshot_set_notification}
 
-This feature will be availble in the January 2022 release of the `ibmcloud` tool. Until then, the following command will perform the same action.
-
-`12345` here is the ID of the block or file volume you want to see the Notification Status for.
-
-Enable snapshot notification:
+Enables or disables snapshot space usage threshold warning for a given volume.
 
 ```bash
-ibmcloud sl call-api SoftLayer_Network_Storage setSnapshotNotification --init=12345 --parameters '[1]'
+ibmcloud sl block snapshot-set-notification IDENTIFIER [OPTIONS]
+```
+
+**Command options**:
+
+--disable
+:  Disable snapshot notification.
+
+--enable
+:  Enable snapshot notification.
+
+--output value  
+:  Specify output format. Only JSON is supported now.
+
+**Examples**:
+
+```bash
+ibmcloud sl block snapshot-set-notification 12345 --enable
 ```
 {: codeblock}
 
 Disable snapshot notification:
 
 ```bash
-ibmcloud sl call-api SoftLayer_Network_Storage setSnapshotNotification --init=12345 --parameters '[0]'
+ibmcloud sl block snapshot-set-notification 12345 --disable
 ```
 {: codeblock}
