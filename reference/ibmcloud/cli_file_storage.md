@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2022-12-07"
+  years: 2018, 2023
+lastupdated: "2023-04-10"
 
 keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
 
@@ -706,9 +706,16 @@ This command lists all options for creating a file storage volume, including sto
 
 Refresh a dependent duplicate volume with a snapshot from its parent:
 ```bash
-ibmcloud sl file volume-refresh VOLUME_ID SNAPSHOT_ID
+ibmcloud sl file volume-refresh VOLUME_ID SNAPSHOT_ID [OPTIONS]
 ```
 {: codeblock}
+
+**Command options**:
+
+-f, --force-refresh
+:   Force the volume refresh. Ongoing transactions are canceled.
+--output
+:   Specify output format. Only JSON is supported now.
 
 **Examples**:
 ```bash
@@ -731,10 +738,10 @@ ibmcloud sl file volume-set-note [OPTIONS] VOLUME_ID
 **Command options**:
 
 -n value, --note value
-:   Public notes related to a Storage volume [required]
+:   Public notes related to a storage volume [required]
 
 --output value,
-:   Specify output format, only JSON is supported now.
+:   Specify output format. Only JSON is supported now.
 
 **Examples**:
 
@@ -746,12 +753,24 @@ ibmcloud sl file volume-set-note 12345678 --note 'this is my note'
 ## ibmcloud sl file snapshot-get-notification-status
 {: #sl_file_snapshot_get_notification_status}
 
-This feature will be available in the January 2022 release of the `ibmcloud` tool. Until then, the following command performs the same action.
+Get snapshots space usage threshold warning flag setting for a given volume.
+
+```bash
+sl file snapshot-get-notification-status IDENTIFIER [flags]
+```
+{: codeblock}
+
+**Command options**:
+
+--output string
+:  Specify output format. Only JSON is supported now.
+
+**Example**:
 
 `12345` here is the ID of the block or file volume that you want to see the notification Status for.
 
 ```bash
-ibmcloud sl call-api SoftLayer_Network_Storage getSnapshotNotificationStatus --init=12345
+sl file snapshot-get-notification-status 12345
 ```
 {: codeblock}
 
@@ -760,20 +779,38 @@ Values can be either `0` for disabled, or `1` and ``(null, empty string) for ena
 ## ibmcloud sl file snapshot-set-notification
 {: #sl_file_snapshot_set_notification}
 
-This feature will be available in the January 2022 release of the `ibmcloud` tool. Until then, the following command performs the same action.
+Enables or disables snapshot space usage threshold warning for a given volume.
+
+```bash
+sl file snapshot-set-notification IDENTIFIER [flags]
+```
+{: codeblock}
+
+**Command options**:
+
+--disable
+:   Disable snapshot notification.
+
+--enable
+:   Enable snapshot notification.
+
+--output string
+:   Specify output format. Only JSON is supported now.
+
+**Examples**:
 
 `12345` here is the ID of the block or file volume that you want to see the Notification Status for.
 
 Enable snapshot notification:
 
 ```bash
-ibmcloud sl call-api SoftLayer_Network_Storage setSnapshotNotification --init=12345 --parameters '[1]'
+ibmcloud sl file snapshot-set-notification 12345 -enable'
 ```
 {: codeblock}
 
 Disable snapshot notification:
 
 ```bash
-ibmcloud sl call-api SoftLayer_Network_Storage setSnapshotNotification --init=12345 --parameters '[0]'
+ibmcloud sl file snapshot-set-notification 12345 --disable
 ```
 {: codeblock}
