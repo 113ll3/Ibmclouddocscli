@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2022-03-29"
+lastupdated: "2022-04-11"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli, IBM Cloud CLI installer, installing IBM Cloud CLI, install IBM Cloud CLI
 content-type: tutorial
@@ -45,7 +45,6 @@ Want to start working with the {{site.data.keyword.cloud_notm}} CLI? Try out {{s
 * Depending on your [{{site.data.keyword.cloud}} account type](/registration){: external}, access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
 * You must use the stable channel for Docker with a minimum version of 1.13.1.
 * For Linux&trade;, install the [curl](https://curl.haxx.se/download.html){: external} command for downloading packages through the command line. If `curl` is already installed, the installer updates it to the latest version.
-* For Windows&trade;, some functions are not supported unless you are running Windows&trade; 10 Pro.
 
 If you need to use a 32-bit version of the CLI, or a previous version other than the latest for {{site.data.keyword.cloud_notm}} Dedicated environments, see [{{site.data.keyword.cloud_notm}} CLI releases](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: external}.
 {: note}
@@ -68,7 +67,7 @@ The latest version of the {{site.data.keyword.cloud_notm}} CLI is installed when
    ```
    {: codeblock}
 
-* For Windows&trade; Pro, run the following command in PowerShell as an administrator:
+* For Windows&trade;, run the following command in PowerShell as an administrator:
    ```curl
    iex (New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
    ```
