@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-07"
+lastupdated: "2023-04-17"
 
 subcollection: cli
 
