@@ -1430,10 +1430,23 @@ The following commands are not a part of the projects CLI plug-in, but you can u
 Some of the following commands might require the installation of their specific plug-ins before you can run them.
 {: important}
 
-* Run [`ibmcloud resource tag-attach`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_tag_attach) to attach tags to a project.
-* Run [`ibmcloud resource search`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_search) to retrieve all of the resources in an account created by configurations in a project.
-* Run [`ibmcloud schematics logs`](/docs/cli?topic=cli-schematics-cli-reference#schematics-logs) to retrieve the log files for a {{site.data.keyword.bpshort}} workspace.
+Run [`ibmcloud resource tag-attach`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_tag_attach) to attach tags to a project:
 
+```sh
+ibmcloud resource tag-attach --tag-names TAG --resource-id PROJECT-CRN
+```
+
+Run [`ibmcloud resource search`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_search) to retrieve all of the resources in an account created by configurations in a project:
+
+```sh
+ibmcloud resource search "service_tags:\"schematics::project_id:PROJECT_ID\""
+```
+
+Run [`ibmcloud schematics logs`](/docs/cli?topic=cli-schematics-cli-reference#schematics-logs) to retrieve the log files for a {{site.data.keyword.bpshort}} workspace:
+
+```sh
+ibmcloud schematics logs --id WORKSPACE_ID [--act-id ACTION_ID]
+```
 
 ## Schema examples
 {: #project-schema-examples}
