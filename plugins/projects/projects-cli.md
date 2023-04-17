@@ -649,7 +649,7 @@ ibmcloud project config-create --id ID --new-name NEW-NAME --new-locator-id NEW-
 
     The maximum length is `10000` items. The minimum length is `0` items.
 
-`--setting` ([`ConfigSettingItems[]`](#cli-config-setting-items-example-schema))
+`--setting`
 :   An optional setting object that is passed to the cart API.
 
     The maximum length is `10000` items. The minimum length is `0` items.
@@ -1439,22 +1439,6 @@ Some of the following commands might require the installation of their specific 
 {: #project-schema-examples}
 
 The following schema examples represent the data that you need to specify for a command option. These examples model the data structure and include placeholder values for the expected value type. When you run a command, replace these values with the values that apply to your environment.
-
-### JSONPatchOperation[]
-{: #cli-json-patch-operation-example-schema}
-
-The following example shows the format of the `ConfigSettingItems[]` object.
-
-```json
-
-[ {
-  "op" : "add",
-  "path" : "exampleString",
-  "from" : "exampleString",
-  "value" : "exampleString"
-} ]
-```
-{: codeblock}
 
 ### ProjectConfigInputVariable[]
 {: #cli-project-config-input-variable-example-schema}
