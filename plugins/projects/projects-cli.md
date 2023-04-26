@@ -2,17 +2,17 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-17"
+lastupdated: "2023-04-21"
 
 subcollection: cli
 
-keywords: projects CLI, projects command line , projects terminal, projects shell
+keywords: project CLI, project command line , project terminal, project shell
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Projects CLI reference
+# Project CLI reference
 {: #projects-cli}
 
 The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. You can use the {{site.data.keyword.cloud_notm}} CLI to manage projects you have access to.
