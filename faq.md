@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-28"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help, cli private endpoints
 
@@ -16,9 +16,6 @@ content-type: faq
 
 # FAQs for the {{site.data.keyword.cloud_notm}} CLI
 {: #ibm-cli-faq}
-
-The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created by using the `ibmcloud dev` commands. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the App commands for the "dev" plug-in will be removed to coincide with the starter kit deprecation. To see the list of specific deprecated commands, run `ibmcloud dev` from the {{site.data.keyword.cloud_notm}} CLI. For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
-{: deprecated}
 
 FAQs for the {{site.data.keyword.cloud}} Command Line Interface include questions about CLI versioning, updates, and working with apps. To find all FAQs for {{site.data.keyword.cloud_notm}}, see the [FAQ library](/docs/faqs).
 {: shortdesc}

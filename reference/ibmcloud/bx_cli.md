@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-10"
+lastupdated: "2023-04-28"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -14,9 +14,6 @@ subcollection: cli
 
 # General {{site.data.keyword.cloud_notm}} CLI (ibmcloud) commands
 {: #ibmcloud_cli}
-
-The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created by using the `ibmcloud dev` commands. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the App commands for the "dev" plug-in will be removed to coincide with the starter kit deprecation. To see the list of specific deprecated commands, run `ibmcloud dev` from the {{site.data.keyword.cloud_notm}} CLI. For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
-{: deprecated}
 
 The {{site.data.keyword.cloud}} Command Line Interface provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.cloud_notm}}.
 {: shortdesc}

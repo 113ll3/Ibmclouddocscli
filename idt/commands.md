@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2023
-lastupdated: "2023-03-31"
+lastupdated: "2023-04-28"
 
 keywords: cli, ibmcloud dev commands, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, cli private endpoints, tekton pipelines, classic pipelines, toolchains
 
@@ -14,9 +14,6 @@ subcollection: cli
 
 # {{site.data.keyword.cloud_notm}} CLI {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands
 {: #idt-cli}
-
-The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created by using the `ibmcloud dev` commands. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the App commands for the "dev" plug-in will be removed to coincide with the starter kit deprecation. To see the list of specific deprecated commands, run `ibmcloud dev` from the {{site.data.keyword.cloud_notm}} CLI. For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
-{: deprecated}
 
 The {{site.data.keyword.cloud}} Command Line Interface includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) or (`ic dev`) commands to manage classic pipelines, Tekton pipelines, and toolchains.
 {: shortdesc}
