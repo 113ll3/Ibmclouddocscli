@@ -27,6 +27,7 @@ includes:
   - https://github.ibm.com/cloud-docs/privileged-access-gateway
   - https://github.ibm.com/cloud-docs/quantum-computing-cli-plugin
   - https://github.ibm.com/cloud-docs/secrets-manager
+  - https://github.ibm.com/cloud-docs/secrets-manager-cli-plugin
   - https://github.ibm.com/cloud-docs/satellite
   - https://github.ibm.com/cloud-docs/schematics-cli-plugin
   - https://github.ibm.com/cloud-docs/tg-cli-plugin
