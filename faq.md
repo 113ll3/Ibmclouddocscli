@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-04-28"
+lastupdated: "2023-05-05"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help, cli private endpoints
 
@@ -50,6 +50,24 @@ ibmcloud update
 To install the latest IBM Cloud CLI and recommended plug-ins and tools for developing applications for IBM Cloud, follow the steps in [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started) and [Installing the tools and plug-ins manually](/docs/cli?topic=cli-install-devtools-manually).
 
 To install only the stand-alone IBM Cloud CLI without any plug-ins or tools, see [Installing the stand-alone IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
+
+## How do I install a plug-in from a URL?
+{: #cli-install-plugin-url}
+{: faq}
+
+Use the `ibmcloud plugin install URL` command to install a plug-in directly from a URL. For more information, see [Installing a plug-in from a web URL](/docs/cli?topic=cli-plug-ins#install-plugin-from-url).
+
+## How do I install a plug-in locally?
+{: #cli-install-plugin-local}
+{: faq}
+
+Use the `ibmcloud plugin install LOCAL_FILE_NAME` command to install a plug-in on your computer. For more information, see [Installing a plug-in locally](/docs/cli?topic=cli-plug-ins#install-plugin-locally).
+
+## How do I download a plug-in?
+{: #cli-install-plugin-local}
+{: faq}
+
+Use the `ibmcloud plugin download PLUGIN_NAME` command to download a plug-in. For more information, see [`ibmcloud plugin download`](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_download).
 
 ## How can I be notified about new CLI releases?
 {: #cli-get-notified}
