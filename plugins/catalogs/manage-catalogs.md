@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-07"
+lastupdated: "2023-05-05"
 
 keywords: cli, catalogs management, catalog
 
@@ -434,6 +434,9 @@ ibmcloud catalog filter options
 ### Command options
 {: #options-filter-options}
 
+-- all
+
+:   Includes industry, solution type, and pricing plan in the list of filters.
 
 --output FORMAT (optional)
 
@@ -445,16 +448,70 @@ ibmcloud catalog filter options
 The command returns the following output:
 
 ```bash
-Offering format   ID
+Deployment target              ID
+IBM Cloud Kubernetes Service   target_iks
+IBM Cloud Schematics           target_terraform
+Red Hat OpenShift              target_roks
+VMware vCenter Server          target_vcenter
+Virtual private cloud          target_vpc-x86
+Power Systems Virtual Server   target_power-iaas
+
+Provider      ID
+Third party   ibm_third_party
+Community     ibm_community
+IBM           ibm_created
+
+Works with             ID
+SAP Certified          sap_certified
+Quantum Technologies   quantum_tech
+Satellite Enabled      satellite_enabled
+HPC                    hpc
+
+Delivery method   ID
 Cloud Paks        cloud_pak
 Helm charts       helm
+Operators         operator
+OVA Images        ova
+Starter kits      template
 Terraform         terraform
+Server Images     vsi_image
+Blueprint         blueprint
+Toolchains        toolchain
 
-Compliance                   ID
-EU Supported                 eu_access
-HIPAA Enabled                hipaa
-IAM-enabled                  rc_compatible
-Service Endpoint Supported   service_endpoint_supported
+Compliance                     ID
+EU Supported                   eu_access
+Financial Services Validated   fs_ready
+HIPAA Enabled                  hipaa
+IAM-enabled                    rc_compatible
+Service Endpoint Supported     service_endpoint_supported
+
+Release      ID
+Beta         ibm_beta
+Deprecated   ibm_deprecated
+
+Support                 ID
+Third party supported   support_third_party
+Community supported     support_community
+IBM supported           support_ibm
+
+Category                   ID                   Tags
+Compute                    compute              compute,compute_classic,content,openwhisk,runtime,virtualservers,compute_baremetal
+Containers                 containers           containers,clusters,registry
+Networking                 network              network,network_vpc,network_classic,network_edge,network_interconnectivity
+Storage                    storage              storage,storage_vpc,storage_classic,storage_datamovement
+Converged infrastructure   converged_infra      converged_infra
+Enterprise applications    enterprise_app       enterprise_app
+AI / Machine Learning      ai                   watson,ai
+Analytics                  analytics            data_analytics,business_analytics,analytics
+Blockchain                 blockchain           blockchain
+Databases                  databases            data_management,database
+Developer tools            devops               dev_ops
+Logging and monitoring     logging_monitoring   logging_monitoring
+Migration                  migration_tools      migration_tools
+Integration                integration          integration,api
+Internet of Things         iot                  internet_of_things
+Security                   security             security
+Mobile                     mobile               mobile,web_and_app
 ```
 {: screen}
 
