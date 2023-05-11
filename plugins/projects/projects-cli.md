@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-21"
+lastupdated: "2023-05-11"
 
 subcollection: cli
 
@@ -1436,7 +1436,7 @@ Run [`ibmcloud resource tag-attach`](/docs/cli?topic=cli-ibmcloud_commands_resou
 ibmcloud resource tag-attach --tag-names TAG --resource-id PROJECT-CRN
 ```
 
-Run [`ibmcloud resource search`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_search) to retrieve all of the resources in an account created by configurations in a project:
+Run [`ibmcloud resource search`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_search) to retrieve all of the resources in an account created by configurations in a project: {: #ibmcloud-resource-tag-search}
 
 ```sh
 ibmcloud resource search "service_tags:\"schematics::project_id:PROJECT_ID\""
