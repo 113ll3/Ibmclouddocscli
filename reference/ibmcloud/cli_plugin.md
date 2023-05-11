@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-05-04"
+lastupdated: "2023-05-11"
 
 keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update, cli private endpoints
 
@@ -253,7 +253,7 @@ ibmcloud plugin install --all -f
 ```
 {: codeblock}
 
-Install multiple plugin versions at the same time.
+Install multiple plug-ins at the same time:
 
 ```bash
 ibmcloud plugin install container-service@0.1.425 secrets-manager@0.1.25
