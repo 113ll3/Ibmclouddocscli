@@ -87,4 +87,13 @@ Use the `ibmcloud plugin install URL` command to install a plug-in directly from
 ```bash
 ibmcloud plugin install http://example.com/downloads/my-plugin
 ```
-{: codeblock}
+
+## Related information
+{: #cli-install-relinfo}
+
+You can also install a plug-in from a URL, download a plug-in, or install a plug-in binary locally:
+
+* To install a plug-in from a URL, see [How do I install a plug-in from a URL?](/docs/cli?topic=cli-ibm-cli-faq#cli-install-plugin-url)
+* To download a plug-in, see [How do I download a plug-in?](/docs/cli?topic=cli-ibm-cli-faq#cli-install-download-local)
+* To install a plug-in locally, see [How do I install a plug-in locally?](/docs/cli?topic=cli-ibm-cli-faq#cli-install-plugin-local)
+
