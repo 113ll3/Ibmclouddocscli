@@ -93,7 +93,7 @@ ibmcloud plugin install http://example.com/downloads/my-plugin
 
 You can also install a plug-in from a URL, download a plug-in, or install a plug-in binary locally:
 
-* To install a plug-in from a URL, see [How do I install a plug-in from a URL?](/docs/cli?topic=cli-ibm-cli-faq#cli-install-plugin-url)
+* To install a plug-in from a URL, see [`ibmcloud plugin install`](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_install).
 * To download a plug-in, see [How do I download a plug-in?](/docs/cli?topic=cli-ibm-cli-faq#cli-install-download-local)
-* To install a plug-in locally, see [How do I install a plug-in locally?](/docs/cli?topic=cli-ibm-cli-faq#cli-install-plugin-local)
+* To install a plug-in locally, see [`ibmcloud plugin install`](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_install).
 
