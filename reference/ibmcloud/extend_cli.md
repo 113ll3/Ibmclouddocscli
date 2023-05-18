@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-17"
+  years: 2015, 2023
+lastupdated: "2023-05-17"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, cli, command line, command-line, developer tools, plugin install
 
@@ -15,22 +15,24 @@ subcollection: cli
 # Extending {{site.data.keyword.cloud_notm}} CLI with plug-ins
 {: #plug-ins}
 
-The {{site.data.keyword.cloud}} Command Line Interface supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally.
+The {{site.data.keyword.cloud}} Command Line Interface supports a plug-in framework to extend its capability. Install a plug-in from a repository, a URL, or install a plug-in binary locally.
+{: shortdesc}
 
-For more commands to manage plug-ins, run `ibmcloud plugin` to see the help messages. For more information, see also [Adding and removing IBM Cloud CLI plug-ins](/docs/cli?topic=cli-ibmcloud_commands_settings).
+For more commands to manage plug-ins, run `ibmcloud plugin` to see the help messages. For more information, see [Adding and removing {{site.data.keyword.cloud_notm}} CLI plug-ins](/docs/cli?topic=cli-ibmcloud_commands_settings).
 {: tip}
 
-## Installing a plug-in from the {{site.data.keyword.cloud_notm}} CLI repository
-{: #install-from-repo}
+## Before you begin
+{: #cli-before-you-begin}
 
-### Searching for a plug-in
+Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#install-ibmcloud-cli) so that you can install CLI plug-ins for {{site.data.keyword.cloud_notm}}.
+
+## Searching for a plug-in
 {: #cli-search-plugin}
 
-Use the `ibmcloud plugin repo-plugins -r REPO_NAME` command to look for a plug-in in the repository.
+Use the `ibmcloud plugin repo-plugins` command to discover all the available plug-ins in the repository.
 
-The {{site.data.keyword.cloud_notm}} CLI provides an official plug-in repository with the name 'IBM Cloud', which you can search as shown in the following example:
 ```bash
-ibmcloud plugin repo-plugins -r "IBM Cloud"
+ibmcloud plugin repo-plugins
 ```
 {: codeblock}
 
@@ -42,10 +44,14 @@ Update Available   cloud-functions                             1.0.32, 1.0.30, 1
 ```
 {: screen}
 
-### Installing the plug-in
+## Installing a plug-in from the {{site.data.keyword.cloud_notm}} CLI repository
+{: #install-from-repo}
+
+### Installing a specific plug-in
 {: #cli-install-plugin}
 
-Use the `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` command to install the plug-in. For example, use the following command to install a plug-in from the official IBM plug-in repo 'IBM Cloud':
+Use the `ibmcloud plugin install PLUGIN_NAME` command to install a specific plug-in. For example, use the following command to install the {{site.data.keyword.cloud_notm}} Code Engine CLI plug-in:
+
 ```bash
 ibmcloud plugin install code-engine
 ```
@@ -63,29 +69,38 @@ Plug-in 'code-engine 1.23.2' was successfully installed into /Users/username/.bl
 ```
 {: screen}
 
-## Installing a plug-in locally
-{: #install-plugin-locally}
+### Installing all plug-ins
+{: #cli-install-all}
 
-Use the `ibmcloud plugin install LOCAL_FILE_NAME` command to install a plug-in binary on your local computer. For example:
+Use the `plugin install -a` command to install all the latest available plug-ins that are in the repository:
+
 ```bash
-ibmcloud plugin install ./code-engine-darwin-amd64-1.23.2
+ibmcloud plugin install -a
 ```
-{: codeblock}
 
-```text
-Installing plugin './code-engine-darwin-amd64-1.23.2'...
-OK
-Plug-in 'code-engine 1.23.2' was successfully installed into /Users/username/.bluemix/plugins/code-engine. Use 'ibmcloud plugin show code-engine' to show its details.
-$
-```
-{: screen}
+### Installing multiple plug-ins
+{: #cli-install-multiple}
 
-## Installing a plug-in from a web URL
-{: #install-plugin-from-url}
+Use the `plugin install PLUGIN_NAME@VERSION` command to install multiple plug-ins at the same time. For example, use the following command to install the container-service@1.0.506 and the secrets-manager@0.1.25 plug-ins:
 
-Use the `ibmcloud plugin install URL` command to install a plug-in directly from a web URL. For example:
 ```bash
-ibmcloud plugin install http://example.com/downloads/my-plugin
+ibmcloud plugin install container-service@1.0.506 secrets-manager@0.1.25
+```
+
+For more information, see [`ibmcloud plugin install`](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_install).
+
+## Confirming installed plug-ins
+{: #cli-install-view}
+
+Use the `plugin list` command to confirm that all required plug-ins are installed in {{site.data.keyword.cloud_notm}} CLI. The `plugin list` command returns the following information for each plugin that is installed:
+
+* The plug-in name.
+* The current version of the plug-in.
+* Whether a more recent version of the plugin is available.
+* Whether the plug-in version supports private endpoint use.
+
+```bash
+ibmcloud plugin list
 ```
 
 ## Related information
