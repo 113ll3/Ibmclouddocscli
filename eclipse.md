@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-06-03"
+  years: 2021, 2023
+lastupdated: "2023-05-19"
 
 keywords: cli, developer extension, eclipse ide, IBM cloud cli
 
@@ -34,7 +34,6 @@ To use the Eclipse plug-in, install the following software:
 
 -	[Eclipse](https://www.eclipse.org/downloads/){: external}
 -	[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli)
-- [{{site.data.keyword.containerlong_notm}} CLI plug-in](/docs/cli?topic=cli-install-devtools-manually#idt-install-kubernetes-cli-plugin)
 
 If you install the {{site.data.keyword.cloud_notm}} CLI in a custom directory, set the system property `ibmcloud_eclipse_cli_path` to the custom location of the {{site.data.keyword.cloud_notm}} CLI installation. For example, `-Dcom.ibmcloud.eclipse.cli.path=<path-to-ibmcloud-cli-installation>`. Specify this location in the `eclipse.ini` file under `vmargs`.
 

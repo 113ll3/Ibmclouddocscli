@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-17"
+lastupdated: "2023-05-19"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, cli, command line, command-line, developer tools, plugin install
 
@@ -108,7 +108,5 @@ ibmcloud plugin list
 
 You can also install a plug-in from a URL, download a plug-in, or install a plug-in binary locally:
 
-* To install a plug-in from a URL, see [`ibmcloud plugin install`](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_install).
+* To install a plug-in locally or from a URL, see [`ibmcloud plugin install`](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_install).
 * To download a plug-in, see [How do I download a plug-in?](/docs/cli?topic=cli-ibm-cli-faq#cli-install-download-local)
-* To install a plug-in locally, see [`ibmcloud plugin install`](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_install).
-

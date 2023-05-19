@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-04-11"
+lastupdated: "2023-05-19"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli, IBM Cloud CLI installer, installing IBM Cloud CLI, install IBM Cloud CLI
 content-type: tutorial
@@ -31,10 +31,10 @@ The installation command in this tutorial installs the latest stand-alone {{site
 * `Helm`
 * `kubectl`
 * `curl` (Linux&trade; only)
-* [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} plug-in](/docs/cli?topic=cli-install-devtools-manually#idt-install-functions)
-* [{{site.data.keyword.cos_full_notm}} plug-in](/docs/cli?topic=cli-install-devtools-manually#install-cos-cli-plugin)
-* [{{site.data.keyword.registrylong_notm}} plug-in](/docs/cli?topic=cli-install-devtools-manually#idt-install-container-registry-cli-plugin)
-* [{{site.data.keyword.containerlong_notm}} plug-in](/docs/cli?topic=cli-install-devtools-manually#idt-install-kubernetes-cli-plugin)
+* {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} plug-in
+* {{site.data.keyword.cos_full_notm}} plug-in
+* {{site.data.keyword.registrylong_notm}} plug-in
+* {{site.data.keyword.containerlong_notm}} plug-in
 
 Want to start working with the {{site.data.keyword.cloud_notm}} CLI? Try out {{site.data.keyword.cloud-shell_notm}}, which gives you a personal cloud-based shell workspace with the full {{site.data.keyword.cloud_notm}} CLI and tons of command-line tools - no installation needed. To get started, click the {{site.data.keyword.cloud-shell_short}} icon ![{{site.data.keyword.cloud-shell_notm}} icon](../icons/terminal-cloud-shell.svg) in the {{site.data.keyword.cloud_notm}} console menu bar. For more information, see [Getting started with {{site.data.keyword.cloud-shell_notm}}](/docs/cloud-shell?topic=cloud-shell-getting-started).
 {: tip}
@@ -100,7 +100,7 @@ The output lists the usage instructions, the current version, and the supported 
 {: #step3-install-idt-manually}
 {: step}
 
-To manually install the CLI plug-ins and tools, see [installing the tools and plug-ins manually](/docs/cli?topic=cli-install-devtools-manually).
+To manually install the CLI plug-ins and tools, see [Extending IBM Cloud CLI with plug-ins](/docs/cli?topic=cli-plug-ins).
 
 ## Configure your environment
 {: #step4-configure-idt-env}
