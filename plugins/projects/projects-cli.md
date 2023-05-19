@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-17"
+lastupdated: "2023-05-19"
 
 subcollection: cli
 
@@ -41,8 +41,9 @@ You're notified on the command line when updates to the {{site.data.keyword.clou
 Create a new project and asynchronously setup the tools to manage it. Add a deployable architecture by customizing the configuration. After the changes are validated and approved, deploy the resources that the project configures.
 
 ```sh
-ibmcloud project create --resource-group RESOURCE-GROUP --location LOCATION --name NAME [--description DESCRIPTION] [--configs CONFIGS]
+ibmcloud project create --resource-group RESOURCE-GROUP --location LOCATION --name NAME [--description DESCRIPTION] [--destroy-on-delete DESTROY-ON-DELETE] [--configs CONFIGS]
 ```
+
 
 ### Command options
 {: #project-create-cli-options}
@@ -67,21 +68,29 @@ ibmcloud project create --resource-group RESOURCE-GROUP --location LOCATION --na
 
     The maximum length is `1024` characters. The minimum length is `0` characters. The value must match regular expression `/^$|^(?!\\s).*\\S$/`.
 
+`--destroy-on-delete` (bool)
+:   The policy that indicates whether the resources are destroyed or not when a project is deleted.
+
+    The default value is `true`.
+
 `--configs` ([`ProjectConfigPrototype[]`](#cli-project-config-prototype-example-schema))
 :   The project configurations.
 
     The maximum length is `10000` items. The minimum length is `0` items.
+
+    Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--configs=@path/to/file.json`.
 
 ### Example
 {: #project-create-examples}
 
 ```sh
 ibmcloud project create \
-    --resource-group=exampleString \
-    --location=exampleString \
+    --resource-group=Default \
+    --location=us-south \
     --name=acme-microservice \
     --description='A microservice to deploy on top of ACME infrastructure.' \
-    --configs='[{"id": "exampleString", "name": "common-variables", "labels": ["exampleString"], "description": "exampleString", "locator_id": "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.018edf04-e772-4ca2-9785-03e8e03bef72-global", "input": [{"name": "exampleString", "value": "exampleString"}], "setting": [{"name": "exampleString", "value": "exampleString"}]}]'
+    --destroy-on-delete=true \
+    --configs='[{"id": "exampleString", "name": "common-variables", "labels": ["exampleString"], "description": "exampleString", "authorizations": {"trusted_profile": {"id": "exampleString", "target_iam_id": "exampleString"}, "method": "exampleString", "api_key": "exampleString"}, "compliance_profile": {"id": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}, "locator_id": "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.018edf04-e772-4ca2-9785-03e8e03bef72-global", "input": [{"name": "exampleString", "value": "exampleString"}], "setting": [{"name": "exampleString", "value": "exampleString"}]}]'
 ```
 {: pre}
 
@@ -89,11 +98,12 @@ ibmcloud project create \
 {: #project-cli-list-command}
 
 List existing projects. Projects are sorted by ID.
-Note: If the `--all-pages` option is not set, the command only retrieves a single page of the collection.
+Note: If the `--all-pages` option is not set, the command will only retrieve a single page of the collection.
 
 ```sh
-ibmcloud project list [--start START] [--limit LIMIT] [--complete COMPLETE]
+ibmcloud project list [--start START] [--limit LIMIT]
 ```
+
 
 ### Command options
 {: #project-list-cli-options}
@@ -106,12 +116,7 @@ ibmcloud project list [--start START] [--limit LIMIT] [--complete COMPLETE]
 `--limit` (int64)
 :   Determine the maximum number of resources to return. The number of resources that are returned is the same, with the exception of the last page.
 
-    The maximum value is `100`. The minimum value is `1`.
-
-`--complete` (bool)
-:   Determines whether the metadata should be returned. Only the metadata for the project is returned.
-
-    The default value is `false`.
+    The default value is `10`. The maximum value is `100`. The minimum value is `1`.
 
 `--all-pages` (bool)
 :   Invoke multiple requests to display all pages of the collection for list.
@@ -122,8 +127,7 @@ ibmcloud project list [--start START] [--limit LIMIT] [--complete COMPLETE]
 ```sh
 ibmcloud project list \
     --start=exampleString \
-    --limit=10 \
-    --complete=false
+    --limit=10
 ```
 {: pre}
 
@@ -189,35 +193,24 @@ A projects list results example
 Get information about a project.
 
 ```sh
-ibmcloud project get --id ID [--exclude-configs EXCLUDE-CONFIGS] [--complete COMPLETE]
+ibmcloud project get --id ID
 ```
+
 
 ### Command options
 {: #project-get-cli-options}
 
 `--id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
-
-`--exclude-configs` (bool)
-:   When set to true, `exclude_configs` returns only active configurations. Draft configurations are not returned.
-
-    The default value is `false`.
-
-`--complete` (bool)
-:   Determines whether the metadata should be returned. Only the metadata for the project is returned.
-
-    The default value is `false`.
 
 ### Example
 {: #project-get-examples}
 
 ```sh
 ibmcloud project get \
-    --id=exampleString \
-    --exclude-configs=false \
-    --complete=false
+    --id=exampleString
 ```
 {: pre}
 
@@ -412,18 +405,17 @@ Delete a project document by the ID. A project can only be deleted after deletin
 ibmcloud project delete --id ID [--destroy DESTROY]
 ```
 
+
 ### Command options
 {: #project-delete-cli-options}
 
 `--id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 `--destroy` (bool)
 :   The flag that indicates if the resources deployed by Schematics should be destroyed.
-
-    The default value is `false`.
 
 ### Example
 {: #project-delete-examples}
@@ -431,7 +423,7 @@ ibmcloud project delete --id ID [--destroy DESTROY]
 ```sh
 ibmcloud project delete \
     --id=exampleString \
-    --destroy=false
+    --destroy=true
 ```
 {: pre}
 
@@ -441,14 +433,15 @@ ibmcloud project delete \
 Add a new configuration to a project.
 
 ```sh
-ibmcloud project config-create --project-id PROJECT-ID --name NAME --locator-id LOCATOR-ID [--id ID] [--labels LABELS] [--description DESCRIPTION] [--input INPUT] [--setting SETTING]
+ibmcloud project config-create --project-id PROJECT-ID --name NAME --locator-id LOCATOR-ID [--id ID] [--labels LABELS] [--description DESCRIPTION] [--authorizations AUTHORIZATIONS] [--compliance-profile COMPLIANCE-PROFILE] [--input INPUT] [--setting SETTING]
 ```
+
 
 ### Command options
 {: #project-config-create-cli-options}
 
 `--project-id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
@@ -477,15 +470,29 @@ ibmcloud project config-create --project-id PROJECT-ID --name NAME --locator-id 
 
     The maximum length is `1024` characters. The minimum length is `0` characters. The value must match regular expression `/^$|^(?!\\s).*\\S$/`.
 
+`--authorizations` ([`ProjectConfigAuth`](#cli-project-config-auth-example-schema))
+:   The authorization for a configuration. You can authorize by using a trusted profile or an API key in Secrets Manager.
+
+    Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--authorizations=@path/to/file.json`.
+
+`--compliance-profile` ([`ProjectConfigComplianceProfile`](#cli-project-config-compliance-profile-example-schema))
+:   The profile required for compliance.
+
+    Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--compliance-profile=@path/to/file.json`.
+
 `--input` ([`ProjectConfigInputVariable[]`](#cli-project-config-input-variable-example-schema))
 :   The input values to use to deploy the configuration.
 
     The maximum length is `10000` items. The minimum length is `0` items.
 
+    Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--input=@path/to/file.json`.
+
 `--setting` ([`ProjectConfigSettingCollection[]`](#cli-project-config-setting-collection-example-schema))
 :   Schematics environment variables to use to deploy the configuration.
 
     The maximum length is `10000` items. The minimum length is `0` items.
+
+    Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--setting=@path/to/file.json`.
 
 ### Example
 {: #project-config-create-examples}
@@ -498,6 +505,8 @@ ibmcloud project config-create \
     --id=exampleString \
     --labels=env:stage,governance:test,build:0 \
     --description='Stage environment configuration, which includes services common to all the environment regions. There must be a blueprint configuring all the services common to the stage regions. It is a terraform_template type of configuration that points to a Github repo hosting the terraform modules that can be deployed by a Schematics Workspace.' \
+    --authorizations='{"trusted_profile": {"id": "exampleString", "target_iam_id": "exampleString"}, "method": "exampleString", "api_key": "exampleString"}' \
+    --compliance-profile='{"id": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}' \
     --input='[{"name": "account_id", "value": "$configs[].name[\\"account-stage\\"].input.account_id"}]' \
     --setting='[{"name": "IBMCLOUD_TOOLCHAIN_ENDPOINT", "value": "https://api.us-south.devops.dev.cloud.ibm.com"}]'
 ```
@@ -554,14 +563,15 @@ Sample response for a project configuration
 The collection of configurations that are returned.
 
 ```sh
-ibmcloud project configs --project-id PROJECT-ID [--version VERSION] [--complete COMPLETE]
+ibmcloud project configs --project-id PROJECT-ID [--version VERSION]
 ```
+
 
 ### Command options
 {: #project-configs-cli-options}
 
 `--project-id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
@@ -570,19 +580,13 @@ ibmcloud project configs --project-id PROJECT-ID [--version VERSION] [--complete
 
     The default value is `active`. Allowable values are: `active`, `draft`, `mixed`.
 
-`--complete` (bool)
-:   Determines whether the metadata should be returned. Only the metadata for the project is returned.
-
-    The default value is `false`.
-
 ### Example
 {: #project-configs-examples}
 
 ```sh
 ibmcloud project configs \
     --project-id=exampleString \
-    --version=active \
-    --complete=false
+    --version=active
 ```
 {: pre}
 
@@ -672,19 +676,20 @@ Sample response for get project configs
 Returns the specified project configuration in a specific project.
 
 ```sh
-ibmcloud project config-get --project-id PROJECT-ID --id ID [--version VERSION] [--complete COMPLETE]
+ibmcloud project config-get --project-id PROJECT-ID --id ID [--version VERSION]
 ```
+
 
 ### Command options
 {: #project-config-get-cli-options}
 
 `--project-id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 `--id` (string)
-:   The unique identifier of the configuration. Required.
+:   The unique config ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
@@ -693,11 +698,6 @@ ibmcloud project config-get --project-id PROJECT-ID --id ID [--version VERSION] 
 
     The default value is `active`. The maximum length is `10` characters. The minimum length is `0` characters. The value must match regular expression `/^$|^(active|draft|\\d+)$/`.
 
-`--complete` (bool)
-:   Determines whether the metadata should be returned. Only the metadata for the project is returned.
-
-    The default value is `false`.
-
 ### Example
 {: #project-config-get-examples}
 
@@ -705,8 +705,7 @@ ibmcloud project config-get --project-id PROJECT-ID --id ID [--version VERSION] 
 ibmcloud project config-get \
     --project-id=exampleString \
     --id=exampleString \
-    --version=active \
-    --complete=false
+    --version=active
 ```
 {: pre}
 
@@ -761,29 +760,27 @@ Sample response for a project configuration
 Update a configuration in a project by the ID.
 
 ```sh
-ibmcloud project config-update --project-id PROJECT-ID --id ID --project-config PROJECT-CONFIG [--complete COMPLETE]
+ibmcloud project config-update --project-id PROJECT-ID --id ID --project-config PROJECT-CONFIG
 ```
+
 
 ### Command options
 {: #project-config-update-cli-options}
 
 `--project-id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 `--id` (string)
-:   The unique identifier of the configuration. Required.
+:   The unique config ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 `--project-config` ([`ProjectConfigPatchRequest`](#cli-project-config-patch-request-example-schema))
 :   The change delta of the project configuration to update. Required.
 
-`--complete` (bool)
-:   Determines whether the metadata should be returned. Only the metadata for the project is returned.
-
-    The default value is `false`.
+    Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--project-config=@path/to/file.json`.
 
 ### Example
 {: #project-config-update-examples}
@@ -792,8 +789,7 @@ ibmcloud project config-update --project-id PROJECT-ID --id ID --project-config 
 ibmcloud project config-update \
     --project-id=exampleString \
     --id=exampleString \
-    --project-config='{"name": "exampleString", "labels": ["exampleString"], "description": "exampleString", "locator_id": "exampleString", "input": [{"name": "account_id", "value": "$configs[].name[\\"account-stage\\"].input.account_id"}], "setting": [{"name": "exampleString", "value": "exampleString"}]}' \
-    --complete=false
+    --project-config='{"name": "exampleString", "labels": ["exampleString"], "description": "exampleString", "locator_id": "exampleString", "input": [{"name": "account_id", "value": "$configs[].name[\\"account-stage\\"].input.account_id"}], "setting": [{"name": "exampleString", "value": "exampleString"}]}'
 ```
 {: pre}
 
@@ -851,28 +847,27 @@ Delete a configuration in a project. Deleting the configuration will also destro
 ibmcloud project config-delete --project-id PROJECT-ID --id ID [--draft-only DRAFT-ONLY] [--destroy DESTROY]
 ```
 
+
 ### Command options
 {: #project-config-delete-cli-options}
 
 `--project-id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 `--id` (string)
-:   The unique identifier of the configuration. Required.
+:   The unique config ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 `--draft-only` (bool)
-:   The flag to determine whether only draft versions are deleted or all versions are deleted.
+:   The flag to determine if only the draft version should be deleted.
 
     The default value is `false`.
 
 `--destroy` (bool)
-:   The flag to determine whether the resources that were deployed by Schematics are destroyed or not.
-
-    The default value is `false`.
+:   The flag that indicates if the resources deployed by Schematics should be destroyed.
 
 ### Example
 {: #project-config-delete-examples}
@@ -882,7 +877,7 @@ ibmcloud project config-delete \
     --project-id=exampleString \
     --id=exampleString \
     --draft-only=false \
-    --destroy=false
+    --destroy=true
 ```
 {: pre}
 
@@ -899,25 +894,26 @@ An example of the delete configuration response.
 ```
 {: screen}
 
-## `ibmcloud project merge`
-{: #project-cli-merge-command}
+## `ibmcloud project config-approve`
+{: #project-cli-config-approve-command}
 
-Approves and merges configuration edits to the main configuration.
+Approve and merge configuration edits to the main configuration.
 
 ```sh
-ibmcloud project merge --project-id PROJECT-ID --id ID [--comment COMMENT] [--complete COMPLETE]
+ibmcloud project config-approve --project-id PROJECT-ID --id ID [--comment COMMENT]
 ```
 
+
 ### Command options
-{: #project-merge-cli-options}
+{: #project-config-approve-cli-options}
 
 `--project-id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 `--id` (string)
-:   The unique identifier of the configuration. Required.
+:   The unique config ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
@@ -926,25 +922,19 @@ ibmcloud project merge --project-id PROJECT-ID --id ID [--comment COMMENT] [--co
 
     The maximum length is `1024` characters. The minimum length is `1` character. The value must match regular expression `/^(?!\\s).+\\S$/`.
 
-`--complete` (bool)
-:   Determines whether the metadata should be returned. Only the metadata for the project is returned.
-
-    The default value is `false`.
-
 ### Example
-{: #project-merge-examples}
+{: #project-config-approve-examples}
 
 ```sh
-ibmcloud project merge \
+ibmcloud project config-approve \
     --project-id=exampleString \
     --id=exampleString \
-    --comment='Approving the changes' \
-    --complete=false
+    --comment='Approving the changes'
 ```
 {: pre}
 
 ### Example output
-{: #project-merge-cli-output}
+{: #project-config-approve-cli-output}
 
 Sample response for a project configuration
 
@@ -991,22 +981,23 @@ Sample response for a project configuration
 ## `ibmcloud project config-check`
 {: #project-cli-config-check-command}
 
-Runs a validation check on a given configuration in project. The check includes creating or updating the associated Schematics workspace with a plan job, running the Code Risk Analyzer scans, and cost estimatation.
+Run a validation check on a given configuration in project. The check includes creating or updating the associated schematics workspace with a plan job, running the CRA scans, and cost estimatation.
 
 ```sh
-ibmcloud project config-check --project-id PROJECT-ID --id ID [--x-auth-refresh-token X-AUTH-REFRESH-TOKEN] [--complete COMPLETE] [--version VERSION]
+ibmcloud project config-check --project-id PROJECT-ID --id ID [--x-auth-refresh-token X-AUTH-REFRESH-TOKEN] [--version VERSION]
 ```
+
 
 ### Command options
 {: #project-config-check-cli-options}
 
 `--project-id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 `--id` (string)
-:   The unique identifier of the configuration. Required.
+:   The unique config ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
@@ -1015,15 +1006,10 @@ ibmcloud project config-check --project-id PROJECT-ID --id ID [--x-auth-refresh-
 
     The maximum length is `512` characters. The minimum length is `0` characters. The value must match regular expression `/^$|^(?!\\s).*\\S$/`.
 
-`--complete` (bool)
-:   Determines whether the metadata should be returned. Only the metadata for the project is returned.
-
-    The default value is `false`.
-
 `--version` (string)
-:   The version of the configuration to validate.
+:   The version of the configuration that the validation check should trigger against.
 
-    The default value is `active`. The maximum length is `10` characters. The minimum length is `0` characters. The value must match regular expression `/^$|^(active|draft)$/` The allowable values are: `active`, `draft`, `mixed`.
+    The default value is `active`. The maximum length is `10` characters. The minimum length is `0` characters. The value must match regular expression `/^$|^(active|draft)$/`.
 
 ### Example
 {: #project-config-check-examples}
@@ -1033,7 +1019,6 @@ ibmcloud project config-check \
     --project-id=exampleString \
     --id=exampleString \
     --x-auth-refresh-token=exampleString \
-    --complete=false \
     --version=active
 ```
 {: pre}
@@ -1086,29 +1071,25 @@ Sample response for a project configuration
 ## `ibmcloud project config-install`
 {: #project-cli-config-install-command}
 
-Deploys a project's configuration. It's an asynchronous operation that can be tracked by running the `ibmcloud project config-get --project-id=<prj-id> --id=<conf-id> --complete=true` command.
+Deploy a project's configuration. It's an asynchronous operation that can be tracked using the get project configuration API with full metadata.
 
 ```sh
-ibmcloud project config-install --project-id PROJECT-ID --id ID [--complete COMPLETE]
+ibmcloud project config-install --project-id PROJECT-ID --id ID
 ```
+
 
 ### Command options
 {: #project-config-install-cli-options}
 
 `--project-id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 `--id` (string)
-:   The unique identifier of the configuration. Required.
+:   The unique config ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
-
-`--complete` (bool)
-:   Determines whether the metadata should be returned. Only the metadata for the project is returned.
-
-    The default value is `false`.
 
 ### Example
 {: #project-config-install-examples}
@@ -1116,8 +1097,7 @@ ibmcloud project config-install --project-id PROJECT-ID --id ID [--complete COMP
 ```sh
 ibmcloud project config-install \
     --project-id=exampleString \
-    --id=exampleString \
-    --complete=false
+    --id=exampleString
 ```
 {: pre}
 
@@ -1169,22 +1149,23 @@ Sample response for a project configuration
 ## `ibmcloud project config-uninstall`
 {: #project-cli-config-uninstall-command}
 
-Destroys a project's configuration resources. The operation destroys all the resources that are deployed with the specific configuration. You can track it by running the `ibmcloud project config-get --project-id=<prj-id> --id=<conf-id> --complete=true` command.
+Destroy a project's configuration resources. The operation destroys all the resources that are deployed with the specific configuration. You can track it by using the get project configuration API with full metadata.
 
 ```sh
 ibmcloud project config-uninstall --project-id PROJECT-ID --id ID
 ```
 
+
 ### Command options
 {: #project-config-uninstall-cli-options}
 
 `--project-id` (string)
-:   The unique identifier of the project. Required.
+:   The unique project ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 `--id` (string)
-:   The unique identifier of the configuration. Required.
+:   The unique config ID. Required.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
@@ -1229,10 +1210,43 @@ ibmcloud schematics logs --id WORKSPACE_ID [--act-id ACTION_ID]
 
 The following schema examples represent the data that you need to specify for a command option. These examples model the data structure and include placeholder values for the expected value type. When you run a command, replace these values with the values that apply to your environment as appropriate.
 
+### ProjectConfigAuth
+{: #cli-project-config-auth-example-schema}
+
+The following example shows the format of the ProjectConfigAuth object.
+
+```json
+
+{
+  "trusted_profile" : {
+    "id" : "exampleString",
+    "target_iam_id" : "exampleString"
+  },
+  "method" : "exampleString",
+  "api_key" : "exampleString"
+}
+```
+{: codeblock}
+
+### ProjectConfigComplianceProfile
+{: #cli-project-config-compliance-profile-example-schema}
+
+The following example shows the format of the ProjectConfigComplianceProfile object.
+
+```json
+
+{
+  "id" : "exampleString",
+  "attachment_id" : "exampleString",
+  "profile_name" : "exampleString"
+}
+```
+{: codeblock}
+
 ### ProjectConfigInputVariable[]
 {: #cli-project-config-input-variable-example-schema}
 
-The following example shows the format of the `ProjectConfigInputVariable[]` object.
+The following example shows the format of the ProjectConfigInputVariable[] object.
 
 ```json
 
@@ -1246,7 +1260,7 @@ The following example shows the format of the `ProjectConfigInputVariable[]` obj
 ### ProjectConfigPatchRequest
 {: #cli-project-config-patch-request-example-schema}
 
-The following example shows the format of the `ProjectConfigPatchRequest` object.
+The following example shows the format of the ProjectConfigPatchRequest object.
 
 ```json
 
@@ -1270,7 +1284,7 @@ The following example shows the format of the `ProjectConfigPatchRequest` object
 ### ProjectConfigPrototype[]
 {: #cli-project-config-prototype-example-schema}
 
-The following example shows the format of the `ProjectConfigPrototype[]` object.
+The following example shows the format of the ProjectConfigPrototype[] object.
 
 ```json
 
@@ -1279,6 +1293,19 @@ The following example shows the format of the `ProjectConfigPrototype[]` object.
   "name" : "common-variables",
   "labels" : [ "exampleString" ],
   "description" : "exampleString",
+  "authorizations" : {
+    "trusted_profile" : {
+      "id" : "exampleString",
+      "target_iam_id" : "exampleString"
+    },
+    "method" : "exampleString",
+    "api_key" : "exampleString"
+  },
+  "compliance_profile" : {
+    "id" : "exampleString",
+    "attachment_id" : "exampleString",
+    "profile_name" : "exampleString"
+  },
   "locator_id" : "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.018edf04-e772-4ca2-9785-03e8e03bef72-global",
   "input" : [ {
     "name" : "exampleString",
