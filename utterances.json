@@ -15,7 +15,6 @@
     "view the URL of an app running on IBM Cloud"
   ],
   "cli-install-devtools-manually": [
-    "where can I find cloud foundry command line interface",
     "steps to install IBM Cloud CLI",
     "installing Cloud CLI",
     "where is the command line",
@@ -31,7 +30,6 @@
   "ts-cli-docker": [
     "how do I deploy docker images with ibm cloud",
     "Not able to push docker image",
-    "how to deploy docker image on cloud foundry application",
     "How to deploy docker image",
     "How to deploy docker image on IBM Kubernets",
     "cannot push docker image to registry",
