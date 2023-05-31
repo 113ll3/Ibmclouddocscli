@@ -21,9 +21,8 @@ toc:
       id: howto
       topics:
       - reference/ibmcloud/download_cli.md
-      - install-devtools-manually.md
-      - cli-private-endpoints.md
       - reference/ibmcloud/extend_cli.md
+      - cli-private-endpoints.md
       - ibmcloud_home.md
       - reference/ibmcloud/enable_cli_autocompletion.md
       - quote-strings.md
