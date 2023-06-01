@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2023
-lastupdated: "2023-04-28"
+lastupdated: "2023-06-01"
 
 keywords: cli, ibmcloud dev commands, developer cli, dev commands, devtools, developer tools, dev tools, ic dev commands, cli private endpoints, tekton pipelines, classic pipelines, toolchains
 
@@ -430,7 +430,8 @@ Command parameters that are entered on the command line take precedence over the
 
 View the details of a toolchain. If no toolchain name is provided, you can select one from a list. 
 
-Uses the targeted resource group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry-based toolchains might not be compatible with this command.
+Uses the targeted resource group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_cli#ibmcloud_target).
+
 ```bash
 ibmcloud dev toolchain-get [toolchainName] [--output JSON]
 ```
@@ -484,7 +485,7 @@ Command parameters that are entered on the command line take precedence over the
 
 View a list of toolchains in the current resource group. 
 
-Uses the targeted Resource Group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_cli#ibmcloud_target). Some Cloud Foundry-based toolchains might not be compatible with this command.
+Uses the targeted Resource Group in the `IBMCLOUD API Key`. For more information, see [Set or View the target Account, Region or Resource Group](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_cli#ibmcloud_target).
 
 ```bash
 ibmcloud dev toolchains [--output JSON]

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-01-27"
+lastupdated: "2023-06-01"
 
 keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
@@ -17,6 +17,9 @@ subcollection: cli
 
 Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage accounts, users in an account, and the org, space, and roles of public Cloud Foundry environments.
 {: shortdesc}
+
+{{site.data.keyword.ibmcf_full}} is deprecated with an end-of-support date of 1 June 2023. For more information, see [Deprecation of IBM Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
+{: deprecated}
 
 ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}

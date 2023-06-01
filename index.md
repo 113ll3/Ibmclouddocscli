@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-29"
+lastupdated: "2023-06-01"
 
 keywords: command line interface, cli, getting started, getting started with IBM Cloud CLI, getting started with IBM Cloud CLI and developer tools tutorial, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, cloud cli, cloud command line, developer tools, dev tools, install cloud cli, getting started cli, ibm cloud cli, IBM Cloud CLI installer, installing IBM Cloud CLI, install IBM Cloud CLI
 content-type: tutorial
@@ -93,26 +93,14 @@ To manually install the CLI plug-ins and tools, see [Extending IBM Cloud CLI wit
 {: #step4-configure-idt-env}
 {: step}
 
-1. Log in to {{site.data.keyword.cloud_notm}} with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
-    ```text
-    ibmcloud login
-    ```
-    {: codeblock}
+Log in to {{site.data.keyword.cloud_notm}} with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
+   ```text
+   ibmcloud login
+   ```
+   {: codeblock}
 
-    If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
-    {: tip}
-
-2. If you plan to access Cloud Foundry services, specify a Cloud Foundry org and space. You can run the following command to interactively identify the org and space:
-    ```text
-    ibmcloud target --cf
-    ```
-    {: codeblock}
-
-    Or, if you know which org and space that the service belongs to, you can use the following command:
-    ```text
-    ibmcloud target -o <value> -s <value>
-    ```
-    {: codeblock}
+If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
+{: tip}
 
 ## Next steps
 {: #next-steps}

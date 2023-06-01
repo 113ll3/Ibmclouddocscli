@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-10-28"
+  years: 2018, 2023
+lastupdated: "2023-06-01"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -21,6 +21,8 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 There are extra CLI commands and capabilities for catalogs. You can use the Catalogs management CLI plug-in to manage your private catalogs and onboard new private software. For more information, see [Catalogs management CLI plug-in](/docs/cli?topic=cli-manage-catalogs-plugin). 
 {: note}
 
+{{site.data.keyword.ibmcf_full}} is deprecated with an end-of-support date of 1 June 2023. For more information, see [Deprecation of IBM Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
+{: deprecated}
   
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
