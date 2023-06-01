@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-04-28"
+lastupdated: "2023-06-01"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -282,7 +282,7 @@ ibmcloud config --locale CLEAR
 ## ibmcloud cf
 {: #ibmcloud_cf}
 
-{{site.data.keyword.ibmcf_full}} is deprecated. As of 30 November 2022 new {{site.data.keyword.ibmcf_full}} applications cannot be created and only existing users will be able to deploy applications. End-of-support happens on 1 June 2023. Any instances that still exist on 1 June 2023 will be deleted. 
+{{site.data.keyword.ibmcf_full}} is deprecated with an end-of-support date of 1 June 2023. For more information, see [Deprecation of IBM Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation). 
 {: deprecated}
 
 Use a Cloud Foundry CLI that's managed by IBM to work with Cloud Foundry resources through the {{site.data.keyword.cloud_notm}} CLI. If you have a separate Cloud Foundry CLI (`cf`) installation, don't use both `ibmcloud cf` commands and `cf` commands in the same context. Instead, use only `ibmcloud cf [command]` to manage resources in the {{site.data.keyword.cloud_notm}} CLI context. 
@@ -326,7 +326,7 @@ ibmcloud -q cf services
 ## ibmcloud cf install
 {: #ibmcloud_cf_install}
 
-{{site.data.keyword.ibmcf_full}} is deprecated. As of 30 November 2022 new {{site.data.keyword.ibmcf_full}} applications cannot be created and only existing users will be able to deploy applications. End-of-support happens on 1 June 2023. Any instances that still exist on 1 June 2023 will be deleted. 
+{{site.data.keyword.ibmcf_full}} is deprecated with an end-of-support date of 1 June 2023. For more information, see [Deprecation of IBM Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
 {: deprecated}
 
 Install the Cloud Foundry CLI for the {{site.data.keyword.cloud_notm}} CLI, or update an existing installation.
