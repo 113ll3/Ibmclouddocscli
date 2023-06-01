@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-19"
+lastupdated: "2023-06-01"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, cli, command line, command-line, developer tools, plugin install
 
@@ -77,6 +77,7 @@ Use the `plugin install -a` command to install all the latest available plug-ins
 ```bash
 ibmcloud plugin install -a
 ```
+{: codeblock}
 
 ### Installing multiple plug-ins
 {: #cli-install-multiple}
@@ -86,6 +87,7 @@ Use the `plugin install PLUGIN_NAME@VERSION` command to install multiple plug-in
 ```bash
 ibmcloud plugin install container-service@1.0.506 secrets-manager@0.1.25
 ```
+{: codeblock}
 
 For more information, see [`ibmcloud plugin install`](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_install).
 
@@ -102,6 +104,7 @@ Use the `plugin list` command to confirm that all required plug-ins are installe
 ```bash
 ibmcloud plugin list
 ```
+{: codeblock}
 
 ## Related information
 {: #cli-install-relinfo}
