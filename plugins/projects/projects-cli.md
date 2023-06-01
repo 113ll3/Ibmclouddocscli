@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-19"
+lastupdated: "2023-05-30"
 
 subcollection: cli
 
@@ -90,7 +90,7 @@ ibmcloud project create \
     --name=acme-microservice \
     --description='A microservice to deploy on top of ACME infrastructure.' \
     --destroy-on-delete=true \
-    --configs='[{"id": "exampleString", "name": "common-variables", "labels": ["exampleString"], "description": "exampleString", "authorizations": {"trusted_profile": {"id": "exampleString", "target_iam_id": "exampleString"}, "method": "exampleString", "api_key": "exampleString"}, "compliance_profile": {"id": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}, "locator_id": "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.018edf04-e772-4ca2-9785-03e8e03bef72-global", "input": [{"name": "exampleString", "value": "exampleString"}], "setting": [{"name": "exampleString", "value": "exampleString"}]}]'
+    --configs='[{"id": "exampleString", "name": "common-variables", "labels": ["exampleString"], "description": "exampleString", "authorizations": {"trusted_profile": {"id": "exampleString", "target_iam_id": "exampleString"}, "method": "exampleString", "api_key": "exampleString"}, "compliance_profile": {"id": "exampleString", "instance_id": "exampleString", "instance_location": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}, "locator_id": "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.018edf04-e772-4ca2-9785-03e8e03bef72-global", "input": [{"name": "exampleString", "value": "exampleString"}], "setting": [{"name": "exampleString", "value": "exampleString"}]}]'
 ```
 {: pre}
 
@@ -506,7 +506,7 @@ ibmcloud project config-create \
     --labels=env:stage,governance:test,build:0 \
     --description='Stage environment configuration, which includes services common to all the environment regions. There must be a blueprint configuring all the services common to the stage regions. It is a terraform_template type of configuration that points to a Github repo hosting the terraform modules that can be deployed by a Schematics Workspace.' \
     --authorizations='{"trusted_profile": {"id": "exampleString", "target_iam_id": "exampleString"}, "method": "exampleString", "api_key": "exampleString"}' \
-    --compliance-profile='{"id": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}' \
+    --compliance-profile='{"id": "exampleString", "instance_id": "exampleString", "instance_location": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}' \
     --input='[{"name": "account_id", "value": "$configs[].name[\\"account-stage\\"].input.account_id"}]' \
     --setting='[{"name": "IBMCLOUD_TOOLCHAIN_ENDPOINT", "value": "https://api.us-south.devops.dev.cloud.ibm.com"}]'
 ```
@@ -789,7 +789,7 @@ ibmcloud project config-update --project-id PROJECT-ID --id ID --project-config 
 ibmcloud project config-update \
     --project-id=exampleString \
     --id=exampleString \
-    --project-config='{"name": "exampleString", "labels": ["exampleString"], "description": "exampleString", "locator_id": "exampleString", "input": [{"name": "account_id", "value": "$configs[].name[\\"account-stage\\"].input.account_id"}], "setting": [{"name": "exampleString", "value": "exampleString"}]}'
+    --project-config='{"name": "exampleString", "labels": ["exampleString"], "description": "exampleString", "authorizations": {"trusted_profile": {"id": "exampleString", "target_iam_id": "exampleString"}, "method": "exampleString", "api_key": "exampleString"}, "compliance_profile": {"id": "exampleString", "instance_id": "exampleString", "instance_location": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}, "locator_id": "exampleString", "input": [{"name": "account_id", "value": "$configs[].name[\\"account-stage\\"].input.account_id"}], "setting": [{"name": "exampleString", "value": "exampleString"}]}'
 ```
 {: pre}
 
@@ -1237,6 +1237,8 @@ The following example shows the format of the ProjectConfigComplianceProfile obj
 
 {
   "id" : "exampleString",
+  "instance_id" : "exampleString",
+  "instance_location" : "exampleString",
   "attachment_id" : "exampleString",
   "profile_name" : "exampleString"
 }
@@ -1268,6 +1270,21 @@ The following example shows the format of the ProjectConfigPatchRequest object.
   "name" : "exampleString",
   "labels" : [ "exampleString" ],
   "description" : "exampleString",
+  "authorizations" : {
+    "trusted_profile" : {
+      "id" : "exampleString",
+      "target_iam_id" : "exampleString"
+    },
+    "method" : "exampleString",
+    "api_key" : "exampleString"
+  },
+  "compliance_profile" : {
+    "id" : "exampleString",
+    "instance_id" : "exampleString",
+    "instance_location" : "exampleString",
+    "attachment_id" : "exampleString",
+    "profile_name" : "exampleString"
+  },
   "locator_id" : "exampleString",
   "input" : [ {
     "name" : "account_id",
@@ -1303,6 +1320,8 @@ The following example shows the format of the ProjectConfigPrototype[] object.
   },
   "compliance_profile" : {
     "id" : "exampleString",
+    "instance_id" : "exampleString",
+    "instance_location" : "exampleString",
     "attachment_id" : "exampleString",
     "profile_name" : "exampleString"
   },
