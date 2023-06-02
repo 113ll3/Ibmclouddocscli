@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-01"
+lastupdated: "2023-06-02"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -35,7 +35,7 @@ Log in
 :   Use the [`ibmcloud login` command](#ibmcloud_login) to log in. If you log in with a federated ID, use the `--sso` option to authenticate with a one time passcode. Or use the `--apikey` option to authenticate with an API key.
 
 Target
-:   Use the [`ibmcloud target` command](#ibmcloud_target) to set an org and space.
+:   Use the [`ibmcloud target` command](#ibmcloud_target) to set or view the target account or region.
 
 ## Global options
 {: #global-options}
@@ -279,110 +279,13 @@ ibmcloud config --locale CLEAR
 ```
 {: codeblock}
 
-## ibmcloud cf
-{: #ibmcloud_cf}
-
-{{site.data.keyword.ibmcf_full}} is deprecated with an end-of-support date of 1 June 2023. For more information, see [Deprecation of IBM Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation). 
-{: deprecated}
-
-Use a Cloud Foundry CLI that's managed by IBM to work with Cloud Foundry resources through the {{site.data.keyword.cloud_notm}} CLI. If you have a separate Cloud Foundry CLI (`cf`) installation, don't use both `ibmcloud cf` commands and `cf` commands in the same context. Instead, use only `ibmcloud cf [command]` to manage resources in the {{site.data.keyword.cloud_notm}} CLI context. 
-
-When you use the `ibmcloud cf` command, authentication is handled by the {{site.data.keyword.cloud_notm}} CLI. Instead of running the `ibmcloud cf api/login/logout/target` commands, use `ibmcloud api/login/logout/target`.
-{: tip}
-
-Invoke the Cloud Foundry CLI.
-
-```bash
-ibmcloud [-q, --quiet] cf COMMAND...
-```
-
-### Prerequisites
-{: #info-prereqs}
-
-Run [`ibmcloud cf install`](#ibmcloud_cf_install) to install the Cloud Foundry CLI.
-
-### Command options
-{: #info-options}
-
--q, --quiet
-:   Do not display the invoking message.
-
-### Examples
-{: #info-examples}
-
-List Cloud Foundry apps:
-
-```bash
-ibmcloud cf apps
-```
-
-List Cloud Foundry services without displaying the `Invoking cf command...` message:
-
-```bash
-ibmcloud -q cf services
-```
-{: codeblock}
-
-## ibmcloud cf install
-{: #ibmcloud_cf_install}
-
-{{site.data.keyword.ibmcf_full}} is deprecated with an end-of-support date of 1 June 2023. For more information, see [Deprecation of IBM Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
-{: deprecated}
-
-Install the Cloud Foundry CLI for the {{site.data.keyword.cloud_notm}} CLI, or update an existing installation.
-
-```bash
-ibmcloud cf install [-v, --version VERSION] [--restore] [-f, --force]
-```
-
-### Prerequisites
-{: #cfinstall-prereqs}
-
-None.
-
-### Command options
-{: #cfinstall-options}
-
--v, --version<
-:   Specify version of Cloud Foundry CLI to install.
-
---restore
-:   Restore to pre-bundled version of Cloud Foundry CLI.
-
--f, --force
-:   Force installation without confirmation.
-
-### Examples
-{: #cfinstall-examples}
-
-Install Cloud Foundry CLI `6.44.1`:
-
-```bash
-ibmcloud cf install -v 6.44.1
-```
-{: codeblock}
-
-Install the most recent version of the Cloud Foundry CLI without confirmation:
-
-```bash
-ibmcloud cf install -f
-```
-{: codeblock}
-
-Restore to the default bundled Cloud Foundry CLI:
-
-```bash
-ibmcloud cf install --restore
-```
-{: codeblock}
-
 ## ibmcloud login
 {: #ibmcloud_login}
 
 Log in to the {{site.data.keyword.cloud_notm}} CLI:
 
 ```bash
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--cr-token (TOKEN | @CR_TOKEN_FILE) | --vpc-cri] [--profile PROFILE_ID | PROFILE_NAME | PROFILE_CRN] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [--accept] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [-o ORG] [-s SPACE] [--vpc]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--cr-token (TOKEN | @CR_TOKEN_FILE) | --vpc-cri] [--profile PROFILE_ID | PROFILE_NAME | PROFILE_CRN] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] [--accept] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)] [-r REGION | --no-region] [--vpc]
 ```
 {: codeblock}
 
@@ -436,12 +339,6 @@ None.
 --no-region
 :   Forced login without targeting a region.
 
--o ORG
-:   The name of the target organization. This option is deprecated. Use `ibmcloud target -o org_name` instead. Optional.
-
--s SPACE
-:   The name of the target space. This option is deprecated. Use `ibmcloud target -s space_name` instead. Optional.
-
 --skip-ssl-validation
 :   Bypass the SSL validation of HTTP requests. This option isn't recommended.
 
@@ -467,55 +364,41 @@ ibmcloud login -a private.cloud.ibm.com
 
 Two regions are currently supported: `us-south` and `us-east`.
 
-**Log in with a user name and password, and set a target account, org, and space:**
+**Log in with a user name and password, and set a target account:**
 
 ```bash
-ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
+ibmcloud login -u username -p password -c MyAccountID
 ```
 {: codeblock}
 
-**Log in with federated ID, and set a target account and Cloud Foundry org and space:**
+**Log in with federated ID, and set a target account:**
 
 ```bash
-ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
-```
-{: codeblock}
-
-**Set your Cloud Foundry org and space. You can run the following command to interactively identify the org and space:**
-
-```bash
-ibmcloud target --cf
-```
-{: codeblock}
-
-Or, if you know which org and space that the service belongs to, you can use the following command:
-
-```bash
-ibmcloud target -o <value> -s <value>
+ibmcloud login --sso -c MyAccountID
 ```
 {: codeblock}
 
 **Use an API key with an associated account:**
 
 ```bash
-ibmcloud login --apikey api-key-string -o MyOrg -s MySpace
+ibmcloud login --apikey api-key-string
 ```
 {: codeblock}
 
 ```bash
-ibmcloud login --apikey @filename -o MyOrg -s MySpace
+ibmcloud login --apikey @filename
 ```
 {: codeblock}
 
 **Use an API key with no associated account:**
 
 ```bash
-ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
+ibmcloud login --apikey api-key-string -c MyAccountID
 ```
 {: codeblock}
 
 ```bash
-ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
+ibmcloud login --apikey @fileName -c MyAccountID
 ```
 {: codeblock}
 
@@ -624,10 +507,10 @@ Use the `ibmcloud api` command to set an API endpoint.
 ## ibmcloud target
 {: #ibmcloud_target}
 
-Set or view the target account, region, organization, or space:
+Set or view the target account or region:
 
 ```bash
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group]
 ```
 
 ### Prerequisites
@@ -648,34 +531,22 @@ ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_G
 -g RESOURCE_GROUP
 :   The name of the target resource group. Optional.
 
---cf
-:   Interactively specify the target org and space.
-
---cf-api
-:   The Cloud Foundry API endpoint.
-
--o ORG
-:   The name of the target organization. Optional. Deprecated, use `ibmcloud target -o ORG`.
-
->-s SPACE<
-:   The name of the target space. Optional. Deprecated, use `ibmcloud target -s SPACE`.
-
 --unset-region
 :   Clear the targeted region.
 
 --unset-resource-group
 :   Clear the targeted resource group.
 
-If none of the options are specified, the current account, region, org, and space are displayed.
+If none of the options are specified, the current account and region are displayed.
 {: note}
 
 ### Examples
 {: #target-examples}
 
-Set the current account, organization, and space:
+Set the current account:
 
 ```bash
-ibmcloud target -c MyAccountID -o MyOrg -s MySpace
+ibmcloud target -c MyAccountID
 ```
 {: codeblock}
 
@@ -686,7 +557,7 @@ ibmcloud target -r eu-gb
 ```
 {: codeblock}
 
-View the current account, region, org, and space:
+View the current account and region:
 
 ```bash
 ibmcloud target

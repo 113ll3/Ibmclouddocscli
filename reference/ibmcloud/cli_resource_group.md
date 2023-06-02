@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-01"
+lastupdated: "2023-06-02"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -17,9 +17,6 @@ subcollection: cli
 
 A resource group is a way for you to organize your account resources in customizable groupings. Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage {{site.data.keyword.cloud_notm}} resources in a resource group.
 {: shortdesc}
-
-{{site.data.keyword.ibmcf_full}} is deprecated with an end-of-support date of 1 June 2023. For more information, see [Deprecation of IBM Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
-{: deprecated}
 
 ## ibmcloud resource groups
 {: #ibmcloud_resource_groups}
@@ -213,32 +210,6 @@ Show details of quota `free`:
 ibmcloud resource quota free
 ```
 {: codeblock}
-
-## ibmcloud resource cf-service-instance-migrate
-{: #ibmcloud_resource_cf_service_instance_migrate}
-
-Migrate a Cloud Foundry service instance into resource group:
-```bash
-ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
-```
-{: codeblock}
-
-### Command options
-{: #ibmcloud_resource_cf_service_instance_migrate_options}
-
-SERVICE_INSTANCE_NAME or SERVICE_INSTANCE_ID (required)
-:   Name or ID of the service instance
-
---resource-group-name
-:   Name of the resource group. This option is exclusive with '--resource-group-id'. If none of them is specified, default to currently targeted resource group.
-
---resource-group-id
-:   ID of the resource group. This option is exclusive with'--resource-group-name'. If none of them is specified, default to currently targeted resource group.
-
--f, --force
-:   Migrate without confirmation.
-
-
 
 ## ibmcloud resource service-instances
 {: #ibmcloud_resource_service_instances}
@@ -552,7 +523,7 @@ ibmcloud resource bindings my-service-alias
 
 Show details of a service binding.
 ```bash
-ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
+ibmcloud resource service-binding ALIAS_NAME [--id]
 ```
 {: codeblock}
 
@@ -561,9 +532,6 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
 
 ALIAS_NAME (required)
 :   Service alias name
-
-APP_NAME
-:   CloudFoundry application name
 
 --id
 :   Display the ID. All other output for the service binding is suppressed. This option is exclusive with '--output'.
@@ -584,7 +552,7 @@ ibmcloud resource bindings my-service-alias my-app
 
 Create a service binding.
 ```bash
-ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-n BINDING_NAME] [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
+ibmcloud resource service-binding-create SERVICE_ALIAS_NAME ROLE_NAME [-n BINDING_NAME] [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
 {: codeblock}
 
@@ -593,9 +561,6 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 
 SERVICE_ALIAS_NAME (required)
 :   Service alias name
-
-APP_NAME (required)
-:   CloudFoundry application name
 
 ROLE_NAME (required)
 :   Name of the user role
@@ -628,7 +593,7 @@ ibmcloud resource service-binding-create my-service-alias my-app Administrator
 
 Delete a service binding.
 ```bash
-ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
+ibmcloud resource service-binding-delete SERVICE_ALIAS [-f, --force]
 ```
 {: codeblock}
 
@@ -637,9 +602,6 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 
 SERVICE_ALIAS_NAME (required)
 :   Service alias name
-
-APP_NAME
-:   CloudFoundry application name
 
 -f, --force
 :   Force deletion without confirmation
@@ -1073,19 +1035,13 @@ service_name
 :   The name of the service as it appears in the Name column of the output of 'ibmcloud catalog service-marketplace'.
 
 family
-:   The cloud component to which your resource belongs. The allowed values are cloud_foundry, containers,  resource_controller, vmware or ims.
-
-organization_id
-:   The Cloud Foundry organization GUID.
-
-doc.space_id
-:   The Cloud Foundry space GUID.
+:   The cloud component to which your resource belongs. The allowed values are containers, resource_controller, vmware, or ims.
 
 doc.resource_group_id
 :   The ID of the resource group.
 
 type
-:   The resource type. The allowed values are k8-cluster, cf-service-instance, cf-user-provided-service-instance, cf-organization, cf-service-binding, cf-space, cf-application, resource-instance, resource-alias, resource-binding, resource-group, vmware-solutions, cloud-objects-storage-infrastructure, block-storage, file-storage, cloud-backup.
+:   The resource type. The allowed values are k8-cluster, resource-instance, resource-alias, resource-binding, resource-group, vmware-solutions, cloud-objects-storage-infrastructure, block-storage, file-storage, cloud-backup.
 
 creation_date
 :   The date on which the resource is created.
@@ -1101,36 +1057,6 @@ tags, tagReferences.tag.name
 
 ### Examples
 {: #ibmcloud_resource_search_examples}
-
-Search for Cloud Foundry apps whose name starts with a specified text:
-```bash
-ibmcloud resource search "name:my* AND type:cf-application"
-```
-{: codeblock}
-
-Search for Cloud Foundry service instances of the specified service name:
-```bash
-ibmcloud resource search "service_name:messagehub AND type:cf-service-instance"
-```
-{: codeblock}
-
-Search for Cloud Foundry service bindings in the organization with the specified ID:
-```bash
-ibmcloud resource search "organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding"
-```
-{: codeblock}
-
-Search for Cloud Foundry spaces with the specified name and located in one of the two specified regions:
-```bash
-ibmcloud resource search "name:dev AND type:cf-space AND region:(us-south OR eu-gb)"
-```
-{: codeblock}
-
-Search for resources whose name contains the word dev in the Cloud Foundry space with the specified ID:
-```bash
-ibmcloud resource search "name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7"
-```
-{: codeblock}
 
 Search for Resource Controller resources in the specified location (i.e. in us-south region):
 ```bash

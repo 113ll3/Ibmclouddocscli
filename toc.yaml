@@ -116,10 +116,6 @@ toc:
           - include: ../vpc-infrastructure-cli-plugin/vpc-cli-reference.md
           - include: ../watson-query-cli-plugin/watson-query-cli.md
       - topicgroup:
-          label: Plug-ins for the standalone Cloud Foundry CLI
-          topics:
-          - plugins/admin/index.md
-      - topicgroup:
           label: SDKs for Mobile
           topics:
           - sdk/sdk_BMSClient.md

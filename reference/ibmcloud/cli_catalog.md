@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-01"
+lastupdated: "2023-06-02"
 
 keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
@@ -20,9 +20,6 @@ Use the following commands from the {{site.data.keyword.cloud}} Command Line Int
 
 There are extra CLI commands and capabilities for catalogs. You can use the Catalogs management CLI plug-in to manage your private catalogs and onboard new private software. For more information, see [Catalogs management CLI plug-in](/docs/cli?topic=cli-manage-catalogs-plugin). 
 {: note}
-
-{{site.data.keyword.ibmcf_full}} is deprecated with an end-of-support date of 1 June 2023. For more information, see [Deprecation of IBM Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
-{: deprecated}
   
 ## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
@@ -209,15 +206,12 @@ ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 
 List service offerings in the marketplace:
 ```bash
-ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
+ibmcloud catalog service-marketplace [--rc] [--global]
 ```
 {: codeblock}
 
 ### Command options
 {: #ibmcloud_catalog_service_marketplace_options}
-
---cf
-:   Show Cloud Foundry services only
 
 --rc
 :   Show RC compatible services only
@@ -294,58 +288,6 @@ ibmcloud catalog template TEMPLATE_ID
 View details of the template `mobileBackendStarter`:
 ```bash
 ibmcloud catalog template mobileBackendStarter
-```
-{: codeblock}
-
-## ibmcloud catalog template-run
-{: #ibmcloud_catalog_template_run}
-
-Create a cf application that is based on the specified template with the specified URL and description. By default, the new app is started automatically.
-
-```bash
-ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNAME] [-desc DESCRIPTION] [--no-start]
-```
-{: codeblock}
-
-### Command options
-{: #ibmcloud_catalog_template_run_options}
-
- TEMPLATE_ID (required)
- :   The template that the application is based on during creation. Use *ibmcloud templates* to see all templates' ID.
- 
- CF_APP_NAME (required)
- :   The name of the cf application to be created.
- 
- -n*HOSTNAME*
- :   The host name of the CF application. If not specified, the route is set by {{site.data.keyword.cloud_notm}} automatically based on your app name and default domain.
- 
- -d*DOMAINNAME*
- :   The domain of the CF application. If not specified, the route is set by {{site.data.keyword.cloud_notm}} automatically based on your app name and default domain.
- 
- --desc *DESCRIPTION* (optional)
- :   Description of the application.
- 
- --no-start (optional)
- :   Don't start the application automatically after creation. If not specified, the application is started automatically after creation.
-
-### Examples
-{: #ibmcloud_catalog_template_run_examples}
-
-Create a `cf` app that is named `my-app` based on a `javaHelloWorld` template:
-```bash
-ibmcloud catalog template-run javaHelloWorld my-app
-```
-{: codeblock}
-
-Create an app `my-ruby-app` based on `rubyHelloWorld` template with a description:
-```bash
-ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
-```
-{: codeblock}
-
-Create an app `my-python-app` based on `pythonHelloWorld` template without automatic start:
-```bash
-ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 {: codeblock}
 

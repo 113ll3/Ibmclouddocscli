@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-01"
+lastupdated: "2023-06-02"
 
-keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
+keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command
 
 subcollection: cli
 
@@ -12,14 +12,11 @@ subcollection: cli
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing accounts, users, and Cloud Foundry orgs (ibmcloud account)
+# Managing accounts and users (ibmcloud account)
 {: #ibmcloud_commands_account}
 
-Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage accounts, users in an account, and the org, space, and roles of public Cloud Foundry environments.
+Use the following commands from the {{site.data.keyword.cloud}} Command Line Interface to manage accounts and users in an account.
 {: shortdesc}
-
-{{site.data.keyword.ibmcf_full}} is deprecated with an end-of-support date of 1 June 2023. For more information, see [Deprecation of IBM Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
-{: deprecated}
 
 ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
@@ -252,21 +249,6 @@ Show the security group rules of space `space_example`:
 ibmcloud account space space_example --security-group-rules
 ```
 {: codeblock}
-
-## ibmcloud account space-create
-{: #ibmcloud_account_space_create}
-
-This command has the same function and options as the [`cf create-space`](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: external} command.
-
-## ibmcloud account space-rename
-{: #ibmcloud_account_space_rename}
-
-This command has the same function and options as the [`cf rename-space`](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: external} command.
-
-## ibmcloud account space-delete
-{: #ibmcloud_account_space_delete}
-
-This command has the same function and options as the [`cf delete-space`](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: external} command.
 
 ## ibmcloud account org-users
 {: #ibmcloud_account_org_users}
@@ -764,7 +746,7 @@ USER_EMAIL (required)
 :   Region name. Defaults to current region if not specified.
 
 
-If you aren't ready to assign access, or want to assign an IAM policy instead of Cloud Foundry access, you can invite a user and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
+If you aren't ready to assign access, or want to assign an IAM policy, you can invite a user and assign it later. For more information about assigning access to users, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 {: tip}
 
 ## ibmcloud account user-reinvite
