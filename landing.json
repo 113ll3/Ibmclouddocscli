@@ -1,6 +1,6 @@
 {
     "title": "IBM Cloud CLI docs",
-    "lastupdated": "2022-04-12",
+    "lastupdated": "2023-06-02",
     "introduction": "Use IBM Cloud's powerful CLIs and tooling to interact with your applications, containers, infrastructure, and other services",
     "section_devtools": {
       "cli": "/docs/cli?topic=cli-ibmcloud_cli"
@@ -16,7 +16,11 @@
         "description": "IBM Cloud CLI commands to create, manage, deploy, debug, and test applications.",
         "href": "/docs/cli?topic=cli-idt-cli"
       },
-            {
+      {
+        "title": "Extending IBM Cloud CLI with plug-ins",
+        "description": "IBM Cloud CLI supports a plug-in framework to extend its capability. Install a plug-in from a repository, a URL, or install a plug-in binary locally.",
+        "href": "/docs/cli?topic=cli-plug-ins"
+      },            {
         "title": "Getting started with IBM Cloud Shell",
         "description": "IBM Cloud Shell is a cloud-based shell workspace that's preconfigured with the full IBM Cloud CLI and several plug-ins and tools.",
         "href": "/docs/cloud-shell?topic=cloud-shell-getting-started"
