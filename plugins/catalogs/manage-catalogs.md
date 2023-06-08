@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-05-05"
+lastupdated: "2023-06-08"
 
 keywords: cli, catalogs management, catalog
 
@@ -1592,7 +1592,7 @@ You need version 1.2.7 or higher of the catalogs management CLI plug-in to run t
 {: note}
 
 ```bash
-ibmcloud catalog netrc
+ibmcloud catalog utility netrc
 ```
 {: codeblock}
 
