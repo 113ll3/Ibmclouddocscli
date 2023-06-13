@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-07-29"
+  years: 2018, 2023
+lastupdated: "2023-07-13"
 
-keywords: cli, ibmcloud enterprise, view enterprise, view enterprise account, view enterprise account group., enterprise, account-group, account-group-create, account-group-update, 
+keywords: cli, ibmcloud enterprise, view enterprise, view enterprise account, view enterprise account group., enterprise, account-group, account-group-create, account-group-update, account-delete
 
 subcollection: cli
 
@@ -167,6 +167,27 @@ NAME (required)
 
 --parent-account-group ACCOUNT_GROUP_NAME (optional).
 :   Name of the parent account group. If omitted, the parent would be the current enterprise.
+
+## ibmcloud enterprise account-delete
+{: #ibmcloud_enterprise_account_delete}
+
+Delete an account.
+```bash
+ibmcloud enterprise account-delete (-n, --name NAME | --id ID) [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_enterprise_account_delete_options}
+
+--id ID (required)
+:   ID of the account group. This option is exclusive with `-n, --name`.
+
+-n, --name NAME
+:   Name of the account group. This option is exclusive with `--id`.
+
+-q, --quiet
+:   Suppress verbose output.
 
 ## ibmcloud enterprise account-move
 {: #ibmcloud_enterprise_account_move}
