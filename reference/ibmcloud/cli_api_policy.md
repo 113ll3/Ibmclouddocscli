@@ -3,7 +3,7 @@
 copyright:
   years: 2018, 2022
 
-lastupdated: "2023-03-23"
+lastupdated: "2023-08-17"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -3096,6 +3096,126 @@ Delete the link `my_link` from trusted profile `my-profile` without confirmation
 ibmcloud iam trusted-profile-link-delete my-profile my_link -f
 ```
 {: codeblock}
+
+## ibmcloud iam trusted-profile-identity
+{: #ibmcloud_iam_trusted_profile_identity}
+
+Retrieve and display a trusted profile identity
+```bash
+ibmcloud iam trusted-profile-identity (NAME|ID) (IDENTITY_IDENTIFIER|IDENTITY_ID) --id-type IDENTIFIER_TYPE [--id | --output FORMAT] [-q, --quiet] 
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_identity_options}
+
+NAME|ID (required)
+:   Name or ID of the trusted profile.
+
+IDENTITY_IDENTIFIER|IDENTITY_ID (required)
+:   Identifier or ID of the Identity to retrieve.
+
+--id-type (required)
+:   The type of identifier to retrieve for the trusted profile. USER for a user IAM ID, SERVICEID for a service ID, or CRN for a service CRN
+
+--id
+:   Show ID of the identity only.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+## ibmcloud iam trusted-profile-identities
+{: #ibmcloud_iam_trusted_profile_identities}
+
+Retrieve and display trusted profile identities
+```bash
+ibmcloud iam trusted-profile-identities (NAME|ID) [--id-type IDENTIFIER_TYPE] [--id | --output FORMAT] [-f, --force] [-q, --quiet] 
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_identities_options}
+
+NAME|ID (required)
+:   Name or ID of the trusted profile.
+
+--id-type 
+:   The type of identifiers to retrieve for the trusted profile. USER for a user IAM ID, SERVICEID for a service ID, or CRN for a service CRN
+
+--id
+:   Show ID of the identities only.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-f, --force
+:   Force a failure if multiple profiles are found.
+
+-q, --quiet
+:   Suppress verbose output.
+
+
+## ibmcloud iam trusted-profile-identity-create
+{: #ibmcloud_iam_trusted_profile_identity_create}
+
+Connect a trusted profile to an identity
+```bash
+ibmcloud iam trusted-profile-identity-create (NAME|ID) --id IDENTIFIER_TO_CONNECT --id-type IDENTIFIER_TYPE [--description DESCRIPTION] [--output FORMAT] [-q, --quiet] 
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_identity_create_options}
+
+NAME|ID (required)
+:   Name or ID of the profile to connect the identity to.
+
+--id (required)
+:   ID for the identity.
+
+--id-type (required)
+:   The type of identifier to connect to the trusted profile. USER for a user IAM ID, SERVICEID for a service ID, or CRN for a service CRN
+
+--description DESCRIPTION
+:   Optional description for the connection to the trusted profile
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+## ibmcloud iam trusted-profile-identity-delete
+{: #ibmcloud_iam_trusted_profile_identity_delete}
+
+Disconnect a trusted profile from an identity
+```bash
+ibmcloud iam trusted-profile-identity-delete (NAME|ID) (IDENTITY_IDENTIFIER|IDENTITY_ID) --id-type IDENTIFIER_TYPE [--force] [-q, --quiet] 
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_identity_delete_options}
+
+NAME|ID (required)
+:   Name or ID of the profile to disconnect the identity from.
+
+IDENTITY_IDENTIFIER|IDENTITY_ID (required)
+:   Identifier or ID of the Identity to disconnect.
+
+--id-type (required)
+:   The type of identifier to disconnect from the trusted profile. USER for a user IAM ID, SERVICEID for a service ID, or CRN for a service CRN
+
+-f, --force
+:   Force deletion without confirmation.
+
+-q, --quiet
+:   Suppress verbose output.
+
+
 
 ## ibmcloud iam trusted-profile-rule-create
 {: #ibmcloud_iam_trusted_profile_rule_create}
