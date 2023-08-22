@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-06-08"
+lastupdated: "2023-06-22"
 
 keywords: cli, catalogs management, catalog
 
@@ -552,8 +552,8 @@ ibmcloud catalog offering create [--catalog CATALOG_NAME] [--zipurl URL] [--incl
 
 :   Provide the information to import a virtual server image for VPC, including a name, label, install kind, target kind, version, sha, tags, and metadata.
 
-### Virtual server image for VPC Example
-{: #import-offering-example}
+### Virtual server image for VPC Example #1
+{: #import-offering-example-1}
 
 Import a virtual server image for VPC as an offering to a catalog with ID `51c9e0db-2911-45a6-adb0-ac5332d27cf2`.
 
@@ -584,6 +584,40 @@ ibmcloud catalog offering create --catalog 51c9e0db-2911-45a6-adb0-ac5332d27cf2 
         "images": [{"id": "r134-14903434-faf0-4a66-b861-7b35198de393", "name": "virtual-server-image", "region": "us-south"}]
     }
 }'
+```
+{: codeblock}
+
+### Virtual server image for VPC Example #2
+{: #import-offering-example-2}
+
+Import a virtual server image for VPC as an offering to a catalog with ID `2bdc3974-dfcf-4711-b298-cd238f7d3734`.
+
+```bash
+ibmcloud catalog offering create --catalog 2bdc3974-dfcf-4711-b298-cd238f7d3734 --vpc-body '{
+"name": "virtual-server-image-s390x",
+"label": "virtual-server-image-s390x",
+"install_kind": "instance",
+"target_kinds": ["vpc-z"],
+"version": "0.0.10",
+"sha": "4739f1eaeeebc69ad5d48f9191fcc0d23960cb720bb16c67e915e5556c1da9b2",
+"tags": ["virtualservers"],
+"metadata": {
+    "operating_system": {
+        "dedicated_host_only": false,
+        "vendor": "SUSE Linux Enterprise Server",
+        "name": "sles-15-sp2-s390x-byol",
+        "href": "https://us-south-stage01.iaasdev.cloud.ibm.com/v1/operating_systems/sles-15-s390x",
+        "display_name": "Suse enterprise server(s390x)",
+        "family": "SUSE",
+        "version": "15-sp2",
+        "architecture": "s390x"
+    },
+    "minimum_provisioned_size": 100,
+    "file": {
+        "size": 1
+    },
+    "images": [{"id": "r134-f20e2e4e-3133-423c-afa2-365afa14c4dc", "name": "virtual-server-image-s390x", "region": "us-south"}]
+}
 ```
 {: codeblock}
 
