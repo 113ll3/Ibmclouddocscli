@@ -3,7 +3,7 @@
 copyright:
   years: 2018, 2022
 
-lastupdated: "2023-08-17"
+lastupdated: "2023-09-08"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -1622,6 +1622,287 @@ ibmcloud iam account-policies -t access
 ```
 {: codeblock}
 
+## ibmcloud iam access-policy-template
+{: #ibmcloud_iam_access_policy_template}
+
+Show details of an access policy template under current account:
+```bash
+ibmcloud iam access-policy-template (TEMPLATE_ID | TEMPLATE_NAME) [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_policy_template_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+
+### Examples
+{: #ibmcloud_iam_access_policy_template_examples}
+
+Show access policy template `AccessPolicyUserTemplate`
+
+```bash
+ibmcloud iam access-policy-template AccessPolicyUserTemplate
+```
+{: codeblock}
+
+## ibmcloud iam access-policy-templates
+{: #ibmcloud_iam_access_policy_templates}
+
+List all access policy templates under current account:
+```bash
+ibmcloud iam access-policy-templates [--output FORMAT] [-q, quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_policy_templates_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_policy_templates_examples}
+
+List all access policy template under current account
+
+```bash
+ibmcloud iam access-policy-templates
+```
+{: codeblock}
+
+## ibmcloud iam access-policy-template-create
+{: #ibmcloud_iam_access_policy_template_create}
+
+Create an access policy template:
+```bash
+ibmcloud iam access-policy-template-create --file JSON_FILE
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_policy_template_create_options}
+
+--file JSON_FILE
+:   JSON file of access policy template definition
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_policy_template_create_examples}
+
+Create an access policy template
+
+```bash
+imcloud iam access-policy-template-create --file /path/to/access_policy_template.json
+```
+{: codeblock}
+
+## ibmcloud iam access-policy-template-version
+{: #ibmcloud_iam_access_policy_template_version}
+
+Get a version of an access policy template:
+```bash
+ibmcloud iam access-policy-template-version (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION [-q, --quiet] [--output JSON]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_policy_template_version_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_policy_template_version_examples}
+
+Show version `1` of access policy template `AccessPolicyUserTemplate`
+
+```bash
+ibmcloud iam access-policy-template-version AccessPolicyUserTemplate 1
+```
+{: codeblock}
+
+## ibmcloud iam access-policy-template-version-create
+{: #ibmcloud_iam_access_policy_template_version_create}
+
+Create a new version of an access policy template:
+```bash
+ibmcloud iam access-policy-template-version-create (TEMPLATE_ID | TEMPLATE_NAME) [--file JSON_FILE] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_policy_template_version_create_options}
+
+--file JSON_FILE
+:   JSON file of access policy template definition
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_policy_template_version_create_examples}
+
+Create a new version for access policy template `AccessPolicyUserTemplate`
+
+```bash
+ibmcloud iam access-policy-template-version-create AccessPolicyUserTemplate --file /path/to/access_policy_template.json
+```
+
+## ibmcloud iam access-policy-template-version-update
+{: #ibmcloud_iam_access_policy_template_version_update}
+
+Update an existing version of an access policy template:
+```bash
+ibmcloud iam access-policy-template-update (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION --file JSON_FILE [-q, --quiet] [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_policy_template_version_update_options}
+
+--file JSON_FILE
+:   JSON file of access policy template definition
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_policy_template_version_update_examples}
+
+Update version `1` of access policy template `AccessPolicyUserTemplate`
+
+```bash
+ibmcloud iam access-policy-template-version-create AccessPolicyUserTemplate 1 --file /path/to/access_policy_template.json
+```
+{: codeblock}
+
+## ibmcloud iam access-policy-template-version-delete
+{: #ibmcloud_iam_access_policy_template_version_delete}
+
+Delete a version of an access policy template:
+```bash
+ibmcloud iam access-policy-template-version-delete (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION [-q, --quiet] [-f, --force]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_policy_template_version_delete_options}
+
+-f, --force
+:   Force deletion without confirmation.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_policy_template_version_delete_examples}
+
+Delete version `2` of access policy template `AccessPolicyUserTemplate`
+
+```bash
+ibmcloud iam access-policy-template-version-delete AccessPolicyUserTemplate 2
+```
+{: codeblock}
+
+## ibmcloud iam access-policy-template-version-commit
+{: #ibmcloud_iam_access_policy_template_version_commit}
+
+Commit a version of an access policy template:
+```bash
+ibmcloud iam access-policy-template-version-commit (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_policy_template_version_commit_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+
+### Examples
+{: #ibmcloud_iam_access_policy_template_version_commit_examples}
+
+Commit version `1` of access policy template `AccessPolicyUserTemplate`
+
+```bash
+ibmcloud iam access-policy-template-version-commit AccessPolicyUserTemplate 1
+```
+
+## ibmcloud iam access-policy-assignment
+{: #ibmcloud_iam_access_policy_assignment}
+
+Show details of an access policy assignment:
+```bash
+ibmcloud iam access-policy-assignment ASSIGNMENT_ID [-q, --quiet] [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_policy_template_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+
+### Examples
+{: #ibmcloud_iam_access_policy_assignment_examples}
+
+Show access policy assignment `AccessPolicyAssignment-adee40a7f8324d6fbcd4c4a67b326eb5`
+
+```bash
+ibmcloud iam access-policy-assignment AccessPolicyAssignment-adee40a7f8324d6fbcd4c4a67b326eb5
+```
+{: codeblock}
+
+## ibmcloud iam access-policy-assignments
+{: #ibmcloud_iam_access_policy_assignments}
+
+List all access policy assignments on current account:
+```bash
+ibmcloud iam access-policy-templates [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_policy_assignments_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_policy_assignments_examples}
+
+List all access policy template assignments under current account
+
+```bash
+ibmcloud iam access-policy-assignments
+```
+{: codeblock}
+
 ## ibmcloud iam authorization-policy-create
 {: #ibmcloud_iam_authorization_policy_create}
 
@@ -2508,6 +2789,378 @@ ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8
 ```
 {: codeblock}
 
+## ibmcloud iam access-group-template-create
+{: #ibmcloud_iam_access_group_template_create}
+
+Create an access group template
+```bash
+ibmcloud iam access-group-template-create (TEMPLATE_NAME --access-group-name ACCESS_GROUP_NAME [-d, --description DESCRIPTION] | --file JSON_FILE) [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_template_create_options}
+
+--access-group-name NAME
+:   Access group name to create for the template
+
+-d, --description DESCRIPTION
+:   Description of the template
+
+--file FILE
+:   Description of the template
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+<!---
+### Examples
+{: #ibmcloud_iam_access_group_template_create_examples}
+--->
+
+## ibmcloud iam access-group-template
+{: #ibmcloud-iam-access-group-template}
+
+Show details of an access group template
+```bash
+ibmcloud iam access-group-template (TEMPLATE_ID | TEMPLATE_NAME) [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_template_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_template_examples}
+
+Show details of an access group template in JSON format
+```bash
+ibmcloud iam access-group-template --output JSON
+```
+{: codeblock}
+
+## ibmcloud iam access-group-template-version
+{: #ibmcloud_iam_access_group_template_version}
+
+Show details of a specified version of an access group template
+```bash
+ibmcloud iam access-group-template-version (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION [-q, --quiet] [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_template_version_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_template_version_examples}
+
+Show details of a specified version of an access group template in JSON format
+```bash
+ibmcloud iam access-group-template-version example-template-name 1 --output JSON
+```
+{: codeblock}
+
+## ibmcloud iam access-group-template-version-commit
+{: #ibmcloud_iam_access_group_template_version_commit}
+
+Commit an access group template version
+```bash
+ibmcloud iam access-group-template-version-commit TEMPLATE_ID TEMPLATE_VERSION
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_template_version_commit_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: ##ibmcloud_iam_access_group_template_version_commit_examples}
+
+Commit a specified version of an access group template
+```bash
+ibmcloud iam access-group-template-version-commit example-template-id 1
+```
+{: codeblock}
+
+## ibmcloud iam access-group-template-version-create
+{: #ibmcloud_iam_access_group_template_version_create}
+
+Create an access group template version
+```bash
+ibmcloud iam access-group-template-version-create TEMPLATE_ID --file JSON_FILE
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_template_version_create_options}
+
+--file FILE
+:   Description of the template
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_template_version_create_examples}
+
+Create a new version of an access group template
+```bash
+ibmcloud iam access-group-template-version-create example-template-id --file JSON_FILE
+```
+{: codeblock}
+
+## ibmcloud iam access-group-template-version-delete
+{: #ibmcloud_iam_access_group_template_version_delete}
+
+Delete an access group template version
+```bash
+ibmcloud iam access-group-template-version-delete TEMPLATE_ID TEMPLATE_VERSION
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_template_version_delete_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_template_version_delete_examples}
+
+Delete a specified version of an access group template
+```bash
+ibmcloud iam access-group-template-version-delete example-template-id 1
+```
+{: codeblock}
+
+## ibmcloud iam access-group-template-version-update
+{: #ibmcloud_iam_access_group_template_version_update}
+
+Update an existing version of access group template version
+```bash
+ibmcloud iam access-group-template-version-update (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION --file JSON_FILE [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_template_version_update_options}
+
+--file FILE
+:   Description of the template
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_template_version_update_examples}
+
+Update a specified version of an access group template with a JSON file
+```bash
+ibmcloud iam access-group-template-version-update example-template-name 1 --file JSON_FILE
+```
+{: codeblock}
+
+## ibmcloud iam access-group-template-versions
+{: #ibmcloud_iam_access_group_template_versions}
+
+List the versions of an access group template
+```bash
+ibmcloud iam access-group-template-versions (TEMPLATE_ID | TEMPLATE_NAME) [-q, --quiet] [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_template_versions_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_template_versions_examples}
+
+List all versions of an access group template
+```bash
+ibmcloud iam access-group-template-versions example-template-name
+```
+{: codeblock}
+
+## ibmcloud iam access-group-templates
+{: #ibmcloud_iam_access_group_templates}
+
+List all access group templates under current account
+```bash
+ibmcloud iam access-group-templates [-q, --quiet] [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_templates_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_templates_examples}
+
+List all access group templates under current account in JSON format
+```bash
+ibmcloud iam access-group-template-versions example-template-name --output JSON
+```
+{: codeblock}
+
+## ibmcloud iam access-group-assignment
+{: #ibmcloud_iam_access_group_assignment}
+
+Show details of an access group assignment
+```bash
+ibmcloud iam access-group-assignment [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_assignment_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_assignment_examples}
+
+Show details of an access group assignment in JSON format
+```bash
+ibmcloud iam access-group-assignments --output JSON
+```
+{: codeblock}
+
+## ibmcloud iam access-group-assignment-create
+{: #ibmcloud_iam_access_group_assignment_create}
+
+Create an access group assignment
+```bash
+ibmcloud iam access-group-assignment-create TEMPLATE_ID TEMPLATE_VERSION --target-type TYPE --target TARGET
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_assignment_create_options}
+
+--target value
+:   ID of the entity targeted
+--target-type value
+:   Type of entity targeted
+-q, --quiet
+:   Suppress verbose output
+
+### Examples
+{: #ibmcloud_iam_access_group_assignment_create_examples}
+
+Show details of an access group assignment in JSON format
+```bash
+ibmcloud iam access-group-assignment-create example-template-id 1 --target-type Account --target example-account-id
+```
+{: codeblock}
+
+## ibmcloud iam access-group-assignment-delete
+{: #ibmcloud_iam_access_group_assignment_delete}
+
+Delete an access group assignment
+```bash
+ibmcloud iam access-group-assignment-delete ASSIGNMENT_ID
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_assignment_delete_options}
+
+-q, --quiet
+:   Suppress verbose output
+
+### Examples
+{: #ibmcloud_iam_access_group_assignment_delete_examples}
+
+Delete a specified access group assignment
+```bash
+ibmcloud iam access-group-assignment-delete example-assignment-id
+```
+{: codeblock}
+
+## ibmcloud iam access-group-assignment-update
+{: #ibmcloud_iam_access_group_assignment_update}
+
+Update an access group assignment
+```bash
+ibmcloud iam access-group-assignment-update ASSIGNMENT_ID
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_assignment_update_options}
+
+-q, --quiet
+:   Suppress verbose output
+
+### Examples
+{: #ibmcloud_iam_access_group_assignment_update_examples}
+
+Update a specified access group assignment
+```bash
+ibmcloud iam access-group-assignment-update example-assignment-id
+```
+{: codeblock}
+
+## ibmcloud iam access-group-assignments
+{: #ibmcloud_iam_access_group_assignments}
+
+Get all access group assignments in current account
+```bash
+ibmcloud iam access-group-assignments [-q, --quiet] [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_access_group_assignments_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_access_group_assignments_examples}
+
+List all access group assignments under current account in JSON format
+```bash
+ibmcloud iam access-group-assignments --output JSON
+```
+{: codeblock}
+
 ## ibmcloud iam trusted-profile-create
 {: #ibmcloud_iam_trusted_profile_create}
 
@@ -3102,7 +3755,7 @@ ibmcloud iam trusted-profile-link-delete my-profile my_link -f
 
 Retrieve and display a trusted profile identity
 ```bash
-ibmcloud iam trusted-profile-identity (NAME|ID) (IDENTITY_IDENTIFIER|IDENTITY_ID) --id-type IDENTIFIER_TYPE [--id | --output FORMAT] [-q, --quiet] 
+ibmcloud iam trusted-profile-identity (NAME|ID) (IDENTITY_IDENTIFIER|IDENTITY_ID) --id-type IDENTIFIER_TYPE [--id | --output FORMAT] [-q, --quiet]
 ```
 {: codeblock}
 
@@ -3132,7 +3785,7 @@ IDENTITY_IDENTIFIER|IDENTITY_ID (required)
 
 Retrieve and display trusted profile identities
 ```bash
-ibmcloud iam trusted-profile-identities (NAME|ID) [--id-type IDENTIFIER_TYPE] [--id | --output FORMAT] [-f, --force] [-q, --quiet] 
+ibmcloud iam trusted-profile-identities (NAME|ID) [--id-type IDENTIFIER_TYPE] [--id | --output FORMAT] [-f, --force] [-q, --quiet]
 ```
 {: codeblock}
 
@@ -3142,7 +3795,7 @@ ibmcloud iam trusted-profile-identities (NAME|ID) [--id-type IDENTIFIER_TYPE] [-
 NAME|ID (required)
 :   Name or ID of the trusted profile.
 
---id-type 
+--id-type
 :   The type of identifiers to retrieve for the trusted profile. USER for a user IAM ID, SERVICEID for a service ID, or CRN for a service CRN
 
 --id
@@ -3163,7 +3816,7 @@ NAME|ID (required)
 
 Connect a trusted profile to an identity
 ```bash
-ibmcloud iam trusted-profile-identity-create (NAME|ID) --id IDENTIFIER_TO_CONNECT --id-type IDENTIFIER_TYPE [--description DESCRIPTION] [--output FORMAT] [-q, --quiet] 
+ibmcloud iam trusted-profile-identity-create (NAME|ID) --id IDENTIFIER_TO_CONNECT --id-type IDENTIFIER_TYPE [--description DESCRIPTION] [--output FORMAT] [-q, --quiet]
 ```
 {: codeblock}
 
@@ -3193,7 +3846,7 @@ NAME|ID (required)
 
 Disconnect a trusted profile from an identity
 ```bash
-ibmcloud iam trusted-profile-identity-delete (NAME|ID) (IDENTITY_IDENTIFIER|IDENTITY_ID) --id-type IDENTIFIER_TYPE [--force] [-q, --quiet] 
+ibmcloud iam trusted-profile-identity-delete (NAME|ID) (IDENTITY_IDENTIFIER|IDENTITY_ID) --id-type IDENTIFIER_TYPE [--force] [-q, --quiet]
 ```
 {: codeblock}
 
@@ -3427,6 +4080,335 @@ ibmcloud iam trusted-profile-rule-delete my-profile my-rule -f
 ```
 {: codeblock}
 
+## ibmcloud iam trusted-profile-templates
+{: #ibmcloud_iam_trusted_profile_templates}
+
+List all profile templates in current account
+```bash
+ibmcloud iam trusted-profile-templates [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_templates_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_templates_examples}
+
+List trusted profile templates in table format
+```bash
+ibmcloud iam trusted-profile-templates
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-template-create
+{: #ibmcloud_iam_trusted_profile_template_create}
+
+Create a trusted profile template
+```bash
+ibmcloud iam trusted-profile-template-create --file JSON_FILE
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_template_create_options}
+
+--file JSON_FILE
+:   JSON file of the template definition
+
+## ibmcloud iam trusted-profile-template-version
+{: #ibmcloud_iam_trusted_profile_template_version}
+
+Get a specified version of a trusted profile template
+```bash
+ibmcloud iam trusted-profile-template-version (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION
+```
+{: codeblock}
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_template_version_examples}
+
+List details of a specified version of a trusted profile template
+```bash
+ibmcloud iam trusted-profile-template-version example-template-name 1
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_template_version_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+## ibmcloud iam trusted-profile-template-version-commit
+{: #ibmcloud_iam_trusted_profile_template_version_commit}
+
+Commit a specified version of a trusted profile template
+```bash
+ibmcloud iam trusted-profile-template-version-commit (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_template_version_commit_options}
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_template_version_commit_examples}
+
+Commit a specified version of a trusted profile template
+```bash
+ibmcloud iam trusted-profile-template-version-commit example-template-name 1
+```
+{: codeblock}
+
+-q, --quiet
+:   Suppress verbose output.
+
+## ibmcloud iam trusted-profile-template-version-create
+{: #ibmcloud_iam_trusted_profile_template_version_create}
+
+Create a new version of a trusted profile template
+```bash
+ibmcloud iam trusted-profile-template-version-create (TEMPLATE_ID | TEMPLATE_NAME) --file JSON_FILE
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_template_version_create_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--file JSON_FILE
+:   JSON file of the template definition.
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_template_version_commit_examples}
+
+Create a new version of a specified template from a JSON file
+```bash
+ibmcloud iam trusted-profile-template-version-create example-template-name --file JSON_FILE
+```
+
+## ibmcloud iam trusted-profile-template-version-delete
+{: #ibmcloud_iam_trusted_profile_template_version_delete}
+
+Delete a specificed version of a trusted profile template
+```bash
+ibmcloud iam trusted-profile-template-version-delete TEMPLATE_ID TEMPLATE_VERSION
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_template_version_delete_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_template_version_delete_examples}
+
+Delete a specified version of a trusted profile template
+```bash
+ibmcloud iam trusted-profile-template-version-delete example-template-name 1
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-template-version-update
+{: #ibmcloud_iam_trusted_profile_template_version_update}
+
+Update a specified version of a trusted profile template
+```bash
+ibmcloud iam trusted-profile-template-version-update (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION --file JSON_FILE
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_template_version_update_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--file JSON_FILE
+:   JSON file of the template definition.
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_template_version_update_examples}
+
+Update a specified version of a trusted profile template with a JSON file
+```bash
+ibmcloud iam trusted-profile-template-version-update example-template-name 1 --file JSON_FILE
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-template-versions
+{: #ibmcloud_iam_trusted_profile_template_versions}
+
+List all versions of a trusted profile template
+```bash
+ibmcloud iam trusted-profile-template-versions TEMPLATE_ID | TEMPLATE_NAME
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_template_versions_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_template_versions_examples}
+
+List all versions of a trusted profile template in JSON format
+```bash
+ibmcloud iam trusted-profile-template-versions --output JSON
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-assignment
+{: #ibmcloud_iam_trusted_profile_assignment}
+
+Show details of a trusted profile assignment
+```bash
+ibmcloud iam trusted-profile-assignment ASSIGNMENT_ID
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_assignment_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_assignment_examples}
+
+Show details of a trusted profile assignment in JSON format
+```bash
+ibmcloud iam trusted-profile-assignment example-assignment-id --output JSON
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-assignment-create
+{: #ibmcloud_iam_trusted_profile_assignment_create}
+
+Create a trusted profile assignment
+```bash
+ibmcloud iam trusted-profile-assignment-create TEMPLATE_ID TEMPLATE_VERSION --target-type TYPE --target TARGET
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_assignment_create_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--target TARGET
+:   ID of the entity targeted
+
+--target-type TYPE
+:   Type of entity targeted
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_assignment_create_examples}
+
+Create a trusted profile assignment in a specified target account
+```bash
+ibmcloud iam trusted-profile-assignment-create example-template-id 1 --target-type Account --target example-account-id
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-assignment-delete
+{: #ibmcloud_iam_trusted_profile_assignment_delete}
+
+Delete a trusted profile assignment
+```bash
+ibmcloud iam trusted-profile-assignment-delete ASSIGNMENT_ID
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_assignment_delete_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_assignment_delete_examples}
+
+Create a trusted profile assignment in a specified target account
+```bash
+ibmcloud iam trusted-profile-assignment-create example-template-id 1 --target-type Account --target example-account-id
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-assignment-update
+{: #ibmcloud_iam_trusted_profile_assignment_update}
+
+Update a trusted profile assignment
+```bash
+ibmcloud iam trusted-profile-assignment-update ASSIGNMENT_ID TEMPLATE_VERSION
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_assignment_update_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_assignment_update_examples}
+
+Update a trusted profile assignment
+```bash
+ibmcloud iam trusted-profile-assignment-update example-template-id 1
+```
+{: codeblock}
+
+## ibmcloud iam trusted-profile-assignments
+{: #ibmcloud_iam_trusted_profile_assignments}
+
+Get all trusted profile assignments in current account
+```bash
+ibmcloud iam trusted-profile-assignments
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_trusted_profile_assignments_options}
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_trusted_profile_assignments_examples}
+
+List all trusted profile assignments in current account in JSON format
+```bash
+ibmcloud iam trusted-profile-assignments --output JSON
+```
+{: codeblock}
+
 ## ibmcloud iam account-settings
 {: #ibmcloud_iam_account_settings}
 
@@ -3499,5 +4481,397 @@ Update the number of seconds after which a session expires to default (with `NOT
 
 ```bash
 ibmcloud iam account-settings-update --session-expiration-in-seconds NOT_SET
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-template
+{: #ibmcloud_iam_account_settings_template}
+
+Show details of an account settings template:
+```bash
+ibmcloud iam account-settings-template (TEMPLATE_ID | TEMPLATE_NAME) [-q,--quiet] [--output JSON]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_template_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_account_settings_template_examples}
+
+Show details for account settings template `AccountSettingsEditorTemplate`
+
+```bash
+ibmcloud iam account-settings-template AccountSettingsEditorTemplate
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-templates
+{: #ibmcloud_iam_account_settings_templates}
+
+List account settings templates for an enterprise account:
+```bash
+ibmcloud iam account-settings-templates [-q,--quiet] [--output JSON]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_templates_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_account_settings_templates_examples}
+
+List account settings templates on current account
+
+```bash
+ibmcloud iam account-settings-templates
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-template-create
+{: #ibmcloud_iam_account_settings_template-create}
+
+Create a new account settings template for an enterprise account:
+```bash
+ibmcloud iam account-settings-template-create TEMPLATE_NAME [-d, --description DESCRIPTION] [--file JSON_FILE] [-q,--quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_template_create_options}
+
+-d , --description DESCRIPTION
+:   Description of the template
+
+--file JSON_FILE
+:   JSON file of the template definition
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_account_settings_template_create_examples}
+
+Create an account settings template on current account
+
+```bash
+ibmcloud iam account-settings-template-create AccountSettingsEditorTemplate --fie /path/to/account_settings_template.json
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-template-version
+{: #ibmcloud_iam_account_settings_template_version}
+
+Get a specific version of an account settings template in an enterprise account:
+```bash
+ibmcloud iam account-settings-template-version (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION [-q,--quiet] [--output JSON]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_template_version_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_account_settings_template_version_examples}
+
+Show version `1` of account settings template `AccountSettingsEditorTemplate`
+
+```bash
+ibmcloud iam account-settings-template-create AccountSettingsEditorTemplate 1
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-template-versions
+{: #ibmcloud_iam_account_settings_template_versions}
+
+List versions of an account settings template in an enterprise account:
+```bash
+ibmcloud iam account-settings-template-versions (TEMPLATE_ID | TEMPLATE_NAME) [-q,--quiet] [--output JSON]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_template_versions_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_account_settings_template_versions_examples}
+
+List versions of account settings template `AccountSettingsEditorTemplate`
+
+```bash
+ibmcloud iam account-settings-template-versions AccountSettingsEditorTemplate
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-template-version-create
+{: #ibmcloud_iam_account_settings_template_version_create}
+
+Create a new version of an account settings template in an enterprise account:
+```bash
+ibmcloud iam account-settings-template-version-create {(TEMPLATE_ID |TEMPLATE_NAME) (--file JSON_FILE)} [-q,--quiet] [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_template_version_create_options}
+
+--file JSON_FILE
+:   JSON file of account settings template definition
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_account_settings_template_version_create_examples}
+
+Create a new version of account settings template `AccountSettingsEditorTemplate`
+
+```bash
+ibmcloud iam account-settings-template-version-create AccountSettingsEditorTemplate --file /path/to/account_settings_template.json
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-template-version-update
+{: #ibmcloud_iam_account_settings_template-version-update}
+
+Update a specific version of an account settings template in an enterprise account:
+```bash
+ibmcloud iam account-settings-template-version-update (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION --file JSON_FILE [-d, --description DESCRIPTION] [-q,--quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_template_version_update_options}
+
+-d value, --description DESCRIPTION
+:   Description of the template
+
+--file JSON_FILE
+:   JSON file of template definition
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_account_settings_version_update_examples}
+
+Update version `1` of account settings template `AccountSettingsEditorTemplate`
+
+```bash
+ibmcloud iam account-settings-template-version-update AccountSettingsEditorTemplate 1 --file /path/to/account_settings_template.json
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-template-version-delete
+{: #ibmcloud_iam_account_settings_template-version-delete}
+
+Delete a version of an account settings template for an enterprise account:
+```bash
+ibmcloud iam account-settings-template-version-delete (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION [-q,--quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_template_version_delete_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_account_settings_template_version_delete}
+
+Delete version `2` of account settings template `AccountSettingsEditorTemplate`
+
+```bash
+ibmcloud iam account-settings-template-delete AccountSettingsEditorTemplate 2
+```
+{: #codeblock}
+
+## ibmcloud iam account-settings-template-version-commit
+{: #ibmcloud_iam_account_settings_template-version-commit}
+
+Commit a specific version of an account settings template in an enterprise account:
+```bash
+ibmcloud iam account-settings-template-commit (TEMPLATE_ID | TEMPLATE_NAME) TEMPLATE_VERSION [-q,--quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_template_version_commit_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_account_settings_template_version_commit_examples}
+
+Commit version `1` of account settings template `AccountSettingsEditorTemplate`
+
+```bash
+ibmcloud iam account-settings-template-version-commit AccountSettingsEditorTemplate 1
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-assignments
+{: #ibmcloud_iam_account_settings_assignments}
+
+List assignments for account settings on an enterprise account:
+```bash
+ibmcloud iam account-settings-assignments [--output FORMAT] [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_assignments_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_account_settings_assignments_examples}
+
+List assignments in current account
+```bash
+ibmcloud iam account-settings-assignments
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-assignment
+{: #ibmcloud_iam_account_settings_assignment}
+
+Get an assignment for an account settings template:
+```bash
+ibmcloud iam account-settings-assignment ASSIGNMENT_ID [-q,--quiet] [--output FORMAT]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_assignment_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+--output FORMAT
+:   Specify output format. Only 'JSON' is supported.
+
+### Examples
+{: #ibmcloud_iam_account_settings_assignment_examples}
+
+Get account settings assignment `AccountSettingsAssignment-7c4345c7f2cb4c75a9f29b68fc1e1e88`
+```bash
+ibmcloud iam account-settings-assignment AccountSettingsAssignment-7c4345c7f2cb4c75a9f29b68fc1e1e88
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-assignment-create
+{: #ibmcloud_iam_account_settings_assignment_create}
+
+Create an assignment for an account settings template:
+```bash
+ibmcloud iam account-settings-assignment-create TEMPLATE_NAME TEMPLATE_VERSION TARGET_TYPE TARGET [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_template_version_create_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_account_settings_template_assignment_create_examples}
+
+Assign account settings template template to account
+```bash
+ibmcloud iam account-settings-assignment-create TemplateTest 1 Account f7fc6938256e46e1a25ee09e14ca9c20
+```
+{: codeblock}
+
+Assign account settings template template to account group
+```bash
+ibmcloud iam account-settings-assignment-create TemplateTest 1 AccountGroup 955fc2274567474f8da802d5c376504b
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-assignment-update
+{: #ibmcloud_iam_account_settings_assignment-update}
+
+Update an assignment in order to retry failed assignments or migrate resources to a new version:
+```bash
+ibmcloud iam account-settings-assigment-update ASSIGNMENT_ID TEMPLATE_VERSION [-q,--quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_assignment_update_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_account_settings_assignment_update_examples}
+
+Update account settings assignment `AccountSettingsAssignment-63d65ed159ff463b8ec09ea77d22a05b` to a template version 2
+
+```bash
+ibmcloud iam account-settings-assignment-update AccountSettingsAssignment-63d65ed159ff463b8ec09ea77d22a05b 2
+```
+{: codeblock}
+
+## ibmcloud iam account-settings-assignment-delete
+{: #ibmcloud_iam_account_settings_assignment-delete}
+
+Delete an account settings assignment. This will remove any resources created by this assignment:
+```bash
+ibmcloud iam account-settings-assigment-delete ASSIGNMENT_ID [-q, --quiet]
+```
+{: codeblock}
+
+### Command options
+{: #ibmcloud_iam_account_settings_assignment_delete_options}
+
+-q, --quiet
+:   Suppress verbose output.
+
+### Examples
+{: #ibmcloud_iam_account_settings_assignment_delete_examples}
+
+Delete account settings assignment `AccountSettingsAssignment-63d65ed159ff463b8ec09ea77d22a05b`
+
+```bash
+ibmcloud iam account-settings-assignment-delete AccountSettingsAssignment-63d65ed159ff463b8ec09ea77d22a05b
 ```
 {: codeblock}
