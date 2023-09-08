@@ -2816,10 +2816,19 @@ ibmcloud iam access-group-template-create (TEMPLATE_NAME --access-group-name ACC
 -q, --quiet
 :   Suppress verbose output.
 
-<!---
+
 ### Examples
 {: #ibmcloud_iam_access_group_template_create_examples}
---->
+
+Create an access group template with specified name and access group name
+```bash
+ibmcloud iam access-group-template-create example-template-name --acess-group-name example-acess-group -d example-description
+```
+Create an access group template using a JSON file
+```bash
+ibmcloud iam access-group-template-create --file JSON_FILE
+```
+{: codeblock}
 
 ## ibmcloud iam access-group-template
 {: #ibmcloud-iam-access-group-template}
