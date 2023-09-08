@@ -1369,6 +1369,15 @@ ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac97
 ```
 {: codeblock}
 
+## ibmcloud iam logins
+{: #ibmcloud_iam_logins}
+
+Retrieve and display recent login history:
+```bash
+ibmcloud iam logins
+```
+{: codeblock}
+
 ## ibmcloud iam oauth-tokens
 {: #ibmcloud_iam_oauth_tokens}
 
