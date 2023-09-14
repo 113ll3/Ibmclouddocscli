@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-06-22"
+lastupdated: "2023-09-14"
 
 keywords: cli, catalogs management, catalog
 
@@ -24,7 +24,6 @@ The {{site.data.keyword.cloud}} catalogs management command-line interface (CLI)
 * Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started). The prefix for running commands by using the {{site.data.keyword.cloud_notm}} CLI is `ibmcloud`.
 * Before you run the registry commands, log in to {{site.data.keyword.cloud_notm}} with the `ibmcloud login` command to generate an access token and authenticate your session.
 
-
 ## Installing the catalogs management plug-in
 {: #install-managecatalogs}
 
@@ -41,6 +40,119 @@ If you want to view the current version of your `catalogs-management` CLI plug-i
 
 To maintain privacy and security, don't put personal information in your catalog names or catalog descriptions.
 {: important}
+
+## ibmcloud catalog account add-approval-access
+{: #catalog-account-add-approval}
+
+Run the following command to add approval access to your catalog account.
+
+```bash
+ibmcloud catalog account add-approval-access [--account-ids IDS] [--object-kind KIND]
+```
+{: codeblock}
+
+### Command options
+{: #catalog-account-add-approval-options}
+
+--object-kind VALUE
+
+:   Provide the object kind.  Options are `offering`, `vpe`, `proxy_source`, or `preset_configuration`.
+
+--account-ids VALUE
+
+:   Provide a comma separated list of account IDs prefixed with one of the following.  `-acct-` for regular accounts, `-ent-` for enterprise accounts, and `-entgrp-` for enterprise account groups.
+
+## ibmcloud catalog account delete-approval-access
+{: #catalog-account-delete-approval}
+
+Run the following command to delete approval access to your catalog account.
+
+```bash
+ibmcloud catalog account delete-approval-access [--account-ids IDS] [--object-kind KIND]
+```
+{: codeblock}
+
+### Command options
+{: #catalog-account-add-approval-options}
+
+--object-kind VALUE
+
+:   Provide the object kind.  Options are `offering`, `vpe`, `proxy_source`, or `preset_configuration`.
+
+--account-ids VALUE
+
+:   Provide a comma separated list of account IDs prefixed with one of the following.  `-acct-` for regular accounts, `-ent-` for enterprise accounts, and `-entgrp-` for enterprise account groups.
+
+## ibmcloud catalog account get-approval-list
+{: #catalog-account-get-list}
+
+Run the following command to get approval list for your catalog account.
+
+```bash
+ibmcloud catalog account get-approval-list [--object-kind KIND]
+```
+{: codeblock}
+
+### Command options
+{: #catalog-account-add-approval-options}
+
+--object-kind VALUE
+
+:   Provide the object kind.  Options are `offering`, `vpe`, `proxy_source`, or `preset_configuration`.
+
+## ibmcloud catalog account get-approval-list-source
+{: #catalog-account-get-source}
+
+Run the following command to get all target accounts pointing to a source.
+
+```bash
+ibmcloud catalog account get-approval-list-source [--approval-state STATE] [--enterprise-id ID] [--object-kind KIND]
+```
+{: codeblock}
+
+### Command options
+{: #catalog-account-add-approval-options}
+
+--object-kind VALUE
+
+:   Provide the object kind.  Options are `offering`, `vpe`, `proxy_source`, or `preset_configuration`.
+
+--approval-state VALUE
+
+:   Provide the approval state.  Options are `approved`, `pending`, or `rejected`.
+
+--enterprise-id VALUE (optional)
+
+:   Provide an enterprise or enterprise account group ID to view or manage requests for the enterprise. Prefix the ID with `-ent-` for an enterprise and `-entgrp` for an account group.
+
+## ibmcloud catalog account set-approval-state-source
+{: #catalog-account-set-source}
+
+Run the following command to set the approval state for target accounts pointing to a source.
+
+```bash
+ibmcloud catalog account set-approval-state-source [--account-ids IDS] [--approval-state STATE] [--enterprise-id ID] [--object-kind KIND]
+```
+{: codeblock}
+
+### Command options
+{: #catalog-account-add-approval-options}
+
+--object-kind VALUE
+
+:   Provide the object kind.  Options are `offering`, `vpe`, `proxy_source`, or `preset_configuration`.
+
+--approval-state VALUE
+
+:   Provide the approval state.  Options are `approved`, `pending`, or `rejected`.
+
+--account-ids VALUE
+
+:   Provide a comma separated list of account IDs prefixed with one of the following.  `-acct-` for regular accounts, `-ent-` for enterprise accounts, and `-entgrp-` for enterprise account groups.
+
+--enterprise-id VALUE (optional)
+
+:   Provide an enterprise or enterprise account group ID to view or manage requests for the enterprise. Prefix the ID with `-ent-` for an enterprise and `-entgrp` for an account group.
 
 ## ibmcloud catalog create
 {: #create-catalog}
