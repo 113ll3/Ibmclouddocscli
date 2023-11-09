@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-06"
+lastupdated: "2023-11-09"
 
 subcollection: cli
 
@@ -58,7 +58,7 @@ ibmcloud project create [--definition DEFINITION] --location LOCATION --resource
     The maximum length is `12` characters. The minimum length is `0` characters. The value must match regular expression `/^$|^(us-south|us-east|eu-gb|eu-de)$/`.
 
 `--resource-group` (string)
-:   The resource group where the project's data and tools are created. Required.
+:   The resource group name where the project's data and tools are created. Required.
 
     The maximum length is `64` characters. The minimum length is `0` characters. The value must match regular expression `/^(?!\\s)(?!.*\\s$)[^'"`<>{}\\x00-\\x1F]*$/`.
 
@@ -179,6 +179,7 @@ A projects list results example
     "location" : "us-south",
     "state" : "ready",
     "resource_group" : "Default",
+    "resource_group_id" : "f37d2637ea814cfd9a1742683a713d24",
     "cumulative_needs_attention_view" : [ {
       "event" : "project.instance.update"
     }, {
@@ -201,6 +202,7 @@ A projects list results example
     "location" : "eu-gb",
     "state" : "ready",
     "resource_group" : "Default",
+    "resource_group_id" : "f37d2637ea814cfd9a1742683a713d24",
     "cumulative_needs_attention_view" : [ ]
   } ]
 }
@@ -405,7 +407,7 @@ ibmcloud project update --id ID [--definition DEFINITION]
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
-`--definition` ([`ProjectPrototypePatchDefinitionBlock`](#cli-project-prototype-patch-definition-block-example-schema))
+`--definition` ([`ProjectPatchDefinitionBlock`](#cli-project-patch-definition-block-example-schema))
 :   The definition of the project. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--definition=@path/to/file.json`.
@@ -593,6 +595,7 @@ Sample response for retrieving a project with configurations.
   "event_notifications_crn" : "crn:v1:staging:public:event-notifications:us-south:a/06580c923e40314421d3b6cb40c01c68:instance-id::",
   "location" : "us-south",
   "resource_group" : "Default",
+  "resource_group_id" : "f37d2637ea814cfd9a1742683a713d24",
   "state" : "ready"
 }
 ```
@@ -1270,17 +1273,17 @@ Sample response for get project configurations.
 ```
 {: screen}
 
-## `ibmcloud project config-get`
-{: #project-cli-config-get-command}
+## `ibmcloud project config`
+{: #project-cli-config-command}
 
 Returns the specified project configuration in a specific project.
 
 ```sh
-ibmcloud project config-get --project-id PROJECT-ID --id ID
+ibmcloud project config --project-id PROJECT-ID --id ID
 ```
 
 ### Command options
-{: #project-config-get-cli-options}
+{: #project-config-cli-options}
 
 `--project-id` (string)
 :   The unique project ID. Required.
@@ -1293,17 +1296,17 @@ ibmcloud project config-get --project-id PROJECT-ID --id ID
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
 ### Example
-{: #project-config-get-examples}
+{: #project-config-examples}
 
 ```sh
-ibmcloud project config-get \
+ibmcloud project config \
     --project-id exampleString \
     --id exampleString
 ```
 {: pre}
 
 ### Example output
-{: #project-config-get-cli-output}
+{: #project-config-cli-output}
 
 Sample response for a project configuration.
 
@@ -1448,7 +1451,7 @@ ibmcloud project config-update --project-id PROJECT-ID --id ID [--definition DEF
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
 
-`--definition` ([`ProjectConfigPrototypePatchDefinitionBlock`](#cli-project-config-prototype-patch-definition-block-example-schema))
+`--definition` ([`ProjectConfigPatchDefinitionBlock`](#cli-project-config-patch-definition-block-example-schema))
 :   The name and description of a project configuration. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--definition=@path/to/file.json`.
@@ -2148,17 +2151,17 @@ Sample response for list project configuration drafts.
 ```
 {: screen}
 
-## `ibmcloud project config-draft-get`
-{: #project-cli-config-version-get-command}
+## `ibmcloud project config-version`
+{: #project-cli-config-version-command}
 
 Returns a specific version of a project configuration in a specific project.
 
 ```sh
-ibmcloud project config-version-get --project-id PROJECT-ID --id ID --version VERSION
+ibmcloud project config-version --project-id PROJECT-ID --id ID --version VERSION
 ```
 
 ### Command options
-{: #project-config-version-get-cli-options}
+{: #project-config-version-cli-options}
 
 `--project-id` (string)
 :   The unique project ID. Required.
@@ -2174,10 +2177,10 @@ ibmcloud project config-version-get --project-id PROJECT-ID --id ID --version VE
 :   The configuration version. Required.
 
 ### Example
-{: #project-config-version-get-examples}
+{: #project-config-version-examples}
 
 ```sh
-ibmcloud project config-version-get \
+ibmcloud project config-version \
     --project-id exampleString \
     --id exampleString \
     --version 38
@@ -2185,7 +2188,7 @@ ibmcloud project config-version-get \
 {: pre}
 
 ### Example output
-{: #project-config-version-get-cli-output}
+{: #project-config-version-cli-output}
 
 Sample response for a project configuration draft.
 
@@ -2367,40 +2370,10 @@ The following example shows the format of the EnvironmentDefinitionRequiredPrope
 ```
 {: codeblock}
 
-### ProjectConfigPrototypeDefinitionBlock
-{: #cli-project-config-prototype-definition-block-example-schema}
+### ProjectConfigPatchDefinitionBlock
+{: #cli-project-config-patch-definition-block-example-schema}
 
-The following example shows the format of the ProjectConfigPrototypeDefinitionBlock object.
-
-```json
-
-{
-  "name" : "env-stage",
-  "description" : "Stage environment configuration, which includes services common to all the environment regions. There must be a blueprint configuring all the services common to the stage regions. It is a terraform_template type of configuration that points to a Github repo hosting the terraform modules that can be deployed by a Schematics Workspace.",
-  "environment" : "exampleString",
-  "authorizations" : {
-    "trusted_profile_id" : "exampleString",
-    "method" : "api_key",
-    "api_key" : "exampleString"
-  },
-  "compliance_profile" : {
-    "id" : "exampleString",
-    "instance_id" : "exampleString",
-    "instance_location" : "exampleString",
-    "attachment_id" : "exampleString",
-    "profile_name" : "exampleString"
-  },
-  "locator_id" : "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.018edf04-e772-4ca2-9785-03e8e03bef72-global",
-  "inputs" : { },
-  "settings" : { }
-}
-```
-{: codeblock}
-
-### ProjectConfigPrototypePatchDefinitionBlock
-{: #cli-project-config-prototype-patch-definition-block-example-schema}
-
-The following example shows the format of the ProjectConfigPrototypePatchDefinitionBlock object.
+The following example shows the format of the ProjectConfigPatchDefinitionBlock object.
 
 ```json
 
@@ -2421,6 +2394,36 @@ The following example shows the format of the ProjectConfigPrototypePatchDefinit
     "profile_name" : "exampleString"
   },
   "locator_id" : "exampleString",
+  "inputs" : { },
+  "settings" : { }
+}
+```
+{: codeblock}
+
+### ProjectConfigPrototypeDefinitionBlock
+{: #cli-project-config-prototype-definition-block-example-schema}
+
+The following example shows the format of the ProjectConfigPrototypeDefinitionBlock object.
+
+```json
+
+{
+    "name" : "env-stage",
+    "description" : "Stage environment configuration, which includes services common to all the environment regions. There must be a blueprint configuring all the services common to the stage regions. It is a terraform_template type of configuration that points to a Github repo hosting the terraform modules that can be deployed by a Schematics Workspace.",
+  "environment" : "exampleString",
+  "authorizations" : {
+    "trusted_profile_id" : "exampleString",
+    "method" : "api_key",
+    "api_key" : "exampleString"
+  },
+  "compliance_profile" : {
+    "id" : "exampleString",
+    "instance_id" : "exampleString",
+    "instance_location" : "exampleString",
+    "attachment_id" : "exampleString",
+    "profile_name" : "exampleString"
+  },
+  "locator_id" : "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.018edf04-e772-4ca2-9785-03e8e03bef72-global",
   "inputs" : { },
   "settings" : { }
 }
@@ -2462,10 +2465,10 @@ The following example shows the format of the ProjectConfigPrototype[] object.
 ```
 {: codeblock}
 
-### ProjectPrototypeDefinition
-{: #cli-project-prototype-definition-example-schema}
+### ProjectPatchDefinitionBlock
+{: #cli-project-patch-definition-block-example-schema}
 
-The following example shows the format of the ProjectPrototypeDefinition object.
+The following example shows the format of the ProjectPatchDefinition object.
 
 ```json
 
@@ -2477,10 +2480,10 @@ The following example shows the format of the ProjectPrototypeDefinition object.
 ```
 {: codeblock}
 
-### ProjectPrototypePatchDefinitionBlock
-{: #cli-project-prototype-patch-definition-block-example-schema}
+### ProjectPrototypeDefinitionBlock
+{: #cli-project-prototype-definition-block-example-schema}
 
-The following example shows the format of the ProjectPrototypePatchDefinitionBlock object.
+The following example shows the format of the ProjectPrototypeDefinitionBlock object.
 
 ```json
 
