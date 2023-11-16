@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-09"
+lastupdated: "2023-11-16"
 
 subcollection: cli
 
@@ -997,7 +997,7 @@ Sample environment response.
 ```
 {: screen}
 
-## `ibmcloud project project-environment-delete`
+## `ibmcloud project environment-delete`
 {: #project-cli-environment-delete-command}
 
 Delete an environment in a project by ID.
