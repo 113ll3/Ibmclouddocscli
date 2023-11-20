@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-16"
+lastupdated: "2023-11-20"
 
 subcollection: cli
 
@@ -1882,7 +1882,7 @@ Sample response for a project configuration.
 Deploy a project's configuration. It's an asynchronous operation that can be tracked using the get project configuration API with full metadata.
 
 ```sh
-ibmcloud project config-install --project-id PROJECT-ID --id ID
+ibmcloud project config-deploy --project-id PROJECT-ID --id ID
 ```
 
 ### Command options
@@ -1964,7 +1964,7 @@ Sample response for a project configuration draft.
 Destroy a project's configuration resources. The operation destroys all the resources that are deployed with the specific configuration. You can track it by using the get project configuration API with full metadata.
 
 ```sh
-ibmcloud project config-uninstall --project-id PROJECT-ID --id ID
+ibmcloud project config-undeploy --project-id PROJECT-ID --id ID
 ```
 
 ### Command options
