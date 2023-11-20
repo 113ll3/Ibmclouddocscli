@@ -92,7 +92,7 @@ ibmcloud project create \
     --definition '{"name": "acme-microservice", "description": "A microservice to deploy on top of ACME infrastructure.", "destroy_on_delete": true}' \
     --location us-south \
     --resource-group Default \
-    --configs '[{"definition": {"name": "exampleString", "description": "exampleString", "environment": "exampleString", "authorizations": {"trusted_profile_id": "exampleString", "method": "api_key", "api_key": "exampleString"}, "compliance_profile": {"id": "exampleString", "instance_id": "exampleString", "instance_location": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}, "locator_id": "exampleString", "inputs": {}, "settings": {}}, "schematics": {"workspace_crn": "exampleString"}}]'
+    --configs '[{"definition": {"name": "exampleString", "description": "exampleString", "environment_id": "exampleString", "authorizations": {"trusted_profile_id": "exampleString", "method": "api_key", "api_key": "exampleString"}, "compliance_profile": {"id": "exampleString", "instance_id": "exampleString", "instance_location": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}, "locator_id": "exampleString", "inputs": {}, "settings": {}}, "schematics": {"workspace_crn": "exampleString"}}]'
 ```
 {: pre}
 
@@ -1079,7 +1079,7 @@ ibmcloud project config-create --project-id PROJECT-ID [--definition DEFINITION]
 
     The maximum length is `1024` characters. The minimum length is `0` characters. The value must match regular expression `/^$|^(?!\\s).*\\S$/`.
 
-`--definition-environment` (string)
+`--definition-environment-id` (string)
 :   The ID of the project environment. This option provides a value for a sub-field of the JSON option 'definition'. It is mutually exclusive with that option.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
@@ -1121,7 +1121,7 @@ Settings are only available if they were specified when the configuration was in
 ```sh
 ibmcloud project config-create \
     --project-id exampleString \
-    --definition '{"name": "env-stage", "description": "Stage environment configuration, which includes services common to all the environment regions. There must be a blueprint configuring all the services common to the stage regions. It is a terraform_template type of configuration that points to a Github repo hosting the terraform modules that can be deployed by a Schematics Workspace.", "environment": "exampleString", "authorizations": {"trusted_profile_id": "exampleString", "method": "api_key", "api_key": "exampleString"}, "compliance_profile": {"id": "exampleString", "instance_id": "exampleString", "instance_location": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}, "locator_id": "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.018edf04-e772-4ca2-9785-03e8e03bef72-global", "inputs": {}, "settings": {}}' \
+    --definition '{"name": "env-stage", "description": "Stage environment configuration, which includes services common to all the environment regions. There must be a blueprint configuring all the services common to the stage regions. It is a terraform_template type of configuration that points to a Github repo hosting the terraform modules that can be deployed by a Schematics Workspace.", "environment_id": "exampleString", "authorizations": {"trusted_profile_id": "exampleString", "method": "api_key", "api_key": "exampleString"}, "compliance_profile": {"id": "exampleString", "instance_id": "exampleString", "instance_location": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}, "locator_id": "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.018edf04-e772-4ca2-9785-03e8e03bef72-global", "inputs": {}, "settings": {}}' \
     --schematics '{"workspace_crn": "exampleString"}'
 ```
 {: pre}
@@ -1132,7 +1132,7 @@ ibmcloud project config-create \
     --project-id exampleString \
     --definition-name exampleString \
     --definition-description exampleString \
-    --definition-environment exampleString \
+    --definition-environment-id exampleString \
     --definition-authorizations projectConfigAuth \
     --definition-compliance-profile projectComplianceProfile \
     --definition-locator-id exampleString \
@@ -1466,7 +1466,7 @@ ibmcloud project config-update --project-id PROJECT-ID --id ID [--definition DEF
 
     The maximum length is `1024` characters. The minimum length is `0` characters. The value must match regular expression `/^$|^(?!\\s).*\\S$/`.
 
-`--definition-environment` (string)
+`--definition-environment-id` (string)
 :   The ID of the project environment. This option provides a value for a sub-field of the JSON option 'definition'. It is mutually exclusive with that option.
 
     The maximum length is `128` characters. The value must match regular expression `/^[\\.\\-0-9a-zA-Z]+$/`.
@@ -1504,7 +1504,7 @@ Settings are only available if they were specified when the configuration was in
 ibmcloud project config-update \
     --project-id exampleString \
     --id exampleString \
-    --definition '{"name": "exampleString", "description": "exampleString", "environment": "exampleString", "authorizations": {"trusted_profile_id": "exampleString", "method": "api_key", "api_key": "exampleString"}, "compliance_profile": {"id": "exampleString", "instance_id": "exampleString", "instance_location": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}, "locator_id": "exampleString", "inputs": {}, "settings": {}}'
+    --definition '{"name": "exampleString", "description": "exampleString", "environment_id": "exampleString", "authorizations": {"trusted_profile_id": "exampleString", "method": "api_key", "api_key": "exampleString"}, "compliance_profile": {"id": "exampleString", "instance_id": "exampleString", "instance_location": "exampleString", "attachment_id": "exampleString", "profile_name": "exampleString"}, "locator_id": "exampleString", "inputs": {}, "settings": {}}'
 ```
 {: pre}
 
@@ -1515,7 +1515,7 @@ ibmcloud project config-update \
     --id exampleString \
     --definition-name exampleString \
     --definition-description exampleString \
-    --definition-environment exampleString \
+    --definition-environment-id exampleString \
     --definition-authorizations projectConfigAuth \
     --definition-compliance-profile projectComplianceProfile \
     --definition-locator-id exampleString \
@@ -2380,7 +2380,7 @@ The following example shows the format of the ProjectConfigPatchDefinitionBlock 
 {
   "name" : "exampleString",
   "description" : "exampleString",
-  "environment" : "exampleString",
+  "environment_id" : "exampleString",
   "authorizations" : {
     "trusted_profile_id" : "exampleString",
     "method" : "api_key",
@@ -2410,7 +2410,7 @@ The following example shows the format of the ProjectConfigPrototypeDefinitionBl
 {
     "name" : "env-stage",
     "description" : "Stage environment configuration, which includes services common to all the environment regions. There must be a blueprint configuring all the services common to the stage regions. It is a terraform_template type of configuration that points to a Github repo hosting the terraform modules that can be deployed by a Schematics Workspace.",
-  "environment" : "exampleString",
+  "environment_id" : "exampleString",
   "authorizations" : {
     "trusted_profile_id" : "exampleString",
     "method" : "api_key",
@@ -2441,7 +2441,7 @@ The following example shows the format of the ProjectConfigPrototype[] object.
   "definition" : {
     "name" : "exampleString",
     "description" : "exampleString",
-    "environment" : "exampleString",
+    "environment_id" : "exampleString",
     "authorizations" : {
       "trusted_profile_id" : "exampleString",
       "method" : "api_key",
