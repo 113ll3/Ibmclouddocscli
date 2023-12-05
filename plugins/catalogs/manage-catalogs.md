@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-09-14"
+lastupdated: "2023-12-05"
 
 keywords: cli, catalogs management, catalog
 
@@ -1726,6 +1726,56 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 
 --schematics-delete VALUE (optional)
 :   Provide this flag to delete the {{site.data.keyword.bpshort}} workspace after validation and installation.
+
+## ibmcloud catalog utility create-product-from-workspace
+{: #publish-utility-create}
+
+Run the following command to create a deployable architecture tile from a [{{site.data.keyword.bpshort}} workspace](docs/schematics?topic=schematics-sch-create-wks&interface=ui) that was created directly from the Git repository. The deployable architecture [creates a project](/docs/cli?topic=cli-projects-cli#project-cli-create-command) to enable you to continue to develop and maintain the deployable architecture with the future version.
+
+The command requires a `GIT_TOKEN` environment variable to authenticate with your source repository so a catalog manifest can be added. The command pushes to a new branch in the Git repository that is found in the {{site.data.keyword.bpshort}} workspace and creates a release that is used for onboarding.
+
+```bash
+ibmcloud catalog utility create-product-from-workspace [--workspace-id ID] [--api-key KEY] [--trusted-profile-id ID] [--catalog-label LABEL] [--offering-label LABEL] [--project-name NAME] [--project-resource-group GROUP] [--target-version VERSION] [--variation-label LABEL]
+```
+{: codeblock}
+
+### Command options
+{: #publish-utility-create-options}
+
+--api-key or --ak API KEY
+
+:   Provide an API key that will be used to link the catalog and project. Mutually exclusive with '--trusted-profile-id'.
+
+--catalog-label CATALOG LABEL (optional)
+
+:   Provide the label of an existing catalog to import into or the name of a new catalog to create. Default is 'Migrated DAs'.
+
+--offering-label OFFERING LABEL (optional)
+
+:    Provide the label of an existing offering to import into or the name of a new offering to create. Default is 'Migrated <workspace_name>'. The label overwrites the existing offering label if the workspace is created from a catalog offering.
+
+--project-name NAME (optional)
+
+:   Provide a project name that will be linked to the onboarded catalog. If the project does not exist it will be created. Default name is 'Dev Migration Project'.
+
+--project-resource-group (optional)
+:   Provide a resource group for the project that will be created. Default resource group is 'Default'.
+
+--target-version VERSION (optional)
+
+:   Provide the target version for the migrated offering. Default is '1.0.0'.
+
+--trusted-profile-id or --tpi TRUSTED PROFILE ID
+
+:   Provide a trusted profile ID that will be used to link the catalog and project. Mutually exclusive with '--api-key'.
+
+--variation-label VARIATION LABEL (optional)
+
+:   Provide a variation label for the version to be onboarded. Default is 'Standard'. The label overwrites the existing version label if the workspace is created from a catalog offering.
+
+--workspace-id WORKSPACE ID
+
+:   Provide a {{site.data.keyword.bpshort}} workspace ID. To get the workspace ID, you must create the {{site.data.keyword.bpshort}} workspace. For more information, see [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). 
 
 ## ibmcloud catalog utility netrc
 {: #generate-netrc}
