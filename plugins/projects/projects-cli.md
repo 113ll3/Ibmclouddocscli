@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-20"
+lastupdated: "2023-12-11"
 
 subcollection: cli
 
@@ -47,7 +47,7 @@ ibmcloud project create [--definition DEFINITION] --location LOCATION --resource
 ### Command options
 {: #project-create-cli-options}
 
-`--definition` ([`ProjectPrototypeDefinition`](#cli-project-prototype-definition-example-schema))
+`--definition` ([`ProjectPrototypeDefinition`](#cli-project-prototype-definition-block-example-schema))
 :   The definition of the project. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--definition=@path/to/file.json`.
