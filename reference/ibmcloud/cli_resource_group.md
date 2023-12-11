@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-02"
+lastupdated: "2023-12-08"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -216,7 +216,7 @@ ibmcloud resource quota free
 
 List service instances.
 ```bash
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--type INSTANCE_TYPE] [-g RESOURCE_GROUP | --all-resource-groups] [--long]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--type INSTANCE_TYPE] [-g RESOURCE_GROUP | --all-resource-groups] [--long] [--limit LIMIT] [--offset OFFSET] [--output FORMAT] [-q, --quiet]
 ```
 {: codeblock}
 
@@ -241,6 +241,17 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 --long
 :   Show more fields in output.
 
+--limit LIMIT
+:   Number of resources to return
+
+--offset OFFSET
+:   Starting resource position number
+
+--output FORMAT
+:   Specify output format, only JSON is supported now.
+
+-q, --quiet
+:   Suppress verbose output.
 
 
 ### Examples
@@ -249,6 +260,11 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 List service instances of service `test-service`:
 ```bash
 ibmcloud resource service-instances --service-name test-service
+```
+
+List next page of service instances with page size of 10
+```bash
+ibmcloud resource service-instances --offset 1 --limit 10
 ```
 {: codeblock}
 
