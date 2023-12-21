@@ -2830,7 +2830,7 @@ ibmcloud iam access-group-template-create (TEMPLATE_NAME --access-group-name ACC
 
 Create an access group template with specified name and access group name
 ```bash
-ibmcloud iam access-group-template-create example-template-name --acess-group-name example-acess-group -d example-description
+ibmcloud iam access-group-template-create example-template-name --access-group-name example-access-group -d example-description
 ```
 Create an access group template using a JSON file
 ```bash
