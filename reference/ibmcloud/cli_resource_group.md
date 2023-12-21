@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-12-08"
+lastupdated: "2023-12-20"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -230,7 +230,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 :   Filter by location
 
 --type *INSTANCE_TYPE*
-:   Type of instances. `service_instance` type is used if not specified, use all to list all types of instances.
+:   Type of instances. The `service_instance` type is used if not specified. Use all to list all types of instances.
 
 -g *RESOURCE_GROUP*
 :   Resource group name
@@ -239,7 +239,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 :   Query all resource groups
 
 --long
-:   Show more fields in output.
+:   Show more fields in output
 
 --limit LIMIT
 :   Number of resources to return
@@ -248,7 +248,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 :   Starting resource position number
 
 --output FORMAT
-:   Specify output format, only JSON is supported now.
+:   Specify output format. Only JSON is supported now.
 
 -q, --quiet
 :   Suppress verbose output.
@@ -1157,7 +1157,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT]  [-p, --provide
 :   The ID of the account that owns the tags that you want to list (required if tag-type is set to service).
 
 --output value
-:   Specify output format, only JSON is supported now.
+:   Specify output format. Only JSON is supported now.
 
 -q, --quiet
 :   Suppress verbose output.
