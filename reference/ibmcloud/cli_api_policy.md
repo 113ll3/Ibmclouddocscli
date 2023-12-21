@@ -2839,7 +2839,7 @@ ibmcloud iam access-group-template-create --file JSON_FILE
 {: codeblock}
 
 The `update` action control is not supported during creation of the access group template and will be rejected if the assertion rule is added in the JSON_FILE.
-{: note}
+{: deprecated}
 
 ## ibmcloud iam access-group-template
 {: #ibmcloud-iam-access-group-template}
@@ -2998,7 +2998,7 @@ ibmcloud iam access-group-template-version-update example-template-name 1 --file
 {: codeblock}
 
 The `update` action control is not supported during creation of the access group template and will be rejected if the assertion rule is added in the JSON_FILE.
-{: note}
+{: deprecated}
 
 ## ibmcloud iam access-group-template-versions
 {: #ibmcloud_iam_access_group_template_versions}
