@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-12-20"
+lastupdated: "2023-12-21"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -2838,9 +2838,6 @@ ibmcloud iam access-group-template-create --file JSON_FILE
 ```
 {: codeblock}
 
-The `update` action control is not supported during creation of the access group template and will be rejected if the assertion rule is added in the JSON_FILE.
-{: deprecated}
-
 ## ibmcloud iam access-group-template
 {: #ibmcloud-iam-access-group-template}
 
@@ -2996,9 +2993,6 @@ Update a specified version of an access group template with a JSON file
 ibmcloud iam access-group-template-version-update example-template-name 1 --file JSON_FILE
 ```
 {: codeblock}
-
-The `update` action control is not supported during creation of the access group template and will be rejected if the assertion rule is added in the JSON_FILE.
-{: deprecated}
 
 ## ibmcloud iam access-group-template-versions
 {: #ibmcloud_iam_access_group_template_versions}
