@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2022-05-19"
+lastupdated: "2023-12-22"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -68,7 +68,7 @@ To install the latest CLI for your OS from the shell manually, use the following
    ```
    {: codeblock}
 
-* For **Windows&trade;**, copy and paste the following command to a [Windows&trade; PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: external} terminal console and run it:
+* For **Windows&trade;**, copy and paste the following command to a [Windows&trade; PowerShell 5](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: external} terminal console and run it:
    ```bash
    iex (New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
    ```
