@@ -31,8 +31,8 @@
         "href": "/docs/cli?topic=cli-troubleshoot"
       },
       {
-        "title": "Release notes for the IBM Cloud CLI",
-        "description": "See the release notes, and access the installers and binaries for the IBM Cloud CLI.",
+        "title": "Release notes and downloads for the IBM Cloud CLI",
+        "description": "See the release notes, and download the installers and binaries for the IBM Cloud CLI.",
         "href": "https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/"
       }
     ],
