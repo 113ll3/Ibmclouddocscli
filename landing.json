@@ -1,6 +1,6 @@
 {
     "title": "IBM Cloud CLI docs",
-    "lastupdated": "2023-06-02",
+    "lastupdated": "2023-12-26",
     "introduction": "Use IBM Cloud's powerful CLIs and tooling to interact with your applications, containers, infrastructure, and other services",
     "section_devtools": {
       "cli": "/docs/cli?topic=cli-ibmcloud_cli"
@@ -29,6 +29,11 @@
         "title": "Troubleshooting for the IBM Cloud CLI",
         "description": "See solutions to common problems with using the IBM Cloud Command Line Interface.",
         "href": "/docs/cli?topic=cli-troubleshoot"
+      }
+      {
+        "title": "Release notes for the IBM Cloud CLI",
+        "description": "See the release notes, and access the installers and binaries for the IBM Cloud CLI.",
+        "href": "https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/"
       }
     ],
     "section_learn": {
