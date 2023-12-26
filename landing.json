@@ -29,7 +29,7 @@
         "title": "Troubleshooting for the IBM Cloud CLI",
         "description": "See solutions to common problems with using the IBM Cloud Command Line Interface.",
         "href": "/docs/cli?topic=cli-troubleshoot"
-      }
+      },
       {
         "title": "Release notes for the IBM Cloud CLI",
         "description": "See the release notes, and access the installers and binaries for the IBM Cloud CLI.",
