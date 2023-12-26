@@ -105,6 +105,7 @@ toc:
           - include: ../log-analysis-cli-plugin/log-analysis-cli.md
           - include: ../monitor-cli-plugin/monitor-cli.md
           - include: ../cloud-object-storage-cli-plugin/cloud-object-storage-cli-reference.md
+          - include: ../openpages-cli-plugin/openpages_cli.md
           - include: ../power-iaas-cli-plugin/power-iaas-cli.md
           - plugins/projects/projects-cli.md
           - include: ../privileged-access-gateway/pag-cli-commands.md
