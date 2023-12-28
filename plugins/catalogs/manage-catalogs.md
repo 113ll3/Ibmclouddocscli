@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-12-05"
+lastupdated: "2023-12-27"
 
 keywords: cli, catalogs management, catalog
 
@@ -1730,7 +1730,7 @@ ibmcloud catalog install [--version-locator VERSION_NUMBER] [--cluster CLUSTER_I
 ## ibmcloud catalog utility create-product-from-workspace
 {: #publish-utility-create}
 
-Run the following command to create a deployable architecture tile from a [{{site.data.keyword.bpshort}} workspace](docs/schematics?topic=schematics-sch-create-wks&interface=ui) that was created directly from the Git repository. The deployable architecture [creates a project](/docs/cli?topic=cli-projects-cli#project-cli-create-command) to enable you to continue to develop and maintain the deployable architecture with the future version.
+Run the following command to create a deployable architecture tile from a [{{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui) that was created directly from the Git repository. The deployable architecture [creates a project](/docs/cli?topic=cli-projects-cli#project-cli-create-command) to enable you to continue to develop and maintain the deployable architecture with the future version.
 
 The command requires a `GIT_TOKEN` environment variable to authenticate with your source repository so a catalog manifest can be added. The command pushes to a new branch in the Git repository that is found in the {{site.data.keyword.bpshort}} workspace and creates a release that is used for onboarding.
 
