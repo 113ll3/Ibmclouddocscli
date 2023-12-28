@@ -110,9 +110,10 @@ toc:
           - plugins/projects/projects-cli.md
           - include: ../privileged-access-gateway/pag-cli-commands.md
           - include: ../quantum-computing-cli-plugin/quantum-services-cli.md
-          - include: ../secrets-manager-cli-plugin/secrets-manager-cli.md
           - include: ../satellite/satellite-cli-reference.md
           - include: ../schematics-cli-plugin/cli-reference.md
+          - include: ../secrets-manager-cli-plugin/secrets-manager-cli.md
+          - include: ../security-compliance-cli-plugin/security-compliance-cli.md
           - include: ../tg-cli-plugin/transit-gateway-cli.md
           - include: ../vpc-infrastructure-cli-plugin/vpc-cli-reference.md
           - include: ../watson-query-cli-plugin/watson-query-cli.md

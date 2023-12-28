@@ -27,10 +27,11 @@ includes:
   - https://github.ibm.com/cloud-docs/power-iaas-cli-plugin
   - https://github.ibm.com/cloud-docs/privileged-access-gateway
   - https://github.ibm.com/cloud-docs/quantum-computing-cli-plugin
-  - https://github.ibm.com/cloud-docs/secrets-manager
-  - https://github.ibm.com/cloud-docs/secrets-manager-cli-plugin
   - https://github.ibm.com/cloud-docs/satellite
   - https://github.ibm.com/cloud-docs/schematics-cli-plugin
+  - https://github.ibm.com/cloud-docs/secrets-manager
+  - https://github.ibm.com/cloud-docs/secrets-manager-cli-plugin
+  - https://github.ibm.com/cloud-docs/security-compliance-cli-plugin
   - https://github.ibm.com/cloud-docs/tg-cli-plugin
   - https://github.ibm.com/cloud-docs/vpc-infrastructure-cli-plugin
   - https://github.ibm.com/cloud-docs/watson-query-cli-plugin
