@@ -23,6 +23,7 @@ includes:
   - https://github.ibm.com/cloud-docs/log-analysis-cli-plugin
   - https://github.ibm.com/cloud-docs/monitor-cli-plugin
   - https://github.ibm.com/cloud-docs/cloud-object-storage-cli-plugin
+  - https://github.ibm.com/cloud-docs/openpages-cli-plugin
   - https://github.ibm.com/cloud-docs/power-iaas-cli-plugin
   - https://github.ibm.com/cloud-docs/privileged-access-gateway
   - https://github.ibm.com/cloud-docs/quantum-computing-cli-plugin
