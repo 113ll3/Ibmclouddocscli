@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-12-27"
+  years: 2018, 2024
+lastupdated: "2024-01-08"
 
 keywords: iam, iam access, api keys, service ids, access groups, trusted profiles, authorization policy, ibmcloud iam, cli, manage keys, manage service ids, manage iam users cli, iam cli, cli private endpoints
 
@@ -4823,7 +4823,7 @@ ibmcloud iam account-settings-assignment-create TEMPLATE_NAME TEMPLATE_VERSION T
 {: codeblock}
 
 ### Command options
-{: #ibmcloud_iam_account_settings_template_version_create_options}
+{: #ibmcloud_iam_account_settings_template_assignment_create_options}
 
 -q, --quiet
 :   Suppress verbose output.
