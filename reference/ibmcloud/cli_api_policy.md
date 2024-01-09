@@ -4209,7 +4209,7 @@ ibmcloud iam trusted-profile-template-version-create (TEMPLATE_ID | TEMPLATE_NAM
 :   JSON file of the template definition.
 
 ### Examples
-{: #ibmcloud_iam_trusted_profile_template_version_commit_examples}
+{: #ibmcloud_iam_trusted_profile_template_version_create_examples}
 
 Create a new version of a specified template from a JSON file
 ```bash
